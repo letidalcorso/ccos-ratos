@@ -1,42 +1,45 @@
 # Status — Site Smartbase
-Última atualização: 2026-05-31
+Última atualização: 2026-06-03
 
 ## Situação atual
 
-Site one-page no Shopify em fase de correções.
+Site pronto para publicação.
 URL: smartbase-2903.myshopify.com
 
-Backup salvo em: `shopify-theme-BACKUP-25mai-pre-correcoes/`
-Pasta de trabalho ativa: `shopify-theme/`
+Pasta de trabalho ativa: `shopify-theme-final/`
+Backup: `shopify-theme-BACKUP-25mai-pre-correcoes/`
 
-Prazo original de finalização era 28/05 — não atingido. Status atual a verificar.
+## Estrutura do site (fluxo)
 
-## Estrutura do site
-
-- Hero: "sua apple store. particular."
-- Novos (sob encomenda): iPhone, Mac, iPad, Acessórios
-- Seminovos: avaliados, 3 meses de garantia própria
-- Trade-in: formulário separado (`formulario-tradein.html`)
-- Diferenciais: 4 cards
-- Sobre: texto institucional
-- CTA Final: WhatsApp (5554996624494)
+1. Hero: "sua apple store. particular."
+2. Novos (sob encomenda): iPhone, Mac, iPad, Acessórios
+3. Seminovos: avaliados, link /pages/seminovos
+4. Troca: 3 etapas + CTA "avaliar meu aparelho" → /pages/troca
+5. Diferenciais: 4 cards ("quando todo mundo vende apple...")
+6. Sobre: texto consultivo
+7. CTA Final: "qual é o seu caso? a gente resolve." → WhatsApp
 
 ## Arquivos principais
 
-- `site/index.html` — one-page principal
-- `site/css/style.css` — tokens visuais
-- `site/seminovos.html` — página de seminovos
-- `site/formulario-tradein.html` — formulário de trade-in
-- `site/revisao-textos.md` — notas de revisão pendentes de aplicar
+- `shopify-theme-final/templates/index.json` — conteúdo e ordem das sections (Shopify)
+- `shopify-theme-final/sections/*.liquid` — markup de cada section
+- `shopify-theme-final/assets/style.css` — CSS completo
+- `shopify-theme-final/config/settings_data.json` — header, footer, WhatsApp
+- `última versão/index.html` — HTML standalone de referência visual
+
+## Temas no Shopify (smartbase-2903.myshopify.com)
+
+- `smartbase-shopify-theme-copia` — [LIVE]
+- `smartbase-tema-correcoes-25mai` — [unpublished] — última versão upada antes de jun/2026
 
 ## Próxima ação
 
-Verificar estado atual do tema no Shopify e comparar com backup de 25/05.
-Aplicar pendências de `revisao-textos.md` se ainda não aplicadas.
+Fazer push de `shopify-theme-final/` como tema unpublished, revisar no preview e publicar.
+Comando: `shopify theme push --unpublished --store smartbase-2903.myshopify.com`
 
 ## Regras de trabalho
 
 Antes de qualquer edição no site:
-1. Ler o arquivo HTML correspondente
-2. Aplicar a mudança diretamente no arquivo
+1. Sempre editar em `shopify-theme-final/` (não nas pastas v1/v2/antigas)
+2. Ler o arquivo .liquid correspondente antes de editar
 3. Confirmar com trecho antes/depois
