@@ -1,56 +1,124 @@
-# Arquitetura da informação — Site smartbasebr.com (v1)
+# Arquitetura da informação — smartbasebr.com
 
+**Versão:** v2 final (aprovada 26/05/2026)
 **Tipo:** Hybrid SMB — vitrine WhatsApp-funnel + blog/conteúdo + local business
-**Objetivos do site** (ordem de prioridade):
-1. Iniciar conversa qualificada no WhatsApp
-2. SEO local Caxias/Serra Gaúcha (loja física é alavanca)
-3. SEO nacional pra keywords de confiança ("iphone seminovo garantia", etc.)
-4. Construir autoridade digital em cima da credibilidade offline
-
-**Públicos** (em ordem de prioridade no lançamento):
-1. **Profissional autônomo / PJ Serra Gaúcha** (beachhead) — busca local + boca-a-boca digital
-2. **Brasileiro buscando iPhone confiável** (expansão M3+) — busca nacional
-3. **Cliente seminovo cético** — busca informacional + comparativa
-
-**Decisões herdadas que NÃO mudam:**
-- Funil 100% WhatsApp (sem checkout)
-- Visual: dark + azul acento + lowercase + Bricolage Grotesque/Inter
-- Tom: confiante, direto, sem hype
-- Lista de palavras vetadas vale (paralelo, ecossistema, diagnóstico, critério, "leva pra casa")
+**Pivotada estratégica:** home **institucional pura** (não tem grade de produtos); catálogo vive em página separada; trade-in descontinuado conforme escala nacional
 
 ---
 
-## Inventário de páginas (v1)
+## Premissas estratégicas
 
-Legenda:
-- ✓ = já existe
-- ★ = existe como âncora na home, **promover a página dedicada**
-- 🆕 = página nova
+**Objetivos do site (ordem de prioridade):**
+1. Iniciar conversa qualificada no WhatsApp
+2. SEO local Caxias / Serra Gaúcha
+3. SEO nacional pra keywords de confiança / educação
+4. Construir autoridade digital a partir da credibilidade offline
 
-| Página | URL | Status |
+**Constraints inegociáveis:**
+- Funil 100% WhatsApp (Shopify sem checkout)
+- Dark + azul acento + lowercase + Bricolage Grotesque/Inter
+- Tom confiante, direto, sem hype
+- Premissa-mestre do cliente: **as pessoas compram com os olhos** — site precisa ter imagens que gerem desejo
+- v1: sem foto da loja, sem foto/nome do dono, sem CNPJ visível, sem depoimentos, sem reviews (deixar pra v2 quando tiver material)
+- Linguagem de garantia **positiva** (lacrados + Apple 1 ano + 3 meses própria) — não defensiva (não comparar com paralelo/réplica)
+
+---
+
+## Personas (2)
+
+**Persona 1 — Profissional Serra que já te conhece**
+30-45, profissional liberal ou pequeno empresário (advogado, médico, contador, arquiteto, designer, consultor). Caxias e região. Apple é ferramenta de trabalho. Chega no site pelo boca-a-boca local ou Insta. Vem confirmar/pedir, não descobrir.
+
+**Persona 2 — Cético nacional buscando confiança**
+25-40, profissional/autônomo, qualquer cidade do Brasil. Pesquisou no Google "iphone seminovo confiável", "iphone importado garantia". Não conhece a Smartbase. Vai vasculhar antes de chamar — quer prova via conteúdo (blog, FAQ, garantia explicada). Só chama WhatsApp quando convencida.
+
+---
+
+## 9 blocos de conteúdo (locked)
+
+| # | Bloco | Aparece em |
 |---|---|---|
-| Home | `/` | ✓ |
-| Produtos | `/pages/produtos` | ✓ |
-| Blog | `/blogs/news` | ✓ |
-| Post do blog | `/blogs/news/{slug}` | ✓ (template) |
-| Sobre | `/pages/sobre` | ★ (hoje é `#sobre` na home) |
-| Contato | `/pages/contato` | ★ (hoje é `#contato` na home — uma seção CTA) |
-| Trade-in | `/pages/trade-in` | 🆕 |
-| Garantia | `/pages/garantia` | 🆕 |
-| FAQ | `/pages/faq` | 🆕 |
-| 404 | (não tem URL) | ✓ |
-| Política de privacidade | `/policies/privacy-policy` | Shopify padrão |
-| Termos de uso | `/policies/terms-of-service` | Shopify padrão |
+| 1 | Catálogo de produtos (grade visual, novos + seminovos) | Página `Catálogo` |
+| 2 | CTA WhatsApp global (header sticky em toda página) | Todas |
+| 3 | Mensagem WhatsApp pré-preenchida por produto | Catálogo |
+| 4 | Endereço completo + horário (sem foto v1) | Sobre, Contato, Footer |
+| 5 | Garantia positiva (lacrados + Apple 1 ano + 3 meses própria) | Sobre, FAQ, badge em produtos |
+| 6 | Blog com foco SEO | Página `Blog` + posts |
+| 7 | FAQ com schema FAQPage (com pergunta sobre trade-in → WhatsApp) | Página `FAQ` |
+| 8 | Diferenciais explícitos (3-4 cards visuais) | Home, Sobre |
+| 9 | História da Smartbase (texto que se sustenta sem foto do dono) | Sobre + trecho na home |
+| 10 | OG image + title + meta otimizados | Layout (todas) |
 
-**Por que promover Sobre/Contato a páginas dedicadas:**
-- Hoje são âncoras na home. Boas pra UX rápida mas ruins pra SEO (uma URL, conteúdo curto).
-- Páginas dedicadas permitem profundidade (Sobre = história do dono, da loja, anos de Apple), title/meta otimizados, e indexação separada (cada uma pode ranquear pra termos diferentes).
-- **Contato dedicado** é especialmente crítico pra **SEO local + GMB**: endereço completo, horário, mapa embedado, NAP consistente — sinaliza pro Google que é negócio físico real.
+---
 
-**Por que criar Trade-in, Garantia, FAQ:**
-- **Trade-in** — quem busca "trade in iphone como funciona" precisa de página dedicada. Hoje, zero. Captura intenção informacional + comercial sem precisar destacar trade-in no nav (segue a regra do CLAUDE.md de não enfatizar excessivamente).
-- **Garantia** — confiança é o ativo central da Smartbase (memória). Página dedicada explicando garantia Apple + garantia própria 3 meses + processo de acionar = desarma objeção principal de seminovo, ranqueia em buscas tipo "garantia apple internacional brasil".
-- **FAQ** — perguntas comuns respondidas (entrega prazo, formas de pagamento, garantia, original ou paralelo, etc.). Permite implementar `FAQPage` schema → **rich snippets no Google** (respostas aparecem direto no resultado, aumenta CTR).
+## Sitemap — 7 templates de página
+
+### Home (`/`)
+**Função:** vender a marca, levar pro catálogo. Mais experiência que e-commerce.
+**Blocos:**
+- Hero grande com **imagem de desejo** (Apple lifestyle, ambiente premium) + tagline curta + sub
+- Posicionamento (2-3 linhas da tese)
+- Diferenciais (3-4 cards visuais, não texto pesado)
+- Trecho da história (com link "saiba mais" pro Sobre)
+- Faixa visual de produtos em formato editorial/lookbook (não grade) → leva pro catálogo
+- CTA dominante: "Ver catálogo →" + WhatsApp persistente
+
+### Catálogo (`/pages/produtos`)
+**Função:** vitrine real, onde o cliente escolhe e dispara WhatsApp.
+**Blocos:**
+- Hero curto da categoria (imagem forte)
+- Filtros (novos / seminovos)
+- Grade de produtos com **imagens grandes e arejadas**
+- Cada card: foto, nome, cor, armazenamento, status, CTA "Pedir no WhatsApp" pré-preenchido
+- CTA final: "Não achou? Chama a gente →"
+
+### Sobre (`/pages/sobre`)
+**Função:** história + tese + garantia. O lugar onde a Persona 2 ganha confiança.
+**Blocos:**
+- Hero institucional (imagem ambiente, não pessoa)
+- A história (texto sem foto do dono v1 — precisa se sustentar bem)
+- A tese da marca expandida ("o Apple certo, não o mais caro")
+- **Bloco de garantia** (lacrados + Apple 1 ano + 3 meses própria pros seminovos) — visualmente proeminente
+- Endereço + "loja física em Caxias do Sul"
+- CTA WhatsApp
+
+### Blog (`/blogs/news`)
+**Função:** SEO + conteúdo educacional pra Persona 2.
+**Blocos:**
+- Hero do blog
+- Grade de posts com cover image
+- Cada post → página própria
+
+### Post de blog (`/blogs/news/{slug}`)
+**Função:** leitura + conversão.
+**Blocos:**
+- Cover image grande
+- Título, data, tempo de leitura
+- Conteúdo
+- CTA WhatsApp ao fim
+- 2-3 posts relacionados
+
+### FAQ (`/pages/faq`)
+**Função:** desarmar dúvidas, capturar SEO de "como funciona X smartbase".
+**Blocos:**
+- Hero
+- Perguntas agrupadas em categorias (garantia, entrega, pagamento, **trade-in com CTA WhatsApp**, originalidade)
+- Schema `FAQPage` (rich snippet no Google)
+- CTA "Ainda tem dúvida? WhatsApp →"
+
+### Contato (`/pages/contato`)
+**Função:** quem quer ir presencialmente ou ver onde fica.
+**Blocos:**
+- Endereço + horário
+- Mapa Google embedado
+- WhatsApp grande
+- (Form opcional — v2)
+
+### Legais (`/policies/privacy-policy`, `/policies/terms-of-service`)
+Shopify gera. Só ajustar conteúdo. Linkados só do footer.
+
+### 404
+Já existe e está bem desenhada — mantém como está.
 
 ---
 
@@ -58,24 +126,101 @@ Legenda:
 
 ```
 Home (/)
-├── Produtos (/pages/produtos)
-│   └── [Cards de iPhone, Mac, iPad, Acessórios — bloco por produto, sem subpáginas v1]
-├── Blog (/blogs/news)
-│   ├── Post 1 (/blogs/news/vale-a-pena-iphone-seminovo)
-│   ├── Post 2 (/blogs/news/como-saber-se-iphone-e-original)
-│   └── ... (posts adicionais)
+├── Catálogo (/pages/produtos)
 ├── Sobre (/pages/sobre)
-├── Contato (/pages/contato)
-├── Trade-in (/pages/trade-in)
-├── Garantia (/pages/garantia)
+├── Blog (/blogs/news)
+│   └── Post (/blogs/news/{slug})
 ├── FAQ (/pages/faq)
-├── Privacidade (/policies/privacy-policy)        [footer only]
-└── Termos (/policies/terms-of-service)           [footer only]
+├── Contato (/pages/contato)           [footer only]
+└── Legais (/policies/*)                [footer only]
 ```
 
-**Estrutura plana, 2 níveis (L0/L1)** — apropriado pra SMB com inventário enxuto. Posts do blog são L2 mas escalam horizontalmente.
+Estrutura plana, 2 níveis (L0/L1) — só posts vão pra L2.
 
-**Regra dos 3 cliques:** ✓ — qualquer página importante alcançável em ≤2 cliques da home.
+---
+
+## Navegação
+
+### Header (5 itens + CTA)
+
+```
+[Logo smartbase]   Catálogo   Sobre   Blog   FAQ        [quero meu apple →]
+```
+
+- **Sem "Contato" no header** — o botão WhatsApp **é** o contato. A página `/contato` é mais "onde estamos" do que "fale com a gente".
+- CTA WhatsApp sticky em toda página (sempre visível ao scroll).
+
+### Footer (3 colunas + linha legal)
+
+```
+┌─────────────────────┬──────────────┬────────────────────┐
+│ [Logo + tagline]    │ Navegar       │ Falar com a gente  │
+│                     │ ─────────     │ ─────────          │
+│ sua apple store     │ • Catálogo    │ • WhatsApp         │
+│ particular          │ • Sobre       │ • Instagram        │
+│                     │ • Blog        │ • Caxias do Sul    │
+│                     │ • FAQ         │                    │
+│                     │ • Contato     │                    │
+└─────────────────────┴──────────────┴────────────────────┘
+──────────────────────────────────────────────────────────────
+© 2026 smartbase · atendemos todo o Brasil    [Privacidade] [Termos]
+```
+
+### Breadcrumbs
+
+Implementar em todas as páginas exceto Home, com schema `BreadcrumbList`:
+
+| URL | Breadcrumb |
+|---|---|
+| `/pages/produtos` | Home > Catálogo |
+| `/blogs/news` | Home > Blog |
+| `/blogs/news/vale-a-pena-seminovo` | Home > Blog > Vale a pena seminovo? |
+| `/pages/sobre` | Home > Sobre |
+| `/pages/faq` | Home > FAQ |
+| `/pages/contato` | Home > Contato |
+
+---
+
+## Linking interno
+
+### Princípio: tudo puxa pra WhatsApp ou pra Catálogo
+
+Toda página tem caminho claro (≤1 clique) pro WhatsApp ou pro Catálogo (de onde vai pro WhatsApp).
+
+### Links críticos página-a-página
+
+| De | Pra | Como |
+|---|---|---|
+| Home | Catálogo | CTA dominante + faixa visual de produtos |
+| Home | Sobre | "Saiba mais" no bloco história |
+| Home | Blog | Seção "Conteúdo recente" (2-3 posts) |
+| Catálogo | WhatsApp | Botão em cada card + CTA final |
+| Sobre | WhatsApp | CTA pro WhatsApp |
+| Sobre | Catálogo | CTA "Ver o que tem disponível →" |
+| Sobre | FAQ | Link contextual no bloco garantia |
+| Post de blog | WhatsApp | CTA fixo no fim |
+| Post de blog | Catálogo | Link contextual quando tema permite |
+| Post de blog | 2-3 posts relacionados | Bloco "Você também pode gostar" |
+| FAQ | WhatsApp | CTA fixo + por categoria de pergunta |
+| FAQ | Sobre/Garantia | Link contextual quando pergunta cobrir |
+| Contato | WhatsApp | CTA grande |
+
+### Hub-and-spoke do blog (quando tiver 6+ posts)
+
+**Hub 1: "Guia completo: comprar iPhone com segurança no Brasil"** (pillar 2.500+ palavras)
+Spokes:
+- vale a pena iPhone seminovo
+- iPhone importado é seguro (garantia internacional)
+- iPhone com nota fiscal por que importa
+- diferença entre seminovo, recondicionado, usado
+
+**Hub 2: "Qual iPhone escolher em 2026"** (pillar comparativo)
+Spokes:
+- iPhone 17 vs 16
+- iPhone Pro vs Air
+- iPhone Pro Max vale a pena?
+
+Cada spoke linka pro hub. Hub linka pra todos os spokes.
 
 ---
 
@@ -84,121 +229,15 @@ Home (/)
 | Página | URL | Parent | Nav | Prioridade |
 |---|---|---|---|---|
 | Home | `/` | — | Logo (header) | Crítica |
-| Produtos | `/pages/produtos` | Home | Header | Crítica |
-| Blog | `/blogs/news` | Home | Header | Alta |
-| Post do blog | `/blogs/news/{slug}` | Blog | (linkado da blog index) | Alta |
+| Catálogo | `/pages/produtos` | Home | Header | Crítica |
 | Sobre | `/pages/sobre` | Home | Header | Alta |
-| Contato | `/pages/contato` | Home | Header | Alta |
-| Trade-in | `/pages/trade-in` | Home | Footer + CTA contextual | Média |
-| Garantia | `/pages/garantia` | Home | Footer + CTA contextual | Média |
-| FAQ | `/pages/faq` | Home | Footer | Média |
-| WhatsApp CTA (link) | `https://wa.me/55549966...` | — | Header (botão) + repetido em toda página | Crítica |
-| Privacidade | `/policies/privacy-policy` | — | Footer (legal) | Baixa |
-| Termos | `/policies/terms-of-service` | — | Footer (legal) | Baixa |
-
----
-
-## Navegação
-
-### Header (4 itens + CTA)
-
-Esquerda → direita:
-
-```
-[Logo smartbase]   Produtos   Blog   Sobre   Contato        [quero meu apple →]
-```
-
-- **Logo:** leva pra `/`
-- **Produtos / Blog / Sobre / Contato:** texto simples, lowercase, sem dropdown (não precisa — estrutura é plana)
-- **CTA "quero meu apple":** botão azul (`#3E82F7`), sempre à direita, link pro WhatsApp. **Sempre visível em todas as telas** (sticky no header). É o botão mais importante do site.
-
-**Por que essas 4 e não outras:** são as páginas que o usuário precisa achar fácil. Trade-in / Garantia / FAQ vão pro footer porque são **suporte ao funil**, não o caminho principal.
-
-Mobile: hamburger menu com os mesmos 4 itens + CTA grande no topo do menu aberto.
-
-### Footer (3 colunas + linha inferior)
-
-```
-┌─────────────────┬───────────────┬──────────────────┬────────────────┐
-│ [Logo + tagline]│ Navegar       │ Sobre a loja     │ Falar com a    │
-│                 │ ─────────────  │ ─────────────    │ gente          │
-│ sua apple store │ • Produtos     │ • Sobre          │ ─────────────  │
-│ particular      │ • Blog         │ • Trade-in       │ • WhatsApp     │
-│                 │ • Contato      │ • Garantia       │ • Instagram    │
-│                 │                │ • FAQ            │ • caxias, rs   │
-└─────────────────┴───────────────┴──────────────────┴────────────────┘
-─────────────────────────────────────────────────────────────────────────
-© 2026 smartbase · atendemos todo o Brasil    [Privacidade] [Termos]
-```
-
-### Breadcrumbs
-
-Implementar em todas as páginas exceto Home, com schema `BreadcrumbList` (rich snippet no Google):
-
-| URL | Breadcrumb |
-|---|---|
-| `/pages/produtos` | `Home > Produtos` |
-| `/blogs/news` | `Home > Blog` |
-| `/blogs/news/vale-a-pena-iphone-seminovo` | `Home > Blog > Vale a pena iPhone seminovo?` |
-| `/pages/sobre` | `Home > Sobre` |
-| `/pages/trade-in` | `Home > Trade-in` |
-
-Visual: pequeno, no topo de cada página, abaixo do header. Cinza claro. Cada segmento clicável exceto o atual.
-
----
-
-## Estratégia de linking interno
-
-### Princípio: tudo puxa pra WhatsApp ou pra Produtos
-
-Funil é WhatsApp. Toda página tem que ter caminho claro (em ≤1 clique) pro WhatsApp ou pra Produtos (de onde vai pro WhatsApp).
-
-### Linking críticos página-a-página
-
-| De | Pra | Tipo de link |
-|---|---|---|
-| Home | Produtos | Botão hero + cards de categoria |
-| Home | Sobre | Seção sobre na home com "leia mais →" |
-| Home | Blog | Seção "Conteúdo recente" com 2-3 posts |
-| Produtos | WhatsApp | Botão em cada card de produto + CTA final |
-| Produtos | Trade-in | Link contextual "Tem aparelho pra dar como entrada? →" |
-| Produtos | Garantia | Badge "garantia da gente" linkando pra /garantia |
-| Blog (cada post) | WhatsApp | CTA fixo no fim de cada post |
-| Blog (cada post) | Produtos | Link contextual quando tema permite |
-| Blog (cada post) | 2-3 posts relacionados | Bloco "Você também pode gostar" |
-| Sobre | Contato | CTA "Venha conhecer a loja →" |
-| Sobre | WhatsApp | CTA "Fale com [dono] →" |
-| Trade-in | WhatsApp | CTA "Quero uma avaliação →" |
-| Trade-in | Produtos | "Depois da avaliação, escolha seu novo iPhone →" |
-| Garantia | FAQ | Link contextual quando dúvidas específicas surgem |
-| Garantia | Contato | CTA "Precisa acionar a garantia? Fale com a gente →" |
-| FAQ | Páginas relacionadas | Cada pergunta tem link pra página específica se aplicável |
-| FAQ | WhatsApp | CTA fixo "Ainda tem dúvida? Chama no WhatsApp →" |
-
-### Hub-and-spoke do blog
-
-Quando o blog tiver 6+ posts, organizar em torno de hubs (pillar pages):
-
-**Hub 1: "Guia completo: comprar iPhone com segurança no Brasil"** (pillar 2.500+ palavras)
-Spokes que linkam pro hub:
-- vale a pena iPhone seminovo?
-- como saber se iPhone é original
-- iPhone importado é seguro? Garantia internacional explicada
-- iPhone com nota fiscal: por que importa
-- Diferença entre seminovo, recondicionado e usado
-
-**Hub 2: "Qual iPhone escolher em 2026"** (pillar comparativo)
-Spokes:
-- iPhone 17 vs iPhone 16
-- iPhone Pro vs iPhone Air
-- iPhone 17 Pro Max vale a pena?
-- Quanto custa cada iPhone 17 no Brasil
-
-Cada spoke linka pro hub. Hub linka pra todos os spokes. Spokes linkam entre si quando relevante.
-
-### Regra anti-orfão
-
-Toda página tem que ter no mínimo **2 links internos apontando pra ela** (de outras páginas, não só do nav). Sem isso, Google vê como "página menos importante" e a rankeia menos.
+| Blog | `/blogs/news` | Home | Header | Alta |
+| Post de blog | `/blogs/news/{slug}` | Blog | Linkado de Blog/Home | Alta |
+| FAQ | `/pages/faq` | Home | Header | Alta |
+| Contato | `/pages/contato` | Home | Footer | Média |
+| WhatsApp (externo) | `https://wa.me/55549...` | — | Header (botão) + toda página | Crítica |
+| Privacidade | `/policies/privacy-policy` | — | Footer | Baixa |
+| Termos | `/policies/terms-of-service` | — | Footer | Baixa |
 
 ---
 
@@ -208,83 +247,54 @@ Toda página tem que ter no mínimo **2 links internos apontando pra ela** (de o
 graph TD
     HOME["🏠 Home<br/>(/)"]
 
-    HOME --> PROD["📱 Produtos<br/>(/pages/produtos)"]
-    HOME --> BLOG["📝 Blog<br/>(/blogs/news)"]
+    HOME --> CAT["📱 Catálogo<br/>(/pages/produtos)"]
     HOME --> SOBRE["👋 Sobre<br/>(/pages/sobre)"]
-    HOME --> CONTATO["📍 Contato<br/>(/pages/contato)"]
+    HOME --> BLOG["📝 Blog<br/>(/blogs/news)"]
+    HOME --> FAQ["❓ FAQ<br/>(/pages/faq)"]
     HOME --> WPP["💬 WhatsApp<br/>(externo)"]
 
-    BLOG --> POST1["Post: vale a pena seminovo"]
-    BLOG --> POST2["Post: como saber se é original"]
-    BLOG --> POST3["Post: iphone 17 vs 16"]
-    BLOG --> POSTS["..."]
+    BLOG --> POST["Post: {slug}"]
 
-    HOME -.-> TRADEIN["🔄 Trade-in<br/>(/pages/trade-in)"]
-    HOME -.-> GARANTIA["🛡️ Garantia<br/>(/pages/garantia)"]
-    HOME -.-> FAQ["❓ FAQ<br/>(/pages/faq)"]
+    HOME -.-> CONTATO["📍 Contato<br/>(/pages/contato)"]
     HOME -.-> LEGAL["📄 Legais<br/>(/policies/*)"]
 
-    PROD --> WPP
-    PROD -.-> TRADEIN
-    POST1 --> WPP
-    POST2 --> WPP
-    POST3 --> WPP
-    SOBRE --> CONTATO
+    CAT --> WPP
     SOBRE --> WPP
-    TRADEIN --> WPP
-    GARANTIA --> CONTATO
+    SOBRE --> CAT
+    POST --> WPP
+    FAQ --> WPP
+    CONTATO --> WPP
 
     classDef header fill:#3E82F7,color:#fff,stroke:#3E82F7
     classDef footer fill:#1A1A2E,color:#C0C0D0,stroke:#1A1A2E
     classDef cta fill:#25D366,color:#fff,stroke:#25D366
     classDef post fill:#0F0F1C,color:#F2F2F6,stroke:#3E82F7
 
-    class HOME,PROD,BLOG,SOBRE,CONTATO header
-    class TRADEIN,GARANTIA,FAQ,LEGAL footer
+    class HOME,CAT,SOBRE,BLOG,FAQ header
+    class CONTATO,LEGAL footer
     class WPP cta
-    class POST1,POST2,POST3,POSTS post
+    class POST post
 ```
 
-Legenda: azul = no header, escuro = no footer apenas, verde = link externo WhatsApp, linhas pontilhadas = link via footer/contextual.
+Legenda: azul = header nav, escuro = footer only, verde = WhatsApp (externo), linhas pontilhadas = acesso via footer/contextual.
 
 ---
 
-## Decisões abertas (3 escolhas tuas pra fechar a IA)
+## Próximo passo: wireframes lo-fi no Figma
 
-### 1. **Páginas individuais por modelo de iPhone?** (v1 ou v2?)
+Com IA fechada, próxima etapa é **wireframes em baixa fidelidade** no Figma — caixa-e-linha-cinza, sem estética, só estrutura/hierarquia/ordem de blocos.
 
-Páginas dedicadas tipo `/pages/iphone-17-pro`, `/pages/iphone-17-air`, etc.
+Por página, definir:
+1. O que entra above-the-fold
+2. Ordem dos blocos verticalmente
+3. Hierarquia visual (peso de cada bloco)
+4. Onde os CTAs dominantes ficam
+5. Comportamento mobile (qual ordem em vertical)
 
-**Prós:** ranqueia pra "iphone 17 pro preço brasil", "iphone air é bom" (alta intent comercial), conteúdo profundo sobre cada modelo, link de "ver detalhes" do card pro page.
-
-**Contras:** muito trabalho de copy + manutenção (cada lançamento Apple = atualizar todas).
-
-Opções:
-- (A) **Pula v1, deixa pra v2** quando o site já estiver no ar e com tráfego. Recomendação.
-- (B) **Faz v1**, mas só pros 3-4 mais buscados (17 Pro, 17, 17 Air).
-
-### 2. **Combinar Contato + Loja física numa página só, ou separar?**
-
-A Smartbase tem loja física consolidada — vale a pena ter `/pages/loja` dedicada ou Contato cobre?
-
-Opções:
-- (A) **Uma página só** (`/pages/contato`) — endereço + horário + mapa + WhatsApp + form. Recomendação pra v1 (menos páginas pra manter, mesmo conteúdo).
-- (B) **Duas páginas** — `/pages/contato` (WhatsApp + form) e `/pages/loja-fisica` (endereço + foto + horário + mapa). Mais granular, mas dobra trabalho.
-
-### 3. **FAQ — uma página única ou subpáginas por tema?**
-
-Opções:
-- (A) **Página única `/pages/faq`** com todas as perguntas agrupadas por seção (sobre garantia, sobre entrega, sobre trade-in, etc.). Mais simples, mesmo SEO. Recomendação.
-- (B) **Subpáginas** (`/pages/faq/garantia`, `/pages/faq/entrega`, etc.). Mais granular, ranqueia mais nichos, mas muito mais conteúdo pra produzir.
-
----
-
-## Próximo passo após você fechar essas 3
-
-Com a IA fechada, vamos pra **wireframes** (etapa 3 do processo). Vou propor o wireframe de cada página em baixa fidelidade — caixa, hierarquia, ordem dos blocos, sem estética. Pra cada página: o que entra no above-the-fold, qual ordem dos blocos, qual CTA dominante.
-
-Se quiser, faço isso direto no Figma contigo (tenho ferramenta pra acessar o seu arquivo). Ou desenho em ASCII aqui mesmo pra você levar pro Figma. Sua chamada.
-
----
-
-**Hora estimada pra fechar a IA contigo:** 15-30 min de chat (você responde as 3 decisões, eu ajusto o doc final, fecha).
+Sequência sugerida (1 página por vez, validar antes da próxima):
+1. **Home** (mais importante — define tom)
+2. **Catálogo** (segunda mais visitada)
+3. **Sobre** (define tom institucional)
+4. **FAQ** (estrutura repetível)
+5. **Blog + Post** (template pattern)
+6. **Contato** (mais simples)
