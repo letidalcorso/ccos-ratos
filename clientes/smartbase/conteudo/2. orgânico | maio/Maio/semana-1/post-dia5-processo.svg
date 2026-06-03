@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- Ghost numeral textura -->
+  <text x="560" y="1050" font-family="'Bricolage Grotesque', sans-serif" font-size="340" font-weight="900" fill="#3E82F7" opacity="0.05">03</text>
+
+  <!-- Passo 01 -->
+  <text x="80" y="280" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="800" fill="#3E82F7">01.</text>
+  <text x="80" y="358" font-family="'Bricolage Grotesque', sans-serif" font-size="58" font-weight="500" fill="#F2F2F6">você fala no WhatsApp.</text>
+
+  <!-- Divider 1 -->
+  <line x1="80" y1="400" x2="480" y2="400" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Passo 02 -->
+  <text x="80" y="488" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="800" fill="#3E82F7">02.</text>
+  <text x="80" y="566" font-family="'Bricolage Grotesque', sans-serif" font-size="58" font-weight="500" fill="#F2F2F6">a gente confirma e traz.</text>
+
+  <!-- Divider 2 -->
+  <line x1="80" y1="608" x2="480" y2="608" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Passo 03 -->
+  <text x="80" y="696" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="800" fill="#3E82F7">03.</text>
+  <text x="80" y="774" font-family="'Bricolage Grotesque', sans-serif" font-size="58" font-weight="500" fill="#F2F2F6">iPhone original</text>
+  <text x="80" y="848" font-family="'Bricolage Grotesque', sans-serif" font-size="58" font-weight="500" fill="#F2F2F6">na sua mão.</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="300" fill="#C0C0D0">smart</text>
+  <circle cx="145" cy="1291" r="5" fill="#3E82F7"/>
+  <text x="155" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">base</text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

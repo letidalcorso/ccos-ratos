@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="O tênis que o Brasil vai querer — antes do varejo nacional decidir trazer. Encomenda direta, sem markup." />
+  <title>Gene Sneakers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;900&family=Big+Shoulders+Text:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --carbon:  #0D0D0D;
+      --bone:    #F2EFE9;
+      --acid:    #CBF23D;
+      --press:   #8CA62D;
+      --slate:   #A6A4A1;
+      --gray100: #161616;
+      --gray200: #3C3C3C;
+      --gray400: #666666;
+      --gray600: #999999;
+      --border:  rgba(255,255,255,0.08);
+      --border-light: rgba(255,255,255,0.04);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--carbon);
+      color: var(--bone);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(13,13,13,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-wordmark {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .nav-gene {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--bone);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .nav-bar {
+      height: 2px;
+      background: var(--acid);
+      width: 100%;
+      margin: 2px 0;
+    }
+
+    .nav-sneakers {
+      font-family: 'IBM Plex Sans Condensed', 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--acid);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .nav-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray400);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding-top: 56px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: 'GENE';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: clamp(180px, 30vw, 360px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: rgba(255,255,255,0.02);
+      pointer-events: none;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .hero-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--acid);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: clamp(56px, 10vw, 112px);
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      line-height: 0.92;
+      text-transform: uppercase;
+      color: var(--bone);
+      margin-bottom: 32px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--acid);
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--acid);
+      margin-bottom: 32px;
+    }
+
+    .hero-sub {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--gray400);
+      line-height: 1.85;
+      max-width: 520px;
+      margin-bottom: 48px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 28px;
+      transition: opacity 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-acid { background: var(--acid); color: var(--carbon); }
+    .btn-dark { background: var(--carbon); color: var(--acid); }
+    .btn:hover { opacity: 0.85; }
+
+    /* ── TAGLINE STRIP ── */
+    .tagline-strip {
+      background: var(--acid);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .tagline-strip span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: clamp(12px, 1.6vw, 18px);
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--carbon);
+      text-transform: uppercase;
+    }
+
+    /* ── SECTIONS ── */
+    .section-wrap {
+      padding: 80px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--acid);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: clamp(36px, 5.5vw, 64px);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 48px;
+    }
+
+    .section-title em {
+      font-style: normal;
+      color: var(--acid);
+    }
+
+    /* ── VALUE PROP BLOCK ── */
+    .vp-block {
+      background: var(--acid);
+      color: var(--carbon);
+      padding: 40px 48px;
+      margin-bottom: 48px;
+    }
+
+    .vp-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.55);
+      margin-bottom: 12px;
+    }
+
+    .vp-text {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 1.05;
+      color: var(--carbon);
+    }
+
+    /* ── GRID SYSTEM ── */
+    .grid-1px {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .grid-row {
+      background: var(--carbon);
+      padding: 32px 40px;
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: background 0.15s;
+    }
+
+    .grid-row:hover { background: var(--gray100); }
+
+    .grid-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--acid);
+      padding-top: 4px;
+    }
+
+    .grid-title {
+      font-family: 'Big Shoulders Text', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--bone);
+      margin-bottom: 8px;
+    }
+
+    .grid-desc {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--gray400);
+      line-height: 1.75;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .faq-item {
+      background: var(--carbon);
+      padding: 28px 40px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .faq-item:hover { background: var(--gray100); }
+
+    .faq-q {
+      font-family: 'Big Shoulders Text', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--bone);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .faq-q::after {
+      content: '+';
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--acid);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-q::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--gray400);
+      line-height: 1.8;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding-top 0.2s;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding-top: 16px;
+    }
+
+    /* ── CTA FINAL ── */
+    .cta-final {
+      padding: 96px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cta-final .section-num { margin-bottom: 24px; }
+
+    .cta-headline {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: clamp(44px, 8vw, 88px);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 0.95;
+      color: var(--bone);
+      margin-bottom: 16px;
+    }
+
+    .cta-accent {
+      color: var(--acid);
+    }
+
+    .cta-sub {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--gray400);
+      margin-bottom: 48px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 48px 40px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+    }
+
+    .footer-meta {
+      text-align: right;
+    }
+
+    .footer-meta p {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--gray400);
+      letter-spacing: 0.08em;
+      line-height: 1.8;
+    }
+
+    .footer-meta strong { color: var(--gray600); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 0 24px; }
+      .hero { padding-left: 24px; padding-right: 24px; padding-bottom: 48px; }
+      .tagline-strip { padding: 18px 24px; }
+      .section-wrap { padding: 64px 24px; }
+      .grid-row { padding: 24px; }
+      .faq-item { padding: 24px; }
+      .cta-final { padding: 72px 24px; }
+      footer { padding: 40px 24px; }
+      .footer-meta { text-align: left; }
+      .vp-block { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-wordmark">
+      <span class="nav-gene">GENE</span>
+      <div class="nav-bar"></div>
+      <span class="nav-sneakers">SNEAKERS</span>
+    </div>
+  </a>
+  <span class="nav-tag">Encomenda · RS, Brasil</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="divider"></div>
+  <p class="hero-label">— Acesso antecipado · Sem markup nacional</p>
+  <h1 class="hero-title">
+    O tênis que<br>
+    o Brasil vai<br>
+    querer —<br>
+    <em>você tem agora.</em>
+  </h1>
+  <p class="hero-sub">
+    Modelos globais sob encomenda. Sem esperar o varejo nacional decidir trazer. Sem o markup que não faz sentido.
+  </p>
+  <a class="btn btn-acid" href="https://wa.me/5554994494036" target="_blank" rel="noopener">
+    Quero encomendar →
+  </a>
+</section>
+
+<!-- TAGLINE STRIP -->
+<div class="tagline-strip">
+  <span>.ESTILO NOS PÉS.</span>
+</div>
+
+<!-- TAKE FORTE -->
+<div class="section-wrap">
+  <span class="section-num">— Por que a Gene</span>
+
+  <div class="vp-block">
+    <div class="vp-label">Proposta de acesso</div>
+    <p class="vp-text">O varejo traz o que ele quer, quando ele quer. A Gene traz o que você quer.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)">
+    <div style="background:var(--carbon);padding:32px 28px">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray400);margin-bottom:12px">Argumento principal</p>
+      <p style="font-family:'Big Shoulders Text',sans-serif;font-size:18px;font-weight:700;letter-spacing:0.01em;color:var(--bone);margin-bottom:8px">Acesso antecipado</p>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gray400);line-height:1.7">O modelo que lançou globalmente — antes do varejo do Brasil decidir trazer, ou trazer com 6 meses de atraso.</p>
+    </div>
+    <div style="background:var(--carbon);padding:32px 28px">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray400);margin-bottom:12px">Argumento secundário</p>
+      <p style="font-family:'Big Shoulders Text',sans-serif;font-size:18px;font-weight:700;letter-spacing:0.01em;color:var(--bone);margin-bottom:8px">Preço sem markup</p>
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gray400);line-height:1.7">Sem a margem de quem só tem o logo e a prateleira. O mesmo tênis que a loja cobra R$800 — por menos.</p>
+    </div>
+  </div>
+</div>
+
+<!-- COMO FUNCIONA -->
+<div class="section-wrap">
+  <span class="section-num">— Como funciona</span>
+  <h2 class="section-title">3 passos.<br>Sem complicar.</h2>
+
+  <div class="grid-1px">
+    <div class="grid-row">
+      <span class="grid-num">01 /</span>
+      <div>
+        <p class="grid-title">Você escolhe o modelo</p>
+        <p class="grid-desc">Manda qual tênis quer pelo WhatsApp — modelo, colorway, tamanho. Se não encontrou aqui, a gente cota. Nike, Adidas, New Balance, o que for.</p>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="grid-num">02 /</span>
+      <div>
+        <p class="grid-title">A Gene confirma e fecha</p>
+        <p class="grid-desc">Respondemos com prazo realista, preço sem surpresa e condições de pagamento. Sem enrolação. Quando fechado, a encomenda entra.</p>
+      </div>
+    </div>
+    <div class="grid-row">
+      <span class="grid-num">03 /</span>
+      <div>
+        <p class="grid-title">Recebe em casa</p>
+        <p class="grid-desc">Seu tênis chega no prazo combinado. Se qualquer coisa sair do plano, a Gene resolve — sem precisar pedir.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section-wrap">
+  <span class="section-num">— FAQ</span>
+  <h2 class="section-title">Perguntas<br>diretas.</h2>
+
+  <div class="faq-list">
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">Quanto tempo demora a encomenda?</div>
+      <div class="faq-a">Depende do modelo e da disponibilidade. Na média, entre 15 e 30 dias após a confirmação do pagamento. Você recebe o prazo exato antes de fechar — sem surpresa.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">Como sei que o tênis é original?</div>
+      <div class="faq-a">A Gene não vende paralelo. O argumento não é "100% original garantido" — é que a origem do produto é o que permite o preço sem o markup. Quem precisa se defender muito, não convence. Nossos clientes recebem e voltam.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">Como funciona o pagamento?</div>
+      <div class="faq-a">Definido no WhatsApp após confirmação do pedido. Pix ou transferência. Condições passadas antes de fechar — sem cobrar nada antes de combinar tudo.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">Vocês têm estoque ou é só sob encomenda?</div>
+      <div class="faq-a">Modelo é sob encomenda — você pede, a Gene traz. Cada par tem um dono antes de existir. Não somos catálogo com o que sobrou.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggle(this)">
+      <div class="faq-q">Consegue cotar um modelo específico?</div>
+      <div class="faq-a">Sim. Manda o modelo exato pelo WhatsApp — nome, colorway, número — que a gente verifica disponibilidade e prazo. Se tiver saída, a gente traz.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <span class="section-num">— Disponível agora</span>
+  <h2 class="cta-headline">
+    Disponível<br>
+    sob encomenda.<br>
+    <span class="cta-accent">A Gene traz.</span>
+  </h2>
+  <p class="cta-sub">Manda o modelo pelo WhatsApp. A gente cota, confirma o prazo e fecha.</p>
+  <a class="btn btn-acid" href="https://wa.me/5554994494036" target="_blank" rel="noopener">
+    Quero encomendar →
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Gene<br>Sneakers.</div>
+  <div class="footer-meta">
+    <p><strong>.ESTILO NOS PÉS.</strong></p>
+    <p>Caxias do Sul, RS</p>
+    <p>© 2026 Gene Sneakers</p>
+    <p style="margin-top:8px;color:var(--gray200)">THE GENE IS ALREADY IN THE SHOE.</p>
+  </div>
+</footer>
+
+<script>
+  function toggle(el) {
+    el.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <text x="80" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" letter-spacing="3">DECIFRA APPLE</text>
+  <text x="1000" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" text-anchor="end">5/6</text>
+
+  <!-- Hero phrase massive -->
+  <text x="80" y="400" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="110" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">você paga</tspan>
+    <tspan x="80" dy="125">só quando</tspan>
+    <tspan x="80" dy="125">o iPhone tá</tspan>
+    <tspan x="80" dy="125" fill="#3E82F7">na sua mão.</tspan>
+  </text>
+
+  <!-- Sub explanatory -->
+  <text x="80" y="1080" fill="#C0C0D0" font-family="'Inter', sans-serif" font-size="28" font-weight="400">
+    <tspan x="80" dy="0">a Smartbase vai pessoalmente buscar lá.</tspan>
+    <tspan x="80" dy="42">atendimento direto, sem intermediário.</tspan>
+    <tspan x="80" dy="42">entrega em Caxias do Sul.</tspan>
+  </text>
+
+  <text x="80" y="1280" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="36" font-weight="700" letter-spacing="-1">smartbase</text>
+  <text x="1000" y="1280" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

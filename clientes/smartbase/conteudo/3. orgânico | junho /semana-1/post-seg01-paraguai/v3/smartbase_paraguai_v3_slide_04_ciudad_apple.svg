@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <text x="80" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" letter-spacing="3">DECIFRA APPLE</text>
+  <text x="1000" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" text-anchor="end">4/6</text>
+
+  <!-- Top: Ciudad del Este -->
+  <text x="80" y="260" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="600" letter-spacing="3">NO CENTRO DISSO</text>
+
+  <text x="80" y="350" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="68" font-weight="700" letter-spacing="-2">Ciudad del Este</text>
+
+  <text x="80" y="410" fill="#C0C0D0" font-family="'Inter', sans-serif" font-size="28" font-weight="400">
+    <tspan x="80" dy="0"><tspan fill="#3E82F7" font-weight="700">10%</tspan> do PIB paraguaio sai dali.</tspan>
+  </text>
+
+  <!-- Divider -->
+  <line x1="80" y1="490" x2="1000" y2="490" stroke="#3E82F7" stroke-width="1" opacity="0.3"/>
+
+  <!-- Apple statement -->
+  <text x="80" y="580" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="56" font-weight="700" letter-spacing="-2">
+    <tspan x="80" dy="0">e a Apple opera lá</tspan>
+    <tspan x="80" dy="66" fill="#3E82F7">oficialmente.</tspan>
+  </text>
+
+  <!-- Card mockup checkcoverage -->
+  <rect x="80" y="780" width="920" height="280" rx="20" fill="#F2F2F6"/>
+  <text x="540" y="830" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="18" font-weight="500" text-anchor="middle" letter-spacing="1">checkcoverage.apple.com</text>
+  <text x="540" y="895" fill="#07070E" font-family="'Bricolage Grotesque', sans-serif" font-size="34" font-weight="700" text-anchor="middle">iPhone 17 Pro Max</text>
+  <text x="540" y="925" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="18" font-weight="400" text-anchor="middle">IMEI · 35XXXXXXXXXXXX</text>
+  <rect x="280" y="970" width="520" height="60" rx="10" fill="#07070E"/>
+  <circle cx="330" cy="1000" r="8" fill="#3E82F7"/>
+  <text x="355" y="1008" fill="#3E82F7" font-family="'Bricolage Grotesque', sans-serif" font-size="20" font-weight="700">Apple Limited Warranty: ACTIVE</text>
+
+  <!-- Footnote -->
+  <text x="80" y="1170" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="20" font-weight="400">Casa Nissei é revendedor oficial Apple há 43 anos. confere você mesmo, antes de comprar.</text>
+
+  <text x="80" y="1280" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="36" font-weight="700" letter-spacing="-1">smartbase</text>
+  <text x="1000" y="1280" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

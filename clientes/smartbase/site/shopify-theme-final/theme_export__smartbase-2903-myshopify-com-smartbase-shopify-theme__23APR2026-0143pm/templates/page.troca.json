@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-troca",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

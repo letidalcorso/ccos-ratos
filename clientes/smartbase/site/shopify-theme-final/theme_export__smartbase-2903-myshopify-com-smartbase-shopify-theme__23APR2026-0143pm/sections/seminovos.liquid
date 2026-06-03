@@ -1,0 +1,100 @@
+<section id="seminovos" class="sb-section sb-seminovos">
+  <div class="sb-container">
+    <div class="sb-seminovos__inner">
+
+      <div class="sb-seminovos__content">
+        <span class="sb-badge">{{ section.settings.badge }}</span>
+
+        <h2 class="sb-seminovos__heading">
+          {{ section.settings.heading_line1 }}<br>
+          <span class="sb-blue">{{ section.settings.heading_line2 }}</span>
+        </h2>
+
+        <p class="sb-seminovos__sub">{{ section.settings.description }}</p>
+
+        <div class="sb-seminovos__garantia">
+          ✓ <span>{{ section.settings.garantia_badge }}</span>
+        </div>
+
+        <div style="margin-top: 8px;">
+          <a href="{{ section.settings.btn_url }}" class="sb-btn sb-btn--primary">{{ section.settings.btn_text }}</a>
+        </div>
+      </div>
+
+      <div>
+        {% if section.settings.image %}
+          {{ section.settings.image | image_url: width: 800 | image_tag: class: 'sb-seminovos__img', alt: section.settings.heading_line1 }}
+        {% else %}
+          <div class="sb-img-placeholder sb-seminovos__img">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="38" height="38" rx="8" stroke="#4A4A60" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M13 27l5-6 4 5 3-3 5 7H13z" stroke="#4A4A60" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="26" cy="15" r="3" stroke="#4A4A60" stroke-width="1.5"/>
+            </svg>
+            <span>foto seminovo</span>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Seminovos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "seminovos · em estoque"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Título — linha 1",
+      "default": "apple usado."
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Título — linha 2 (azul)",
+      "default": "com garantia da gente."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descrição",
+      "default": "cada aparelho passa por avaliação técnica antes de ser anunciado. você sabe exatamente o que está comprando: modelo, estado, histórico. sem surpresa."
+    },
+    {
+      "type": "text",
+      "id": "garantia_badge",
+      "label": "Badge de garantia",
+      "default": "3 meses de garantia própria"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Texto do botão",
+      "default": "ver seminovos disponíveis"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Link do botão"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Foto do produto seminovo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Seminovos"
+    }
+  ]
+}
+{% endschema %}

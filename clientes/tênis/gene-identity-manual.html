@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gene Sneakers — Manual de Identidade Visual</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --carbon:#0D0D0D;
+    --carbon-deep:#080808;
+    --bone:#F2EFE9;
+    --acid:#C4FF3C;
+    --press:#8CA62D;
+    --slate:#A6A4A1;
+    --bloom-field:#F5DEE0;
+    --bloom-mid:#E8B5BD;
+    --bloom-deep:#B97580;
+    --peach:#FBDFC5;
+    --bloom-ink:#2A1418;
+    --chrome-deep:#141D26;
+    --chrome-mid:#2A3845;
+    --chrome-light:#8FA5B5;
+    --chrome-ink:#E8ECF0;
+
+    --display:"Big Shoulders Display", "Arial Black", sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--carbon);color:var(--bone);font-family:var(--mono);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:1280px;margin:0 auto;padding:0 64px}
+  section{padding:120px 0;border-top:1px solid rgba(242,239,233,.08);position:relative}
+  section:first-of-type{border-top:none}
+  .sec-num{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--acid);text-transform:uppercase;display:block;margin-bottom:8px}
+  .sec-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--slate);text-transform:uppercase;margin-bottom:24px}
+  .sec-title{font-family:var(--display);font-weight:900;font-size:clamp(56px,7vw,112px);line-height:.92;letter-spacing:-.02em;text-transform:uppercase;color:var(--bone);margin-bottom:48px}
+  .sec-title .dot{color:var(--acid)}
+  .lede{font-family:var(--display);font-weight:400;font-size:clamp(20px,2vw,28px);line-height:1.3;max-width:64ch;color:var(--bone);margin-bottom:64px}
+  .lede strong{font-weight:900}
+  .lede .hl{color:var(--acid)}
+  .mono-label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--slate);text-transform:uppercase}
+  .mono-rule{font-family:var(--mono);font-size:13px;color:var(--bone);letter-spacing:.02em;line-height:1.7}
+  .mono-rule .k{color:var(--acid);font-weight:600}
+
+  /* ---------- Cover ---------- */
+  .cover{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:64px 0 64px;border-top:none}
+  .cover-top{display:flex;justify-content:space-between;align-items:center;color:var(--slate);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+  .cover-mid{display:flex;flex-direction:column;gap:16px}
+  .cover-brand{font-family:var(--display);font-weight:900;font-size:clamp(120px,18vw,280px);line-height:.86;letter-spacing:-.04em;text-transform:uppercase;color:var(--bone)}
+  .cover-brand .acid-dot{color:var(--acid)}
+  .cover-brand .acid-line{display:inline-block;width:.3em;height:.12em;background:var(--acid);margin-right:.05em;vertical-align:middle;transform:translateY(-.08em)}
+  .cover-sub{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.5vw,56px);letter-spacing:-.01em;text-transform:uppercase;color:var(--bone)}
+  .cover-sub em{font-style:normal;color:var(--acid);font-weight:900}
+  .cover-bot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+  .cover-tagline{font-family:var(--mono);font-size:13px;letter-spacing:.18em;color:var(--bone);text-transform:uppercase}
+  .cover-tagline .sep{color:var(--acid)}
+  .cover-meta{display:grid;grid-template-columns:repeat(3,max-content);gap:48px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--slate);text-transform:uppercase}
+  .cover-meta strong{display:block;color:var(--bone);font-weight:600;margin-top:4px;letter-spacing:.18em}
+
+  /* ---------- Logo section ---------- */
+  .grid-master{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px}
+  .logo-tile{aspect-ratio:1;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+  .logo-tile img{width:100%;height:100%;object-fit:contain}
+  .logo-tile .tag{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--acid);text-transform:uppercase}
+  .logo-tile .tag-b{color:var(--bone)}
+  .logo-tile .caption{position:absolute;bottom:16px;left:16px;right:16px;display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+  .logo-tile .caption .name{color:var(--acid)}
+  .logo-tile .caption .name-b{color:var(--carbon)}
+  .logo-tile .caption .use{color:var(--slate)}
+
+  .grid-variants{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+  .variant-tile{aspect-ratio:1;position:relative;overflow:hidden}
+  .variant-tile img{width:100%;height:100%;object-fit:contain}
+  .variant-label{margin-top:12px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+  .variant-label strong{color:var(--bone);font-weight:600}
+
+  .rules{display:grid;grid-template-columns:repeat(2,1fr);gap:48px;margin-top:72px}
+  .rule-block h4{font-family:var(--display);font-weight:900;font-size:20px;letter-spacing:.02em;text-transform:uppercase;color:var(--acid);margin-bottom:12px}
+  .rule-block ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .rule-block li{padding-left:18px;position:relative;font-family:var(--mono);font-size:13px;line-height:1.55}
+  .rule-block li::before{content:"—";position:absolute;left:0;color:var(--acid)}
+  .rule-block li .x{color:#E8706B}
+  .rule-block li .ok{color:var(--acid)}
+
+  /* ---------- Palette ---------- */
+  .swatch-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-bottom:48px}
+  .swatch{display:flex;flex-direction:column;gap:0}
+  .swatch .chip{height:200px;border:1px solid rgba(242,239,233,.08);position:relative}
+  .swatch .chip .overlay{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+  .swatch .meta{margin-top:12px;display:flex;flex-direction:column;gap:4px}
+  .swatch .name{font-family:var(--display);font-weight:900;font-size:18px;letter-spacing:.02em;text-transform:uppercase;color:var(--bone)}
+  .swatch .hex{font-family:var(--mono);font-size:11px;letter-spacing:.15em;color:var(--slate);text-transform:uppercase}
+  .swatch .role{font-family:var(--mono);font-size:11px;color:var(--bone);margin-top:4px;line-height:1.5}
+
+  /* ---------- Typography ---------- */
+  .type-spec{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start;padding:40px 0;border-top:1px solid rgba(242,239,233,.1)}
+  .type-spec:first-of-type{border-top:none}
+  .type-spec .info{display:flex;flex-direction:column;gap:12px}
+  .type-spec .info .family{font-family:var(--display);font-weight:900;font-size:20px;letter-spacing:.02em;text-transform:uppercase;color:var(--bone)}
+  .type-spec .info .usage{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--acid);text-transform:uppercase}
+  .type-spec .info .desc{font-family:var(--mono);font-size:12px;color:var(--slate);line-height:1.55}
+  .specimen-display{font-family:var(--display);font-weight:900;font-size:clamp(48px,7vw,112px);line-height:.92;letter-spacing:-.02em;text-transform:uppercase;color:var(--bone)}
+  .specimen-display em{font-style:normal;color:var(--acid)}
+  .specimen-display .weight-light{font-weight:400;color:var(--slate)}
+  .specimen-mono{font-family:var(--mono);font-size:14px;line-height:1.7;color:var(--bone);letter-spacing:.02em}
+  .specimen-mono .lbl{color:var(--slate);font-size:10px;letter-spacing:.25em;text-transform:uppercase;display:block;margin-top:20px;margin-bottom:6px}
+
+  /* ---------- Environments ---------- */
+  .env-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:48px}
+  .env-card{aspect-ratio:.66;display:flex;flex-direction:column;justify-content:space-between;padding:20px;position:relative;overflow:hidden}
+  .env-01{background:var(--carbon);color:var(--bone)}
+  .env-02{background:var(--bone);color:var(--carbon)}
+  .env-03{background:var(--carbon);color:var(--bone)}
+  .env-04{background:linear-gradient(180deg,var(--chrome-deep) 0%,var(--chrome-mid) 100%);color:var(--chrome-ink)}
+  .env-05{background:var(--acid);color:var(--carbon)}
+  .env-card .env-num{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+  .env-card .env-num.k{color:var(--acid);opacity:1}
+  .env-card .env-name{font-family:var(--display);font-weight:900;font-size:32px;line-height:.92;letter-spacing:-.01em;text-transform:uppercase}
+  .env-card .env-meta{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;line-height:1.5}
+  .env-card .pct{font-family:var(--display);font-weight:900;font-size:64px;line-height:1}
+  .env-card .acid-dot{display:inline-block;width:6px;height:6px;background:var(--acid);border-radius:50%;vertical-align:middle;margin-right:6px}
+  .env-02 .acid-dot{background:var(--press)}
+  .env-05 .acid-dot{background:var(--carbon)}
+  .env-03-bloom-chip{display:inline-block;padding:2px 8px;background:var(--bloom-mid);color:var(--bloom-ink);font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:600}
+
+  .env-legend{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px}
+  .env-legend h4{font-family:var(--display);font-weight:900;font-size:20px;letter-spacing:.02em;text-transform:uppercase;color:var(--acid);margin-bottom:12px}
+  .env-legend ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .env-legend li{padding-left:18px;position:relative;font-family:var(--mono);font-size:12px;line-height:1.55}
+  .env-legend li::before{content:"—";position:absolute;left:0;color:var(--acid)}
+
+  /* ---------- Grid/respiro ---------- */
+  .respiro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .respiro-box{aspect-ratio:1;background:var(--carbon-deep);border:1px solid rgba(242,239,233,.12);position:relative;display:flex;align-items:center;justify-content:center;padding:48px}
+  .respiro-box .g-marker{position:absolute;border:1px dashed var(--acid);opacity:.5}
+  .respiro-box .top{top:12%;left:12%;right:12%;bottom:12%}
+  .respiro-box .inner{width:100%;height:100%;position:relative}
+  .respiro-box .corner{position:absolute;width:40px;height:40px;font-family:var(--mono);font-size:10px;color:var(--acid);letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+  .respiro-box .c1{top:8px;left:8px}
+  .respiro-box .c2{top:8px;right:8px;text-align:right}
+  .respiro-box .c3{bottom:8px;left:8px}
+  .respiro-box .c4{bottom:8px;right:8px;text-align:right}
+  .respiro-box .logo-center{width:60%;aspect-ratio:1}
+  .respiro-box .x-indicator{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--acid);text-transform:uppercase}
+  .respiro-info h3{font-family:var(--display);font-weight:900;font-size:40px;line-height:1;text-transform:uppercase;color:var(--bone);margin-bottom:16px;letter-spacing:-.01em}
+  .respiro-info p{font-family:var(--mono);font-size:13px;line-height:1.7;color:var(--bone);margin-bottom:16px}
+  .respiro-info .mono-rule{margin-top:24px}
+
+  .size-scale{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px}
+  .size-card{aspect-ratio:1;background:var(--carbon-deep);border:1px solid rgba(242,239,233,.1);display:flex;align-items:center;justify-content:center;position:relative;padding:24px}
+  .size-card img{max-width:100%;max-height:100%}
+  .size-card .px{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--acid);text-transform:uppercase}
+  .size-card .nm{position:absolute;bottom:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--slate);text-transform:uppercase}
+
+  /* ---------- Print applications ---------- */
+  .print-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-bottom:64px}
+  .print-card{background:var(--carbon-deep);border:1px solid rgba(242,239,233,.08);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:32px}
+  .print-card.bone{background:var(--bone);color:var(--carbon)}
+  .print-card .tag{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--acid);text-transform:uppercase}
+  .print-card.bone .tag{color:var(--press)}
+  .print-card .meta{position:absolute;bottom:16px;left:16px;right:16px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--slate);text-transform:uppercase}
+  .print-card.bone .meta{color:#555}
+  .print-card .meta strong{color:var(--bone);font-weight:600}
+  .print-card.bone .meta strong{color:var(--carbon)}
+  .print-span-6{grid-column:span 6}
+  .print-span-4{grid-column:span 4}
+  .print-span-3{grid-column:span 3}
+  .print-span-8{grid-column:span 8}
+  .card-inner{width:100%;max-width:420px;aspect-ratio:85/55;background:var(--carbon);color:var(--bone);padding:20px;display:flex;flex-direction:column;justify-content:space-between;border-radius:2px}
+  .card-inner.back{background:var(--bone);color:var(--carbon)}
+  .card-inner .cname{font-family:var(--display);font-weight:900;font-size:28px;letter-spacing:-.01em;text-transform:uppercase;line-height:.9}
+  .card-inner .cname .d{color:var(--acid)}
+  .card-inner .crole{font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--slate);text-transform:uppercase;margin-top:4px}
+  .card-inner .ccontact{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--bone);line-height:1.5}
+  .card-inner.back .ccontact{color:var(--carbon)}
+  .card-inner .ctag{font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--acid);text-transform:uppercase}
+  .card-inner.back .ctag{color:var(--press)}
+  .card-inner .brand-dna{font-family:var(--display);font-weight:900;font-size:40px;letter-spacing:-.02em;text-transform:uppercase;line-height:.85}
+
+  .hangtag{width:100%;max-width:220px;aspect-ratio:5/7;background:var(--bone);color:var(--carbon);padding:16px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border-radius:2px}
+  .hangtag::before{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:14px;height:14px;border:1.5px solid var(--carbon);border-radius:50%;background:transparent}
+  .hangtag .htop{font-family:var(--mono);font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--press);text-align:center;margin-top:32px}
+  .hangtag .hbrand{font-family:var(--display);font-weight:900;font-size:32px;letter-spacing:-.02em;text-transform:uppercase;line-height:.85;text-align:center}
+  .hangtag .hbrand .d{color:var(--press)}
+  .hangtag .hline{height:1px;background:var(--carbon);margin:8px 0;opacity:.2}
+  .hangtag .hsku{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--carbon);line-height:1.6}
+  .hangtag .hsku .k{color:var(--press);font-weight:600}
+
+  .sticker{width:200px;height:200px;border-radius:50%;background:var(--acid);color:var(--carbon);display:flex;align-items:center;justify-content:center;position:relative;flex-direction:column}
+  .sticker .stxt{font-family:var(--display);font-weight:900;font-size:40px;letter-spacing:-.02em;text-transform:uppercase;line-height:.85;text-align:center}
+  .sticker .sdot{color:var(--carbon)}
+  .sticker .ssub{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;margin-top:6px}
+  .sticker.carbon{background:var(--carbon);color:var(--bone)}
+  .sticker.carbon .stxt .sdot{color:var(--acid)}
+  .sticker.carbon .ssub{color:var(--acid)}
+
+  .box-mock{width:100%;max-width:320px;aspect-ratio:16/11;background:var(--carbon);color:var(--bone);padding:20px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border-radius:2px}
+  .box-mock::after{content:"";position:absolute;top:0;bottom:0;right:36%;width:1px;background:rgba(242,239,233,.08)}
+  .box-mock .btop{display:flex;justify-content:space-between;align-items:flex-start;font-family:var(--mono);font-size:8px;letter-spacing:.22em;color:var(--slate);text-transform:uppercase}
+  .box-mock .bbrand{font-family:var(--display);font-weight:900;font-size:54px;letter-spacing:-.03em;text-transform:uppercase;line-height:.85}
+  .box-mock .bbrand .d{color:var(--acid)}
+  .box-mock .bbot{display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--slate);text-transform:uppercase}
+  .box-mock .bbot .ttl{color:var(--acid)}
+
+  .seal{width:180px;height:180px;background:var(--bone);color:var(--carbon);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;padding:16px;border:1.5px solid var(--carbon)}
+  .seal .stop{font-family:var(--mono);font-size:8px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:8px}
+  .seal .scenter{font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:-.01em;text-transform:uppercase;text-align:center;line-height:.9}
+  .seal .sbot{font-family:var(--mono);font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--press);margin-top:8px;text-align:center}
+  .seal .sno{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--press);margin-top:4px}
+
+  /* ---------- Gallery (artes reais) ---------- */
+  .gallery-stories{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+  .gallery-item{position:relative;overflow:hidden;background:var(--carbon-deep);border:1px solid rgba(242,239,233,.08)}
+  .gallery-item img{width:100%;height:auto;display:block}
+  .gallery-item .gtag{position:absolute;top:12px;left:12px;padding:4px 8px;background:rgba(13,13,13,.75);backdrop-filter:blur(6px);font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--acid);text-transform:uppercase;z-index:2}
+  .gallery-item .gcap{margin-top:12px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+  .gallery-item .gcap strong{color:var(--bone);font-weight:600}
+  .gallery-hl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+  .gallery-hl .gh{position:relative;aspect-ratio:1;overflow:hidden;background:var(--carbon-deep);border:1px solid rgba(242,239,233,.08);display:flex;align-items:center;justify-content:center}
+  .gallery-hl .gh img{width:100%;height:auto;transform:translateY(-22%);position:relative}
+  .gallery-hl .ghtag{position:absolute;top:12px;left:12px;padding:4px 8px;background:rgba(13,13,13,.75);backdrop-filter:blur(6px);font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--acid);text-transform:uppercase;z-index:2}
+  .gallery-hl .ghname{position:absolute;bottom:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--bone);text-transform:uppercase;z-index:2}
+
+  /* ---------- Figma refs ---------- */
+  .figma-block{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:32px}
+  .figma-panel{background:var(--carbon-deep);border:1px solid rgba(242,239,233,.1);padding:32px;position:relative}
+  .figma-panel .flabel{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--acid);text-transform:uppercase;margin-bottom:16px}
+  .figma-panel h3{font-family:var(--display);font-weight:900;font-size:32px;letter-spacing:-.01em;text-transform:uppercase;color:var(--bone);margin-bottom:16px;line-height:.95}
+  .figma-panel p{font-family:var(--mono);font-size:13px;color:var(--bone);line-height:1.7;margin-bottom:12px}
+  .figma-panel .link-row{display:flex;align-items:center;gap:12px;margin-top:24px;padding:14px 16px;background:var(--carbon);border:1px solid var(--acid)}
+  .figma-panel .link-row .arrow{color:var(--acid);font-family:var(--display);font-weight:900;font-size:20px}
+  .figma-panel .link-row .url{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--bone);word-break:break-all}
+  .figma-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:16px}
+  .figma-list li{padding:14px 16px;background:var(--carbon-deep);border-left:2px solid var(--acid);font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--bone)}
+  .figma-list li .node{display:block;font-size:10px;letter-spacing:.22em;color:var(--acid);text-transform:uppercase;margin-bottom:6px}
+
+  /* ---------- Arquivos ---------- */
+  .files-table{width:100%;border-collapse:collapse;margin-top:32px}
+  .files-table th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--slate);text-transform:uppercase;padding:12px 16px;border-bottom:1px solid rgba(242,239,233,.15);font-weight:500}
+  .files-table td{padding:14px 16px;border-bottom:1px solid rgba(242,239,233,.08);font-family:var(--mono);font-size:12px;color:var(--bone);vertical-align:top}
+  .files-table td.path{color:var(--acid)}
+  .files-table td.use{color:var(--slate)}
+  .files-table tr:hover td{background:rgba(196,255,60,.04)}
+
+  /* ---------- Footer ---------- */
+  footer{padding:64px 0;border-top:1px solid rgba(242,239,233,.1);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--slate);text-transform:uppercase}
+  footer .sig{font-family:var(--display);font-weight:900;font-size:32px;letter-spacing:-.01em;color:var(--bone);text-transform:uppercase}
+
+  @media(max-width:900px){
+    .wrap{padding:0 32px}
+    section{padding:80px 0}
+    .sec-num{margin-bottom:8px}
+    .grid-master,.grid-variants,.env-grid,.swatch-row,.size-scale,.gallery-stories,.gallery-hl{grid-template-columns:repeat(2,1fr)}
+    .rules,.env-legend,.respiro,.figma-block{grid-template-columns:1fr}
+    .print-span-6,.print-span-4,.print-span-3,.print-span-8{grid-column:span 12}
+    .type-spec{grid-template-columns:1fr}
+    .cover-bot{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- 00 · CAPA                                                    -->
+<!-- ============================================================ -->
+<section class="cover wrap">
+  <div class="cover-top">
+    <span>GENE SNEAKERS</span>
+    <span>MANUAL · v1.0</span>
+    <span>21.04.2026</span>
+  </div>
+
+  <div class="cover-mid">
+    <span class="mono-label">Identidade Visual —</span>
+    <h1 class="cover-brand">GENE<span class="acid-dot">.</span></h1>
+    <div class="cover-sub">MANUAL DE <em>IDENTIDADE.</em></div>
+  </div>
+
+  <div class="cover-bot">
+    <div class="cover-tagline">.ESTILO<span class="sep">·</span>NOS<span class="sep">·</span>PÉS.</div>
+    <div class="cover-meta">
+      <div>VERSÃO<strong>1.0 / CANÔNICA</strong></div>
+      <div>LANÇAMENTO<strong>21 ABR 2026</strong></div>
+      <div>FOUNDER<strong>LETI DAL CORSO</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 01 · LOGO                                                    -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">01 / LOGO</span>
+  <div>
+    <div class="sec-kicker">01 · Sistema de logo</div>
+    <h2 class="sec-title">O LOGO<span class="dot">.</span></h2>
+    <p class="lede">
+      Três versões canônicas. Quatro derivadas. Um único ponto de verdade.<br>
+      Nunca redesenhe — <span class="hl">sempre use o SVG oficial.</span>
+    </p>
+
+    <div class="mono-label" style="margin-bottom:16px">VERSÕES MASTER — 01-LOGO/</div>
+    <div class="grid-master">
+      <div class="logo-tile" style="background:var(--bone)">
+        <span class="tag">MASTER 01</span>
+        <img src="./01-logo/gene-logo-preto.svg" alt="Logo preto">
+        <div class="caption"><span class="name-b">PRETO / DAYLIGHT</span><span class="use" style="color:#666">FUNDO CLARO</span></div>
+      </div>
+      <div class="logo-tile" style="background:var(--carbon-deep)">
+        <span class="tag tag-b">MASTER 02</span>
+        <img src="./01-logo/gene-logo-branco.svg" alt="Logo branco">
+        <div class="caption"><span class="name">BRANCO / CARBON</span><span class="use">FUNDO ESCURO</span></div>
+      </div>
+      <div class="logo-tile" style="background:var(--carbon-deep)">
+        <span class="tag tag-b">MASTER 03</span>
+        <img src="./01-logo/gene-logo-colorido.svg" alt="Logo colorido">
+        <div class="caption"><span class="name">COLORIDO / HERO</span><span class="use">USO RARO</span></div>
+      </div>
+    </div>
+
+    <div class="mono-label" style="margin:64px 0 16px">VARIANTES DERIVADAS — 01-LOGO/VARIANTES/</div>
+    <div class="grid-variants">
+      <div>
+        <div class="variant-tile" style="background:var(--bone)"><img src="./01-logo/variantes/gene-logo-sem-tagline-preto.svg" alt=""></div>
+        <div class="variant-label"><strong>SEM TAGLINE</strong><span>PRETO</span></div>
+      </div>
+      <div>
+        <div class="variant-tile" style="background:var(--bone)"><img src="./01-logo/variantes/gene-logo-horizontal-preto.svg" alt=""></div>
+        <div class="variant-label"><strong>HORIZONTAL</strong><span>PRETO</span></div>
+      </div>
+      <div>
+        <div class="variant-tile" style="background:var(--bone)"><img src="./01-logo/variantes/gene-logo-wordmark-preto.svg" alt=""></div>
+        <div class="variant-label"><strong>WORDMARK</strong><span>PRETO</span></div>
+      </div>
+      <div>
+        <div class="variant-tile" style="background:var(--bone)"><img src="./01-logo/variantes/gene-logo-monograma-preto.svg" alt=""></div>
+        <div class="variant-label"><strong>MONOGRAMA G</strong><span>PRETO</span></div>
+      </div>
+      <div>
+        <div class="variant-tile" style="background:var(--carbon-deep)"><img src="./01-logo/variantes/gene-logo-sem-tagline-branco.svg" alt=""></div>
+        <div class="variant-label"><strong>SEM TAGLINE</strong><span>BRANCO</span></div>
+      </div>
+      <div>
+        <div class="variant-tile" style="background:var(--carbon-deep)"><img src="./01-logo/variantes/gene-logo-horizontal-branco.svg" alt=""></div>
+        <div class="variant-label"><strong>HORIZONTAL</strong><span>BRANCO</span></div>
+      </div>
+      <div>
+        <div class="variant-tile" style="background:var(--carbon-deep)"><img src="./01-logo/variantes/gene-logo-wordmark-branco.svg" alt=""></div>
+        <div class="variant-label"><strong>WORDMARK</strong><span>BRANCO</span></div>
+      </div>
+      <div>
+        <div class="variant-tile" style="background:var(--carbon-deep)"><img src="./01-logo/variantes/gene-logo-monograma-branco.svg" alt=""></div>
+        <div class="variant-label"><strong>MONOGRAMA G</strong><span>BRANCO</span></div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <div class="rule-block">
+        <h4>USE QUANDO</h4>
+        <ul>
+          <li><span class="ok">MASTER:</span> hero de LP, capa de manual, abertura de story, feed principal</li>
+          <li><span class="ok">SEM TAGLINE:</span> peças onde a tagline apareceria separada (footer, grid denso)</li>
+          <li><span class="ok">HORIZONTAL:</span> assinatura em vídeo, banner, header de newsletter</li>
+          <li><span class="ok">WORDMARK:</span> selo de parceria, watermark discreto, stroke de rodapé</li>
+          <li><span class="ok">MONOGRAMA G:</span> avatar (Instagram, WhatsApp), favicon, app icon, selo pequeno</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h4>NUNCA FAÇA</h4>
+        <ul>
+          <li><span class="x">Não redesenhe.</span> Sempre use o SVG do repositório</li>
+          <li><span class="x">Não deforme.</span> Mantenha proporção — o DNA helix é geométrico</li>
+          <li><span class="x">Não aplique efeitos.</span> Sem sombra, gradiente, outline, 3D</li>
+          <li><span class="x">Não troque as cores.</span> Logo é monocromático — use preto OU branco</li>
+          <li><span class="x">Não use sobre foto ruidosa.</span> Se duvidar, coloque em cima de cor chapada</li>
+          <li><span class="x">Não tire a tagline</span> do master — use a variante SEM TAGLINE</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 02 · PALETA                                                  -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">02 / PALETA</span>
+  <div>
+    <div class="sec-kicker">02 · Cor canônica</div>
+    <h2 class="sec-title">A PALETA<span class="dot">.</span></h2>
+    <p class="lede">
+      <strong>Acid é invariante.</strong> Aparece em todos os ambientes como frequência.<br>
+      Carbon e Bone são o par estrutural. O resto é temperatura.
+    </p>
+
+    <div class="mono-label" style="margin-bottom:16px">TOKENS BASE</div>
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="chip" style="background:var(--carbon)"><span class="overlay" style="color:var(--bone)">01</span></div>
+        <div class="meta">
+          <span class="name">CARBON</span>
+          <span class="hex">#0D0D0D</span>
+          <span class="role">Campo escuro. Texto em fundo claro. Âncora da marca.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--bone)"><span class="overlay" style="color:var(--carbon)">02</span></div>
+        <div class="meta">
+          <span class="name">BONE</span>
+          <span class="hex">#F2EFE9</span>
+          <span class="role">Campo claro. Texto em fundo escuro. Editorial.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--acid)"><span class="overlay" style="color:var(--carbon)">03</span></div>
+        <div class="meta">
+          <span class="name">ACID</span>
+          <span class="hex">#C4FF3C</span>
+          <span class="role">Accent primário. Destaque. Frequência obrigatória.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--press)"><span class="overlay" style="color:var(--bone)">04</span></div>
+        <div class="meta">
+          <span class="name">PRESS</span>
+          <span class="hex">#8CA62D</span>
+          <span class="role">Acid dimmed. Accent em fundo claro. Hover/CTA.</span>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--slate)"><span class="overlay" style="color:var(--carbon)">05</span></div>
+        <div class="meta">
+          <span class="name">SLATE</span>
+          <span class="hex">#A6A4A1</span>
+          <span class="role">Metadados. Subtexto. Labels secundárias.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mono-label" style="margin:64px 0 16px">TOKENS DE AMBIENTE</div>
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="chip" style="background:var(--bloom-field)"><span class="overlay" style="color:var(--bloom-ink)">06</span></div>
+        <div class="meta"><span class="name">BLOOM FIELD</span><span class="hex">#F5DEE0</span><span class="role">Glass card · exceção rara sobre foto</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--bloom-mid)"><span class="overlay" style="color:var(--bloom-ink)">07</span></div>
+        <div class="meta"><span class="name">BLOOM MID</span><span class="hex">#E8B5BD</span><span class="role">Pill · filete · grifo semântico</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--bloom-deep)"><span class="overlay" style="color:var(--bone)">08</span></div>
+        <div class="meta"><span class="name">BLOOM DEEP</span><span class="hex">#B97580</span><span class="role">Palavra-chave em headline</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--chrome-deep)"><span class="overlay" style="color:var(--chrome-ink)">09</span></div>
+        <div class="meta"><span class="name">CHROME DEEP</span><span class="hex">#141D26</span><span class="role">Base do gradiente Chrome</span></div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background:var(--chrome-light)"><span class="overlay" style="color:var(--carbon)">10</span></div>
+        <div class="meta"><span class="name">CHROME LIGHT</span><span class="hex">#8FA5B5</span><span class="role">Ink Chrome · subtítulo técnico</span></div>
+      </div>
+    </div>
+
+    <div class="rules">
+      <div class="rule-block">
+        <h4>REGRA DE USO</h4>
+        <ul>
+          <li><span class="ok">Acid é invariante.</span> Sempre presente — filete, dot, pontuação, accent tipográfico</li>
+          <li>Em fundo claro, Acid vira <span class="ok">Press</span> (dimmed) pra legibilidade</li>
+          <li>Slate <span class="ok">só aparece como metadado</span> — nunca como texto principal</li>
+          <li>Bloom entra como <span class="ok">voz</span>, não como fundo (exceção: glass card)</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h4>CONTRASTE MÍNIMO</h4>
+        <ul>
+          <li>Carbon sobre Bone: <span class="ok">AAA</span> · texto qualquer tamanho</li>
+          <li>Bone sobre Carbon: <span class="ok">AAA</span> · texto qualquer tamanho</li>
+          <li>Acid sobre Carbon: <span class="ok">AA+</span> · título e label</li>
+          <li>Press sobre Bone: <span class="ok">AA</span> · label e CTA pequeno</li>
+          <li><span class="x">Nunca:</span> Acid sobre Bone (vibra), Bone sobre Acid (baixo contraste)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 03 · TIPOGRAFIA                                              -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">03 / TIPOGRAFIA</span>
+  <div>
+    <div class="sec-kicker">03 · Sistema tipográfico</div>
+    <h2 class="sec-title">A TIPOGRAFIA<span class="dot">.</span></h2>
+    <p class="lede">
+      Duas famílias. Uma grita<span class="hl">.</span> A outra explica.<br>
+      Sempre <strong>UPPERCASE</strong> em display. Sempre Mono em técnico.
+    </p>
+
+    <div class="type-spec">
+      <div class="info">
+        <span class="usage">FAMÍLIA 01 · DISPLAY</span>
+        <span class="family">BIG SHOULDERS DISPLAY</span>
+        <span class="desc">Headlines, wordmark, numerais grandes, manifesto. Sempre em caps. Pesos: Black (900) pra hero, Regular (400) pra apoio editorial.</span>
+      </div>
+      <div>
+        <div class="specimen-display">GENE <em>SNEAKERS.</em></div>
+        <div class="specimen-display" style="font-size:clamp(32px,4vw,56px);margin-top:16px"><span class="weight-light">estilo nos pés</span><em>.</em></div>
+      </div>
+    </div>
+
+    <div class="type-spec">
+      <div class="info">
+        <span class="usage">FAMÍLIA 02 · MONO</span>
+        <span class="family">IBM PLEX MONO</span>
+        <span class="desc">Preços, SKUs, labels, metadados, badges, copy técnico. Letter-spacing amplo. Nunca em headline.</span>
+      </div>
+      <div class="specimen-mono">
+        <span class="lbl">PRICE FRAME</span>
+        R$ 1.249,00 · GENE DROP 001 / EDITION
+        <span class="lbl">ORIGIN TAG</span>
+        IMPORTAÇÃO DIRETA · FOOT LOCKER JP · ENVIO 18D
+        <span class="lbl">STATUS PIN</span>
+        <span style="color:var(--acid)">●</span> A CAMINHO · RASTREIO #GE-2026-0041
+      </div>
+    </div>
+
+    <div class="rules">
+      <div class="rule-block">
+        <h4>HIERARQUIA</h4>
+        <ul>
+          <li><span class="ok">Display Black:</span> hero, nome do produto, manifesto</li>
+          <li><span class="ok">Display Regular:</span> subtítulo, lead editorial</li>
+          <li><span class="ok">Mono 500:</span> label, kicker, date format (21.04)</li>
+          <li><span class="ok">Mono 400:</span> corrido técnico, SKU, metadata</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h4>REGRAS DURAS</h4>
+        <ul>
+          <li>Sempre UPPERCASE em Big Shoulders Display</li>
+          <li>Nunca Mono em corpo longo (>3 linhas)</li>
+          <li>Letter-spacing Mono: <span class="ok">.15em a .22em</span> em caps</li>
+          <li>Letter-spacing Display: <span class="ok">-.02em</span> em Black, <span class="ok">0</span> em Regular</li>
+          <li>Ponto final em hero headline <span class="ok">sempre em Acid</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 04 · CLIMAS                                                  -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">04 / CLIMAS</span>
+  <div>
+    <div class="sec-kicker">04 · Color environments</div>
+    <h2 class="sec-title">OS CLIMAS<span class="dot">.</span></h2>
+    <p class="lede">
+      Cinco ambientes. Cada um com um papel narrativo.<br>
+      <strong>Um ambiente por peça</strong> — nunca misture dois no mesmo frame.
+    </p>
+
+    <div class="env-grid">
+      <div class="env-card env-01">
+        <div>
+          <span class="env-num k">01 · BASE</span>
+          <div class="env-name" style="margin-top:12px">CARBON</div>
+        </div>
+        <div>
+          <div class="pct" style="color:var(--acid)">44<span style="font-size:24px">%</span></div>
+          <span class="env-meta">Drop · lançamento<br>performance · hero escuro<br><span class="acid-dot"></span>Accent: Acid</span>
+        </div>
+      </div>
+      <div class="env-card env-02">
+        <div>
+          <span class="env-num">02 · EDITORIAL</span>
+          <div class="env-name" style="margin-top:12px">DAYLIGHT</div>
+        </div>
+        <div>
+          <div class="pct" style="color:var(--press)">22<span style="font-size:24px">%</span></div>
+          <span class="env-meta">Editorial · comparativo<br>testimonial · institucional<br><span class="acid-dot"></span>Accent: Press</span>
+        </div>
+      </div>
+      <div class="env-card env-03">
+        <div>
+          <span class="env-num k">03 · VOZ</span>
+          <div class="env-name" style="margin-top:12px">BLOOM</div>
+        </div>
+        <div>
+          <span class="env-03-bloom-chip">TEXT-FIRST</span>
+          <div class="pct" style="color:var(--bloom-mid);margin-top:8px">20<span style="font-size:24px">%</span></div>
+          <span class="env-meta">Cultura · creator · afeto<br>Rosa como voz, não fundo<br><span class="acid-dot"></span>Sobre Carbon/Daylight</span>
+        </div>
+      </div>
+      <div class="env-card env-04">
+        <div>
+          <span class="env-num" style="color:var(--acid)">04 · TÉCNICO</span>
+          <div class="env-name" style="margin-top:12px">CHROME</div>
+        </div>
+        <div>
+          <div class="pct" style="color:var(--acid)">11<span style="font-size:24px">%</span></div>
+          <span class="env-meta">Origem · rota · bastidor<br>Status de pedido · spec<br><span class="acid-dot"></span>Accent: Acid</span>
+        </div>
+      </div>
+      <div class="env-card env-05">
+        <div>
+          <span class="env-num">05 · RARO</span>
+          <div class="env-name" style="margin-top:12px">ACID</div>
+        </div>
+        <div>
+          <div class="pct" style="color:var(--carbon)">≤11<span style="font-size:24px">%</span></div>
+          <span class="env-meta">Hero raro · drop único<br>Countdown · manifesto<br><span class="acid-dot"></span>1 post a cada 15</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="env-legend">
+      <div>
+        <h4>TRANSIÇÕES OK</h4>
+        <ul>
+          <li>Carbon → Carbon + Bloom texto</li>
+          <li>Daylight → Daylight + Bloom texto</li>
+          <li>Carbon → Chrome (manifesto pro técnico)</li>
+          <li>Daylight → Acid (rising action)</li>
+          <li>Carbon → Bloom glass (manifesto pro creator)</li>
+        </ul>
+      </div>
+      <div>
+        <h4>TRANSIÇÕES PROIBIDAS</h4>
+        <ul>
+          <li>Bloom glass 2x seguido</li>
+          <li>Acid → Acid (raridade = valor)</li>
+          <li>Bloom glass → Chrome (temperatura brusca)</li>
+          <li>Bloom glass → Acid (dois campos saturados)</li>
+          <li>Dois ambientes no mesmo frame</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 05 · GRID & RESPIRO                                          -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">05 / GRID</span>
+  <div>
+    <div class="sec-kicker">05 · Respiro · clear space · scale</div>
+    <h2 class="sec-title">GRID & RESPIRO<span class="dot">.</span></h2>
+    <p class="lede">
+      O logo precisa de ar. <strong>Clear space = altura do G.</strong><br>
+      Nada invade esse território — nem texto, nem imagem, nem outro elemento.
+    </p>
+
+    <div class="respiro">
+      <div class="respiro-box">
+        <span class="corner c1">—x—</span>
+        <span class="corner c2" style="text-align:right">—x—</span>
+        <span class="corner c3">—x—</span>
+        <span class="corner c4" style="text-align:right">—x—</span>
+        <div style="width:50%;aspect-ratio:1">
+          <img src="./01-logo/variantes/gene-logo-sem-tagline-branco.svg" alt="Logo clear space" style="width:100%;height:100%;object-fit:contain">
+        </div>
+      </div>
+      <div class="respiro-info">
+        <h3>X = ALTURA DO G</h3>
+        <p>Toda aplicação reserva um espaço mínimo ao redor do logo igual à altura da letra G do monograma.</p>
+        <p>Esse espaço é inviolável — texto, imagem, outro logo ou elemento gráfico nunca entram nele.</p>
+        <div class="mono-rule">
+          <span class="k">MÍN.</span> clear = 1 × altura G<br>
+          <span class="k">IDEAL</span> clear = 1.5 × altura G<br>
+          <span class="k">AVATAR</span> exceção = bleed total (G preenche o campo)
+        </div>
+      </div>
+    </div>
+
+    <div class="mono-label" style="margin:72px 0 16px">ESCALA MÍNIMA POR APLICAÇÃO</div>
+    <div class="size-scale">
+      <div class="size-card">
+        <span class="px">24 PX</span>
+        <img src="./01-logo/variantes/gene-logo-monograma-branco.svg" alt="">
+        <span class="nm">FAVICON</span>
+      </div>
+      <div class="size-card">
+        <span class="px">72 PX</span>
+        <img src="./01-logo/variantes/gene-logo-monograma-branco.svg" alt="">
+        <span class="nm">AVATAR IG</span>
+      </div>
+      <div class="size-card">
+        <span class="px">240 PX</span>
+        <img src="./01-logo/variantes/gene-logo-wordmark-branco.svg" alt="">
+        <span class="nm">HEADER · ASSINATURA</span>
+      </div>
+      <div class="size-card">
+        <span class="px">480+ PX</span>
+        <img src="./01-logo/gene-logo-branco.svg" alt="">
+        <span class="nm">HERO · MASTER</span>
+      </div>
+    </div>
+
+    <div class="rules" style="margin-top:64px">
+      <div class="rule-block">
+        <h4>QUANDO USAR QUAL TAMANHO</h4>
+        <ul>
+          <li><span class="ok">&lt; 48px:</span> só monograma G</li>
+          <li><span class="ok">48–200px:</span> wordmark ou horizontal</li>
+          <li><span class="ok">200–480px:</span> sem tagline ou horizontal</li>
+          <li><span class="ok">&gt; 480px:</span> master completo (com tagline)</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h4>GRID BASE</h4>
+        <ul>
+          <li>Story IG: <span class="ok">1080×1920</span> · margem 80px</li>
+          <li>Feed IG: <span class="ok">1080×1080</span> · margem 64px</li>
+          <li>Highlight cover: <span class="ok">1080×1920</span> · crop central 1080×1080</li>
+          <li>Assinatura email: <span class="ok">600×120</span> · wordmark + tagline</li>
+          <li>Baseline unit: <span class="ok">8px</span> · todo spacing é múltiplo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 06 · APLICAÇÕES EM PRINT                                     -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">06 / PRINT</span>
+  <div>
+    <div class="sec-kicker">06 · Off-screen · assinatura física</div>
+    <h2 class="sec-title">PRINT<span class="dot">.</span></h2>
+    <p class="lede">
+      A marca não mora só na tela. <strong>Cartão, tag, selo, caixa</strong> — cada peça física carrega a mesma gramática:
+      tipografia <span class="hl">Big Shoulders</span> como voz, <span class="hl">IBM Plex Mono</span> como dado, ponto ácido como assinatura.
+    </p>
+
+    <!-- Row 1: Cartão de visita (frente + verso) -->
+    <div class="mono-label" style="margin:32px 0 16px">CARTÃO DE VISITA · 85×55MM</div>
+    <div class="print-grid">
+      <div class="print-card print-span-6">
+        <span class="tag">FRENTE · CARBON</span>
+        <div class="card-inner">
+          <div>
+            <div class="cname">GENE<span class="d">.</span></div>
+            <div class="crole">SNEAKERS · IMPORTAÇÃO CURADA</div>
+          </div>
+          <div class="ccontact">
+            LETI DAL CORSO<br>
+            founder<br>
+            @genesneakers
+          </div>
+        </div>
+        <div class="meta"><span>FRONT</span><strong>CARBON · BONE · ACID DOT</strong></div>
+      </div>
+      <div class="print-card bone print-span-6">
+        <span class="tag">VERSO · BONE</span>
+        <div class="card-inner back">
+          <div class="ctag">.ESTILO·NOS·PÉS.</div>
+          <div class="brand-dna">ACESSO.<br>CURADORIA.<br>DROPS.</div>
+          <div class="ccontact" style="text-align:right">
+            leti@genesneakers.com<br>
+            +55 — whatsapp<br>
+            genesneakers.com.br
+          </div>
+        </div>
+        <div class="meta"><span>BACK</span><strong>BONE · CARBON · PRESS</strong></div>
+      </div>
+    </div>
+
+    <!-- Row 2: Hang tag + Sticker + Box -->
+    <div class="mono-label" style="margin:48px 0 16px">HANG TAG · STICKER · CAIXA</div>
+    <div class="print-grid">
+      <div class="print-card bone print-span-3">
+        <span class="tag">HANG TAG</span>
+        <div class="hangtag">
+          <div>
+            <div class="htop">// drop-26 · curated</div>
+            <div class="hbrand">GENE<span class="d">.</span></div>
+          </div>
+          <div class="hline"></div>
+          <div class="hsku">
+            <span class="k">SKU</span> AJ1-RET-HI<br>
+            <span class="k">MOD</span> AIR JORDAN 1<br>
+            <span class="k">PT</span> 42BR · 27CM<br>
+            <span class="k">ORIGIN</span> IMPORTADO<br>
+            <span class="k">AUTH</span> ✓ VERIFIED
+          </div>
+        </div>
+        <div class="meta"><span>TAG</span><strong>5×7CM · OFFSET</strong></div>
+      </div>
+
+      <div class="print-card print-span-3">
+        <span class="tag">STICKER · ACID</span>
+        <div class="sticker">
+          <div class="stxt">GENE<span class="sdot">.</span></div>
+          <div class="ssub">.ESTILO·NOS·PÉS.</div>
+        </div>
+        <div class="meta"><span>SELO</span><strong>Ø 7CM · VINIL</strong></div>
+      </div>
+
+      <div class="print-card print-span-6">
+        <span class="tag">CAIXA DE ENVIO</span>
+        <div class="box-mock">
+          <div class="btop">
+            <span>// SHIP-26 · #0042</span>
+            <span style="color:var(--acid)">CARBON · ACID</span>
+          </div>
+          <div class="bbrand">GENE<span class="d">.</span></div>
+          <div class="bbot">
+            <span class="ttl">.ESTILO NOS PÉS.</span>
+            <span>DROP 01 · 21.04</span>
+          </div>
+        </div>
+        <div class="meta"><span>PACK</span><strong>SIDE PRINT · 1 COR</strong></div>
+      </div>
+    </div>
+
+    <!-- Row 3: Selo de autenticidade -->
+    <div class="mono-label" style="margin:48px 0 16px">SELO DE AUTENTICIDADE · INCLUSO NA CAIXA</div>
+    <div class="print-grid">
+      <div class="print-card print-span-4" style="background:var(--bone)">
+        <div class="seal">
+          <div class="stop">GENE · APPROVED</div>
+          <div class="scenter">AUTHENTIC.<br>CURATED.</div>
+          <div class="sbot">LOTE #0042</div>
+          <div class="sno">21.04.2026</div>
+        </div>
+        <div class="meta" style="color:#555"><span>SEAL</span><strong style="color:var(--carbon)">Ø 6CM · HOLO</strong></div>
+      </div>
+      <div class="print-card print-span-8">
+        <div style="width:100%;display:flex;flex-direction:column;gap:20px">
+          <div style="font-family:var(--display);font-weight:900;font-size:28px;line-height:1;color:var(--bone);text-transform:uppercase;letter-spacing:-.01em">ANATOMIA DO PRINT<span style="color:var(--acid)">.</span></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--mono);font-size:12px;line-height:1.6">
+            <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--acid)">—</span> <strong style="color:var(--bone)">Ink:</strong> <span style="color:var(--slate)">Carbon #0D0D0D · Bone #F2EFE9 · Acid #C4FF3C</span></li>
+            <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--acid)">—</span> <strong style="color:var(--bone)">Papel cartão:</strong> <span style="color:var(--slate)">300g · Triplex · acabamento fosco</span></li>
+            <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--acid)">—</span> <strong style="color:var(--bone)">Ponto ácido:</strong> <span style="color:var(--slate)">usar verniz localizado em gráficas premium</span></li>
+            <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--acid)">—</span> <strong style="color:var(--bone)">Hang tag:</strong> <span style="color:var(--slate)">amarrado com cordão de algodão cru (nunca nylon)</span></li>
+            <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--acid)">—</span> <strong style="color:var(--bone)">Caixa:</strong> <span style="color:var(--slate)">print em 1 cor (Acid) sobre papel kraft escuro ou Carbon</span></li>
+            <li style="padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--acid)">—</span> <strong style="color:var(--bone)">Selo holográfico:</strong> <span style="color:var(--slate)">numerado por lote · parte do ritual de unboxing</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules" style="margin-top:56px">
+      <div class="rule-block">
+        <h4>REGRAS DE PRINT</h4>
+        <ul>
+          <li><span class="ok">Sempre</span> usar cores CMYK equivalentes (Acid → Pantone 389C)</li>
+          <li><span class="ok">Sempre</span> margem mínima = 1 × altura do G</li>
+          <li><span class="ok">Sempre</span> tagline em IBM Plex Mono, nunca em Big Shoulders</li>
+          <li><span class="ok">Sempre</span> SKU + origem + lote em peças com autenticidade</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h4>NUNCA FAÇA</h4>
+        <ul>
+          <li><span class="x">✕</span> Print gradiente (o sistema é de planos chapados)</li>
+          <li><span class="x">✕</span> Acid como fundo inteiro em papel fosco (dessatura)</li>
+          <li><span class="x">✕</span> Stencil / outline no logo — sempre sólido</li>
+          <li><span class="x">✕</span> Trocar Big Shoulders por Helvetica "pra economizar"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 07 · GALERIA · SUAS ARTES                                    -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">07 / GALERIA</span>
+  <div>
+    <div class="sec-kicker">07 · Sistema aplicado · stories + highlights</div>
+    <h2 class="sec-title">AS PEÇAS<span class="dot">.</span></h2>
+    <p class="lede">
+      Isso aqui não é mockup — é a <strong>pista de pouso</strong> do lançamento.<br>
+      Quatro stories de abertura + quatro capas de destaque. Todos os climas, uma voz só.
+    </p>
+
+    <div class="mono-label" style="margin:32px 0 16px">STORIES · 1080×1920 · ABERTURA DO FEED</div>
+    <div class="gallery-stories">
+      <div class="gallery-item">
+        <span class="gtag">DROP-26</span>
+        <img src="./03-social/gene-story-drops.png" alt="Story DROP-26">
+        <div class="gcap"><strong>DROP-26</strong><span>ACID · HERO</span></div>
+      </div>
+      <div class="gallery-item">
+        <span class="gtag">NOVIDADE</span>
+        <img src="./03-social/gene-story-novidade.png" alt="Story NOVIDADE">
+        <div class="gcap"><strong>NOVIDADE</strong><span>CARBON</span></div>
+      </div>
+      <div class="gallery-item">
+        <span class="gtag">PEDIDOS</span>
+        <img src="./03-social/gene-story-pedidos.png" alt="Story PEDIDOS">
+        <div class="gcap"><strong>PEDIDOS</strong><span>CHROME</span></div>
+      </div>
+      <div class="gallery-item">
+        <span class="gtag">LIFESTYLE</span>
+        <img src="./03-social/gene-story-cultura.png" alt="Story LIFESTYLE">
+        <div class="gcap"><strong>LIFESTYLE</strong><span>DAYLIGHT + BLOOM</span></div>
+      </div>
+    </div>
+
+    <div class="mono-label" style="margin:56px 0 16px">HIGHLIGHTS · CROP 1080² · CAPAS DE DESTAQUE</div>
+    <div class="gallery-hl">
+      <div class="gh">
+        <span class="ghtag">/ DROP-26 /</span>
+        <img src="./03-social/gene-highlight-drops.png" alt="Highlight DROP-26">
+        <span class="ghname">ACID FIELD</span>
+      </div>
+      <div class="gh">
+        <span class="ghtag">/ NOVIDADE /</span>
+        <img src="./03-social/gene-highlight-novidade.png" alt="Highlight NOVIDADE">
+        <span class="ghname">CARBON</span>
+      </div>
+      <div class="gh">
+        <span class="ghtag">/ PEDIDOS /</span>
+        <img src="./03-social/gene-highlight-pedidos.png" alt="Highlight PEDIDOS">
+        <span class="ghname">CHROME</span>
+      </div>
+      <div class="gh">
+        <span class="ghtag">/ LIFESTYLE /</span>
+        <img src="./03-social/gene-highlight-cultura.png" alt="Highlight LIFESTYLE">
+        <span class="ghname">DAYLIGHT · BLOOM</span>
+      </div>
+    </div>
+
+    <div class="rules" style="margin-top:56px">
+      <div class="rule-block">
+        <h4>O QUE CADA PEÇA FAZ</h4>
+        <ul>
+          <li><span class="ok">DROP-26:</span> hero de lançamento, save the date, FOMO (Acid raro)</li>
+          <li><span class="ok">NOVIDADE:</span> drops editoriais, modelos exclusivos (Carbon default)</li>
+          <li><span class="ok">PEDIDOS:</span> processo, rastreio, origem, bastidor técnico (Chrome)</li>
+          <li><span class="ok">LIFESTYLE:</span> creator, comunidade, afeto (Daylight + Bloom como voz)</li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h4>ANATOMIA COMUM</h4>
+        <ul>
+          <li><span class="ok">Pill / slug:</span> <span style="font-family:var(--mono)">// categoria · função</span></li>
+          <li><span class="ok">Headline:</span> Big Shoulders 900, ponto ácido como assinatura</li>
+          <li><span class="ok">CTA:</span> bloco Carbon com → em Acid</li>
+          <li><span class="ok">Data:</span> formato <span style="font-family:var(--mono);color:var(--acid)">21.04</span> (nunca 21/04/2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 08 · REFERÊNCIAS · FIGMA                                     -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">08 / REFERÊNCIAS</span>
+  <div>
+    <div class="sec-kicker">08 · Fonte viva · source-of-design</div>
+    <h2 class="sec-title">REFERÊNCIAS<span class="dot">.</span></h2>
+    <p class="lede">
+      O manual é o mapa. <strong>O Figma é o território.</strong><br>
+      Todo componente, todo token, todo exemplo visual mora lá — vivo, versionado, editável.
+    </p>
+
+    <div class="figma-block">
+      <div class="figma-panel">
+        <div class="flabel">ARQUIVO MESTRE · ID-VISUAL</div>
+        <h3>A MARCA RESPIRA<br>EM OUTROS CLIMAS<span style="color:var(--acid)">.</span></h3>
+        <p>
+          A página <strong>"A marca respira em outros climas"</strong> (nó <span style="color:var(--acid);font-family:var(--mono)">42:56422</span>) reúne os ambientes aplicados: Bloom text-first, Chrome em bastidor, Acid hero raro, countdowns, specimens tipográficos.
+        </p>
+        <p>
+          É ali que a regra vira peça. <strong>Antes de desenhar qualquer story, post ou capa nova, abra esse nó.</strong> Se a ideia não caber em um dos ambientes já provados, o trabalho é voltar pro manual — não inventar um clima novo no meio da execução.
+        </p>
+        <a class="link-row" href="https://www.figma.com/design/YHOF3HW9tzbKA0c7XV2Z2r/Id-visual?node-id=42-56422&m=dev" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span class="url">figma.com/design/YHOF3HW9tzbKA0c7XV2Z2r/Id-visual<br>?node-id=42-56422&m=dev</span>
+        </a>
+      </div>
+
+      <div>
+        <div class="mono-label" style="margin-bottom:16px">PÁGINAS-CHAVE DO ARQUIVO</div>
+        <ul class="figma-list">
+          <li>
+            <span class="node">NÓ 42:56422 · CLIMAS APLICADOS</span>
+            A marca respira em outros climas. Bloom, Chrome, Acid. Aplicações reais de cada ambiente, com contagem regressiva 48H, specimens e hierarquia de headline.
+          </li>
+          <li>
+            <span class="node">LOGO MASTER · 3 VERSÕES</span>
+            Preto sobre Bone, Branco sobre Carbon, Colorido Carbon + Acid. Source-of-truth dos SVGs exportados em <span style="color:var(--acid)">/01-logo/</span>.
+          </li>
+          <li>
+            <span class="node">WAVE FAMILY · 7 VARIANTES</span>
+            HELIX / SIGNAL / PULSE / NODES / SPIKE / SOLE-AJ1 / SCAN. Todas construídas sobre o DNA do monograma.
+          </li>
+          <li>
+            <span class="node">SELOS / BADGES · 8 FORMATOS</span>
+            SKU TAG, DROP STAMP, ORIGIN TAG, PRICE FRAME, APPROVAL SEAL, HYPE METER, STATUS PIN, EDGE LABEL. Sempre em IBM Plex Mono.
+          </li>
+          <li>
+            <span class="node">STORIES + HIGHLIGHTS</span>
+            Layouts-mestre das 4 categorias (DROP-26, NOVIDADE, PEDIDOS, LIFESTYLE). Templates para duplicar e trocar conteúdo.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rules" style="margin-top:56px">
+      <div class="rule-block">
+        <h4>REGRA DE OURO</h4>
+        <ul>
+          <li><span class="ok">Figma é source-of-truth</span> — manual descreve, Figma produz</li>
+          <li><span class="ok">Exporte SVG</span> — nunca PNG pra logo ou wave</li>
+          <li><span class="ok">Use os components</span> — nunca re-desenhe</li>
+          <li><span class="ok">Se mudar no Figma,</span> atualiza o SVG em <span style="color:var(--acid)">/01-logo/</span></li>
+        </ul>
+      </div>
+      <div class="rule-block">
+        <h4>FLUXO OPERACIONAL</h4>
+        <ul>
+          <li><span class="ok">1.</span> Abre o Figma · nó 42:56422</li>
+          <li><span class="ok">2.</span> Duplica o template mais próximo do clima certo</li>
+          <li><span class="ok">3.</span> Troca copy + dado técnico + data</li>
+          <li><span class="ok">4.</span> Exporta · salva em <span style="color:var(--acid)">/03-social/</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 09 · ARQUIVOS                                                -->
+<!-- ============================================================ -->
+<section class="wrap">
+  <span class="sec-num">09 / ARQUIVOS</span>
+  <div>
+    <div class="sec-kicker">09 · Fonte de verdade</div>
+    <h2 class="sec-title">OS ARQUIVOS<span class="dot">.</span></h2>
+    <p class="lede">
+      Todos os assets oficiais estão em <span class="hl">/tênis/</span>.<br>
+      <strong>Use sempre a versão do repositório</strong> — nunca exporte do Figma direto pra peça.
+    </p>
+
+    <table class="files-table">
+      <thead>
+        <tr>
+          <th style="width:50%">PATH</th>
+          <th style="width:20%">TIPO</th>
+          <th style="width:30%">USO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="3" style="padding-top:24px"><span class="mono-label">LOGO MASTER</span></td></tr>
+        <tr><td class="path">/01-logo/gene-logo-preto.svg</td><td>SVG 1080²</td><td class="use">Fundo claro · Daylight</td></tr>
+        <tr><td class="path">/01-logo/gene-logo-branco.svg</td><td>SVG 1080²</td><td class="use">Fundo escuro · Carbon</td></tr>
+        <tr><td class="path">/01-logo/gene-logo-colorido.svg</td><td>SVG 1080²</td><td class="use">Hero raro · Acid</td></tr>
+
+        <tr><td colspan="3" style="padding-top:24px"><span class="mono-label">LOGO VARIANTES</span></td></tr>
+        <tr><td class="path">/01-logo/variantes/gene-logo-sem-tagline-{preto,branco}.svg</td><td>SVG 1080²</td><td class="use">Grid denso · footer</td></tr>
+        <tr><td class="path">/01-logo/variantes/gene-logo-horizontal-{preto,branco}.svg</td><td>SVG 1080×556</td><td class="use">Header · banner · email</td></tr>
+        <tr><td class="path">/01-logo/variantes/gene-logo-wordmark-{preto,branco}.svg</td><td>SVG 1080×400</td><td class="use">Selo · parceria · watermark</td></tr>
+        <tr><td class="path">/01-logo/variantes/gene-logo-monograma-{preto,branco}.svg</td><td>SVG 1080²</td><td class="use">Avatar · favicon · app icon</td></tr>
+
+        <tr><td colspan="3" style="padding-top:24px"><span class="mono-label">SOCIAL</span></td></tr>
+        <tr><td class="path">/07-social/gene-avatar-ig.svg</td><td>SVG 1080²</td><td class="use">Avatar Instagram · WhatsApp</td></tr>
+        <tr><td class="path">/03-social/gene-story-*.svg</td><td>SVG 1080×1920</td><td class="use">Stories de lançamento</td></tr>
+        <tr><td class="path">/03-social/gene-highlight-*.svg</td><td>SVG 1080×1920</td><td class="use">Capas de destaque</td></tr>
+
+        <tr><td colspan="3" style="padding-top:24px"><span class="mono-label">DOCUMENTAÇÃO</span></td></tr>
+        <tr><td class="path">/gene-identity-manual.html</td><td>HTML</td><td class="use">Este manual</td></tr>
+        <tr><td class="path">/04-docs/gene-sneakers-master.md</td><td>Markdown</td><td class="use">Manual de marca completo</td></tr>
+        <tr><td class="path">/04-docs/brief-lancamento-gene-sneakers.docx</td><td>DOCX</td><td class="use">Brief operacional</td></tr>
+        <tr><td class="path">/04-docs/gene-sneakers-design-philosophy.md</td><td>Markdown</td><td class="use">Filosofia visual</td></tr>
+
+        <tr><td colspan="3" style="padding-top:24px"><span class="mono-label">FIGMA · SOURCE-OF-TRUTH</span></td></tr>
+        <tr><td class="path">figma.com/design/YHOF3HW9tzbKA0c7XV2Z2r/Id-visual</td><td>Figma</td><td class="use">Arquivo mestre (live)</td></tr>
+        <tr><td class="path">?node-id=42-56422</td><td>Figma Node</td><td class="use">A marca respira em outros climas</td></tr>
+
+        <tr><td colspan="3" style="padding-top:24px"><span class="mono-label">TIPOGRAFIA — LINKS</span></td></tr>
+        <tr><td class="path">fonts.google.com/specimen/Big+Shoulders+Display</td><td>Webfont</td><td class="use">Display · headline</td></tr>
+        <tr><td class="path">fonts.google.com/specimen/IBM+Plex+Mono</td><td>Webfont</td><td class="use">Mono · técnico</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                       -->
+<!-- ============================================================ -->
+<footer class="wrap">
+  <div>
+    <div class="sig">GENE<span style="color:var(--acid)">.</span></div>
+    <div style="margin-top:12px;letter-spacing:.18em">MANUAL DE IDENTIDADE VISUAL · v1.0 · 21.04.2026</div>
+  </div>
+  <div style="text-align:right">
+    <div>.ESTILO <span style="color:var(--acid)">·</span> NOS <span style="color:var(--acid)">·</span> PÉS.</div>
+    <div style="margin-top:8px;color:#555">© GENE SNEAKERS 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5400" height="1920" viewBox="0 0 5400 1920">
+  <defs>
+    <style>
+      text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      .label { font-size: 32px; fill: #3C3C3C; letter-spacing: 4px; font-weight: 400; text-transform: uppercase; }
+      .corner { font-size: 28px; fill: #3C3C3C; letter-spacing: 4px; font-weight: 400; }
+      .handle { font-size: 28px; fill: #3C3C3C; letter-spacing: 6px; font-weight: 400; }
+      .hero { font-size: 200px; font-weight: 900; letter-spacing: -4px; text-transform: uppercase; }
+      .hero-lg { font-size: 260px; font-weight: 900; letter-spacing: -6px; text-transform: uppercase; }
+      .brand-line { font-size: 56px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <!-- ═══ FRAME 1 ═══ -->
+  <rect x="0" y="0" width="1080" height="1920" fill="#080808"/>
+  <!-- label -->
+  <text x="40" y="72" class="label">Frame 01 · 0s</text>
+  <!-- corner -->
+  <text x="980" y="72" text-anchor="end" class="corner">@genesneakers</text>
+  <!-- main text -->
+  <text x="90" y="820" class="hero" fill="#F3EFE6">SABE</text>
+  <text x="90" y="1030" class="hero" fill="#F3EFE6">AQUELE</text>
+  <text x="90" y="1240" class="hero" fill="#F3EFE6">NIKE QUE</text>
+  <text x="90" y="1450" class="hero" fill="#F3EFE6">CUSTA</text>
+  <text x="90" y="1660" class="hero" fill="#F3EFE6">R$800 AQUI?</text>
+  <!-- separator -->
+  <line x1="1078" y1="0" x2="1078" y2="1920" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ FRAME 2 ═══ -->
+  <rect x="1080" y="0" width="1080" height="1920" fill="#080808"/>
+  <text x="1120" y="72" class="label">Frame 02 · 3s</text>
+  <text x="2060" y="72" text-anchor="end" class="corner">@genesneakers</text>
+  <text x="1170" y="860" class="hero" fill="#F3EFE6">LÁ FORA</text>
+  <text x="1170" y="1070" class="hero" fill="#F3EFE6">CUSTA</text>
+  <text x="1170" y="1340" class="hero-lg" fill="#C4FF3C">$90.</text>
+  <line x1="2158" y1="0" x2="2158" y2="1920" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ FRAME 3 ═══ -->
+  <rect x="2160" y="0" width="1080" height="1920" fill="#080808"/>
+  <text x="2200" y="72" class="label">Frame 03 · 6s</text>
+  <text x="3140" y="72" text-anchor="end" class="corner">@genesneakers</text>
+  <text x="2250" y="780" class="hero" fill="#F3EFE6">A</text>
+  <text x="2250" y="990" class="hero" fill="#F3EFE6">DIFERENÇA</text>
+  <text x="2250" y="1200" class="hero" fill="#F3EFE6">NÃO É</text>
+  <text x="2250" y="1430" class="hero" fill="#F3EFE6">QUALIDADE.</text>
+  <line x1="3238" y1="0" x2="3238" y2="1920" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ FRAME 4 ═══ -->
+  <rect x="3240" y="0" width="1080" height="1920" fill="#080808"/>
+  <text x="3280" y="72" class="label">Frame 04 · 9s</text>
+  <text x="4220" y="72" text-anchor="end" class="corner">@genesneakers</text>
+  <text x="3330" y="960" class="hero" fill="#F3EFE6">É</text>
+  <text x="3330" y="1240" style="font-size:280px;font-weight:900;letter-spacing:-8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;" fill="#C4FF3C">MARKUP.</text>
+  <line x1="4318" y1="0" x2="4318" y2="1920" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ FRAME 5 ═══ -->
+  <rect x="4320" y="0" width="1080" height="1920" fill="#080808"/>
+  <text x="4360" y="72" class="label">Frame 05 · 12s</text>
+  <!-- main statement -->
+  <text x="4410" y="640" class="brand-line" fill="#3C3C3C">A GENE NÃO COBRA</text>
+  <text x="4410" y="820" class="hero" fill="#F3EFE6">MARKUP</text>
+  <text x="4410" y="1030" class="hero" fill="#F3EFE6">DE VAREJO</text>
+  <text x="4410" y="1240" class="hero" fill="#F3EFE6">NACIONAL.</text>
+  <!-- wordmark logo -->
+  <image href="../../02_branding/identidade_visual/gene-wordmark.svg" x="4410" y="1480" width="500" height="242"/>
+
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap');
+      .display { font-family: 'Big Shoulders Display', 'Arial Black', sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; }
+      .mono { font-family: 'IBM Plex Mono', 'Menlo', monospace; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <!-- ACID field (variação de drop) -->
+  <rect width="1080" height="1080" fill="#CBF23D"/>
+
+  <!-- GENE dominante em Carbon -->
+  <text x="540" y="565" class="display" font-size="300" fill="#0D0D0D" text-anchor="middle">GENE</text>
+
+  <!-- Filete Carbon (inverso da B) -->
+  <line x1="460" y1="615" x2="620" y2="615" stroke="#0D0D0D" stroke-width="3"/>
+
+  <!-- SNEAKERS mono (sinaliza drop / release) -->
+  <text x="540" y="695" class="mono" font-size="54" fill="#0D0D0D" text-anchor="middle">SNEAKERS</text>
+</svg>

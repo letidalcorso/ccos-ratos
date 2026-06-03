@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · CHROME Overlay Kit (Figma)
+
+    MOOD: tech, frio, metálico, clean. Still-life, produto isolado, storytelling técnico.
+
+    Ordem dos layers (de baixo pra cima) + blend mode a aplicar:
+    ──────────────────────────────────────────────────────
+    Layer 01 · desat-lift-softlight        → SOFT LIGHT · 50%
+    Layer 02 · cyan-wash-overlay           → OVERLAY · 30%
+    Layer 03 · steel-mids-multiply         → MULTIPLY · 20%
+    Layer 04 · cold-highlights-screen      → SCREEN · 20%
+    Layer 05 · chrome-vignette-multiply    → MULTIPLY · 25%
+    (grain texture opcional · Overlay 8% · quase invisível)
+    ──────────────────────────────────────────────────────
+  -->
+
+  <defs>
+    <radialGradient id="chromeVignette" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A1218" stop-opacity="0.45"/>
+    </radialGradient>
+  </defs>
+
+  <!-- LAYER 01 · Desat lift (Soft Light 50%) -->
+  <g id="desat-lift-softlight" opacity="0.5">
+    <rect width="1080" height="1350" fill="#D8DCE0"/>
+  </g>
+
+  <!-- LAYER 02 · Cyan wash (Overlay 30%) -->
+  <g id="cyan-wash-overlay" opacity="0.3">
+    <rect width="1080" height="1350" fill="#7FA8C4"/>
+  </g>
+
+  <!-- LAYER 03 · Steel midtones (Multiply 20%) -->
+  <g id="steel-mids-multiply" opacity="0.2">
+    <rect width="1080" height="1350" fill="#A8B4BC"/>
+  </g>
+
+  <!-- LAYER 04 · Cold highlights (Screen 20%) -->
+  <g id="cold-highlights-screen" opacity="0.2">
+    <rect width="1080" height="1350" fill="#E0ECF2"/>
+  </g>
+
+  <!-- LAYER 05 · Chrome vignette (Multiply 25%) -->
+  <g id="chrome-vignette-multiply" opacity="0.25">
+    <rect width="1080" height="1350" fill="url(#chromeVignette)"/>
+  </g>
+
+  <!-- GUIDE -->
+  <g id="GUIDE-REMOVER-DEPOIS" opacity="0.85">
+    <rect x="40" y="40" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="92" font-family="'IBM Plex Mono',monospace" font-weight="500" font-size="28" fill="#C4FF3C" letter-spacing="0.1em">GENE · CHROME OVERLAY KIT</text>
+    <rect x="40" y="1230" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="1260" font-family="'IBM Plex Mono',monospace" font-size="16" fill="#F2EFE9">1. soft 50%  ·  2. ovl 30%  ·  3. mult 20%  ·  4. scr 20%  ·  5. mult 25%</text>
+    <text x="60" y="1285" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">mood: tech · frio · metálico · clean · still-life</text>
+    <text x="60" y="1305" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">grain opcional (Overlay 8%) · delete guide antes de usar</text>
+  </g>
+</svg>

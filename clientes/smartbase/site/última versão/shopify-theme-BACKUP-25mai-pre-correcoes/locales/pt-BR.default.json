@@ -1,0 +1,6 @@
+{
+  "general": {
+    "search": { "submit": "Buscar" },
+    "pagination": { "previous": "Anterior", "next": "Próximo" }
+  }
+}

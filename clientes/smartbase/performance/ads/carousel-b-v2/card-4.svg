@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap');</style>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#07070E"/>
+
+  <!-- Glow azul sutil -->
+  <ellipse cx="540" cy="420" rx="380" ry="300" fill="#3E82F7" opacity="0.04"/>
+
+  <!-- Pilar pill -->
+  <rect x="80" y="80" width="116" height="28" rx="14" fill="#0E1E3A"/>
+  <text x="138" y="99" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#3E82F7" text-anchor="middle" letter-spacing="1.5">PRODUTO</text>
+
+  <!-- Counter -->
+  <text x="1000" y="99" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#4A4A60" text-anchor="end">4 / 4</text>
+
+  <!-- Accent line -->
+  <rect x="80" y="128" width="64" height="5" rx="2.5" fill="#3E82F7"/>
+
+  <!-- Bloco de preço -->
+  <rect x="80" y="168" width="700" height="120" rx="12" fill="#0E1E3A"/>
+  <rect x="80" y="168" width="5" height="120" rx="2.5" fill="#3E82F7"/>
+  <text x="118" y="218" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="500" fill="#7A7A96">iPhone 17 Pro Max</text>
+  <text x="118" y="266" font-family="'Inter', system-ui, sans-serif" font-size="48" font-weight="800" fill="#3E82F7">R$9.200</text>
+  <text x="500" y="266" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#7A7A96">à vista no PIX</text>
+
+  <!-- Headline CTA -->
+  <text x="80" y="390" font-family="'Inter', system-ui, sans-serif" font-size="92" font-weight="800" fill="#F2F2F6">manda</text>
+  <text x="80" y="494" font-family="'Inter', system-ui, sans-serif" font-size="92" font-weight="800" fill="#3E82F7">mensagem.</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="534" x2="920" y2="534" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Sub -->
+  <text x="80" y="588" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="400" fill="#7A7A96">entrega presencial em Caxias do Sul e região.</text>
+  <text x="80" y="628" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="400" fill="#7A7A96">envio para o Brasil todo.</text>
+
+  <!-- CTA button -->
+  <rect x="80" y="686" width="340" height="64" rx="32" fill="#3E82F7"/>
+  <text x="250" y="726" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="700" fill="#07070E" text-anchor="middle">falar no WhatsApp →</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="900" x2="1000" y2="900" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="936" font-family="'Inter', system-ui, sans-serif" font-size="24" fill="#F2F2F6">
+    <tspan font-weight="300" fill="#C0C0D0">smart</tspan><tspan fill="#3E82F7" font-size="11" baseline-shift="4">●</tspan><tspan font-weight="700">base</tspan>
+  </text>
+  <text x="1000" y="936" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">6/8</text>
+
+  <!-- Label -->
+  <text x="80" y="370" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="500" opacity="0.6" letter-spacing="2">CIUDAD DEL ESTE · APPLE AUTHORIZED RESELLER</text>
+
+  <!-- Product -->
+  <text x="80" y="490" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="64" font-weight="700" letter-spacing="-2">iPhone 17 Pro Max</text>
+  <text x="80" y="540" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.7">256 GB · zona de livre comércio</text>
+
+  <!-- Price (highlighted green) -->
+  <text x="80" y="780" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="180" font-weight="800" letter-spacing="-6">~R$ 7.500</text>
+  <text x="80" y="850" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400" opacity="0.7">faixa de referência, cotação corrente</text>
+
+  <!-- Saving callout -->
+  <rect x="80" y="950" width="920" height="180" rx="12" fill="none" stroke="#2DFF8B" stroke-width="2"/>
+  <text x="540" y="1010" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="500" text-anchor="middle">o mesmo aparelho.</text>
+  <text x="540" y="1075" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="44" font-weight="700" text-anchor="middle">R$ 5.000 a menos.</text>
+
+  <!-- Footnote -->
+  <text x="80" y="1190" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" font-weight="400" opacity="0.4">fonte: Casa Nissei (AAR Paraguay), cotação USD/BRL mai/2026 · valor sob variação</text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

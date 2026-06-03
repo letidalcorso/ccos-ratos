@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smartbase — iPhone 17, MacBook, Apple Watch e mais. Produtos Apple originais, importados, sob encomenda com garantia. Entrega em todo o Brasil.">
+  <title>Produtos Apple — Smartbase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── HERO DA PÁGINA ───────────────────────────────── */
+    .sb-produtos-hero {
+      padding: 72px 0 56px;
+      position: relative;
+      border-bottom: var(--border-subtle);
+    }
+
+    .sb-produtos-hero__bar {
+      position: absolute;
+      left: 0; top: 0;
+      width: 4px; height: 100%;
+      background: var(--blue-primary);
+    }
+
+    .sb-produtos-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5.5vw, 64px);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+
+    .sb-produtos-hero__sub {
+      font-size: clamp(14px, 1.8vw, 17px);
+      font-weight: 300;
+      color: var(--text-secondary);
+      max-width: 560px;
+    }
+
+    /* ── FILTROS ──────────────────────────────────────── */
+    .sb-filtros {
+      padding: 24px 0 0;
+      border-bottom: var(--border-subtle);
+      margin-bottom: 56px;
+      position: sticky;
+      top: 64px;
+      z-index: 50;
+      background: rgba(7, 7, 14, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .sb-filtros__inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+    }
+
+    .sb-filtro-btn {
+      padding: 8px 20px;
+      border: var(--border-subtle);
+      border-radius: var(--radius-pill);
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .sb-filtro-btn:hover,
+    .sb-filtro-btn.active {
+      background: var(--blue-primary);
+      border-color: var(--blue-primary);
+      color: #fff;
+    }
+
+    /* ── CATEGORIA HEADER ─────────────────────────────── */
+    .sb-cat-header {
+      margin-bottom: 28px;
+    }
+
+    .sb-cat-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 800;
+      margin-top: 12px;
+    }
+
+    /* ── GRID DE PRODUTOS ─────────────────────────────── */
+    .sb-produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 72px;
+    }
+
+    /* ── CARD DE PRODUTO ──────────────────────────────── */
+    .sb-card {
+      background: var(--surface-1);
+      border: var(--border-subtle);
+      border-radius: var(--radius-card-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sb-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--surface-3);
+    }
+
+    .sb-card--featured {
+      border-color: var(--blue-primary);
+      background: linear-gradient(160deg, var(--surface-2) 0%, rgba(62,130,247,0.06) 100%);
+    }
+
+    .sb-card__img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: #F5F5F7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .sb-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .sb-card:hover .sb-card__img img {
+      transform: scale(1.04);
+    }
+
+    .sb-card__img--dark {
+      background: var(--surface-2);
+    }
+
+    .sb-card__img--dark img {
+      object-fit: cover;
+      object-position: center 55%;
+      padding: 0;
+    }
+
+    .sb-card__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 10px;
+      background: var(--blue-primary);
+      border-radius: var(--radius-badge);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .sb-card__icon-wrap {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--blue-alpha-10);
+      border-radius: 20px;
+      border: 1px solid var(--blue-alpha-30);
+    }
+
+    .sb-card__body {
+      padding: 20px 20px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .sb-card__name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .sb-card__sub {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .sb-card__specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .sb-card__spec {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 3px 8px;
+      background: var(--surface-3);
+      border-radius: 6px;
+      color: var(--text-secondary);
+    }
+
+    .sb-card__footer {
+      padding: 16px 20px 20px;
+    }
+
+    .sb-card__footer .sb-btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 13px;
+      padding: 12px 20px;
+    }
+
+    /* ── FILTRO SEMINOVOS ─────────────────────────────── */
+    .sb-filtro-btn--seminovos {
+      border-color: rgba(16, 185, 129, 0.4);
+      color: #10B981;
+    }
+
+    .sb-filtro-btn--seminovos:hover,
+    .sb-filtro-btn--seminovos.active {
+      background: #10B981;
+      border-color: #10B981;
+      color: #fff;
+    }
+
+    /* ── SECTION SEPARADOR ────────────────────────────── */
+    .sb-produtos-section {
+      padding: 0 0 8px;
+    }
+
+    /* ── SECTION SEMINOVOS ────────────────────────────── */
+    .sb-seminovos-section {
+      padding: 0 0 8px;
+    }
+
+    .sb-seminovos-section .sb-cat-header h2 {
+      color: #10B981;
+    }
+
+    .sb-card--seminovo {
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .sb-card--seminovo:hover {
+      border-color: rgba(16, 185, 129, 0.6);
+    }
+
+    .sb-card--seminovo .sb-btn--primary {
+      background: #10B981;
+    }
+
+    .sb-card__estado {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #10B981;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .sb-card__bateria {
+      font-size: 11px;
+      color: #10B981;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 640px) {
+      .sb-produtos-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .sb-card__body { padding: 14px 14px 6px; }
+      .sb-card__footer { padding: 10px 14px 14px; }
+    }
+
+    @media (max-width: 420px) {
+      .sb-produtos-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sb-header">
+    <div class="sb-container">
+      <div class="sb-header__inner">
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+
+        <nav class="sb-nav" id="sb-nav">
+          <a href="produtos.html" class="active">produtos</a>
+          <a href="blog.html">blog</a>
+          <a href="index.html#sobre">sobre</a>
+          <a href="index.html#contato">contato</a>
+        </nav>
+
+        <a href="https://wa.me/5554996624494" target="_blank" rel="noopener" class="sb-btn sb-btn--primary sb-header__cta">
+          quero meu apple
+        </a>
+
+        <button class="sb-nav__toggle" id="sb-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <div class="sb-produtos-hero">
+    <div class="sb-produtos-hero__bar"></div>
+    <div class="sb-container">
+      <span class="sb-badge">sob encomenda · garantia Apple · entrega nacional</span>
+      <h1>os melhores Apple.<br><span class="sb-blue">originais e acessíveis.</span></h1>
+      <p class="sb-produtos-hero__sub">
+        tudo importado, com garantia Apple ativa. pedido via WhatsApp, entrega em todo o Brasil em até 7 dias.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- FILTROS (sticky) -->
+  <div class="sb-filtros">
+    <div class="sb-container">
+      <div class="sb-filtros__inner">
+        <button class="sb-filtro-btn active" data-filtro="novos">novos</button>
+        <button class="sb-filtro-btn sb-filtro-btn--seminovos" data-filtro="seminovos">seminovos</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- GRID DE PRODUTOS -->
+  <section class="sb-section" style="padding-top: 0;">
+    <div class="sb-container">
+
+      <!-- ── iPHONE 17 ─────────────────────────────────── -->
+      <div class="sb-produtos-section">
+        <div class="sb-cat-header">
+          <span class="sb-badge sb-badge--blue">linha 2025</span>
+          <h2>iPhone 17</h2>
+        </div>
+
+        <div class="sb-produtos-grid">
+
+          <!-- iPhone 17 Pro -->
+          <div class="sb-card sb-card--featured" data-categoria="novos">
+            <div class="sb-card__img sb-card__img--dark">
+              <img src="img/hero-iphone17pro.jpg" alt="iPhone 17 Pro" loading="eager">
+              <span class="sb-card__badge">mais vendido</span>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">iPhone 17 Pro</div>
+              <p class="sb-card__sub">câmera profissional, chip A19 Pro, tela ProMotion 120Hz. o topo da linha Apple.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">128GB</span>
+                <span class="sb-card__spec">256GB</span>
+                <span class="sb-card__spec">512GB</span>
+                <span class="sb-card__spec">1TB</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+iPhone+17+Pro" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- iPhone 17 Pro Max -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <img src="img/iphone17-black.jpg" alt="iPhone 17 Pro Max" loading="lazy">
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">iPhone 17 Pro Max</div>
+              <p class="sb-card__sub">bateria de 2 dias, tela de 6,9" e o melhor conjunto fotográfico da Apple.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">256GB</span>
+                <span class="sb-card__spec">512GB</span>
+                <span class="sb-card__spec">1TB</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+iPhone+17+Pro+Max" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- iPhone 17 -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <img src="img/iphone17-novos.jpg" alt="iPhone 17" loading="lazy">
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">iPhone 17</div>
+              <p class="sb-card__sub">design fino, chip A19, câmera traseira atualizada. o iPhone que a maioria precisa.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">128GB</span>
+                <span class="sb-card__spec">256GB</span>
+                <span class="sb-card__spec">512GB</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+iPhone+17" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- iPhone 17 Air -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <img src="img/iphone17e.jpg" alt="iPhone 17 Air" loading="lazy">
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">iPhone 17 Air</div>
+              <p class="sb-card__sub">o mais fino já feito. 5,6 mm de espessura, tela de 6,5", bateria que surpreende pelo tamanho.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">128GB</span>
+                <span class="sb-card__spec">256GB</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+iPhone+17+Air" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── MAC ──────────────────────────────────────── -->
+      <div class="sb-produtos-section">
+        <div class="sb-cat-header">
+          <span class="sb-badge">computadores</span>
+          <h2>Mac</h2>
+        </div>
+
+        <div class="sb-produtos-grid">
+
+          <!-- MacBook Air M5 13" -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <div class="sb-card__icon-wrap">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="6" y="8" width="36" height="24" rx="3" stroke="#3E82F7" stroke-width="1.8"/>
+                  <path d="M2 36h44" stroke="#3E82F7" stroke-width="1.8" stroke-linecap="round"/>
+                  <rect x="18" y="36" width="12" height="4" rx="2" fill="#3E82F7" fill-opacity="0.35"/>
+                  <rect x="10" y="13" width="28" height="14" rx="1.5" fill="#3E82F7" fill-opacity="0.06"/>
+                </svg>
+              </div>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">MacBook Air 13"</div>
+              <p class="sb-card__sub">chip M5, tela Liquid Retina, até 32 GB RAM. leve, silencioso e muito rápido.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">M5</span>
+                <span class="sb-card__spec">16GB RAM</span>
+                <span class="sb-card__spec">256GB</span>
+                <span class="sb-card__spec">512GB</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+MacBook+Air+13" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- MacBook Air M5 15" -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <div class="sb-card__icon-wrap">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="4" y="8" width="40" height="26" rx="3" stroke="#3E82F7" stroke-width="1.8"/>
+                  <path d="M1 38h46" stroke="#3E82F7" stroke-width="1.8" stroke-linecap="round"/>
+                  <rect x="17" y="38" width="14" height="3.5" rx="1.75" fill="#3E82F7" fill-opacity="0.35"/>
+                  <rect x="9" y="13" width="30" height="16" rx="1.5" fill="#3E82F7" fill-opacity="0.06"/>
+                </svg>
+              </div>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">MacBook Air 15"</div>
+              <p class="sb-card__sub">tela maior, mesma potência do Air 13". ideal pra quem trabalha com design, vídeo ou código.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">M5</span>
+                <span class="sb-card__spec">16GB RAM</span>
+                <span class="sb-card__spec">256GB</span>
+                <span class="sb-card__spec">512GB</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+MacBook+Air+15" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- MacBook Pro 14" -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <div class="sb-card__icon-wrap">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="5" y="7" width="38" height="27" rx="3" stroke="#3E82F7" stroke-width="1.8"/>
+                  <path d="M2 37h44" stroke="#3E82F7" stroke-width="1.8" stroke-linecap="round"/>
+                  <rect x="17" y="37" width="14" height="4" rx="2" fill="#3E82F7" fill-opacity="0.35"/>
+                  <rect x="10" y="13" width="28" height="15" rx="1.5" fill="#3E82F7" fill-opacity="0.06"/>
+                  <!-- notch hint -->
+                  <rect x="20" y="8" width="8" height="4" rx="1" fill="var(--bg-base)" stroke="#3E82F7" stroke-width="0.8" fill-opacity="0.7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">MacBook Pro 14"</div>
+              <p class="sb-card__sub">chip M5 Pro, tela mini-LED ProMotion 120Hz. para quem não aceita limite de performance.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">M5 Pro</span>
+                <span class="sb-card__spec">24GB RAM</span>
+                <span class="sb-card__spec">512GB</span>
+                <span class="sb-card__spec">1TB</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+MacBook+Pro+14" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── ACESSÓRIOS ─────────────────────────────────── -->
+      <div class="sb-produtos-section">
+        <div class="sb-cat-header">
+          <span class="sb-badge">acessórios</span>
+          <h2>o ecossistema completo</h2>
+        </div>
+
+        <div class="sb-produtos-grid">
+
+          <!-- Apple Watch Ultra 3 -->
+          <div class="sb-card sb-card--featured" data-categoria="novos">
+            <div class="sb-card__img">
+              <img src="img/watch-ultra3.jpg" alt="Apple Watch Ultra 3" loading="lazy">
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">Apple Watch Ultra 3</div>
+              <p class="sb-card__sub">o watch mais resistente e completo. para aventura ou dia a dia sem concessão.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">49mm</span>
+                <span class="sb-card__spec">Titânio</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+Apple+Watch+Ultra+3" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- Apple Watch Series 11 -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <div class="sb-card__icon-wrap">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="13" y="10" width="22" height="28" rx="7" stroke="#3E82F7" stroke-width="1.8"/>
+                  <rect x="16" y="14" width="16" height="20" rx="4" fill="#3E82F7" fill-opacity="0.07"/>
+                  <path d="M18 8v-4" stroke="#3E82F7" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M30 8v-4" stroke="#3E82F7" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M18 44v-4" stroke="#3E82F7" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M30 44v-4" stroke="#3E82F7" stroke-width="1.5" stroke-linecap="round"/>
+                  <rect x="34" y="18" width="3" height="8" rx="1.5" fill="#3E82F7" fill-opacity="0.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">Apple Watch Series 11</div>
+              <p class="sb-card__sub">tela maior, mais fino que qualquer Watch anterior. o cotidiano em pulso.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">42mm</span>
+                <span class="sb-card__spec">46mm</span>
+                <span class="sb-card__spec">GPS</span>
+                <span class="sb-card__spec">GPS+Cellular</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+Apple+Watch+Series+11" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- AirPods Pro 3 -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <div class="sb-card__icon-wrap">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="13" y="26" width="22" height="16" rx="6" stroke="#3E82F7" stroke-width="1.8"/>
+                  <line x1="17" y1="26" x2="17" y2="13" stroke="#3E82F7" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="31" y1="26" x2="31" y2="13" stroke="#3E82F7" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="17" cy="10.5" r="4" fill="#3E82F7" fill-opacity="0.55"/>
+                  <circle cx="31" cy="10.5" r="4" fill="#3E82F7" fill-opacity="0.55"/>
+                </svg>
+              </div>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">AirPods Pro 3</div>
+              <p class="sb-card__sub">cancelamento ativo de ruído, áudio espacial, chip H2. o padrão de ouro em fone sem fio.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">USB-C</span>
+                <span class="sb-card__spec">ANC</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+AirPods+Pro+3" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+          <!-- AirPods 4 -->
+          <div class="sb-card" data-categoria="novos">
+            <div class="sb-card__img">
+              <div class="sb-card__icon-wrap">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="15" y="28" width="18" height="13" rx="5" stroke="#3E82F7" stroke-width="1.8"/>
+                  <line x1="18.5" y1="28" x2="18.5" y2="16" stroke="#3E82F7" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="29.5" y1="28" x2="29.5" y2="16" stroke="#3E82F7" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="18.5" cy="13.5" r="3.5" fill="#3E82F7" fill-opacity="0.5"/>
+                  <circle cx="29.5" cy="13.5" r="3.5" fill="#3E82F7" fill-opacity="0.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">AirPods 4</div>
+              <p class="sb-card__sub">cancelamento de ruído ativo na versão top. conforto e qualidade Apple sem case in-ear.</p>
+              <div class="sb-card__specs">
+                <span class="sb-card__spec">ANC</span>
+                <span class="sb-card__spec">USB-C</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+AirPods+4" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                fazer pedido
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── SEMINOVOS ──────────────────────────────────── -->
+      <div class="sb-seminovos-section">
+        <div class="sb-cat-header">
+          <span class="sb-badge" style="border-color: rgba(16,185,129,0.4); color: #10B981; background: rgba(16,185,129,0.07);">em estoque · 3 meses de garantia</span>
+          <h2>seminovos</h2>
+          <p style="font-size:14px; color: var(--text-secondary); font-weight:300; margin-top:6px;">cada aparelho avaliado antes de ir pro catálogo. você sabe exatamente o que compra.</p>
+        </div>
+
+        <div class="sb-produtos-grid">
+
+          <!-- iPhone 14 Pro Max 256GB -->
+          <div class="sb-card sb-card--seminovo" data-categoria="seminovos">
+            <div class="sb-card__img" style="position:relative;">
+              <img src="img/seminovo-iphone14pro-frente.png" alt="iPhone 14 Pro Max 256GB Roxo Profundo" loading="lazy">
+              <span class="sb-card__estado">excelente</span>
+            </div>
+            <div class="sb-card__body">
+              <div class="sb-card__name">iPhone 14 Pro Max</div>
+              <p class="sb-card__sub">256GB · roxo profundo · sem caixa · face ID ok · iCloud limpo</p>
+              <div class="sb-card__bateria">bateria 89%</div>
+              <div class="sb-card__specs" style="margin-top:8px;">
+                <span class="sb-card__spec">256GB</span>
+                <span class="sb-card__spec">roxo profundo</span>
+              </div>
+            </div>
+            <div class="sb-card__footer">
+              <a href="https://wa.me/5554996624494?text=tenho+interesse+no+iPhone+14+Pro+Max+256GB+roxo+seminovo" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                tenho interesse
+              </a>
+            </div>
+          </div>
+
+          <!-- placeholder: add more seminovos here -->
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA FINAL -->
+  <section style="background: var(--surface-1); border-top: var(--border-subtle); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
+    <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-display);font-size:clamp(100px,18vw,260px);font-weight:800;color:var(--text-primary);opacity:0.025;pointer-events:none;white-space:nowrap;">
+      smartbase
+    </div>
+    <div class="sb-container" style="position:relative;z-index:1;">
+      <p style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px;">não achou o que procura?</p>
+      <h2 style="font-family: var(--font-display); font-size: clamp(28px, 4.5vw, 52px); font-weight: 800; margin-bottom: 12px; line-height: 1.1;">
+        fala com a gente.<br><span class="sb-blue">a gente resolve.</span>
+      </h2>
+      <p style="color: var(--text-secondary); font-weight: 300; margin-bottom: 32px; font-size: 16px;">qualquer produto Apple — se existe, a gente consegue.</p>
+      <a href="https://wa.me/5554996624494" target="_blank" rel="noopener" class="sb-btn sb-btn--wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.519 5.854L.057 23.617a.75.75 0 0 0 .921.921l5.764-1.462A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.836 0-3.565-.476-5.074-1.313l-.363-.21-3.773.957.974-3.768-.23-.374A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+        abrir whatsapp
+      </a>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="sb-footer">
+    <div class="sb-container">
+      <div class="sb-footer__inner">
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+        <div class="sb-footer__info">
+          <span>@smartbase.br</span>
+          <span>caxias do sul, rs</span>
+        </div>
+        <span class="sb-footer__copy">© 2026 smartbase</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    /* ── MENU MOBILE ── */
+    (function () {
+      var toggle = document.getElementById('sb-toggle');
+      var nav = document.getElementById('sb-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('sb-nav--open');
+        toggle.textContent = isOpen ? '✕' : '☰';
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('sb-nav--open');
+          toggle.textContent = '☰';
+          toggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+
+    /* ── FILTROS ── */
+    (function () {
+      var btns = document.querySelectorAll('.sb-filtro-btn');
+      var cards = document.querySelectorAll('.sb-card');
+      var sections = document.querySelectorAll('.sb-produtos-section, .sb-seminovos-section');
+
+      function applyFilter(filtro) {
+        cards.forEach(function (card) {
+          card.style.display = card.dataset.categoria === filtro ? '' : 'none';
+        });
+        sections.forEach(function (sec) {
+          var visibleCards = sec.querySelectorAll('.sb-card:not([style*="display: none"])');
+          sec.style.display = visibleCards.length === 0 ? 'none' : '';
+        });
+      }
+
+      applyFilter('novos');
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          applyFilter(btn.dataset.filtro);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

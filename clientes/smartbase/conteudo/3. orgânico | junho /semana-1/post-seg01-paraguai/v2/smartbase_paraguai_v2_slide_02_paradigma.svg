@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- Decorative "2x" cut-off bottom-right -->
+  <text x="1280" y="1380" fill="#3E82F7" font-family="'Bricolage Grotesque', sans-serif" font-size="780" font-weight="700" text-anchor="end" opacity="0.10">2x</text>
+
+  <!-- Tag top -->
+  <text x="80" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" letter-spacing="3">DECIFRA APPLE</text>
+  <text x="1000" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" text-anchor="end">2/6</text>
+
+  <!-- Label -->
+  <text x="80" y="320" fill="#3E82F7" font-family="'Inter', sans-serif" font-size="22" font-weight="600" letter-spacing="3">EM 2024 E 2025</text>
+
+  <!-- Main title -->
+  <text x="80" y="440" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="88" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">o Paraguai virou</tspan>
+    <tspan x="80" dy="104" fill="#3E82F7">"país seguro</tspan>
+    <tspan x="80" dy="104" fill="#3E82F7">pra investir."</tspan>
+  </text>
+
+  <!-- Sub -->
+  <text x="80" y="900" fill="#C0C0D0" font-family="'Inter', sans-serif" font-size="28" font-weight="400">
+    <tspan x="80" dy="0">selo internacional dado pelas agências</tspan>
+    <tspan x="80" dy="42">Moody's e S&amp;P. o Brasil tinha esse selo</tspan>
+    <tspan x="80" dy="42">até 2015 e nunca mais recuperou.</tspan>
+  </text>
+
+  <!-- Divider -->
+  <line x1="80" y1="1100" x2="200" y2="1100" stroke="#3E82F7" stroke-width="2"/>
+
+  <!-- Crescimento -->
+  <text x="80" y="1180" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="32" font-weight="500">
+    <tspan x="80" dy="0">e a economia cresce </tspan><tspan dy="0" fill="#3E82F7" font-weight="700">quase o triplo</tspan>
+    <tspan x="80" dy="44">do Brasil. a que mais cresce na América do Sul.</tspan>
+  </text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="36" font-weight="700" letter-spacing="-1">smartbase</text>
+  <text x="1000" y="1280" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

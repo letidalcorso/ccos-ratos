@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 924" width="1056" height="924">
+  <!-- VERSO — 264×231mm | #181828 matte | Hot stamping dourado na frase -->
+
+  <!-- Fundo -->
+  <rect width="1056" height="924" fill="#181828"/>
+
+  <!-- Apple logo — topo centro -->
+  <text x="528" y="152" text-anchor="middle"
+    font-family="-apple-system, 'SF Pro Display', system-ui, sans-serif"
+    font-size="48" fill="white" opacity="0.85">&#xF8FF;</text>
+
+  <!-- Frase — hot stamping prata -->
+  <!-- "quem tem" -->
+  <text x="528" y="408"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="72" font-weight="300" letter-spacing="-1"
+    fill="#C2C6CC">quem tem</text>
+
+  <!-- "não volta atrás." -->
+  <text x="528" y="508"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="72" font-weight="300" letter-spacing="-1"
+    fill="#C2C6CC">não volta atrás.</text>
+
+  <!-- Wordmark — pill style, centralizado -->
+  <rect x="445" y="598" width="166" height="42" rx="21"
+    fill="none" stroke="#4A4A68" stroke-width="1.5"/>
+  <circle cx="467" cy="619" r="5" fill="#3E82F7"/>
+  <text x="481" y="626"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="26" font-weight="300" letter-spacing="-0.3"
+    fill="#7A7A96">smart</text>
+  <text x="546" y="626"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="26" font-weight="700" letter-spacing="-0.3"
+    fill="#F2F2F6">base</text>
+
+  <!-- Nota de produção (remover antes de enviar para gráfica) -->
+  <rect x="0" y="0" width="380" height="28" fill="#C2C6CC" opacity="0.15"/>
+  <text x="8" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" fill="#C2C6CC" opacity="0.8">HOT STAMPING PRATA: frase "quem tem não volta atrás." — máscara 100% C</text>
+</svg>

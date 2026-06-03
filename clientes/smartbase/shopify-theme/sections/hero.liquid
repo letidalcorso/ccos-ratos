@@ -1,0 +1,121 @@
+{%- liquid
+  assign hero_img_url = section.settings.hero_image | image_url: width: 1920
+  if section.settings.hero_image == blank
+    assign hero_img_url = 'hero-iphone17pro.jpg' | asset_url
+  endif
+-%}
+
+<style>
+  .sb-hero { min-height: {{ section.settings.hero_height }}vh; }
+  .sb-hero__bg { background-position: {{ section.settings.img_position }}; }
+</style>
+
+<section class="sb-hero">
+  <div class="sb-hero__bg" style="background-image: url('{{ hero_img_url }}');" aria-hidden="true"></div>
+
+  <div class="sb-container">
+    <div class="sb-hero__content">
+      <span class="sb-badge sb-badge--blue">{{ section.settings.badge_text }}</span>
+
+      <h1 class="sb-hero__headline">
+        {{ section.settings.headline }}<br>
+        <span class="sb-blue">{{ section.settings.headline_blue }}</span>
+      </h1>
+
+      <p class="sb-hero__sub">{{ section.settings.subtext }}</p>
+
+      <div class="sb-hero__actions">
+        <a href="{{ section.settings.cta1_url }}" class="sb-btn sb-btn--primary">{{ section.settings.cta1_text }}</a>
+        <a href="https://wa.me/{{ settings.whatsapp_number }}?text={{ section.settings.cta2_whatsapp_message | url_encode }}" target="_blank" rel="noopener" class="sb-btn sb-btn--ghost">{{ section.settings.cta2_text }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Imagem de fundo"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Texto do badge",
+      "default": "iphone · mac · ipad · seminovos"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Título (linha 1)",
+      "default": "sua apple store."
+    },
+    {
+      "type": "text",
+      "id": "headline_blue",
+      "label": "Título em azul (linha 2)",
+      "default": "particular."
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtítulo",
+      "default": "novos sob encomenda, seminovos em estoque. entrega em todo o Brasil."
+    },
+    {
+      "type": "text",
+      "id": "cta1_text",
+      "label": "Botão 1 — texto",
+      "default": "ver catálogo completo"
+    },
+    {
+      "type": "url",
+      "id": "cta1_url",
+      "label": "Botão 1 — link"
+    },
+    {
+      "type": "text",
+      "id": "cta2_text",
+      "label": "Botão 2 — texto",
+      "default": "fazer pedido pelo WhatsApp"
+    },
+    {
+      "type": "text",
+      "id": "cta2_whatsapp_message",
+      "label": "Botão 2 — mensagem pré-preenchida no WhatsApp",
+      "default": "oi, quero fazer um pedido"
+    },
+    {
+      "type": "range",
+      "id": "hero_height",
+      "label": "Altura do hero",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "default": 85,
+      "unit": "vh"
+    },
+    {
+      "type": "select",
+      "id": "img_position",
+      "label": "Posição da imagem de fundo",
+      "options": [
+        { "value": "center 40%", "label": "Centro" },
+        { "value": "center top", "label": "Topo" },
+        { "value": "center bottom", "label": "Base" },
+        { "value": "left center", "label": "Esquerda" },
+        { "value": "right center", "label": "Direita" }
+      ],
+      "default": "center 40%"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

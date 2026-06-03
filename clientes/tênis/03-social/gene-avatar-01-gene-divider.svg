@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!--
+    Gene Sneakers · Avatar 01 (principal)
+    Sistema canônico: campo Carbon + GENE Bone + divider Acid atravessando
+    Lógica: mesmo DNA do logo oficial, reduzido a formato quadrado
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;display=swap');
+      .display{font-family:'Big Shoulders Display','Arial Black',sans-serif;font-weight:900;letter-spacing:-0.02em}
+    </style>
+  </defs>
+
+  <!-- Campo Carbon -->
+  <rect width="1080" height="1080" fill="#0D0D0D"/>
+
+  <!-- GENE em Bone centralizado -->
+  <text x="540" y="655" class="display" font-size="420" fill="#F2EFE9" text-anchor="middle">GENE</text>
+
+  <!-- Divider Acid atravessando GENE (canônico logo oficial) -->
+  <rect x="0" y="530" width="1080" height="22" fill="#C4FF3C"/>
+
+  <!-- Ponto Acid micro (DNA signature) -->
+  <circle cx="540" cy="860" r="10" fill="#C4FF3C"/>
+</svg>

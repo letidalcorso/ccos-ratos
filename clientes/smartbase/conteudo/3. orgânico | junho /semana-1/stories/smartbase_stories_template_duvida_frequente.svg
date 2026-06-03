@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <rect width="1080" height="1920" fill="#000000"/>
+
+  <!-- Top tag -->
+  <line x1="80" y1="180" x2="130" y2="180" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="188" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="3">DÚVIDA FREQUENTE</text>
+
+  <!-- Question label -->
+  <text x="80" y="450" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="500" opacity="0.5" letter-spacing="2">PERGUNTA</text>
+
+  <!-- Question (placeholder — Leti adapta) -->
+  <text x="80" y="540" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="64" font-weight="700" letter-spacing="-2">
+    <tspan x="80" dy="0">[pergunta aqui]</tspan>
+    <tspan x="80" dy="74">ex.: é seguro</tspan>
+    <tspan x="80" dy="74">comprar fora?</tspan>
+  </text>
+
+  <!-- Divider -->
+  <line x1="80" y1="980" x2="1000" y2="980" stroke="#2DFF8B" stroke-width="2" opacity="0.4"/>
+
+  <!-- Answer label -->
+  <text x="80" y="1080" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="500" letter-spacing="2">RESPOSTA</text>
+
+  <!-- Answer (placeholder) -->
+  <text x="80" y="1170" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="44" font-weight="500" letter-spacing="-1">
+    <tspan x="80" dy="0">[resposta seca, 1-2 linhas]</tspan>
+    <tspan x="80" dy="58">ex.: é. dentro da cota,</tspan>
+    <tspan x="80" dy="58">trazido por quem opera</tspan>
+    <tspan x="80" dy="58">no polo. sem golpe,</tspan>
+    <tspan x="80" dy="58">com IMEI verificado.</tspan>
+  </text>
+
+  <!-- CTA -->
+  <text x="80" y="1690" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="600">tem mais dúvidas? manda no whats.</text>
+
+  <!-- Footer -->
+  <text x="80" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="44" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

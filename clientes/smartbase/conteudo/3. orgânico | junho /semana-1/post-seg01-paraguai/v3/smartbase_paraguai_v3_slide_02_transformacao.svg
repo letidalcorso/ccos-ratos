@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <text x="80" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" letter-spacing="3">DECIFRA APPLE</text>
+  <text x="1000" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" text-anchor="end">2/6</text>
+
+  <!-- Big statement -->
+  <text x="80" y="320" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="124" font-weight="700" letter-spacing="-4">o Paraguai</text>
+  <text x="80" y="444" fill="#3E82F7" font-family="'Bricolage Grotesque', sans-serif" font-size="124" font-weight="700" letter-spacing="-4">mudou.</text>
+
+  <!-- Antes -->
+  <text x="80" y="640" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="600" letter-spacing="3">ANTES</text>
+  <text x="80" y="710" fill="#C0C0D0" font-family="'Bricolage Grotesque', sans-serif" font-size="44" font-weight="500" letter-spacing="-1">visto como mercado paralelo.</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="800" x2="1000" y2="800" stroke="#3E82F7" stroke-width="1" opacity="0.3"/>
+
+  <!-- Agora -->
+  <text x="80" y="880" fill="#3E82F7" font-family="'Inter', sans-serif" font-size="22" font-weight="600" letter-spacing="3">AGORA</text>
+  <text x="80" y="970" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="60" font-weight="700" letter-spacing="-2">
+    <tspan x="80" dy="0">"país seguro pra</tspan>
+    <tspan x="80" dy="70">investir."</tspan>
+  </text>
+
+  <!-- Footnote -->
+  <text x="80" y="1170" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="20" font-weight="400">
+    <tspan x="80" dy="0">selo dado pelas agências Moody's (2024) e S&amp;P (2025).</tspan>
+    <tspan x="80" dy="32">o mesmo selo que o Brasil tinha até 2015 e perdeu.</tspan>
+  </text>
+
+  <text x="80" y="1280" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="36" font-weight="700" letter-spacing="-1">smartbase</text>
+  <text x="1000" y="1280" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

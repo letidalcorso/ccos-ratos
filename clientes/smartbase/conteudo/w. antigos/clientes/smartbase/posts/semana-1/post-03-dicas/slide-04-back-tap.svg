@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600&amp;display=swap');</style>
+  </defs>
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- Ghost number -->
+  <text x="-30" y="960" font-family="'Bricolage Grotesque', sans-serif" font-size="700" font-weight="800" fill="#F2F2F6" opacity="0.03">3</text>
+
+  <rect x="80" y="72" width="130" height="40" rx="20" fill="#0F0F1C" stroke="#6DAFF9" stroke-width="1"/>
+  <text x="145" y="97" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#6DAFF9" text-anchor="middle" letter-spacing="2">DICAS</text>
+  <text x="1000" y="97" font-family="'Inter', sans-serif" font-size="20" fill="#4A4A60" text-anchor="end">4 / 7</text>
+
+  <!-- Number badge -->
+  <circle cx="130" cy="232" r="54" fill="#3E82F7"/>
+  <text x="130" y="250" font-family="'Bricolage Grotesque', sans-serif" font-size="52" font-weight="800" fill="#F2F2F6" text-anchor="middle">3</text>
+
+  <text x="80" y="370" font-family="'Bricolage Grotesque', sans-serif" font-size="88" font-weight="800" fill="#F2F2F6">back tap:</text>
+  <text x="80" y="468" font-family="'Bricolage Grotesque', sans-serif" font-size="88" font-weight="800" fill="#3E82F7">bata nas costas.</text>
+  <line x1="80" y1="514" x2="1000" y2="514" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- Phone back illustration -->
+  <rect x="680" y="148" width="260" height="480" rx="36" fill="#0F0F1C" stroke="#1A1A2E" stroke-width="2"/>
+  <rect x="710" y="178" width="200" height="360" rx="20" fill="#121220"/>
+  <!-- Camera module -->
+  <rect x="734" y="298" width="72" height="72" rx="16" fill="#1A1A2E"/>
+  <circle cx="770" cy="334" r="20" fill="#0F0F1C"/>
+  <circle cx="770" cy="334" r="10" fill="#3E82F7" opacity="0.4"/>
+  <!-- Tap indicator rings -->
+  <circle cx="770" cy="334" r="36" fill="none" stroke="#3E82F7" stroke-width="2" opacity="0.5"/>
+  <circle cx="770" cy="334" r="54" fill="none" stroke="#3E82F7" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="770" cy="334" r="72" fill="none" stroke="#3E82F7" stroke-width="1" opacity="0.12"/>
+  <text x="770" y="490" font-family="'Inter', sans-serif" font-size="18" fill="#3E82F7" text-anchor="middle" font-weight="600" letter-spacing="3">TAP TAP</text>
+
+  <!-- Body text left side -->
+  <text x="80" y="580" font-family="'Inter', sans-serif" font-size="30" fill="#C0C0D0">bata duas vezes nas costas</text>
+  <text x="80" y="620" font-family="'Inter', sans-serif" font-size="30" fill="#C0C0D0">do iphone para executar uma ação.</text>
+
+  <!-- How to activate box -->
+  <rect x="80" y="676" width="548" height="110" rx="16" fill="#0F0F1C"/>
+  <text x="116" y="722" font-family="'Inter', sans-serif" font-size="22" font-weight="600" fill="#F2F2F6">como ativar</text>
+  <text x="116" y="762" font-family="'Inter', sans-serif" font-size="20" fill="#7A7A96">ajustes → acessibilidade</text>
+  <text x="116" y="790" font-family="'Inter', sans-serif" font-size="20" fill="#7A7A96">→ toque → back tap</text>
+
+  <!-- Use cases -->
+  <text x="80" y="870" font-family="'Inter', sans-serif" font-size="24" fill="#4A4A60" letter-spacing="1">USOS MAIS COMUNS</text>
+  <line x1="80" y1="886" x2="1000" y2="886" stroke="#1A1A2E" stroke-width="1"/>
+
+  <rect x="80" y="904" width="920" height="64" rx="10" fill="#0F0F1C"/>
+  <text x="116" y="944" font-family="'Inter', sans-serif" font-size="26" fill="#C0C0D0">tirar screenshot sem segurar botões</text>
+
+  <rect x="80" y="980" width="920" height="64" rx="10" fill="#121220"/>
+  <text x="116" y="1020" font-family="'Inter', sans-serif" font-size="26" fill="#C0C0D0">abrir central de controle</text>
+
+  <rect x="80" y="1056" width="920" height="64" rx="10" fill="#0F0F1C"/>
+  <text x="116" y="1096" font-family="'Inter', sans-serif" font-size="26" fill="#C0C0D0">rolar a página para o topo</text>
+
+  <rect x="80" y="1132" width="920" height="64" rx="10" fill="#121220"/>
+  <text x="116" y="1172" font-family="'Inter', sans-serif" font-size="26" font-weight="600" fill="#3E82F7">qualquer atalho que você criar</text>
+
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1A1A2E" stroke-width="1"/>
+  <rect x="80" y="1276" width="96" height="30" rx="15" fill="#0F0F1C"/>
+  <text x="128" y="1297" font-family="'Inter', sans-serif" font-size="13" fill="#3E82F7" text-anchor="middle" font-weight="600">sb</text>
+  <text x="194" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="28" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="22" fill="#4A4A60" text-anchor="end">@smartbase.cxs</text>
+</svg>

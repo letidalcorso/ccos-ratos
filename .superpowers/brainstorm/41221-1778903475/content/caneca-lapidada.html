@@ -1,0 +1,425 @@
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  .mug-card {
+    border-radius: 22px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+    position: relative;
+  }
+  .mug-card.selected { border-color: #3E82F7; }
+  .mug-card:hover { border-color: rgba(62,130,247,0.45); transform: translateY(-2px); }
+
+  .badge {
+    position: absolute;
+    top: 16px; left: 16px;
+    width: 24px; height: 24px;
+    background: #3E82F7;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: -apple-system, sans-serif;
+    font-size: 11px; font-weight: 700; color: white;
+    z-index: 2;
+  }
+
+  .mug-face {
+    padding: 56px 26px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    position: relative;
+  }
+  .mug-face::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 52px;
+    pointer-events: none;
+  }
+
+  .lineup {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .phone-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .yr {
+    font-family: -apple-system, 'Helvetica Neue', sans-serif;
+    font-size: 7px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    display: block;
+  }
+
+  .timeline {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 22px;
+    opacity: 0.12;
+  }
+
+  .tagline {
+    font-family: -apple-system, 'Helvetica Neue', sans-serif;
+    font-size: 10.5px;
+    letter-spacing: 3.2px;
+    text-transform: lowercase;
+    text-align: center;
+    opacity: 0.88;
+    margin-bottom: 8px;
+  }
+
+  .wordmark {
+    font-family: -apple-system, 'Helvetica Neue', sans-serif;
+    font-size: 12.5px;
+    display: flex; align-items: center; gap: 2px;
+  }
+  .wm-smart { font-weight: 300; }
+  .wm-dot   { margin: 0 1px; }
+  .wm-base  { font-weight: 700; }
+
+  .mug-label { padding: 13px 22px 17px; }
+  .mug-label h3 {
+    margin: 0 0 3px;
+    font-family: -apple-system, sans-serif;
+    font-size: 13px; font-weight: 600;
+  }
+  .mug-label p {
+    margin: 0;
+    font-family: -apple-system, sans-serif;
+    font-size: 11.5px; line-height: 1.5;
+  }
+
+  /* ── DARK ── */
+  .dark { background: #07070E; }
+  .dark .mug-face::before { background: linear-gradient(to bottom, rgba(20,20,48,0.65), transparent); }
+  .dark svg { color: #F2F2F6; }
+  .dark .yr  { color: #4A4A6A; }
+  .dark .timeline { background: #F2F2F6; }
+  .dark .tagline  { color: #F2F2F6; }
+  .dark .wm-smart { color: #4A4A6A; }
+  .dark .wm-dot   { color: #3E82F7; }
+  .dark .wm-base  { color: #F2F2F6; }
+  .dark .mug-label { border-top: 1px solid #121224; }
+  .dark .mug-label h3 { color: #F2F2F6; }
+  .dark .mug-label p  { color: #3E3E5A; }
+
+  /* ── LIGHT ── */
+  .light { background: #F5F0E8; }
+  .light .mug-face::before { background: linear-gradient(to bottom, rgba(195,188,175,0.4), transparent); }
+  .light svg { color: #1A1A1A; }
+  .light .yr  { color: #9E978A; }
+  .light .timeline { background: #1A1A1A; }
+  .light .tagline  { color: #111; }
+  .light .wm-smart { color: #9E978A; }
+  .light .wm-dot   { color: #3E82F7; }
+  .light .wm-base  { color: #111; }
+  .light .mug-label { border-top: 1px solid rgba(0,0,0,0.07); }
+  .light .mug-label h3 { color: #111; }
+  .light .mug-label p  { color: #9E978A; }
+</style>
+
+<h2>Caneca Smartbase</h2>
+<p class="subtitle">Vista traseira — câmeras que qualquer fã de Apple reconhece na hora</p>
+
+<div class="split">
+
+<!-- ═══════════ DARK ═══════════ -->
+<div class="mug-card dark" data-choice="dark" onclick="toggleSelect(this)">
+  <div class="badge">A</div>
+  <div class="mug-face">
+    <div class="lineup">
+
+      <!-- 2007 — único flush, top-center, sem flash -->
+      <div class="phone-col">
+        <svg width="34" height="68" viewBox="0 0 34 68" fill="none">
+          <rect x="1" y="1" width="32" height="66" rx="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <!-- câmera flush: dois anéis concêntricos, top-center -->
+          <circle cx="17" cy="9"   r="3.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="17" cy="9"   r="1.7" stroke="currentColor" stroke-width="0.9"/>
+          <!-- speaker grille -->
+          <rect x="12" y="56" width="10" height="1.8" rx="0.9" stroke="currentColor" stroke-width="0.9"/>
+        </svg>
+        <span class="yr">2007</span>
+      </div>
+
+      <!-- 2013 — 5s: sapphire ring + flash + linhas de antena -->
+      <div class="phone-col">
+        <svg width="36" height="72" viewBox="0 0 36 72" fill="none">
+          <rect x="1" y="1" width="34" height="70" rx="7" stroke="currentColor" stroke-width="1.4"/>
+          <!-- sapphire ring: 3 anéis concêntricos, top-left -->
+          <circle cx="10"  cy="10"  r="4.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="10"  cy="10"  r="2.7" stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="10"  cy="10"  r="1.2" stroke="currentColor" stroke-width="0.7"/>
+          <!-- flash retangular -->
+          <rect x="17.5" y="7.5" width="3.5" height="4.5" rx="1.1" stroke="currentColor" stroke-width="0.9"/>
+          <!-- linhas de antena características -->
+          <line x1="1" y1="18" x2="35" y2="18" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.45"/>
+          <line x1="1" y1="52" x2="35" y2="52" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.45"/>
+        </svg>
+        <span class="yr">2013</span>
+      </div>
+
+      <!-- 2014 — 6: primeiro bump, câmera protrusa top-left -->
+      <div class="phone-col">
+        <svg width="39" height="78" viewBox="0 0 39 78" fill="none">
+          <rect x="1" y="1" width="37" height="76" rx="9" stroke="currentColor" stroke-width="1.4"/>
+          <!-- bump: anel externo mais espesso representa a protrusion -->
+          <circle cx="11.5" cy="11.5" r="4.5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="11.5" cy="11.5" r="2.7" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="11.5" cy="11.5" r="1.2" stroke="currentColor" stroke-width="0.8"/>
+          <!-- flash -->
+          <circle cx="21"   cy="11.5" r="1.9" stroke="currentColor" stroke-width="0.9"/>
+        </svg>
+        <span class="yr">2014</span>
+      </div>
+
+      <!-- 2016 — 7 Plus: dual horizontal em módulo retangular -->
+      <div class="phone-col">
+        <svg width="44" height="88" viewBox="0 0 44 88" fill="none">
+          <rect x="1" y="1" width="42" height="86" rx="10" stroke="currentColor" stroke-width="1.4"/>
+          <!-- módulo dual horizontal (43% da largura) -->
+          <rect x="4.5" y="5" width="18" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/>
+          <!-- câmera esquerda -->
+          <circle cx="10.5" cy="10.5" r="3.2" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="10.5" cy="10.5" r="1.6" stroke="currentColor" stroke-width="0.8"/>
+          <!-- câmera direita -->
+          <circle cx="18"   cy="10.5" r="3.2" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="18"   cy="10.5" r="1.6" stroke="currentColor" stroke-width="0.8"/>
+          <!-- flash fora do módulo -->
+          <circle cx="29.5" cy="9.5" r="2.1" stroke="currentColor" stroke-width="0.9"/>
+          <!-- microfone -->
+          <circle cx="29.5" cy="13.5" r="1.1" stroke="currentColor" stroke-width="0.7"/>
+        </svg>
+        <span class="yr">2016</span>
+      </div>
+
+      <!-- 2019 — 11 Pro: módulo quadrado, triângulo de câmeras -->
+      <div class="phone-col">
+        <svg width="47" height="94" viewBox="0 0 47 94" fill="none">
+          <rect x="1" y="1" width="45" height="92" rx="12" stroke="currentColor" stroke-width="1.4"/>
+          <!-- módulo quadrado (47% da largura) -->
+          <rect x="3.5" y="3.5" width="21" height="21" rx="5.5" stroke="currentColor" stroke-width="1.3"/>
+          <!-- triângulo: 2 em cima, 1 embaixo-centro -->
+          <circle cx="10.5" cy="10.5" r="3.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="10.5" cy="10.5" r="1.7" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="18.5" cy="10.5" r="3.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="18.5" cy="10.5" r="1.7" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="14.5" cy="18.5" r="3.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="14.5" cy="18.5" r="1.7" stroke="currentColor" stroke-width="0.8"/>
+          <!-- flash dentro do módulo, canto inferior-direito -->
+          <circle cx="22"   cy="19"   r="1.5" fill="currentColor"/>
+          <!-- microfone -->
+          <circle cx="22"   cy="23.5" r="0.9" stroke="currentColor" stroke-width="0.7"/>
+        </svg>
+        <span class="yr">2019</span>
+      </div>
+
+      <!-- 2023 — 15 Pro Max: grande island + LiDAR + flash fora -->
+      <div class="phone-col">
+        <svg width="51" height="102" viewBox="0 0 51 102" fill="none">
+          <rect x="1" y="1" width="49" height="100" rx="14" stroke="currentColor" stroke-width="1.4"/>
+          <!-- island: 55% da largura — inset da borda -->
+          <rect x="2.5" y="2.5" width="27" height="27" rx="7" stroke="currentColor" stroke-width="1.4"/>
+          <!-- câmera TL -->
+          <circle cx="10"  cy="10.5" r="4"   stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="10"  cy="10.5" r="2"   stroke="currentColor" stroke-width="0.8"/>
+          <!-- câmera TR -->
+          <circle cx="22"  cy="10.5" r="4"   stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="22"  cy="10.5" r="2"   stroke="currentColor" stroke-width="0.8"/>
+          <!-- câmera BL -->
+          <circle cx="10"  cy="22"   r="4"   stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="10"  cy="22"   r="2"   stroke="currentColor" stroke-width="0.8"/>
+          <!-- LiDAR: BR, menor e com padrão diferente -->
+          <circle cx="22"  cy="22"   r="2.8" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="22"  cy="22"   r="1.4" stroke="currentColor" stroke-width="0.7"/>
+          <!-- flash FORA da island (15 Pro Max — característica marcante) -->
+          <circle cx="38.5" cy="7.5" r="2.2" fill="currentColor"/>
+          <!-- microfone -->
+          <circle cx="38.5" cy="13"  r="1.3" stroke="currentColor" stroke-width="0.8"/>
+        </svg>
+        <span class="yr">2023</span>
+      </div>
+
+      <!-- 2025 — 17 Pro Max: plateau horizontal quase full-width -->
+      <div class="phone-col">
+        <svg width="54" height="108" viewBox="0 0 54 108" fill="none">
+          <rect x="1" y="1" width="52" height="106" rx="15" stroke="currentColor" stroke-width="1.4"/>
+          <!-- plateau: barra larga mas com margem interna visível -->
+          <rect x="3" y="3" width="48" height="22" rx="10.5" stroke="currentColor" stroke-width="1.4"/>
+          <!-- câmera principal (esquerda, grande) -->
+          <circle cx="13.5" cy="14"  r="5.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="13.5" cy="14"  r="3"   stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="13.5" cy="14"  r="1.4" stroke="currentColor" stroke-width="0.7"/>
+          <!-- câmera superior-direita -->
+          <circle cx="28"   cy="8.5" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="28"   cy="8.5" r="2.4" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="28"   cy="8.5" r="1.1" stroke="currentColor" stroke-width="0.6"/>
+          <!-- câmera inferior-direita -->
+          <circle cx="28"   cy="19"  r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="28"   cy="19"  r="2.4" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="28"   cy="19"  r="1.1" stroke="currentColor" stroke-width="0.6"/>
+          <!-- flash -->
+          <circle cx="41.5" cy="9"   r="2"   fill="currentColor"/>
+          <!-- LiDAR -->
+          <circle cx="41.5" cy="18"  r="2.2" stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="41.5" cy="18"  r="1.1" stroke="currentColor" stroke-width="0.6"/>
+          <!-- microfone -->
+          <circle cx="49"   cy="14"  r="1.3" stroke="currentColor" stroke-width="0.7"/>
+        </svg>
+        <span class="yr">2025</span>
+      </div>
+
+    </div><!-- /lineup -->
+    <div class="timeline"></div>
+    <div class="tagline">todos passaram por aqui.</div>
+    <div class="wordmark">
+      <span class="wm-smart">smart</span>
+      <span class="wm-dot">•</span>
+      <span class="wm-base">base</span>
+    </div>
+  </div>
+  <div class="mug-label">
+    <h3>A — Fundo preto</h3>
+    <p>Premium. Stories à noite, foto de estúdio, identidade digital da Smartbase.</p>
+  </div>
+</div>
+
+
+<!-- ═══════════ LIGHT ═══════════ -->
+<div class="mug-card light" data-choice="light" onclick="toggleSelect(this)">
+  <div class="badge">B</div>
+  <div class="mug-face">
+    <div class="lineup">
+
+      <div class="phone-col">
+        <svg width="34" height="68" viewBox="0 0 34 68" fill="none">
+          <rect x="1" y="1" width="32" height="66" rx="6.5" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="17" cy="9"   r="3.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="17" cy="9"   r="1.7" stroke="currentColor" stroke-width="0.9"/>
+          <rect x="12" y="56" width="10" height="1.8" rx="0.9" stroke="currentColor" stroke-width="0.9"/>
+        </svg>
+        <span class="yr">2007</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="36" height="72" viewBox="0 0 36 72" fill="none">
+          <rect x="1" y="1" width="34" height="70" rx="7" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="10"  cy="10"  r="4.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="10"  cy="10"  r="2.7" stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="10"  cy="10"  r="1.2" stroke="currentColor" stroke-width="0.7"/>
+          <rect x="17.5" y="7.5" width="3.5" height="4.5" rx="1.1" stroke="currentColor" stroke-width="0.9"/>
+          <line x1="1" y1="18" x2="35" y2="18" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.45"/>
+          <line x1="1" y1="52" x2="35" y2="52" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.45"/>
+        </svg>
+        <span class="yr">2013</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="39" height="78" viewBox="0 0 39 78" fill="none">
+          <rect x="1" y="1" width="37" height="76" rx="9" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="11.5" cy="11.5" r="4.5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="11.5" cy="11.5" r="2.7" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="11.5" cy="11.5" r="1.2" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="21"   cy="11.5" r="1.9" stroke="currentColor" stroke-width="0.9"/>
+        </svg>
+        <span class="yr">2014</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="44" height="88" viewBox="0 0 44 88" fill="none">
+          <rect x="1" y="1" width="42" height="86" rx="10" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="4.5" y="5" width="18" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="10.5" cy="10.5" r="3.2" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="10.5" cy="10.5" r="1.6" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="18"   cy="10.5" r="3.2" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="18"   cy="10.5" r="1.6" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="29.5" cy="9.5"  r="2.1" stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="29.5" cy="13.5" r="1.1" stroke="currentColor" stroke-width="0.7"/>
+        </svg>
+        <span class="yr">2016</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="47" height="94" viewBox="0 0 47 94" fill="none">
+          <rect x="1" y="1" width="45" height="92" rx="12" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="3.5" y="3.5" width="21" height="21" rx="5.5" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="10.5" cy="10.5" r="3.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="10.5" cy="10.5" r="1.7" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="18.5" cy="10.5" r="3.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="18.5" cy="10.5" r="1.7" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="14.5" cy="18.5" r="3.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="14.5" cy="18.5" r="1.7" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="22"   cy="19"   r="1.5" fill="currentColor"/>
+          <circle cx="22"   cy="23.5" r="0.9" stroke="currentColor" stroke-width="0.7"/>
+        </svg>
+        <span class="yr">2019</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="51" height="102" viewBox="0 0 51 102" fill="none">
+          <rect x="1" y="1" width="49" height="100" rx="14" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="2.5" y="2.5" width="27" height="27" rx="7" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="10"  cy="10.5" r="4"   stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="10"  cy="10.5" r="2"   stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="22"  cy="10.5" r="4"   stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="22"  cy="10.5" r="2"   stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="10"  cy="22"   r="4"   stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="10"  cy="22"   r="2"   stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="22"  cy="22"   r="2.8" stroke="currentColor" stroke-width="1.0"/>
+          <circle cx="22"  cy="22"   r="1.4" stroke="currentColor" stroke-width="0.7"/>
+          <circle cx="38.5" cy="7.5" r="2.2" fill="currentColor"/>
+          <circle cx="38.5" cy="13"  r="1.3" stroke="currentColor" stroke-width="0.8"/>
+        </svg>
+        <span class="yr">2023</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="54" height="108" viewBox="0 0 54 108" fill="none">
+          <rect x="1" y="1" width="52" height="106" rx="15" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="3" y="3" width="48" height="22" rx="10.5" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="13.5" cy="14"  r="5.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="13.5" cy="14"  r="3"   stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="13.5" cy="14"  r="1.4" stroke="currentColor" stroke-width="0.7"/>
+          <circle cx="28"   cy="8.5" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="28"   cy="8.5" r="2.4" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="28"   cy="8.5" r="1.1" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="28"   cy="19"  r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="28"   cy="19"  r="2.4" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="28"   cy="19"  r="1.1" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="41.5" cy="9"   r="2"   fill="currentColor"/>
+          <circle cx="41.5" cy="18"  r="2.2" stroke="currentColor" stroke-width="0.9"/>
+          <circle cx="41.5" cy="18"  r="1.1" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="49"   cy="14"  r="1.3" stroke="currentColor" stroke-width="0.7"/>
+        </svg>
+        <span class="yr">2025</span>
+      </div>
+
+    </div><!-- /lineup -->
+    <div class="timeline"></div>
+    <div class="tagline">todos passaram por aqui.</div>
+    <div class="wordmark">
+      <span class="wm-smart">smart</span>
+      <span class="wm-dot">•</span>
+      <span class="wm-base">base</span>
+    </div>
+  </div>
+  <div class="mug-label">
+    <h3>B — Off-white</h3>
+    <p>Editorial. Foto com luz natural, parece objeto de design intencional.</p>
+  </div>
+</div>
+
+</div><!-- /split -->

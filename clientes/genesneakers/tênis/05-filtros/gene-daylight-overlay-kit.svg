@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · Daylight Overlay Kit (Figma)
+
+    Como usar no Figma:
+    1. File → Import... → selecione este SVG
+    2. O SVG vira um grupo "Gene Daylight Overlay"
+    3. Posicione o grupo POR CIMA da sua foto
+    4. Configure o blend mode de cada layer conforme os nomes abaixo
+       (Figma não preserva blend mode de SVG, precisa setar manualmente após importar)
+
+    Ordem dos layers (de baixo pra cima) + blend mode a aplicar:
+    ──────────────────────────────────────────────────────
+    Layer 01 · shadow-lift-softlight    → SOFT LIGHT · 70%
+    Layer 02 · warm-wash-overlay        → OVERLAY · 45%
+    Layer 03 · sepia-midtones-multiply  → MULTIPLY · 25%
+    Layer 04 · vignette-multiply        → MULTIPLY · 50%
+    (grain texture é aplicado separado via gene-grain-texture.png)
+    ──────────────────────────────────────────────────────
+  -->
+
+  <defs>
+    <radialGradient id="vignetteGrad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1A0F08" stop-opacity="0.55"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ================ LAYER 01 · Shadow lift ================ -->
+  <!-- Bone wash que levanta as sombras sem achatar — blend SOFT LIGHT no Figma -->
+  <g id="shadow-lift-softlight" opacity="0.7">
+    <rect width="1080" height="1350" fill="#F2EFE9"/>
+  </g>
+
+  <!-- ================ LAYER 02 · Warm wash ================ -->
+  <!-- Camada warm principal — blend OVERLAY no Figma -->
+  <g id="warm-wash-overlay" opacity="0.45">
+    <rect width="1080" height="1350" fill="#E8B888"/>
+  </g>
+
+  <!-- ================ LAYER 03 · Sepia midtones ================ -->
+  <!-- Tom sepia editorial — blend MULTIPLY no Figma -->
+  <g id="sepia-midtones-multiply" opacity="0.25">
+    <rect width="1080" height="1350" fill="#C9A882"/>
+  </g>
+
+  <!-- ================ LAYER 04 · Vignette ================ -->
+  <!-- Vinheta radial sutil — blend MULTIPLY no Figma -->
+  <g id="vignette-multiply" opacity="0.5">
+    <rect width="1080" height="1350" fill="url(#vignetteGrad)"/>
+  </g>
+
+  <!-- ================ GUIDE (remover após configurar) ================ -->
+  <g id="GUIDE-REMOVER-DEPOIS" opacity="0.7">
+    <rect x="40" y="40" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="92" font-family="'IBM Plex Mono',monospace" font-weight="500" font-size="28" fill="#C4FF3C" letter-spacing="0.1em">GENE · DAYLIGHT OVERLAY KIT</text>
+    <rect x="40" y="1230" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="1260" font-family="'IBM Plex Mono',monospace" font-weight="400" font-size="16" fill="#F2EFE9">1. soft light 70%  ·  2. overlay 45%  ·  3. multiply 25%  ·  4. multiply 50%</text>
+    <text x="60" y="1285" font-family="'IBM Plex Mono',monospace" font-weight="400" font-size="14" fill="#A6A4A1">ordem dos layers (de baixo pra cima) — aplique blend mode manual após importar</text>
+    <text x="60" y="1305" font-family="'IBM Plex Mono',monospace" font-weight="400" font-size="14" fill="#A6A4A1">delete esse guide antes de usar · grain é arquivo separado (gene-grain-texture.png)</text>
+  </g>
+</svg>

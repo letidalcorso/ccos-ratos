@@ -1,0 +1,250 @@
+<style>
+  .sb-produto-card--iphone { grid-template-columns: 1fr {{ section.settings.iphone_visual_width }}px; }
+  .sb-produto-card__visual {
+    max-height: {{ section.settings.iphone_visual_height }}px;
+    object-fit: {{ section.settings.iphone_visual_fit }};
+    {% if section.settings.iphone_blend %}mix-blend-mode: multiply;{% endif %}
+  }
+</style>
+
+<section id="novos" class="sb-section" style="padding-top: 56px;">
+  <div class="sb-container">
+
+    <div class="sb-section-header">
+      <span class="sb-badge">{{ section.settings.badge }}</span>
+      <h2>{{ section.settings.title }} <span class="sb-blue">{{ section.settings.title_blue }}</span></h2>
+    </div>
+
+    {% if section.settings.garantia_text != blank %}
+    <div class="sb-novos__garantia">
+      <p class="sb-novos__garantia-text">{{ section.settings.garantia_text }}</p>
+    </div>
+    {% endif %}
+
+    <div class="sb-novos__grid">
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'iphone_featured' -%}
+
+          <a href="https://wa.me/{{ settings.whatsapp_number }}?text={{ block.settings.whatsapp_message | url_encode }}" target="_blank" rel="noopener" class="sb-produto-card sb-produto-card--iphone" {{ block.shopify_attributes }}>
+            <div class="sb-produto-card__body">
+              <div class="sb-produto-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="6" y="1" width="12" height="22" rx="3.5" stroke="#3E82F7" stroke-width="1.5"/>
+                  <rect x="9.5" y="3.5" width="5" height="1.5" rx="0.75" fill="#3E82F7" opacity="0.5"/>
+                  <circle cx="12" cy="20.5" r="1.2" fill="#3E82F7" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="sb-produto-card__title">{{ block.settings.title }}</div>
+              <p class="sb-produto-card__desc">{{ block.settings.description }}</p>
+              <div class="sb-produto-card__modelos">
+                {%- assign modelos = block.settings.modelos | split: ',' -%}
+                {%- for modelo in modelos -%}
+                  <span class="sb-produto-card__modelo">{{ modelo | strip }}</span>
+                  {%- unless forloop.last -%}<span class="sb-produto-card__modelo-sep">·</span>{%- endunless -%}
+                {%- endfor -%}
+              </div>
+              <span class="sb-produto-card__link" style="margin-top:6px;">{{ block.settings.link_text }} →</span>
+            </div>
+            <div class="sb-produto-card__visual-wrap">
+              {%- if block.settings.product_image != blank -%}
+                <img src="{{ block.settings.product_image | image_url: width: 1400 }}" alt="{{ block.settings.title }}" class="sb-produto-card__visual" loading="lazy">
+              {%- else -%}
+                <img src="{{ 'iphone17-novos.jpg' | asset_url }}" alt="iPhone 17" class="sb-produto-card__visual" loading="lazy">
+              {%- endif -%}
+            </div>
+          </a>
+
+        {%- elsif block.type == 'category_card' -%}
+
+          <a href="https://wa.me/{{ settings.whatsapp_number }}?text={{ block.settings.whatsapp_message | url_encode }}" target="_blank" rel="noopener" class="sb-produto-card" {{ block.shopify_attributes }}>
+            <div class="sb-produto-card__icon">
+              {%- case block.settings.icon -%}
+                {%- when 'mac' -%}
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#3E82F7" stroke-width="1.5"/><path d="M1 20h22" stroke="#3E82F7" stroke-width="1.5" stroke-linecap="round"/><rect x="9" y="20" width="6" height="2" rx="1" fill="#3E82F7" opacity="0.4"/></svg>
+                {%- when 'ipad' -%}
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="3" y="1" width="18" height="22" rx="3" stroke="#3E82F7" stroke-width="1.5"/><circle cx="12" cy="20.5" r="1.2" fill="#3E82F7" opacity="0.5"/><rect x="7" y="5" width="10" height="12" rx="1" fill="#3E82F7" opacity="0.08"/></svg>
+                {%- when 'airpods' -%}
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="7" y="13" width="10" height="9" rx="3.5" stroke="#3E82F7" stroke-width="1.5"/><line x1="9.5" y1="13" x2="9.5" y2="7" stroke="#3E82F7" stroke-width="1.5" stroke-linecap="round"/><line x1="14.5" y1="13" x2="14.5" y2="7" stroke="#3E82F7" stroke-width="1.5" stroke-linecap="round"/><circle cx="9.5" cy="5.5" r="2.5" fill="#3E82F7" opacity="0.55"/><circle cx="14.5" cy="5.5" r="2.5" fill="#3E82F7" opacity="0.55"/></svg>
+              {%- endcase -%}
+            </div>
+            <div class="sb-produto-card__title">{{ block.settings.title }}</div>
+            <p class="sb-produto-card__desc">{{ block.settings.description }}</p>
+            <span class="sb-produto-card__link">{{ block.settings.link_text }} →</span>
+          </a>
+
+        {%- endif -%}
+      {%- endfor -%}
+
+    </div>
+
+    <div style="margin-top: 40px; text-align: center;">
+      <a href="/pages/produtos" class="sb-btn sb-btn--ghost">ver catálogo completo — iPhone, Mac, iPad, acessórios →</a>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Novos sob encomenda",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "novos · sob encomenda"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "aparelho novo,"
+    },
+    {
+      "type": "text",
+      "id": "title_blue",
+      "label": "Título em azul",
+      "default": "garantia do primeiro dia."
+    },
+    {
+      "type": "textarea",
+      "id": "garantia_text",
+      "label": "Texto de garantia (deixe vazio para ocultar)",
+      "default": "por que sob encomenda? a garantia Apple começa da data de saída da fábrica, não da ativação. aparelho parado em estoque perde cobertura antes de chegar na sua mão. trabalhando por encomenda, você recebe com a garantia completa em dia."
+    },
+    {
+      "type": "range",
+      "id": "iphone_visual_width",
+      "label": "Card iPhone — largura da foto",
+      "min": 200,
+      "max": 500,
+      "step": 20,
+      "default": 340,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "iphone_visual_height",
+      "label": "Card iPhone — altura da foto",
+      "min": 200,
+      "max": 520,
+      "step": 20,
+      "default": 360,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "iphone_visual_fit",
+      "label": "Card iPhone — ajuste da foto",
+      "options": [
+        { "value": "contain", "label": "Mostrar inteira (sem corte)" },
+        { "value": "cover", "label": "Preencher (com corte)" }
+      ],
+      "default": "contain"
+    },
+    {
+      "type": "checkbox",
+      "id": "iphone_blend",
+      "label": "Remover fundo branco da foto",
+      "info": "Ative se a foto tiver fundo branco — some com o fundo e deixa só o produto",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "iphone_featured",
+      "name": "Card iPhone (destaque)",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Foto do produto"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "iPhone"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descrição",
+          "default": "nosso principal produto. importado, com garantia Apple, entregue em todo o Brasil."
+        },
+        {
+          "type": "text",
+          "id": "modelos",
+          "label": "Modelos (separe por vírgula)",
+          "default": "iPhone 17 Pro, iPhone 17, iPhone 16"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Texto do link",
+          "default": "fazer pedido"
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_message",
+          "label": "Mensagem WhatsApp",
+          "default": "quero fazer um pedido de iPhone"
+        }
+      ]
+    },
+    {
+      "type": "category_card",
+      "name": "Card de categoria",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Ícone",
+          "options": [
+            { "value": "mac", "label": "Mac" },
+            { "value": "ipad", "label": "iPad" },
+            { "value": "airpods", "label": "Acessórios/AirPods" }
+          ],
+          "default": "mac"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título",
+          "default": "Mac"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descrição",
+          "default": "MacBook Air e Pro. pra quem trabalha com Apple e não aceita menos."
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Texto do link",
+          "default": "fazer pedido"
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_message",
+          "label": "Mensagem WhatsApp",
+          "default": "quero fazer um pedido de Mac"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Novos sob encomenda",
+      "blocks": [
+        { "type": "iphone_featured" },
+        { "type": "category_card", "settings": { "icon": "mac", "title": "Mac", "description": "MacBook Air e Pro. pra quem trabalha com Apple e não aceita menos.", "link_text": "fazer pedido", "whatsapp_message": "quero fazer um pedido de Mac" } },
+        { "type": "category_card", "settings": { "icon": "ipad", "title": "iPad", "description": "iPad e iPad Pro. performance e mobilidade sem abrir mão do ecossistema Apple.", "link_text": "fazer pedido", "whatsapp_message": "quero fazer um pedido de iPad" } },
+        { "type": "category_card", "settings": { "icon": "airpods", "title": "acessórios", "description": "AirPods, Apple Watch, cabos e mais. tudo original, sem enrolação.", "link_text": "ver disponibilidade", "whatsapp_message": "quero ver os acessórios disponíveis" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

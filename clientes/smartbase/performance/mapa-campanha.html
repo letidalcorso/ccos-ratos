@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Campanha — Smartbase</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; background: #07070E; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    svg { width: 100%; max-width: 1600px; height: auto; display: block; }
+  </style>
+</head>
+<body>
+<svg id="map" viewBox="0 0 1800 1100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');</style>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3E82F7" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#3E82F7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+<script>
+const svg = document.getElementById('map');
+const NS = 'http://www.w3.org/2000/svg';
+
+const CX = 900, CY = 540;
+const FONT = "'Inter', system-ui, sans-serif";
+const C = {
+  bg: '#07070E', surface: '#0F0F1C', deep: '#0A0A1A',
+  blue: '#3E82F7', blueHint: '#0E1E3A',
+  white: '#F2F2F6', gray: '#7A7A96', muted: '#C0C0D0',
+  border: '#1E1E2E', green: '#10B981'
+};
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
+const branches = [
+  {
+    label: 'ESTRUTURA',
+    cx: 900, cy: 200,
+    curve: [900, 370],
+    subs: [
+      { label: '1 conjunto · 2 criativos', cx: 900,  cy: 72  },
+      { label: 'Ad A — sem preço',          cx: 715,  cy: 128 },
+      { label: 'Ad B — R$9.200 PIX',        cx: 1085, cy: 128 }
+    ]
+  },
+  {
+    label: 'CRIATIVOS',
+    cx: 1300, cy: 365,
+    curve: [1100, 453],
+    subs: [
+      { label: 'Ângulo: confiança',    cx: 1510, cy: 292 },
+      { label: 'Ângulo: qualificação', cx: 1545, cy: 358 },
+      { label: 'Carrossel + Story',    cx: 1510, cy: 424 }
+    ]
+  },
+  {
+    label: 'METAS',
+    cx: 1200, cy: 780,
+    curve: [1050, 660],
+    subs: [
+      { label: 'CPR meta: < R$7',        cx: 1395, cy: 848 },
+      { label: '> 30% avançam no WA',    cx: 1440, cy: 906 },
+      { label: '1 venda / 10 conversas', cx: 1395, cy: 964 }
+    ]
+  },
+  {
+    label: 'CRONOGRAMA',
+    cx: 600, cy: 780,
+    curve: [750, 660],
+    subs: [
+      { label: 'Dia 7 — check CPR',         cx: 405, cy: 848 },
+      { label: 'Dia 14 — pausar ou escalar', cx: 355, cy: 906 },
+      { label: 'Mês 1 — avançar fase 2?',   cx: 405, cy: 964 }
+    ]
+  },
+  {
+    label: 'BUDGET',
+    cx: 500, cy: 365,
+    curve: [700, 453],
+    subs: [
+      { label: 'R$15/dia — conservador',  cx: 270, cy: 292 },
+      { label: 'R$25/dia — recomendado',  cx: 230, cy: 358, highlight: true },
+      { label: '+ R$10/dia awareness',    cx: 270, cy: 424 }
+    ]
+  }
+];
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+function el(tag, attrs) {
+  const e = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  return e;
+}
+
+function svgText(content, x, y, opts = {}) {
+  const t = el('text', {
+    x, y,
+    'text-anchor': opts.anchor || 'middle',
+    'font-family': FONT,
+    'font-size': opts.size || 13,
+    'font-weight': opts.weight || 400,
+    fill: opts.fill || C.muted,
+    'letter-spacing': opts.ls || 0,
+    'dominant-baseline': 'middle',
+    ...(opts.opacity != null ? { opacity: opts.opacity } : {})
+  });
+  t.textContent = content;
+  return t;
+}
+
+function svgRect(x, y, w, h, opts = {}) {
+  return el('rect', {
+    x, y, width: w, height: h,
+    rx: opts.rx || 6,
+    fill: opts.fill || C.deep,
+    stroke: opts.stroke || C.border,
+    'stroke-width': opts.sw || 1
+  });
+}
+
+// ─── Background ───────────────────────────────────────────────────────────────
+svg.appendChild(el('rect', { width: 1800, height: 1100, fill: C.bg }));
+
+// Ghost "1"
+const ghost = el('text', {
+  x: 900, y: 700, 'font-family': FONT, 'font-size': 580,
+  'font-weight': 800, fill: C.blue, opacity: 0.02, 'text-anchor': 'middle',
+  'dominant-baseline': 'middle'
+});
+ghost.textContent = '1';
+svg.appendChild(ghost);
+
+// Center glow
+svg.appendChild(el('ellipse', {
+  cx: CX, cy: CY, rx: 260, ry: 210, fill: 'url(#glow)'
+}));
+
+// Header
+svg.appendChild(svgText('SMARTBASE · META ADS · FASE 1', 900, 48, {
+  fill: '#2A2A48', size: 11, weight: 600, ls: 3
+}));
+
+// ─── Center → Branch curves (drawn first, behind everything) ──────────────────
+for (const b of branches) {
+  const [cpx, cpy] = b.curve;
+  svg.appendChild(el('path', {
+    d: `M ${CX} ${CY} Q ${cpx} ${cpy} ${b.cx} ${b.cy}`,
+    stroke: C.border, 'stroke-width': 1.5, fill: 'none'
+  }));
+}
+
+// ─── Branch → Sub lines ───────────────────────────────────────────────────────
+for (const b of branches) {
+  for (const sn of b.subs) {
+    svg.appendChild(el('line', {
+      x1: b.cx, y1: b.cy, x2: sn.cx, y2: sn.cy,
+      stroke: C.border, 'stroke-width': 1
+    }));
+  }
+}
+
+// ─── Sub-nodes ────────────────────────────────────────────────────────────────
+const SW = 215, SH = 34;
+
+for (const b of branches) {
+  for (const sn of b.subs) {
+    svg.appendChild(svgRect(
+      sn.cx - SW / 2, sn.cy - SH / 2, SW, SH, {
+        fill: sn.highlight ? C.blueHint : C.deep,
+        stroke: sn.highlight ? C.blue : C.border
+      }
+    ));
+    svg.appendChild(svgText(sn.label, sn.cx, sn.cy, {
+      fill: sn.highlight ? C.blue : C.muted,
+      size: 12, weight: sn.highlight ? 700 : 500
+    }));
+  }
+}
+
+// ─── Branch nodes ─────────────────────────────────────────────────────────────
+const BW = 225, BH = 44;
+
+for (const b of branches) {
+  svg.appendChild(svgRect(
+    b.cx - BW / 2, b.cy - BH / 2, BW, BH, {
+      fill: C.surface, stroke: C.blue, rx: 8
+    }
+  ));
+  svg.appendChild(svgText(b.label, b.cx, b.cy, {
+    fill: C.blue, size: 12, weight: 700, ls: 1.5
+  }));
+}
+
+// ─── Central node ─────────────────────────────────────────────────────────────
+const CNW = 210, CNH = 76;
+svg.appendChild(el('rect', {
+  x: CX - CNW / 2, y: CY - CNH / 2,
+  width: CNW, height: CNH, rx: 38,
+  fill: C.blue
+}));
+
+svg.appendChild(svgText('CAMPANHA', CX, CY - 13, {
+  fill: '#07070E', size: 10, weight: 700, ls: 2, opacity: 0.75
+}));
+svg.appendChild(svgText('Fase 1', CX, CY + 14, {
+  fill: '#07070E', size: 24, weight: 800
+}));
+
+// ─── Footer ───────────────────────────────────────────────────────────────────
+svg.appendChild(el('line', {
+  x1: 80, y1: 1056, x2: 1720, y2: 1056,
+  stroke: C.border, 'stroke-width': 1
+}));
+
+// Wordmark
+const wm = el('text', { x: 80, y: 1080, 'font-family': FONT, 'font-size': 18, fill: C.white, 'dominant-baseline': 'middle' });
+const sp1 = el('tspan', { 'font-weight': 300, fill: '#C0C0D0' }); sp1.textContent = 'smart';
+const sp2 = el('tspan', { fill: C.blue, 'font-size': 9, dy: '-4' }); sp2.textContent = '●';
+const sp3 = el('tspan', { 'font-weight': 700, dy: '4' }); sp3.textContent = 'base';
+wm.appendChild(sp1); wm.appendChild(sp2); wm.appendChild(sp3);
+svg.appendChild(wm);
+
+svg.appendChild(svgText('Mai 2026 · Fase 1 de 3', 1720, 1080, {
+  fill: '#4A4A60', size: 14, weight: 500, anchor: 'end'
+}));
+</script>
+</body>
+</html>

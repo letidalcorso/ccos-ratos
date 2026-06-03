@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap');</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="#07070E"/>
+
+  <!-- Ghost texture -->
+  <text x="620" y="720" font-family="'Inter', system-ui, sans-serif" font-size="460" font-weight="800" fill="#10B981" opacity="0.03" text-anchor="middle">✓</text>
+
+  <!-- Pilar pill: AUTORIDADE -->
+  <rect x="80" y="80" width="138" height="28" rx="14" fill="#0A201A"/>
+  <text x="149" y="99" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#10B981" text-anchor="middle" letter-spacing="1.5">AUTORIDADE</text>
+
+  <!-- Accent line -->
+  <rect x="80" y="130" width="80" height="6" rx="3" fill="#10B981"/>
+
+  <!-- Counter -->
+  <text x="1000" y="99" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#4A4A60" text-anchor="end">2 / 4</text>
+
+  <!-- Headline -->
+  <text x="80" y="248" font-family="'Inter', system-ui, sans-serif" font-size="62" font-weight="800" fill="#F2F2F6">Antes da entrega,</text>
+  <text x="80" y="320" font-family="'Inter', system-ui, sans-serif" font-size="62" font-weight="800" fill="#F2F2F6">a gente abre o site</text>
+  <text x="80" y="392" font-family="'Inter', system-ui, sans-serif" font-size="62" font-weight="800" fill="#10B981">da Apple</text>
+  <text x="80" y="464" font-family="'Inter', system-ui, sans-serif" font-size="62" font-weight="800" fill="#F2F2F6">na sua frente.</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="502" x2="600" y2="502" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Process block -->
+  <rect x="80" y="530" width="920" height="190" rx="12" fill="#0A201A"/>
+  <rect x="80" y="530" width="5" height="190" rx="2.5" fill="#10B981"/>
+
+  <text x="118" y="578" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#7A7A96">Você digita o IMEI no checkcoverage.apple.com.</text>
+  <text x="118" y="614" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#7A7A96">Aparece: modelo exato · data de compra · cobertura.</text>
+  <text x="118" y="666" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="700" fill="#10B981">Se não bater com o que a gente prometeu,</text>
+  <text x="118" y="700" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="700" fill="#10B981">não tem venda.</text>
+
+  <!-- Footer divider -->
+  <line x1="80" y1="900" x2="1000" y2="900" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="936" font-family="'Inter', system-ui, sans-serif" font-size="24" fill="#F2F2F6">
+    <tspan font-weight="300" fill="#C0C0D0">smart</tspan><tspan fill="#3E82F7" font-size="11" baseline-shift="4">●</tspan><tspan font-weight="700">base</tspan>
+  </text>
+  <text x="1000" y="936" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

@@ -1,0 +1,79 @@
+<h2>Mensagem do fundo — novas opções</h2>
+<p class="subtitle">Fundo azul · interior da sacola · só quem comprou vê. Clique pra prévia.</p>
+
+<div style="display:flex;justify-content:center;margin:24px 0 32px;">
+  <div style="
+    width: 340px;
+    height: 180px;
+    background: #3E82F7;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    box-shadow: 0 8px 32px rgba(62,130,247,0.25), inset 0 0 0 1px rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+  ">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(255,255,255,0.04) 0%,transparent 60%);"></div>
+    <div id="prev" style="
+      font-family:'Helvetica Neue',sans-serif;
+      font-size:17px;
+      font-weight:300;
+      color:white;
+      text-align:center;
+      line-height:1.65;
+      letter-spacing:-0.2px;
+      position:relative;z-index:2;
+      padding: 0 36px;
+    ">toca aqui pra escolher.</div>
+    <div style="font-family:'Helvetica Neue',sans-serif;font-size:10px;font-weight:300;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;position:relative;z-index:2;">smart•base</div>
+  </div>
+</div>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='o melhor iPhone<br>que você já teve.'">
+    <div class="card-body">
+      <h3>o melhor iPhone que você já teve.</h3>
+      <p>Afirmação sobre o produto. Confiante, sem exagero. Funciona porque quem compra um iPhone novo sabe que é verdade — e gosta de ouvir isso confirmado.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='seu. original.<br>sem enrolação.'">
+    <div class="card-body">
+      <h3>seu. original. sem enrolação.</h3>
+      <p>Fala do processo de compra — sem intermediário, sem markup, sem dúvida sobre a procedência. Valida a escolha do canal tanto quanto o produto.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='comprado certo.<br>agora é seu.'">
+    <div class="card-body">
+      <h3>comprado certo. agora é seu.</h3>
+      <p>Dois momentos: a decisão de comprar na Smartbase (certo) e o momento de posse (agora é seu). Celebra sem ser exagerado. Próximo, humano.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="d" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não comprou<br>um iPhone.<br>você comprou o certo.'">
+    <div class="card-body">
+      <h3>você não comprou um iPhone.<br>você comprou o certo.</h3>
+      <p>Diferencia a experiência da Smartbase. Não é sobre o produto — é sobre a decisão. Quem comprou sente que fez a escolha inteligente.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="e" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='isso aqui chegou<br>sem markup.'">
+    <div class="card-body">
+      <h3>isso aqui chegou sem markup.</h3>
+      <p>Direto ao ponto do posicionamento da marca. Informal, quase sussurrado. Fala de economia sem parecer promoção. Só quem comprou entende o valor disso.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="f" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='cuide bem.<br>ele vai durar.'">
+    <div class="card-body">
+      <h3>cuide bem. ele vai durar.</h3>
+      <p>Inesperado — ao invés de celebrar a compra, cuida de quem comprou. Cria vínculo emocional depois da venda. Tom de quem quer que o cliente volte bem.</p>
+    </div>
+  </div>
+
+</div>

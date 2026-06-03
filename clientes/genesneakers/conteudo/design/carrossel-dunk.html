@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Carrossel: História do Dunk</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #1a1a1a;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 40px 24px 80px;
+    }
+    .page-title {
+      color: #C4FF3C;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .page-sub {
+      color: #555;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      margin-bottom: 40px;
+    }
+    .note {
+      background: #111;
+      border-left: 3px solid #C4FF3C;
+      padding: 12px 16px;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+    .slides-grid {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .slide-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .slide-label {
+      color: #555;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .slide {
+      width: 300px;
+      height: 300px;
+      background: #080808;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .corner {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 8px;
+      color: #3C3C3C;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ── SLIDE 1 — Capa ── */
+    .s1 { padding: 28px 24px; justify-content: flex-end; }
+    .s1 .era {
+      font-size: 72px;
+      font-weight: 900;
+      color: #F3EFE6;
+      line-height: 0.82;
+      letter-spacing: -0.03em;
+    }
+    .s1 .sub {
+      font-size: 13px;
+      font-weight: 700;
+      color: #3C3C3C;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 10px;
+    }
+    .s1 .accent {
+      font-size: 13px;
+      font-weight: 700;
+      color: #C4FF3C;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+    .s1 .series-tag {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      font-size: 8px;
+      color: #3C3C3C;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    /* ── SLIDE 2 — basquete ── */
+    .s2 { padding: 24px; justify-content: center; }
+    .s2 .year-tag {
+      font-size: 9px;
+      color: #C4FF3C;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .s2 .statement {
+      font-size: 20px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .s2 .body {
+      font-size: 11px;
+      color: #3C3C3C;
+      line-height: 1.6;
+    }
+
+    /* ── SLIDE 3 — rua ── */
+    .s3 { padding: 24px; justify-content: center; }
+    .s3 .year-tag {
+      font-size: 9px;
+      color: #C4FF3C;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .s3 .big {
+      font-size: 52px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      line-height: 0.85;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .s3 .body {
+      font-size: 11px;
+      color: #3C3C3C;
+      line-height: 1.6;
+    }
+
+    /* ── SLIDE 4 — 2000 ── */
+    .s4 { padding: 24px; justify-content: center; }
+    .s4 .year-tag {
+      font-size: 9px;
+      color: #C4FF3C;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .s4 .program {
+      font-size: 15px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .s4 .body {
+      font-size: 11px;
+      color: #3C3C3C;
+      line-height: 1.6;
+    }
+
+    /* ── SLIDE 5 — A cultura decidiu ── */
+    .s5 { padding: 28px 24px; justify-content: center; }
+    .s5 .main {
+      font-size: 36px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      line-height: 0.88;
+      letter-spacing: -0.02em;
+    }
+    .s5 .accent {
+      font-size: 36px;
+      font-weight: 900;
+      color: #C4FF3C;
+      text-transform: uppercase;
+      line-height: 0.88;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .s5 .body {
+      font-size: 10px;
+      color: #3C3C3C;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── SLIDE 6 — CTA ── */
+    .s6 { justify-content: space-between; padding: 28px 24px; }
+    .s6 .cta {
+      font-size: 28px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .s6 .handle {
+      font-size: 9px;
+      color: #C4FF3C;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 14px;
+    }
+    .s6 .logo-area img {
+      width: 110px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-title">Gene Sneakers — Carrossel Editorial</div>
+<div class="page-sub">Peça 3.1 · A História do Nike Dunk · Instagram Feed · 6 slides · Formato 1:1</div>
+
+<div class="note">
+  Carrossel de cultura sneaker. Pode usar fotos históricas do Dunk em cada slide (campanha Nike, editorial de streetwear). Tamanho de exportação: 1080×1080px por slide.
+</div>
+
+<div class="slides-grid">
+
+  <!-- Slide 1 — Capa -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 1 — Capa</div>
+    <div class="slide s1">
+      <span class="series-tag">A História do Dunk</span>
+      <span class="corner">1 / 6</span>
+      <div class="era">1985.</div>
+      <div class="sub">Um tênis de basquete.</div>
+      <div class="accent">Uma revolução.</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 2</div>
+    <div class="slide s2">
+      <span class="corner">2 / 6</span>
+      <div class="year-tag">1985 — Basquete Universitário</div>
+      <div class="statement">Era o tênis do time — não do atleta.</div>
+      <div class="body">O Nike Dunk nasceu para o basquete universitário americano. Cada time tinha a sua colorway. A identidade era coletiva.</div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 3</div>
+    <div class="slide s3">
+      <span class="corner">3 / 6</span>
+      <div class="year-tag">Anos 90 — A Rua Decidiu</div>
+      <div class="big">Os<br>skaters<br>viram<br>primeiro.</div>
+      <div class="body">Saiu das quadras e entrou nas ruas. Antes de qualquer tendência — a cultura adotou.</div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 4</div>
+    <div class="slide s4">
+      <span class="corner">4 / 6</span>
+      <div class="year-tag">2000 — Be True To Your School</div>
+      <div class="program">"Be True<br>To Your<br>School."</div>
+      <div class="body">Colorways exclusivas por universidade. Tiragens limitadas. Viraram objetos de coleção antes do conceito existir.</div>
+    </div>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 5</div>
+    <div class="slide s5">
+      <span class="corner">5 / 6</span>
+      <div class="main">A cultura</div>
+      <div class="accent">decidiu.</div>
+      <div class="body">Hoje é um dos modelos mais requisitados do mercado global. Nenhum anúncio fez isso — a rua decidiu que sim, e pronto.</div>
+    </div>
+  </div>
+
+  <!-- Slide 6 — CTA -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 6 — CTA</div>
+    <div class="slide s6">
+      <span class="corner">6 / 6</span>
+      <div>
+        <div class="cta">Dunk<br>disponível<br>sob<br>encomenda.</div>
+        <div class="handle">@genesneakers</div>
+      </div>
+      <div class="logo-area">
+        <img src="../../02_branding/identidade_visual/gene-wordmark.svg" alt="Gene Sneakers"/>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

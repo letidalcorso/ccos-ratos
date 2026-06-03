@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <rect width="1080" height="1920" fill="#000000"/>
+
+  <!-- Top tag -->
+  <g transform="translate(80, 200)">
+    <line x1="0" y1="14" x2="50" y2="14" stroke="#2DFF8B" stroke-width="4"/>
+    <text x="65" y="22" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="600" letter-spacing="4">VOTAÇÃO</text>
+  </g>
+
+  <!-- Main message -->
+  <text x="80" y="700" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="100" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">se fosse hoje,</tspan>
+    <tspan x="80" dy="115">qual </tspan><tspan dy="0" fill="#2DFF8B">iPhone</tspan>
+    <tspan x="80" dy="115">você levaria?</tspan>
+  </text>
+
+  <!-- Indicação visual de onde colar o sticker poll -->
+  <rect x="120" y="1280" width="840" height="280" rx="40" fill="#1A1A1A" stroke="#2DFF8B" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="540" y="1390" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle" opacity="0.5">↑ coloca o sticker "ENQUETE" aqui ↑</text>
+  <text x="540" y="1450" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="middle" opacity="0.4">opções sugeridas: 16 Pro / 17 Pro / 17 Pro Max</text>
+
+  <!-- Sub -->
+  <text x="540" y="1700" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" text-anchor="middle" opacity="0.7">quem ganhar, vira pauta da semana.</text>
+
+  <!-- Footer wordmark -->
+  <text x="80" y="1820" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="40" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1820" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

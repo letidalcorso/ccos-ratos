@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!--
+    Gene Sneakers · Avatar oficial · v2
+    Campo Acid + GENE dominante + SNEAKERS em Plex Mono (modifier técnico)
+    Lógica: hierarquia GENE > SNEAKERS mantém o brand da marca longa,
+    Plex Mono ancora no sistema de selos já estabelecido
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap');
+      .display{font-family:'Big Shoulders Display','Arial Black',sans-serif;font-weight:900;letter-spacing:-0.02em}
+      .mono{font-family:'IBM Plex Mono','Menlo',monospace;font-weight:500}
+    </style>
+  </defs>
+
+  <!-- Campo Acid -->
+  <rect width="1080" height="1080" fill="#C4FF3C"/>
+
+  <!-- GENE dominante em Carbon -->
+  <text x="540" y="610" class="display" font-size="380" fill="#0D0D0D" text-anchor="middle">GENE</text>
+
+  <!-- Divider Carbon atravessando GENE (canônico) -->
+  <rect x="0" y="490" width="1080" height="20" fill="#0D0D0D"/>
+
+  <!-- SNEAKERS em Plex Mono abaixo (modifier técnico) -->
+  <text x="540" y="770" class="mono" font-size="68" fill="#0D0D0D" text-anchor="middle" letter-spacing="0.28em">SNEAKERS</text>
+
+  <!-- Ponto Carbon DNA signature -->
+  <circle cx="540" cy="870" r="10" fill="#0D0D0D"/>
+</svg>

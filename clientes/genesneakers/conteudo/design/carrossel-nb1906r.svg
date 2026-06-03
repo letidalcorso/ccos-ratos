@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5400" height="1080" viewBox="0 0 5400 1080">
+  <defs>
+    <style>
+      text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      .label { font-size: 22px; fill: #3C3C3C; letter-spacing: 4px; font-weight: 400; }
+      .corner { font-size: 22px; fill: #3C3C3C; letter-spacing: 3px; }
+      .display { font-size: 148px; font-weight: 900; letter-spacing: -4px; text-transform: uppercase; }
+      .display-sm { font-size: 96px; font-weight: 900; letter-spacing: -2px; text-transform: uppercase; }
+      .title { font-size: 56px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+      .body { font-size: 36px; font-weight: 400; line-height: 1.6; letter-spacing: 0.5px; }
+      .micro { font-size: 22px; font-weight: 400; letter-spacing: 6px; text-transform: uppercase; }
+      .cta-main { font-size: 110px; font-weight: 900; letter-spacing: -3px; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <!-- ═══ SLIDE 1 — CAPA ═══ -->
+  <rect x="0" y="0" width="1080" height="1080" fill="#080808"/>
+  <!-- lime accent bar -->
+  <rect x="80" y="840" width="50" height="6" fill="#C4FF3C"/>
+  <!-- headline -->
+  <text x="80" y="720" class="display" fill="#F3EFE6">O BR</text>
+  <text x="80" y="870" class="display" fill="#F3EFE6">AINDA</text>
+  <text x="80" y="1020" class="display" fill="#F3EFE6">NÃO TEM.</text>
+  <!-- corner -->
+  <text x="1000" y="52" text-anchor="end" class="corner" fill="#3C3C3C">1 / 5</text>
+  <!-- bottom tag -->
+  <text x="80" y="52" class="micro" fill="#3C3C3C">Gene Sneakers · Sob encomenda</text>
+  <line x1="1078" y1="0" x2="1078" y2="1080" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ SLIDE 2 — PRODUTO ═══ -->
+  <rect x="1080" y="0" width="1080" height="1080" fill="#080808"/>
+  <!-- photo placeholder -->
+  <rect x="1120" y="80" width="1000" height="680" fill="#0f0f0f" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="1620" y="420" text-anchor="middle" class="micro" fill="#2a2a2a">FOTO DO TÊNIS</text>
+  <text x="1620" y="460" text-anchor="middle" class="micro" fill="#2a2a2a">1906R AQUI</text>
+  <!-- model info -->
+  <text x="1120" y="860" class="title" fill="#F3EFE6">NEW BALANCE 1906R</text>
+  <text x="1120" y="916" class="micro" fill="#C4FF3C">Protection Pack</text>
+  <!-- corner -->
+  <text x="2080" y="52" text-anchor="end" class="corner" fill="#3C3C3C">2 / 5</text>
+  <line x1="2158" y1="0" x2="2158" y2="1080" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ SLIDE 3 ═══ -->
+  <rect x="2160" y="0" width="1080" height="1080" fill="#080808"/>
+  <text x="3140" y="52" text-anchor="end" class="corner" fill="#3C3C3C">3 / 5</text>
+  <!-- headline -->
+  <text x="2240" y="380" class="display" fill="#F3EFE6">SAIU</text>
+  <text x="2240" y="530" class="display" fill="#F3EFE6">NOS EUA.</text>
+  <!-- divider -->
+  <line x1="2240" y1="580" x2="2440" y2="580" stroke="#C4FF3C" stroke-width="3"/>
+  <!-- body -->
+  <text x="2240" y="650" class="body" fill="#3C3C3C">Ainda não chegou no varejo nacional.</text>
+  <text x="2240" y="700" class="body" fill="#3C3C3C">Quando chegar, vai custar o dobro.</text>
+  <line x1="3238" y1="0" x2="3238" y2="1080" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ SLIDE 4 ═══ -->
+  <rect x="3240" y="0" width="1080" height="1080" fill="#080808"/>
+  <text x="4220" y="52" text-anchor="end" class="corner" fill="#3C3C3C">4 / 5</text>
+  <!-- body copy — editorial -->
+  <text x="3320" y="360" class="body" fill="#F3EFE6">Amortecimento de corrida,</text>
+  <text x="3320" y="414" class="body" fill="#F3EFE6">estética que não pede desculpa.</text>
+  <!-- divider -->
+  <line x1="3320" y1="460" x2="3480" y2="460" stroke="#3C3C3C" stroke-width="2"/>
+  <text x="3320" y="530" class="body" fill="#F3EFE6">O tipo de tênis que você usa</text>
+  <text x="3320" y="584" class="body" fill="#F3EFE6">e ninguém pergunta onde</text>
+  <text x="3320" y="638" class="body" fill="#F3EFE6">comprou — eles sabem.</text>
+  <line x1="4318" y1="0" x2="4318" y2="1080" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- ═══ SLIDE 5 — CTA ═══ -->
+  <rect x="4320" y="0" width="1080" height="1080" fill="#080808"/>
+  <text x="5300" y="52" text-anchor="end" class="corner" fill="#3C3C3C">5 / 5</text>
+  <!-- label small -->
+  <text x="4400" y="200" class="micro" fill="#3C3C3C">Disponível</text>
+  <!-- cta -->
+  <text x="4400" y="390" class="cta-main" fill="#F3EFE6">SOB</text>
+  <text x="4400" y="510" class="cta-main" fill="#F3EFE6">ENCO-</text>
+  <text x="4400" y="630" class="cta-main" fill="#F3EFE6">MENDA.</text>
+  <!-- lime accent -->
+  <text x="4400" y="760" class="title" fill="#C4FF3C">A GENE TRAZ.</text>
+  <!-- wordmark -->
+  <image href="../../02_branding/identidade_visual/gene-wordmark.svg" x="4400" y="860" width="440" height="213"/>
+
+</svg>

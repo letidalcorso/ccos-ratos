@@ -1,0 +1,78 @@
+<h2>você não comprou só um iPhone.<br>você escolheu ___.</h2>
+<p class="subtitle">O que completa a frase define o posicionamento da Smartbase nesse momento íntimo. Clique pra ver.</p>
+
+<div style="display:flex;justify-content:center;margin:24px 0 32px;">
+  <div style="
+    width: 380px;
+    height: 190px;
+    background: #3E82F7;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    box-shadow: 0 8px 32px rgba(62,130,247,0.25), inset 0 0 0 1px rgba(255,255,255,0.08);
+    position:relative;overflow:hidden;
+  ">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(255,255,255,0.05) 0%,transparent 60%);"></div>
+    <div id="prev" style="
+      font-family:'Helvetica Neue',sans-serif;
+      font-size:17px;
+      font-weight:300;
+      color:white;
+      text-align:center;
+      line-height:1.7;
+      letter-spacing:-0.2px;
+      position:relative;z-index:2;
+      padding:0 40px;
+    ">toca pra ver.</div>
+    <div style="font-family:'Helvetica Neue',sans-serif;font-size:10px;font-weight:300;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;position:relative;z-index:2;">smart•base</div>
+  </div>
+</div>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não comprou<br>só um iPhone.<br>você escolheu bem.'">
+    <div class="card-body">
+      <h3>você escolheu bem.</h3>
+      <p>Simples e direto. Valida a decisão sem explicar. Qualquer pessoa entende — e sente. Funciona porque é o que alguém de confiança diria.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não comprou<br>só um iPhone.<br>você escolheu diferente.'">
+    <div class="card-body">
+      <h3>você escolheu diferente.</h3>
+      <p>Fala sobre o canal — comprou fora do caminho óbvio (loja oficial, operadora, marketplace). Reconhece que a pessoa foi atrás de uma alternativa real. Tom de cumplicidade.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não comprou<br>só um iPhone.<br>você escolheu quem entende.'">
+    <div class="card-body">
+      <h3>você escolheu quem entende.</h3>
+      <p>Fala sobre a relação com o vendedor. É pessoal — coloca a Smartbase como especialista de confiança, não como loja. Fecha o ciclo da "apple store particular".</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="d" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não comprou<br>só um iPhone.<br>você escolheu certo.'">
+    <div class="card-body">
+      <h3>você escolheu certo.</h3>
+      <p>Parecido com "bem" mas com mais peso de decisão. "Certo" valida não só o gosto — valida a inteligência da escolha. Quem pesquisou antes de comprar vai sentir isso.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="e" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não comprou<br>só um iPhone.<br>você escolheu o original.'">
+    <div class="card-body">
+      <h3>você escolheu o original.</h3>
+      <p>Foca no produto — elimina a dúvida de quem ainda se pergunta se era original mesmo. Transforma uma ansiedade em afirmação. Mais funcional, menos poético.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="f" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não comprou<br>só um iPhone.<br>você escolheu sem markup.'">
+    <div class="card-body">
+      <h3>você escolheu sem markup.</h3>
+      <p>O posicionamento mais direto da marca. Arrojado — poucas marcas falariam assim num material físico. Vai funcionar pra quem já entende o que é markup. Pode confundir quem não entende.</p>
+    </div>
+  </div>
+
+</div>

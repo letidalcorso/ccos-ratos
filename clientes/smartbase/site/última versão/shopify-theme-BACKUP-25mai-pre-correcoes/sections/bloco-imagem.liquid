@@ -1,0 +1,51 @@
+{% if section.settings.image != blank %}
+  <div style="
+    width: 100%;
+    {% if section.settings.full_width %}max-width: 100%;{% else %}max-width: var(--max-width); margin: 0 auto; padding: 0 24px;{% endif %}
+    {% if section.settings.padding_top %}padding-top: {{ section.settings.padding_top }}px;{% endif %}
+    {% if section.settings.padding_bottom %}padding-bottom: {{ section.settings.padding_bottom }}px;{% endif %}
+  ">
+    <img
+      src="{{ section.settings.image | image_url: width: 1600 }}"
+      alt="{{ section.settings.alt }}"
+      style="
+        width: 100%;
+        {% if section.settings.max_height != blank %}max-height: {{ section.settings.max_height }}px;{% endif %}
+        object-fit: {{ section.settings.fit }};
+        border-radius: {% if section.settings.rounded %}var(--radius-card-lg){% else %}0{% endif %};
+        display: block;
+      "
+      loading="lazy"
+    >
+    {% if section.settings.caption != blank %}
+      <p style="text-align:center;font-size:13px;color:var(--text-muted);margin-top:12px;font-weight:300;">{{ section.settings.caption }}</p>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Bloco de Imagem",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Imagem" },
+    { "type": "text", "id": "alt", "label": "Texto alternativo (acessibilidade)" },
+    { "type": "text", "id": "caption", "label": "Legenda (opcional)" },
+    { "type": "checkbox", "id": "full_width", "label": "Imagem full width (sem margens)", "default": false },
+    { "type": "checkbox", "id": "rounded", "label": "Bordas arredondadas", "default": true },
+    {
+      "type": "select",
+      "id": "fit",
+      "label": "Ajuste da imagem",
+      "options": [
+        { "value": "cover", "label": "Preencher (cover)" },
+        { "value": "contain", "label": "Mostrar inteira (contain)" }
+      ],
+      "default": "cover"
+    },
+    { "type": "text", "id": "max_height", "label": "Altura máxima em px (ex: 600 — deixe vazio para automático)" },
+    { "type": "range", "id": "padding_top", "label": "Espaço acima", "min": 0, "max": 120, "step": 8, "default": 0, "unit": "px" },
+    { "type": "range", "id": "padding_bottom", "label": "Espaço abaixo", "min": 0, "max": 120, "step": 8, "default": 0, "unit": "px" }
+  ],
+  "presets": [{ "name": "Bloco de Imagem" }]
+}
+{% endschema %}

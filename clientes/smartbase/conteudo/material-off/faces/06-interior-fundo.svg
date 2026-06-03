@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 924" width="1056" height="924">
+  <!-- INTERIOR FUNDO — 264×231mm | Azul #3E82F7 | surpresa ao retirar o aparelho -->
+
+  <rect width="1056" height="924" fill="#3E82F7"/>
+
+  <!-- Textura sutil -->
+  <rect width="1056" height="924" fill="white" opacity="0.03"/>
+
+  <!-- Frase — "versão mais recente de você: instalada." -->
+  <!-- Linha 1 -->
+  <text x="528" y="388"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="56" font-weight="700" letter-spacing="-0.8"
+    fill="white">versão mais recente</text>
+
+  <!-- Linha 2 -->
+  <text x="528" y="460"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="56" font-weight="700" letter-spacing="-0.8"
+    fill="white">de você: instalada.</text>
+
+  <!-- Linha separadora sutil -->
+  <line x1="428" y1="502" x2="628" y2="502" stroke="white" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Wordmark — pill style, centralizado -->
+  <rect x="445" y="520" width="166" height="42" rx="21"
+    fill="none" stroke="white" stroke-width="1.5" opacity="0.35"/>
+  <circle cx="467" cy="541" r="5" fill="white" opacity="0.5"/>
+  <text x="481" y="548"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="26" font-weight="300" letter-spacing="-0.3"
+    fill="white" opacity="0.5">smart</text>
+  <text x="546" y="548"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="26" font-weight="700" letter-spacing="-0.3"
+    fill="white" opacity="0.8">base</text>
+</svg>

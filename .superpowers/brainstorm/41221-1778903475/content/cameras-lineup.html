@@ -1,0 +1,252 @@
+<style>
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mug-card { border-radius: 16px; overflow: hidden; border: 2px solid transparent; cursor: pointer; transition: border-color 0.2s; }
+  .mug-card.selected { border-color: #3E82F7; }
+  .mug-card:hover { border-color: #3E82F7aa; }
+  .mug-canvas { padding: 32px 24px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .mug-label { padding: 14px 20px; }
+  .mug-label h3 { margin: 0 0 4px; font-size: 14px; }
+  .mug-label p { margin: 0; font-size: 12px; color: #7A7A96; }
+  .letter-badge { display: inline-block; width: 26px; height: 26px; background: #3E82F7; border-radius: 50%; text-align: center; line-height: 26px; font-size: 12px; font-weight: 700; color: white; margin: 20px 0 0 20px; }
+
+  .lineup { display: flex; align-items: flex-end; gap: 14px; }
+  .iphone-back { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+  .iphone-body-back { position: relative; border-radius: 12%; }
+  .year-label { font-size: 7px; letter-spacing: 0.5px; text-align: center; }
+  .cam-label { font-size: 6.5px; letter-spacing: 0.3px; text-align: center; opacity: 0.55; }
+
+  .tagline { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: lowercase; text-align: center; }
+  .wordmark { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 11px; display: flex; align-items: center; gap: 1px; }
+
+  /* DARK */
+  .dark-card { background: #07070E; }
+  .dark-card .mug-label { border-top: 1px solid #1E1E2E; }
+  .dark-card .mug-label h3 { color: #F2F2F6; }
+  .dark-card .iphone-body-back { border: 1.5px solid #F2F2F6; background: transparent; }
+  .dark-card .cam-circle { background: transparent; border: 1.5px solid #F2F2F6; }
+  .dark-card .cam-dot { background: #F2F2F6; border-radius: 50%; }
+  .dark-card .cam-module { border: 1.5px solid #F2F2F6; }
+  .dark-card .flash { background: #F2F2F6; border-radius: 50%; }
+  .dark-card .apple-logo { color: #F2F2F6; }
+  .dark-card .tagline { color: #F2F2F6; }
+  .dark-card .wm-smart { color: #7A7A96; }
+  .dark-card .wm-dot { color: #3E82F7; }
+  .dark-card .wm-base { color: #F2F2F6; font-weight: 700; }
+  .dark-card .year-label { color: #7A7A96; }
+  .dark-card .cam-label { color: #7A7A96; }
+
+  /* LIGHT */
+  .light-card { background: #F5F0E8; }
+  .light-card .mug-label { border-top: 1px solid rgba(0,0,0,0.08); }
+  .light-card .mug-label h3 { color: #111; }
+  .light-card .iphone-body-back { border: 1.5px solid #222; background: transparent; }
+  .light-card .cam-circle { background: transparent; border: 1.5px solid #222; }
+  .light-card .cam-dot { background: #222; border-radius: 50%; }
+  .light-card .cam-module { border: 1.5px solid #222; }
+  .light-card .flash { background: #222; border-radius: 50%; }
+  .light-card .apple-logo { color: #222; }
+  .light-card .tagline { color: #111; }
+  .light-card .wm-smart { color: #888; }
+  .light-card .wm-dot { color: #3E82F7; }
+  .light-card .wm-base { color: #111; font-weight: 700; }
+  .light-card .year-label { color: #555; }
+  .light-card .cam-label { color: #888; }
+</style>
+
+<h2>A evolução pelas câmeras</h2>
+<p class="subtitle">Vista de trás — cada módulo é imediatamente reconhecível por quem é fã de Apple</p>
+
+<div class="split">
+
+  <!-- DARK -->
+  <div class="mug-card dark-card" data-choice="dark" onclick="toggleSelect(this)">
+    <div class="letter-badge">A</div>
+    <div class="mug-canvas">
+      <div class="lineup">
+
+        <!-- iPhone 4 (2010) — câmera única, canto sup esq, sem bump -->
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:28px;height:46px;">
+            <div class="cam-circle" style="width:8px;height:8px;border-radius:50%;position:absolute;top:5px;left:5px;"></div>
+            <div class="flash" style="width:3px;height:3px;position:absolute;top:6px;left:15px;"></div>
+          </div>
+          <div class="year-label">2010</div>
+          <div class="cam-label">único</div>
+        </div>
+
+        <!-- iPhone 6 (2014) — câmera única com bump -->
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:28px;height:50px;border-radius:14%;">
+            <!-- bump simulado -->
+            <div class="cam-module" style="width:10px;height:10px;border-radius:50%;position:absolute;top:6px;left:4px;background:transparent;">
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2014</div>
+          <div class="cam-label">bump</div>
+        </div>
+
+        <!-- iPhone 7 Plus (2016) — dupla vertical -->
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:30px;height:54px;border-radius:14%;">
+            <div style="position:absolute;top:5px;left:4px;display:flex;flex-direction:column;gap:3px;">
+              <div class="cam-module" style="width:10px;height:10px;border-radius:50%;background:transparent;">
+                <div class="cam-dot" style="width:5px;height:5px;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+              </div>
+              <div class="cam-module" style="width:10px;height:10px;border-radius:50%;background:transparent;">
+                <div class="cam-dot" style="width:5px;height:5px;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="year-label">2016</div>
+          <div class="cam-label">dupla</div>
+        </div>
+
+        <!-- iPhone 11 (2019) — triângulo de câmeras -->
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:32px;height:58px;border-radius:14%;">
+            <div class="cam-module" style="width:18px;height:18px;border-radius:5px;position:absolute;top:5px;left:50%;transform:translateX(-50%);background:transparent;">
+              <!-- triângulo: 2 em cima, 1 embaixo centro -->
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;top:1px;left:1px;"></div>
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;top:1px;right:1px;"></div>
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;bottom:1px;left:50%;transform:translateX(-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2019</div>
+          <div class="cam-label">triângulo</div>
+        </div>
+
+        <!-- iPhone 14 Pro (2022) — ilha grande -->
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:34px;height:62px;border-radius:14%;">
+            <div class="cam-module" style="width:22px;height:22px;border-radius:6px;position:absolute;top:4px;left:50%;transform:translateX(-50%);background:transparent;">
+              <div class="cam-dot" style="width:6px;height:6px;position:absolute;top:2px;left:2px;"></div>
+              <div class="cam-dot" style="width:6px;height:6px;position:absolute;top:2px;right:2px;"></div>
+              <div class="cam-dot" style="width:6px;height:6px;position:absolute;bottom:2px;left:50%;transform:translateX(-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2022</div>
+          <div class="cam-label">ilha</div>
+        </div>
+
+        <!-- iPhone 16 (2024) — pílula vertical -->
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:34px;height:64px;border-radius:14%;">
+            <div class="cam-module" style="width:14px;height:28px;border-radius:8px;position:absolute;top:4px;left:50%;transform:translateX(-50%);background:transparent;">
+              <div class="cam-dot" style="width:7px;height:7px;position:absolute;top:3px;left:50%;transform:translateX(-50%);"></div>
+              <div class="cam-dot" style="width:7px;height:7px;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2024</div>
+          <div class="cam-label">pílula</div>
+        </div>
+
+      </div>
+      <div class="tagline">todos passaram por aqui.</div>
+      <div class="wordmark">
+        <span class="wm-smart">smart</span>
+        <span class="wm-dot">•</span>
+        <span class="wm-base">base</span>
+      </div>
+    </div>
+    <div class="mug-label">
+      <h3>A — Fundo preto</h3>
+      <p>Identidade digital da Smartbase. Foto impacta nos stories à noite e em estúdio.</p>
+    </div>
+  </div>
+
+  <!-- LIGHT -->
+  <div class="mug-card light-card" data-choice="light" onclick="toggleSelect(this)">
+    <div class="letter-badge">B</div>
+    <div class="mug-canvas">
+      <div class="lineup">
+
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:28px;height:46px;">
+            <div class="cam-circle" style="width:8px;height:8px;border-radius:50%;position:absolute;top:5px;left:5px;"></div>
+            <div class="flash" style="width:3px;height:3px;position:absolute;top:6px;left:15px;"></div>
+          </div>
+          <div class="year-label">2010</div>
+          <div class="cam-label">único</div>
+        </div>
+
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:28px;height:50px;border-radius:14%;">
+            <div class="cam-module" style="width:10px;height:10px;border-radius:50%;position:absolute;top:6px;left:4px;background:transparent;">
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2014</div>
+          <div class="cam-label">bump</div>
+        </div>
+
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:30px;height:54px;border-radius:14%;">
+            <div style="position:absolute;top:5px;left:4px;display:flex;flex-direction:column;gap:3px;">
+              <div class="cam-module" style="width:10px;height:10px;border-radius:50%;background:transparent;">
+                <div class="cam-dot" style="width:5px;height:5px;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+              </div>
+              <div class="cam-module" style="width:10px;height:10px;border-radius:50%;background:transparent;">
+                <div class="cam-dot" style="width:5px;height:5px;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="year-label">2016</div>
+          <div class="cam-label">dupla</div>
+        </div>
+
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:32px;height:58px;border-radius:14%;">
+            <div class="cam-module" style="width:18px;height:18px;border-radius:5px;position:absolute;top:5px;left:50%;transform:translateX(-50%);background:transparent;">
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;top:1px;left:1px;"></div>
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;top:1px;right:1px;"></div>
+              <div class="cam-dot" style="width:5px;height:5px;position:absolute;bottom:1px;left:50%;transform:translateX(-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2019</div>
+          <div class="cam-label">triângulo</div>
+        </div>
+
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:34px;height:62px;border-radius:14%;">
+            <div class="cam-module" style="width:22px;height:22px;border-radius:6px;position:absolute;top:4px;left:50%;transform:translateX(-50%);background:transparent;">
+              <div class="cam-dot" style="width:6px;height:6px;position:absolute;top:2px;left:2px;"></div>
+              <div class="cam-dot" style="width:6px;height:6px;position:absolute;top:2px;right:2px;"></div>
+              <div class="cam-dot" style="width:6px;height:6px;position:absolute;bottom:2px;left:50%;transform:translateX(-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2022</div>
+          <div class="cam-label">ilha</div>
+        </div>
+
+        <div class="iphone-back">
+          <div class="iphone-body-back" style="width:34px;height:64px;border-radius:14%;">
+            <div class="cam-module" style="width:14px;height:28px;border-radius:8px;position:absolute;top:4px;left:50%;transform:translateX(-50%);background:transparent;">
+              <div class="cam-dot" style="width:7px;height:7px;position:absolute;top:3px;left:50%;transform:translateX(-50%);"></div>
+              <div class="cam-dot" style="width:7px;height:7px;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+            </div>
+          </div>
+          <div class="year-label">2024</div>
+          <div class="cam-label">pílula</div>
+        </div>
+
+      </div>
+      <div class="tagline">todos passaram por aqui.</div>
+      <div class="wordmark">
+        <span class="wm-smart">smart</span>
+        <span class="wm-dot">•</span>
+        <span class="wm-base">base</span>
+      </div>
+    </div>
+    <div class="mug-label">
+      <h3>B — Fundo off-white</h3>
+      <p>Tom editorial. Foto bem com luz natural, parece objeto de design intencional.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:18px;font-size:12px;">
+  A evolução das câmeras conta a história melhor que a frente — quem conhece Apple reconhece cada módulo na hora.<br>
+  Posso ajustar quais modelos entram, tamanho relativo, ou adicionar algum detalhe específico.
+</p>

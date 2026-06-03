@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Big decorative cut-off "sb" bottom-right -->
+  <text x="1240" y="1380" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="780" font-weight="700" letter-spacing="-30" text-anchor="end" opacity="1">sb</text>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">7/7</text>
+
+  <!-- Title -->
+  <text x="80" y="430" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="120" font-weight="700" letter-spacing="-4">
+    <tspan x="80" dy="0">fala com</tspan>
+    <tspan x="80" dy="135" fill="#2DFF8B">a gente.</tspan>
+  </text>
+
+  <!-- Sub -->
+  <text x="80" y="780" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.85">
+    <tspan x="80" dy="0">resposta rápida, sem enrolação.</tspan>
+  </text>
+
+  <!-- WhatsApp button -->
+  <rect x="80" y="880" width="430" height="96" rx="48" fill="#2DFF8B"/>
+  <text x="295" y="940" fill="#000000" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" font-weight="600" text-anchor="middle">falar no WhatsApp →</text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

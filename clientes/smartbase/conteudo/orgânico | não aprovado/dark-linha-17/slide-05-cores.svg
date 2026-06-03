@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600&amp;display=swap');</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <!-- Left accent -->
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- Label badge -->
+  <rect x="80" y="72" width="175" height="40" rx="20" fill="#0F0F1C" stroke="#3E82F7" stroke-width="1"/>
+  <text x="167" y="97" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#3E82F7" text-anchor="middle" letter-spacing="2">PRO MAX</text>
+  <!-- Slide counter -->
+  <text x="1000" y="97" font-family="'Inter', sans-serif" font-size="20" fill="#4A4A60" text-anchor="end">5 / 9</text>
+
+  <!-- Three color swatches — Pro Max finishes -->
+  <!-- Cosmic Orange -->
+  <rect x="80" y="180" width="272" height="820" rx="20" fill="#1A0A00"/>
+  <rect x="80" y="180" width="272" height="820" rx="20" fill="#FF6B30" opacity="0.15"/>
+  <rect x="80" y="180" width="272" height="820" rx="20" stroke="#FF6B30" stroke-width="1" fill="none" opacity="0.4"/>
+  <circle cx="216" cy="590" r="72" fill="#FF6B30" opacity="0.9"/>
+  <text x="216" y="760" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#FF6B30" text-anchor="middle">Cosmic</text>
+  <text x="216" y="794" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#FF6B30" text-anchor="middle">Orange</text>
+
+  <!-- Deep Blue -->
+  <rect x="404" y="180" width="272" height="820" rx="20" fill="#050D1A"/>
+  <rect x="404" y="180" width="272" height="820" rx="20" fill="#1A4A8A" opacity="0.2"/>
+  <rect x="404" y="180" width="272" height="820" rx="20" stroke="#3E82F7" stroke-width="1" fill="none" opacity="0.4"/>
+  <circle cx="540" cy="590" r="72" fill="#0A2A5A" stroke="#3E82F7" stroke-width="2"/>
+  <text x="540" y="760" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#6DAFF9" text-anchor="middle">Deep</text>
+  <text x="540" y="794" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#6DAFF9" text-anchor="middle">Blue</text>
+
+  <!-- Silver -->
+  <rect x="728" y="180" width="272" height="820" rx="20" fill="#0F0F10"/>
+  <rect x="728" y="180" width="272" height="820" rx="20" fill="#C8C8CC" opacity="0.08"/>
+  <rect x="728" y="180" width="272" height="820" rx="20" stroke="#C8C8CC" stroke-width="1" fill="none" opacity="0.3"/>
+  <circle cx="864" cy="590" r="72" fill="#C8C8CC" opacity="0.85"/>
+  <text x="864" y="760" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#C8C8CC" text-anchor="middle">Silver</text>
+
+  <!-- Headline -->
+  <text x="80" y="1090" font-family="'Bricolage Grotesque', sans-serif" font-size="90" font-weight="800" fill="#F2F2F6">Três acabamentos.</text>
+  <text x="80" y="1180" font-family="'Bricolage Grotesque', sans-serif" font-size="90" font-weight="800" fill="#3E82F7">Uma escolha.</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="80" y="1276" width="96" height="30" rx="15" fill="#0F0F1C"/>
+  <text x="128" y="1297" font-family="'Inter', sans-serif" font-size="13" fill="#3E82F7" text-anchor="middle" font-weight="600">sb</text>
+  <text x="194" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="28" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="22" fill="#4A4A60" text-anchor="end">@smartbase.br</text>
+</svg>

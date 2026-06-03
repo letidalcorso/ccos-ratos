@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Drop Alert · 29/04</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --carbon: #0D0D0D;
+      --bone:   #F2EFE9;
+      --acid:   #CBF23D;
+      --press:  #8CA62D;
+      --slate:  #A6A4A1;
+      --bloom:  #F2C4CE;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header  { color: var(--acid); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .subhead { color: #444; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; }
+    .env     { color: var(--press); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+    .wrap  { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .label { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+
+    /* Preview 270×338 = 1080×1350 */
+    .slide {
+      width: 270px;
+      height: 338px;
+      background: var(--carbon);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Brand + counter */
+    .brand {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #2a2a2a;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+
+    /* Tag topo — Bloom como pill */
+    .pill {
+      position: absolute;
+      top: 42px; left: 14px;
+      background: var(--bloom);
+      padding: 2px 8px;
+      display: inline-block;
+    }
+    .pill span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--carbon);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+
+    /* Headline principal */
+    .headline {
+      position: absolute;
+      top: 76px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 46px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.84;
+      letter-spacing: -1px;
+    }
+
+    /* Linha divisória */
+    .rule {
+      position: absolute;
+      bottom: 82px; left: 14px; right: 14px;
+      height: 1px;
+      background: #1e1e1e;
+    }
+
+    /* Sub — detalhe em mono */
+    .sub {
+      position: absolute;
+      bottom: 48px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      line-height: 1.7;
+      letter-spacing: 1px;
+    }
+    .sub .bloom-txt {
+      color: var(--bloom);
+    }
+
+    /* CTA + logo */
+    .bottom {
+      position: absolute;
+      bottom: 14px; left: 14px; right: 14px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #333;
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 16px; color: #1a1a1a;
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Post Estático</div>
+<div class="subhead">29/04 · Takes fortes · 1080×1350px</div>
+<div class="env">/ENV-01 · CARBON + BLOOM TEXTO</div>
+
+<div class="wrap">
+  <div class="label">estático / takes</div>
+  <div class="slide">
+    <div class="brand">Gene Sneakers</div>
+    <div class="pill"><span>● drop alert</span></div>
+    <div class="headline">
+      QUEM<br>SABE O<br>QUE QUER<br>NÃO FICA<br>ESPERANDO<br>CHEGAR.
+    </div>
+    <div class="rule"></div>
+    <div class="sub">
+      <span class="bloom-txt">Colorway esgota.</span> Tamanho some.<br>A Gene tem agora.
+    </div>
+    <div class="bottom">
+      <div class="cta">Manda mensagem.</div>
+      <div class="logo">Gene</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

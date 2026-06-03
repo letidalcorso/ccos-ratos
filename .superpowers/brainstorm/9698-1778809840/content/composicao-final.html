@@ -1,0 +1,181 @@
+<h2>Composição final — frente da sacola</h2>
+<p class="subtitle">264×231mm · landscape · fundo #07070E</p>
+
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+
+  <!-- Mockup da sacola landscape -->
+  <div style="
+    position: relative;
+    width: 560px;
+    height: 440px;
+    background: #D4C9B8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+  ">
+    <!-- label -->
+    <div style="
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      color: #9A8E7E;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    ">Frente · conceito · 264×231mm</div>
+
+    <!-- Alças -->
+    <div style="
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 460px;
+      height: 60px;
+    ">
+      <div style="
+        position: absolute;
+        left: 120px;
+        top: 0;
+        width: 70px;
+        height: 55px;
+        border: 7px solid #2A2A3C;
+        border-bottom: none;
+        border-radius: 35px 35px 0 0;
+      "></div>
+      <div style="
+        position: absolute;
+        right: 120px;
+        top: 0;
+        width: 70px;
+        height: 55px;
+        border: 7px solid #2A2A3C;
+        border-bottom: none;
+        border-radius: 35px 35px 0 0;
+      "></div>
+    </div>
+
+    <!-- Sacola -->
+    <div style="
+      position: relative;
+      width: 460px;
+      height: 340px;
+      background: #07070E;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow:
+        -16px 0 30px rgba(0,0,0,0.4),
+        16px 0 30px rgba(0,0,0,0.2),
+        0 16px 40px rgba(0,0,0,0.35);
+      margin-top: 40px;
+    ">
+
+      <!-- Dobra topo -->
+      <div style="
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 20px;
+        background: linear-gradient(to bottom, #1E1E2E, transparent);
+        z-index: 10;
+      "></div>
+
+      <!-- Sombra lateral esquerda -->
+      <div style="
+        position: absolute;
+        top: 0; left: 0; bottom: 0;
+        width: 28px;
+        background: linear-gradient(to right, rgba(0,0,0,0.5), transparent);
+        z-index: 10;
+      "></div>
+
+      <!-- Sombra lateral direita -->
+      <div style="
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        width: 28px;
+        background: linear-gradient(to left, rgba(0,0,0,0.3), transparent);
+        z-index: 10;
+      "></div>
+
+      <!-- IMAGEM: close extremo da lente — saindo do canto direito -->
+      <svg style="position:absolute;top:0;left:0;width:100%;height:100%;" viewBox="0 0 460 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="lensClose" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0a0a14"/>
+            <stop offset="55%" stop-color="#060608"/>
+            <stop offset="100%" stop-color="#0C0C1A"/>
+          </radialGradient>
+          <radialGradient id="lensGlow" cx="38%" cy="38%" r="40%">
+            <stop offset="0%" stop-color="#1A1A2E" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#0a0a14" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Fade pra escuro no lado esquerdo — faz a lente "emergir" -->
+          <linearGradient id="fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#07070E" stop-opacity="1"/>
+            <stop offset="35%" stop-color="#07070E" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Lente principal enorme — centro deslocado pra direita -->
+        <circle cx="360" cy="170" r="230" fill="#0C0C18" stroke="#1A1A26" stroke-width="1.5"/>
+        <circle cx="360" cy="170" r="195" fill="url(#lensClose)" stroke="#121220" stroke-width="1"/>
+        <circle cx="360" cy="170" r="152" fill="#05050C" stroke="#0F0F1C" stroke-width="0.8"/>
+        <circle cx="360" cy="170" r="104" fill="#030308" stroke="#3E82F7" stroke-width="0.4" opacity="0.2"/>
+        <circle cx="360" cy="170" r="60" fill="#020205"/>
+        <circle cx="360" cy="170" r="28" fill="#010103"/>
+        <!-- Pupila -->
+        <circle cx="360" cy="170" r="10" fill="#000002"/>
+
+        <!-- Reflexo interno da lente — luz ambiente -->
+        <circle cx="326" cy="136" r="28" fill="url(#lensGlow)"/>
+        <circle cx="322" cy="132" r="8" fill="white" opacity="0.025"/>
+
+        <!-- Anel externo do módulo (aparece parcialmente) -->
+        <circle cx="360" cy="170" r="246" fill="none" stroke="#141420" stroke-width="2" opacity="0.6"/>
+
+        <!-- Fade lateral esquerdo — a lente emerge do preto -->
+        <rect x="0" y="0" width="460" height="340" fill="url(#fadeLeft)"/>
+      </svg>
+
+      <!-- WORDMARK — canto inferior esquerdo, sobre o fade escuro -->
+      <div style="
+        position: absolute;
+        bottom: 22px;
+        left: 32px;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 0;
+      ">
+        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:18px; font-weight:300; color:#7A7A96; letter-spacing:-0.3px;">smart</span>
+        <div style="width:5px;height:5px;background:#3E82F7;border-radius:50%;margin: 0 1px 2px;flex-shrink:0;"></div>
+        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:18px; font-weight:700; color:#F2F2F6; letter-spacing:-0.3px;">base</span>
+      </div>
+
+      <!-- Handle @smartbase.rs — canto inferior direito -->
+      <div style="
+        position: absolute;
+        bottom: 24px;
+        right: 36px;
+        z-index: 20;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        color: #3E3E5C;
+        letter-spacing: 1px;
+      ">@smartbase.rs</div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section" style="max-width:560px;margin:0 auto;">
+  <p class="subtitle" style="line-height:1.7;">
+    <strong style="color:#F2F2F6;">Lógica da composição:</strong> a lente emerge do escuro pelo lado direito, saindo do frame. O olhar vai direto pro detalhe — quem entende de câmera reconhece. Quem não entende, estranha (do bom jeito). O wordmark entra pequeno no canto inferior esquerdo, sobre o campo escuro, como assinatura. Sem tagline — a imagem faz o trabalho.
+  </p>
+</div>

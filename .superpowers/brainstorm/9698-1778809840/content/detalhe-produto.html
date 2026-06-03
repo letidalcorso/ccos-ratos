@@ -1,0 +1,123 @@
+<h2>Qual detalhe do iPhone vira a imagem?</h2>
+<p class="subtitle">O detalhe precisa ser reconhecível sem ser óbvio. Abstrato o suficiente pra ser desejável, específico o suficiente pra remeter ao produto.</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="camera" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Simulação do módulo de câmera visto de perto -->
+      <svg width="100%" height="100%" viewBox="0 0 320 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;">
+        <!-- módulo câmera quadrado com cantos arredondados -->
+        <rect x="90" y="25" width="140" height="120" rx="28" fill="#0D0D18" stroke="#1E1E2E" stroke-width="1"/>
+        <!-- lente principal -->
+        <circle cx="160" cy="72" r="36" fill="#080810" stroke="#252535" stroke-width="1.5"/>
+        <circle cx="160" cy="72" r="26" fill="#05050C" stroke="#1A1A28" stroke-width="1"/>
+        <circle cx="160" cy="72" r="14" fill="#020205" stroke="#3E82F7" stroke-width="0.4" opacity="0.4"/>
+        <circle cx="152" cy="64" r="4" fill="#2A2A3C" opacity="0.6"/>
+        <!-- segunda lente -->
+        <circle cx="118" cy="118" r="18" fill="#080810" stroke="#252535" stroke-width="1"/>
+        <circle cx="118" cy="118" r="11" fill="#05050C"/>
+        <!-- flash -->
+        <circle cx="202" cy="118" r="10" fill="#0F0F1C" stroke="#1E1E2E" stroke-width="0.8"/>
+        <circle cx="202" cy="118" r="4" fill="#1A1A28"/>
+        <!-- reflexo sutil -->
+        <circle cx="155" cy="67" r="5" fill="white" opacity="0.04"/>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>Módulo de câmera</h3>
+      <p>O detalhe mais icônico do iPhone atual. Em close, vira quase uma composição abstrata de círculos e vidro. Todo mundo reconhece — mas em preto e branco, com a escala certa, parece arte.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="borda" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Simulação de corte lateral/borda do iPhone — alumínio escovado -->
+      <svg width="100%" height="100%" viewBox="0 0 320 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;">
+        <!-- Borda lateral do iPhone em perspectiva — linhas finas de alumínio -->
+        <defs>
+          <linearGradient id="aluminum" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#07070E"/>
+            <stop offset="30%" stop-color="#1E1E2E"/>
+            <stop offset="50%" stop-color="#2A2A3C"/>
+            <stop offset="70%" stop-color="#1A1A28"/>
+            <stop offset="100%" stop-color="#07070E"/>
+          </linearGradient>
+        </defs>
+        <!-- Corpo do iPhone visto de lado -->
+        <rect x="80" y="20" width="160" height="130" rx="16" fill="#07070E" stroke="#1E1E2E" stroke-width="1"/>
+        <!-- Faixa de alumínio -->
+        <rect x="80" y="20" width="160" height="130" rx="16" fill="url(#aluminum)" opacity="0.6"/>
+        <!-- Botões laterais -->
+        <rect x="76" y="50" width="4" height="28" rx="2" fill="#1A1A28"/>
+        <rect x="76" y="86" width="4" height="20" rx="2" fill="#1A1A28"/>
+        <rect x="240" y="60" width="4" height="36" rx="2" fill="#1A1A28"/>
+        <!-- Reflexo de luz na borda -->
+        <rect x="100" y="20" width="80" height="2" rx="1" fill="white" opacity="0.05"/>
+        <!-- Linhas de escovação do alumínio -->
+        <line x1="80" y1="70" x2="240" y2="70" stroke="#252535" stroke-width="0.4" opacity="0.5"/>
+        <line x1="80" y1="90" x2="240" y2="90" stroke="#252535" stroke-width="0.4" opacity="0.4"/>
+        <line x1="80" y1="110" x2="240" y2="110" stroke="#252535" stroke-width="0.4" opacity="0.3"/>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>Borda / acabamento</h3>
+      <p>A lateral do iPhone — alumínio escovado, curvas cirúrgicas. Menos óbvio que a câmera, mais sofisticado. Remete a qualidade de material antes de remeter ao produto. Funciona bem em escala grande.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="tela" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Simulação de tela OLED com luz saindo — abstrata -->
+      <svg width="100%" height="100%" viewBox="0 0 320 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;">
+        <defs>
+          <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#3E82F7" stop-opacity="0.15"/>
+            <stop offset="60%" stop-color="#3E82F7" stop-opacity="0.03"/>
+            <stop offset="100%" stop-color="#07070E" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- Glow da tela -->
+        <rect x="0" y="0" width="320" height="170" fill="url(#screenGlow)"/>
+        <!-- Contorno do iPhone -->
+        <rect x="110" y="15" width="100" height="140" rx="18" fill="#05050C" stroke="#1E1E2E" stroke-width="1"/>
+        <!-- Dynamic island -->
+        <rect x="140" y="24" width="40" height="10" rx="5" fill="#07070E"/>
+        <!-- Tela com brilho -->
+        <rect x="112" y="36" width="96" height="116" rx="4" fill="#07070E"/>
+        <rect x="112" y="36" width="96" height="116" rx="4" fill="url(#screenGlow)" opacity="0.8"/>
+        <!-- Reflexo no vidro -->
+        <line x1="120" y1="36" x2="145" y2="60" stroke="white" stroke-width="0.5" opacity="0.04"/>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3>Tela / luz OLED</h3>
+      <p>O glow azulado da tela OLED no escuro — quase abstrato, cheio de atmosfera. Conecta com o azul da marca. A sacola parece iluminada por dentro. Mais emocional, menos técnico.</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENE SNEAKERS — LOCK-06 (canônico) — fundo Daylight (Bone) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="GENE SNEAKERS — Estilo nos pés.">
+  <defs>
+    <style>
+      .ink{fill:#0D0D0D}
+      .acid{fill:#CBF23D}
+      .stroke-ink{fill:none;stroke:#0D0D0D;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+      .tag{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:500;font-size:18px;letter-spacing:.22em;fill:#0D0D0D;text-anchor:middle}
+      .sub{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600;font-size:22px;letter-spacing:.42em;fill:#0D0D0D;text-anchor:middle}
+      .word{font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:900;font-size:176px;letter-spacing:.02em;fill:#0D0D0D;text-anchor:middle;text-transform:uppercase}
+    </style>
+  </defs>
+
+  <rect width="800" height="800" fill="#F2EFE9"/>
+
+  <g transform="translate(400 210)">
+    <path class="stroke-ink" d="M -48 -140 C -48 -112, 48 -112, 48 -84 C 48 -56, -48 -56, -48 -28 C -48 0, 48 0, 48 28 C 48 56, -48 56, -48 84 C -48 112, 48 112, 48 140"/>
+    <path class="stroke-ink" d="M 48 -140 C 48 -112, -48 -112, -48 -84 C -48 -56, 48 -56, 48 -28 C 48 0, -48 0, -48 28 C -48 56, 48 56, 48 84 C 48 112, -48 112, -48 140"/>
+    <path class="stroke-ink" d="M -24 -140 C -24 -112, 24 -112, 24 -84 C 24 -56, -24 -56, -24 -28 C -24 0, 24 0, 24 28 C 24 56, -24 56, -24 84 C -24 112, 24 112, 24 140"/>
+    <path class="stroke-ink" d="M 24 -140 C 24 -112, -24 -112, -24 -84 C -24 -56, 24 -56, 24 -28 C 24 0, -24 0, -24 28 C -24 56, 24 56, 24 84 C 24 112, -24 112, -24 140"/>
+    <circle class="acid" cx="0" cy="-140" r="6"/>
+    <circle class="acid" cx="0" cy="-84"  r="6"/>
+    <circle class="acid" cx="0" cy="-28"  r="6"/>
+    <circle class="acid" cx="0" cy="0"    r="6"/>
+    <circle class="acid" cx="0" cy="28"   r="6"/>
+    <circle class="acid" cx="0" cy="84"   r="6"/>
+    <circle class="acid" cx="0" cy="140"  r="6"/>
+  </g>
+
+  <g transform="translate(400 470)">
+    <text class="word" x="0" y="0">GENE</text>
+    <line x1="-210" y1="-46" x2="210" y2="-46" stroke="#CBF23D" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <text class="sub" x="400" y="540">SNEAKERS</text>
+
+  <line x1="260" y1="640" x2="540" y2="640" stroke="#CBF23D" stroke-width="1.5"/>
+  <text class="tag" x="400" y="685">.ESTILO.NOS.PÉS.</text>
+</svg>

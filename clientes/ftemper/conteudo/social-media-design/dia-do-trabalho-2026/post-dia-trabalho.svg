@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap');
+    </style>
+
+    <!-- Overlay escuro sobre a foto: Azul Noturno → Royal -->
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#03174F" stop-opacity="0.82"/>
+      <stop offset="55%"  stop-color="#005AD4" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#1A00B8" stop-opacity="0.88"/>
+    </linearGradient>
+
+    <clipPath id="canvas">
+      <rect width="1080" height="1350"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#canvas)">
+
+    <!-- ===== FOTO DE FUNDO ===== -->
+    <!-- Foto da pessoa de costas olhando para o produto -->
+    <!-- Centralizada e expandida para cobrir o canvas 4:5 -->
+    <image
+      href="foto-fundo.jpg"
+      x="-180" y="100"
+      width="1440" height="960"
+      preserveAspectRatio="xMidYMid slice"/>
+
+    <!-- ===== OVERLAY AZUL SOBRE A FOTO (Padrão 1 da marca) ===== -->
+    <rect width="1080" height="1350" fill="url(#overlay)"/>
+
+    <!-- Reforço escuro no topo para leitura do logo e tag -->
+    <rect width="1080" height="200" fill="#03174F" opacity="0.35"/>
+
+    <!-- Reforço escuro no rodapé para leitura do texto final -->
+    <rect x="0" y="1150" width="1080" height="200" fill="#03174F" opacity="0.40"/>
+
+
+    <!-- ===== TOP BAR ===== -->
+    <!-- FTEMPER wordmark — top right -->
+    <text
+      x="1000" y="116"
+      text-anchor="end"
+      font-family="Impact, 'Arial Narrow', Arial, sans-serif"
+      font-weight="900"
+      font-size="38"
+      fill="white"
+      letter-spacing="10"
+      opacity="0.95">FTEMPER</text>
+
+    <!-- Top divider -->
+    <line x1="80" y1="140" x2="1000" y2="140"
+          stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+
+    <!-- ===== TAG PILL — 1º DE MAIO ===== -->
+    <rect x="80" y="195" width="232" height="50" rx="25"
+          fill="white" opacity="1"/>
+    <text
+      x="196" y="228"
+      text-anchor="middle"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="700"
+      font-size="19"
+      fill="#005AD4"
+      letter-spacing="4">1º DE MAIO</text>
+
+
+    <!-- ===== HEADLINE ===== -->
+    <text
+      x="80" y="450"
+      font-family="Impact, 'Arial Narrow', Arial, sans-serif"
+      font-weight="900"
+      font-size="168"
+      fill="white"
+      letter-spacing="-2">QUEM FAZ</text>
+
+    <text
+      x="80" y="607"
+      font-family="Impact, 'Arial Narrow', Arial, sans-serif"
+      font-weight="900"
+      font-size="168"
+      fill="white"
+      letter-spacing="-2">A OBRA</text>
+
+    <text
+      x="80" y="764"
+      font-family="Impact, 'Arial Narrow', Arial, sans-serif"
+      font-weight="900"
+      font-size="168"
+      fill="white"
+      letter-spacing="-2">EXISTIR.</text>
+
+
+    <!-- ===== DIVIDER ===== -->
+    <line x1="80" y1="810" x2="1000" y2="810"
+          stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+
+    <!-- ===== BODY TEXT ===== -->
+    <!-- Parágrafo 1 -->
+    <text x="80" y="864"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="300" font-size="27" fill="rgba(255,255,255,0.88)">Para o serralheiro que resolve antes</text>
+    <text x="80" y="904"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="300" font-size="27" fill="rgba(255,255,255,0.88)">mesmo do cliente ligar.</text>
+
+    <!-- Parágrafo 2 -->
+    <text x="80" y="962"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="300" font-size="27" fill="rgba(255,255,255,0.88)">Para o vidraceiro que instala com</text>
+    <text x="80" y="1002"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="300" font-size="27" fill="rgba(255,255,255,0.88)">precisão e sem retrabalho.</text>
+
+    <!-- Parágrafo 3 -->
+    <text x="80" y="1060"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="300" font-size="27" fill="rgba(255,255,255,0.88)">Para cada colaborador da Ftemper</text>
+    <text x="80" y="1100"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="300" font-size="27" fill="rgba(255,255,255,0.88)">que entrega antes do prazo.</text>
+
+    <!-- Linha de fechamento -->
+    <text x="80" y="1158"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="300" font-size="26" fill="rgba(255,255,255,0.65)">O trabalho real sustenta o que fica de pé.</text>
+
+
+    <!-- ===== BOTTOM DIVIDER ===== -->
+    <line x1="80" y1="1200" x2="1000" y2="1200"
+          stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+
+    <!-- ===== FECHAMENTO ===== -->
+    <text
+      x="80" y="1262"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="600"
+      font-size="26"
+      fill="white">Feliz 1º de Maio, Ftemper, sua parceira de confiança.</text>
+
+    <!-- Handle — rodapé direita -->
+    <text
+      x="1000" y="1306"
+      text-anchor="end"
+      font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+      font-weight="400"
+      font-size="21"
+      fill="rgba(255,255,255,0.45)"
+      letter-spacing="0.5">@ftempercomponentes</text>
+
+  </g>
+</svg>

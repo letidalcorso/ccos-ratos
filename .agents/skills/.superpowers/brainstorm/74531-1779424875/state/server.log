@@ -1,0 +1,13 @@
+{"type":"server-started","port":58656,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:58656","screen_dir":"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/clientes/smartbase/.superpowers/brainstorm/74531-1779424875/content","state_dir":"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/clientes/smartbase/.superpowers/brainstorm/74531-1779424875/state"}
+{"type":"screen-added","file":"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/clientes/smartbase/.superpowers/brainstorm/74531-1779424875/content/inicio.html"}
+{"type":"screen-updated","file":"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/clientes/smartbase/.superpowers/brainstorm/74531-1779424875/content/inicio.html"}
+{"type":"screen-updated","file":"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/clientes/smartbase/.superpowers/brainstorm/74531-1779424875/content/inicio.html"}
+{"source":"user-event","type":"click","text":"A\n    \n      Criativos dos anúncios\n      Visual e copy do Ad B (preço explícito) e Ad A (controle). Fechar o que vai no ar.","choice":"criativos","id":null,"timestamp":1779424903626}
+{"source":"user-event","type":"click","text":"A\n    \n      Criativos dos anúncios\n      Visual e copy do Ad B (preço explícito) e Ad A (controle). Fechar o que vai no ar.","choice":"criativos","id":null,"timestamp":1779424905047}
+{"source":"user-event","type":"click","text":"B\n    \n      Estratégia de campanha\n      Revisar ou ajustar o plano: objetivo, segmentação, budget, estrutura de adsets.","choice":"estrategia","id":null,"timestamp":1779424914145}
+{"source":"user-event","type":"click","text":"C\n    \n      Conteúdo orgânico\n      Posts de prova social, escassez real, feed do Instagram. Antes de ligar os ads.","choice":"conteudo","id":null,"timestamp":1779424916415}
+{"source":"user-event","type":"click","text":"D\n    \n      Outro\n      Tem outra coisa em mente que não está aqui.","choice":"outro","id":null,"timestamp":1779424917341}
+{"source":"user-event","type":"click","text":"D\n    \n      Outro\n      Tem outra coisa em mente que não está aqui.","choice":"outro","id":null,"timestamp":1779424921230}
+{"source":"user-event","type":"click","text":"D\n    \n      Outro\n      Tem outra coisa em mente que não está aqui.","choice":"outro","id":null,"timestamp":1779424921352}
+{"source":"user-event","type":"click","text":"B\n    \n      Estratégia de campanha\n      Revisar ou ajustar o plano: objetivo, segmentação, budget, estrutura de adsets.","choice":"estrategia","id":null,"timestamp":1779424936516}
+{"type":"server-stopped","reason":"idle timeout"}

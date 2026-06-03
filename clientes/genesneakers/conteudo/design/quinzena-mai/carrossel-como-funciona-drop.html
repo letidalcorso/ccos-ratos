@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Como funciona um drop · 06/05</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --carbon: #0D0D0D;
+      --bone:   #F2EFE9;
+      --acid:   #CBF23D;
+      --press:  #8CA62D;
+      --slate:  #A6A4A1;
+      --chrome-bg:  #1C1C1E;
+      --chrome-mid: #2C2C2E;
+      --chrome-hi:  #3A3A3C;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header  { color: var(--acid); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .subhead { color: #444; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; }
+    .env     { color: var(--press); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+    .grid  { display: flex; gap: 24px; flex-wrap: wrap; }
+    .wrap  { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .label { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+
+    .slide {
+      width: 270px;
+      height: 338px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--chrome-bg);
+    }
+
+    .brand {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #3a3a3a;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .counter {
+      position: absolute;
+      top: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #3a3a3a;
+      letter-spacing: 2px;
+    }
+
+    /* ── Slide 1 — Capa ── */
+    .s1-tag {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s1-h {
+      position: absolute;
+      top: 68px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 58px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.84;
+      letter-spacing: -1px;
+    }
+    .s1-rule {
+      position: absolute;
+      bottom: 72px; left: 14px; right: 14px;
+      height: 1px; background: var(--chrome-hi);
+    }
+    .s1-body {
+      position: absolute;
+      bottom: 28px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      line-height: 1.7; letter-spacing: 0.5px;
+    }
+
+    /* ── Slide 2 — Contexto ── */
+    .s2-tag {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s2-h {
+      position: absolute;
+      top: 68px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 44px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.86;
+      letter-spacing: -0.5px;
+    }
+    .s2-rule {
+      position: absolute;
+      bottom: 90px; left: 14px; right: 14px;
+      height: 1px; background: var(--chrome-hi);
+    }
+    .s2-body {
+      position: absolute;
+      bottom: 28px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      line-height: 1.7; letter-spacing: 0.5px;
+    }
+
+    /* ── Slide 3 — CTA ── */
+    .s3-tag {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s3-h {
+      position: absolute;
+      top: 68px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 38px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.86;
+      letter-spacing: -0.5px;
+    }
+    .s3-h .acid { color: var(--acid); }
+    .s3-bottom {
+      position: absolute;
+      bottom: 14px; left: 14px; right: 14px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .s3-cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .s3-logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 16px; color: #3a3a3a;
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Carrossel</div>
+<div class="subhead">06/05 · Cultura · Como funciona um drop · 3 slides · 1080×1350px</div>
+<div class="env">/ENV-05 · CHROME — cultura, sistema, acesso</div>
+
+<div class="grid">
+
+  <!-- Slide 1 — Capa -->
+  <div class="wrap">
+    <div class="label">01 / capa</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">1/3</div>
+      <div class="s1-tag">/cultura</div>
+      <div class="s1-h">ISSO<br>É UM<br>DROP.</div>
+      <div class="s1-rule"></div>
+      <div class="s1-body">Lote limitado. Data marcada.<br>Todo mundo quer.</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 — Contexto -->
+  <div class="wrap">
+    <div class="label">02 / contexto</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">2/3</div>
+      <div class="s2-tag">/sistema</div>
+      <div class="s2-h">O BR<br>FICA DE<br>FORA.</div>
+      <div class="s2-rule"></div>
+      <div class="s2-body">A Nike libera nos EUA, Europa, Japão.<br>Brasil depois — se tiver.<br>Ou você paga o dobro na revenda.</div>
+    </div>
+  </div>
+
+  <!-- Slide 3 — CTA -->
+  <div class="wrap">
+    <div class="label">03 / cta</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">3/3</div>
+      <div class="s3-tag">/acesso</div>
+      <div class="s3-h">A GENE<br>CORTA<br>ESSE<br><span class="acid">CAMINHO.</span></div>
+      <div class="s3-bottom">
+        <div class="s3-cta">Encomenda aberta. Manda mensagem.</div>
+        <div class="s3-logo">Gene</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

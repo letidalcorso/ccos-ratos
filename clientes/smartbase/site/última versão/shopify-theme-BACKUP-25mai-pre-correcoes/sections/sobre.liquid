@@ -1,0 +1,52 @@
+<section id="sobre" class="sb-section">
+  <div class="sb-container">
+    <div class="sb-sobre__inner">
+      <div class="sb-sobre__ghost" aria-hidden="true">sb</div>
+      <div class="sb-sobre__content">
+        <span class="sb-badge">{{ section.settings.badge }}</span>
+        <p class="sb-sobre__text">{{ section.settings.text }}</p>
+        <p class="sb-sobre__location">
+          {{ section.settings.location_text }} ·
+          <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener">{{ section.settings.contact_link_text }}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sobre",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "sobre"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto institucional",
+      "default": "o apple certo pra você raramente é o mais caro. a smartbase recomenda com base nas suas necessidades: produto, garantia e aparelho antigo como entrada na mesma conversa. novo ou seminovo, o que fizer mais sentido."
+    },
+    {
+      "type": "text",
+      "id": "location_text",
+      "label": "Texto de localização",
+      "default": "caxias do sul, rs"
+    },
+    {
+      "type": "text",
+      "id": "contact_link_text",
+      "label": "Texto do link de contato",
+      "default": "fale com a gente"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sobre"
+    }
+  ]
+}
+{% endschema %}

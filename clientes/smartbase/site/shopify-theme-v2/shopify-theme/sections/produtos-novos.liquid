@@ -1,0 +1,134 @@
+<section id="novos" class="sb-section">
+  <div class="sb-container">
+
+    <div class="sb-section-header">
+      <span class="sb-badge">{{ section.settings.badge }}</span>
+      <h2>{{ section.settings.heading }} <span class="sb-blue">{{ section.settings.heading_blue }}</span></h2>
+    </div>
+
+    {% if section.settings.garantia_text != blank %}
+      <div class="sb-novos__garantia">
+        <p class="sb-novos__garantia-text">{{ section.settings.garantia_text }}</p>
+      </div>
+    {% endif %}
+
+    <div class="sb-novos__grid">
+      {% for block in section.blocks %}
+        {% assign wa_msg = block.settings.wa_message | url_encode %}
+        <a href="https://wa.me/{{ settings.whatsapp_number }}?text={{ wa_msg }}" target="_blank" rel="noopener" class="sb-produto-card" {{ block.shopify_attributes }}>
+          <div class="sb-produto-card__title">{{ block.settings.title }}</div>
+          <p class="sb-produto-card__desc">{{ block.settings.desc }}</p>
+          <span class="sb-produto-card__link">{{ block.settings.link_text }}</span>
+        </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Produtos novos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "novos · sob encomenda"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "aparelho novo,"
+    },
+    {
+      "type": "text",
+      "id": "heading_blue",
+      "label": "Título — parte azul",
+      "default": "garantia do primeiro dia."
+    },
+    {
+      "type": "textarea",
+      "id": "garantia_text",
+      "label": "Texto de garantia (deixe em branco para ocultar)",
+      "default": "por que sob encomenda? a garantia Apple começa da data de saída da fábrica, não da ativação. aparelho parado em estoque perde cobertura antes de chegar na sua mão. trabalhando por encomenda, você recebe com a garantia completa em dia."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "produto",
+      "name": "Card de produto",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nome do produto",
+          "default": "iPhone"
+        },
+        {
+          "type": "textarea",
+          "id": "desc",
+          "label": "Descrição",
+          "default": "iPhone 17 e 17 Pro. garantia Apple, importado, entregue direto pra você."
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Texto do link",
+          "default": "fazer pedido →"
+        },
+        {
+          "type": "text",
+          "id": "wa_message",
+          "label": "Mensagem WhatsApp",
+          "default": "quero fazer um pedido"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Produtos novos",
+      "blocks": [
+        {
+          "type": "produto",
+          "settings": {
+            "title": "iPhone",
+            "desc": "iPhone 17 e 17 Pro. garantia Apple, importado, entregue direto pra você.",
+            "link_text": "fazer pedido →",
+            "wa_message": "quero fazer um pedido de iPhone"
+          }
+        },
+        {
+          "type": "produto",
+          "settings": {
+            "title": "Mac",
+            "desc": "MacBook Air e Pro. pra quem trabalha com Apple e não aceita menos.",
+            "link_text": "fazer pedido →",
+            "wa_message": "quero fazer um pedido de Mac"
+          }
+        },
+        {
+          "type": "produto",
+          "settings": {
+            "title": "iPad",
+            "desc": "iPad e iPad Pro. performance e mobilidade, sem abrir mão da qualidade apple.",
+            "link_text": "fazer pedido →",
+            "wa_message": "quero fazer um pedido de iPad"
+          }
+        },
+        {
+          "type": "produto",
+          "settings": {
+            "title": "acessórios",
+            "desc": "AirPods, Apple Watch, cabos e mais. tudo original, sem enrolação.",
+            "link_text": "ver disponibilidade →",
+            "wa_message": "quero ver os acessórios disponíveis"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

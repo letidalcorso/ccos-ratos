@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#0D0D0D"/>
+  
+  <g transform="translate(540,560)">
+    <path d="M 0,120 C -10,100 -180,20 -180,-80
+             C -180,-200 -90,-230 0,-110
+             C 90,-230 180,-200 180,-80
+             C 180,20 10,100 0,120 Z"
+      fill="#CBF23D"/>
+  </g>
+</svg>

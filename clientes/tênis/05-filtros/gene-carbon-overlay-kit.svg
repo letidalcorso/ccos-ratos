@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · CARBON Overlay Kit (Figma)
+
+    MOOD: noturno, dramático, denso. Série ORIGEM, hero noturno, arquivo.
+
+    Como usar no Figma:
+    1. File → Import... → selecione este SVG
+    2. Posicione o grupo POR CIMA da sua foto
+    3. Configure o blend mode de cada layer manualmente após importar
+
+    Ordem dos layers (de baixo pra cima) + blend mode a aplicar:
+    ──────────────────────────────────────────────────────
+    Layer 01 · shadow-crush-multiply       → MULTIPLY · 45%
+    Layer 02 · cool-wash-softlight         → SOFT LIGHT · 55%
+    Layer 03 · carbon-midtones-multiply    → MULTIPLY · 35%
+    Layer 04 · heavy-vignette-multiply     → MULTIPLY · 70%
+    (grain texture separada · gene-grain-texture.png · Overlay 35%)
+    ──────────────────────────────────────────────────────
+  -->
+
+  <defs>
+    <radialGradient id="carbonVignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="0.85"/>
+    </radialGradient>
+  </defs>
+
+  <!-- LAYER 01 · Shadow crush (Multiply 45%) -->
+  <g id="shadow-crush-multiply" opacity="0.45">
+    <rect width="1080" height="1350" fill="#1A1A1E"/>
+  </g>
+
+  <!-- LAYER 02 · Cool wash (Soft Light 55%) -->
+  <g id="cool-wash-softlight" opacity="0.55">
+    <rect width="1080" height="1350" fill="#2A3040"/>
+  </g>
+
+  <!-- LAYER 03 · Carbon midtones (Multiply 35%) -->
+  <g id="carbon-midtones-multiply" opacity="0.35">
+    <rect width="1080" height="1350" fill="#3A3A42"/>
+  </g>
+
+  <!-- LAYER 04 · Heavy vignette (Multiply 70%) -->
+  <g id="heavy-vignette-multiply" opacity="0.7">
+    <rect width="1080" height="1350" fill="url(#carbonVignette)"/>
+  </g>
+
+  <!-- GUIDE (remover após configurar) -->
+  <g id="GUIDE-REMOVER-DEPOIS" opacity="0.8">
+    <rect x="40" y="40" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="92" font-family="'IBM Plex Mono',monospace" font-weight="500" font-size="28" fill="#C4FF3C" letter-spacing="0.1em">GENE · CARBON OVERLAY KIT</text>
+    <rect x="40" y="1230" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="1260" font-family="'IBM Plex Mono',monospace" font-size="16" fill="#F2EFE9">1. mult 45%  ·  2. soft light 55%  ·  3. mult 35%  ·  4. mult 70%</text>
+    <text x="60" y="1285" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">mood: noturno · dramático · arquivo · série ORIGEM</text>
+    <text x="60" y="1305" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">grain separado (Overlay 35%) · delete guide antes de usar</text>
+  </g>
+</svg>

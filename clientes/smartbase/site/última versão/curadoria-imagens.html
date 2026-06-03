@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curadoria de imagens — Smartbase</title>
+<style>
+  :root{
+    --bg:#07070E; --surface:#0F0F1C; --surface-2:#15152A;
+    --blue:#3E82F7; --white:#F2F2F6; --gray:#7A7A96;
+    --line:#1E1E2E; --red:#F7544E; --amber:#F7A93E; --green:#10B981;
+    --purple:#8B5CF6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);color:var(--white);
+    font-family:-apple-system,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
+    line-height:1.55;padding:64px 24px;
+  }
+  .wrap{max-width:880px;margin:0 auto}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:14px}
+  h1{font-size:clamp(30px,5vw,46px);font-weight:800;line-height:1.08;letter-spacing:-.02em;margin-bottom:16px}
+  h1 .dot{color:var(--blue)}
+  .lede{color:var(--gray);font-size:16px;max-width:620px;margin-bottom:8px}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);font-weight:700;
+     margin:56px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  h3{font-size:19px;font-weight:700;margin-bottom:6px}
+  p{margin-bottom:12px}
+  .grid-pad{padding:0 0 4px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:14px}
+  .std{display:flex;gap:18px;flex-wrap:wrap;margin-top:6px}
+  .std-item{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .std-item .t{font-weight:700;font-size:14px;margin-bottom:4px}
+  .std-item .d{color:var(--gray);font-size:13px}
+  .std-item .ic{font-size:18px;margin-bottom:8px}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px}
+  thead th{text-align:left;color:var(--gray);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+           font-weight:700;padding:8px 10px;border-bottom:1px solid var(--line)}
+  tbody td{padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  .slot{font-weight:700;color:var(--white);white-space:nowrap}
+  .now{color:var(--gray)}
+  .becomes{color:var(--white)}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+       padding:3px 8px;border-radius:6px;margin-bottom:6px}
+  .tag.err{background:rgba(247,84,78,.12);color:var(--red);border:1px solid rgba(247,84,78,.35)}
+  .tag.fix{background:rgba(247,169,62,.12);color:var(--amber);border:1px solid rgba(247,169,62,.35)}
+  .tag.add{background:rgba(62,130,247,.12);color:var(--blue);border:1px solid rgba(62,130,247,.35)}
+  .tag.ok{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.35)}
+  .page-label{display:inline-block;background:var(--surface-2);border:1px solid var(--line);
+              border-radius:8px;padding:5px 12px;font-size:12px;color:var(--gray);
+              font-family:"SF Mono",ui-monospace,monospace;margin-bottom:4px}
+  .note{border-left:3px solid var(--blue);background:rgba(62,130,247,.05);
+        border-radius:0 10px 10px 0;padding:16px 20px;margin:14px 0}
+  .note.green{border-color:var(--green);background:rgba(16,185,129,.05)}
+  .note .nt{font-weight:700;font-size:13px;margin-bottom:6px}
+  .note p{color:var(--gray);font-size:13.5px;margin:0}
+  .note p strong{color:var(--white);font-weight:600}
+  ol,ul{margin:6px 0 12px 20px;color:var(--gray);font-size:13.5px}
+  li{margin-bottom:6px}
+  li strong{color:var(--white);font-weight:600}
+  .foot{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+        color:var(--gray);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .wm{font-weight:300;color:var(--gray)}
+  .wm b{font-weight:700;color:var(--white)}
+  .wm .d{color:var(--blue)}
+  code{font-family:"SF Mono",ui-monospace,monospace;font-size:12px;background:var(--surface-2);
+       padding:2px 6px;border-radius:5px;color:#A9C4FF}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="kicker">Smartbase · finalização do site</div>
+  <h1>Curadoria de imagens<span class="dot">.</span></h1>
+  <p class="lede">Mapa de toda imagem do site: o que está errado hoje, o que entra no lugar e sob qual padrão. Um site que vende Apple não pode parecer feito de pedaços soltos.</p>
+
+  <!-- ───────── O PADRÃO ───────── -->
+  <h2>1 · O padrão — uma régua só</h2>
+  <p style="color:var(--gray);font-size:14px">Hoje o site tem 3 linguagens visuais brigando entre si: render de terceiro com texto cravado, render de fundo branco e foto amadora. Tudo passa a seguir isto:</p>
+  <div class="std">
+    <div class="std-item">
+      <div class="ic">🎯</div>
+      <div class="t">Fonte</div>
+      <div class="d">Renders oficiais Apple (apple.com/br). Fidelidade máxima, geração certa, custo zero. Seminovos podem usar foto real tratada.</div>
+    </div>
+    <div class="std-item">
+      <div class="ic">◼︎</div>
+      <div class="t">Fundo</div>
+      <div class="d">Produto recortado (PNG transparente) sobre o dark <code>#07070E</code> do site. Nada de quadrado branco flutuando.</div>
+    </div>
+    <div class="std-item">
+      <div class="ic">✦</div>
+      <div class="t">Tratamento</div>
+      <div class="d">Sombra azulada sutil, produto centralizado, mesmo respiro em todos os cards. Profundidade sem poluir.</div>
+    </div>
+  </div>
+  <div class="note">
+    <div class="nt">Hero é exceção</div>
+    <p>O hero pede uma imagem mais atmosférica e cinematográfica — close dramático do iPhone 17 Pro <strong>sem texto cravado</strong>. O texto "iPhone 17 PRO" dentro da imagem atual trava o headline e dá cara de banner de atacado. A headline é do site, não da foto.</p>
+  </div>
+
+  <!-- ───────── ALERTA ───────── -->
+  <h2>2 · Alerta — o que está errado de fato</h2>
+  <div class="card">
+    <p style="font-size:14px;margin-bottom:14px"><strong style="color:var(--red)">As fotos de produto não são da geração certa.</strong> Pra um especialista em Apple, isso é risco de credibilidade — o cliente reconhece na hora.</p>
+    <ul style="font-size:13.5px">
+      <li><strong>iPhone 17 Pro Max</strong> — o card mostra um iPhone <em>sem</em> a barra de câmera horizontal. Ou seja, não é um Pro. Erro visível.</li>
+      <li><strong>iPhone 17 / 17 Air</strong> — as imagens são de iPhone 16 (cor e câmera de geração anterior). Verde e rosa nem existem na linha 17.</li>
+      <li><strong>MacBook Air</strong> — o site diz chip <strong>M4</strong>. O atual é <strong>M5</strong>. Texto desatualizado.</li>
+      <li><strong>Apple Watch Series 10</strong> — o atual é <strong>Series 11</strong>. Nome desatualizado.</li>
+      <li><strong>Mac, parte dos Watch e AirPods</strong> — não têm foto nenhuma, só ícone de linha. O site está visualmente incompleto.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <div class="nt">Linha Apple atual — referência da curadoria</div>
+    <p><strong>iPhone 17:</strong> Lavender, Sage, Mist Blue, White, Black · <strong>iPhone 17 Air:</strong> Sky Blue, Light Gold, Cloud White, Space Black (5,6 mm, o mais fino de todos) · <strong>iPhone 17 Pro / Pro Max:</strong> Cosmic Orange, Deep Blue, Silver — barra de câmera horizontal, alumínio unibody.</p>
+  </div>
+
+  <!-- ───────── SLOT A SLOT ───────── -->
+  <h2>3 · Slot a slot</h2>
+
+  <div class="page-label">index.html · home</div>
+  <table>
+    <thead><tr><th>Slot</th><th>Hoje</th><th>Vira</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="slot">Hero</td>
+        <td class="now"><span class="tag fix">trocar</span><br>Render laranja com "iPhone 17 PRO" cravado na imagem.</td>
+        <td class="becomes">Close cinematográfico do <strong>iPhone 17 Pro Cosmic Orange</strong>, render oficial, <strong>sem texto</strong>. Full-bleed com gradiente dark por cima pro headline respirar.</td>
+      </tr>
+      <tr>
+        <td class="slot">Card "novos"</td>
+        <td class="now"><span class="tag err">geração errada</span><br>iPhone verde (linha 16).</td>
+        <td class="becomes">Render oficial <strong>iPhone 17</strong> (Sage ou Mist Blue), frente + verso, recortado no dark.</td>
+      </tr>
+      <tr>
+        <td class="slot">Card "seminovos"</td>
+        <td class="now"><span class="tag fix">qualidade baixa</span><br>Foto amadora do 14 Pro — baixa resolução, recorte torto.</td>
+        <td class="becomes">Render oficial do modelo <strong>ou</strong> foto real tratada do estoque (ver recomendação no fim).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-label" style="margin-top:26px">produtos.html · catálogo</div>
+  <table>
+    <thead><tr><th>Slot</th><th>Hoje</th><th>Vira</th></tr></thead>
+    <tbody>
+      <tr><td class="slot">iPhone 17 Pro</td><td class="now"><span class="tag fix">limpar</span><br>Ok, mas com texto cravado.</td><td class="becomes">Render oficial <strong>iPhone 17 Pro</strong>, Cosmic Orange, limpo.</td></tr>
+      <tr><td class="slot">iPhone 17 Pro Max</td><td class="now"><span class="tag err">erro grave</span><br>Mostra um iPhone que não é Pro.</td><td class="becomes">Render oficial <strong>iPhone 17 Pro Max</strong>, Deep Blue, com a barra de câmera horizontal visível.</td></tr>
+      <tr><td class="slot">iPhone 17</td><td class="now"><span class="tag err">geração errada</span><br>iPhone 16 verde.</td><td class="becomes">Render oficial <strong>iPhone 17</strong>, Sage.</td></tr>
+      <tr><td class="slot">iPhone 17 Air</td><td class="now"><span class="tag err">geração errada</span><br>iPhone rosa, foto de perfil.</td><td class="becomes">Render oficial <strong>iPhone 17 Air</strong>, Sky Blue — vale o ângulo de perfil pra mostrar os 5,6 mm.</td></tr>
+      <tr><td class="slot">MacBook Air 13"</td><td class="now"><span class="tag add">sem foto</span><br>Só ícone de linha.</td><td class="becomes">Render oficial <strong>MacBook Air M5 13"</strong>. <em>Atualizar o texto: M4 → M5.</em></td></tr>
+      <tr><td class="slot">MacBook Air 15"</td><td class="now"><span class="tag add">sem foto</span><br>Só ícone de linha.</td><td class="becomes">Render oficial <strong>MacBook Air M5 15"</strong>. <em>Atualizar o texto: M4 → M5.</em></td></tr>
+      <tr><td class="slot">MacBook Pro 14"</td><td class="now"><span class="tag add">sem foto</span><br>Só ícone de linha.</td><td class="becomes">Render oficial <strong>MacBook Pro 14"</strong>, Space Black.</td></tr>
+      <tr><td class="slot">Apple Watch Ultra 3</td><td class="now"><span class="tag ok">manter</span><br>Imagem ok, dentro do padrão.</td><td class="becomes">Mantém ou render oficial <strong>Ultra 3</strong> em alta.</td></tr>
+      <tr><td class="slot">Apple Watch Series 10</td><td class="now"><span class="tag err">nome errado</span><br>Sem foto + nome desatualizado.</td><td class="becomes">Render oficial <strong>Apple Watch Series 11</strong>. <em>Atualizar o nome: Series 10 → 11.</em></td></tr>
+      <tr><td class="slot">AirPods Pro</td><td class="now"><span class="tag add">sem foto</span><br>Só ícone de linha.</td><td class="becomes">Render oficial <strong>AirPods Pro</strong> (conferir geração vigente no nome).</td></tr>
+      <tr><td class="slot">AirPods 4</td><td class="now"><span class="tag add">sem foto</span><br>Só ícone de linha.</td><td class="becomes">Render oficial <strong>AirPods 4</strong>.</td></tr>
+      <tr><td class="slot">Seminovo · iPhone 14 Pro Max</td><td class="now"><span class="tag fix">qualidade baixa</span><br>Foto amadora.</td><td class="becomes">Render oficial do modelo <strong>ou</strong> foto real tratada.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-label" style="margin-top:26px">seminovos.html · estoque</div>
+  <table>
+    <thead><tr><th>Slot</th><th>Hoje</th><th>Vira</th></tr></thead>
+    <tbody>
+      <tr><td class="slot">Cards de produto (2)</td><td class="now"><span class="tag fix">padronizar</span><br>Imagens fora da régua.</td><td class="becomes">Mesma régua: render oficial do modelo ou foto real tratada, recortado no dark.</td></tr>
+    </tbody>
+  </table>
+
+  <!-- ───────── SEMINOVOS ───────── -->
+  <h2>4 · Recomendação — seminovos</h2>
+  <div class="note green">
+    <div class="nt">Aqui foto real ganha do render</div>
+    <p>Render oficial mostra o <strong>modelo</strong>, mas não a <strong>condição</strong> — e seminovo se vende pela condição. O ideal: a Smartbase fotografar o estoque real com um padrão simples (fundo escuro, luz lateral, 3 ângulos). Isso vira <strong>diferencial de confiança</strong>, não custo. Render oficial fica como plano B até existir foto própria.</p>
+  </div>
+
+  <!-- ───────── SPECS ───────── -->
+  <h2>5 · Specs e próximo passo</h2>
+  <div class="card">
+    <h3>Specs técnicas</h3>
+    <ul style="margin-top:8px">
+      <li><strong>Cards de produto:</strong> PNG transparente, ~1200 px de largura, produto ocupando ~80% do frame.</li>
+      <li><strong>Hero:</strong> JPG alta qualidade, ~2000 px de largura.</li>
+      <li><strong>Nomes de arquivo:</strong> mantenho os nomes atuais (<code>img/iphone17-novos.jpg</code> etc.) — assim o HTML já aponta certo e é só substituir o arquivo.</li>
+    </ul>
+    <h3 style="margin-top:18px">Como as imagens chegam no site</h3>
+    <p style="color:var(--gray);font-size:13.5px">Eu curo e busco as referências, mas não consigo baixar em massa imagens protegidas da Apple direto pra pasta. O caminho mais rápido pra fechar o site:</p>
+    <ol>
+      <li><strong>Eu já preparo o site inteiro</strong> — corrijo os erros de geração e specs, reestruturo o hero, monto o padrão de tratamento (CSS) e os slots vazios de Mac/Watch/AirPods.</li>
+      <li><strong>Você baixa o set</strong> de apple.com/br seguindo este mapa — ou sobe as imagens aqui que eu trato e aplico.</li>
+      <li>Solto os arquivos em <code>site/img/</code> com os nomes da lista e o site está fechado.</li>
+    </ol>
+  </div>
+
+  <!-- ───────── MANIFESTO DE ARQUIVOS ───────── -->
+  <h2>6 · Lista de arquivos — o que baixar</h2>
+  <p style="color:var(--gray);font-size:14px">Set completo pra fechar o site. Render oficial de cada produto em <strong style="color:var(--white)">apple.com/br</strong> — me manda aqui que eu trato e aplico, ou solta direto em <code>site/img/</code>. Ideal: PNG com fundo transparente; se vier JPG fundo branco, eu resolvo o recorte.</p>
+
+  <div class="page-label">substituir — arquivos que já existem (drop-in, mesmo nome)</div>
+  <table>
+    <thead><tr><th>Arquivo</th><th>Produto</th><th>Cor sugerida</th></tr></thead>
+    <tbody>
+      <tr><td><code>hero-iphone17pro.jpg</code></td><td class="becomes">iPhone 17 Pro — crop dramático, <strong>sem texto cravado</strong></td><td class="now">Cosmic Orange</td></tr>
+      <tr><td><code>iphone17-black.jpg</code></td><td class="becomes">iPhone 17 Pro Max — com a barra de câmera horizontal</td><td class="now">Deep Blue</td></tr>
+      <tr><td><code>iphone17-novos.jpg</code></td><td class="becomes">iPhone 17</td><td class="now">Sage</td></tr>
+      <tr><td><code>iphone17e.jpg</code></td><td class="becomes">iPhone Air — vale ângulo de perfil (5,6 mm)</td><td class="now">Sky Blue</td></tr>
+      <tr><td><code>watch-ultra3.jpg</code></td><td class="becomes">Apple Watch Ultra 3 — o atual já serve, trocar só se achar melhor</td><td class="now">Titânio</td></tr>
+      <tr><td><code>seminovo-iphone14pro.png</code></td><td class="becomes">iPhone 14 Pro Max seminovo — foto real tratada de preferência</td><td class="now">Roxo Profundo</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-label" style="margin-top:26px">novos — slots de Mac, Watch e AirPods (hoje só ícone)</div>
+  <table>
+    <thead><tr><th>Arquivo</th><th>Produto</th><th>Cor sugerida</th></tr></thead>
+    <tbody>
+      <tr><td><code>macbook-air-13.jpg</code></td><td class="becomes">MacBook Air M5 13"</td><td class="now">Sky Blue ou Midnight</td></tr>
+      <tr><td><code>macbook-air-15.jpg</code></td><td class="becomes">MacBook Air M5 15"</td><td class="now">mesma cor do 13"</td></tr>
+      <tr><td><code>macbook-pro-14.jpg</code></td><td class="becomes">MacBook Pro 14" — M5 Pro</td><td class="now">Space Black</td></tr>
+      <tr><td><code>watch-series11.jpg</code></td><td class="becomes">Apple Watch Series 11</td><td class="now">livre</td></tr>
+      <tr><td><code>airpods-pro.jpg</code></td><td class="becomes">AirPods Pro 3</td><td class="now">branco</td></tr>
+      <tr><td><code>airpods-4.jpg</code></td><td class="becomes">AirPods 4</td><td class="now">branco</td></tr>
+    </tbody>
+  </table>
+  <div class="note">
+    <div class="nt">Já feito — não precisa esperar imagem</div>
+    <p>Os textos desatualizados do <code>produtos.html</code> já foram corrigidos: <strong>M4 → M5</strong> (MacBook Air e Pro), <strong>Apple Watch Series 10 → 11</strong>, <strong>AirPods Pro 2 → 3</strong>, <strong>iPhone 17 chip A18 → A19</strong> e <strong>iPhone Air 5,6 mm / tela 6,5"</strong>. Só falta o "iPhone 17 Air" — a Apple batizou de <strong>iPhone Air</strong> (sem o 17). Me diz se troca ou mantém.</p>
+  </div>
+
+  <div class="foot">
+    <span class="wm"><b>smart</b><span class="d">•</span><b>base</b> · curadoria de imagens</span>
+    <span>v2 · maio 2026</span>
+  </div>
+
+</div>
+</body>
+</html>

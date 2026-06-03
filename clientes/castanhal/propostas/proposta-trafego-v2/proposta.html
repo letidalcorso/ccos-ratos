@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Solz Lab — Orçamento Castanhal v2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 22mm 22mm 18mm 22mm;
+    position: relative;
+  }
+
+  /* --- Logo Solz Lab --- */
+  .logo {
+    font-weight: 800;
+    font-size: 14pt;
+    letter-spacing: -0.5px;
+    color: #FF3D7F;
+    margin-bottom: 6mm;
+  }
+
+  .logo span.lab {
+    background: #FF3D7F;
+    color: #fff;
+    padding: 0 4px;
+    border-radius: 2px;
+    font-size: 9pt;
+    vertical-align: middle;
+    margin-left: 2px;
+    letter-spacing: 0.5px;
+  }
+
+  /* --- Títulos --- */
+  h1 {
+    font-size: 28pt;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 2mm;
+  }
+
+  h2.subtitle {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10mm;
+    letter-spacing: -0.3px;
+  }
+
+  h3.section {
+    font-size: 15pt;
+    font-weight: 700;
+    color: #1F5D52;
+    border-bottom: 1.5px solid #1F5D52;
+    padding-bottom: 1.5mm;
+    margin-top: 8mm;
+    margin-bottom: 4mm;
+    letter-spacing: -0.3px;
+  }
+
+  /* --- Texto introdutório --- */
+  .intro {
+    font-size: 11pt;
+    line-height: 1.55;
+    margin-bottom: 4mm;
+  }
+
+  .intro b {
+    color: #1F5D52;
+    font-weight: 600;
+  }
+
+  /* --- Listas --- */
+  ul.deliverables {
+    list-style: none;
+    padding-left: 4mm;
+  }
+
+  ul.deliverables li {
+    position: relative;
+    padding-left: 6mm;
+    margin-bottom: 2mm;
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+
+  ul.deliverables li::before {
+    content: "●";
+    color: #000;
+    position: absolute;
+    left: 0;
+    font-size: 7pt;
+    top: 4px;
+  }
+
+  /* --- Investimento --- */
+  .investment-block {
+    margin-top: 8mm;
+  }
+
+  .invest-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 3mm 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .invest-row .label {
+    font-size: 11pt;
+    font-weight: 500;
+  }
+
+  .invest-row .label small {
+    display: block;
+    font-size: 9pt;
+    font-weight: 400;
+    color: #555;
+    margin-top: 1mm;
+    line-height: 1.35;
+    max-width: 110mm;
+  }
+
+  .invest-row .value {
+    font-size: 13pt;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #000;
+  }
+
+  .total-block {
+    margin-top: 5mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F7F7F7;
+    padding: 5mm 6mm;
+    border-radius: 3px;
+  }
+
+  .total-block .total-label {
+    font-size: 13pt;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .total-block .total-value {
+    font-size: 26pt;
+    font-weight: 800;
+    color: #FF3D7F;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  .total-block .total-value sup {
+    font-size: 13pt;
+    vertical-align: super;
+    margin-left: 1px;
+  }
+
+  /* --- Notas finais --- */
+  .notes {
+    margin-top: 4mm;
+    font-size: 9.5pt;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  .notes p {
+    margin-bottom: 1mm;
+  }
+
+  /* --- Rodapé --- */
+  .footer {
+    margin-top: 14mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 9pt;
+    color: #333;
+  }
+
+  .footer .signature {
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .footer .signature .name {
+    font-weight: 600;
+    color: #000;
+  }
+
+  /* === Página 2 === */
+  .page-2 {
+    page-break-before: always;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Logo -->
+  <div class="logo">SOLZ <span class="lab">LAB</span></div>
+
+  <!-- Título principal -->
+  <h1>ORÇAMENTO</h1>
+  <h2 class="subtitle">Fee Mensal — Tráfego pago + Criativo</h2>
+
+  <!-- Introdução -->
+  <p class="intro">
+    Esta proposta tem como objetivo <b>aumentar o reconhecimento de marca da Castanhal</b>,
+    além de <b>estruturar e promover campanhas de captação de leads</b> para o tempo comercial,
+    com criativo dedicado e gestão de mídia integrada.
+  </p>
+
+  <!-- Objetivos -->
+  <h3 class="section">Objetivos</h3>
+  <ul class="deliverables">
+    <li>Gerar alcance e engajamento nos posts do perfil da Castanhal</li>
+    <li>Adquirir seguidores dos segmentos de maior interesse da empresa</li>
+    <li>Captar leads qualificados para o time comercial</li>
+    <li>Construir narrativa visual consistente com o posicionamento da marca</li>
+  </ul>
+
+  <!-- Tráfego pago -->
+  <h3 class="section">Tráfego pago | entregáveis</h3>
+  <ul class="deliverables">
+    <li>Estratégia e planejamento das campanhas em Meta Ads e Google Ads</li>
+    <li>Ativação e otimização das campanhas</li>
+    <li>Patrocínio de publicações do feed</li>
+    <li>Captação de leads</li>
+    <li>Análise dos resultados</li>
+    <li>Acompanhamento da performance</li>
+    <li>Relatório mensal de resultados</li>
+  </ul>
+
+  <!-- Criativos -->
+  <h3 class="section">Criativos para campanha | entregáveis</h3>
+  <ul class="deliverables">
+    <li>8 peças mensais com design e copy estratégica</li>
+    <li>Adaptação dos formatos para Meta Ads e Google Ads</li>
+    <li>Variações de criativo para teste de performance (A/B)</li>
+    <li>Alinhamento com a identidade visual da marca</li>
+    <li>Até 2 rodadas de revisão por peça</li>
+  </ul>
+
+</div>
+
+<!-- Página 2 -->
+<div class="page page-2">
+
+  <div class="logo">SOLZ <span class="lab">LAB</span></div>
+
+  <h3 class="section" style="margin-top: 0;">Investimento</h3>
+
+  <div class="investment-block">
+
+    <div class="invest-row">
+      <div class="label">
+        Gestão de tráfego pago
+        <small>Meta Ads + Google Ads — estratégia, ativação, otimização, captação de leads e relatório.</small>
+      </div>
+      <div class="value">R$ 1.200,00 / mês</div>
+    </div>
+
+    <div class="invest-row">
+      <div class="label">
+        Criativos para campanha
+        <small>8 peças/mês com design e copy estratégica + variações para teste A/B.</small>
+      </div>
+      <div class="value">R$ 960,00 / mês</div>
+    </div>
+
+    <div class="total-block">
+      <div class="total-label">TOTAL / MÊS*</div>
+      <div class="total-value">R$ 2.160<sup>,00</sup></div>
+    </div>
+
+    <div class="notes">
+      <p>* Não inclusos os valores de investimento em mídia.</p>
+      <p>Proposta de três meses de atuação para calibragem de criativos, audiências e CAC.</p>
+      <p>A partir do 4º mês, contrato segue mensal com possibilidade de ajuste de escopo.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="logo" style="margin: 0;">SOLZ <span class="lab">LAB</span></div>
+    <div class="signature">
+      <div class="name">Letícia Doncatto Dal Corso</div>
+      <div>(54) 99148-7701</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -6,8 +6,20 @@
 # Arquivo gerado pelo /setup com MCPs específicos do usuário
 _configurar-mcps.md
 
-# Outputs de renderização (binários pesados)
+# Outputs de renderização e arquivos pesados (binários)
 *.png
+*.mp4
+*.mov
+*.zip
+*.pdf
+*.tif
+*.tiff
+*.psd
+*.ai
+*.pptx
+*.zip
+# Exceção: assets do tema Shopify precisam ser versionados
+!clientes/*/shopify-theme/assets/*.png
 
 # Arquivos de dados do usuário (CSVs, planilhas, etc)
 dados/*.csv
@@ -19,17 +31,25 @@ dados/*.json
 !dados/README.md
 
 # Pastas de trabalho do usuário (geradas pelo /setup, conteúdo pessoal)
-clientes/
-propostas/
-conteudo/
-projetos/
-briefings/
+# clientes/
+# propostas/
+# conteudo/
+# projetos/
+# briefings/
 trabalho/
 estudos/
 publicacoes/
 anotacoes/
 curriculo/
-tarefas.md
+# tarefas.md
+
+# Widgets Scriptable (contêm tokens de API)
+"Letícia Particular/scriptable/"
+letícia/scriptable/
+*/scriptable/*.js
+
+# Dados de cliente com tokens hardcoded
+clientes/smartbase/dados/
 
 # Sistema
 .DS_Store

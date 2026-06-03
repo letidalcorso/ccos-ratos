@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FTemper × Linha Excelência — Pack de Lançamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #030810;
+      font-family: 'Sora', sans-serif;
+      color: #FFFFFF;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Header ── */
+    .pg-header {
+      text-align: center;
+      margin-bottom: 64px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(58,126,212,0.25);
+    }
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .sub-tag {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #3A7ED4;
+      margin-bottom: 32px;
+    }
+    .pg-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(36px, 5vw, 72px);
+      letter-spacing: 2px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    .pg-title span { color: #5BB8F0; }
+    .pg-intro {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+    }
+
+    /* ── Section layout ── */
+    .section {
+      max-width: 900px;
+      margin: 0 auto 72px;
+    }
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #3A7ED4;
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      border-left: 3px solid #3A7ED4;
+      padding-left: 16px;
+    }
+
+    /* ── Strategy block ── */
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .strategy-card {
+      background: rgba(58,126,212,0.08);
+      border: 1px solid rgba(58,126,212,0.2);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .strategy-card .label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #5BB8F0;
+      margin-bottom: 10px;
+    }
+    .strategy-card p {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.80);
+      line-height: 1.65;
+    }
+    .strategy-card strong { color: #FFFFFF; }
+
+    /* ── Phase strip ── */
+    .phases {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .phase {
+      flex: 1;
+      min-width: 140px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+    .phase .num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: rgba(58,126,212,0.5);
+      display: block;
+    }
+    .phase .ph-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 4px 0;
+    }
+    .phase .ph-desc {
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── Content card ── */
+    .content-card {
+      background: #070E1C;
+      border: 1px solid rgba(58,126,212,0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .card-header {
+      background: rgba(58,126,212,0.12);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(58,126,212,0.15);
+    }
+    .card-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: #3A7ED4;
+      color: #FFFFFF;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .card-badge.green { background: #1A7A50; }
+    .card-badge.purple { background: #6B3A9E; }
+    .card-badge.orange { background: #C25A1A; }
+    .card-badge.teal { background: #1A6A7A; }
+
+    .card-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 1px;
+    }
+    .card-meta {
+      margin-left: auto;
+      font-size: 10px;
+      color: rgba(255,255,255,0.35);
+      font-weight: 300;
+    }
+    .card-body {
+      padding: 24px;
+    }
+
+    /* ── Content blocks inside cards ── */
+    .hook-block {
+      background: rgba(91,184,240,0.07);
+      border-left: 3px solid #5BB8F0;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+    }
+    .hook-block .hook-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #5BB8F0;
+      margin-bottom: 8px;
+    }
+    .hook-block p {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.5px;
+      line-height: 1.3;
+    }
+
+    .copy-block {
+      margin-bottom: 20px;
+    }
+    .copy-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(58,126,212,0.8);
+      margin-bottom: 10px;
+    }
+    .copy-text {
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.75;
+      white-space: pre-wrap;
+    }
+    .copy-text em {
+      color: #5BB8F0;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .slides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .slide-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 18px;
+    }
+    .slide-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: rgba(58,126,212,0.3);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .slide-headline {
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .slide-copy {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+
+    .tip-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .tip {
+      background: rgba(26,122,80,0.12);
+      border: 1px solid rgba(26,122,80,0.25);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.70);
+      flex: 1;
+      min-width: 180px;
+    }
+    .tip strong { color: #4DC990; }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(58,126,212,0.15), rgba(91,184,240,0.08));
+      border: 1px solid rgba(91,184,240,0.25);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .cta-box .cta-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #5BB8F0;
+      margin-bottom: 8px;
+    }
+    .cta-box p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.80);
+    }
+    .cta-box strong { color: #FFFFFF; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 20px 0;
+    }
+
+    .hashtag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hashtag {
+      font-size: 12px;
+      font-weight: 600;
+      color: #3A7ED4;
+      background: rgba(58,126,212,0.1);
+      border: 1px solid rgba(58,126,212,0.2);
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    .why-block {
+      background: rgba(107,58,158,0.1);
+      border: 1px solid rgba(107,58,158,0.25);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 16px;
+    }
+    .why-block .why-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #A07AD4;
+      margin-bottom: 8px;
+    }
+    .why-block p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.65;
+    }
+
+    /* ── Reels timeline ── */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #3A7ED4, rgba(58,126,212,0.1));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #3A7ED4;
+    }
+    .timeline-time {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #3A7ED4;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .timeline-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+    }
+    .timeline-text strong { color: #FFFFFF; }
+    .timeline-note {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ── Stories grid ── */
+    .stories-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .story-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 16px;
+      position: relative;
+    }
+    .story-card .s-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: rgba(58,126,212,0.2);
+      line-height: 1;
+    }
+    .story-card .s-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 6px 0 4px;
+    }
+    .story-card .s-copy {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+    .story-card .s-cta {
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #5BB8F0;
+    }
+
+    .nota-footer {
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(58,126,212,0.15);
+      color: rgba(255,255,255,0.25);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    .nota-footer strong { color: #3A7ED4; }
+  </style>
+</head>
+<body>
+
+<!-- ──────────── HEADER ──────────── -->
+<div class="pg-header">
+  <div class="brand-tag">FTEMPER</div>
+  <div class="sub-tag">Pack de Lançamento — Estratégia + Copy Pronta</div>
+  <h1 class="pg-title">LINHA <span>EXCELÊNCIA®</span><br>ALUMICONTE</h1>
+  <p class="pg-intro">Ecossistema de conteúdo completo para o lançamento da parceria. 5 peças prontas, roteiro de Reels, legendas, hashtags e ajustes estratégicos.</p>
+</div>
+
+
+<!-- ──────────── ESTRATÉGIA ──────────── -->
+<div class="section">
+  <div class="section-label">Base estratégica</div>
+  <div class="section-title">POSICIONAMENTO E NARRATIVA</div>
+
+  <div class="strategy-grid">
+    <div class="strategy-card">
+      <div class="label">Narrativa central</div>
+      <p><strong>A FTemper não para de evoluir.</strong> Agora com a Linha Excelência®, você tem acesso à esquadria mais tecnológica e exclusiva do mercado — com sistema patenteado, vantagem para o serralheiro e diferencial visual para o cliente final.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="label">Ângulo de valor</div>
+      <p><strong>Não é mais um produto.</strong> É uma linha que resolve três problemas de uma vez: produção mais rápida para o serralheiro, ventilação superior para o usuário, e estética premium para o projeto.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="label">Tom de voz</div>
+      <p><strong>Técnico com atitude.</strong> Sem floreios. Confiança de quem sabe do que está falando. Vai direto no benefício — sem hipérboles vazias, sem "aproveite agora".</p>
+    </div>
+    <div class="strategy-card">
+      <div class="label">Público-alvo primário</div>
+      <p><strong>Serralheiros e construtores</strong> que querem se posicionar no segmento premium. Secundário: arquitetos e clientes finais de alto padrão que buscam diferencial técnico + estética.</p>
+    </div>
+  </div>
+
+  <!-- Arco de lançamento -->
+  <div class="copy-label" style="margin-bottom:12px;">Arco de lançamento (5 dias)</div>
+  <div class="phases">
+    <div class="phase">
+      <span class="num">1</span>
+      <div class="ph-title">Teaser</div>
+      <div class="ph-desc">Stories — gera curiosidade antes do reveal</div>
+    </div>
+    <div class="phase">
+      <span class="num">2</span>
+      <div class="ph-title">Anúncio</div>
+      <div class="ph-desc">Feed — o reveal oficial com copy forte</div>
+    </div>
+    <div class="phase">
+      <span class="num">3</span>
+      <div class="ph-title">Educação</div>
+      <div class="ph-desc">Carrossel — diferenciais técnicos destrinchados</div>
+    </div>
+    <div class="phase">
+      <span class="num">4</span>
+      <div class="ph-title">Engajamento</div>
+      <div class="ph-desc">Reels + Stories — alcance e conversa</div>
+    </div>
+    <div class="phase">
+      <span class="num">5</span>
+      <div class="ph-title">Conversão</div>
+      <div class="ph-desc">Post direto para serralheiros — CTA de proposta</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── PEÇA 1: TEASER STORIES ──────────── -->
+<div class="section">
+  <div class="section-label">Fase 1 · Stories</div>
+  <div class="section-title">TEASER PRÉ-LANÇAMENTO</div>
+
+  <div class="content-card">
+    <div class="card-header">
+      <span class="card-badge teal">STORIES</span>
+      <span class="card-name">Sequência de 3 quadros — 1 a 2 dias antes</span>
+      <span class="card-meta">Instagram / WhatsApp Status</span>
+    </div>
+    <div class="card-body">
+      <div class="stories-row">
+        <div class="story-card">
+          <div class="s-num">01</div>
+          <div class="s-title">O sinal</div>
+          <div class="s-copy"><strong>"Algo novo está chegando na FTemper."</strong><br><br>E vai mudar o padrão que você entrega.</div>
+          <div class="s-cta">▸ Arraste para cima</div>
+        </div>
+        <div class="story-card">
+          <div class="s-num">02</div>
+          <div class="s-title">A pista</div>
+          <div class="s-copy"><strong>"Tecnologia patenteada. Design exclusivo. Alumínio de outro nível."</strong><br><br>Em breve. 👀</div>
+          <div class="s-cta">▸ Aguarde</div>
+        </div>
+        <div class="story-card">
+          <div class="s-num">03</div>
+          <div class="s-title">A ativação</div>
+          <div class="s-copy"><strong>"Já sabe o que é?"</strong><br><br>Abre a caixinha de perguntas. Amanhã a gente revela.</div>
+          <div class="s-cta">▸ Caixa de perguntas aberta</div>
+        </div>
+      </div>
+
+      <div class="why-block">
+        <div class="why-label">Por que funciona</div>
+        <p>Teaser de 3 partes cria arco emocional: curiosidade → antecipação → participação. A caixinha de perguntas no Q3 gera dado de audiência e alimenta o algoritmo antes do post principal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── PEÇA 2: ANÚNCIO FEED ──────────── -->
+<div class="section">
+  <div class="section-label">Fase 2 · Feed</div>
+  <div class="section-title">POST DE ANÚNCIO</div>
+
+  <div class="content-card">
+    <div class="card-header">
+      <span class="card-badge">FEED SINGLE</span>
+      <span class="card-name">O reveal — post principal de lançamento</span>
+      <span class="card-meta">Instagram / Facebook</span>
+    </div>
+    <div class="card-body">
+
+      <div class="hook-block">
+        <div class="hook-label">Headline visual (texto na imagem)</div>
+        <p>NOVA LINHA.<br>NOVO PADRÃO.</p>
+      </div>
+
+      <div class="copy-block">
+        <div class="copy-label">Legenda completa</div>
+        <div class="copy-text">A FTemper chegou com novidade.
+
+Agora trabalhamos com a <em>Linha Excelência® da Alumiconte</em> — a linha mais tecnológica e exclusiva do mercado para esquadrias em alumínio.
+
+Sistema de montagem patenteado. Veneziana oval ou reta. E o detalhe que muda tudo: <em>ventilação ativa mesmo com a esquadria fechada</em>.
+
+Isso não é upgrade. É outro nível.
+
+▸ Fala com a gente no direct ou acessa o link na bio.</div>
+      </div>
+
+      <div class="tip-row">
+        <div class="tip"><strong>Visual sugerido:</strong> Foto em close do perfil de alumínio da linha, com iluminação lateral que destaca o acabamento. Fundo escuro para contrastar com o material.</div>
+        <div class="tip"><strong>Alternativa:</strong> Mockup do produto aplicado em uma fachada moderna. Usar overlay escuro com o texto sobreposto em branco bold.</div>
+      </div>
+
+      <div class="cta-box">
+        <div class="cta-label">CTA</div>
+        <p><strong>Direct + link na bio.</strong> Não peça seguidores. Peça ação: "Fala com a gente" é mais próximo e converte mais que "Entre em contato".</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── PEÇA 3: CARROSSEL ──────────── -->
+<div class="section">
+  <div class="section-label">Fase 3 · Feed</div>
+  <div class="section-title">CARROSSEL EDUCATIVO — 6 SLIDES</div>
+
+  <div class="content-card">
+    <div class="card-header">
+      <span class="card-badge green">CARROSSEL</span>
+      <span class="card-name">Por que a Linha Excelência® é diferente de tudo — 6 slides</span>
+      <span class="card-meta">Instagram Feed</span>
+    </div>
+    <div class="card-body">
+
+      <div class="hook-block">
+        <div class="hook-label">Hook do carrossel (Slide 1 — Capa)</div>
+        <p>5 razões pra sua<br>esquadria nunca mais<br>ser a mesma.</p>
+      </div>
+
+      <div class="slides-grid">
+        <div class="slide-item">
+          <div class="slide-num">01</div>
+          <div class="slide-headline">Sistema Patenteado</div>
+          <div class="slide-copy">A Linha Excelência tem montagem exclusiva — desenvolvida após estudo aprofundado. Não é adaptação. É solução de origem, criada do zero para esquadrias com veneziana.</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-num">02</div>
+          <div class="slide-headline">Ventila mesmo fechada</div>
+          <div class="slide-copy">O diferencial que surpreende: mesmo com a esquadria fechada, o formato dos perfis permite passagem livre de ar. Conforto térmico sem abrir mão de segurança.</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-num">03</div>
+          <div class="slide-headline">Alumínio que trabalha por você</div>
+          <div class="slide-copy">Resistente a intempéries. Estrutura estável. Baixo custo de manutenção. O material que menos dá trabalho — e mais entrega no longo prazo.</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-num">04</div>
+          <div class="slide-headline">Dois formatos de veneziana</div>
+          <div class="slide-copy">Oval ou reta — escolha o que casa com o projeto. Diversas cores e acabamentos. A linha se adapta à arquitetura, não o contrário.</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-num">05</div>
+          <div class="slide-headline">Para o serralheiro: mais velocidade</div>
+          <div class="slide-copy">A tecnologia exclusiva da linha foi pensada pra facilitar a produção. Mais praticidade, mais agilidade — e mais margem no seu serviço.</div>
+        </div>
+        <div class="slide-item">
+          <div class="slide-num">06</div>
+          <div class="slide-headline">Linha Excelência® na FTemper</div>
+          <div class="slide-copy"><strong>Solicite uma proposta.</strong> Chama no direct 👆 ou acessa o link na bio. Tem um consultor pronto pra te atender.</div>
+        </div>
+      </div>
+
+      <div class="why-block">
+        <div class="why-label">Por que funciona</div>
+        <p>O título "5 razões pra..." gera expectativa e motiva o arraste. Cada slide tem uma promessa única e específica — sem repetição, sem enchimento. O último slide fecha com CTA direto, não com "saiba mais" genérico. O benefício para o serralheiro (slide 5) é estratégico: ele é quem compra, então precisa ver valor pra ele antes de vender para o cliente final.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── PEÇA 4: REELS ──────────── -->
+<div class="section">
+  <div class="section-label">Fase 4 · Reels</div>
+  <div class="section-title">ROTEIRO DE REELS — 25s</div>
+
+  <div class="content-card">
+    <div class="card-header">
+      <span class="card-badge orange">REELS</span>
+      <span class="card-name">Roteiro de 25 segundos — hook + desenvolvimento + CTA</span>
+      <span class="card-meta">Instagram Reels / TikTok</span>
+    </div>
+    <div class="card-body">
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">0–3s · Gancho</div>
+          <div class="timeline-text"><strong>"Se você ainda entrega esquadria comum, você tá perdendo cliente."</strong></div>
+          <div class="timeline-note">Direto na câmera. Pausa de 0,5s após a frase. Sem introdução.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">3–18s · Desenvolvimento</div>
+          <div class="timeline-text">
+            <strong>"A FTemper agora tem a Linha Excelência® da Alumiconte.</strong> Sistema de montagem patenteado. Veneziana oval ou reta. Alumínio com resistência real. E o maior diferencial? <strong>Ventilação ativa mesmo com tudo fechado.</strong> Isso aqui não é produto comum — é tecnologia que você instala e o cliente percebe."
+          </div>
+          <div class="timeline-note">Corte rápido a cada benefício. Se possível, mostrar o produto ou detalhe de montagem durante a narração.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">18–25s · CTA</div>
+          <div class="timeline-text"><strong>"Quer saber mais? Link na bio. Fala com a gente no direct."</strong></div>
+          <div class="timeline-note">Texto na tela durante o CTA: [NOVA LINHA NA FTEMPER] → [LINHA EXCELÊNCIA® ALUMICONTE]</div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="copy-block">
+        <div class="copy-label">Legenda do Reels</div>
+        <div class="copy-text">A esquadria mais tecnológica do mercado chegou na FTemper. 🔩
+
+<em>Linha Excelência® da Alumiconte</em> — sistema patenteado, veneziana oval ou reta, ventilação ativa mesmo com tudo fechado.
+
+Se você é serralheiro, isso é o que separa a sua entrega da do concorrente.
+
+▸ Link na bio ou chama no direct.</div>
+      </div>
+
+      <div class="tip-row">
+        <div class="tip"><strong>Áudio sugerido:</strong> Trending sound instrumental ou silêncio com narração natural. Evite música alta — o diferencial é a fala técnica com confiança.</div>
+        <div class="tip"><strong>Variação B:</strong> Versão POV — "O que eu descobri quando comecei a trabalhar com a Linha Excelência®" — funciona bem como creator mindset / depoimento.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── PEÇA 5: STORIES PÓS-LANÇAMENTO ──────────── -->
+<div class="section">
+  <div class="section-label">Fase 4 · Stories</div>
+  <div class="section-title">STORIES PÓS-LANÇAMENTO — 4 QUADROS</div>
+
+  <div class="content-card">
+    <div class="card-header">
+      <span class="card-badge teal">STORIES</span>
+      <span class="card-name">Sequência de 4 quadros — engajamento + feature + CTA</span>
+      <span class="card-meta">Instagram Stories</span>
+    </div>
+    <div class="card-body">
+      <div class="stories-row">
+        <div class="story-card">
+          <div class="s-num">01</div>
+          <div class="s-title">Pergunta de engajamento</div>
+          <div class="s-copy"><strong>"Você sabia que existe esquadria que ventila mesmo fechada?"</strong><br><br>Enquete: [Sabia] / [Não sabia isso]</div>
+          <div class="s-cta">▸ Enquete ativa</div>
+        </div>
+        <div class="story-card">
+          <div class="s-num">02</div>
+          <div class="s-title">Feature highlight</div>
+          <div class="s-copy"><strong>Sistema patenteado.</strong><br>Veneziana oval ou reta.<br>Alumínio premium.<br>Produção facilitada.<br><br>Linha Excelência® — agora na FTemper.</div>
+          <div class="s-cta">▸ Arraste para ver mais</div>
+        </div>
+        <div class="story-card">
+          <div class="s-num">03</div>
+          <div class="s-title">Benefício pro serralheiro</div>
+          <div class="s-copy"><strong>"Serralheiro: essa linha foi pensada pra você produzir mais rápido e cobrar mais caro."</strong><br><br>Tecnologia que se vende sozinha.</div>
+          <div class="s-cta">▸ Arraste</div>
+        </div>
+        <div class="story-card">
+          <div class="s-num">04</div>
+          <div class="s-title">CTA direto</div>
+          <div class="s-copy"><strong>Linha Excelência® disponível na FTemper agora.</strong><br><br>Quer uma proposta? A gente responde rápido.</div>
+          <div class="s-cta">▸ Botão: Falar no WhatsApp</div>
+        </div>
+      </div>
+
+      <div class="why-block">
+        <div class="why-label">Por que funciona</div>
+        <p>O Q1 usa enquete para filtrar audiência qualificada e aumentar retenção na sequência. Q3 fala diretamente com o serralheiro — o comprador primário — antes do CTA. Q4 reduz fricção com botão direto para WhatsApp, eliminando o "vai no direct" genérico.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── PEÇA 6: POST B2B ──────────── -->
+<div class="section">
+  <div class="section-label">Fase 5 · Feed</div>
+  <div class="section-title">POST DE AUTORIDADE — PARA SERRALHEIROS</div>
+
+  <div class="content-card">
+    <div class="card-header">
+      <span class="card-badge purple">FEED SINGLE</span>
+      <span class="card-name">Conversão B2B — direto pro tomador de decisão</span>
+      <span class="card-meta">Instagram / LinkedIn</span>
+    </div>
+    <div class="card-body">
+
+      <div class="hook-block">
+        <div class="hook-label">Hook (texto na imagem)</div>
+        <p>O serralheiro que<br>instala Excelência<br>vende Excelência.</p>
+      </div>
+
+      <div class="copy-block">
+        <div class="copy-label">Legenda completa</div>
+        <div class="copy-text">Não é só sobre o produto que você instala. É sobre o nível que você entrega.
+
+A <em>Linha Excelência® da Alumiconte</em> chegou na FTemper — e ela foi desenvolvida pensando nos dois lados da equação:
+
+→ <em>Pro serralheiro:</em> montagem mais rápida, tecnologia que facilita a produção, resultado que se justifica no orçamento
+→ <em>Pro cliente:</em> veneziana oval ou reta, ventilação ativa mesmo com tudo fechado, alumínio resistente que não dá manutenção
+
+Sistema patenteado. Design exclusivo. Diferencial real.
+
+Quer trabalhar com essa linha? Fala com a gente. 👇</div>
+      </div>
+
+      <div class="cta-box">
+        <div class="cta-label">Variações de CTA por plataforma</div>
+        <p>
+          <strong>Instagram:</strong> "Chama no direct ou link na bio."<br>
+          <strong>WhatsApp:</strong> "Tô aqui no chat com você."<br>
+          <strong>LinkedIn:</strong> "Comenta aqui ou manda uma mensagem — posso te mandar mais informações."
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── HASHTAGS ──────────── -->
+<div class="section">
+  <div class="section-label">Distribuição</div>
+  <div class="section-title">HASHTAGS ESTRATÉGICAS</div>
+
+  <div class="content-card">
+    <div class="card-header">
+      <span class="card-badge">HASHTAGS</span>
+      <span class="card-name">Mix: volume alto + nicho + marca</span>
+    </div>
+    <div class="card-body">
+      <div class="copy-label" style="margin-bottom:14px;">Hashtag pool — use 8 a 12 por post, variando entre grupos</div>
+
+      <div class="copy-block">
+        <div class="copy-label">🔵 Descoberta (alto alcance)</div>
+        <div class="hashtag-cloud">
+          <span class="hashtag">#esquadriasaluminio</span>
+          <span class="hashtag">#serralheiro</span>
+          <span class="hashtag">#serralheria</span>
+          <span class="hashtag">#construção</span>
+          <span class="hashtag">#arquitetura</span>
+          <span class="hashtag">#reformaresidencial</span>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="copy-block">
+        <div class="copy-label">🔷 Nicho (qualificação)</div>
+        <div class="hashtag-cloud">
+          <span class="hashtag">#esquadriapremium</span>
+          <span class="hashtag">#aluminiodequalidade</span>
+          <span class="hashtag">#perfisdealuminio</span>
+          <span class="hashtag">#esquadrialuminuminium</span>
+          <span class="hashtag">#vidrotemperado</span>
+          <span class="hashtag">#veneziana</span>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="copy-block">
+        <div class="copy-label">🏷️ Marca (rastreamento)</div>
+        <div class="hashtag-cloud">
+          <span class="hashtag">#ftemper</span>
+          <span class="hashtag">#alumiconte</span>
+          <span class="hashtag">#linhaexcelencia</span>
+          <span class="hashtag">#aluminioexcelencia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ──────────── EXTRAS ──────────── -->
+<div class="section">
+  <div class="section-label">Extras estratégicos</div>
+  <div class="section-title">PRÓXIMOS PASSOS E IDEIAS DE EXPANSÃO</div>
+
+  <div class="strategy-grid">
+    <div class="strategy-card">
+      <div class="label">Conteúdo semana 2</div>
+      <p><strong>Antes × Depois.</strong> Mostre um projeto entregue com a Linha Excelência®. "O cliente pediu mais" é um gancho poderoso — a linha se vende pela experiência de uso.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="label">Conteúdo semana 3</div>
+      <p><strong>FAQ em carrossel.</strong> Responda dúvidas reais do serralheiro: preço, prazo, disponibilidade, como funciona o sistema de montagem. Educa e converte simultaneamente.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="label">Conteúdo recorrente</div>
+      <p><strong>Série "Linha Excelência na prática".</strong> Um Reels por quinzena mostrando aplicações diferentes: residência, comércio, varanda, fachada. Ecossistema de autoridade.</p>
+    </div>
+    <div class="strategy-card">
+      <div class="label">Ativação com serralheiros</div>
+      <p><strong>UGC estratégico.</strong> Incentive clientes serralheiros a postarem instalações com #linhaexcelencia. Reposte com crédito — gera prova social sem custo de produção.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="nota-footer">
+  <strong>FTEMPER</strong> · Pack de Lançamento · Linha Excelência® × Alumiconte · Abril 2026
+</div>
+
+</body>
+</html>

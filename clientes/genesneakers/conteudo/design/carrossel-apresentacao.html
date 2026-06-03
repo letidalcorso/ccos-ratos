@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Apresentação de Marca · Daylight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bone:   #F2EFE9;
+      --carbon: #0D0D0D;
+      --acid:   #CBF23D;
+      --press:  #8CA62D;
+      --slate:  #A6A4A1;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header  { color: var(--acid); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .subhead { color: #444; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; }
+    .env     { color: var(--press); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+    .grid { display: flex; gap: 24px; flex-wrap: wrap; }
+    .wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .label { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+
+    /* Preview 270×338 = 1080×1350 */
+    .slide {
+      width: 270px;
+      height: 338px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--bone);
+    }
+    .slide.carbon { background: var(--carbon); }
+
+    .brand {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 8px; color: var(--slate);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .counter {
+      position: absolute;
+      top: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 8px; color: var(--slate);
+      letter-spacing: 2px;
+    }
+
+    /* ── Slide 1 — Capa ── */
+    .s1-img {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 58%;
+      background: repeating-linear-gradient(
+        45deg, #d8d4ce, #d8d4ce 4px, #ccc8c2 4px, #ccc8c2 8px
+      );
+      border-bottom: 1px dashed #bbb;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 4px; text-align: center; padding: 12px;
+    }
+    .s1-img .img-tag  { font-size: 8px; color: #999; letter-spacing: 2px; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace; }
+    .s1-img .img-main { font-size: 9px; color: #888; letter-spacing: 1px; font-family: 'IBM Plex Mono', monospace; }
+    .s1-img .img-sub  { font-size: 7px; color: #aaa; font-family: 'IBM Plex Mono', monospace; }
+    /* gradiente bone cobrindo parte inferior da foto */
+    .s1-grad {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 55%;
+      background: linear-gradient(to bottom, transparent 0%, var(--bone) 60%);
+    }
+    .s1-tag {
+      position: absolute;
+      top: 56px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s1-h {
+      position: absolute;
+      bottom: 56px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 52px;
+      color: var(--carbon);
+      text-transform: uppercase;
+      line-height: 0.83;
+      letter-spacing: -1px;
+    }
+    .s1-h .acid {
+      color: var(--acid);
+      -webkit-text-stroke: 0.5px var(--press);
+    }
+    .s1-sub {
+      position: absolute;
+      bottom: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+
+    /* ── Slide 2 — Como funciona ── */
+    .s2-tag {
+      position: absolute;
+      top: 56px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s2-h {
+      position: absolute;
+      top: 82px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 44px;
+      color: var(--carbon);
+      text-transform: uppercase;
+      line-height: 0.86;
+    }
+    .s2-detail {
+      position: absolute;
+      bottom: 24px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 8px; color: var(--slate);
+      line-height: 1.7;
+    }
+
+    /* ── Slide 3 — Acesso direto ── */
+    .s3-tag {
+      position: absolute;
+      top: 56px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s3-h {
+      position: absolute;
+      top: 50%; left: 14px; right: 14px;
+      transform: translateY(-55%);
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 56px;
+      color: var(--carbon);
+      text-transform: uppercase;
+      line-height: 0.84;
+      letter-spacing: -1px;
+    }
+    .s3-h small {
+      display: block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-weight: 400;
+      font-size: 9px;
+      color: var(--slate);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 14px;
+    }
+    .s3-bar {
+      position: absolute;
+      bottom: 24px; left: 14px;
+      width: 28px; height: 2px;
+      background: var(--press);
+    }
+
+    /* ── Slide 4 — CTA Carbon ── */
+    .s4-tag {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #2a2a2a;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s4-counter {
+      position: absolute;
+      top: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #2a2a2a;
+      letter-spacing: 2px;
+    }
+    .s4-h {
+      position: absolute;
+      top: 60px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 66px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.82;
+      letter-spacing: -1.5px;
+    }
+    .s4-h .acid { color: var(--acid); }
+    .s4-bottom {
+      position: absolute;
+      bottom: 14px; left: 14px; right: 14px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .s4-cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .s4-logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 18px; color: var(--bone);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Carrossel</div>
+<div class="subhead">Peça 1.3 · Apresentação de Marca · 4 slides · 1080×1350px</div>
+<div class="env">/ENV-02 · DAYLIGHT — institucional · posicionamento</div>
+
+<div class="grid">
+
+  <!-- Slide 1 — Capa -->
+  <div class="wrap">
+    <div class="label">01 / capa</div>
+    <div class="slide">
+      <div class="s1-img">
+        <div class="img-tag">[ foto ]</div>
+        <div class="img-main">tênis em contexto urbano</div>
+        <div class="img-sub">calçada · luz natural · 3/4 frontal</div>
+      </div>
+      <div class="s1-grad"></div>
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">1/4</div>
+      <div class="s1-h">
+        O MODELO<br>QUE VOCÊ<br>QUER.<br><span class="acid">A GENE<br>TRAZ.</span>
+      </div>
+      <div class="s1-sub">@genesneakers</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 — Como funciona -->
+  <div class="wrap">
+    <div class="label">02 / como funciona</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">2/4</div>
+      <div class="s2-tag">/processo</div>
+      <div class="s2-h">
+        VOCÊ<br>ESCOLHE.<br>A GENTE<br>CONFIRMA<br>E TRAZ.
+      </div>
+      <div class="s2-detail">Sem espera de meses.<br>Sem depender de quem<br>decide o que chega aqui.</div>
+    </div>
+  </div>
+
+  <!-- Slide 3 — Acesso direto -->
+  <div class="wrap">
+    <div class="label">03 / proposta</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">3/4</div>
+      <div class="s3-tag">/acesso</div>
+      <div class="s3-h">
+        ACESSO<br>DIRETO.
+        <small>Só pelo tênis.</small>
+      </div>
+      <div class="s3-bar"></div>
+    </div>
+  </div>
+
+  <!-- Slide 4 — CTA Carbon -->
+  <div class="wrap">
+    <div class="label">04 / cta · carbon</div>
+    <div class="slide carbon">
+      <div class="s4-tag">Gene Sneakers</div>
+      <div class="s4-counter">4/4</div>
+      <div class="s4-h">
+        ENCO-<br>MENDA<br><span class="acid">ABERTA.</span>
+      </div>
+      <div class="s4-bottom">
+        <div class="s4-cta">Manda mensagem.</div>
+        <div class="s4-logo">Gene</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

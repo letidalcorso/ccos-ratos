@@ -1,0 +1,63 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.1" y1="0" x2="0.9" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#071830"/>
+    <stop offset="40%"  stop-color="#050F20"/>
+    <stop offset="100%" stop-color="#020810"/>
+  </linearGradient>
+  <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(26,111,192,0.35)"/>
+    <stop offset="100%" stop-color="rgba(26,111,192,0.0)"/>
+  </linearGradient>
+  <radialGradient id="spot" cx="50%" cy="35%" r="55%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(91,184,240,0.18)"/>
+    <stop offset="100%" stop-color="rgba(91,184,240,0.00)"/>
+  </radialGradient>
+</defs>
+
+<rect width="1080" height="1350" fill="url(#bg)"/>
+<rect width="1080" height="1350" fill="url(#spot)"/>
+<!-- Subtle grid lines -->
+<line x1="0"    y1="450" x2="1080" y2="450" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+<line x1="0"    y1="900" x2="1080" y2="900" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+<line x1="360"  y1="0"   x2="360"  y2="1350" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+<line x1="720"  y1="0"   x2="720"  y2="1350" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+<!-- Diagonal glow block -->
+<rect x="0" y="0" width="700" height="900" fill="url(#glow)" opacity="0.6" transform="rotate(-15 200 400)"/>
+
+<!-- Geometric corner accents -->
+<polygon points="0,0 180,0 0,180"   fill="rgba(91,184,240,0.06)"/>
+<polygon points="1080,1350 900,1350 1080,1170" fill="rgba(91,184,240,0.04)"/>
+
+<!-- Logo top -->
+<text x="540" y="96" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="390" y1="112" x2="690" y2="112" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+
+<!-- NOVA LINHA label -->
+<rect x="60" y="180" width="244" height="52" rx="6" fill="rgba(91,184,240,0.14)"/>
+<rect x="60" y="180" width="244" height="52" rx="6" fill="none" stroke="rgba(91,184,240,0.35)" stroke-width="1.5"/>
+<text x="182" y="213" font-family="'Sora', sans-serif" font-weight="700" font-size="22" fill="#5BB8F0" text-anchor="middle" letter-spacing="3">NOVIDADE</text>
+
+<!-- Main headline -->
+<text x="60" y="400" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="190" fill="#FFFFFF" letter-spacing="3">NOVA</text>
+<text x="60" y="590" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="190" fill="#FFFFFF" letter-spacing="3">LINHA.</text>
+<text x="60" y="780" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="190" fill="#5BB8F0" letter-spacing="3">NOVO</text>
+<text x="60" y="970" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="190" fill="#5BB8F0" letter-spacing="3">PADRÃO.</text>
+
+<!-- Right side accent vertical text -->
+<text x="1018" y="960" font-family="'Sora', sans-serif" font-weight="700" font-size="24" fill="rgba(255,255,255,0.14)" text-anchor="middle" letter-spacing="5" transform="rotate(90 1018 680)">LINHA EXCELÊNCIA® × ALUMICONTE</text>
+
+<!-- Divider -->
+<line x1="60" y1="1014" x2="500" y2="1014" stroke="rgba(255,255,255,0.20)" stroke-width="1.5"/>
+
+<!-- Product name badge -->
+<text x="60" y="1072" font-family="'Sora', sans-serif" font-weight="300" font-size="44" fill="rgba(255,255,255,0.80)">— Linha Excelência® × Alumiconte</text>
+<text x="60" y="1130" font-family="'Sora', sans-serif" font-weight="300" font-size="38" fill="rgba(255,255,255,0.50)">A linha mais tecnológica do mercado</text>
+<text x="60" y="1176" font-family="'Sora', sans-serif" font-weight="300" font-size="38" fill="rgba(255,255,255,0.50)">para esquadrias em alumínio.</text>
+
+<!-- CTA pill bottom right -->
+<rect x="620" y="1260" width="420" height="70" rx="35" fill="rgba(26,111,192,0.80)"/>
+<rect x="620" y="1260" width="420" height="70" rx="35" fill="none" stroke="rgba(91,184,240,0.50)" stroke-width="1.5"/>
+<text x="830" y="1303" font-family="'Sora', sans-serif" font-weight="700" font-size="28" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">LINK NA BIO  ↗</text>
+</svg>

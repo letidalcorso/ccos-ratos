@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;display=swap');
+      .display { font-family: 'Big Shoulders Display', 'Arial Black', sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <!-- CARBON field -->
+  <rect width="1080" height="1080" fill="#0D0D0D"/>
+
+  <!-- SIGNAL arcs em Acid (topo) -->
+  <g stroke="#CBF23D" fill="none" stroke-linecap="round">
+    <path d="M 360 560 Q 540 390, 720 560" stroke-width="22"/>
+    <path d="M 280 560 Q 540 330, 800 560" stroke-width="16" opacity="0.65"/>
+    <path d="M 200 560 Q 540 270, 880 560" stroke-width="11" opacity="0.4"/>
+    <circle cx="540" cy="560" r="28" fill="#CBF23D" stroke="none"/>
+  </g>
+
+  <!-- GENE wordmark Bone embaixo -->
+  <text x="540" y="830" class="display" font-size="200" fill="#F2EFE9" text-anchor="middle">GENE</text>
+</svg>

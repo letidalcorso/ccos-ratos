@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendizados de Campanha — Smartbase</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #07070E; --surface: #0F0F1C; --divider: #1E1E2E;
+      --white: #F2F2F6; --gray-mid: #C0C0D0; --gray-sub: #7A7A96;
+      --blue: #3E82F7; --green: #10B981; --red: #EF4444;
+      --amber: #F59E0B; --surface-blue: #0E1E3A; --surface-green: #0A201A;
+      --surface-amber: #1A1200;
+    }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      padding: 64px 96px 120px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .doc-header { margin-bottom: 64px; border-bottom: 1px solid var(--divider); padding-bottom: 48px; }
+    .eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      color: var(--blue); text-transform: uppercase; margin-bottom: 20px;
+    }
+    h1 { font-size: 54px; font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    h1 span { color: var(--blue); }
+    .doc-meta { font-size: 16px; color: var(--gray-sub); }
+    .doc-meta strong { color: var(--gray-mid); }
+
+    .section { margin-bottom: 56px; }
+    .section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gray-sub);
+      margin-bottom: 24px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--divider);
+    }
+    h2 { font-size: 30px; font-weight: 800; margin-bottom: 20px; }
+    h2 span { color: var(--blue); }
+    h3 { font-size: 19px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    p { font-size: 17px; color: var(--gray-mid); line-height: 1.65; margin-bottom: 14px; }
+    p strong { color: var(--white); font-weight: 600; }
+
+    .card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 28px 32px;
+      border: 1px solid var(--divider);
+      margin-bottom: 16px;
+    }
+    .card.blue { border-left: 4px solid var(--blue); background: #090F1E; }
+    .card.green { border-left: 4px solid var(--green); background: var(--surface-green); }
+    .card.amber { border-left: 4px solid var(--amber); background: var(--surface-amber); }
+    .card.red { border-left: 4px solid var(--red); background: #100808; }
+
+    .card .tag {
+      display: inline-block;
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .tag.blue { background: var(--surface-blue); color: var(--blue); }
+    .tag.green { background: var(--surface-green); color: var(--green); }
+    .tag.amber { background: var(--surface-amber); color: var(--amber); }
+    .tag.red { background: #150A0A; color: var(--red); }
+
+    .card p { margin-bottom: 0; }
+    .card p + p { margin-top: 10px; }
+
+    .insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .number-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      background: var(--surface-blue); color: var(--blue);
+      border-radius: 50%; font-size: 15px; font-weight: 800;
+      flex-shrink: 0; margin-right: 16px; margin-top: 2px;
+    }
+
+    .lesson {
+      display: flex; align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    .lesson-content h3 { margin-bottom: 6px; }
+    .lesson-content p { margin-bottom: 0; font-size: 16px; }
+
+    .data-row {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 0; border-bottom: 1px solid var(--divider);
+    }
+    .data-row.header { border-bottom: 1px solid var(--blue); }
+    .data-cell {
+      padding: 14px 18px; font-size: 15px; color: var(--gray-mid);
+      border-right: 1px solid var(--divider);
+    }
+    .data-cell:last-child { border-right: none; }
+    .data-cell.header-cell {
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--gray-sub);
+    }
+    .data-cell.val { color: var(--blue); font-weight: 700; }
+    .data-cell.title { color: var(--white); font-weight: 600; }
+
+    .divider { border: none; border-top: 1px solid var(--divider); margin: 40px 0; }
+
+    .doc-footer {
+      margin-top: 80px; padding-top: 24px;
+      border-top: 1px solid var(--divider);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .wordmark { font-size: 18px; }
+    .wordmark .light { font-weight: 300; color: var(--gray-mid); }
+    .wordmark .dot { color: var(--blue); font-size: 9px; margin: 0 1px; position: relative; top: -3px; }
+    .wordmark .bold { font-weight: 700; color: var(--white); }
+    .doc-footer-meta { font-size: 13px; color: var(--gray-sub); }
+  </style>
+</head>
+<body>
+
+<div class="doc-header">
+  <div class="eyebrow">Smartbase · Meta Ads · Fase 1</div>
+  <h1>Aprendizados<br>de <span>campanha.</span></h1>
+  <p class="doc-meta">
+    <strong>Referência interna</strong> — Mai 2026 · atualizado a cada fase<br>
+    Base de decisão acumulada: o que sabemos, o que testamos e o que isso muda na estratégia.
+  </p>
+</div>
+
+<!-- SEÇÃO 1: O QUE JÁ SABEMOS -->
+<div class="section">
+  <div class="section-label">1 — O que já sabemos antes de começar</div>
+  <h2>Histórico das <span>campanhas anteriores</span></h2>
+  <p>Campanhas rodadas antes desta estratégia geraram 67 conversas a custo historicamente baixo — mas sem nenhuma conversão em venda. O problema não era o alcance nem o CPR. Era o destino do tráfego e a ausência de processo no WhatsApp.</p>
+
+  <div style="background: var(--surface); border-radius: 12px; border: 1px solid var(--divider); overflow: hidden; margin-bottom: 24px;">
+    <div class="data-row header">
+      <div class="data-cell header-cell">Segmento</div>
+      <div class="data-cell header-cell">CPR histórico</div>
+      <div class="data-cell header-cell">Decisão</div>
+    </div>
+    <div class="data-row">
+      <div class="data-cell title">35–44 anos (homens e mulheres)</div>
+      <div class="data-cell val">R$2,71–2,73</div>
+      <div class="data-cell" style="color: var(--green);">Manter no targeting</div>
+    </div>
+    <div class="data-row">
+      <div class="data-cell title">25–34 anos (mulheres)</div>
+      <div class="data-cell val">R$2,98</div>
+      <div class="data-cell" style="color: var(--green);">Manter no targeting</div>
+    </div>
+    <div class="data-row">
+      <div class="data-cell title">18–24 anos</div>
+      <div class="data-cell val">muito alto</div>
+      <div class="data-cell" style="color: var(--red);">Excluir — curiosos sem budget</div>
+    </div>
+  </div>
+
+  <div class="card amber">
+    <div class="tag amber">Diagnóstico</div>
+    <p><strong>O tráfego foi para a DM do Instagram.</strong> Uma venda de R$9.200 não fecha em DM. Sem script, sem follow-up — cada conversa dependia de improviso. Resultado: leads chegavam e esfriavam.</p>
+  </div>
+</div>
+
+<!-- SEÇÃO 2: DECISÕES ESTRATÉGICAS E POR QUÊ -->
+<div class="section">
+  <div class="section-label">2 — Decisões estratégicas e o raciocínio por trás</div>
+  <h2>Por que fizemos <span>cada escolha</span></h2>
+
+  <div class="lesson">
+    <div class="number-badge">1</div>
+    <div class="lesson-content">
+      <h3>Toda a verba da Fase 1 concentrada em conversão — sem awareness</h3>
+      <p>O algoritmo da Meta precisa de ~50 conversas/semana para sair da fase de aprendizado. Abaixo disso, o custo sobe 20–40% e os resultados chegam 2–3x mais devagar. Com R$25/dia em uma campanha, chegamos perto desse limiar. Dividir em duas campanhas (conversão + awareness) jogaria cada uma para ~R$12,50/dia — nunca saem do aprendizado. Awareness entra na Fase 2, quando o histórico já está construído.</p>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="number-badge">2</div>
+    <div class="lesson-content">
+      <h3>Teste A/B com preço como única variável — não teste de abordagem</h3>
+      <p>Testamos uma coisa só: se mostrar o preço no anúncio filtra leads sem budget antes da conversa no WhatsApp. A copy é a mesma nos dois ads — o que muda é se "R$9.200 à vista no PIX" aparece ou não. Isso garante que qualquer diferença nos resultados seja atribuível ao preço, não a outros fatores. Com budget pequeno (~R$25/dia) não conseguimos ter significância estatística num A/B clássico — a leitura é direcional: qual Ad trouxe lead que avançou no WhatsApp.</p>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="number-badge">3</div>
+    <div class="lesson-content">
+      <h3>O KPI real da Fase 1 é taxa de conversa → venda, não CPR</h3>
+      <p>Gerar conversa barata já está provado — as campanhas anteriores fizeram isso. O que esta fase valida é o processo novo: script de WhatsApp, qualificação de budget na Etapa 1.5, e o posicionamento de preço. Um CPR de R$3 com 0% de conversão em venda é pior que um CPR de R$6 com 10% de conversão.</p>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="number-badge">4</div>
+    <div class="lesson-content">
+      <h3>Preço entra no WhatsApp só depois da Etapa 5 — depois de construir valor</h3>
+      <p>O lead que chega via CTWA (Click-to-WhatsApp) já sabe o produto que quer. O que ainda não sabe é por que comprar com a Smartbase e não com outra loja. Se o preço entra antes da confiança estar construída, o lead usa o número como comparação e some. O script estrutura: contexto → confiança → verificação IMEI → qualificação de budget → preço. O choque de R$9.200 é absorvido quando o lead já entende o valor.</p>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="number-badge">5</div>
+    <div class="lesson-content">
+      <h3>Etapa 1.5 — qualificação de budget antes de investir tempo no lead</h3>
+      <p>Inserida no script após o contexto inicial: "iPhone 17 Pro Max fica em R$9.200 à vista no PIX — isso tá dentro do que você tá buscando?" Leads que não têm budget revelam isso aqui, não na Etapa 6. Economiza tempo do vendedor e evita que um curioso ocupe o pipeline.</p>
+    </div>
+  </div>
+
+  <div class="lesson">
+    <div class="number-badge">6</div>
+    <div class="lesson-content">
+      <h3>Fase 3 (nacional) exige uma virada de mecanismo de confiança</h3>
+      <p>Localmente, a entrega presencial em Caxias do Sul é o maior fator de confiança. No nacional, essa entrega não existe — quem compra de fora de CXS não tem como ver o produto antes de pagar. O mecanismo que assume esse papel é a prova social acumulada: vídeos de envio pelo Correios, depoimentos de quem recebeu fora de CXS, número de entregas documentadas. A Fase 3 só funciona se essa prova social for construída nas Fases 1 e 2.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO 3: DADOS DE BENCHMARK -->
+<div class="section">
+  <div class="section-label">3 — Dados de mercado que embasam a estratégia</div>
+  <h2>O que os <span>dados dizem</span></h2>
+  <div class="insight-grid">
+    <div class="card blue">
+      <div class="tag blue">CTWA — Brasil</div>
+      <h3>50–70% CPL mais baixo</h3>
+      <p>Campanhas Click-to-WhatsApp têm custo por lead 50–70% menor que campanhas para landing page no Brasil. Valida a estratégia WhatsApp-first.</p>
+    </div>
+    <div class="card blue">
+      <div class="tag blue">CTWA — Conversão</div>
+      <h3>94% mais conversão que web</h3>
+      <p>Leads que chegam direto no WhatsApp convertem 94% mais que leads que chegam via landing page. A conversa é o canal, não um passo no funil.</p>
+    </div>
+    <div class="card green">
+      <div class="tag green">Learning Phase</div>
+      <h3>~50 conversas/semana</h3>
+      <p>Limiar para sair da fase de aprendizado do Meta. Abaixo disso: custo 20–40% mais alto, resultados mais lentos. Justifica concentrar budget em uma campanha.</p>
+    </div>
+    <div class="card green">
+      <div class="tag green">Ticket alto · WhatsApp</div>
+      <h3>2–6 semanas de jornada</h3>
+      <p>Produtos acima de R$3.000 têm jornada média de 2 a 6 semanas desde o primeiro contato frio. Follow-up estruturado e retargeting de Fase 2 são críticos.</p>
+    </div>
+    <div class="card amber">
+      <div class="tag amber">A/B Test</div>
+      <h3>50+ conversões por variante</h3>
+      <p>Mínimo para significância estatística num A/B clássico. Com R$25/dia e CPR ~R$5–7, leva ~35 dias por variante. O teste roda como leitura direcional, não estatística.</p>
+    </div>
+    <div class="card amber">
+      <div class="tag amber">Budget concentrado</div>
+      <h3>1 ad set &gt; 2 ad sets</h3>
+      <p>Dividir budget entre ad sets reduz o sinal por conjunto e prolonga a fase de aprendizado. Para budget pequeno, sempre concentrar.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO 4: O QUE REGISTRAR EM CADA FASE -->
+<div class="section">
+  <div class="section-label">4 — O que registrar durante a campanha</div>
+  <h2>Dados que <span>alimentam as próximas fases</span></h2>
+  <p>Os aprendizados de campanha só se acumulam se houver registro consistente. O que coletar ao longo da Fase 1:</p>
+
+  <div class="card">
+    <div class="tag blue">No Ads Manager — Dia 7</div>
+    <h3>Métricas de anúncio</h3>
+    <p>CPR de cada Ad (A e B separados), impressões, frequência, CTR. Anotar qual ad está com CPR mais baixo e qual está com frequência acima de 2.</p>
+  </div>
+
+  <div class="card">
+    <div class="tag green">No WhatsApp — Contínuo</div>
+    <h3>Qualidade das conversas</h3>
+    <p>Para cada conversa iniciada: de qual ad veio (se souber), se avançou além do "qual o preço?", se chegou à Etapa 4+ do script, se converteu em venda. Uma planilha simples com 4 colunas é suficiente.</p>
+  </div>
+
+  <div class="card">
+    <div class="tag amber">Em cada entrega — Imediato</div>
+    <h3>Prova social para Fase 3</h3>
+    <p>Foto da caixa lacrada. Vídeo curto da verificação de IMEI (mostrar o número sendo digitado no site da Apple). Foto ou vídeo do produto sendo entregue (presencial) ou embalado para envio. Cada entrega é um ativo criativo para os próximos anúncios.</p>
+  </div>
+
+  <div class="card">
+    <div class="tag blue">No Dia 14 — Decisão</div>
+    <h3>Comparação final do A/B</h3>
+    <p>Ad com preço vs Ad sem preço: qual teve CPR mais baixo? Qual trouxe mais conversas que avançaram no script? Qual gerou venda (se houver)? Essa leitura define qual ad escala na Fase 2.</p>
+  </div>
+</div>
+
+<!-- SEÇÃO 5: GLOSSÁRIO OPERACIONAL -->
+<div class="section">
+  <div class="section-label">5 — Glossário operacional</div>
+  <h2>Termos que <span>usamos</span></h2>
+  <div class="card">
+    <p><strong>CPR (Custo por Resultado):</strong> custo por conversa iniciada no WhatsApp. Meta da Fase 1: abaixo de R$7. Meta da Fase 2: abaixo de R$5.</p>
+    <p><strong>CTWA (Click-to-WhatsApp):</strong> formato de campanha onde o botão do anúncio abre diretamente uma conversa no WhatsApp. É o formato que usamos na Fase 1.</p>
+    <p><strong>Fase de aprendizado:</strong> período em que o algoritmo da Meta está calibrando a entrega para encontrar o público mais propenso a converter. Dura até ~50 conversas/semana. Durante esse período, o CPR costuma ser mais alto e instável.</p>
+    <p><strong>Leitura direcional:</strong> análise que indica tendência sem significância estatística. Útil para tomada de decisão com budget pequeno, mas não conclusiva. Tratamos o A/B da Fase 1 como leitura direcional.</p>
+    <p><strong>Etapa 1.5:</strong> qualificação de budget no início do script de WhatsApp. Inserida antes de desenvolver o pitch completo. Pergunta: "iPhone 17 Pro Max fica em R$9.200 à vista no PIX — isso tá dentro do que você tá buscando?"</p>
+    <p><strong>Prova social:</strong> evidências reais de entregas feitas — fotos, vídeos, depoimentos. Substitui a confiança da entrega presencial nas campanhas nacionais da Fase 3.</p>
+    <p><strong>CAC (Custo de Aquisição por Cliente):</strong> total investido em ads dividido pelo número de vendas. Meta da Fase 2: abaixo de R$200 por iPhone vendido.</p>
+  </div>
+</div>
+
+<div class="doc-footer">
+  <div class="wordmark"><span class="light">smart</span><span class="dot">●</span><span class="bold">base</span></div>
+  <div class="doc-footer-meta">Aprendizados de Campanha · Mai 2026 · Uso interno</div>
+</div>
+
+</body>
+</html>

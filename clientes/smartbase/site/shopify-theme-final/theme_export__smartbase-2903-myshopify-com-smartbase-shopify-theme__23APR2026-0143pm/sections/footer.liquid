@@ -1,0 +1,65 @@
+<footer class="sb-footer">
+  <div class="sb-container">
+
+    <div class="sb-footer__top">
+
+      <a class="sb-logo" href="{{ routes.root_url }}">
+        <span class="sb-logo__badge">sb</span>
+        <span class="sb-logo__wordmark">
+          <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+        </span>
+      </a>
+
+      <nav class="sb-footer__nav">
+        <div class="sb-footer__nav-group">
+          <p class="sb-footer__nav-title">produtos</p>
+          <a href="/#novos">novos (sob encomenda)</a>
+          <a href="/pages/seminovos">seminovos</a>
+        </div>
+        <div class="sb-footer__nav-group">
+          <p class="sb-footer__nav-title">serviços</p>
+          <a href="/pages/troca">troca de aparelho</a>
+          <a href="/#diferenciais">por que a smartbase</a>
+        </div>
+        <div class="sb-footer__nav-group">
+          <p class="sb-footer__nav-title">contato</p>
+          <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener">whatsapp</a>
+          <a href="https://instagram.com/{{ section.settings.handle | remove: '@' }}" target="_blank" rel="noopener">{{ section.settings.handle }}</a>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="sb-footer__bottom">
+      <span class="sb-footer__location">{{ section.settings.location }}</span>
+      <span class="sb-footer__copy">{{ section.settings.copyright }}</span>
+    </div>
+
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Rodapé",
+  "settings": [
+    {
+      "type": "text",
+      "id": "handle",
+      "label": "Handle Instagram",
+      "default": "@smartbase.br"
+    },
+    {
+      "type": "text",
+      "id": "location",
+      "label": "Localização",
+      "default": "caxias do sul, rs"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Copyright",
+      "default": "© 2026 smartbase"
+    }
+  ]
+}
+{% endschema %}

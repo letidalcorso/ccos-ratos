@@ -1,0 +1,182 @@
+<h2>Interior azul — a surpresa por dentro</h2>
+<p class="subtitle">Por fora: preto fechado, silencioso. Por dentro: o azul da marca. A experiência acontece no momento de abrir.</p>
+
+<div style="display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap;">
+
+  <!-- FECHADA -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+    <div style="
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      color: #7A7A96;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    ">fechada</div>
+
+    <div style="position: relative; width: 260px; height: 220px;">
+      <!-- Alças -->
+      <div style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:260px; height:40px;">
+        <div style="position:absolute; left:58px; top:0; width:48px; height:36px; border:5px solid #1A1A28; border-bottom:none; border-radius:24px 24px 0 0;"></div>
+        <div style="position:absolute; right:58px; top:0; width:48px; height:36px; border:5px solid #1A1A28; border-bottom:none; border-radius:24px 24px 0 0;"></div>
+      </div>
+
+      <!-- Sacola fechada -->
+      <div style="
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 240px;
+        height: 190px;
+        background: #07070E;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.4), 10px 0 20px rgba(0,0,0,0.2), 0 10px 30px rgba(0,0,0,0.3);
+        margin-top: 30px;
+      ">
+        <!-- Dobra topo -->
+        <div style="position:absolute; top:0; left:0; right:0; height:14px; background:linear-gradient(to bottom, #1E1E2E, transparent); z-index:5;"></div>
+        <!-- Sombra esquerda -->
+        <div style="position:absolute; top:0; left:0; bottom:0; width:18px; background:linear-gradient(to right, rgba(0,0,0,0.5), transparent); z-index:5;"></div>
+        <!-- Sombra direita -->
+        <div style="position:absolute; top:0; right:0; bottom:0; width:18px; background:linear-gradient(to left, rgba(0,0,0,0.3), transparent); z-index:5;"></div>
+
+        <!-- Câmera — close extremo -->
+        <svg style="position:absolute;top:0;left:0;width:100%;height:100%;" viewBox="0 0 240 190" fill="none">
+          <defs>
+            <radialGradient id="lc1" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#0a0a14"/>
+              <stop offset="100%" stop-color="#06060C"/>
+            </radialGradient>
+            <linearGradient id="fl1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#07070E" stop-opacity="1"/>
+              <stop offset="30%" stop-color="#07070E" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="95" r="150" fill="#0C0C18" stroke="#1A1A26" stroke-width="1"/>
+          <circle cx="200" cy="95" r="120" fill="url(#lc1)" stroke="#121220" stroke-width="0.8"/>
+          <circle cx="200" cy="95" r="88" fill="#05050C" stroke="#0F0F1C" stroke-width="0.6"/>
+          <circle cx="200" cy="95" r="56" fill="#030308" stroke="#3E82F7" stroke-width="0.3" opacity="0.2"/>
+          <circle cx="200" cy="95" r="28" fill="#020205"/>
+          <circle cx="200" cy="95" r="10" fill="#010103"/>
+          <rect x="0" y="0" width="240" height="190" fill="url(#fl1)"/>
+        </svg>
+
+        <!-- Wordmark -->
+        <div style="position:absolute; bottom:14px; left:18px; z-index:10; display:flex; align-items:center; gap:1px;">
+          <span style="font-family:'Helvetica Neue',sans-serif; font-size:11px; font-weight:300; color:#7A7A96; letter-spacing:-0.2px;">smart</span>
+          <div style="width:3px;height:3px;background:#3E82F7;border-radius:50%;margin-bottom:1px;flex-shrink:0;"></div>
+          <span style="font-family:'Helvetica Neue',sans-serif; font-size:11px; font-weight:700; color:#F2F2F6; letter-spacing:-0.2px;">base</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SETA -->
+  <div style="display:flex; align-items:center; padding-top:40px;">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <path d="M6 16h20M20 10l6 6-6 6" stroke="#3E3E5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- ABERTA -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+    <div style="
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      color: #3E82F7;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    ">aberta</div>
+
+    <div style="position: relative; width: 260px; height: 220px;">
+      <!-- Alças -->
+      <div style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:260px; height:40px;">
+        <div style="position:absolute; left:58px; top:0; width:48px; height:36px; border:5px solid #1A1A28; border-bottom:none; border-radius:24px 24px 0 0;"></div>
+        <div style="position:absolute; right:58px; top:0; width:48px; height:36px; border:5px solid #1A1A28; border-bottom:none; border-radius:24px 24px 0 0;"></div>
+      </div>
+
+      <!-- Sacola aberta — interior azul aparece -->
+      <div style="
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 240px;
+        height: 190px;
+        background: #07070E;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.4), 10px 0 20px rgba(0,0,0,0.2), 0 10px 30px rgba(0,0,0,0.3);
+        margin-top: 30px;
+      ">
+        <!-- Interior azul visível no topo aberto -->
+        <div style="
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 52px;
+          background: linear-gradient(to bottom, #3E82F7, #2A5FD4 60%, #07070E);
+          z-index: 4;
+        "></div>
+
+        <!-- Reflexo do azul interior na parte interna visível -->
+        <div style="
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 52px;
+          background: linear-gradient(to right, rgba(0,0,0,0.3), transparent 20%, transparent 80%, rgba(0,0,0,0.2));
+          z-index: 5;
+        "></div>
+
+        <!-- Glow azul vazando pra baixo -->
+        <div style="
+          position: absolute;
+          top: 44px; left: 0; right: 0;
+          height: 30px;
+          background: linear-gradient(to bottom, rgba(62,130,247,0.12), transparent);
+          z-index: 3;
+        "></div>
+
+        <!-- Sombra esquerda -->
+        <div style="position:absolute; top:0; left:0; bottom:0; width:18px; background:linear-gradient(to right, rgba(0,0,0,0.5), transparent); z-index:6;"></div>
+        <!-- Sombra direita -->
+        <div style="position:absolute; top:0; right:0; bottom:0; width:18px; background:linear-gradient(to left, rgba(0,0,0,0.3), transparent); z-index:6;"></div>
+
+        <!-- Câmera — mais escura, interior -->
+        <svg style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;" viewBox="0 0 240 190" fill="none">
+          <defs>
+            <radialGradient id="lc2" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#0a0a14"/>
+              <stop offset="100%" stop-color="#06060C"/>
+            </radialGradient>
+            <linearGradient id="fl2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#07070E" stop-opacity="1"/>
+              <stop offset="30%" stop-color="#07070E" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <circle cx="200" cy="95" r="150" fill="#0C0C18" stroke="#1A1A26" stroke-width="1"/>
+          <circle cx="200" cy="95" r="120" fill="url(#lc2)"/>
+          <circle cx="200" cy="95" r="88" fill="#05050C"/>
+          <circle cx="200" cy="95" r="56" fill="#030308"/>
+          <circle cx="200" cy="95" r="28" fill="#020205"/>
+          <circle cx="200" cy="95" r="10" fill="#010103"/>
+          <rect x="0" y="0" width="240" height="190" fill="url(#fl2)"/>
+        </svg>
+
+        <!-- Wordmark -->
+        <div style="position:absolute; bottom:14px; left:18px; z-index:10; display:flex; align-items:center; gap:1px;">
+          <span style="font-family:'Helvetica Neue',sans-serif; font-size:11px; font-weight:300; color:#7A7A96; letter-spacing:-0.2px;">smart</span>
+          <div style="width:3px;height:3px;background:#3E82F7;border-radius:50%;margin-bottom:1px;flex-shrink:0;"></div>
+          <span style="font-family:'Helvetica Neue',sans-serif; font-size:11px; font-weight:700; color:#F2F2F6; letter-spacing:-0.2px;">base</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="max-width:520px; margin: 8px auto 0; padding: 0 8px;">
+  <p class="subtitle" style="line-height:1.7; text-align:center;">
+    Por fora: preto, câmera, silêncio. Na hora de abrir: azul <span style="color:#3E82F7;">#3E82F7</span> — a cor da marca. O produto está dentro, mas a experiência começa antes. Como uma tela acendendo.
+  </p>
+</div>

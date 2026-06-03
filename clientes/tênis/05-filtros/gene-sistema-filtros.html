@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>GENE · Sistema de Filtros</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bone: #F2EFE9;
+    --carbon: #0D0D0D;
+    --acid: #C4FF3C;
+    --slate: #A6A4A1;
+    --press: #8CA62D;
+    --bloom: #B97580;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bone);
+    color: var(--carbon);
+    font-family: 'IBM Plex Mono', monospace;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ================ HERO ================ */
+  .hero {
+    background: var(--carbon);
+    color: var(--bone);
+    padding: 80px 64px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 240px;
+    width: 100%;
+    height: 22px;
+    background: var(--acid);
+  }
+
+  .hero-kicker {
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--acid);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 140px;
+    line-height: 0.85;
+    letter-spacing: -4px;
+    color: var(--bone);
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-sub {
+    margin-top: 48px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    max-width: 580px;
+    color: var(--slate);
+    line-height: 1.7;
+  }
+
+  .hero-meta {
+    margin-top: 64px;
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid rgba(242,239,233,0.15);
+    padding-top: 24px;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  /* ================ NAV INDEX ================ */
+  .index {
+    padding: 48px 64px;
+    border-bottom: 2px solid var(--carbon);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .index-item {
+    border-left: 3px solid var(--acid);
+    padding-left: 20px;
+  }
+
+  .index-item-number {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--carbon);
+  }
+
+  .index-item-title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-top: 12px;
+    color: var(--carbon);
+  }
+
+  .index-item-desc {
+    font-size: 13px;
+    color: var(--slate);
+    margin-top: 8px;
+  }
+
+  /* ================ SEÇÕES ================ */
+  .section {
+    padding: 96px 64px;
+    border-bottom: 1px solid rgba(13,13,13,0.1);
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--acid);
+    display: inline-block;
+  }
+
+  .section h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 88px;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .section-intro {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 720px;
+    color: var(--carbon);
+    margin-bottom: 48px;
+  }
+
+  /* ================ 01 · PRESET ================ */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .compare-item {
+    border: 1px solid var(--carbon);
+    overflow: hidden;
+  }
+
+  .compare-sample {
+    aspect-ratio: 1 / 1;
+    position: relative;
+  }
+
+  .compare-sample.a {
+    background: radial-gradient(ellipse at 30% 40%, #d4a574 0%, #8a6540 40%, #3a2818 100%);
+  }
+
+  .compare-sample.b {
+    background: linear-gradient(180deg, #e8d5b7 0%, #c4a57d 50%, #6b4a2e 100%);
+  }
+
+  .compare-sample.c {
+    background: radial-gradient(circle at 60% 30%, #f5e6d3 0%, #c9a882 35%, #4a3524 100%);
+  }
+
+  .compare-sample.raw {
+    filter: saturate(1.25) contrast(1.1);
+  }
+
+  .compare-sample.gene {
+    filter: brightness(1.05) contrast(0.92) saturate(0.88) sepia(0.08) hue-rotate(-3deg);
+  }
+
+  .compare-sample.gene::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-radial-gradient(circle at 20% 30%, transparent 0, transparent 1px, rgba(255,255,255,0.02) 1px, rgba(255,255,255,0.02) 2px),
+      repeating-radial-gradient(circle at 70% 80%, transparent 0, transparent 1px, rgba(0,0,0,0.03) 1px, rgba(0,0,0,0.03) 2px);
+    mix-blend-mode: overlay;
+  }
+
+  .compare-caption {
+    background: var(--carbon);
+    color: var(--bone);
+    padding: 12px 16px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .compare-caption.gene {
+    background: var(--acid);
+    color: var(--carbon);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .value-card {
+    border: 1px solid var(--carbon);
+    padding: 16px;
+  }
+
+  .value-card-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 6px;
+  }
+
+  .value-card-number {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  /* ================ 02 · OVERLAY HUD ================ */
+  .hud-preview {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 48px;
+    margin-top: 32px;
+  }
+
+  .hud-mock {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: linear-gradient(135deg, #3a2818 0%, #8a6540 50%, #d4a574 100%);
+    filter: brightness(1.05) contrast(0.92) saturate(0.88) sepia(0.08);
+    overflow: hidden;
+  }
+
+  .hud-mock-portrait {
+    position: relative;
+    aspect-ratio: 9 / 16;
+    background: linear-gradient(160deg, #4a3524 0%, #c4a57d 60%, #e8d5b7 100%);
+    filter: brightness(1.05) contrast(0.92) saturate(0.88) sepia(0.08);
+    overflow: hidden;
+  }
+
+  .hud-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .hud-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--acid);
+  }
+  .hud-corner.tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+  .hud-corner.tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+  .hud-corner.bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+  .hud-corner.br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+  .hud-sku {
+    position: absolute;
+    top: 22px;
+    left: 72px;
+    background: var(--carbon);
+    color: var(--acid);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    padding: 5px 8px;
+    font-weight: 500;
+  }
+
+  .hud-coords {
+    position: absolute;
+    top: 28px;
+    right: 72px;
+    color: var(--bone);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+  .hud-coords span { color: var(--acid); }
+
+  .hud-divider {
+    position: absolute;
+    bottom: 60px;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: var(--acid);
+  }
+
+  .hud-footer {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    right: 22px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--bone);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+
+  .hud-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--acid);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+  }
+
+  .hud-center::before, .hud-center::after {
+    content: "";
+    position: absolute;
+    background: var(--acid);
+  }
+  .hud-center::before {
+    top: 50%; left: -4px; width: 30px; height: 1px; transform: translateY(-50%);
+  }
+  .hud-center::after {
+    left: 50%; top: -4px; width: 1px; height: 30px; transform: translateX(-50%);
+  }
+
+  /* ================ 03 · AR FILTER ================ */
+  .ar-mock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .ar-phone {
+    aspect-ratio: 9 / 16;
+    background: var(--carbon);
+    border: 3px solid var(--carbon);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ar-phone-mode-1 {
+    background: linear-gradient(160deg, #1a1a1a 0%, #3a2818 100%);
+  }
+
+  .ar-phone-mode-2 {
+    background: linear-gradient(160deg, #4a3524 0%, #c4a57d 60%, #e8d5b7 100%);
+    filter: brightness(1.05) contrast(0.92) saturate(0.88) sepia(0.08);
+  }
+
+  .ar-phone-mode-3 {
+    background: linear-gradient(160deg, #C4FF3C 0%, #a8e830 100%);
+  }
+
+  .ar-mode-label {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(13,13,13,0.7);
+    color: var(--bone);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    padding: 6px 12px;
+    border-radius: 3px;
+    backdrop-filter: blur(4px);
+  }
+
+  .ar-badge {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background: var(--acid);
+    color: var(--carbon);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    padding: 4px 8px;
+    font-weight: 500;
+  }
+
+  .ar-phone-label {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--bone);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .ar-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .kpi-card {
+    border: 1px solid var(--carbon);
+    padding: 20px;
+    background: var(--carbon);
+    color: var(--bone);
+  }
+
+  .kpi-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--acid);
+    margin-bottom: 8px;
+  }
+
+  .kpi-number {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--bone);
+  }
+
+  .kpi-desc {
+    font-size: 11px;
+    color: var(--slate);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ================ FLUXO ================ */
+  .flow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+    align-items: stretch;
+  }
+
+  .flow-step {
+    border: 1px solid var(--carbon);
+    padding: 20px;
+    position: relative;
+  }
+
+  .flow-step-number {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--acid);
+    margin-bottom: 12px;
+  }
+
+  .flow-step-title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .flow-step-desc {
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+
+  /* ================ FOOTER ================ */
+  .footer {
+    background: var(--carbon);
+    color: var(--bone);
+    padding: 48px 64px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  .footer-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--acid);
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  /* ================ CALLOUT ================ */
+  .callout {
+    background: var(--carbon);
+    color: var(--bone);
+    padding: 40px 48px;
+    margin: 48px 0;
+    position: relative;
+  }
+
+  .callout-label {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--acid);
+    margin-bottom: 16px;
+  }
+
+  .callout h3 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+
+  .callout p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(242,239,233,0.85);
+    max-width: 640px;
+  }
+
+  .callout p strong {
+    color: var(--acid);
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================ HERO ================ -->
+<div class="hero">
+  <div class="hero-kicker">◆ SISTEMA DE FILTROS · v1.0</div>
+  <h1>LOOK<br>GENE.</h1>
+  <p class="hero-sub">
+    Três camadas que fazem qualquer foto virar conteúdo reconhecível da marca: preset de cor editorial,
+    overlay gráfico técnico, e filtro AR pra Instagram. Juntas, formam o DNA visual da Gene em movimento.
+  </p>
+  <div class="hero-meta">
+    <span><span class="footer-dot"></span>DROP-26</span>
+    <span>21.04.2026</span>
+    <span>LANÇAMENTO PÚBLICO</span>
+  </div>
+</div>
+
+<!-- ================ INDEX ================ -->
+<div class="index">
+  <div class="index-item">
+    <div class="index-item-number">01</div>
+    <div class="index-item-title">Preset Daylight</div>
+    <div class="index-item-desc">Lightroom + VSCO + CSS. A cor-raiz que ancora o ambiente editorial.</div>
+  </div>
+  <div class="index-item">
+    <div class="index-item-number">02</div>
+    <div class="index-item-title">Overlay HUD</div>
+    <div class="index-item-desc">Frame gráfico técnico (crosshairs, SKU, coordenadas) em 4:5 e 9:16.</div>
+  </div>
+  <div class="index-item">
+    <div class="index-item-number">03</div>
+    <div class="index-item-title">Filtro AR</div>
+    <div class="index-item-desc">Spark AR pra Instagram Story. O filtro que vira logo em movimento.</div>
+  </div>
+</div>
+
+<!-- ================ 01 · PRESET ================ -->
+<div class="section">
+  <div class="section-label">PEÇA 01 DE 03</div>
+  <h2>PRESET<br>DAYLIGHT.</h2>
+  <p class="section-intro">
+    Antes do overlay, antes do AR, existe a cor. O preset Daylight é o primeiro filtro que toda
+    foto da Gene passa — warm, dessaturado, com grão discreto. É o que separa o feed da Gene
+    do feed de revenda genérica. Referência: Kinfolk, Aimé Leon Dore, Kodak Portra 400.
+  </p>
+
+  <div class="compare-grid">
+    <div class="compare-item">
+      <div class="compare-sample a raw"></div>
+      <div class="compare-caption"><span>ANTES</span><span>RAW</span></div>
+    </div>
+    <div class="compare-item">
+      <div class="compare-sample a gene"></div>
+      <div class="compare-caption gene"><span>DEPOIS</span><span>GENE</span></div>
+    </div>
+    <div class="compare-item">
+      <div class="compare-sample b gene"></div>
+      <div class="compare-caption gene"><span>GENE</span><span>VARIAÇÃO 2</span></div>
+    </div>
+  </div>
+
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-card-label">Temp</div>
+      <div class="value-card-number">+8</div>
+    </div>
+    <div class="value-card">
+      <div class="value-card-label">Sat</div>
+      <div class="value-card-number">−12</div>
+    </div>
+    <div class="value-card">
+      <div class="value-card-label">Highlights</div>
+      <div class="value-card-number">−25</div>
+    </div>
+    <div class="value-card">
+      <div class="value-card-label">Shadows</div>
+      <div class="value-card-number">+15</div>
+    </div>
+    <div class="value-card">
+      <div class="value-card-label">Contrast</div>
+      <div class="value-card-number">−10</div>
+    </div>
+    <div class="value-card">
+      <div class="value-card-label">Grain</div>
+      <div class="value-card-number">20</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">◆ POR QUE FUNCIONA</div>
+    <h3>A COR É O FILTRO MENTAL.</h3>
+    <p>
+      Antes de ler o logo, antes de notar a tipografia, o feed do usuário lê a <strong>paleta</strong>.
+      Dessaturar controladamente + puxar pro warm = código visual editorial. É o que o feed do Aimé Leon Dore faz,
+      é o que a Kinfolk fez por 10 anos. Sem esse filtro, qualquer foto de tênis parece marketplace.
+    </p>
+  </div>
+</div>
+
+<!-- ================ 02 · OVERLAY HUD ================ -->
+<div class="section">
+  <div class="section-label">PEÇA 02 DE 03</div>
+  <h2>OVERLAY<br>HUD.</h2>
+  <p class="section-intro">
+    Frame gráfico transparente que vai por cima da foto. Crosshairs nos cantos, SKU no topo,
+    coordenadas, divider Acid, frame counter. Não é decoração — é o sistema técnico da marca
+    invadindo a imagem. Mesma lógica dos selos (IBM Plex Mono como linguagem modifier técnico),
+    agora em camada de frame.
+  </p>
+
+  <div class="hud-preview">
+    <!-- 4:5 -->
+    <div>
+      <div class="hud-mock">
+        <div class="hud-layer">
+          <div class="hud-corner tl"></div>
+          <div class="hud-corner tr"></div>
+          <div class="hud-corner bl"></div>
+          <div class="hud-corner br"></div>
+          <div class="hud-sku">SKU · GN-AJ1-26</div>
+          <div class="hud-coords"><span>◆</span> 23°S · 46°W</div>
+          <div class="hud-center"></div>
+          <div class="hud-divider"></div>
+          <div class="hud-footer">
+            <span>21.04 / DROP-26</span>
+            <span>FRAME 001 / 036</span>
+          </div>
+        </div>
+      </div>
+      <div class="compare-caption"><span>OVERLAY · 4:5</span><span>FEED</span></div>
+    </div>
+
+    <!-- 9:16 -->
+    <div>
+      <div class="hud-mock-portrait">
+        <div class="hud-layer">
+          <div class="hud-corner tl"></div>
+          <div class="hud-corner tr"></div>
+          <div class="hud-corner bl"></div>
+          <div class="hud-corner br"></div>
+          <div class="hud-sku">SKU · GN-AJ1-26</div>
+          <div class="hud-coords"><span>◆</span> 23°S · 46°W</div>
+          <div class="hud-center"></div>
+          <div class="hud-divider"></div>
+          <div class="hud-footer">
+            <span>21.04</span>
+            <span>001/036</span>
+          </div>
+        </div>
+      </div>
+      <div class="compare-caption"><span>OVERLAY · 9:16</span><span>STORY</span></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">◆ COMO USAR</div>
+    <h3>FRAME GENE =<br>FOTO GENE.</h3>
+    <p>
+      Toda foto de produto passa por 2 camadas: <strong>preset de cor</strong> + <strong>overlay HUD</strong>.
+      O overlay não precisa estar em 100% das fotos (muito overlay cansa) — reserve pra hero shots, posts
+      de lançamento e capas de carousel. Fotos "quietas" só com preset. Alternância = ritmo de feed.
+    </p>
+  </div>
+</div>
+
+<!-- ================ 03 · AR FILTER ================ -->
+<div class="section">
+  <div class="section-label">PEÇA 03 DE 03</div>
+  <h2>FILTRO<br>AR.</h2>
+  <p class="section-intro">
+    O filtro de Instagram que transforma o pé do usuário em "Gene". Tap alterna modos (Carbon / Daylight / Acid),
+    device rotation dispara animação do divider, badge ORDER OPEN pulsa e leva pro drop. UGC em loop:
+    cada story do usuário vira mídia da marca. Construído em Spark AR Studio.
+  </p>
+
+  <div class="ar-mock">
+    <div class="ar-phone ar-phone-mode-1">
+      <div class="ar-mode-label">MODE · 01 / CARBON</div>
+      <div class="ar-badge">ORDER OPEN</div>
+      <div class="ar-phone-label">tap para alternar</div>
+    </div>
+    <div class="ar-phone ar-phone-mode-2">
+      <div class="ar-mode-label">MODE · 02 / DAYLIGHT</div>
+      <div class="ar-badge">ORDER OPEN</div>
+      <div class="ar-phone-label">o look editorial</div>
+    </div>
+    <div class="ar-phone ar-phone-mode-3">
+      <div class="ar-mode-label" style="background:rgba(13,13,13,0.85);">MODE · 03 / ACID</div>
+      <div class="ar-badge" style="background:var(--carbon);color:var(--acid);">ORDER OPEN</div>
+      <div class="ar-phone-label" style="color:var(--carbon);font-weight:500;">gire pra disparar</div>
+    </div>
+  </div>
+
+  <div class="ar-kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Impressions</div>
+      <div class="kpi-number">100k</div>
+      <div class="kpi-desc">meta primeiras 72h</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Captures</div>
+      <div class="kpi-number">2.000</div>
+      <div class="kpi-desc">stories publicados em 7d</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Share rate</div>
+      <div class="kpi-number">35%</div>
+      <div class="kpi-desc">capture → story publicado</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Tap → drop</div>
+      <div class="kpi-number">8%</div>
+      <div class="kpi-desc">badge ORDER OPEN clicado</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">◆ POR QUE FUNCIONA</div>
+    <h3>O LOGO<br>EM MOVIMENTO.</h3>
+    <p>
+      A lógica do UGC: <strong>cada usuário que usa o filtro vira mídia da marca</strong>. É o que a Prada fez com
+      o mirror filter, o que a Gentle Monster faz com seus AR. O filtro não é um brinde — é um canal de
+      aquisição que escala sozinho. <strong>1 filtro viral = 100k impressions por &lt;R$15k de produção.</strong>
+    </p>
+  </div>
+</div>
+
+<!-- ================ FLUXO OPERACIONAL ================ -->
+<div class="section">
+  <div class="section-label">FLUXO OPERACIONAL</div>
+  <h2>DA FOTO<br>AO FEED.</h2>
+  <p class="section-intro">
+    Como o sistema roda na prática. Cada peça acende uma camada, e juntas formam a assinatura Gene.
+    Nada disso funciona isolado — é sistema, não peça única.
+  </p>
+
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-step-number">01</div>
+      <div class="flow-step-title">Captura</div>
+      <div class="flow-step-desc">RAW, luz lateral natural, 50mm equivalente.</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-number">02</div>
+      <div class="flow-step-title">Preset</div>
+      <div class="flow-step-desc">Lightroom aplica Gene · Daylight. Batch no import.</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-number">03</div>
+      <div class="flow-step-title">Overlay</div>
+      <div class="flow-step-desc">Photoshop/Canva sobrepõe HUD em hero shots.</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-number">04</div>
+      <div class="flow-step-title">Publicação</div>
+      <div class="flow-step-desc">Feed 4:5, story 9:16, reel cover 9:16.</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-number">05</div>
+      <div class="flow-step-title">AR Loop</div>
+      <div class="flow-step-desc">Usuário abre filtro, gera UGC, @gene.sneakers reposta.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================ ARQUIVOS ================ -->
+<div class="section">
+  <div class="section-label">ARQUIVOS ENTREGUES</div>
+  <h2>ASSETS.</h2>
+  <div style="font-size:14px;line-height:2;max-width:720px;">
+    <div>◆ <strong>gene-preset-daylight.md</strong> — valores Lightroom, VSCO, CapCut, CSS</div>
+    <div>◆ <strong>gene-preset-preview.html</strong> — preview visual antes/depois</div>
+    <div>◆ <strong>gene-overlay-hud-4x5.svg</strong> — overlay feed (1080×1350)</div>
+    <div>◆ <strong>gene-overlay-hud-9x16.svg</strong> — overlay story (1080×1920)</div>
+    <div>◆ <strong>gene-ar-filter-spec.md</strong> — spec Spark AR pro designer 3D</div>
+    <div>◆ <strong>gene-sistema-filtros.html</strong> — esta página (master doc)</div>
+  </div>
+</div>
+
+<!-- ================ FOOTER ================ -->
+<div class="footer">
+  <div><span class="footer-dot"></span>GENE · SISTEMA DE FILTROS</div>
+  <div>v1.0 · 21.04.2026</div>
+  <div>DROP-26 · PRONTO PRA USO</div>
+</div>
+
+</body>
+</html>

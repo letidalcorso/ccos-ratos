@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');</style>
+  </defs>
+
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- PLACEHOLDER imagem de fundo -->
+  <rect x="0" y="0" width="1080" height="1350" fill="#0C0C18" stroke="#1E1E2E" stroke-width="2" stroke-dasharray="16,10" opacity="0.4"/>
+  <text x="540" y="1160" font-family="'Inter', sans-serif" font-size="16" fill="#252538" text-anchor="middle">[ imagem de fundo — produto ou ambiente ]</text>
+  <rect x="0" y="500" width="1080" height="850" fill="#07070E" opacity="0.8"/>
+
+  <!-- Label + Counter -->
+  <text x="80" y="117" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="#3E82F7" letter-spacing="1.5">PRODUTO</text>
+  <text x="1000" y="120" font-family="'Inter', sans-serif" font-size="22" font-weight="500" fill="#7A7A96" text-anchor="end">5/5</text>
+  <rect x="80" y="148" width="100" height="7" rx="3.5" fill="#3E82F7"/>
+
+  <!-- Headline -->
+  <text x="80" y="600" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="800" fill="#F2F2F6">você chegou</text>
+  <text x="80" y="688" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="800" fill="#F2F2F6">até aqui.</text>
+  <text x="80" y="800" font-family="'Bricolage Grotesque', sans-serif" font-size="60" font-weight="700" fill="#C0C0D0">agora é só escolher</text>
+  <text x="80" y="872" font-family="'Bricolage Grotesque', sans-serif" font-size="60" font-weight="700" fill="#3E82F7">quem entrega.</text>
+
+  <!-- Selos -->
+  <rect x="80" y="940" width="200" height="34" rx="17" fill="#0A201A"/>
+  <text x="103" y="963" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#10B981">✓  garantia</text>
+
+  <rect x="296" y="940" width="220" height="34" rx="17" fill="#0A201A"/>
+  <text x="319" y="963" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#10B981">✓  nota fiscal</text>
+
+  <rect x="532" y="940" width="256" height="34" rx="17" fill="#0A201A"/>
+  <text x="555" y="963" font-family="'Inter', sans-serif" font-size="18" font-weight="700" fill="#10B981">✓  suporte direto</text>
+
+  <!-- Body -->
+  <text x="80" y="1040" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#7A7A96">sem importação, sem dor de cabeça.</text>
+
+  <!-- CTA Button -->
+  <rect x="80" y="1090" width="340" height="60" rx="30" fill="#3E82F7"/>
+  <text x="250" y="1128" font-family="'Inter', sans-serif" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">chama no WhatsApp →</text>
+
+  <!-- Footer Divider -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="300" fill="#C0C0D0">smart</text>
+  <circle cx="145" cy="1291" r="5" fill="#3E82F7"/>
+  <text x="155" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">base</text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

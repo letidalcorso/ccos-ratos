@@ -1,0 +1,78 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.2" y1="0" x2="0.8" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#071830"/>
+    <stop offset="55%"  stop-color="#050F20"/>
+    <stop offset="100%" stop-color="#020608"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="30%" cy="55%" r="60%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(26,111,192,0.30)"/>
+    <stop offset="100%" stop-color="rgba(26,111,192,0.00)"/>
+  </radialGradient>
+  <linearGradient id="card-grad" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(26,111,192,0.20)"/>
+    <stop offset="100%" stop-color="rgba(26,111,192,0.06)"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1920" fill="url(#bg)"/>
+<rect width="1080" height="1920" fill="url(#glow)"/>
+<pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+  <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.055)" stroke-width="1.5"/>
+</pattern>
+<rect width="1080" height="1920" fill="url(#dots)"/>
+<polygon points="0,0 300,0 0,300" fill="rgba(91,184,240,0.05)"/>
+<polygon points="1080,1920 780,1920 1080,1620" fill="rgba(91,184,240,0.04)"/>
+
+<!-- Logo -->
+<text x="540" y="130" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="380" y1="150" x2="700" y2="150" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+
+<!-- Story progress (3rd active) -->
+<rect x="60"  y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+<rect x="283" y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+<rect x="506" y="56" width="213" height="8" rx="4" fill="#FFFFFF"/>
+<rect x="729" y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+
+<!-- "Para você, serralheiro" tag -->
+<rect x="240" y="196" width="600" height="58" rx="29" fill="rgba(91,184,240,0.14)"/>
+<rect x="240" y="196" width="600" height="58" rx="29" fill="none" stroke="rgba(91,184,240,0.35)" stroke-width="1.5"/>
+<text x="540" y="232" font-family="'Sora', sans-serif" font-weight="700" font-size="24" fill="#5BB8F0" text-anchor="middle" letter-spacing="3">PARA VOCÊ, SERRALHEIRO</text>
+
+<!-- Main statement -->
+<text x="60" y="440" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#FFFFFF" letter-spacing="2">ESSA LINHA FOI</text>
+<text x="60" y="560" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#FFFFFF" letter-spacing="2">PENSADA PRA</text>
+<text x="60" y="680" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#5BB8F0" letter-spacing="2">VOCÊ PRODUZIR</text>
+<text x="60" y="800" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#5BB8F0" letter-spacing="2">MAIS RÁPIDO.</text>
+
+<line x1="60" y1="852" x2="680" y2="852" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+
+<!-- Two benefit pills side by side -->
+<rect x="60"  y="892" width="448" height="100" rx="16" fill="url(#card-grad)"/>
+<rect x="60"  y="892" width="448" height="100" rx="16" fill="none" stroke="rgba(91,184,240,0.30)" stroke-width="1.5"/>
+<text x="284" y="936" font-family="'Sora', sans-serif" font-weight="700" font-size="38" fill="#FFFFFF" text-anchor="middle">+ Velocidade</text>
+<text x="284" y="974" font-family="'Sora', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.55)" text-anchor="middle">na produção</text>
+
+<rect x="524" y="892" width="496" height="100" rx="16" fill="url(#card-grad)"/>
+<rect x="524" y="892" width="496" height="100" rx="16" fill="none" stroke="rgba(91,184,240,0.30)" stroke-width="1.5"/>
+<text x="772" y="936" font-family="'Sora', sans-serif" font-weight="700" font-size="38" fill="#FFFFFF" text-anchor="middle">+ Margem</text>
+<text x="772" y="974" font-family="'Sora', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.55)" text-anchor="middle">no orçamento</text>
+
+<!-- Body copy -->
+<text x="60" y="1072" font-family="'Sora', sans-serif" font-weight="400" font-size="44" fill="rgba(255,255,255,0.75)">Tecnologia exclusiva que facilita</text>
+<text x="60" y="1124" font-family="'Sora', sans-serif" font-weight="400" font-size="44" fill="rgba(255,255,255,0.75)">a montagem — e se justifica</text>
+<text x="60" y="1176" font-family="'Sora', sans-serif" font-weight="400" font-size="44" fill="rgba(255,255,255,0.75)">no preço que você cobra.</text>
+
+<line x1="60" y1="1228" x2="500" y2="1228" stroke="rgba(91,184,240,0.30)" stroke-width="1.5"/>
+
+<text x="60" y="1300" font-family="'Sora', sans-serif" font-weight="300" font-size="40" fill="rgba(255,255,255,0.48)">O produto que se vende sozinho</text>
+<text x="60" y="1350" font-family="'Sora', sans-serif" font-weight="300" font-size="40" fill="rgba(255,255,255,0.48)">para o seu cliente.</text>
+
+<!-- Swipe hint -->
+<text x="540" y="1480" font-family="'Sora', sans-serif" font-weight="300" font-size="34" fill="rgba(255,255,255,0.32)" text-anchor="middle">Arraste para ver mais  ›</text>
+
+<!-- Footer -->
+<text x="540" y="1874" font-family="'Sora', sans-serif" font-weight="700" font-size="32" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="5">FTEMPER</text>
+<text x="540" y="1908" font-family="'Sora', sans-serif" font-weight="300" font-size="24" fill="rgba(255,255,255,0.28)" text-anchor="middle">@ftempercomponentes</text>
+</svg>

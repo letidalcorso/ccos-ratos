@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');</style>
+  </defs>
+
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <rect x="0" y="0" width="4" height="1350" fill="#8B5CF6"/>
+
+  <!-- Label + Counter -->
+  <text x="80" y="117" font-family="'Inter', sans-serif" font-size="22" font-weight="700" fill="#8B5CF6" letter-spacing="1.5">IDENTIDADE</text>
+  <text x="1000" y="120" font-family="'Inter', sans-serif" font-size="22" font-weight="500" fill="#7A7A96" text-anchor="end">2/3</text>
+  <rect x="80" y="148" width="100" height="7" rx="3.5" fill="#8B5CF6"/>
+
+  <!-- Headline -->
+  <text x="80" y="280" font-family="'Bricolage Grotesque', sans-serif" font-size="76" font-weight="800" fill="#F2F2F6">não entregamos</text>
+  <text x="80" y="368" font-family="'Bricolage Grotesque', sans-serif" font-size="76" font-weight="800" fill="#8B5CF6">só o iPhone.</text>
+
+  <!-- Itens -->
+  <rect x="80" y="440" width="920" height="80" rx="6" fill="#1C1028"/>
+  <rect x="80" y="440" width="5" height="80" fill="#8B5CF6"/>
+  <text x="114" y="478" font-family="'Inter', sans-serif" font-size="26" font-weight="500" fill="#C0C0D0">conta Apple ID criada.</text>
+  <text x="114" y="508" font-family="'Inter', sans-serif" font-size="22" font-weight="400" fill="#7A7A96">configurada no aparelho antes de sair.</text>
+
+  <rect x="80" y="540" width="920" height="80" rx="6" fill="#0F0F1C"/>
+  <rect x="80" y="540" width="5" height="80" fill="#8B5CF6"/>
+  <text x="114" y="578" font-family="'Inter', sans-serif" font-size="26" font-weight="500" fill="#C0C0D0">aplicativos instalados.</text>
+  <text x="114" y="608" font-family="'Inter', sans-serif" font-size="22" font-weight="400" fill="#7A7A96">o que você usa no dia a dia, já está lá.</text>
+
+  <rect x="80" y="640" width="920" height="80" rx="6" fill="#0F0F1C"/>
+  <rect x="80" y="640" width="5" height="80" fill="#8B5CF6"/>
+  <text x="114" y="678" font-family="'Inter', sans-serif" font-size="26" font-weight="500" fill="#C0C0D0">tudo configurado antes de chegar.</text>
+  <text x="114" y="708" font-family="'Inter', sans-serif" font-size="22" font-weight="400" fill="#7A7A96">abre a caixa e já usa.</text>
+
+  <!-- Footer Divider -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="300" fill="#C0C0D0">smart</text>
+  <circle cx="145" cy="1291" r="5" fill="#3E82F7"/>
+  <text x="155" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">base</text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

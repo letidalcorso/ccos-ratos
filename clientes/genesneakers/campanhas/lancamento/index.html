@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gene Sneakers — Acesso aos tênis que o Brasil vai querer. Antes do varejo nacional decidir trazer. Sem o markup que não faz sentido.">
+<title>Gene Sneakers — Estilo nos pés.</title>
+
+<!-- Modo preview: bloqueia indexação enquanto LP estiver em validação. Remover ANTES de subir pra produção. -->
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gene Sneakers — Estilo nos pés.">
+<meta property="og:description" content="O tênis certo. Antes do varejo. Sem o markup nacional.">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#080808">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;900&family=Big+Shoulders+Text:wght@400;500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23080808"/><text x="50" y="68" font-family="Arial Black,sans-serif" font-size="64" font-weight="900" fill="%23C4FF3C" text-anchor="middle">G</text></svg>'>
+
+<style>
+:root{
+  --carbon:#0D0D0D;
+  --carbon-deep:#080808;
+  --carbon-mid:#161616;
+  --bone:#F2EFE9;
+  --bone-70:#F2EFE9b3;
+  --bone-50:#F2EFE980;
+  --bone-30:#F2EFE94d;
+  --acid:#C4FF3C;
+  --press:#8CA62D;
+  --slate:#A6A4A1;
+  --bloom-mid:#E8B5BD;
+  --bloom-deep:#B97580;
+  --peach:#FBDFC5;
+  --chrome-deep:#141D26;
+  --chrome-mid:#2A3845;
+  --chrome-light:#8FA5B5;
+  --chrome-ink:#E8ECF0;
+  --display:'Big Shoulders Display',Impact,sans-serif;
+  --text:'Big Shoulders Text','Helvetica Neue',sans-serif;
+  --mono:'IBM Plex Mono',Menlo,monospace;
+  --condensed:'IBM Plex Sans Condensed',sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  font-family:var(--text);
+  background:var(--carbon-deep);
+  color:var(--bone);
+  line-height:1.5;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:transparent}
+
+/* ============= NAV ============= */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 20px;
+  background:rgba(8,8,8,0.85);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid #ffffff14;
+}
+.nav__brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:0.02em}
+.nav__brand svg{width:22px;height:22px}
+.nav__brand span:last-child{font-family:var(--condensed);font-weight:600;font-size:11px;letter-spacing:0.18em;color:var(--acid);align-self:center;margin-left:2px}
+.nav__handle{font-family:var(--mono);font-size:11px;letter-spacing:0.06em;color:var(--bone-70)}
+.nav__handle:hover{color:var(--acid)}
+
+/* ============= HERO · ACID ============= */
+.hero{
+  position:relative;
+  min-height:100vh;
+  background:var(--acid);
+  color:var(--carbon);
+  padding:96px 20px 60px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  overflow:hidden;
+}
+.hero__top,.hero__main,.hero__bottom{position:relative;z-index:2}
+.hero__eyebrow{
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--carbon);
+  border-top:1px solid var(--carbon);border-bottom:1px solid var(--carbon);
+  padding:10px 0;
+}
+.hero__eyebrow span{display:flex;align-items:center;gap:8px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--carbon);display:inline-block;animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.55;transform:scale(0.9)}}
+.hero__main{margin:auto 0;padding:40px 0 20px}
+.hero__headline{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(56px,12vw,180px);
+  line-height:0.85;letter-spacing:-0.025em;
+  text-transform:uppercase;
+  color:var(--carbon);
+}
+.hero__headline em{font-style:normal;color:var(--carbon);position:relative;display:inline-block}
+.hero__headline em:after{content:"";position:absolute;left:-2%;bottom:6%;width:104%;height:14%;background:var(--carbon);z-index:-1;opacity:0;animation:reveal 1.4s 0.6s ease-out forwards}
+@keyframes reveal{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1);opacity:0;transform-origin:left}}
+.hero__sub{
+  font-family:var(--text);font-weight:400;
+  font-size:clamp(16px,2.2vw,22px);
+  line-height:1.45;
+  max-width:580px;
+  margin-top:24px;
+  color:var(--carbon);
+}
+.hero__cta-row{
+  margin-top:36px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:14px;
+  background:var(--carbon);color:var(--bone);
+  font-family:var(--display);font-weight:900;
+  font-size:18px;letter-spacing:0.04em;text-transform:uppercase;
+  padding:18px 28px;
+  border:1px solid var(--carbon);
+  transition:transform .18s ease,background .18s ease;
+}
+.btn-primary:hover{background:var(--carbon-deep);transform:translateY(-2px)}
+.btn-primary svg{width:20px;height:20px}
+.btn-arrow{display:inline-block;transition:transform .18s ease}
+.btn-primary:hover .btn-arrow{transform:translateX(4px)}
+.link-mono{
+  font-family:var(--mono);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--carbon);
+  border-bottom:1px solid var(--carbon);padding-bottom:2px;
+}
+.link-mono:hover{color:var(--press)}
+.hero__bottom{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--carbon);
+  margin-top:48px;
+  border-top:1px solid var(--carbon);
+  padding-top:14px;
+}
+.hero__bottom-left{display:flex;flex-direction:column;gap:4px}
+.hero__bottom-left b{font-weight:600;font-size:13px;letter-spacing:0.08em}
+.hero__scan{
+  position:absolute;left:0;right:0;bottom:0;height:2px;
+  background:var(--carbon);overflow:hidden;
+}
+.hero__scan:after{
+  content:"";position:absolute;top:0;left:-30%;width:30%;height:100%;
+  background:var(--bone);
+  animation:scan 4.5s ease-in-out infinite;
+}
+@keyframes scan{0%{left:-30%}50%{left:100%}100%{left:100%}}
+
+/* DNA helix em watermark */
+.hero__helix{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:55%;max-width:520px;opacity:0.18;z-index:1;pointer-events:none}
+
+/* ============= SECTION GENERIC ============= */
+.section{padding:80px 20px;border-top:1px solid #ffffff14}
+.section--carbon{background:var(--carbon);color:var(--bone)}
+.section--daylight{background:var(--bone);color:var(--carbon)}
+.section--chrome{background:linear-gradient(160deg,var(--chrome-deep) 0%,var(--chrome-mid) 100%);color:var(--chrome-ink)}
+.section__inner{max-width:1100px;margin:0 auto}
+.eyebrow{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 0;
+  border-top:1px solid currentColor;border-bottom:1px solid currentColor;
+  margin-bottom:32px;
+}
+.section--carbon .eyebrow{color:var(--acid);border-color:var(--acid)}
+.section--daylight .eyebrow{color:var(--press);border-color:var(--press)}
+.section--chrome .eyebrow{color:var(--acid);border-color:var(--acid)}
+.headline{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(40px,7vw,96px);
+  line-height:0.92;letter-spacing:-0.02em;
+  text-transform:uppercase;
+  margin-bottom:32px;
+}
+.headline .acc-bloom{color:var(--bloom-mid)}
+.section--daylight .headline .acc-bloom{color:var(--bloom-deep)}
+.section--chrome .headline .acc-bloom{color:var(--peach)}
+.body-copy{
+  font-family:var(--text);font-weight:400;
+  font-size:clamp(17px,1.7vw,20px);line-height:1.55;
+  max-width:680px;
+  margin-bottom:40px;
+}
+.section--carbon .body-copy{color:var(--bone-70)}
+.section--chrome .body-copy{color:var(--chrome-light)}
+
+/* ============= SECTION 01 · SOBRE ============= */
+.cards-3{display:grid;grid-template-columns:1fr;gap:1px;background:#ffffff14;border:1px solid #ffffff14;margin-top:48px}
+.section--daylight .cards-3{background:#0d0d0d1a;border-color:#0d0d0d1a}
+.card{padding:28px 24px;background:var(--carbon)}
+.section--daylight .card{background:var(--bone)}
+.card__num{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.18em;
+  color:var(--acid);margin-bottom:14px;
+}
+.section--daylight .card__num{color:var(--press)}
+.card__title{
+  font-family:var(--display);font-weight:900;font-size:32px;line-height:0.95;
+  letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:10px;
+}
+.card__body{font-size:15px;line-height:1.5;color:var(--bone-70)}
+.section--daylight .card__body{color:#0d0d0db3}
+@media(min-width:760px){.cards-3{grid-template-columns:repeat(3,1fr)}}
+
+/* ============= SECTION 02 · PRICE FRAME ============= */
+.price-frame{
+  margin-top:24px;
+  border:1px solid var(--carbon);
+  background:var(--bone);
+  padding:24px;
+  display:grid;gap:14px;
+  font-family:var(--mono);
+  max-width:560px;
+}
+.pf-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #0d0d0d33;padding-bottom:8px}
+.pf-row:last-of-type{border:0}
+.pf-label{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--carbon);font-weight:500}
+.pf-strike{text-decoration:line-through;color:#0d0d0d80;font-size:18px;font-weight:400}
+.pf-gene{color:var(--carbon);font-size:22px;font-weight:600;letter-spacing:-0.01em}
+.pf-delta{
+  display:flex;justify-content:space-between;align-items:center;
+  background:var(--acid);color:var(--carbon);
+  margin:0 -24px -24px;padding:14px 24px;
+  font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+}
+.pf-delta b{font-family:var(--display);font-weight:900;font-size:24px;letter-spacing:-0.01em}
+.pf-note{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;color:var(--slate);text-transform:uppercase;margin-top:14px}
+
+/* ============= SECTION 03 · CHROME PROCESSO ============= */
+.steps{display:grid;grid-template-columns:1fr;gap:14px;margin-top:48px}
+@media(min-width:780px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{
+  background:#0d0d0d4d;
+  border:1px solid #8fa5b533;
+  padding:32px 26px;
+  position:relative;
+  min-height:240px;
+}
+.step__num{
+  position:absolute;top:20px;right:20px;
+  font-family:var(--mono);font-size:48px;font-weight:500;line-height:1;
+  color:var(--acid);opacity:0.85;
+}
+.step__label{
+  font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:0.2em;
+  color:var(--acid);text-transform:uppercase;margin-bottom:18px;
+}
+.step__title{
+  font-family:var(--display);font-weight:900;font-size:36px;line-height:0.95;
+  letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:14px;color:var(--chrome-ink);
+}
+.step__body{font-size:14px;line-height:1.55;color:var(--chrome-light)}
+.status-pin{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:48px;
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--acid);
+  border:1px solid var(--acid);padding:8px 14px;
+}
+.status-pin .dot{background:var(--acid)}
+
+/* ============= SECTION 04 · FAQ ============= */
+.faq{margin-top:24px;border-top:1px solid #ffffff1f}
+details{
+  border-bottom:1px solid #ffffff1f;
+  padding:22px 0;
+}
+details summary{
+  list-style:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;gap:24px;
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(20px,2.6vw,28px);line-height:1.1;
+  letter-spacing:-0.005em;text-transform:uppercase;
+  color:var(--bone);
+}
+details summary::-webkit-details-marker{display:none}
+details summary:after{
+  content:"+";font-family:var(--mono);font-weight:500;font-size:24px;color:var(--acid);
+  transition:transform .25s ease;flex-shrink:0;
+}
+details[open] summary:after{content:"−"}
+details[open] summary{color:var(--acid)}
+.faq__answer{
+  margin-top:14px;font-size:16px;line-height:1.6;
+  color:var(--bone-70);max-width:720px;
+}
+
+/* ============= CTA FINAL · ACID ============= */
+.cta-final{
+  background:var(--acid);
+  color:var(--carbon);
+  padding:96px 20px;
+  position:relative;overflow:hidden;
+  border-top:1px solid var(--carbon);
+}
+.cta-final__inner{max-width:1100px;margin:0 auto}
+.cta-final .eyebrow{color:var(--carbon);border-color:var(--carbon)}
+.cta-final__headline{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(72px,18vw,260px);
+  line-height:0.82;letter-spacing:-0.04em;
+  text-transform:uppercase;
+  color:var(--carbon);margin-bottom:24px;
+}
+.cta-final__sub{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(20px,2.4vw,28px);line-height:1.2;
+  color:var(--carbon);margin-bottom:40px;
+}
+.cta-final__row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.cta-final .btn-primary{font-size:20px;padding:22px 32px}
+.email-form{
+  display:flex;flex-wrap:wrap;align-items:stretch;gap:0;
+  margin-top:48px;max-width:520px;
+  border:1px solid var(--carbon);
+}
+.email-form input{
+  flex:1;min-width:0;
+  border:0;background:transparent;
+  font-family:var(--mono);font-size:13px;letter-spacing:0.04em;
+  padding:14px 16px;color:var(--carbon);
+  outline:none;
+}
+.email-form input::placeholder{color:#0d0d0d80}
+.email-form button{
+  background:var(--carbon);color:var(--bone);
+  font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+  padding:14px 22px;
+  transition:background .18s ease;
+}
+.email-form button:hover{background:var(--press)}
+.email-form__label{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--carbon);margin-bottom:10px;display:block;
+}
+.email-form__success{
+  display:none;font-family:var(--mono);font-size:13px;letter-spacing:0.04em;
+  margin-top:12px;color:var(--carbon);font-weight:500;
+}
+.email-form.is-success{display:none}
+.email-form.is-success+.email-form__success{display:block}
+
+/* ============= FOOTER · CARBON DEEP ============= */
+.footer{
+  background:var(--carbon-deep);color:var(--bone);
+  padding:56px 20px 28px;
+  border-top:1px solid var(--acid);
+}
+.footer__inner{max-width:1100px;margin:0 auto;display:grid;gap:48px;grid-template-columns:1fr}
+@media(min-width:780px){.footer__inner{grid-template-columns:2fr 1fr 1fr}}
+.footer__brand{display:flex;flex-direction:column;gap:20px}
+.footer__wordmark{
+  display:flex;align-items:baseline;gap:10px;
+  font-family:var(--display);font-weight:900;font-size:64px;line-height:0.9;letter-spacing:-0.02em;
+}
+.footer__wordmark .sn{font-family:var(--condensed);font-weight:600;font-size:22px;letter-spacing:0.2em;color:var(--acid)}
+.footer__tagline{
+  font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--bone);
+}
+.footer__col h4{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.2em;
+  color:var(--slate);margin-bottom:14px;text-transform:uppercase;
+}
+.footer__col a,.footer__col span{
+  display:block;font-family:var(--text);font-size:15px;line-height:1.7;color:var(--bone);
+}
+.footer__col a:hover{color:var(--acid)}
+.footer__bottom{
+  margin-top:48px;padding-top:20px;border-top:1px solid #ffffff1f;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--slate);
+}
+.footer__bottom a:hover{color:var(--acid)}
+
+/* ============= UTILS ============= */
+.divider-acid{height:2px;background:var(--acid);margin:0 0 40px}
+.section--daylight .divider-acid{background:var(--press)}
+.kbd{font-family:var(--mono);font-size:11px;letter-spacing:0.12em}
+
+@media(max-width:560px){
+  .hero{padding:88px 20px 40px}
+  .section{padding:64px 20px}
+  .nav{padding:12px 16px}
+  .nav__brand{font-size:18px}
+  .footer__wordmark{font-size:44px}
+  .footer__wordmark .sn{font-size:16px}
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+
+/* ============= GATE / PREVIEW LOCK =============
+   Overlay bloqueia a LP até senha correta. Trocar a senha em window.GENE_PREVIEW_PASS.
+   Remover esse bloco inteiro ANTES de subir pra produção. */
+.gate{
+  position:fixed;inset:0;z-index:999;
+  background:var(--carbon-deep);
+  color:var(--bone);
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:40px 20px;
+  font-family:var(--text);
+}
+.gate__inner{max-width:520px;width:100%;text-align:left}
+.gate__eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--acid);
+  border-top:1px solid var(--acid);border-bottom:1px solid var(--acid);
+  padding:8px 0;display:inline-block;margin-bottom:32px;
+}
+.gate__title{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(40px,7vw,72px);line-height:0.92;
+  letter-spacing:-0.02em;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.gate__title em{font-style:normal;color:var(--acid)}
+.gate__sub{
+  font-size:16px;line-height:1.5;color:var(--bone-70);margin-bottom:32px;
+  max-width:440px;
+}
+.gate__form{display:flex;border:1px solid var(--bone);background:var(--carbon)}
+.gate__form input{
+  flex:1;border:0;background:transparent;
+  font-family:var(--mono);font-size:14px;letter-spacing:0.08em;
+  padding:16px 18px;color:var(--bone);outline:none;
+}
+.gate__form input::placeholder{color:#f2efe966}
+.gate__form button{
+  background:var(--acid);color:var(--carbon);
+  font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+  padding:0 22px;cursor:pointer;
+  border:0;
+  transition:background .18s ease;
+}
+.gate__form button:hover{background:var(--bone)}
+.gate__error{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.12em;
+  color:var(--bloom-mid);margin-top:14px;
+  min-height:16px;text-transform:uppercase;
+}
+.gate__footer{
+  margin-top:48px;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--slate);
+}
+body.is-locked{overflow:hidden}
+body.is-locked .gate{display:flex}
+body:not(.is-locked) .gate{display:none}
+</style>
+</head>
+<body class="is-locked">
+
+<!-- ===== GATE / PREVIEW LOCK · REMOVER ANTES DE LANÇAR ===== -->
+<div class="gate" id="gate" role="dialog" aria-label="Acesso restrito">
+  <div class="gate__inner">
+    <span class="gate__eyebrow">/PREVIEW · acesso restrito</span>
+    <h1 class="gate__title">Em validação<br><em>com cliente.</em></h1>
+    <p class="gate__sub">Essa página ainda não foi liberada publicamente. Se você recebeu o link e a senha, cole abaixo:</p>
+    <form class="gate__form" id="gateForm">
+      <input type="password" id="gatePass" placeholder="senha" autocomplete="off" required aria-label="Senha de acesso">
+      <button type="submit">Entrar →</button>
+    </form>
+    <div class="gate__error" id="gateError" aria-live="polite">&nbsp;</div>
+    <div class="gate__footer">/GENE.CODE · LP v1 · 25.04 — preview</div>
+  </div>
+</div>
+
+<script>
+// Senha do preview. TROCAR antes de enviar pro cliente.
+// Quando lançar publicamente, remover o gate (HTML + CSS + esse script).
+window.GENE_PREVIEW_PASS = "GENE2026";
+
+(function(){
+  var KEY = 'gene_preview_unlocked';
+  // Já foi destrancado neste browser? Libera direto.
+  try{
+    if (localStorage.getItem(KEY) === '1') {
+      document.body.classList.remove('is-locked');
+    }
+  } catch(e){}
+
+  var form = document.getElementById('gateForm');
+  var input = document.getElementById('gatePass');
+  var err = document.getElementById('gateError');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = (input.value || '').trim();
+    if (v === window.GENE_PREVIEW_PASS) {
+      try { localStorage.setItem(KEY, '1'); } catch(_){}
+      document.body.classList.remove('is-locked');
+      err.textContent = '';
+    } else {
+      err.textContent = '— Senha incorreta';
+      input.value = '';
+      input.focus();
+    }
+  });
+})();
+</script>
+
+
+<!-- ===== NAV ===== -->
+<nav class="nav" aria-label="Navegação">
+  <a class="nav__brand" href="#top" aria-label="Gene Sneakers — início">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M4 4 Q12 8 20 4 M4 8 Q12 12 20 8 M4 12 Q12 16 20 12 M4 16 Q12 20 20 16 M4 20 Q12 24 20 20"/>
+    </svg>
+    <span>GENE</span>
+    <span>SNEAKERS</span>
+  </a>
+  <a class="nav__handle" href="https://instagram.com/gene.sneakers" target="_blank" rel="noopener">@gene.sneakers</a>
+</nav>
+
+<!-- ===== HERO · ACID ===== -->
+<section class="hero" id="top">
+  <div class="hero__top">
+    <div class="hero__eyebrow">
+      <span><span class="dot"></span> /DROP-26 · ENCOMENDA ABERTA</span>
+      <span>2026 · BR</span>
+    </div>
+  </div>
+
+  <!-- DNA helix watermark -->
+  <svg class="hero__helix" viewBox="0 0 400 600" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M80 0 Q200 75 320 150 Q200 225 80 300 Q200 375 320 450 Q200 525 80 600" stroke="currentColor"/>
+    <path d="M320 0 Q200 75 80 150 Q200 225 320 300 Q200 375 80 450 Q200 525 320 600" stroke="currentColor"/>
+    <line x1="80" y1="0" x2="320" y2="0"/>
+    <line x1="320" y1="150" x2="80" y2="150"/>
+    <line x1="80" y1="300" x2="320" y2="300"/>
+    <line x1="320" y1="450" x2="80" y2="450"/>
+    <line x1="80" y1="600" x2="320" y2="600"/>
+  </svg>
+
+  <div class="hero__main">
+    <h1 class="hero__headline">
+      O brasil<br>
+      não precisa<br>
+      decidir<br>
+      <em>por você.</em>
+    </h1>
+    <p class="hero__sub">
+      Acesso aos tênis que o Brasil vai querer — antes do varejo nacional decidir trazer. Sem o markup que não faz sentido.
+    </p>
+    <div class="hero__cta-row">
+      <a class="btn-primary" href="https://wa.me/5554994494036?text=Oi%2C%20vim%20pela%20landing.%20Quero%20encomendar%20um%20modelo." target="_blank" rel="noopener">
+        Encomende no WhatsApp
+        <span class="btn-arrow">→</span>
+      </a>
+      <a class="link-mono" href="#argumento">ver como funciona ↓</a>
+    </div>
+  </div>
+
+  <div class="hero__bottom">
+    <div class="hero__bottom-left">
+      <span>/ESTILO NOS PÉS</span>
+      <b>GENE SNEAKERS · 2026</b>
+    </div>
+    <div>SCAN ▸ PEÇA ▸ RECEBE</div>
+  </div>
+
+  <div class="hero__scan" aria-hidden="true"></div>
+</section>
+
+<!-- ===== SECTION 01 · SOBRE · CARBON ===== -->
+<section class="section section--carbon" id="argumento">
+  <div class="section__inner">
+    <span class="eyebrow"><span class="dot" style="background:var(--acid)"></span> /01 · O QUE É A GENE</span>
+    <h2 class="headline">A nike lançou.<br>A gene <em class="acc-bloom">já tem.</em></h2>
+    <p class="body-copy">
+      Gene Sneakers é acesso. O tênis certo — Nike, Adidas, New Balance, o modelo que o Brasil vai querer em 6 meses — antes do varejo nacional decidir trazer. Você pede. A Gene traz. Sem o markup que não faz sentido.
+    </p>
+
+    <div class="cards-3">
+      <div class="card">
+        <div class="card__num">/01 · ACESSO</div>
+        <h3 class="card__title">Antes do varejo.</h3>
+        <p class="card__body">Modelos que o Brasil não tem ou recebe meses depois. A Gene acompanha o calendário global de drops e antecipa o que a tribo vai querer.</p>
+      </div>
+      <div class="card">
+        <div class="card__num">/02 · PREÇO</div>
+        <h3 class="card__title">Sem o markup.</h3>
+        <p class="card__body">Mesmo tênis que a loja cobra mais caro chega pela Gene por menos. Em média 20–25% mais barato que o varejo nacional, conforme o modelo.</p>
+      </div>
+      <div class="card">
+        <div class="card__num">/03 · CURADORIA</div>
+        <h3 class="card__title">Não é qualquer um.</h3>
+        <p class="card__body">A Gene tem ponto de vista sobre o que vale trazer. Editorial que posiciona como referência — não como prateleira.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 02 · COMPARATIVO · DAYLIGHT ===== -->
+<section class="section section--daylight">
+  <div class="section__inner">
+    <span class="eyebrow"><span class="dot" style="background:var(--press)"></span> /02 · MARKUP EXPOSTO</span>
+    <h2 class="headline">O varejo cobra.<br>A gene <em class="acc-bloom">traz.</em></h2>
+    <p class="body-copy">
+      Mesmo modelo. Mesma marca. Sem a margem da prateleira nacional. A diferença muda de tênis pra tênis, mas a lógica é a mesma: você paga pelo tênis — não pela cadeia de distribuição.
+    </p>
+
+    <!-- PRICE FRAME exemplo -->
+    <div class="price-frame" role="figure" aria-label="Exemplo de comparativo de preço">
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--carbon);font-weight:600">
+        — NIKE AJ1 LOW · SMOKE
+      </div>
+      <div class="pf-row">
+        <span class="pf-label">Varejo BR</span>
+        <span class="pf-strike">R$ 1.299</span>
+      </div>
+      <div class="pf-row">
+        <span class="pf-label">Via Gene</span>
+        <span class="pf-gene">R$ 999</span>
+      </div>
+      <div class="pf-delta">
+        <span>— 23% menos · mesmo par</span>
+        <b>↓</b>
+      </div>
+    </div>
+    <p class="pf-note">Comparativo construído sob encomenda · valores variam por modelo</p>
+  </div>
+</section>
+
+<!-- ===== SECTION 03 · COMO FUNCIONA · CHROME ===== -->
+<section class="section section--chrome">
+  <div class="section__inner">
+    <span class="eyebrow"><span class="dot" style="background:var(--acid)"></span> /03 · COMO FUNCIONA</span>
+    <h2 class="headline">Três passos.<br>Sem surpresa.</h2>
+    <p class="body-copy">
+      O processo é sob encomenda. Você não compra de prateleira — você define o par. A Gene confirma o que cabe e em quanto tempo, antes de qualquer pagamento.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">01</div>
+        <div class="step__label">/PEDE</div>
+        <h3 class="step__title">Diga o modelo.</h3>
+        <p class="step__body">Manda o nome do tênis no WhatsApp — modelo, colorway e tamanho. Pode ser drop específico que viu no Instagram, ou referência de outra marca. A Gene confirma se está no radar.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">02</div>
+        <div class="step__label">/CONFIRMA</div>
+        <h3 class="step__title">Veja o prazo.</h3>
+        <p class="step__body">Recebe prazo realista, preço final e a forma de pagamento. Sem letra miúda. Se o número faz sentido pra você, fecha. Se não, segue a vida — sem cobrança.</p>
+      </div>
+      <div class="step">
+        <div class="step__num">03</div>
+        <div class="step__label">/RECEBE</div>
+        <h3 class="step__title">Confere pessoalmente.</h3>
+        <p class="step__body">O par chega na sua casa. Você abre a caixa, confere antes de qualquer coisa. Documentado de ponta a ponta — do drop ao unboxing.</p>
+      </div>
+    </div>
+
+    <div class="status-pin"><span class="dot"></span> Sob encomenda · sem estoque</div>
+  </div>
+</section>
+
+<!-- ===== SECTION 04 · FAQ · CARBON ===== -->
+<section class="section section--carbon">
+  <div class="section__inner">
+    <span class="eyebrow"><span class="dot" style="background:var(--acid)"></span> /04 · ANTES QUE VOCÊ PERGUNTE</span>
+    <h2 class="headline">As dúvidas que<br>todo mundo tem.</h2>
+
+    <div class="faq">
+      <details>
+        <summary>Quanto tempo leva pra chegar?</summary>
+        <p class="faq__answer">Cada modelo tem um prazo diferente — depende do drop, da rota e do estoque global. A Gene confirma o seu antes de fechar a encomenda. Sem promessa que não cabe no calendário real.</p>
+      </details>
+      <details>
+        <summary>Como sei que é original?</summary>
+        <p class="faq__answer">O processo é sob encomenda. Você vê o par pessoalmente quando chega — sem foto editada, sem surpresa. Confiança vem do processo documentado, não da palavra no anúncio.</p>
+      </details>
+      <details>
+        <summary>E se eu quiser desistir?</summary>
+        <p class="faq__answer">Encomenda é compromisso de duas pontas. Se a Gene não conseguir trazer no prazo combinado, você não paga. Se você desistir depois de confirmado, conversa — caso a caso.</p>
+      </details>
+      <details>
+        <summary>Aceita parcelar?</summary>
+        <p class="faq__answer">Sim. As condições de pagamento entram na confirmação no WhatsApp, junto com o prazo e o preço final.</p>
+      </details>
+      <details>
+        <summary>De onde vêm os tênis?</summary>
+        <p class="faq__answer">A Gene não expõe a cadeia — não é o argumento. O que importa: você recebe o modelo correto, no prazo combinado, com o preço sem o markup nacional.</p>
+      </details>
+      <details>
+        <summary>Tem catálogo? Como sei o que pedir?</summary>
+        <p class="faq__answer">Não tem catálogo fixo. Você pede o que quer — Nike, Adidas, New Balance, drops globais ou modelos clássicos. Se está no radar, a Gene traz. Se não está, ela te avisa.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL · ACID ===== -->
+<section class="cta-final" id="cta">
+  <div class="cta-final__inner">
+    <span class="eyebrow"><span class="dot"></span> /DROP-26 · ENCOMENDA ABERTA</span>
+    <h2 class="cta-final__headline">Qual é<br>o seu?</h2>
+    <p class="cta-final__sub">Diga o modelo. A gente traz.</p>
+    <div class="cta-final__row">
+      <a class="btn-primary" href="https://wa.me/5554994494036?text=Oi%2C%20vim%20pela%20landing.%20Quero%20encomendar%20um%20modelo." target="_blank" rel="noopener">
+        Encomende no WhatsApp
+        <span class="btn-arrow">→</span>
+      </a>
+    </div>
+
+    <div style="margin-top:64px;max-width:520px">
+      <span class="email-form__label">— Ou avise quando abrir um drop:</span>
+      <!--
+        FORMSPREE: criar conta gratuita em https://formspree.io (50 emails/mês free)
+        Substituir YOUR_FORM_ID pelo ID do form. Enquanto isso, o submit vai pra um endpoint placeholder.
+      -->
+      <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="emailForm">
+        <input type="email" name="email" placeholder="seu@email.com" required aria-label="Seu email">
+        <input type="hidden" name="_subject" value="Novo lead da landing — Gene Sneakers">
+        <button type="submit">Avise-me</button>
+      </form>
+      <div class="email-form__success">— Anotado. A gente avisa quando abrir.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER · CARBON DEEP ===== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__wordmark">
+        <span>GENE</span>
+        <span class="sn">SNEAKERS</span>
+      </div>
+      <div class="footer__tagline">.ESTILO NOS PÉS.</div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Canais</h4>
+      <a href="https://wa.me/5554994494036" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://instagram.com/gene.sneakers" target="_blank" rel="noopener">@gene.sneakers</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Origem</h4>
+      <span>Caxias do Sul, RS</span>
+      <span>Brasil · 2026</span>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>© Gene Sneakers · 2026</span>
+    <span>GENE.CODE · LP v1 · 25.04</span>
+  </div>
+</footer>
+
+<script>
+// Email form — fallback se Formspree não estiver configurado
+(function(){
+  var form = document.getElementById('emailForm');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    // Se ainda não trocou o YOUR_FORM_ID, evita erro 404 e mostra success local
+    if(form.action.indexOf('YOUR_FORM_ID') > -1){
+      e.preventDefault();
+      console.warn('[Gene] Formspree não configurado — substituir YOUR_FORM_ID em formspree.io/f/');
+      form.classList.add('is-success');
+      return;
+    }
+    // Senão, intercepta para success in-place via fetch
+    e.preventDefault();
+    var data = new FormData(form);
+    fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} })
+      .then(function(r){
+        if(r.ok){ form.classList.add('is-success'); }
+        else { form.submit(); }
+      })
+      .catch(function(){ form.submit(); });
+  });
+})();
+</script>
+
+</body>
+</html>

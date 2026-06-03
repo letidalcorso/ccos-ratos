@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">2/7</text>
+
+  <!-- Mini label -->
+  <text x="80" y="370" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="700" letter-spacing="3">APRENDIZADO 01</text>
+
+  <!-- Title -->
+  <text x="80" y="500" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="92" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">o IMEI é</tspan>
+    <tspan x="80" dy="108">verificado em</tspan>
+    <tspan x="80" dy="108" fill="#2DFF8B">menos de</tspan>
+    <tspan x="80" dy="108" fill="#2DFF8B">30 segundos.</tspan>
+  </text>
+
+  <!-- Sub -->
+  <text x="80" y="1080" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.85">
+    <tspan x="80" dy="0">na frente do cliente. no balcão.</tspan>
+    <tspan x="80" dy="46">sem mistério, sem espera, sem promessa.</tspan>
+  </text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

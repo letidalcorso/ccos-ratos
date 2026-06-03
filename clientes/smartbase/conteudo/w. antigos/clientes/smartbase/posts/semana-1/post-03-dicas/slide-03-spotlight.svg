@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600&amp;display=swap');</style>
+  </defs>
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- Ghost number -->
+  <text x="-30" y="960" font-family="'Bricolage Grotesque', sans-serif" font-size="700" font-weight="800" fill="#F2F2F6" opacity="0.03">2</text>
+
+  <rect x="80" y="72" width="130" height="40" rx="20" fill="#0F0F1C" stroke="#6DAFF9" stroke-width="1"/>
+  <text x="145" y="97" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#6DAFF9" text-anchor="middle" letter-spacing="2">DICAS</text>
+  <text x="1000" y="97" font-family="'Inter', sans-serif" font-size="20" fill="#4A4A60" text-anchor="end">3 / 7</text>
+
+  <!-- Number badge -->
+  <circle cx="130" cy="232" r="54" fill="#3E82F7"/>
+  <text x="130" y="250" font-family="'Bricolage Grotesque', sans-serif" font-size="52" font-weight="800" fill="#F2F2F6" text-anchor="middle">2</text>
+
+  <text x="80" y="370" font-family="'Bricolage Grotesque', sans-serif" font-size="88" font-weight="800" fill="#F2F2F6">busca</text>
+  <text x="80" y="468" font-family="'Bricolage Grotesque', sans-serif" font-size="88" font-weight="800" fill="#3E82F7">universal.</text>
+  <line x1="80" y1="514" x2="1000" y2="514" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- Visual: Spotlight search bar -->
+  <rect x="160" y="554" width="760" height="370" rx="20" fill="#0F0F1C"/>
+
+  <!-- Search field -->
+  <rect x="196" y="590" width="688" height="72" rx="12" fill="#1A1A2E"/>
+  <text x="236" y="634" font-family="'Inter', sans-serif" font-size="24" fill="#4A4A60">pesquisar...</text>
+  <text x="856" y="634" font-family="'Inter', sans-serif" font-size="22" fill="#3E82F7" text-anchor="end" font-weight="500">⌕</text>
+
+  <!-- Results list -->
+  <rect x="196" y="678" width="688" height="58" rx="8" fill="#1A1A2E"/>
+  <rect x="196" y="678" width="3" height="58" fill="#3E82F7"/>
+  <text x="218" y="714" font-family="'Inter', sans-serif" font-size="22" fill="#C0C0D0">configuracoes</text>
+  <text x="876" y="714" font-family="'Inter', sans-serif" font-size="18" fill="#4A4A60" text-anchor="end">app</text>
+
+  <rect x="196" y="748" width="688" height="58" rx="8" fill="rgba(26,26,46,0.5)"/>
+  <text x="218" y="784" font-family="'Inter', sans-serif" font-size="22" fill="#7A7A96">agenda de hoje</text>
+  <text x="876" y="784" font-family="'Inter', sans-serif" font-size="18" fill="#4A4A60" text-anchor="end">calendar</text>
+
+  <rect x="196" y="818" width="688" height="58" rx="8" fill="rgba(26,26,46,0.3)"/>
+  <text x="218" y="854" font-family="'Inter', sans-serif" font-size="22" fill="#7A7A96">calculadora: 234 × 12 =</text>
+  <text x="876" y="854" font-family="'Inter', sans-serif" font-size="18" fill="#3E82F7" text-anchor="end">2.808</text>
+
+  <text x="80" y="992" font-family="'Inter', sans-serif" font-size="30" fill="#C0C0D0">arraste para baixo na tela inicial.</text>
+  <text x="80" y="1032" font-family="'Inter', sans-serif" font-size="30" fill="#C0C0D0">o spotlight abre sem entrar em app nenhum.</text>
+
+  <text x="80" y="1098" font-family="'Inter', sans-serif" font-size="30" fill="#7A7A96">encontra apps, contatos, arquivos,</text>
+  <text x="80" y="1138" font-family="'Inter', sans-serif" font-size="30" fill="#7A7A96">sites e até resolve contas na hora.</text>
+  <text x="80" y="1198" font-family="'Inter', sans-serif" font-size="30" font-weight="600" fill="#3E82F7">o google do seu iphone — nativo.</text>
+
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1A1A2E" stroke-width="1"/>
+  <rect x="80" y="1276" width="96" height="30" rx="15" fill="#0F0F1C"/>
+  <text x="128" y="1297" font-family="'Inter', sans-serif" font-size="13" fill="#3E82F7" text-anchor="middle" font-weight="600">sb</text>
+  <text x="194" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="28" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="22" fill="#4A4A60" text-anchor="end">@smartbase.cxs</text>
+</svg>

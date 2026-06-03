@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Jordan 4 Bred Reimagined · 04/05</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --carbon: #0D0D0D;
+      --bone:   #F2EFE9;
+      --acid:   #CBF23D;
+      --press:  #8CA62D;
+      --slate:  #A6A4A1;
+      --chrome-bg: #1C1C1E;
+      --chrome-mid: #2C2C2E;
+      --chrome-hi: #3A3A3C;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header  { color: var(--acid); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .subhead { color: #444; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; }
+    .env     { color: var(--press); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+    .grid  { display: flex; gap: 24px; flex-wrap: wrap; }
+    .wrap  { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .label { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+
+    /* Preview 270×338 = 1080×1350 */
+    .slide {
+      width: 270px;
+      height: 338px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--chrome-bg);
+    }
+
+    .brand {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #3a3a3a;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .counter {
+      position: absolute;
+      top: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #3a3a3a;
+      letter-spacing: 2px;
+    }
+
+    /* ── Slide 1 — Capa ── */
+    /* zona de imagem topo */
+    .s1-img {
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 55%;
+      background: repeating-linear-gradient(
+        45deg, #1a1a1c, #1a1a1c 3px, #222224 3px, #222224 6px
+      );
+      border-bottom: 1px dashed #2a2a2a;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 3px;
+    }
+    .s1-img .tag  { font-size: 7px; color: #333; letter-spacing: 2px; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace; }
+    .s1-img .main { font-size: 7px; color: #2a2a2a; font-family: 'IBM Plex Mono', monospace; }
+
+    .s1-grad {
+      position: absolute;
+      left: 0; right: 0; bottom: 0; height: 55%;
+      background: linear-gradient(to bottom, transparent 0%, var(--chrome-bg) 65%);
+    }
+    /* pill */
+    .s1-pill {
+      position: absolute;
+      bottom: 76px; left: 14px;
+      background: var(--chrome-hi);
+      padding: 2px 8px;
+    }
+    .s1-pill span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 6px; color: var(--slate);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .s1-h {
+      position: absolute;
+      bottom: 28px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 36px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.86;
+      letter-spacing: -0.5px;
+    }
+
+    /* ── Slide 2 — História ── */
+    .s2-year {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s2-h {
+      position: absolute;
+      top: 66px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 38px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.86;
+    }
+    .s2-body {
+      position: absolute;
+      bottom: 24px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      line-height: 1.7; letter-spacing: 0.5px;
+    }
+
+    /* ── Slide 3 — Urgência ── */
+    .s3-tag {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s3-h {
+      position: absolute;
+      top: 68px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 34px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.88;
+    }
+    .s3-rule {
+      position: absolute;
+      bottom: 58px; left: 14px; right: 14px;
+      height: 1px; background: var(--chrome-hi);
+    }
+    .s3-note {
+      position: absolute;
+      bottom: 16px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #3a3a3a;
+      letter-spacing: 1px; line-height: 1.6;
+    }
+
+    /* ── Slide 4 — CTA ── */
+    .s4-tag {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s4-h {
+      position: absolute;
+      top: 72px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 54px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.84;
+      letter-spacing: -1px;
+    }
+    .s4-h .acid { color: var(--acid); }
+    .s4-bottom {
+      position: absolute;
+      bottom: 14px; left: 14px; right: 14px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .s4-cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .s4-logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 16px; color: #3a3a3a;
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Carrossel</div>
+<div class="subhead">04/05 · Produto · Jordan 4 Bred Reimagined · 4 slides · 1080×1350px</div>
+<div class="env">/ENV-05 · CHROME — produto, origem, história</div>
+
+<div class="grid">
+
+  <!-- Slide 1 — Capa -->
+  <div class="wrap">
+    <div class="label">01 / capa</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">1/4</div>
+      <div class="s1-img">
+        <div class="tag">[ foto ]</div>
+        <div class="main">Jordan 4 Bred Reimagined</div>
+        <div class="main">detalhe couro · 3/4 lateral</div>
+      </div>
+      <div class="s1-grad"></div>
+      <div class="s1-pill"><span>● encomendas abertas</span></div>
+      <div class="s1-h">1989. O JORDAN 4<br>ENTROU.<br>NUNCA MAIS SAIU.</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 — História -->
+  <div class="wrap">
+    <div class="label">02 / história</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">2/4</div>
+      <div class="s2-year">/bred reimagined · 2024</div>
+      <div class="s2-h">COURO<br>PREMIUM.<br>MESMO<br>DNA.</div>
+      <div class="s2-body">Lançou no aniversário de 61 anos<br>do Jordan. No All-Star Weekend.<br>Esgotou no mesmo dia.</div>
+    </div>
+  </div>
+
+  <!-- Slide 3 — Urgência -->
+  <div class="wrap">
+    <div class="label">03 / contexto</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">3/4</div>
+      <div class="s3-tag">/história</div>
+      <div class="s3-h">QUANDO UM<br>MODELO TEM<br>ESSA HISTÓRIA,<br>CADA VERSÃO<br>NOVA É A<br>ÚLTIMA CHANCE.</div>
+      <div class="s3-rule"></div>
+      <div class="s3-note">Antes do preço triplicar na revenda.</div>
+    </div>
+  </div>
+
+  <!-- Slide 4 — CTA -->
+  <div class="wrap">
+    <div class="label">04 / cta</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">4/4</div>
+      <div class="s4-tag">/acesso</div>
+      <div class="s4-h">A GENE<br>TEM<br><span class="acid">ACESSO.</span></div>
+      <div class="s4-bottom">
+        <div class="s4-cta">Manda mensagem.</div>
+        <div class="s4-logo">Gene</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

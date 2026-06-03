@@ -7,49 +7,55 @@
 
 ## Cores
 
-- **Fundo principal:**
-
-- **Cor de destaque / CTA:**
-
-- **Texto principal:**
-
-- **Fundo alternativo / cards:**
-
-- **Cor proibida:**
+- **Fundo principal:** `#001a26` (azul-marinho bem escuro, quase preto)
+- **Fundo principal 2:** `#ffffff` (branco)
+- **Cor de destaque / CTA:** `#ff00b0` (magenta/rosa neon)
+- **Cor de destaque 2 / CTA:** `#39fe57` (verde neon)
+- **Texto principal:** `#FFFFFF` (branco em fundos escuros) / `#001a26` (escuro em fundos claros/neon)
+- **Fundo alternativo / cards:** `#FF1EB4` ou `#39FF4C` com texto escuro
+- **Cor proibida:** Tons pastéis, cinzas suaves, paletas "clean" sem energia
 
 ---
 
 ## Tipografia
 
-- **Títulos e destaques:**
-
-- **Corpo, subtítulos e botões:**
-
-- **Peso do título:**
+- **Títulos e destaques:** Special Gothic Condensend One, caixa alta 
+- **Corpo, subtítulos e botões:** Gheist, peso clara 
+- **Peso do título:** Black / ExtraBold (700-900)
 
 ---
 
 ## Estilo geral
 
+Bold, gráfico, alto contraste. Neon em fundo escuro como padrão. Tipografia como elemento visual (títulos grandes que ocupam espaço). Energia sem bagunça — minimalista na estrutura, explosivo nas cores.
+
 ---
 
 ## Elementos-chave
 
-- Bordas:
-- Border-radius dos cards:
-- Botões:
-- Sombras:
+- Bordas: sem borda (usa cor de fundo para delimitar)
+- Border-radius dos cards: grande (16-24px), estilo "pílula suavizada"
+- Botões: arredondados, cor neon com texto escuro
+- Sombras: sem sombra — contraste por cor, não por profundidade
 
 ---
 
 ## O que NUNCA fazer
 
+- Usar gradientes genéricos ou paletas sem energia
+- Misturar muitas cores além da paleta (magenta + verde + escuro)
+- Fontes serifadas ou handwriting
+- Layouts poluídos com muitos elementos pequenos
+- Tons de cinza como cor principal
+
 ---
 
 ## Logo
 
-- **Arquivo:** *(ex: marca/logo.png ou marca/logo.svg)*
-- **Versão pra fundo escuro:** *(se tiver variação — ex: marca/logo-branco.png)*
+- **Marca:** SOLZ LAB
+- **Arquivo:** `marca/logo.png` — versão escura em fundo branco (principal)
+- **Versão pra fundo escuro:** logo em branco ou verde neon (versão clara ainda não disponível)
+- **Versão pra fundo claro/neon:** logo em escuro `#001a26`
 - **Onde usar:** slide final do carrossel (CTA), header de propostas, slides de apresentação
 - **Tamanho sugerido:** largura entre 120-200px nos HTMLs
 
@@ -67,3 +73,6 @@
 ---
 
 ## Observações adicionais
+
+O template de apresentação usa a estrutura: OBJETIVO → CONCEITO → RESULTADO como navegação/breadcrumb nos slides.
+Cards com fundo neon (magenta ou verde) sobre fundo escuro são o padrão visual dos slides de seção.

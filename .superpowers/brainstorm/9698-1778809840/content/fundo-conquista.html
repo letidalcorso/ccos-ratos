@@ -1,0 +1,67 @@
+<h2>Fundo interior — conquista e atualização</h2>
+<p class="subtitle">A pessoa tira o iPhone, lê, fotografa e posta porque quer mostrar que está à frente. Clique pra ver no interior azul.</p>
+
+<div style="display:flex;justify-content:center;margin:24px 0 32px;">
+  <div style="
+    width:400px;height:200px;
+    background:#3E82F7;border-radius:4px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    box-shadow:0 8px 32px rgba(62,130,247,0.25),inset 0 0 0 1px rgba(255,255,255,0.08);
+    position:relative;overflow:hidden;
+  ">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(255,255,255,0.05) 0%,transparent 60%);"></div>
+    <div id="prev" style="
+      font-family:'Helvetica Neue',sans-serif;
+      font-size:18px;font-weight:300;color:white;
+      text-align:center;line-height:1.65;letter-spacing:-0.2px;
+      position:relative;z-index:2;padding:0 44px;
+    ">toca pra ver.</div>
+    <div style="font-family:'Helvetica Neue',sans-serif;font-size:10px;font-weight:300;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;position:relative;z-index:2;">smart•base</div>
+  </div>
+</div>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='atualização<br>concluída.'">
+    <div class="card-body">
+      <h3>atualização concluída.</h3>
+      <p>Linguagem de sistema aplicada à vida real. Quem lê entende imediatamente — e ri porque é exatamente isso que parece ter acontecido. É tech, é autoconsciente, é compartilhável.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='você não esperou<br>o próximo.<br>você já tem ele.'">
+    <div class="card-body">
+      <h3>você não esperou o próximo. você já tem ele.</h3>
+      <p>Fala direto sobre estar à frente — quem comprou não ficou esperando, foi atrás. É conquista pura, sem arrogância, porque é simplesmente verdade.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='enquanto todo mundo<br>ainda tá pesquisando,<br>você já tá usando.'">
+    <div class="card-body">
+      <h3>enquanto todo mundo ainda tá pesquisando, você já tá usando.</h3>
+      <p>Captura o ciclo real de compra de iPhone — meses de pesquisa da maioria vs. a decisão de quem foi atrás de um caminho direto. A pessoa posta porque isso a coloca na frente.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="d" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='versão mais recente<br>de você: instalada.'">
+    <div class="card-body">
+      <h3>versão mais recente de você: instalada.</h3>
+      <p>Conecta o iPhone à identidade da pessoa — não como objeto, mas como upgrade de si mesma. Linguagem de sistema, tom de conquista pessoal. Elegante e instagramável ao mesmo tempo.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="e" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='upgrade feito.<br>agora é só usar.'">
+    <div class="card-body">
+      <h3>upgrade feito. agora é só usar.</h3>
+      <p>Curto, direto, satisfatório. A decisão foi tomada, o processo acabou — agora é só aproveitar. Tem a leveza de quem resolveu algo pendente. Instagramável porque resume o sentimento perfeito.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="f" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='tomou a decisão<br>mais inteligente<br>do ano.'">
+    <div class="card-body">
+      <h3>tomou a decisão mais inteligente do ano.</h3>
+      <p>Valida a escolha do canal — comprar na Smartbase em vez do caminho convencional é inteligência. A pessoa posta porque quer mostrar que foi esperta, que não pagou a mais.</p>
+    </div>
+  </div>
+
+</div>

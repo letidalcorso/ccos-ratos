@@ -1,0 +1,63 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.2" y1="0" x2="0.8" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#071830"/>
+    <stop offset="55%"  stop-color="#050F20"/>
+    <stop offset="100%" stop-color="#020608"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="55%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(26,111,192,0.25)"/>
+    <stop offset="100%" stop-color="rgba(26,111,192,0.00)"/>
+  </radialGradient>
+  <linearGradient id="card-bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(255,255,255,0.10)"/>
+    <stop offset="100%" stop-color="rgba(255,255,255,0.04)"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1920" fill="url(#bg)"/>
+<rect width="1080" height="1920" fill="url(#glow)"/>
+<pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+  <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+</pattern>
+<rect width="1080" height="1920" fill="url(#dots)"/>
+
+<polygon points="0,0 300,0 0,300" fill="rgba(91,184,240,0.05)"/>
+<polygon points="1080,1920 780,1920 1080,1620" fill="rgba(91,184,240,0.04)"/>
+
+<!-- Logo top -->
+<text x="540" y="130" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="380" y1="150" x2="700" y2="150" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+
+<!-- Story dots (3 of 3 active) -->
+<rect x="60"  y="56" width="290" height="8" rx="4" fill="rgba(255,255,255,0.25)"/>
+<rect x="370" y="56" width="290" height="8" rx="4" fill="rgba(255,255,255,0.25)"/>
+<rect x="680" y="56" width="290" height="8" rx="4" fill="#FFFFFF"/>
+
+<!-- Question headline -->
+<text x="540" y="740" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="130" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">JÁ SABE</text>
+<text x="540" y="876" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="130" fill="#5BB8F0" text-anchor="middle" letter-spacing="2">O QUE É?</text>
+
+<line x1="200" y1="924" x2="880" y2="924" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+
+<text x="540" y="998" font-family="'Sora', sans-serif" font-weight="300" font-size="46" fill="rgba(255,255,255,0.65)" text-anchor="middle">Amanhã a gente revela.</text>
+<text x="540" y="1054" font-family="'Sora', sans-serif" font-weight="300" font-size="46" fill="rgba(255,255,255,0.65)" text-anchor="middle">Deixa o seu chute aqui 👇</text>
+
+<!-- Fake question box (caixinha de perguntas visual) -->
+<rect x="100" y="1110" width="880" height="160" rx="20" fill="url(#card-bg)"/>
+<rect x="100" y="1110" width="880" height="160" rx="20" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+<!-- Inner text placeholder -->
+<text x="540" y="1178" font-family="'Sora', sans-serif" font-weight="300" font-size="38" fill="rgba(255,255,255,0.30)" text-anchor="middle">Toca aqui e responde...</text>
+<line x1="160" y1="1220" x2="960" y2="1220" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+<text x="540" y="1252" font-family="'Sora', sans-serif" font-weight="300" font-size="28" fill="rgba(255,255,255,0.18)" text-anchor="middle">ENVIAR</text>
+
+<!-- "AMANHÃ" badge -->
+<rect x="340" y="1320" width="400" height="72" rx="36" fill="rgba(26,111,192,0.70)"/>
+<rect x="340" y="1320" width="400" height="72" rx="36" fill="none" stroke="rgba(91,184,240,0.45)" stroke-width="1.5"/>
+<text x="540" y="1365" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="46" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">AMANHÃ</text>
+
+<!-- Footer -->
+<text x="540" y="1874" font-family="'Sora', sans-serif" font-weight="700" font-size="32" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="5">FTEMPER</text>
+<text x="540" y="1908" font-family="'Sora', sans-serif" font-weight="300" font-size="24" fill="rgba(255,255,255,0.28)" text-anchor="middle">@ftempercomponentes</text>
+</svg>

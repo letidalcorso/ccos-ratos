@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <rect width="1080" height="1920" fill="#000000"/>
+
+  <!-- Top tag -->
+  <line x1="80" y1="180" x2="130" y2="180" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="188" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="3">NOVO NO FEED</text>
+
+  <!-- Title -->
+  <text x="80" y="780" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="110" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">o Paraguai</tspan>
+    <tspan x="80" dy="125">não é o que</tspan>
+    <tspan x="80" dy="125" fill="#2DFF8B">te ensinaram.</tspan>
+  </text>
+
+  <!-- Arrow + CTA -->
+  <text x="80" y="1450" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="56" font-weight="700">↓ confere no feed</text>
+
+  <!-- Note for sticker -->
+  <rect x="80" y="1530" width="920" height="180" rx="20" fill="#1a1a1a" stroke="#2DFF8B" stroke-width="2" stroke-dasharray="8,8"/>
+  <text x="540" y="1600" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle" opacity="0.5">↓ coloque o sticker "LINK" ou "POST DO PERFIL"</text>
+  <text x="540" y="1650" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="600" text-anchor="middle">linkando o carrossel publicado hoje</text>
+
+  <!-- Footer -->
+  <text x="80" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="44" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

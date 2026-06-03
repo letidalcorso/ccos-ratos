@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview — Correções Smartbase</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #07070E;
+      color: #F2F2F6;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      padding: 40px 24px;
+    }
+
+    h2 {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7A7A96;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .bloco { margin-bottom: 64px; }
+
+    .label-antes-depois {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .tag--antes { background: rgba(255,60,60,0.15); color: #FF6B6B; border: 1px solid rgba(255,60,60,0.3); }
+    .tag--depois { background: rgba(16,185,129,0.15); color: #10B981; border: 1px solid rgba(16,185,129,0.3); }
+
+    .row { display: flex; gap: 24px; flex-wrap: wrap; }
+
+    /* ── CARD CATÁLOGO ── */
+    .card {
+      background: #0F0F1C;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      overflow: hidden;
+      width: 280px;
+    }
+
+    .card__img {
+      width: 100%;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      position: relative;
+    }
+
+    /* ANTES — fundo branco hardcoded */
+    .card__img--antes { background: #F5F5F7; }
+
+    /* DEPOIS — fundo escuro alinhado com o tema */
+    .card__img--depois { background: #1A1A2E; }
+
+    .card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 16px;
+    }
+
+    /* DEPOIS com blend — fundo some */
+    .card__img--blend img { mix-blend-mode: multiply; }
+
+    .card__body { padding: 20px; }
+    .card__name { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .card__sub { font-size: 13px; color: #7A7A96; margin-bottom: 12px; }
+    .card__price { font-size: 20px; font-weight: 800; color: #3E82F7; }
+
+    .card__footer { padding: 0 20px 20px; }
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background: #3E82F7;
+      color: #fff;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ── CARD IPHONE FEATURED ── */
+    .card-iphone {
+      background: linear-gradient(135deg, #0F0F1C 0%, rgba(62,130,247,0.06) 100%);
+      border: 1px solid #3E82F7;
+      border-radius: 16px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      min-height: 320px;
+      max-width: 800px;
+    }
+
+    .card-iphone__body {
+      padding: 40px 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .card-iphone__title { font-size: 40px; font-weight: 800; }
+    .card-iphone__desc { font-size: 15px; color: #7A7A96; }
+    .card-iphone__link { font-size: 13px; color: #3E82F7; font-weight: 600; }
+
+    .card-iphone__visual {
+      background: rgba(62,130,247,0.04);
+      border-left: 1px solid rgba(62,130,247,0.15);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card-iphone__visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      max-height: 360px;
+      padding: 24px 32px 0;
+    }
+
+    /* BLEND ATIVO no iPhone */
+    .card-iphone__visual--blend img { mix-blend-mode: multiply; }
+
+    /* ── SEMINOVOS ── */
+    .seminovos {
+      background: #0F0F1C;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 64px 0;
+    }
+
+    .seminovos__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      max-width: 900px;
+    }
+
+    .seminovos__title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    .seminovos__blue { color: #3E82F7; }
+    .seminovos__sub { font-size: 15px; color: #7A7A96; line-height: 1.7; }
+
+    .seminovos__img { max-height: 440px; display: flex; align-items: center; justify-content: center; }
+    .seminovos__img img { width: 100%; max-height: 440px; object-fit: contain; }
+    .seminovos__img--blend img { mix-blend-mode: multiply; }
+
+    .nota {
+      font-size: 12px;
+      color: #7A7A96;
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 8px;
+      border-left: 3px solid #3E82F7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ SEÇÃO 1 — CARDS DO CATÁLOGO ══════════════════════════ -->
+  <div class="bloco">
+    <h2>Catálogo de produtos — cards</h2>
+
+    <div class="label-antes-depois">
+      <span class="tag tag--antes">antes — fundo branco #F5F5F7</span>
+    </div>
+    <div class="row" style="margin-bottom: 32px;">
+      <div class="card">
+        <div class="card__img card__img--antes">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-desertTitanium?wid=400&hei=400&fmt=jpeg" alt="iPhone" onerror="this.style.background='#eee';this.style.height='100%'">
+        </div>
+        <div class="card__body">
+          <div class="card__name">iPhone 17 Pro</div>
+          <div class="card__sub">câmera profissional · chip A19 Pro</div>
+          <div class="card__price">a partir de R$ 9.200</div>
+        </div>
+        <div class="card__footer"><a href="#" class="btn">fazer pedido</a></div>
+      </div>
+    </div>
+
+    <div class="label-antes-depois">
+      <span class="tag tag--depois">depois — fundo escuro + blend ativo</span>
+    </div>
+    <div class="row">
+      <div class="card">
+        <div class="card__img card__img--depois card__img--blend">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-desertTitanium?wid=400&hei=400&fmt=jpeg" alt="iPhone" onerror="this.style.background='#1A1A2E'">
+        </div>
+        <div class="card__body">
+          <div class="card__name">iPhone 17 Pro</div>
+          <div class="card__sub">câmera profissional · chip A19 Pro</div>
+          <div class="card__price">a partir de R$ 9.200</div>
+        </div>
+        <div class="card__footer"><a href="#" class="btn">fazer pedido</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card__img card__img--depois">
+          <!-- sem imagem — fundo escuro ao invés de branco -->
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="3" width="20" height="42" rx="5" stroke="#3E82F7" stroke-width="2"/>
+            <rect x="19" y="7" width="10" height="2.5" rx="1.25" fill="#3E82F7" opacity="0.5"/>
+            <circle cx="24" cy="40" r="2" fill="#3E82F7" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="card__body">
+          <div class="card__name">iPhone 17</div>
+          <div class="card__sub">sem imagem — fundo escuro correto</div>
+          <div class="card__price">a partir de R$ 7.200</div>
+        </div>
+        <div class="card__footer"><a href="#" class="btn">fazer pedido</a></div>
+      </div>
+    </div>
+
+    <div class="nota">Mudança: <code>background: #F5F5F7</code> → <code>background: var(--surface-2)</code> no style.css. Checkbox "remover fundo branco" adicionado por bloco no editor.</div>
+  </div>
+
+
+  <!-- ══ SEÇÃO 2 — CARD IPHONE DESTAQUE ════════════════════════ -->
+  <div class="bloco">
+    <h2>Card iPhone em destaque — seção Novos</h2>
+
+    <div class="label-antes-depois">
+      <span class="tag tag--antes">antes — caixa branca visível</span>
+    </div>
+    <div style="margin-bottom: 32px;">
+      <div class="card-iphone">
+        <div class="card-iphone__body">
+          <div class="card-iphone__title">iPhone</div>
+          <p class="card-iphone__desc">nosso principal produto. importado, com garantia Apple, entregue em todo o Brasil.</p>
+          <span class="card-iphone__link">fazer pedido →</span>
+        </div>
+        <div class="card-iphone__visual">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-desertTitanium?wid=600&hei=600&fmt=jpeg&qlt=90" alt="iPhone" style="background:#F5F5F7;">
+        </div>
+      </div>
+    </div>
+
+    <div class="label-antes-depois">
+      <span class="tag tag--depois">depois — blend ativo, fundo some</span>
+    </div>
+    <div class="card-iphone">
+      <div class="card-iphone__body">
+        <div class="card-iphone__title">iPhone</div>
+        <p class="card-iphone__desc">nosso principal produto. importado, com garantia Apple, entregue em todo o Brasil.</p>
+        <span class="card-iphone__link">fazer pedido →</span>
+      </div>
+      <div class="card-iphone__visual card-iphone__visual--blend">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-desertTitanium?wid=600&hei=600&fmt=jpeg&qlt=90" alt="iPhone">
+      </div>
+    </div>
+
+    <div class="nota">No editor do Shopify: marcar "Remover fundo branco da foto" na seção Novos. Já implementado — só ativar o checkbox.</div>
+  </div>
+
+
+  <!-- ══ SEÇÃO 3 — SEMINOVOS ════════════════════════════════════ -->
+  <div class="bloco">
+    <h2>Seção Seminovos</h2>
+
+    <div class="label-antes-depois">
+      <span class="tag tag--depois">depois — imagem maior (até 1200px) + blend disponível</span>
+    </div>
+    <div class="seminovos__inner">
+      <div>
+        <div class="seminovos__title">apple usado.<br><span class="seminovos__blue">com garantia da gente.</span></div>
+        <p class="seminovos__sub">cada aparelho passa por avaliação técnica antes de ser anunciado. você sabe exatamente o que está comprando.</p>
+      </div>
+      <div class="seminovos__img">
+        <img src="../site/img/seminovo-iphone14pro.png" alt="Seminovo" onerror="this.src='https://via.placeholder.com/400x500/1A1A2E/3E82F7?text=foto+do+aparelho'">
+      </div>
+    </div>
+
+    <div class="nota">Mudança: <code>image_url: width: 600</code> → <code>width: 1200</code>. Checkbox "remover fundo branco" adicionado ao schema da seção.</div>
+  </div>
+
+</body>
+</html>

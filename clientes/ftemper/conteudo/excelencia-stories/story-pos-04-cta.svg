@@ -1,0 +1,75 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.3" y1="0" x2="0.7" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#1060B0"/>
+    <stop offset="45%"  stop-color="#0A3870"/>
+    <stop offset="100%" stop-color="#040D1C"/>
+  </linearGradient>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(4,13,28,0.0)"/>
+    <stop offset="100%" stop-color="rgba(4,13,28,0.75)"/>
+  </linearGradient>
+  <pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+    <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
+  </pattern>
+  <linearGradient id="btn" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#1A6FC0"/>
+    <stop offset="100%" stop-color="#0D3F7A"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1920" fill="url(#bg)"/>
+<rect width="1080" height="1920" fill="url(#dots)" opacity="0.5"/>
+<rect width="1080" height="1920" fill="url(#fade)"/>
+
+<polygon points="100,-50 280,130 100,310 -80,130" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+<polygon points="980,1610 1120,1750 980,1890 840,1750" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+
+<!-- Logo -->
+<text x="540" y="130" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="380" y1="150" x2="700" y2="150" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+
+<!-- Story progress (4th active) -->
+<rect x="60"  y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+<rect x="283" y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+<rect x="506" y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+<rect x="729" y="56" width="213" height="8" rx="4" fill="#FFFFFF"/>
+
+<!-- Badge -->
+<rect x="190" y="196" width="700" height="58" rx="29" fill="rgba(91,184,240,0.14)"/>
+<rect x="190" y="196" width="700" height="58" rx="29" fill="none" stroke="rgba(91,184,240,0.35)" stroke-width="1.5"/>
+<text x="540" y="232" font-family="'Sora', sans-serif" font-weight="600" font-size="24" fill="#5BB8F0" text-anchor="middle" letter-spacing="3">LINHA EXCELÊNCIA® × ALUMICONTE</text>
+
+<!-- Headline -->
+<text x="540" y="530" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="124" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">DISPONÍVEL</text>
+<text x="540" y="658" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="124" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">AGORA</text>
+<text x="540" y="786" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="124" fill="#5BB8F0" text-anchor="middle" letter-spacing="2">NA FTEMPER.</text>
+
+<line x1="200" y1="840" x2="880" y2="840" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+
+<!-- Features summary -->
+<text x="540" y="918" font-family="'Sora', sans-serif" font-weight="300" font-size="42" fill="rgba(255,255,255,0.70)" text-anchor="middle">Sistema patenteado · Veneziana oval ou reta</text>
+<text x="540" y="972" font-family="'Sora', sans-serif" font-weight="300" font-size="42" fill="rgba(255,255,255,0.70)" text-anchor="middle">Ventilação ativa · Alumínio premium</text>
+
+<!-- Blue accent block -->
+<rect x="60" y="1036" width="8" height="120" rx="4" fill="#1A6FC0"/>
+<text x="94" y="1082" font-family="'Sora', sans-serif" font-weight="700" font-size="50" fill="#FFFFFF">A gente responde rápido.</text>
+<text x="94" y="1142" font-family="'Sora', sans-serif" font-weight="300" font-size="44" fill="rgba(255,255,255,0.60)">Solicite uma proposta agora.</text>
+
+<!-- CTA Button -->
+<rect x="100" y="1220" width="880" height="130" rx="65" fill="url(#btn)"/>
+<text x="540" y="1300" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="82" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">FALA NO DIRECT  ↗</text>
+
+<!-- WhatsApp secondary CTA -->
+<rect x="100" y="1374" width="880" height="110" rx="55" fill="rgba(255,255,255,0.08)"/>
+<rect x="100" y="1374" width="880" height="110" rx="55" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+<text x="540" y="1444" font-family="'Sora', sans-serif" font-weight="700" font-size="48" fill="rgba(255,255,255,0.80)" text-anchor="middle">ou acesse o link na bio</text>
+
+<!-- Handle -->
+<text x="540" y="1548" font-family="'Sora', sans-serif" font-weight="400" font-size="38" fill="rgba(255,255,255,0.45)" text-anchor="middle">@ftempercomponentes</text>
+
+<!-- Footer -->
+<text x="540" y="1874" font-family="'Sora', sans-serif" font-weight="700" font-size="32" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="5">FTEMPER</text>
+<text x="540" y="1908" font-family="'Sora', sans-serif" font-weight="300" font-size="24" fill="rgba(255,255,255,0.28)" text-anchor="middle">distribuidora de alumínio</text>
+</svg>

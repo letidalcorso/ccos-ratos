@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;display=swap');
+      .display{font-family:'Big Shoulders Display','Arial Black',sans-serif;font-weight:900;letter-spacing:-0.01em}
+    </style>
+  </defs>
+
+  <!-- Bone field -->
+  <rect width="1080" height="1920" fill="#F2EFE9"/>
+
+  <!-- / LIFESTYLE / em Bloom deep rosa -->
+  <text x="540" y="985" class="display" font-size="150" fill="#B97580" text-anchor="middle">/ LIFESTYLE /</text>
+
+  <!-- Filete rosa embaixo -->
+  <line x1="430" y1="1055" x2="650" y2="1055" stroke="#B97580" stroke-width="4"/>
+</svg>

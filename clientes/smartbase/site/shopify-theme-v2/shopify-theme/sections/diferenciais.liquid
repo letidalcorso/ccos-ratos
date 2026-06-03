@@ -1,0 +1,109 @@
+<section id="diferenciais" class="sb-section sb-section--alt">
+  <div class="sb-container">
+
+    <div class="sb-section-header">
+      <span class="sb-badge">{{ section.settings.badge }}</span>
+      <h2>{{ section.settings.heading }} <span class="sb-blue">{{ section.settings.heading_blue }}</span></h2>
+    </div>
+
+    <div class="sb-diferenciais__grid">
+      {% for block in section.blocks %}
+        <div class="sb-diferencial-card {% if block.settings.featured %}sb-diferencial-card--featured{% endif %}" {{ block.shopify_attributes }}>
+          <div class="sb-diferencial-card__num">0{{ forloop.index }}</div>
+          <div class="sb-diferencial-card__title">{{ block.settings.title }}</div>
+          <p class="sb-diferencial-card__desc">{{ block.settings.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Diferenciais",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "por que a smartbase"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "quando todo mundo vende apple,"
+    },
+    {
+      "type": "text",
+      "id": "heading_blue",
+      "label": "Título — parte azul",
+      "default": "o diferencial não é o produto."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card diferencial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descrição"
+        },
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Card em destaque (borda azul)",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Diferenciais",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "original garantido",
+            "description": "100% apple. cada aparelho conferido antes da venda. sem falsificação, sem surpresa.",
+            "featured": false
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "preço que faz sentido",
+            "description": "aparelhos novos importados e seminovos avaliados. qualidade Apple sem o preço da loja oficial.",
+            "featured": false
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "aparelho antigo como entrada",
+            "description": "avaliação técnica com critérios claros, valor calculado na hora e processo transparente do início ao fim. sem achismo.",
+            "featured": true
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "foco apple",
+            "description": "só trabalhamos com apple. sem desvio de atenção pra outras marcas. isso aparece no nível do atendimento.",
+            "featured": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

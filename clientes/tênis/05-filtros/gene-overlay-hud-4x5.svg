@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · Overlay HUD · Feed 4:5
+    Frame gráfico transparente que pode ser sobreposto a qualquer foto tratada com preset Daylight.
+    Uso: exportar como PNG transparente e aplicar em Photoshop/Canva/CapCut por cima da foto.
+    Lógica: linguagem técnica (crosshairs, coordenadas, SKU) ancora a foto no sistema de peças real.
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;display=swap');
+      .mono { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; }
+      .mono-r { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:400; letter-spacing:0.05em; }
+    </style>
+  </defs>
+
+  <!-- ================ CROSSHAIRS CANTOS (Acid) ================ -->
+  <!-- Top-left -->
+  <g stroke="#C4FF3C" stroke-width="2.5" fill="none">
+    <line x1="40" y1="40" x2="40" y2="90"/>
+    <line x1="40" y1="40" x2="90" y2="40"/>
+  </g>
+  <!-- Top-right -->
+  <g stroke="#C4FF3C" stroke-width="2.5" fill="none">
+    <line x1="1040" y1="40" x2="1040" y2="90"/>
+    <line x1="1040" y1="40" x2="990" y2="40"/>
+  </g>
+  <!-- Bottom-left -->
+  <g stroke="#C4FF3C" stroke-width="2.5" fill="none">
+    <line x1="40" y1="1310" x2="40" y2="1260"/>
+    <line x1="40" y1="1310" x2="90" y2="1310"/>
+  </g>
+  <!-- Bottom-right -->
+  <g stroke="#C4FF3C" stroke-width="2.5" fill="none">
+    <line x1="1040" y1="1310" x2="1040" y2="1260"/>
+    <line x1="1040" y1="1310" x2="990" y2="1310"/>
+  </g>
+
+  <!-- ================ TOP BAR ================ -->
+  <!-- SKU tag top-left -->
+  <g>
+    <rect x="110" y="50" width="220" height="32" fill="#0D0D0D"/>
+    <text x="122" y="72" class="mono" font-size="16" fill="#C4FF3C">SKU · GN-AJ1-26</text>
+  </g>
+
+  <!-- Coordinate tag top-right -->
+  <text x="1000" y="72" class="mono-r" font-size="14" fill="#F2EFE9" text-anchor="end" letter-spacing="0.08em">
+    <tspan fill="#C4FF3C">◆</tspan> 23°S · 46°W
+  </text>
+
+  <!-- ================ CENTER CROSSHAIR (micro) ================ -->
+  <g stroke="#C4FF3C" stroke-width="1.5" fill="none" opacity="0.8">
+    <line x1="530" y1="540" x2="550" y2="540"/>
+    <line x1="540" y1="530" x2="540" y2="550"/>
+    <circle cx="540" cy="540" r="14"/>
+  </g>
+  <text x="562" y="544" class="mono" font-size="11" fill="#C4FF3C" opacity="0.9">TARGET</text>
+
+  <!-- ================ LATERAL TICKS (medição) ================ -->
+  <!-- Left scale -->
+  <g stroke="#C4FF3C" stroke-width="1.5" opacity="0.55">
+    <line x1="40" y1="350" x2="60" y2="350"/>
+    <line x1="40" y1="500" x2="55" y2="500"/>
+    <line x1="40" y1="650" x2="60" y2="650"/>
+    <line x1="40" y1="800" x2="55" y2="800"/>
+    <line x1="40" y1="950" x2="60" y2="950"/>
+  </g>
+  <text x="70" y="355" class="mono-r" font-size="10" fill="#C4FF3C" opacity="0.7">050</text>
+  <text x="70" y="655" class="mono-r" font-size="10" fill="#C4FF3C" opacity="0.7">100</text>
+  <text x="70" y="955" class="mono-r" font-size="10" fill="#C4FF3C" opacity="0.7">150</text>
+
+  <!-- ================ DIVIDER ACID (canônico) ================ -->
+  <rect x="40" y="1180" width="1000" height="3" fill="#C4FF3C"/>
+
+  <!-- ================ BOTTOM BAR ================ -->
+  <!-- Date -->
+  <text x="60" y="1235" class="mono" font-size="16" fill="#F2EFE9">21.04 / DROP-26</text>
+
+  <!-- Status dot + label center -->
+  <circle cx="520" cy="1228" r="5" fill="#C4FF3C"/>
+  <text x="534" y="1234" class="mono" font-size="14" fill="#F2EFE9">REC</text>
+  <text x="590" y="1234" class="mono" font-size="14" fill="#F2EFE9" opacity="0.5">· LIVE CAPTURE</text>
+
+  <!-- Frame counter right -->
+  <text x="1020" y="1234" class="mono-r" font-size="14" fill="#F2EFE9" text-anchor="end">FRAME 001 / 036</text>
+</svg>

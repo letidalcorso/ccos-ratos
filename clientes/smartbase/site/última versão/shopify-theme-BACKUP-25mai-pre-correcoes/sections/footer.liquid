@@ -1,0 +1,27 @@
+<footer class="sb-footer">
+  <div class="sb-container">
+    <div class="sb-footer__inner">
+
+      <a class="sb-logo" href="/">
+        <span class="sb-logo__badge">sb</span>
+        <span class="sb-logo__wordmark">
+          <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+        </span>
+      </a>
+
+      <div class="sb-footer__info">
+        <span>{{ settings.instagram_handle }}</span>
+        <span>{{ settings.location }}</span>
+      </div>
+
+      <span class="sb-footer__copy">© {{ 'now' | date: '%Y' }} {{ settings.copyright_name }}</span>
+
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Rodapé"
+}
+{% endschema %}

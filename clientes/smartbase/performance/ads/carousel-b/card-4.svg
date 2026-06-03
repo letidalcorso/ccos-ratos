@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap');</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="#07070E"/>
+
+  <!-- Ghost "17" texture -->
+  <text x="680" y="720" font-family="'Inter', system-ui, sans-serif" font-size="480" font-weight="800" fill="#3E82F7" opacity="0.04" text-anchor="middle">17</text>
+
+  <!-- Pilar pill -->
+  <rect x="80" y="80" width="116" height="28" rx="14" fill="#0E1E3A"/>
+  <text x="138" y="99" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#3E82F7" text-anchor="middle" letter-spacing="1.5">PRODUTO</text>
+
+  <!-- Accent line -->
+  <rect x="80" y="130" width="80" height="6" rx="3" fill="#3E82F7"/>
+
+  <!-- Counter -->
+  <text x="1000" y="99" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#4A4A60" text-anchor="end">4 / 5</text>
+
+  <!-- Label -->
+  <text x="80" y="220" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="500" fill="#7A7A96" letter-spacing="2">IPHONE</text>
+
+  <!-- Model name -->
+  <text x="80" y="316" font-family="'Inter', system-ui, sans-serif" font-size="96" font-weight="800" fill="#F2F2F6">17.</text>
+
+  <!-- One-liner -->
+  <text x="80" y="376" font-family="'Inter', system-ui, sans-serif" font-size="28" font-weight="400" fill="#7A7A96">A entrada que não decepciona.</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="412" x2="480" y2="412" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Specs block — conversational -->
+  <rect x="80" y="440" width="920" height="210" rx="12" fill="#0F0F1C"/>
+  <rect x="80" y="440" width="5" height="210" rx="2.5" fill="#3E82F7"/>
+
+  <text x="118" y="488" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="700" fill="#F2F2F6">Tela de 6,1". Alumínio. Câmera 48MP. Chip A18.</text>
+  <text x="118" y="524" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#7A7A96">Camera Control. Novo design. Começa onde o 16 Pro parou.</text>
+  <text x="118" y="574" font-family="'Inter', system-ui, sans-serif" font-size="18" font-weight="500" fill="#C0C0D0">Cores: Preto · Branco · Rosa · Azul Ultramar · Verde-menta</text>
+  <text x="118" y="626" font-family="'Inter', system-ui, sans-serif" font-size="18" font-weight="700" fill="#10B981">✓ Lacrado · ✓ IMEI verificado · ✓ Garantia Apple 1 ano</text>
+
+  <!-- Price -->
+  <rect x="80" y="700" width="460" height="70" rx="10" fill="#0E1E3A"/>
+  <text x="310" y="733" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6" text-anchor="middle">a partir de R$7.200 no PIX</text>
+  <text x="310" y="759" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="400" fill="#7A7A96" text-anchor="middle">chama pra confirmar disponibilidade →</text>
+
+  <!-- Footer divider -->
+  <line x1="80" y1="900" x2="1000" y2="900" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="936" font-family="'Inter', system-ui, sans-serif" font-size="24" fill="#F2F2F6">
+    <tspan font-weight="300" fill="#C0C0D0">smart</tspan><tspan fill="#3E82F7" font-size="11" baseline-shift="4">●</tspan><tspan font-weight="700">base</tspan>
+  </text>
+  <text x="1000" y="936" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

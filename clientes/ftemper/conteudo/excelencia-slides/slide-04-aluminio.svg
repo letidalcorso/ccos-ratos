@@ -1,0 +1,50 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.2" y1="0" x2="0.8" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#0D3260"/>
+    <stop offset="100%" stop-color="#050F1E"/>
+  </linearGradient>
+  <linearGradient id="card" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(255,255,255,0.16)"/>
+    <stop offset="100%" stop-color="rgba(255,255,255,0.06)"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1350" fill="url(#bg)"/>
+<line x1="0" y1="860" x2="1080" y2="260" stroke="rgba(255,255,255,0.022)" stroke-width="120"/>
+<line x1="0" y1="1080" x2="1080" y2="480" stroke="rgba(255,255,255,0.016)" stroke-width="80"/>
+<text x="-60" y="820" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="800" fill="rgba(255,255,255,0.03)">03</text>
+
+<!-- Progress dots (dot 3 active) -->
+<circle cx="444" cy="72" r="9" fill="rgba(255,255,255,0.25)"/>
+<circle cx="480" cy="72" r="9" fill="rgba(255,255,255,0.25)"/>
+<circle cx="516" cy="72" r="9" fill="#FFFFFF"/>
+<circle cx="552" cy="72" r="9" fill="rgba(255,255,255,0.25)"/>
+
+<text x="60" y="168" font-family="'Sora', sans-serif" font-weight="600" font-size="32" fill="rgba(255,255,255,0.48)" letter-spacing="6">RAZÃO</text>
+
+<text x="54" y="460" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="340" fill="#FFFFFF">03</text>
+
+<text x="60" y="574" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="105" fill="#FFFFFF" letter-spacing="2">ALUMÍNIO QUE</text>
+<text x="60" y="660" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="88" fill="#5BB8F0" letter-spacing="2">TRABALHA POR VOCÊ.</text>
+
+<!-- Frosted card -->
+<rect x="60" y="748" width="960" height="490" rx="22" fill="url(#card)"/>
+<rect x="60" y="748" width="960" height="490" rx="22" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1.5"/>
+<rect x="60" y="748" width="10" height="490" rx="5" fill="#1A6FC0"/>
+
+<circle cx="140" cy="940" r="36" fill="#1A6FC0"/>
+<polyline points="122,940 136,956 162,924" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+<text x="200" y="896" font-family="'Sora', sans-serif" font-weight="700" font-size="50" fill="#FFFFFF">Resistente. Estável.</text>
+<text x="200" y="956" font-family="'Sora', sans-serif" font-weight="700" font-size="50" fill="#FFFFFF">Sem manutenção cara.</text>
+<text x="200" y="1030" font-family="'Sora', sans-serif" font-weight="400" font-size="42" fill="rgba(255,255,255,0.62)">Resistência a intempéries.</text>
+<text x="200" y="1080" font-family="'Sora', sans-serif" font-weight="400" font-size="42" fill="rgba(255,255,255,0.62)">Estrutura estável no longo prazo.</text>
+<text x="200" y="1150" font-family="'Sora', sans-serif" font-weight="300" font-size="36" fill="rgba(91,184,240,0.80)">O material que menos dá trabalho —</text>
+<text x="200" y="1196" font-family="'Sora', sans-serif" font-weight="300" font-size="36" fill="rgba(91,184,240,0.80)">e mais entrega no longo prazo.</text>
+
+<!-- Footer -->
+<text x="540" y="1296" font-family="'Sora', sans-serif" font-weight="700" font-size="34" fill="rgba(255,255,255,0.70)" text-anchor="middle" letter-spacing="5">FTEMPER</text>
+<text x="540" y="1332" font-family="'Sora', sans-serif" font-weight="300" font-size="24" fill="rgba(255,255,255,0.35)" text-anchor="middle">@ftempercomponentes</text>
+</svg>

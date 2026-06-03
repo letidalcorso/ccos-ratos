@@ -1,0 +1,73 @@
+<header class="sb-header">
+  <div class="sb-container">
+    <div class="sb-header__inner">
+
+      <a class="sb-logo" href="{{ routes.root_url }}">
+        <span class="sb-logo__badge">sb</span>
+        <span class="sb-logo__wordmark">
+          <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+        </span>
+      </a>
+
+      <nav class="sb-nav" id="sb-nav">
+        <a href="/#sobre">sobre</a>
+        <a href="/#diferenciais">por que a smartbase</a>
+        <div class="sb-nav__dropdown">
+          <button class="sb-nav__dropdown-toggle" aria-expanded="false">produtos</button>
+          <div class="sb-nav__dropdown-menu">
+            <a href="/#novos">novos</a>
+            <a href="/pages/seminovos">seminovos</a>
+          </div>
+        </div>
+        <a href="/pages/troca">troca</a>
+        <a href="/pages/blog">blog</a>
+      </nav>
+
+      <a href="https://wa.me/{{ settings.whatsapp_number }}?text={{ section.settings.cta_wa_message | url_encode }}" target="_blank" rel="noopener" class="sb-btn sb-btn--primary sb-header__cta">
+        {{ section.settings.cta_text }}
+      </a>
+
+      <button class="sb-nav__toggle" id="sb-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Cabeçalho",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Texto do botão CTA",
+      "default": "quero meu apple"
+    },
+    {
+      "type": "text",
+      "id": "cta_wa_message",
+      "label": "Mensagem padrão do botão CTA",
+      "default": "Olá! Vim pelo site e quero saber mais sobre os produtos da Smartbase."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_link",
+      "name": "Link de navegação",
+      "settings": [
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Texto do link",
+          "default": "produtos"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "URL do link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

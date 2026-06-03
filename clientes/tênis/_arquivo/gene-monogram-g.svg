@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Gene Sneakers — Monograma "G" (favicon, app icon, sticker) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;display=swap');
+      .display { font-family: 'Big Shoulders Display', 'Arial Black', sans-serif; font-weight: 900; letter-spacing: 0; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <rect width="400" height="400" fill="#0D0D0D"/>
+  <text x="200" y="330" class="display" font-size="440" fill="#CBF23D" text-anchor="middle">G</text>
+</svg>

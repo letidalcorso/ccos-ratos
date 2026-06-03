@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');
+  </style>
+
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- ghost texture -->
+  <text x="600" y="900" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="420" font-weight="800" opacity="0.03" text-anchor="middle" letter-spacing="-10">PY</text>
+
+  <!-- header -->
+  <text x="80" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" letter-spacing="3">DECIFRA APPLE</text>
+  <text x="1000" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" text-anchor="end">1/6</text>
+
+  <!-- linha 1: a crença (white, medium) -->
+  <text font-family="'Bricolage Grotesque', sans-serif" font-size="76" font-weight="500" fill="#F2F2F6" letter-spacing="-2">
+    <tspan x="80" y="440">você já ouviu que</tspan>
+    <tspan x="80" dy="90">iPhone do Paraguai</tspan>
+    <tspan x="80" dy="90">é risco.</tspan>
+  </text>
+
+  <!-- separador -->
+  <line x1="80" y1="680" x2="240" y2="680" stroke="#3E82F7" stroke-width="3"/>
+
+  <!-- linha 2: o flip (blue, bold, maior) -->
+  <text font-family="'Bricolage Grotesque', sans-serif" font-size="92" font-weight="800" fill="#3E82F7" letter-spacing="-3">
+    <tspan x="80" y="820">ouviu de quem</tspan>
+    <tspan x="80" dy="108">nunca foi lá.</tspan>
+  </text>
+
+  <!-- footer -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="1295" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="300" fill="#C0C0D0" letter-spacing="-0.5">smart</text>
+  <circle cx="163" cy="1287" r="5" fill="#3E82F7"/>
+  <text x="173" y="1295" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="700" fill="#F2F2F6" letter-spacing="-0.5">base</text>
+  <text x="1000" y="1295" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="20" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · Post 02 · ORIGEM #01 — AIR FORCE 1
+    Slide 3/3 · Feed 4:5 (1080×1350) · Ambiente Carbon puro · Hero + Acid
+    Handoff v3.0 · 21.04.2026
+  -->
+  <defs>
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+      .mono-r { font-family: 'IBM Plex Mono', monospace; font-weight: 400; }
+      .display-bold { font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; }
+      .display-regular { font-family: 'Big Shoulders Display', sans-serif; font-weight: 400; }
+    ]]></style>
+  </defs>
+
+  <!-- Campo Carbon puro -->
+  <rect width="1080" height="1350" fill="#0D0D0D"/>
+
+  <!-- BLOCO 1 · Hero monumental · 3 linhas -->
+  <text x="80" y="280" class="display-bold" font-size="120" fill="#F2EFE9" letter-spacing="-4">Hoje, é o tênis</text>
+  <text x="80" y="395" class="display-bold" font-size="120" fill="#F2EFE9" letter-spacing="-4">mais vendido</text>
+  <text x="80" y="510" class="display-bold" font-size="120" fill="#F2EFE9" letter-spacing="-4">da história.</text>
+
+  <!-- Divisor em dash (U+2014) · Slate -->
+  <text x="80" y="680" class="display-regular" font-size="64" fill="#A6A4A1">—</text>
+
+  <!-- BLOCO 2 · Remate "Gene trouxe." em Acid -->
+  <text x="80" y="830" class="display-bold" font-size="72" fill="#C4FF3C" letter-spacing="-2">Gene trouxe.</text>
+
+  <!-- Handle @gene.sneakers canto inferior direito em Bone -->
+  <text x="1040" y="1310" class="mono-r" font-size="20" fill="#F2EFE9" text-anchor="end">@gene.sneakers</text>
+
+  <!-- Slide marker · sutil · canto inferior esquerdo pra não competir com handle -->
+  <text x="40" y="1310" class="mono-r" font-size="14" fill="#3A3A3A" letter-spacing="0.3em">03 / 03</text>
+</svg>

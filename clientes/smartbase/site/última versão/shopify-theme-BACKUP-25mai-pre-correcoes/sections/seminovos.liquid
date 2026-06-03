@@ -1,0 +1,129 @@
+<style>
+  .sb-seminovos__photo { max-height: {{ section.settings.img_max_height }}px; object-fit: {{ section.settings.img_fit }}; {% if section.settings.img_blend %}mix-blend-mode: multiply;{% endif %} }
+</style>
+
+<section id="seminovos" class="sb-section sb-seminovos">
+  <div class="sb-container">
+    <div class="sb-seminovos__inner">
+
+      <div class="sb-seminovos__content">
+        <span class="sb-badge">{{ section.settings.badge }}</span>
+
+        <h2 style="font-family: var(--font-display); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1;">
+          {{ section.settings.title }}<br>
+          <span class="sb-blue">{{ section.settings.title_blue }}</span>
+        </h2>
+
+        <p class="sb-seminovos__sub">{{ section.settings.description }}</p>
+
+        <div class="sb-seminovos__garantia">
+          ✓ <span>{{ section.settings.garantia_text }}</span>
+        </div>
+
+        <div style="margin-top: 8px;">
+          <a href="/pages/produtos" class="sb-btn sb-btn--primary">{{ section.settings.btn_text }}</a>
+        </div>
+      </div>
+
+      <div class="sb-seminovos__img-wrap">
+        {%- if section.settings.product_image != blank -%}
+          <img
+            src="{{ section.settings.product_image | image_url: width: 1200 }}"
+            alt="{{ section.settings.product_image.alt | default: 'Seminovo Apple' }}"
+            class="sb-seminovos__photo"
+            loading="lazy"
+          >
+        {%- else -%}
+          <img
+            src="{{ 'seminovo-iphone14pro.png' | asset_url }}"
+            alt="iPhone seminovo avaliado"
+            class="sb-seminovos__photo"
+            loading="lazy"
+          >
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Seminovos",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Foto do produto seminovo"
+    },
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "seminovos · em estoque"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "apple usado."
+    },
+    {
+      "type": "text",
+      "id": "title_blue",
+      "label": "Título em azul",
+      "default": "com garantia da gente."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descrição",
+      "default": "cada aparelho passa por avaliação técnica antes de ser anunciado. você sabe exatamente o que está comprando — modelo, estado, histórico. sem surpresa."
+    },
+    {
+      "type": "text",
+      "id": "garantia_text",
+      "label": "Texto de garantia",
+      "default": "3 meses de garantia própria"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Texto do botão",
+      "default": "ver seminovos disponíveis"
+    },
+    {
+      "type": "range",
+      "id": "img_max_height",
+      "label": "Altura da foto do produto",
+      "min": 200,
+      "max": 600,
+      "step": 20,
+      "default": 440,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "img_fit",
+      "label": "Ajuste da foto",
+      "options": [
+        { "value": "contain", "label": "Mostrar inteira (sem corte)" },
+        { "value": "cover", "label": "Preencher (com corte)" }
+      ],
+      "default": "contain"
+    },
+    {
+      "type": "checkbox",
+      "id": "img_blend",
+      "label": "Remover fundo branco da foto",
+      "info": "Ative se a foto tiver fundo branco — some com o fundo e deixa só o produto",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Seminovos"
+    }
+  ]
+}
+{% endschema %}

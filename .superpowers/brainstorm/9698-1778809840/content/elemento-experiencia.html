@@ -1,0 +1,106 @@
+<h2>O que carrega a experiência?</h2>
+<p class="subtitle">A marca aparece — mas o que faz a sacola ser desejável além do nome?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="frase" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0 28px;
+      text-align: center;
+    ">
+      <div style="font-family:'Helvetica Neue',sans-serif; font-size:15px; font-weight:300; color:#7A7A96; letter-spacing:0.3px; line-height:1.5; font-style:italic;">sua apple store. particular.</div>
+      <div style="width:32px; height:1px; background:#1E1E2E;"></div>
+      <div style="display:flex; align-items:center; gap:3px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:18px; font-weight:300; color:#7A7A96; letter-spacing:-0.5px;">smart</span>
+        <div style="width:5px;height:5px;background:#3E82F7;border-radius:50%;margin-bottom:2px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:18px; font-weight:700; color:#F2F2F6; letter-spacing:-0.5px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Uma frase — o conceito em palavras</h3>
+      <p>A tagline faz o trabalho. "sua apple store. particular." já carrega o posicionamento inteiro. A sacola vira um manifesto discreto — quem lê, entende. Simples, sem elemento gráfico extra.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="grafico" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Elemento gráfico abstrato — círculo grande saindo do frame -->
+      <svg width="100%" height="100%" viewBox="0 0 320 170" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+        <circle cx="260" cy="85" r="110" stroke="#3E82F7" stroke-width="0.8" opacity="0.25"/>
+        <circle cx="260" cy="85" r="70" stroke="#3E82F7" stroke-width="0.6" opacity="0.15"/>
+        <line x1="60" y1="85" x2="200" y2="85" stroke="#1E1E2E" stroke-width="0.8"/>
+      </svg>
+      <div style="position:relative; z-index:2; display:flex; align-items:center; gap:3px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:22px; font-weight:300; color:#7A7A96; letter-spacing:-0.5px;">smart</span>
+        <div style="width:7px;height:7px;background:#3E82F7;border-radius:50%;margin-bottom:3px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:22px; font-weight:700; color:#F2F2F6; letter-spacing:-0.5px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Um elemento gráfico — forma abstrata</h3>
+      <p>Um shape geométrico — círculo, arco, linha — ocupa a sacola e cria tensão visual. A marca entra dentro desse campo. O resultado parece mais editorial, menos loja. A forma não explica nada — só cria atmosfera.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="fotografia" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 170px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 20px 24px;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Simulação de detalhe de produto/lifestyle em grayscale -->
+      <div style="
+        position: absolute; top:0; left:0; right:0; bottom:0;
+        background: linear-gradient(135deg, #111118 0%, #1A1A28 40%, #0D0D14 100%);
+        opacity: 0.9;
+      "></div>
+      <!-- Linha de luz simulando detalhe de produto -->
+      <div style="
+        position: absolute;
+        top: 30px; left: 60px;
+        width: 180px; height: 60px;
+        border: 0.5px solid #2A2A3C;
+        border-radius: 8px;
+        opacity: 0.5;
+      "></div>
+      <div style="
+        position: absolute;
+        top: 50px; left: 80px;
+        width: 60px; height: 20px;
+        background: linear-gradient(90deg, #2A2A3C, transparent);
+        border-radius: 4px;
+        opacity: 0.6;
+      "></div>
+      <div style="position:relative; z-index:2; display:flex; align-items:center; gap:3px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:18px; font-weight:300; color:#7A7A96; letter-spacing:-0.5px;">smart</span>
+        <div style="width:5px;height:5px;background:#3E82F7;border-radius:50%;margin-bottom:2px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:18px; font-weight:700; color:#F2F2F6; letter-spacing:-0.5px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Imagem / textura — produto como atmosfera</h3>
+      <p>Um detalhe do produto — a tela, a câmera, o acabamento — em preto e branco, quase abstrato. A sacola vira uma peça editorial. A marca entra como assinatura. Alto impacto visual, mais complexo de produzir.</p>
+    </div>
+  </div>
+
+</div>

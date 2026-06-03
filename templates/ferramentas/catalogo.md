@@ -230,35 +230,45 @@ O Claude passa a usar esses conectores automaticamente quando fizer sentido.
 Pra verificar quais MCPs ja estao instalados: `claude mcp list`
 Pra remover um MCP: `claude mcp remove nome-do-mcp`
 
-### Notion
-**O que faz:** Acessa projetos, bases de dados, briefings e tarefas do Notion
-**Precisa de conta:** Sim, API key em notion.so/my-integrations
-**Como instalar:**
-```bash
-claude mcp add notion -- npx -y @notionhq/notion-mcp-server
-```
-**Quando usar:** Skills que precisam ler/escrever tarefas, bases de clientes, documentos
+**MCPs ativos (conectados via claude.ai):**
+Esses ja estao configurados e funcionando — nao precisam de instalacao adicional.
 
-### Gmail
+### Google Drive ✅ conectado
+**O que faz:** Acessa, le e cria arquivos no Drive (docs, sheets, PDFs)
+**Como conectar:** claude.ai → Settings → Integrations → Google Drive
+**Quando usar:** Ler briefings, salvar entregas, acessar materiais dos clientes
+
+### Gmail ✅ conectado
 **O que faz:** Le e compoe emails sem sair do Claude Code
-**Precisa de conta:** Sim, OAuth Google
-**Como instalar:**
-```bash
-claude mcp add gmail -- npx -y @gongrzhe/server-gmail-autoauth-mcp
-```
+**Como conectar:** claude.ai → Settings → Integrations → Gmail
 **Quando usar:** Skills de email, follow-up, comunicacao com clientes
 
-### Google Calendar
+### Google Calendar ✅ conectado
 **O que faz:** Ve agenda, cria eventos e encontra horarios disponiveis
-**Precisa de conta:** Sim, OAuth Google
-**Como instalar:**
-```bash
-claude mcp add google-calendar -- npx -y @gongrzhe/server-google-calendar-autoauth-mcp
-```
+**Como conectar:** claude.ai → Settings → Integrations → Google Calendar
 **Quando usar:** Skills de agendamento, planejamento, organizacao de reunioes
 
+### Notion ✅ conectado
+**O que faz:** Acessa projetos, bases de dados, briefings e tarefas do Notion
+**Como conectar:** claude.ai → Settings → Integrations → Notion
+**Quando usar:** Skills que precisam ler/escrever tarefas, bases de clientes, documentos
+
+### Figma ✅ conectado
+**O que faz:** Acessa designs, components e specs direto do Figma
+**Como conectar:** claude.ai → Settings → Integrations → Figma
+**Quando usar:** Identidade visual, revisao de designs, exportacao de specs
+
+### Zapier ✅ conectado
+**O que faz:** Dispara automacoes entre qualquer plataforma — Instagram, WhatsApp, Notion, Gmail, Sheets e milhares de outros
+**Como conectar:** claude.ai → Settings → Integrations → Zapier
+**Quando usar:** Automacoes entre sistemas, notificacoes, sincronizacao de dados entre plataformas
+
+---
+
+**MCPs para instalar localmente (quando necessario):**
+
 ### Canva
-**O que faz:** Acessa designs, cria novos assets visuais direto pelo Claude
+**O que faz:** Cria novos assets visuais direto pelo Claude
 **Precisa de conta:** Sim, Canva Pro
 **Como instalar:**
 ```bash
@@ -310,6 +320,27 @@ claude mcp add n8n -- npx -y n8n-mcp
 **O que faz:** Envia e recebe mensagens via bot do Telegram
 **Precisa de conta:** Sim, bot token do BotFather
 **Quando usar:** Skills de notificacao, comunicacao automatica
+
+### WhatsApp — Z-API
+**O que faz:** Conecta o WhatsApp Business a automacoes (Zapier, scripts, N8N) sem precisar da API oficial da Meta. Envia e recebe mensagens automaticamente — atendimento, follow-up, notificacoes, fechamento de encomendas
+**Precisa de conta:** Sim, z-api.io (tem plano gratuito para testar)
+**Configurar:**
+1. Acessar z-api.io → criar instancia → escanear QR code com o WhatsApp Business
+2. Salvar `ZAPI_INSTANCE_ID` e `ZAPI_TOKEN` no `.env`
+**Como usar numa skill:**
+```bash
+node --env-file=.env scripts/whatsapp-zapi.js
+```
+**Exemplo de envio via script:**
+```js
+// POST https://api.z-api.io/instances/{INSTANCE_ID}/token/{TOKEN}/send-text
+const res = await fetch(`https://api.z-api.io/instances/${INSTANCE_ID}/token/${TOKEN}/send-text`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ phone: '5511999999999', message: 'Olá! Sua encomenda foi confirmada.' })
+})
+```
+**Quando usar:** Atendimento automatico, boas-vindas para leads do Instagram, confirmacao de encomendas (GeneSneakers), follow-up pos-venda
 
 ---
 

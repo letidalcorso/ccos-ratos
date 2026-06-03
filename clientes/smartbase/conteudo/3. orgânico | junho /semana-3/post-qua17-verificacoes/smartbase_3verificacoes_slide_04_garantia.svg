@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">4/5</text>
+  <text x="80" y="320" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="46" font-weight="700" letter-spacing="3">03</text>
+  <text x="80" y="450" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="82" font-weight="700" letter-spacing="-2">
+    <tspan x="80" dy="0">pergunta sobre</tspan>
+    <tspan x="80" dy="98" fill="#2DFF8B">garantia + suporte.</tspan>
+  </text>
+  <text x="80" y="850" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" font-weight="400" opacity="0.9">
+    <tspan x="80" dy="0">o que perguntar:</tspan>
+  </text>
+  <g transform="translate(80, 920)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="700">✓</text>
+    <text x="40" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="500">tem nota fiscal ou comprovante?</text>
+  </g>
+  <g transform="translate(80, 970)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="700">✓</text>
+    <text x="40" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="500">como funciona se der defeito?</text>
+  </g>
+  <g transform="translate(80, 1020)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="700">✓</text>
+    <text x="40" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="500">quem te atende depois da venda?</text>
+  </g>
+  <text x="80" y="1130" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" font-weight="600" opacity="0.8">se a resposta for vaga, não compre.</text>
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

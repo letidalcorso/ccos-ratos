@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gene Sneakers — Estilo nos pés.</title>
+  <meta name="description" content="Drops globais. Sem o markup do varejo nacional. Sob encomenda." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gene Sneakers — Estilo nos pés." />
+  <meta property="og:description" content="O drop saiu. A Gene já tem. Sem esperar o varejo decidir trazer." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --black: #080808;
+      --lime: #C4FF3C;
+      --bone: #F3EFE6;
+      --gray: #3C3C3C;
+      --mid: #111111;
+      --border: #1e1e1e;
+      --border-light: #2a2a2a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--bone);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bone);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--lime); }
+
+    .nav-cta {
+      background: var(--lime);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.15s;
+      border-radius: 2px;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 40px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(196,255,60,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      width: clamp(240px, 40vw, 380px);
+      margin-bottom: 32px;
+      opacity: 1;
+    }
+
+    .hero-tagline {
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--bone);
+      margin-bottom: 52px;
+      position: relative;
+    }
+
+    .hero-tagline::before,
+    .hero-tagline::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: clamp(24px, 4vw, 48px);
+      height: 1px;
+      background: var(--gray);
+    }
+
+    .hero-tagline::before { right: calc(100% + 20px); }
+    .hero-tagline::after  { left:  calc(100% + 20px); }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: var(--lime);
+      color: var(--black);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 18px 36px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: opacity 0.15s, transform 0.1s;
+      border-radius: 2px;
+    }
+
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--bone);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 28px;
+      border: 1px solid var(--border-light);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: border-color 0.15s, color 0.15s;
+      border-radius: 2px;
+    }
+
+    .btn-ghost:hover { border-color: var(--gray); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: bounce 2s infinite;
+    }
+
+    .hero-scroll::after {
+      content: '';
+      width: 1px;
+      height: 32px;
+      background: var(--border-light);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── STATEMENT ── */
+    .statement {
+      padding: 80px 40px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--mid);
+    }
+
+    .statement-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .statement-label {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 20px;
+    }
+
+    .statement-text {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--bone);
+    }
+
+    .statement-text em {
+      color: var(--lime);
+      font-style: normal;
+    }
+
+    .statement-detail {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+
+    .statement-detail p + p { margin-top: 16px; }
+
+    .statement-detail strong { color: var(--bone); }
+
+    /* ── COMO FUNCIONA ── */
+    .how {
+      padding: 100px 40px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--bone);
+    }
+
+    .steps {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .step {
+      background: var(--mid);
+      padding: 40px 32px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .step-number {
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--border-light);
+      line-height: 1;
+      margin-bottom: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .step-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--bone);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .step-desc strong { color: var(--bone); }
+
+    .step-arrow {
+      position: absolute;
+      top: 50%;
+      right: -14px;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      background: var(--lime);
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .step:last-child .step-arrow { display: none; }
+
+    /* ── POR QUE A GENE ── */
+    .why {
+      padding: 100px 40px;
+      background: var(--mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .why-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .why-card {
+      background: var(--black);
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+    }
+
+    .why-card-icon {
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .why-card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--bone);
+      margin-bottom: 10px;
+    }
+
+    .why-card-text {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .why-card-text strong { color: var(--bone); }
+
+    /* ── MANIFESTO ── */
+    .manifesto {
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .manifesto-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .manifesto-quote {
+      font-size: clamp(20px, 3.5vw, 32px);
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--bone);
+      margin-bottom: 40px;
+    }
+
+    .manifesto-quote em {
+      color: var(--lime);
+      font-style: normal;
+    }
+
+    .manifesto-source {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    /* ── FAQ ── */
+    .faq {
+      padding: 100px 40px;
+      background: var(--mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+
+    .faq-question {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--bone);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .faq-question::-webkit-details-marker { display: none; }
+
+    details[open] .faq-toggle { transform: rotate(45deg); }
+
+    .faq-toggle {
+      color: var(--lime);
+      font-size: 20px;
+      font-weight: 300;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: transform 0.2s ease;
+      line-height: 1;
+    }
+
+    .faq-answer {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-top: 16px;
+      padding-right: 40px;
+    }
+
+    .faq-answer strong { color: var(--bone); }
+
+    /* ── CTA FINAL ── */
+    .cta-section {
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 24px;
+    }
+
+    .cta-headline {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: var(--bone);
+      margin-bottom: 20px;
+    }
+
+    .cta-sub {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .cta-note {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 20px;
+      opacity: 0.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bone);
+    }
+
+    .footer-tagline {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--gray);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--bone); }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 200;
+      background: #25D366;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+    }
+
+    .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 720px) {
+      nav { padding: 16px 20px; }
+      .hero { padding: 100px 24px 72px; }
+      .statement-inner { grid-template-columns: 1fr; gap: 32px; }
+      .steps { grid-template-columns: 1fr; }
+      .step-arrow { display: none !important; }
+      .why-grid { grid-template-columns: 1fr; }
+      .how, .why, .faq, .cta-section, .manifesto { padding: 72px 24px; }
+      footer { padding: 28px 24px; flex-direction: column; align-items: flex-start; }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-ghost { width: 100%; justify-content: center; max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Gene<span>.</span></a>
+  <a class="nav-cta" href="https://wa.me/5500000000000?text=Oi%2C%20quero%20encomendar%20um%20t%C3%AAnis" target="_blank">
+    Encomendar
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;" aria-label="Gene Sneakers — Estilo nos pés.">Gene Sneakers</h1>
+  <img
+    class="hero-logo"
+    src="gene-wordmark.svg"
+    alt="Gene Sneakers"
+  />
+  <p class="hero-tagline">Estilo nos pés.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="https://wa.me/5500000000000?text=Oi%2C%20quero%20encomendar%20um%20t%C3%AAnis" target="_blank">
+      ↗ Encomendar
+    </a>
+    <a class="btn-ghost" href="#como-funciona">
+      Ver o modelo
+    </a>
+  </div>
+  <div class="hero-scroll">scroll</div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="statement-inner">
+    <div>
+      <div class="statement-label" aria-hidden="true"></div>
+      <h2 class="statement-text">
+        A Nike lançou.<br /><em>A Gene já tem.</em>
+      </h2>
+    </div>
+    <div class="statement-detail">
+      <p>
+        O Brasil vai querer esse tênis em 6 meses.
+        O varejo vai trazer em 8. Por um preço que não faz sentido.
+      </p>
+      <p>
+        <strong>A Gene cuida do timing.<br />Você decide o modelo.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="how" id="como-funciona">
+  <div class="section-header">
+    <div class="section-label">Encomenda</div>
+    <h2 class="section-title">Simples assim.</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">01</div>
+      <div class="step-title">Você manda o modelo</div>
+      <div class="step-desc">
+        Modelo, número, colorway. <strong>Se existe no mercado global, a gente cota.</strong>
+        Não tem catálogo fixo — tem o mundo inteiro.
+      </div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-number">02</div>
+      <div class="step-title">Prazo confirmado. Preço sem surpresa.</div>
+      <div class="step-desc">
+        Mando os números antes de qualquer compromisso.
+        <strong>Você aprova antes de fechar.</strong>
+      </div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-number">03</div>
+      <div class="step-title">O par é seu.</div>
+      <div class="step-desc">
+        <strong>Cada encomenda tem um dono antes de existir.</strong>
+        Esse dono é você.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE A GENE -->
+<section class="why">
+  <div class="why-inner">
+    <div class="section-header" style="text-align:left; margin-bottom: 0;">
+      <div class="section-label">O diferencial</div>
+      <h2 class="section-title">Por que a Gene.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">⚡</div>
+        <div class="why-card-title">O drop saiu ontem.</div>
+        <div class="why-card-text">
+          O varejo brasileiro vai trazer daqui a 8 meses — se trazer.
+          <strong>A Gene já tem.</strong>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🎯</div>
+        <div class="why-card-title">R$ 600 não é o preço. É o markup.</div>
+        <div class="why-card-text">
+          Loja física, distribuição regional, margem empilhada.
+          <strong>A Gene vai direto. Sem esse custo no seu bolso.</strong>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">🔍</div>
+        <div class="why-card-title">Sabemos o que o Brasil vai querer antes de querer.</div>
+        <div class="why-card-text">
+          Acompanhamos o calendário global de drops.
+          <strong>Não vendemos tudo — curamos o que vai importar.</strong>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">📦</div>
+        <div class="why-card-title">O par tem dono antes de existir.</div>
+        <div class="why-card-text">
+          Sem estoque parado. Sem liquidação. Sem comprador esperando.
+          <strong>Cada par é de alguém — e esse alguém é você.</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto">
+  <div class="manifesto-inner">
+    <p class="manifesto-quote">
+      "Não vendemos para a tribo sneaker.<br />
+      <em>Fazemos parte dela.</em>"
+    </p>
+    <div class="manifesto-source">Gene Sneakers · 2026</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="section-header" style="text-align:left; margin-bottom: 40px;">
+      <div class="section-label">Antes de fechar</div>
+      <h2 class="section-title">O que você precisa saber.</h2>
+    </div>
+
+    <details>
+      <summary class="faq-question">
+        De onde vêm os tênis?
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        Importamos de fornecedores verificados no mercado internacional.
+        <strong>Antes de fechar a encomenda, você recebe fotos reais e nota de origem.</strong>
+        Sem promessa — evidência.
+      </div>
+    </details>
+
+    <details>
+      <summary class="faq-question">
+        Quanto tempo até chegar?
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        <strong>15 a 25 dias úteis</strong> em média após a confirmação.
+        O prazo exato vem na cotação — você aprova antes de fechar.
+        Nada chega sem você saber quando.
+      </div>
+    </details>
+
+    <details>
+      <summary class="faq-question">
+        Qualquer modelo?
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        Nike, Adidas, New Balance, Jordan Brand e outras marcas.
+        <strong>Se existe no mercado global, a gente cota.</strong>
+        Me manda o modelo no WhatsApp.
+      </div>
+    </details>
+
+    <details>
+      <summary class="faq-question">
+        Preciso pagar tudo adiantado?
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        Sinal de 50% para confirmar a encomenda.
+        <strong>O restante na chegada do produto.</strong>
+        PIX ou transferência. Sem taxa escondida.
+      </div>
+    </details>
+
+    <details>
+      <summary class="faq-question">
+        Por que o preço é diferente do varejo?
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        O varejo embute loja física, distribuição e margem de revendedor no preço.
+        <strong>A Gene vai direto. Sem esse custo no caminho.</strong>
+        A diferença não é qualidade — é estrutura.
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Sem catálogo. Sem espera.</div>
+    <h2 class="cta-headline">Qual modelo você quer?</h2>
+    <p class="cta-sub">
+      Manda o modelo. A Gene verifica, cota e confirma.<br />
+      Sem compromisso até você aprovar.
+    </p>
+    <a class="btn-primary" href="https://wa.me/5500000000000?text=Oi%2C%20quero%20encomendar%20um%20t%C3%AAnis.%20O%20modelo%20que%20quero%20%C3%A9%3A%20" target="_blank" style="display:inline-flex; font-size:14px; padding: 20px 40px;">
+      ↗ Encomendar agora
+    </a>
+    <div class="cta-note">Resposta em até 24h · Sem catálogo, sem estoque</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Gene Sneakers</div>
+    <div class="footer-tagline" style="margin-top: 6px;">Estilo nos pés.</div>
+  </div>
+  <div class="footer-links">
+    <a href="https://instagram.com/genesneakers" target="_blank">Instagram</a>
+    <a href="https://tiktok.com/@genesneakers" target="_blank">TikTok</a>
+    <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/5500000000000?text=Oi%2C%20quero%20encomendar%20um%20t%C3%AAnis" target="_blank" aria-label="Encomendar via WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+</body>
+</html>

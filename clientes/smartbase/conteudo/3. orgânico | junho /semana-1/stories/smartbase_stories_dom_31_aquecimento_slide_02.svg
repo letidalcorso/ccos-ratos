@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <rect width="1080" height="1920" fill="#000000"/>
+
+  <!-- Top tag -->
+  <line x1="80" y1="180" x2="130" y2="180" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="188" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="3">ENQUETE</text>
+
+  <!-- Main question -->
+  <text x="80" y="700" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="112" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">qual iPhone</tspan>
+    <tspan x="80" dy="128">você usa</tspan>
+    <tspan x="80" dy="128" fill="#2DFF8B">hoje?</tspan>
+  </text>
+
+  <!-- Instruction for sticker placement -->
+  <rect x="80" y="1300" width="920" height="200" rx="20" fill="#1a1a1a" stroke="#2DFF8B" stroke-width="2" stroke-dasharray="8,8"/>
+  <text x="540" y="1380" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="500" text-anchor="middle" opacity="0.5">↓ coloque aqui o sticker</text>
+  <text x="540" y="1430" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" text-anchor="middle">"ENQUETE" ou "CAIXA DE PERGUNTA"</text>
+  <text x="540" y="1475" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="400" text-anchor="middle" opacity="0.5">opções sugeridas: 11 / 13 / 14 / 15 / 16 / outro</text>
+
+  <!-- Footer -->
+  <text x="80" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="44" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

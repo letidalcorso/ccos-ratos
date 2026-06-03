@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>GENE · Preset Daylight Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bone: #F2EFE9;
+    --carbon: #0D0D0D;
+    --acid: #C4FF3C;
+    --slate: #A6A4A1;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bone);
+    color: var(--carbon);
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 48px;
+    min-height: 100vh;
+  }
+
+  .header {
+    border-bottom: 2px solid var(--carbon);
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    letter-spacing: -2px;
+    line-height: 0.9;
+  }
+
+  .tag {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--acid);
+    display: inline-block;
+  }
+
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .sample {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border: 1px solid var(--carbon);
+  }
+
+  .sample-label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--carbon);
+    color: var(--bone);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    padding: 6px 10px;
+    z-index: 3;
+    text-transform: uppercase;
+  }
+
+  .sample-label.after {
+    background: var(--acid);
+    color: var(--carbon);
+  }
+
+  /* Mock sample — gradientes que simulam foto editorial */
+  .mock-sample-1 {
+    background:
+      radial-gradient(ellipse at 30% 40%, #d4a574 0%, #8a6540 40%, #3a2818 100%);
+  }
+
+  .mock-sample-2 {
+    background:
+      linear-gradient(180deg, #e8d5b7 0%, #c4a57d 50%, #6b4a2e 100%);
+  }
+
+  .mock-sample-3 {
+    background:
+      radial-gradient(circle at 60% 30%, #f5e6d3 0%, #c9a882 35%, #4a3524 100%);
+  }
+
+  /* O FILTRO GENE · DAYLIGHT aplicado via CSS */
+  .gene-daylight {
+    filter:
+      brightness(1.05)
+      contrast(0.92)
+      saturate(0.88)
+      sepia(0.08)
+      hue-rotate(-3deg);
+    position: relative;
+  }
+
+  /* Overlay de grão */
+  .gene-daylight::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-radial-gradient(
+        circle at 20% 30%,
+        transparent 0,
+        transparent 1px,
+        rgba(255,255,255,0.02) 1px,
+        rgba(255,255,255,0.02) 2px
+      ),
+      repeating-radial-gradient(
+        circle at 70% 80%,
+        transparent 0,
+        transparent 1px,
+        rgba(0,0,0,0.03) 1px,
+        rgba(0,0,0,0.03) 2px
+      );
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+
+  /* Simulação visual de "antes" — cor saturada default */
+  .instagram-default {
+    filter:
+      saturate(1.25)
+      contrast(1.1)
+      brightness(1.0);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .value-card {
+    border: 1px solid var(--carbon);
+    padding: 20px;
+    background: transparent;
+  }
+
+  .value-card-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 8px;
+  }
+
+  .value-card-number {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--carbon);
+  }
+
+  .value-card-unit {
+    font-size: 12px;
+    color: var(--slate);
+    margin-top: 4px;
+  }
+
+  .hsl-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 48px;
+  }
+
+  .hsl-table th {
+    text-align: left;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--carbon);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 11px;
+  }
+
+  .hsl-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(13,13,13,0.1);
+  }
+
+  .hsl-table .swatch {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  .pill {
+    display: inline-block;
+    background: var(--carbon);
+    color: var(--bone);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    padding: 4px 10px;
+    text-transform: uppercase;
+  }
+
+  .pill.acid {
+    background: var(--acid);
+    color: var(--carbon);
+  }
+
+  .footer {
+    border-top: 2px solid var(--carbon);
+    padding-top: 24px;
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  .footer-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--acid);
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  .note {
+    background: var(--carbon);
+    color: var(--bone);
+    padding: 32px;
+    margin: 48px 0;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .note strong {
+    color: var(--acid);
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>GENE · PRESET DAYLIGHT</h1>
+    <div class="tag" style="margin-top:12px;">v1.0 · ambiente 01 · produto com vida</div>
+  </div>
+  <div>
+    <span class="pill acid">· LIVE</span>
+  </div>
+</div>
+
+<!-- ================ COMPARAÇÃO ANTES/DEPOIS ================ -->
+<div class="section-label">01 · COMPARAÇÃO DIRETA</div>
+
+<div class="comparison">
+  <div class="sample mock-sample-1 instagram-default">
+    <span class="sample-label">ANTES · Instagram default</span>
+  </div>
+  <div class="sample mock-sample-1 gene-daylight">
+    <span class="sample-label after">DEPOIS · Gene Daylight</span>
+  </div>
+</div>
+
+<div class="comparison">
+  <div class="sample mock-sample-2 instagram-default">
+    <span class="sample-label">ANTES</span>
+  </div>
+  <div class="sample mock-sample-2 gene-daylight">
+    <span class="sample-label after">DEPOIS</span>
+  </div>
+</div>
+
+<div class="comparison">
+  <div class="sample mock-sample-3 instagram-default">
+    <span class="sample-label">ANTES</span>
+  </div>
+  <div class="sample mock-sample-3 gene-daylight">
+    <span class="sample-label after">DEPOIS</span>
+  </div>
+</div>
+
+<div class="note">
+  <strong>OBSERVAÇÃO:</strong> os previews acima são gradientes CSS que simulam uma foto editorial — em fotos reais, o efeito é mais sutil e consistente. O preset está calibrado para fotos com luz natural lateral; em cenas com luz artificial forte (LED, néon), aplicar o preset <strong>Chrome</strong> ou <strong>Bloom</strong>, não este.
+</div>
+
+<!-- ================ VALORES CHAVE ================ -->
+<div class="section-label">02 · VALORES CHAVE · LIGHTROOM</div>
+
+<div class="values-grid">
+  <div class="value-card">
+    <div class="value-card-label">Temperature</div>
+    <div class="value-card-number">+8</div>
+    <div class="value-card-unit">Kelvin shift · warm</div>
+  </div>
+  <div class="value-card">
+    <div class="value-card-label">Saturation</div>
+    <div class="value-card-number">−12</div>
+    <div class="value-card-unit">evita look saturado</div>
+  </div>
+  <div class="value-card">
+    <div class="value-card-label">Highlights</div>
+    <div class="value-card-number">−25</div>
+    <div class="value-card-unit">recupera brilho</div>
+  </div>
+  <div class="value-card">
+    <div class="value-card-label">Shadows</div>
+    <div class="value-card-number">+15</div>
+    <div class="value-card-unit">abre sombra</div>
+  </div>
+  <div class="value-card">
+    <div class="value-card-label">Contrast</div>
+    <div class="value-card-number">−10</div>
+    <div class="value-card-unit">matiza editorial</div>
+  </div>
+  <div class="value-card">
+    <div class="value-card-label">Exposure</div>
+    <div class="value-card-number">+0.15</div>
+    <div class="value-card-unit">leve respiro</div>
+  </div>
+  <div class="value-card">
+    <div class="value-card-label">Grain</div>
+    <div class="value-card-number">20</div>
+    <div class="value-card-unit">size 25 · rough 50</div>
+  </div>
+  <div class="value-card">
+    <div class="value-card-label">Vibrance</div>
+    <div class="value-card-number">−5</div>
+    <div class="value-card-unit">vida sem artifício</div>
+  </div>
+</div>
+
+<!-- ================ HSL ================ -->
+<div class="section-label">03 · HSL · AJUSTES POR COR</div>
+
+<table class="hsl-table">
+  <thead>
+    <tr>
+      <th>Canal</th>
+      <th>Hue</th>
+      <th>Saturation</th>
+      <th>Luminance</th>
+      <th>Racional</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="swatch" style="background:#d93f3f"></span>Red</td>
+      <td>0</td><td>−8</td><td>+4</td>
+      <td>vermelho Bloom sutil</td>
+    </tr>
+    <tr>
+      <td><span class="swatch" style="background:#e87c3e"></span>Orange</td>
+      <td>−5</td><td>−15</td><td>+8</td>
+      <td>couro/pele quente</td>
+    </tr>
+    <tr>
+      <td><span class="swatch" style="background:#e0c449"></span>Yellow</td>
+      <td>−8</td><td>−20</td><td>+5</td>
+      <td>evita tom sódio</td>
+    </tr>
+    <tr>
+      <td><span class="swatch" style="background:#5fa053"></span>Green</td>
+      <td>+10</td><td>−30</td><td>0</td>
+      <td>verde puxa pro cinza</td>
+    </tr>
+    <tr>
+      <td><span class="swatch" style="background:#49b0c9"></span>Aqua</td>
+      <td>+15</td><td>−25</td><td>−5</td>
+      <td>reduz "Instagram frio"</td>
+    </tr>
+    <tr>
+      <td><span class="swatch" style="background:#4a6fc9"></span>Blue</td>
+      <td>−8</td><td>−10</td><td>−10</td>
+      <td>céu profundo, não saturado</td>
+    </tr>
+    <tr>
+      <td><span class="swatch" style="background:#8b5fc9"></span>Purple</td>
+      <td>0</td><td>−15</td><td>0</td>
+      <td>neutraliza contaminação</td>
+    </tr>
+    <tr>
+      <td><span class="swatch" style="background:#c95fa0"></span>Magenta</td>
+      <td>0</td><td>−10</td><td>0</td>
+      <td>controla Bloom externo</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ================ FOOTER ================ -->
+<div class="footer">
+  <div><span class="footer-dot"></span>GENE · FILTRO 01/03</div>
+  <div>DAYLIGHT · v1.0</div>
+  <div>21.04 · DROP-26</div>
+</div>
+
+</body>
+</html>

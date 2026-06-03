@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;display=swap');
+      .display{font-family:'Big Shoulders Display','Arial Black',sans-serif;font-weight:900;letter-spacing:-0.01em}
+    </style>
+    <linearGradient id="chromeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141D26"/>
+      <stop offset="100%" stop-color="#2A3845"/>
+    </linearGradient>
+    <radialGradient id="chromeGlow" cx="75%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#8FA5B5" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#141D26" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Chrome field com vinheta radial -->
+  <rect width="1080" height="1920" fill="url(#chromeBg)"/>
+  <rect width="1080" height="1920" fill="url(#chromeGlow)"/>
+
+  <!-- / PEDIDOS / em Bone -->
+  <text x="540" y="985" class="display" font-size="150" fill="#F2EFE9" text-anchor="middle">/ PEDIDOS /</text>
+
+  <!-- Filete Bone embaixo -->
+  <line x1="430" y1="1055" x2="650" y2="1055" stroke="#F2EFE9" stroke-width="4"/>
+</svg>

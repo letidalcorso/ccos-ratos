@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;display=swap');
+      .display { font-family: 'Big Shoulders Display', 'Arial Black', sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; }
+      .display-r { font-family: 'Big Shoulders Display', 'Arial Black', sans-serif; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <!-- CARBON field -->
+  <rect width="1080" height="1080" fill="#0D0D0D"/>
+
+  <!-- GENE dominante em Bone -->
+  <text x="540" y="555" class="display" font-size="300" fill="#F2EFE9" text-anchor="middle">GENE</text>
+
+  <!-- / SNEAKERS / no formato canônico das capas de destaque -->
+  <text x="540" y="685" class="display-r" font-size="82" fill="#F2EFE9" text-anchor="middle">/ SNEAKERS /</text>
+
+  <!-- Filete Acid — divider das capas -->
+  <line x1="460" y1="720" x2="620" y2="720" stroke="#CBF23D" stroke-width="3"/>
+</svg>

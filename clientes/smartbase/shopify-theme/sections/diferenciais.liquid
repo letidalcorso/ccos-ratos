@@ -1,0 +1,89 @@
+<section id="diferenciais" class="sb-section sb-section--alt">
+  <div class="sb-container">
+
+    <div class="sb-section-header">
+      <span class="sb-badge">{{ section.settings.badge }}</span>
+      <h2>{{ section.settings.title }} <span class="sb-blue">{{ section.settings.title_blue }}</span></h2>
+    </div>
+
+    <div class="sb-diferenciais__grid">
+      {%- for block in section.blocks -%}
+        <div class="sb-diferencial-card{% if block.settings.featured %} sb-diferencial-card--featured{% endif %}" {{ block.shopify_attributes }}>
+          <div class="sb-diferencial-card__num">{{ block.settings.number }}</div>
+          <div class="sb-diferencial-card__title">{{ block.settings.title }}</div>
+          <p class="sb-diferencial-card__desc">{{ block.settings.description }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Diferenciais",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "por que a smartbase"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "tem loja."
+    },
+    {
+      "type": "text",
+      "id": "title_blue",
+      "label": "Título em azul",
+      "default": "e tem quem entende."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card diferencial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Número",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Título do card",
+          "default": "original garantido"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descrição",
+          "default": "todo aparelho é Apple original, verificado um a um. com garantia de verdade."
+        },
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Destaque (borda azul)",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Diferenciais",
+      "blocks": [
+        { "type": "card", "settings": { "number": "01", "title": "original garantido", "description": "todo aparelho é Apple original, verificado um a um antes de chegar até você. com garantia de verdade.", "featured": false } },
+        { "type": "card", "settings": { "number": "02", "title": "preço que faz sentido", "description": "novos importados e seminovos avaliados. a mesma Apple, com preço melhor do que o da loja oficial.", "featured": false } },
+        { "type": "card", "settings": { "number": "03", "title": "troca estruturada", "description": "avaliação técnica com regras claras, valor calculado na hora e processo transparente do início ao fim. sem achismo.", "featured": true } },
+        { "type": "card", "settings": { "number": "04", "title": "foco apple", "description": "escolhemos trabalhar só com Apple. conhecer uma marca a fundo muda o atendimento, a recomendação e o aparelho certo pra você.", "featured": false } }
+      ]
+    }
+  ]
+}
+{% endschema %}

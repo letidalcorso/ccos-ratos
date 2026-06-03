@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · ACID Overlay Kit (Figma)
+
+    MOOD: statement gritado, vivo, ataque. Hero, drop reveal, recall visual máximo.
+    Uso controlado — 1 post a cada 8-10. Ambiente puro funciona mais que filtro pesado.
+
+    Ordem dos layers (de baixo pra cima) + blend mode a aplicar:
+    ──────────────────────────────────────────────────────
+    Layer 01 · punch-contrast-softlight    → SOFT LIGHT · 55%
+    Layer 02 · acid-wash-overlay           → OVERLAY · 25%
+    Layer 03 · yellow-mids-multiply        → MULTIPLY · 15%
+    Layer 04 · edge-highlight-screen       → SCREEN · 12%
+    (sem vinheta — Acid é aberto, sem centro)
+    (grain mínima · Overlay 8% · opcional)
+    ──────────────────────────────────────────────────────
+
+    IMPORTANTE: Acid raramente precisa de overlay pesado.
+    Se a cena já tem o ambiente Acid construído (fundo C4FF3C),
+    pule o kit e trabalha só os sliders nativos do Figma.
+  -->
+
+  <!-- LAYER 01 · Punch contrast (Soft Light 55%) -->
+  <g id="punch-contrast-softlight" opacity="0.55">
+    <rect width="1080" height="1350" fill="#EEF5D8"/>
+  </g>
+
+  <!-- LAYER 02 · Acid wash (Overlay 25%) -->
+  <g id="acid-wash-overlay" opacity="0.25">
+    <rect width="1080" height="1350" fill="#C4FF3C"/>
+  </g>
+
+  <!-- LAYER 03 · Yellow midtones (Multiply 15%) -->
+  <g id="yellow-mids-multiply" opacity="0.15">
+    <rect width="1080" height="1350" fill="#D4D878"/>
+  </g>
+
+  <!-- LAYER 04 · Edge highlight (Screen 12%) -->
+  <g id="edge-highlight-screen" opacity="0.12">
+    <rect width="1080" height="1350" fill="#F5FFD0"/>
+  </g>
+
+  <!-- GUIDE -->
+  <g id="GUIDE-REMOVER-DEPOIS" opacity="0.85">
+    <rect x="40" y="40" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="92" font-family="'IBM Plex Mono',monospace" font-weight="500" font-size="28" fill="#C4FF3C" letter-spacing="0.1em">GENE · ACID OVERLAY KIT</text>
+    <rect x="40" y="1230" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="1260" font-family="'IBM Plex Mono',monospace" font-size="16" fill="#F2EFE9">1. soft 55%  ·  2. ovl 25%  ·  3. mult 15%  ·  4. scr 12%  ·  sem vinheta</text>
+    <text x="60" y="1285" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">mood: statement · vivo · hero · drop reveal · 1 a cada 8-10 posts</text>
+    <text x="60" y="1305" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">atenção: Acid puro (fundo #C4FF3C) dispensa overlay · delete guide</text>
+  </g>
+</svg>

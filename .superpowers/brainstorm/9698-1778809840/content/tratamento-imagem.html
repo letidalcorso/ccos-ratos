@@ -1,0 +1,168 @@
+<h2>Como a imagem é tratada?</h2>
+<p class="subtitle">A câmera do iPhone 17 Pro Max ocupa a sacola — mas o tratamento define o tom.</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="pb-puro" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 190px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 16px 20px;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Câmera P&B pura, alta fidelidade, ocupa quase todo o frame -->
+      <svg width="100%" height="100%" viewBox="0 0 300 190" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+        <defs>
+          <radialGradient id="lens1pb" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0a0a12"/>
+            <stop offset="70%" stop-color="#060608"/>
+            <stop offset="100%" stop-color="#111120"/>
+          </radialGradient>
+          <radialGradient id="reflect1" cx="35%" cy="35%" r="40%">
+            <stop offset="0%" stop-color="#2A2A3C" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#0a0a12" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- Módulo câmera tomando quase todo o frame -->
+        <rect x="-10" y="-10" width="230" height="210" rx="40" fill="#0D0D18" stroke="#252535" stroke-width="1"/>
+        <!-- Lente principal grande -->
+        <circle cx="90" cy="80" r="68" fill="url(#lens1pb)" stroke="#1E1E2E" stroke-width="1.5"/>
+        <circle cx="90" cy="80" r="54" fill="#05050C" stroke="#151520" stroke-width="1"/>
+        <circle cx="90" cy="80" r="36" fill="#030308" stroke="#3E82F7" stroke-width="0.3" opacity="0.2"/>
+        <circle cx="90" cy="80" r="18" fill="#020204"/>
+        <circle cx="75" cy="65" r="8" fill="#1A1A28" opacity="0.5"/>
+        <!-- Lente secundária -->
+        <circle cx="170" cy="50" r="34" fill="url(#lens1pb)" stroke="#1E1E2E" stroke-width="1"/>
+        <circle cx="170" cy="50" r="22" fill="#05050C" stroke="#151520" stroke-width="0.8"/>
+        <circle cx="170" cy="50" r="12" fill="#030308"/>
+        <!-- Lente terceira -->
+        <circle cx="170" cy="140" r="30" fill="url(#lens1pb)" stroke="#1E1E2E" stroke-width="1"/>
+        <circle cx="170" cy="140" r="20" fill="#05050C"/>
+        <circle cx="170" cy="140" r="10" fill="#030308"/>
+        <!-- Flash -->
+        <circle cx="220" cy="95" r="14" fill="#0A0A14" stroke="#1A1A28" stroke-width="0.8"/>
+        <circle cx="220" cy="95" r="6" fill="#0F0F1C"/>
+        <!-- LiDAR -->
+        <circle cx="220" cy="130" r="10" fill="#0A0A14" stroke="#1A1A28" stroke-width="0.6"/>
+      </svg>
+      <!-- Wordmark no canto inferior esquerdo -->
+      <div style="position:relative; z-index:2; display:flex; align-items:center; gap:2px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:300; color:#7A7A96; letter-spacing:-0.3px;">smart</span>
+        <div style="width:4px;height:4px;background:#3E82F7;border-radius:50%;margin-bottom:1px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:700; color:#F2F2F6; letter-spacing:-0.3px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>P&B puro — fotografia editorial</h3>
+      <p>A foto real da câmera, convertida em preto e branco de alto contraste. Ocupa grande parte da sacola. A marca entra pequena, como assinatura. Parece capa de revista de tecnologia.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="duotone" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 190px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 16px 20px;
+      position: relative;
+      overflow: hidden;
+    ">
+      <svg width="100%" height="100%" viewBox="0 0 300 190" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+        <defs>
+          <radialGradient id="lens2dt" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0c1428"/>
+            <stop offset="70%" stop-color="#06080E"/>
+            <stop offset="100%" stop-color="#0e1830"/>
+          </radialGradient>
+          <!-- Overlay azul suave -->
+          <radialGradient id="blueOverlay" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="#3E82F7" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#07070E" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect x="-10" y="-10" width="230" height="210" rx="40" fill="#0D0D20" stroke="#1E2840" stroke-width="1"/>
+        <!-- Overlay azul sutil -->
+        <rect x="-10" y="-10" width="230" height="210" rx="40" fill="url(#blueOverlay)"/>
+        <!-- Lente principal -->
+        <circle cx="90" cy="80" r="68" fill="url(#lens2dt)" stroke="#1E2A40" stroke-width="1.5"/>
+        <circle cx="90" cy="80" r="54" fill="#060C18" stroke="#162030" stroke-width="1"/>
+        <circle cx="90" cy="80" r="36" fill="#030810" stroke="#3E82F7" stroke-width="0.5" opacity="0.35"/>
+        <circle cx="90" cy="80" r="18" fill="#020408"/>
+        <circle cx="75" cy="65" r="8" fill="#1A2A40" opacity="0.5"/>
+        <!-- Reflexo azul na lente -->
+        <circle cx="82" cy="72" r="12" fill="#3E82F7" opacity="0.04"/>
+        <!-- Lente secundária -->
+        <circle cx="170" cy="50" r="34" fill="url(#lens2dt)" stroke="#1E2840" stroke-width="1"/>
+        <circle cx="170" cy="50" r="22" fill="#060C18" stroke="#162030" stroke-width="0.8"/>
+        <circle cx="170" cy="50" r="12" fill="#030810"/>
+        <!-- Lente terceira -->
+        <circle cx="170" cy="140" r="30" fill="url(#lens2dt)" stroke="#1E2840" stroke-width="1"/>
+        <circle cx="170" cy="140" r="20" fill="#060C18"/>
+        <circle cx="170" cy="140" r="10" fill="#030810"/>
+        <!-- Flash com tom azulado -->
+        <circle cx="220" cy="95" r="14" fill="#0A0F1E" stroke="#1A2438" stroke-width="0.8"/>
+        <circle cx="220" cy="95" r="6" fill="#0F1828"/>
+        <circle cx="220" cy="130" r="10" fill="#0A0F1E" stroke="#1A2438" stroke-width="0.6"/>
+      </svg>
+      <div style="position:relative; z-index:2; display:flex; align-items:center; gap:2px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:300; color:#7A7A96; letter-spacing:-0.3px;">smart</span>
+        <div style="width:4px;height:4px;background:#3E82F7;border-radius:50%;margin-bottom:1px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:700; color:#3E82F7; letter-spacing:-0.3px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Duotone — preto + azul da marca</h3>
+      <p>A imagem tem um banho azul muito sutil — o tom da marca infiltrado na fotografia. Conecta a imagem com a identidade visual sem ser explícito. O "base" do wordmark aparece em azul para fechar o sistema.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="close-abstrato" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 190px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 16px 20px;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Close extremo — só a lente principal, saindo do frame -->
+      <svg width="100%" height="100%" viewBox="0 0 300 190" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+        <defs>
+          <radialGradient id="lens3close" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0a0a14"/>
+            <stop offset="60%" stop-color="#060608"/>
+            <stop offset="100%" stop-color="#0D0D1C"/>
+          </radialGradient>
+        </defs>
+        <!-- Lente principal gigante, saindo do frame — close extremo -->
+        <circle cx="150" cy="95" r="155" fill="#0D0D18" stroke="#1E1E2E" stroke-width="1.5"/>
+        <circle cx="150" cy="95" r="128" fill="url(#lens3close)" stroke="#151520" stroke-width="1"/>
+        <circle cx="150" cy="95" r="96" fill="#05050C" stroke="#1A1A28" stroke-width="0.8"/>
+        <circle cx="150" cy="95" r="60" fill="#030308" stroke="#3E82F7" stroke-width="0.4" opacity="0.25"/>
+        <circle cx="150" cy="95" r="30" fill="#020205"/>
+        <circle cx="150" cy="95" r="12" fill="#010103"/>
+        <!-- Reflexo interno -->
+        <circle cx="124" cy="70" r="18" fill="white" opacity="0.02"/>
+        <circle cx="122" cy="68" r="6" fill="white" opacity="0.03"/>
+      </svg>
+      <div style="position:relative; z-index:2; display:flex; align-items:center; gap:2px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:300; color:#7A7A96; letter-spacing:-0.3px;">smart</span>
+        <div style="width:4px;height:4px;background:#3E82F7;border-radius:50%;margin-bottom:1px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:700; color:#F2F2F6; letter-spacing:-0.3px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Close extremo — só a lente principal</h3>
+      <p>Zoom máximo em uma única lente, saindo do frame da sacola. Quase abstrato — parece um portal, um olho. O produto fica implícito, não explícito. Mais audacioso, mais impacto visual.</p>
+    </div>
+  </div>
+
+</div>

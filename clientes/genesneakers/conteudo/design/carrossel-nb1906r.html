@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Carrossel: NB 1906R</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #1a1a1a;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 40px 24px 80px;
+    }
+    .page-title {
+      color: #C4FF3C;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .page-sub {
+      color: #555;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      margin-bottom: 40px;
+    }
+    .note {
+      background: #111;
+      border-left: 3px solid #C4FF3C;
+      padding: 12px 16px;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+    .slides-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .slide-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .slide-label {
+      color: #555;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    /* 1:1 square — display at 300×300 */
+    .slide {
+      width: 300px;
+      height: 300px;
+      background: #080808;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── SLIDE 1 — Capa ── */
+    .s1 {
+      justify-content: flex-end;
+      padding: 24px;
+    }
+    .s1 .headline {
+      font-size: 38px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      line-height: 0.88;
+      letter-spacing: -0.02em;
+    }
+    .s1 .tag {
+      font-size: 8px;
+      color: #3C3C3C;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 14px;
+    }
+    .s1 .lime-line {
+      width: 32px;
+      height: 2px;
+      background: #C4FF3C;
+      margin-bottom: 16px;
+    }
+
+    /* ── SLIDE 2 — Produto ── */
+    .s2 {
+      padding: 20px;
+    }
+    .s2 .photo-area {
+      width: 100%;
+      flex: 1;
+      border: 1px dashed #3C3C3C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .s2 .photo-text {
+      font-size: 9px;
+      color: #3C3C3C;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .s2 .model-name {
+      font-size: 22px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    .s2 .model-sub {
+      font-size: 9px;
+      color: #C4FF3C;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ── SLIDE 3 ── */
+    .s3 {
+      justify-content: center;
+      padding: 28px;
+    }
+    .s3 .big {
+      font-size: 44px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      line-height: 0.88;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .s3 .body {
+      font-size: 11px;
+      color: #3C3C3C;
+      line-height: 1.55;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── SLIDE 4 ── */
+    .s4 {
+      justify-content: center;
+      padding: 28px;
+    }
+    .s4 .body {
+      font-size: 13px;
+      color: #F3EFE6;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+    }
+    .s4 .divider {
+      width: 24px;
+      height: 1px;
+      background: #C4FF3C;
+      margin: 18px 0;
+    }
+    .s4 .detail {
+      font-size: 9px;
+      color: #3C3C3C;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ── SLIDE 5 — CTA ── */
+    .s5 {
+      justify-content: space-between;
+      padding: 28px 24px;
+    }
+    .s5 .cta-top .line1 {
+      font-size: 13px;
+      color: #3C3C3C;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .s5 .cta-top .line2 {
+      font-size: 34px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+    }
+    .s5 .cta-top .line3 {
+      font-size: 34px;
+      font-weight: 900;
+      color: #C4FF3C;
+      text-transform: uppercase;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin-top: 4px;
+    }
+    .s5 .logo-area img {
+      width: 110px;
+      display: block;
+    }
+
+    /* universal corner tag */
+    .corner {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      font-size: 8px;
+      color: #3C3C3C;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .slide-num {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      font-size: 8px;
+      color: #3C3C3C;
+      letter-spacing: 0.15em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-title">Gene Sneakers — Carrossel</div>
+<div class="page-sub">Peça 1.1 · New Balance 1906R · Instagram Feed · 5 slides · Formato 1:1</div>
+
+<div class="note">
+  Slide 2 tem área para foto do produto — adicionar foto real do 1906R antes de publicar. Tamanho ideal de exportação: 1080×1080px por slide. Screenshot cada slide individualmente.
+</div>
+
+<div class="slides-row">
+
+  <!-- Slide 1 — Capa -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 1 — Capa</div>
+    <div class="slide s1">
+      <span class="corner">1 / 5</span>
+      <div class="lime-line"></div>
+      <div class="headline">O BR<br>ainda não<br>tem esse.</div>
+      <div class="tag">Gene Sneakers · Sob encomenda</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 — Produto -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 2 — Produto</div>
+    <div class="slide s2">
+      <span class="corner">2 / 5</span>
+      <div class="photo-area">
+        <div class="photo-text">Foto do tênis<br>1906R aqui</div>
+      </div>
+      <div class="model-name">New Balance<br>1906R</div>
+      <div class="model-sub">Protection Pack</div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 3</div>
+    <div class="slide s3">
+      <span class="corner">3 / 5</span>
+      <div class="big">Saiu<br>nos EUA.</div>
+      <div class="body">Ainda não chegou no varejo nacional. Quando chegar, vai custar o dobro.</div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 4</div>
+    <div class="slide s4">
+      <span class="corner">4 / 5</span>
+      <div class="body">Amortecimento de corrida, estética que não pede desculpa.</div>
+      <div class="divider"></div>
+      <div class="body">O tipo de tênis que você usa e ninguém pergunta onde comprou — eles sabem.</div>
+      <div class="divider" style="background:#3C3C3C;margin-bottom:0;"></div>
+    </div>
+  </div>
+
+  <!-- Slide 5 — CTA -->
+  <div class="slide-wrap">
+    <div class="slide-label">Slide 5 — CTA</div>
+    <div class="slide s5">
+      <span class="corner">5 / 5</span>
+      <div class="cta-top">
+        <div class="line1">Disponível</div>
+        <div class="line2">sob</div>
+        <div class="line2">encomenda.</div>
+        <div class="line3" style="margin-top:12px;">A Gene traz.</div>
+      </div>
+      <div class="logo-area">
+        <img src="../../02_branding/identidade_visual/gene-wordmark.svg" alt="Gene Sneakers"/>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!--
+    Gene Sneakers · Avatar 02 (alternativa monograma)
+    Lógica: letra única gigante = max legibilidade em 32px
+    Referência: Supreme, Palace, Nike swoosh
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;display=swap');
+      .display{font-family:'Big Shoulders Display','Arial Black',sans-serif;font-weight:900;letter-spacing:-0.04em}
+    </style>
+  </defs>
+
+  <!-- Campo Carbon -->
+  <rect width="1080" height="1080" fill="#0D0D0D"/>
+
+  <!-- G gigante em Acid -->
+  <text x="540" y="820" class="display" font-size="980" fill="#C4FF3C" text-anchor="middle">G</text>
+
+  <!-- ENE em IBM Plex Mono micro (legenda contextual) -->
+  <text x="540" y="940" font-family="'IBM Plex Mono',monospace" font-weight="500" font-size="36" fill="#F2EFE9" text-anchor="middle" letter-spacing="0.4em">GENE</text>
+</svg>

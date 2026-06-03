@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- Photo placeholder (right column) -->
+  <rect x="560" y="80" width="460" height="1160" rx="12" fill="#0F0F1C" stroke="#1E1E2E" stroke-width="1" stroke-dasharray="8,5"/>
+  <text x="790" y="640" font-family="'Inter', sans-serif" font-size="16" fill="#2A2A40" text-anchor="middle">foto do produto</text>
+  <text x="790" y="664" font-family="'Inter', sans-serif" font-size="16" fill="#2A2A40" text-anchor="middle">iPhone 17</text>
+
+  <!-- Pilar Pill -->
+  <rect x="80" y="98" width="112" height="28" rx="14" fill="#0E1E3A"/>
+  <text x="94" y="117" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#3E82F7" letter-spacing="1.5">PRODUTO</text>
+
+  <!-- Accent Line -->
+  <rect x="80" y="188" width="100" height="7" rx="3.5" fill="#3E82F7"/>
+
+  <!-- Headline (left column, max ~450px) -->
+  <text x="80" y="310" font-family="'Bricolage Grotesque', sans-serif" font-size="76" font-weight="800" fill="#F2F2F6">você já</text>
+  <text x="80" y="400" font-family="'Bricolage Grotesque', sans-serif" font-size="76" font-weight="800" fill="#F2F2F6">sabe que</text>
+  <text x="80" y="490" font-family="'Bricolage Grotesque', sans-serif" font-size="76" font-weight="800" fill="#F2F2F6">quer.</text>
+  <text x="80" y="600" font-family="'Bricolage Grotesque', sans-serif" font-size="60" font-weight="800" fill="#3E82F7">falta só</text>
+  <text x="80" y="678" font-family="'Bricolage Grotesque', sans-serif" font-size="60" font-weight="800" fill="#3E82F7">comprar.</text>
+
+  <!-- Sub -->
+  <text x="80" y="768" font-family="'Inter', sans-serif" font-size="22" font-weight="400" fill="#C0C0D0">iPhone 17. original.</text>
+  <text x="80" y="798" font-family="'Inter', sans-serif" font-size="22" font-weight="400" fill="#C0C0D0">direto com quem entende.</text>
+
+  <!-- CTA Button -->
+  <rect x="80" y="880" width="340" height="56" rx="28" fill="#3E82F7"/>
+  <text x="250" y="915" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">chama no WhatsApp →</text>
+
+  <!-- Footer Divider -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="300" fill="#C0C0D0">smart</text>
+  <circle cx="145" cy="1291" r="5" fill="#3E82F7"/>
+  <text x="155" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">base</text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

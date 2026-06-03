@@ -1,0 +1,105 @@
+<section class="sb-hero">
+  <div class="sb-hero__bar"></div>
+  <div class="sb-hero__ghost" aria-hidden="true">sb</div>
+
+  <div class="sb-container">
+    <div class="sb-hero__inner">
+
+      <div class="sb-hero__content">
+        <span class="sb-badge sb-badge--blue">{{ section.settings.badge }}</span>
+
+        <h1 class="sb-hero__headline">
+          {{ section.settings.heading_line1 }}<br>
+          <span class="sb-blue">{{ section.settings.heading_line2 }}</span>
+        </h1>
+
+        <p class="sb-hero__sub">{{ section.settings.subtitle }}</p>
+
+        <div class="sb-hero__actions">
+          <a href="{{ section.settings.btn1_url }}" class="sb-btn sb-btn--primary">{{ section.settings.btn1_text }}</a>
+          <a href="{{ section.settings.btn2_url }}" class="sb-btn sb-btn--ghost">{{ section.settings.btn2_text }}</a>
+        </div>
+      </div>
+
+      <div class="sb-hero__image">
+        {% if section.settings.image %}
+          {{ section.settings.image | image_url: width: 800 | image_tag: class: 'sb-hero__img-placeholder', alt: section.settings.heading_line1 }}
+        {% else %}
+          <div class="sb-img-placeholder sb-hero__img-placeholder">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="38" height="38" rx="8" stroke="#4A4A60" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M13 27l5-6 4 5 3-3 5 7H13z" stroke="#4A4A60" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="26" cy="15" r="3" stroke="#4A4A60" stroke-width="1.5"/>
+            </svg>
+            <span>foto principal</span>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "especialista apple · caxias do sul, rs"
+    },
+    {
+      "type": "text",
+      "id": "heading_line1",
+      "label": "Título — linha 1",
+      "default": "apple original."
+    },
+    {
+      "type": "text",
+      "id": "heading_line2",
+      "label": "Título — linha 2 (azul)",
+      "default": "sem preço de shopping."
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "aparelhos apple originais, novos e seminovos. iphone, mac, ipad, acessórios e troca. em caxias do sul, rs."
+    },
+    {
+      "type": "text",
+      "id": "btn1_text",
+      "label": "Botão 1 — texto",
+      "default": "ver produtos"
+    },
+    {
+      "type": "url",
+      "id": "btn1_url",
+      "label": "Botão 1 — link"
+    },
+    {
+      "type": "text",
+      "id": "btn2_text",
+      "label": "Botão 2 — texto",
+      "default": "quer saber quanto vale o seu?"
+    },
+    {
+      "type": "url",
+      "id": "btn2_url",
+      "label": "Botão 2 — link"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Foto do produto"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,56 @@
+<section id="sobre" class="sb-section">
+  <div class="sb-container">
+    <div class="sb-sobre__inner">
+
+      <div class="sb-sobre__ghost" aria-hidden="true">sb</div>
+
+      <div class="sb-sobre__content">
+        <span class="sb-badge">{{ section.settings.badge }}</span>
+
+        <div class="sb-sobre__text">{{ section.settings.text }}</div>
+
+        <p class="sb-sobre__location">
+          {{ section.settings.location }} · <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener">{{ section.settings.contact_label }}</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Sobre",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge",
+      "default": "sobre"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texto (suporta negrito, itálico e links)",
+      "default": "<p>o apple certo pra você raramente é o mais caro. alguém tinha que dizer isso em voz alta, e recomendar com base em uso real, não em ficha técnica. na smartbase, produto, garantia e troca entram na mesma conversa, com quem usa a plataforma todos os dias.</p>"
+    },
+    {
+      "type": "text",
+      "id": "location",
+      "label": "Localização",
+      "default": "caxias do sul, rs"
+    },
+    {
+      "type": "text",
+      "id": "contact_label",
+      "label": "Texto do link de contato",
+      "default": "fale com a gente"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sobre"
+    }
+  ]
+}
+{% endschema %}

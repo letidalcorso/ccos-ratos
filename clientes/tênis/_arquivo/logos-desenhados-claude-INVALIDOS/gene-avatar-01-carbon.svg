@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GENE Avatar 01 — Carbon bg, DNA centralizado + GENE -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-label="GENE avatar carbon">
+  <rect width="1080" height="1080" fill="#0D0D0D"/>
+
+  <!-- DNA compacto -->
+  <g transform="translate(540 390)" stroke="#F2EFE9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M -72 -180 C -72 -135, 72 -135, 72 -90 C 72 -45, -72 -45, -72 0 C -72 45, 72 45, 72 90 C 72 135, -72 135, -72 180"/>
+    <path d="M 72 -180 C 72 -135, -72 -135, -72 -90 C -72 -45, 72 -45, 72 0 C 72 45, -72 45, -72 90 C -72 135, 72 135, 72 180"/>
+    <path d="M -36 -180 C -36 -135, 36 -135, 36 -90 C 36 -45, -36 -45, -36 0 C -36 45, 36 45, 36 90 C 36 135, -36 135, -36 180"/>
+    <path d="M 36 -180 C 36 -135, -36 -135, -36 -90 C -36 -45, 36 -45, 36 0 C 36 45, -36 45, -36 90 C -36 135, 36 135, 36 180"/>
+  </g>
+  <g transform="translate(540 390)" fill="#CBF23D">
+    <circle cx="0" cy="-180" r="10"/>
+    <circle cx="0" cy="-90"  r="10"/>
+    <circle cx="0" cy="0"    r="10"/>
+    <circle cx="0" cy="90"   r="10"/>
+    <circle cx="0" cy="180"  r="10"/>
+  </g>
+
+  <!-- Word GENE com divider Acid -->
+  <g transform="translate(540 760)">
+    <text x="0" y="0" font-family="'Big Shoulders Display',Impact,sans-serif" font-weight="900" font-size="240" letter-spacing=".02em" fill="#F2EFE9" text-anchor="middle" text-transform="uppercase">GENE</text>
+    <line x1="-290" y1="-66" x2="290" y2="-66" stroke="#CBF23D" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sub -->
+  <text x="540" y="870" font-family="'IBM Plex Mono',monospace" font-weight="600" font-size="34" letter-spacing=".42em" fill="#F2EFE9" text-anchor="middle">SNEAKERS</text>
+</svg>

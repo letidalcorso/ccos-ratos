@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "blog": {
+      "type": "page-blog",
+      "settings": {
+        "badge": "blog",
+        "title": "dicas e novidades",
+        "title_blue": "do mundo Apple.",
+        "subtext": ""
+      }
+    }
+  },
+  "order": ["blog"]
+}

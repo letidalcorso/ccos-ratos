@@ -1,0 +1,65 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.3" y1="0" x2="0.7" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#1060B0"/>
+    <stop offset="45%"  stop-color="#0A3870"/>
+    <stop offset="100%" stop-color="#040D1C"/>
+  </linearGradient>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(4,13,28,0.0)"/>
+    <stop offset="100%" stop-color="rgba(4,13,28,0.80)"/>
+  </linearGradient>
+  <pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+    <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="2"/>
+  </pattern>
+  <linearGradient id="btn" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#1A6FC0"/>
+    <stop offset="100%" stop-color="#0D3F7A"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1350" fill="url(#bg)"/>
+<rect width="1080" height="1350" fill="url(#dots)" opacity="0.5"/>
+<rect width="1080" height="1350" fill="url(#fade)"/>
+
+<!-- Geometric accents -->
+<polygon points="100,-50 280,130 100,310 -80,130" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+<polygon points="980,1040 1120,1180 980,1320 840,1180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+
+<!-- Logo -->
+<text x="540" y="92" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="420" y1="108" x2="660" y2="108" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+<!-- Linha Excelência® badge -->
+<rect x="240" y="180" width="600" height="62" rx="31" fill="rgba(91,184,240,0.12)"/>
+<rect x="240" y="180" width="600" height="62" rx="31" fill="none" stroke="rgba(91,184,240,0.35)" stroke-width="1.5"/>
+<text x="540" y="220" font-family="'Sora', sans-serif" font-weight="600" font-size="26" fill="#5BB8F0" text-anchor="middle" letter-spacing="3">LINHA EXCELÊNCIA® × ALUMICONTE</text>
+
+<!-- Big headline -->
+<text x="540" y="440" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="96" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">AGORA VOCÊ TEM</text>
+<text x="540" y="548" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="96" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">ACESSO AO QUE HÁ</text>
+<text x="540" y="656" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="96" fill="#5BB8F0" text-anchor="middle" letter-spacing="2">DE MAIS TECNOLÓGICO.</text>
+
+<line x1="200" y1="706" x2="880" y2="706" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+
+<!-- Benefit list -->
+<text x="540" y="778" font-family="'Sora', sans-serif" font-weight="300" font-size="38" fill="rgba(255,255,255,0.75)" text-anchor="middle">Sistema patenteado · Veneziana oval ou reta</text>
+<text x="540" y="826" font-family="'Sora', sans-serif" font-weight="300" font-size="38" fill="rgba(255,255,255,0.75)" text-anchor="middle">Ventilação ativa · Alumínio premium</text>
+
+<!-- Blue accent bar -->
+<rect x="200" y="900" width="8" height="100" rx="4" fill="#1A6FC0"/>
+<text x="232" y="946" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF">Disponível agora na FTemper.</text>
+<text x="232" y="996" font-family="'Sora', sans-serif" font-weight="300" font-size="40" fill="rgba(255,255,255,0.65)">Solicite uma proposta.</text>
+
+<!-- CTA button -->
+<rect x="160" y="1060" width="760" height="110" rx="55" fill="url(#btn)"/>
+<text x="540" y="1130" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="76" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">CHAMA NO DIRECT ↗</text>
+
+<text x="540" y="1212" font-family="'Sora', sans-serif" font-weight="400" font-size="34" fill="rgba(255,255,255,0.50)" text-anchor="middle">@ftempercomponentes</text>
+
+<!-- Footer -->
+<text x="540" y="1302" font-family="'Sora', sans-serif" font-weight="700" font-size="34" fill="rgba(255,255,255,0.65)" text-anchor="middle" letter-spacing="5">FTEMPER</text>
+<line x1="430" y1="1316" x2="650" y2="1316" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+<text x="540" y="1342" font-family="'Sora', sans-serif" font-weight="300" font-size="24" fill="rgba(255,255,255,0.32)" text-anchor="middle">distribuidora de alumínio</text>
+</svg>

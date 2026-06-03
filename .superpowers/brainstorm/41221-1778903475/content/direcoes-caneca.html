@@ -1,0 +1,106 @@
+<style>
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { cursor: pointer; border: 2px solid transparent; border-radius: 16px; overflow: hidden; background: #1a1a2e; transition: border-color 0.2s; }
+  .card.selected { border-color: #3E82F7; }
+  .card:hover { border-color: #3E82F7aa; }
+  .card-image { padding: 32px 24px; display: flex; align-items: center; justify-content: center; min-height: 220px; }
+  .card-body { padding: 16px 20px 20px; border-top: 1px solid #2a2a3e; }
+  .card-body h3 { margin: 0 0 6px; font-size: 15px; color: #F2F2F6; }
+  .card-body p { margin: 0; font-size: 13px; color: #7A7A96; line-height: 1.5; }
+  .letter-badge { display: inline-block; width: 26px; height: 26px; background: #3E82F7; border-radius: 50%; text-align: center; line-height: 26px; font-size: 12px; font-weight: 700; color: white; margin-bottom: 10px; }
+
+  /* Mockup A — Dark Premium */
+  .mug-a { width: 120px; height: 120px; border-radius: 50%; background: #07070E; border: 3px solid #1E1E2E; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; position: relative; }
+  .mug-a .wordmark { font-size: 11px; font-weight: 300; color: #7A7A96; letter-spacing: 1px; }
+  .mug-a .wordmark span { font-weight: 700; color: #F2F2F6; }
+  .mug-a .dot { color: #3E82F7; font-size: 14px; }
+  .mug-a .apple-icon { font-size: 28px; color: #F2F2F6; }
+  .mug-a-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .mug-preview { width: 140px; height: 140px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+  .dark-mug { background: #07070E; border: 2px solid #1E1E2E; }
+  .white-mug { background: #ffffff; border: 2px solid #e0e0e0; }
+  .cream-mug { background: #F5F0E8; border: 2px solid #ddd; }
+
+  /* wordmark reutilizável */
+  .wm-dark { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 13px; }
+  .wm-dark .w-smart { font-weight: 300; color: #7A7A96; }
+  .wm-dark .w-dot { color: #3E82F7; margin: 0 1px; }
+  .wm-dark .w-base { font-weight: 700; color: #F2F2F6; }
+
+  .wm-light { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 13px; }
+  .wm-light .w-smart { font-weight: 300; color: #555; }
+  .wm-light .w-dot { color: #3E82F7; margin: 0 1px; }
+  .wm-light .w-base { font-weight: 700; color: #111; }
+
+  .apple-symbol { font-size: 32px; line-height: 1; }
+  .tagline { font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+</style>
+
+<h2>Qual direção visual faz sentido para a caneca?</h2>
+<p class="subtitle">A caneca vai para os stories — qual das 3 pausa o scroll?</p>
+
+<div class="cards">
+
+  <!-- Opção A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter-badge">A</div>
+    <div class="card-image">
+      <div class="mug-preview dark-mug" style="gap:10px;padding:16px;">
+        <div style="font-size:36px;color:#F2F2F6;line-height:1"></div>
+        <div class="wm-dark" style="font-size:14px;">
+          <span class="w-smart">smart</span><span class="w-dot">•</span><span class="w-base">base</span>
+        </div>
+        <div style="font-size:8px;color:#7A7A96;letter-spacing:2px;text-transform:uppercase;margin-top:2px;">sua apple store particular</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Dark Premium</h3>
+      <p>Fundo preto (#07070E), wordmark branco + tagline discreta. Parece produto Apple. Foto fica sofisticada em qualquer luz.</p>
+    </div>
+  </div>
+
+  <!-- Opção B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter-badge">B</div>
+    <div class="card-image">
+      <div class="mug-preview white-mug" style="gap:8px;padding:16px;">
+        <div style="font-size:38px;color:#111;line-height:1"></div>
+        <div style="font-size:8px;color:#3E82F7;letter-spacing:2px;text-transform:uppercase;">autorizada a gostar de Apple</div>
+        <div class="wm-light" style="font-size:13px;margin-top:4px;">
+          <span class="w-smart">smart</span><span class="w-dot">•</span><span class="w-base">base</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>White com Atitude</h3>
+      <p>Caneca branca, ícone Apple grande + frase com personalidade. Tom de fã que virou especialista. Performático nos stories.</p>
+    </div>
+  </div>
+
+  <!-- Opção C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter-badge">C</div>
+    <div class="card-image">
+      <div class="mug-preview cream-mug" style="gap:6px;padding:16px;position:relative;">
+        <div style="font-size:44px;line-height:1;position:relative;">
+          <span style="color:#3E82F7;font-size:44px;position:relative;display:inline-block;">
+            <!--  dot gigante que vira a maçã -->
+            ●
+            <span style="position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:8px;color:#F5F0E8;font-weight:900;">bite</span>
+          </span>
+        </div>
+        <div style="font-size:8px;color:#555;letter-spacing:2px;text-transform:uppercase;">made different.</div>
+        <div class="wm-light" style="font-size:11px;margin-top:6px;">
+          <span class="w-smart">smart</span><span class="w-dot">•</span><span class="w-base">base</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Conceitual / Editorial</h3>
+      <p>O "•" azul do wordmark cresce e dialoga com a maçã. Fundo off-white, tipografia editorial. Parece objeto de design mais do que brinde.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:24px;font-size:13px;">Clique na opção que mais te interessa — ou fale no terminal se quiser misturar elementos.</p>

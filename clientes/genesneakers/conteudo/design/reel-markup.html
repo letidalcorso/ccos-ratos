@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Reel: O Markup</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #1a1a1a;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      padding: 40px 24px 80px;
+    }
+    .page-title {
+      color: #C4FF3C;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .page-sub {
+      color: #555;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      margin-bottom: 40px;
+    }
+    .note {
+      background: #111;
+      border-left: 3px solid #C4FF3C;
+      padding: 12px 16px;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 540px;
+    }
+    .frames-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .frame-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .frame-label {
+      color: #555;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    /* 9:16 ratio — display at 270×480 */
+    .frame {
+      width: 270px;
+      height: 480px;
+      background: #080808;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    /* typography */
+    .f-main {
+      font-size: 36px;
+      font-weight: 900;
+      color: #F3EFE6;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 0.92;
+      text-align: center;
+      padding: 0 24px;
+    }
+    .f-main .lime { color: #C4FF3C; }
+    .f-sub {
+      font-size: 11px;
+      color: #3C3C3C;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 16px;
+      padding: 0 24px;
+    }
+    .f-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 9px;
+      color: #3C3C3C;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .f-corner {
+      position: absolute;
+      top: 18px;
+      left: 20px;
+      font-size: 8px;
+      color: #3C3C3C;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    /* frame 4 — hero "É MARKUP." */
+    .frame-hero .f-main {
+      font-size: 56px;
+    }
+    /* frame 5 — brand close */
+    .frame-brand {
+      justify-content: space-between;
+      padding: 48px 24px 32px;
+    }
+    .frame-brand .f-main {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: left;
+      padding: 0;
+    }
+    .logo-wrap {
+      width: 100%;
+    }
+    .logo-wrap img {
+      width: 160px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-title">Gene Sneakers — Reel</div>
+<div class="page-sub">Peça 2.1 · Take forte: O Markup · TikTok / Instagram Reels · Formato 9:16</div>
+
+<div class="note">
+  Cada frame abaixo é um corte do vídeo. Texto aparece em corte seco — sem fade. Fundo preto sólido. Música: lo-fi urbano ou silêncio com legenda. Para exportar: screenshot cada frame individualmente e escale para 1080×1920px.
+</div>
+
+<div class="frames-row">
+
+  <!-- Frame 1 -->
+  <div class="frame-wrap">
+    <div class="frame-label">Frame 1 — 0s</div>
+    <div class="frame">
+      <span class="f-corner">Gene Sneakers</span>
+      <div class="f-main">
+        Sabe aquele<br>Nike que<br>custa<br>R$800 aqui?
+      </div>
+      <div class="f-tag">@genesneakers</div>
+    </div>
+  </div>
+
+  <!-- Frame 2 -->
+  <div class="frame-wrap">
+    <div class="frame-label">Frame 2 — 3s</div>
+    <div class="frame">
+      <span class="f-corner">Gene Sneakers</span>
+      <div class="f-main">
+        Lá fora<br>custa<br><span class="lime">$90.</span>
+      </div>
+      <div class="f-tag">@genesneakers</div>
+    </div>
+  </div>
+
+  <!-- Frame 3 -->
+  <div class="frame-wrap">
+    <div class="frame-label">Frame 3 — 6s</div>
+    <div class="frame">
+      <span class="f-corner">Gene Sneakers</span>
+      <div class="f-main">
+        A diferença<br>não é<br>qualidade.
+      </div>
+      <div class="f-tag">@genesneakers</div>
+    </div>
+  </div>
+
+  <!-- Frame 4 -->
+  <div class="frame-wrap">
+    <div class="frame-label">Frame 4 — 9s</div>
+    <div class="frame frame-hero">
+      <span class="f-corner">Gene Sneakers</span>
+      <div class="f-main">
+        É<br><span class="lime">markup.</span>
+      </div>
+      <div class="f-tag">@genesneakers</div>
+    </div>
+  </div>
+
+  <!-- Frame 5 -->
+  <div class="frame-wrap">
+    <div class="frame-label">Frame 5 — 12s</div>
+    <div class="frame frame-brand">
+      <div class="f-main">
+        A Gene não cobra markup de varejo nacional.
+      </div>
+      <div class="logo-wrap">
+        <img src="../../02_branding/identidade_visual/gene-wordmark.svg" alt="Gene Sneakers"/>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

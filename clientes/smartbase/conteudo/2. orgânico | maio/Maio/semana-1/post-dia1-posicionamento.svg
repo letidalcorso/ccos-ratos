@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');</style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- Ghost texture -->
+  <text x="-30" y="980" font-family="'Bricolage Grotesque', sans-serif" font-size="560" font-weight="800" fill="#3E82F7" opacity="0.03">sb</text>
+
+  <!-- Setup lines — gray-sub, centered -->
+  <text x="540" y="470" font-family="'Inter', sans-serif" font-size="38" font-weight="400" fill="#7A7A96" text-anchor="middle">qualquer um vende iPhone.</text>
+  <text x="540" y="528" font-family="'Inter', sans-serif" font-size="38" font-weight="400" fill="#7A7A96" text-anchor="middle">original, com garantia,</text>
+  <text x="540" y="586" font-family="'Inter', sans-serif" font-size="38" font-weight="400" fill="#7A7A96" text-anchor="middle">com quem responde de verdade:</text>
+
+  <!-- Divider -->
+  <line x1="340" y1="624" x2="740" y2="624" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Large wordmark — centered -->
+  <text x="338" y="740" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="300" fill="#C0C0D0">smart</text>
+  <circle cx="543" cy="722" r="14" fill="#3E82F7"/>
+  <text x="563" y="740" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="700" fill="#F2F2F6">base</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="300" fill="#C0C0D0">smart</text>
+  <circle cx="145" cy="1291" r="5" fill="#3E82F7"/>
+  <text x="155" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">base</text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

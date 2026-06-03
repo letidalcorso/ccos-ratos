@@ -1,0 +1,1 @@
+lua crescente ok (d=0.08)lua cheia ok (d=0.06)lua minguante ok (d=0.04)lua nova ok (d=0.05)

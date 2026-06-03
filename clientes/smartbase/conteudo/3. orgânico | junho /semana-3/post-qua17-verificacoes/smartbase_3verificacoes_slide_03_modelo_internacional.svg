@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">3/5</text>
+  <text x="80" y="320" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="46" font-weight="700" letter-spacing="3">02</text>
+  <text x="80" y="450" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="78" font-weight="700" letter-spacing="-2">
+    <tspan x="80" dy="0">confirma se é</tspan>
+    <tspan x="80" dy="94" fill="#2DFF8B">modelo internacional.</tspan>
+  </text>
+  <text x="80" y="850" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.9">
+    <tspan x="80" dy="0">o modelo internacional vem com</tspan>
+    <tspan x="80" dy="46">dual SIM físico + eSIM. funciona</tspan>
+    <tspan x="80" dy="46">aqui sem capar câmera nem som.</tspan>
+  </text>
+  <text x="80" y="1080" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="600" opacity="0.9">
+    <tspan x="80" dy="0">evite o modelo americano (só eSIM)</tspan>
+    <tspan x="80" dy="42">e o japonês (som da câmera trava).</tspan>
+  </text>
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

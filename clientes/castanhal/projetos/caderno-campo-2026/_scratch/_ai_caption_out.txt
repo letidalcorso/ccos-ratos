@@ -1,0 +1,1 @@
+TF[2] OK: 3 de março | Carnaval -> 17 de fevereiro | CarnavalTF[2] OK: 18 de abril | Paixão de Cristo -> 3 de abril | Paixão de CristoTF[2] OK: 24 de abril | Tiradentes -> 21 de abril | TiradentesTF[1] OK: 19 de junho | Corpus Christi -> 4 de junho | Corpus ChristiTF[33] OK: 18 de abril -> 3 de abrilTF[33] OK: 24 de abril -> 21 de abrilTF[31] OK: 19 de junho -> 4 de junho

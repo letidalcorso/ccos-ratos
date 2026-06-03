@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap');</style>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#07070E"/>
+
+  <!-- Accent bar topo azul -->
+  <rect x="0" y="0" width="1080" height="8" fill="#3E82F7"/>
+
+  <!-- Pilar pill -->
+  <rect x="80" y="72" width="116" height="28" rx="14" fill="#0E1E3A"/>
+  <text x="138" y="91" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#3E82F7" text-anchor="middle" letter-spacing="1.5">PRODUTO</text>
+
+  <!-- Counter -->
+  <text x="1000" y="91" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#4A4A60" text-anchor="end">3 / 4</text>
+
+  <!-- Headline -->
+  <text x="80" y="188" font-family="'Inter', system-ui, sans-serif" font-size="48" font-weight="800" fill="#C0C0D0">como funciona</text>
+  <text x="80" y="244" font-family="'Inter', system-ui, sans-serif" font-size="48" font-weight="800" fill="#F2F2F6">a compra:</text>
+
+  <line x1="80" y1="278" x2="1000" y2="278" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Passo 1 -->
+  <rect x="80" y="310" width="52" height="52" rx="26" fill="#0E1E3A"/>
+  <text x="106" y="344" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="800" fill="#3E82F7" text-anchor="middle">1</text>
+  <text x="152" y="334" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">você faz a encomenda</text>
+  <text x="152" y="370" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#4A4A60">modelo e cor escolhidos pelo WhatsApp</text>
+
+  <!-- Passo 2 -->
+  <rect x="80" y="430" width="52" height="52" rx="26" fill="#0E1E3A"/>
+  <text x="106" y="464" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="800" fill="#3E82F7" text-anchor="middle">2</text>
+  <text x="152" y="454" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">o aparelho chega lacrado</text>
+  <text x="152" y="490" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#4A4A60">original, com IMEI verificável</text>
+
+  <!-- Passo 3 -->
+  <rect x="80" y="550" width="52" height="52" rx="26" fill="#0A201A"/>
+  <text x="106" y="584" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="800" fill="#10B981" text-anchor="middle">3</text>
+  <text x="152" y="574" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">entrega em mãos, já configurado</text>
+  <text x="152" y="610" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#10B981">película e capinha inclusas</text>
+
+  <line x1="80" y1="660" x2="1000" y2="660" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Selos -->
+  <rect x="80" y="684" width="188" height="38" rx="19" fill="#0A201A"/>
+  <text x="174" y="709" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="700" fill="#10B981" text-anchor="middle">✓  IMEI verificável</text>
+
+  <rect x="284" y="684" width="148" height="38" rx="19" fill="#0A201A"/>
+  <text x="358" y="709" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="700" fill="#10B981" text-anchor="middle">✓  Lacrado</text>
+
+  <rect x="448" y="684" width="220" height="38" rx="19" fill="#0A201A"/>
+  <text x="558" y="709" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="700" fill="#10B981" text-anchor="middle">✓  Garantia Apple 1 ano</text>
+
+  <!-- Swipe -->
+  <text x="80" y="784" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="600" fill="#3E82F7">próximo →</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="900" x2="1000" y2="900" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="936" font-family="'Inter', system-ui, sans-serif" font-size="24" fill="#F2F2F6">
+    <tspan font-weight="300" fill="#C0C0D0">smart</tspan><tspan fill="#3E82F7" font-size="11" baseline-shift="4">●</tspan><tspan font-weight="700">base</tspan>
+  </text>
+  <text x="1000" y="936" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

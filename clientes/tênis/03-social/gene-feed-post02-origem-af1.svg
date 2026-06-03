@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · Post 02 "ORIGEM — Air Force 1" · Feed 4:5
+    Série ORIGEM #01 · Pilar 1 (Produto com Vida) · Ambiente Carbon
+    Zona imagem 60% superior + Zona texto Carbon 40% inferior
+    3 tiers: ano (SLATE/Mono) > nome (BONE/Display Bold) > origem (BONE/Display Regular)
+    Handle Acid canto inferior direito
+    Proibido: badge, pattern, wave, bloom, chrome, logo cheio, tagline, preço, CTA, aspas
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');
+      .display-bold    { font-family:'Big Shoulders Display','Arial Black',sans-serif; font-weight:700; text-transform:uppercase; }
+      .display-regular { font-family:'Big Shoulders Display','Arial Narrow',sans-serif; font-weight:400; }
+      .mono-r          { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:400; }
+      .mono            { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:500; text-transform:uppercase; }
+    </style>
+  </defs>
+
+  <!-- ================ ZONA IMAGEM · 60% SUPERIOR ================ -->
+  <!-- Fundo escuro (fallback / base da foto) -->
+  <rect x="0" y="0" width="1080" height="810" fill="#1A1A1A"/>
+
+  <!-- Gradiente sutil de transição pro Carbon (sem linha divisória) -->
+  <defs>
+    <linearGradient id="fadeToCarbon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A1A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0D0D0D" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="650" width="1080" height="160" fill="url(#fadeToCarbon)"/>
+
+  <!-- Moldura tracejada + label IMAGE (placeholder pra mockup) -->
+  <rect x="40" y="40" width="1000" height="730" fill="none" stroke="#3A3A3A" stroke-width="1.5" stroke-dasharray="10 10" opacity="0.6"/>
+  <text x="540" y="395" class="mono" font-size="26" fill="#A6A4A1" text-anchor="middle" letter-spacing="0.32em">IMAGE</text>
+  <text x="540" y="432" class="mono-r" font-size="16" fill="#A6A4A1" text-anchor="middle" opacity="0.65">editorial · luz dramática · superfície escura · 4:5</text>
+
+  <!-- ================ ZONA TEXTO · 40% INFERIOR (Carbon) ================ -->
+  <rect x="0" y="810" width="1080" height="540" fill="#0D0D0D"/>
+
+  <!-- TIER 1 · Ano (metadado/arquivo) — Mono SLATE, margem 64, ~40px do topo da zona -->
+  <text x="64" y="868" class="mono-r" font-size="22" fill="#A6A4A1" letter-spacing="0.08em">1982</text>
+
+  <!-- TIER 2 · Nome do modelo — Big Shoulders Display Bold, BONE, monumental -->
+  <!-- baseline y=1020 · font 140 · tracking -4 (≈ -28/1000) · imediatamente abaixo do ano -->
+  <text x="60" y="1020" class="display-bold" font-size="140" fill="#F2EFE9" letter-spacing="-4">AIR FORCE 1</text>
+
+  <!-- TIER 3 · Linha de origem — Big Shoulders Display Regular, BONE, 2 linhas -->
+  <!-- font 46 (ratio 3:1 em relação ao hero) · leading ~50 · title case · respiração logo abaixo do nome -->
+  <text x="64" y="1110" class="display-regular" font-size="46" fill="#F2EFE9">Nike tirou de linha em 1984.</text>
+  <text x="64" y="1160" class="display-regular" font-size="46" fill="#F2EFE9">Três lojistas de Baltimore salvaram.</text>
+
+  <!-- ASSINATURA · @gene.sneakers — Mono Acid, canto inferior direito, margem 40 -->
+  <text x="1040" y="1310" class="mono-r" font-size="22" fill="#C4FF3C" text-anchor="end" letter-spacing="0.05em">@gene.sneakers</text>
+</svg>

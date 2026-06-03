@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gene Sneakers — Plano de Ação</title>
+  <style>
+    :root {
+      --black: #080808;
+      --lime: #C4FF3C;
+      --bone: #F3EFE6;
+      --gray: #3C3C3C;
+      --mid: #1a1a1a;
+      --border: #2a2a2a;
+      --done-bg: #0f1a00;
+      --done-text: #6b8c1e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--black);
+      color: var(--bone);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      padding: 0 0 80px 0;
+    }
+
+    header {
+      padding: 48px 40px 32px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--black);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bone);
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      color: var(--lime);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .launch-countdown {
+      background: var(--lime);
+      color: var(--black);
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+
+    .progress-bar-container {
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      background: var(--mid);
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gray);
+    }
+
+    .progress-count {
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    .progress-bar {
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--lime);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 40px 0;
+    }
+
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    .badge-critical {
+      background: #FF3C3C;
+      color: #fff;
+    }
+
+    .badge-urgent {
+      background: var(--lime);
+      color: var(--black);
+    }
+
+    .badge-postlaunch {
+      background: #3C7BFF;
+      color: #fff;
+    }
+
+    .badge-ongoing {
+      background: var(--border);
+      color: var(--bone);
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bone);
+    }
+
+    .section-deadline {
+      font-size: 11px;
+      color: var(--gray);
+      margin-left: auto;
+      letter-spacing: 0.05em;
+    }
+
+    .tasks {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .task {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .task:hover {
+      border-color: var(--gray);
+      background: #222;
+    }
+
+    .task.done {
+      background: var(--done-bg);
+      border-color: #1e2e00;
+      opacity: 0.7;
+    }
+
+    .task.done:hover {
+      opacity: 0.9;
+    }
+
+    .checkbox {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--gray);
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .task.done .checkbox {
+      background: var(--lime);
+      border-color: var(--lime);
+    }
+
+    .checkbox-check {
+      display: none;
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .task.done .checkbox-check {
+      display: block;
+    }
+
+    .task-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .task-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--bone);
+      line-height: 1.4;
+      transition: color 0.15s ease;
+    }
+
+    .task.done .task-label {
+      color: var(--done-text);
+      text-decoration: line-through;
+    }
+
+    .task-note {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+
+    .task.done .task-note {
+      color: #3a4a1e;
+    }
+
+    .task-tag {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 2px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      margin-top: 2px;
+      align-self: flex-start;
+    }
+
+    .tag-design { background: #2a1a5e; color: #9b7ff4; }
+    .tag-social { background: #1a2e00; color: #7acc00; }
+    .tag-copy { background: #2e1a00; color: #cc7a00; }
+    .tag-tech { background: #001a2e; color: #0099cc; }
+    .tag-ops { background: #2e0018; color: #cc0066; }
+    .tag-growth { background: #1a002e; color: #9900cc; }
+    .tag-done { background: var(--done-bg); color: var(--done-text); }
+
+    .section-progress {
+      font-size: 11px;
+      color: var(--gray);
+      margin-top: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .section-progress span {
+      color: var(--lime);
+      font-weight: 600;
+    }
+
+    .divider-note {
+      padding: 14px 18px;
+      background: #111;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 12px;
+      color: var(--gray);
+      font-style: italic;
+      margin-bottom: 2px;
+    }
+
+    .all-done-message {
+      display: none;
+      text-align: center;
+      padding: 60px 40px;
+      color: var(--lime);
+    }
+
+    .all-done-message h2 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .all-done-message p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 24px 20px; }
+      .container { padding: 24px 20px 0; }
+      .progress-bar-container { padding: 16px 20px; }
+      .task { padding: 14px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-name">Gene Sneakers</div>
+    <div class="brand-tagline">Plano de Ação — Lançamento</div>
+  </div>
+  <div class="launch-countdown" id="countdown">🚀 Lançamento: 21/04/2026</div>
+</header>
+
+<div class="progress-bar-container">
+  <div class="progress-meta">
+    <span>Progresso geral</span>
+    <span class="progress-count" id="progress-text">0 de 0 tarefas concluídas</span>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- FEITO -->
+  <div class="section" id="section-done">
+    <div class="section-header">
+      <span class="section-badge badge-ongoing">✅ Concluído</span>
+      <span class="section-title">O que já existe</span>
+    </div>
+    <div class="tasks">
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Nome e tagline definidos</div>
+          <div class="task-note">Gene Sneakers · "Estilo nos pés." — aprovados ✓</div>
+        </div>
+        <span class="task-tag tag-done">Brand</span>
+      </div>
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Identidade visual criada</div>
+          <div class="task-note">Logo (trainer + wordmark), paleta #080808 / #C4FF3C / #F3EFE6, tipografia, arquivos SVG entregues</div>
+        </div>
+        <span class="task-tag tag-done">Design</span>
+      </div>
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Manual de marca visual (HTML)</div>
+          <div class="task-note">gene-sneakers-brand-manual.html — paleta, tipografia, usos do logo, regras visuais</div>
+        </div>
+        <span class="task-tag tag-done">Design</span>
+      </div>
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Posicionamento estratégico corrigido</div>
+          <div class="task-note">Modelo: importadora de marcas autênticas (Nike, Adidas, NB). Acesso antecipado + sem markup nacional. "Mesmo fabricante" removido.</div>
+        </div>
+        <span class="task-tag tag-done">Estratégia</span>
+      </div>
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Brand Voice Guidelines v2</div>
+          <div class="task-note">Tom, terminologia, o que nunca usar, exemplos de copy boa e ruim, matriz por canal</div>
+        </div>
+        <span class="task-tag tag-done">Copy</span>
+      </div>
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Estratégia de lançamento documentada</div>
+          <div class="task-note">Ecossistema de conteúdo (3 pilares), canais, modelo de negócio, análise competitiva</div>
+        </div>
+        <span class="task-tag tag-done">Estratégia</span>
+      </div>
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">PRD (Product Requirements Document)</div>
+          <div class="task-note">Objetivos, segmento, proposta de valor, jornada do cliente, roadmap de fases</div>
+        </div>
+        <span class="task-tag tag-done">Estratégia</span>
+      </div>
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Brief operacional de lançamento (.docx)</div>
+          <div class="task-note">Segmentação de público, argumentos por perfil, estrutura de execução</div>
+        </div>
+        <span class="task-tag tag-done">Ops</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRÍTICO — PRÉ-LANÇAMENTO -->
+  <div class="section" id="section-critical">
+    <div class="section-header">
+      <span class="section-badge badge-critical">🔴 Crítico</span>
+      <span class="section-title">Pré-lançamento obrigatório</span>
+      <span class="section-deadline">Até 20/04 (domingo)</span>
+    </div>
+    <div class="tasks">
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Criar perfil no Instagram</div>
+          <div class="task-note">Handle @geneisneakers ou similar. Foto de perfil = logo Signal Black + Lima. Bio: "Gene Sneakers. Estilo nos pés." + link. Conta Business ativada. Categoria: Loja de sapatos.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Criar perfil no TikTok</div>
+          <div class="task-note">Mesmo handle do Instagram para consistência. Bio direta: "Tênis que o Brasil não tem — ainda." + link. Conectar ao Business Center do TikTok.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Montar landing page mínima de lançamento</div>
+          <div class="task-note">Hero com tagline + CTA de encomenda. Explicação do modelo em 3 passos. FAQ de 3-4 perguntas. Botão WhatsApp. Não precisa de checkout ainda — só captura o interesse. Pode ser Carrd, Notion pública ou HTML simples.</div>
+        </div>
+        <span class="task-tag tag-tech">Tech</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Configurar WhatsApp Business</div>
+          <div class="task-note">Número dedicado. Foto de perfil = logo. Mensagem automática de boas-vindas ("Olá! Você quer encomendar um tênis que o Brasil não tem? Me conta o modelo."). Horário de atendimento. Catálogo desativado no início — modelo é sob encomenda livre.</div>
+        </div>
+        <span class="task-tag tag-ops">Ops</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Criar link na bio centralizado</div>
+          <div class="task-note">Linktree, Beacons ou similar. Dois destinos: Landing page + WhatsApp. Design alinhado com a identidade (fundo preto, text Lima). Colocar nos dois perfis.</div>
+        </div>
+        <span class="task-tag tag-tech">Tech</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Produzir 3 peças do Pilar 1 — Produto com vida</div>
+          <div class="task-note">Reels ou carrosséis: tênis no contexto real (rua, lifestyle). Não em fundo branco. Precisa de pelo menos 1 foto/vídeo por peça. Se não tem produto físico ainda, usar referências de campanha da marca + contexto visual forte. Caption: "Esse lançou. O varejo vai trazer em 6 meses. [modelo] — encomende."</div>
+        </div>
+        <span class="task-tag tag-copy">Copy</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Produzir 3 peças do Pilar 2 — Takes fortes</div>
+          <div class="task-note">TikTok + Reels: afirmações que geram compartilhamento. Exemplos prontos: "Sabe aquele Nike que custa R$600 aqui? Custa $120 lá fora. A diferença não é qualidade — é markup." | "Esse drop saiu ontem. Quando você acha que chega no Brasil?" | "O varejo nacional decide trazer o que quer, quando quer. A Gene não espera."</div>
+        </div>
+        <span class="task-tag tag-copy">Copy</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Produzir 3 peças do Pilar 3 — Cultura sneaker</div>
+          <div class="task-note">Carrosséis educativos/informativos: história de modelos icônicos, drops relevantes da cena global, "o que está vindo que o Brasil vai querer". Posiciona a Gene como parte da tribo. Ex: "História do Air Max 1 em 5 slides" | "Os 3 drops que o Brasil vai correr atrás em 2026".</div>
+        </div>
+        <span class="task-tag tag-copy">Copy</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Definir catálogo inicial de encomendas</div>
+          <div class="task-note">Lista de 5-10 modelos que a Gene consegue buscar agora. Não precisa ter estoque — é o que você consegue importar sob encomenda. Serve para guiar a conversa no WhatsApp e dar contexto ao conteúdo de produto. Formato: modelo, marca, referência de preço médio de importação vs. varejo BR.</div>
+        </div>
+        <span class="task-tag tag-ops">Ops</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Script de atendimento WhatsApp</div>
+          <div class="task-note">Respostas padrão para: (1) "Como funciona a encomenda?" (2) "Quanto tempo demora?" (3) "É original?" — resposta de autenticidade sem soar defensivo: "Trabalho com fornecedores verificados. Mando nota e fotos do produto antes de fechar." (4) "Qual é o preço?" — "Depende do modelo. Me manda qual você quer que eu cotejo."</div>
+        </div>
+        <span class="task-tag tag-ops">Ops</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="critical-progress"></div>
+  </div>
+
+  <!-- URGENTE — DIA DO LANÇAMENTO -->
+  <div class="section" id="section-launch">
+    <div class="section-header">
+      <span class="section-badge badge-urgent">🟡 Lançamento</span>
+      <span class="section-title">Dia 21/04 — Go live</span>
+      <span class="section-deadline">Segunda-feira</span>
+    </div>
+    <div class="tasks">
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Publicar post de lançamento no Instagram</div>
+          <div class="task-note">Primeiro post: identidade forte, sem tentar explicar tudo. Pode ser o logo sobre fundo preto + "Estilo nos pés." e nada mais. Ou a linha de abertura mais forte que você tem. A intenção é plantar a bandeira, não fechar venda.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Publicar primeiro vídeo no TikTok</div>
+          <div class="task-note">Take forte de lançamento. Ex: "O varejo brasileiro vai trazer esse Nike em 8 meses. A Gene tem agora. Encomenda o seu no link." Direto, texto na tela, sem efeitos. Pode ser você falando ou texto + produto.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Story de lançamento + CTA de encomenda</div>
+          <div class="task-note">Stories com swipe up / link para WhatsApp. "A Gene abriu. Qual modelo você quer?" — simples, direto. Desperta curiosidade sem revelar tudo.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Ativar landing page e testar todos os links</div>
+          <div class="task-note">Verificar: CTA de encomenda funciona → abre WhatsApp. Link na bio está correto. Página carrega no mobile. Foto de perfil aparece nos dois perfis sociais.</div>
+        </div>
+        <span class="task-tag tag-tech">Tech</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="launch-progress"></div>
+  </div>
+
+  <!-- PÓS-LANÇAMENTO -->
+  <div class="section" id="section-post">
+    <div class="section-header">
+      <span class="section-badge badge-postlaunch">🔵 Pós-lançamento</span>
+      <span class="section-title">Semanas 2–4</span>
+      <span class="section-deadline">22/04 → 10/05</span>
+    </div>
+    <div class="tasks">
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Montar site de e-commerce mínimo</div>
+          <div class="task-note">Shopify ou Nuvemshop. Home com posicionamento, catálogo de modelos disponíveis, checkout para pré-pedido/sinal. Não precisa ter estoque real — é para formalizar a experiência de compra e dar credibilidade.</div>
+        </div>
+        <span class="task-tag tag-tech">Tech</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Sequência de conteúdo — semanas 1 e 2</div>
+          <div class="task-note">Mínimo 1 post por dia alternando os 3 pilares. Rotação: Produto (D1) → Take forte (D2) → Cultura (D3) → repete. Usar as 9 peças produzidas no pré-lançamento como base, criar mais conforme vai publicando.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Fechar primeiras 5-10 encomendas e documentar</div>
+          <div class="task-note">Registrar: modelo pedido, prazo prometido, preço cobrado, data de entrega. Isso vai ser a base do UGC e da prova social. Cada entrega = oportunidade de pedir foto do cliente usando.</div>
+        </div>
+        <span class="task-tag tag-ops">Ops</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Ativar Meta Ads — campanha de consciência</div>
+          <div class="task-note">Usar o take forte que mais engajou organicamente como criativo. Objetivo: alcance + tráfego para link na bio. Budget: R$30-50/dia para teste. Segmentação: interesse em sneakers, streetwear, 18-35 anos, BR.</div>
+        </div>
+        <span class="task-tag tag-growth">Growth</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Configurar TikTok Ads Manager</div>
+          <div class="task-note">Criar conta TikTok Business. Instalar pixel no site. Primeira campanha: mesmo take forte que rodou bem no orgânico, objetivo de tráfego/conversão.</div>
+        </div>
+        <span class="task-tag tag-growth">Growth</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Coletar UGC dos primeiros compradores</div>
+          <div class="task-note">Pedir foto/vídeo usando o tênis ao entregar. Script: "Você quer aparecer aqui? Manda uma foto usando o tênis que a gente reposte." Isso fecha o loop: prova social → novos clientes → mais UGC.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Planejar primeiro drop</div>
+          <div class="task-note">Lote fechado de 3-5 unidades de um modelo curado. Comunicar com 5-7 dias de antecipação. Narrativa: por que esse modelo, de onde vem, o que tem de especial. Criar FOMO real com data e quantidade limitada.</div>
+        </div>
+        <span class="task-tag tag-ops">Ops</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="post-progress"></div>
+  </div>
+
+  <!-- ONGOING -->
+  <div class="section" id="section-ongoing">
+    <div class="section-header">
+      <span class="section-badge badge-ongoing">⚙️ Contínuo</span>
+      <span class="section-title">Operação recorrente</span>
+      <span class="section-deadline">Semanal / Mensal</span>
+    </div>
+    <div class="tasks">
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Cadência de conteúdo semanal</div>
+          <div class="task-note">Mínimo 5 posts/semana nos primeiros 60 dias. Alternar os 3 pilares. Priorizar o que mais engajou na semana anterior. Reutilizar takes bons em diferentes formatos (carrossel → Reel → Story).</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Acompanhar calendário global de drops</div>
+          <div class="task-note">Nike SNKRS, Adidas Confirmed, Highsnobiety, Sneaker News. Identificar o que o Brasil vai querer e comunicar antes do varejo trazer. Esse é o coração do posicionamento de insider.</div>
+        </div>
+        <span class="task-tag tag-ops">Ops</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Review semanal de métricas</div>
+          <div class="task-note">Instagram Insights + TikTok Analytics: alcance, engajamento por pilar, qual take viralizou mais, crescimento de seguidores, mensagens recebidas no WhatsApp. Ajustar o que produzir na semana seguinte com base nos dados.</div>
+        </div>
+        <span class="task-tag tag-growth">Growth</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Programa de early adopters / indicação</div>
+          <div class="task-note">Criar incentivo para quem trouxer novos compradores. Pode ser simples: "Indicou um amigo que comprou → desconto na próxima encomenda." Ativa o boca a boca dentro da tribo sneaker.</div>
+        </div>
+        <span class="task-tag tag-growth">Growth</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Collabs com criadores da cultura sneaker</div>
+          <div class="task-note">Identificar 5-10 criadores de nicho (não macro-influenciadores) que falam de tênis no Brasil. Proposta de collab: produto em troca de conteúdo honesto. Priorizar quem já tem comunidade engajada — não quem tem mais seguidores.</div>
+        </div>
+        <span class="task-tag tag-growth">Growth</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="ongoing-progress"></div>
+  </div>
+
+</div>
+
+<script>
+  const STORAGE_KEY = 'gene-sneakers-plano-v1';
+
+  function getState() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch {
+      return {};
+    }
+  }
+
+  function saveState(state) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function getTaskId(el) {
+    const label = el.querySelector('.task-label')?.textContent?.trim();
+    return label ? btoa(encodeURIComponent(label)).slice(0, 20) : null;
+  }
+
+  function toggleTask(el) {
+    const isDone = el.classList.contains('done');
+    el.classList.toggle('done', !isDone);
+
+    const state = getState();
+    const id = getTaskId(el);
+    if (id) {
+      state[id] = !isDone;
+      saveState(state);
+    }
+
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const allTasks = document.querySelectorAll('.task');
+    const doneTasks = document.querySelectorAll('.task.done');
+    const total = allTasks.length;
+    const done = doneTasks.length;
+    const pct = total ? Math.round((done / total) * 100) : 0;
+
+    document.getElementById('progress-text').textContent = `${done} de ${total} tarefas concluídas`;
+    document.getElementById('progress-fill').style.width = pct + '%';
+
+    // Section progress
+    const sections = [
+      { id: 'critical', label: 'Pré-lançamento', progressId: 'critical-progress' },
+      { id: 'launch', label: 'Lançamento', progressId: 'launch-progress' },
+      { id: 'post', label: 'Pós-lançamento', progressId: 'post-progress' },
+      { id: 'ongoing', label: 'Contínuo', progressId: 'ongoing-progress' },
+    ];
+
+    sections.forEach(({ id, progressId }) => {
+      const section = document.getElementById('section-' + id);
+      if (!section) return;
+      const sectionTasks = section.querySelectorAll('.task');
+      const sectionDone = section.querySelectorAll('.task.done');
+      const el = document.getElementById(progressId);
+      if (el) {
+        el.innerHTML = `<span>${sectionDone.length}</span> de ${sectionTasks.length} concluídas`;
+      }
+    });
+  }
+
+  function restoreState() {
+    const state = getState();
+    const allTasks = document.querySelectorAll('.task');
+    allTasks.forEach(task => {
+      const id = getTaskId(task);
+      if (id && state[id] === true) {
+        task.classList.add('done');
+      } else if (id && state[id] === false) {
+        task.classList.remove('done');
+      }
+    });
+    updateProgress();
+  }
+
+  // Countdown
+  function updateCountdown() {
+    const launch = new Date('2026-04-21T09:00:00-03:00');
+    const now = new Date();
+    const diff = launch - now;
+
+    if (diff <= 0) {
+      document.getElementById('countdown').textContent = '🚀 Lançamento hoje!';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    if (days > 0) {
+      document.getElementById('countdown').textContent = `🚀 Lançamento em ${days}d ${hours}h`;
+    } else {
+      document.getElementById('countdown').textContent = `🚀 Lançamento em ${hours}h ${mins}min`;
+    }
+  }
+
+  restoreState();
+  updateCountdown();
+  setInterval(updateCountdown, 60000);
+</script>
+
+</body>
+</html>

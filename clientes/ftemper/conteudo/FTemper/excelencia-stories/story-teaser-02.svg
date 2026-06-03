@@ -1,0 +1,57 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.2" y1="0" x2="0.8" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#071830"/>
+    <stop offset="55%"  stop-color="#050F20"/>
+    <stop offset="100%" stop-color="#020608"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="45%" r="55%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(91,184,240,0.16)"/>
+    <stop offset="100%" stop-color="rgba(26,111,192,0.00)"/>
+  </radialGradient>
+</defs>
+
+<rect width="1080" height="1920" fill="url(#bg)"/>
+<rect width="1080" height="1920" fill="url(#glow)"/>
+<pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+  <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+</pattern>
+<rect width="1080" height="1920" fill="url(#dots)"/>
+
+<!-- Accent triangle shapes -->
+<polygon points="0,0 300,0 0,300" fill="rgba(91,184,240,0.05)"/>
+<polygon points="1080,1920 780,1920 1080,1620" fill="rgba(91,184,240,0.04)"/>
+
+<!-- Logo top -->
+<text x="540" y="130" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="380" y1="150" x2="700" y2="150" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+
+<!-- Story dots (2 of 3 active) -->
+<rect x="60"  y="56" width="290" height="8" rx="4" fill="rgba(255,255,255,0.25)"/>
+<rect x="370" y="56" width="290" height="8" rx="4" fill="#FFFFFF"/>
+<rect x="680" y="56" width="290" height="8" rx="4" fill="rgba(255,255,255,0.25)"/>
+
+<!-- Three benefit lines stacked — bold, visual -->
+<text x="60" y="760" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="110" fill="rgba(255,255,255,0.28)" letter-spacing="2">TECNOLOGIA</text>
+<text x="60" y="878" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="110" fill="#FFFFFF" letter-spacing="2">PATENTEADA.</text>
+
+<line x1="60" y1="918" x2="540" y2="918" stroke="rgba(91,184,240,0.40)" stroke-width="2"/>
+
+<text x="60" y="1010" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="110" fill="rgba(255,255,255,0.28)" letter-spacing="2">DESIGN</text>
+<text x="60" y="1128" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="110" fill="#FFFFFF" letter-spacing="2">EXCLUSIVO.</text>
+
+<line x1="60" y1="1168" x2="540" y2="1168" stroke="rgba(91,184,240,0.40)" stroke-width="2"/>
+
+<text x="60" y="1260" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="110" fill="rgba(255,255,255,0.28)" letter-spacing="2">ALUMÍNIO DE</text>
+<text x="60" y="1378" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="110" fill="#5BB8F0" letter-spacing="2">OUTRO NÍVEL.</text>
+
+<!-- Em breve pill -->
+<rect x="340" y="1456" width="400" height="72" rx="36" fill="rgba(255,255,255,0.10)"/>
+<rect x="340" y="1456" width="400" height="72" rx="36" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+<text x="540" y="1501" font-family="'Sora', sans-serif" font-weight="700" font-size="34" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">EM BREVE.  👀</text>
+
+<!-- Footer -->
+<text x="540" y="1874" font-family="'Sora', sans-serif" font-weight="700" font-size="32" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="5">FTEMPER</text>
+<text x="540" y="1908" font-family="'Sora', sans-serif" font-weight="300" font-size="24" fill="rgba(255,255,255,0.28)" text-anchor="middle">@ftempercomponentes</text>
+</svg>

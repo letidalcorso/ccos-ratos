@@ -1,0 +1,273 @@
+<style>
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mug-card { border-radius: 16px; overflow: hidden; border: 2px solid transparent; cursor: pointer; transition: border-color 0.2s; }
+  .mug-card.selected { border-color: #3E82F7; }
+  .mug-card:hover { border-color: #3E82F7aa; }
+  .mug-face { padding: 40px 28px 28px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .mug-info { padding: 14px 20px; }
+  .mug-info h3 { margin: 0 0 4px; font-size: 14px; }
+  .mug-info p { margin: 0; font-size: 12px; color: #7A7A96; }
+  .letter-badge { display:inline-block;width:26px;height:26px;background:#3E82F7;border-radius:50%;text-align:center;line-height:26px;font-size:12px;font-weight:700;color:white;margin:18px 0 0 18px; }
+
+  .lineup { display: flex; align-items: flex-end; gap: 12px; }
+  .phone-col { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+  .yr { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 7px; letter-spacing: 0.5px; text-align: center; }
+  .tagline { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 10px; letter-spacing: 2.5px; text-align: center; }
+  .wordmark { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 11px; display: flex; align-items: center; gap: 1px; }
+
+  /* DARK */
+  .dark-card { background: #07070E; }
+  .dark-card .mug-info { border-top: 1px solid #1E1E2E; }
+  .dark-card .mug-info h3 { color: #F2F2F6; }
+  .dark-card svg { color: #F2F2F6; }
+  .dark-card .tagline { color: #F2F2F6; }
+  .dark-card .yr { color: #7A7A96; }
+  .dark-card .wm-smart { color: #7A7A96; }
+  .dark-card .wm-dot { color: #3E82F7; }
+  .dark-card .wm-base { color: #F2F2F6; font-weight: 700; }
+
+  /* LIGHT */
+  .light-card { background: #F5F0E8; }
+  .light-card .mug-info { border-top: 1px solid rgba(0,0,0,0.08); }
+  .light-card .mug-info h3 { color: #111; }
+  .light-card svg { color: #1a1a1a; }
+  .light-card .tagline { color: #111; }
+  .light-card .yr { color: #777; }
+  .light-card .wm-smart { color: #888; }
+  .light-card .wm-dot { color: #3E82F7; }
+  .light-card .wm-base { color: #111; font-weight: 700; }
+</style>
+
+<h2>Linha do tempo — câmeras fiéis</h2>
+<p class="subtitle">Vista traseira de cada geração: do flush original ao plateau do 17 Pro Max</p>
+
+<div class="split">
+
+<!-- ─── DARK ─── -->
+<div class="mug-card dark-card" data-choice="dark" onclick="toggleSelect(this)">
+  <div class="letter-badge">A</div>
+  <div class="mug-face">
+    <div class="lineup">
+
+      <!-- 2007 — único, flush, no flash, botão home -->
+      <div class="phone-col">
+        <svg width="32" height="54" viewBox="0 0 32 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="30" height="52" rx="7" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="16" cy="8.5" r="3.2" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="16" cy="46" r="3.5" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2007</span>
+      </div>
+
+      <!-- 2010 — iPhone 4, flat edges, câmera top-left + flash -->
+      <div class="phone-col">
+        <svg width="33" height="58" viewBox="0 0 33 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="31" height="56" rx="4" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="9" cy="9" r="1.4" fill="currentColor"/>
+          <circle cx="16.5" cy="9" r="1.5" fill="currentColor"/>
+          <circle cx="16.5" cy="50" r="3.8" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2010</span>
+      </div>
+
+      <!-- 2014 — iPhone 6, primeiro bump, câmera protrusa top-left -->
+      <div class="phone-col">
+        <svg width="36" height="64" viewBox="0 0 36 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="34" height="62" rx="9" stroke="currentColor" stroke-width="1.4"/>
+          <!-- bump circle (maior que a câmera anterior = destaque de protrusion) -->
+          <circle cx="11" cy="10" r="6" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="11" cy="10" r="3" stroke="currentColor" stroke-width="1"/>
+          <circle cx="20" cy="9" r="1.8" fill="currentColor"/>
+          <circle cx="18" cy="56" r="4" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2014</span>
+      </div>
+
+      <!-- 2016 — 7 Plus, primeiro dual, horizontal, retangular -->
+      <div class="phone-col">
+        <svg width="40" height="72" viewBox="0 0 40 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="70" rx="10" stroke="currentColor" stroke-width="1.4"/>
+          <!-- módulo retangular horizontal -->
+          <rect x="5" y="5" width="22" height="13" rx="3" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="11.5" cy="11.5" r="3.8" stroke="currentColor" stroke-width="1"/>
+          <circle cx="20.5" cy="11.5" r="3.8" stroke="currentColor" stroke-width="1"/>
+          <circle cx="31" cy="10" r="2" fill="currentColor"/>
+          <circle cx="20" cy="64" r="4.2" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2016</span>
+      </div>
+
+      <!-- 2019 — 11 Pro, módulo quadrado, triângulo de câmeras -->
+      <div class="phone-col">
+        <svg width="44" height="80" viewBox="0 0 44 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="42" height="78" rx="12" stroke="currentColor" stroke-width="1.4"/>
+          <!-- grande módulo quadrado -->
+          <rect x="4" y="4" width="28" height="28" rx="6" stroke="currentColor" stroke-width="1.4"/>
+          <!-- triângulo: 2 em cima, 1 embaixo ao centro -->
+          <circle cx="13" cy="13" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="24" cy="13" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="18.5" cy="23" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <!-- flash no módulo -->
+          <circle cx="27" cy="24" r="1.8" fill="currentColor"/>
+        </svg>
+        <span class="yr">2019</span>
+      </div>
+
+      <!-- 2022 — 14 Pro, ilha gigante, 3 câmeras + LiDAR -->
+      <div class="phone-col">
+        <svg width="48" height="88" viewBox="0 0 48 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="46" height="86" rx="13" stroke="currentColor" stroke-width="1.4"/>
+          <!-- ilha enorme -->
+          <rect x="3" y="3" width="34" height="34" rx="8" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="13" cy="14" r="5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="26" cy="14" r="5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="13" cy="27" r="5" stroke="currentColor" stroke-width="1.1"/>
+          <!-- LiDAR — círculo menor -->
+          <circle cx="26" cy="27" r="3" stroke="currentColor" stroke-width="1.1"/>
+          <!-- flash -->
+          <circle cx="33" cy="7" r="2" fill="currentColor"/>
+        </svg>
+        <span class="yr">2022</span>
+      </div>
+
+      <!-- 2025 — 17 Pro Max, PLATEAU horizontal topo -->
+      <div class="phone-col">
+        <svg width="52" height="96" viewBox="0 0 52 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="50" height="94" rx="14" stroke="currentColor" stroke-width="1.4"/>
+          <!-- plateau: barra horizontal spanning quase toda a largura do topo -->
+          <rect x="2" y="2" width="48" height="24" rx="8" stroke="currentColor" stroke-width="1.4"/>
+          <!-- 3 câmeras em triângulo dentro do plateau -->
+          <circle cx="14" cy="13" r="5.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="27" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="27" cy="19" r="5.5" stroke="currentColor" stroke-width="1.1"/>
+          <!-- flash -->
+          <circle cx="40" cy="9" r="2.2" fill="currentColor"/>
+          <!-- LiDAR -->
+          <circle cx="40" cy="18" r="2.2" stroke="currentColor" stroke-width="1.1"/>
+        </svg>
+        <span class="yr">2025</span>
+      </div>
+
+    </div>
+    <div class="tagline">todos passaram por aqui.</div>
+    <div class="wordmark">
+      <span class="wm-smart">smart</span><span class="wm-dot">•</span><span class="wm-base">base</span>
+    </div>
+  </div>
+  <div class="mug-info">
+    <h3>A — Fundo preto</h3>
+    <p>Identidade digital da Smartbase. Impacta em foto de estúdio e stories à noite.</p>
+  </div>
+</div>
+
+<!-- ─── LIGHT ─── -->
+<div class="mug-card light-card" data-choice="light" onclick="toggleSelect(this)">
+  <div class="letter-badge">B</div>
+  <div class="mug-face">
+    <div class="lineup">
+
+      <div class="phone-col">
+        <svg width="32" height="54" viewBox="0 0 32 54" fill="none">
+          <rect x="1" y="1" width="30" height="52" rx="7" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="16" cy="8.5" r="3.2" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="16" cy="46" r="3.5" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2007</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="33" height="58" viewBox="0 0 33 58" fill="none">
+          <rect x="1" y="1" width="31" height="56" rx="4" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="9" cy="9" r="3.5" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="9" cy="9" r="1.4" fill="currentColor"/>
+          <circle cx="16.5" cy="9" r="1.5" fill="currentColor"/>
+          <circle cx="16.5" cy="50" r="3.8" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2010</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="36" height="64" viewBox="0 0 36 64" fill="none">
+          <rect x="1" y="1" width="34" height="62" rx="9" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="11" cy="10" r="6" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="11" cy="10" r="3" stroke="currentColor" stroke-width="1"/>
+          <circle cx="20" cy="9" r="1.8" fill="currentColor"/>
+          <circle cx="18" cy="56" r="4" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2014</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="40" height="72" viewBox="0 0 40 72" fill="none">
+          <rect x="1" y="1" width="38" height="70" rx="10" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="5" y="5" width="22" height="13" rx="3" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="11.5" cy="11.5" r="3.8" stroke="currentColor" stroke-width="1"/>
+          <circle cx="20.5" cy="11.5" r="3.8" stroke="currentColor" stroke-width="1"/>
+          <circle cx="31" cy="10" r="2" fill="currentColor"/>
+          <circle cx="20" cy="64" r="4.2" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span class="yr">2016</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="44" height="80" viewBox="0 0 44 80" fill="none">
+          <rect x="1" y="1" width="42" height="78" rx="12" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="4" y="4" width="28" height="28" rx="6" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="13" cy="13" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="24" cy="13" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="18.5" cy="23" r="4.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="27" cy="24" r="1.8" fill="currentColor"/>
+        </svg>
+        <span class="yr">2019</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="48" height="88" viewBox="0 0 48 88" fill="none">
+          <rect x="1" y="1" width="46" height="86" rx="13" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="3" y="3" width="34" height="34" rx="8" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="13" cy="14" r="5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="26" cy="14" r="5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="13" cy="27" r="5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="26" cy="27" r="3" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="33" cy="7" r="2" fill="currentColor"/>
+        </svg>
+        <span class="yr">2022</span>
+      </div>
+
+      <div class="phone-col">
+        <svg width="52" height="96" viewBox="0 0 52 96" fill="none">
+          <rect x="1" y="1" width="50" height="94" rx="14" stroke="currentColor" stroke-width="1.4"/>
+          <rect x="2" y="2" width="48" height="24" rx="8" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="14" cy="13" r="5.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="27" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="27" cy="19" r="5.5" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="40" cy="9" r="2.2" fill="currentColor"/>
+          <circle cx="40" cy="18" r="2.2" stroke="currentColor" stroke-width="1.1"/>
+        </svg>
+        <span class="yr">2025</span>
+      </div>
+
+    </div>
+    <div class="tagline">todos passaram por aqui.</div>
+    <div class="wordmark">
+      <span class="wm-smart">smart</span><span class="wm-dot">•</span><span class="wm-base">base</span>
+    </div>
+  </div>
+  <div class="mug-info">
+    <h3>B — Fundo off-white</h3>
+    <p>Tom editorial. Foto com luz natural nos stories de manhã.</p>
+  </div>
+</div>
+
+</div>
+
+<p class="subtitle" style="margin-top:18px;font-size:11px;line-height:1.6">
+  <strong style="color:#F2F2F6;">2007</strong> flush único &nbsp;→&nbsp;
+  <strong style="color:#F2F2F6;">2010</strong> glass + flash &nbsp;→&nbsp;
+  <strong style="color:#F2F2F6;">2014</strong> primeiro bump &nbsp;→&nbsp;
+  <strong style="color:#F2F2F6;">2016</strong> dual horizontal &nbsp;→&nbsp;
+  <strong style="color:#F2F2F6;">2019</strong> triângulo icônico &nbsp;→&nbsp;
+  <strong style="color:#F2F2F6;">2022</strong> ilha gigante &nbsp;→&nbsp;
+  <strong style="color:#F2F2F6;">2025</strong> plateau horizontal
+</p>

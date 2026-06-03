@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gene Sneakers — Color Environments v1</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;900&family=Big+Shoulders+Text:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;600&display=swap');
+
+:root{
+  /* Base brand */
+  --carbon:#0D0D0D; --bone:#F2EFE9; --acid:#CBF23D; --press:#8CA62D; --slate:#A6A4A1;
+
+  /* BLOOM — soft / cultural / lifestyle */
+  --bloom-field:#F5DEE0;
+  --bloom-mid:#E8B5BD;
+  --bloom-deep:#B97580;
+  --peach:#FBDFC5;
+  --bloom-ink:#2A1418;
+
+  /* CHROME — tech / origin / logistics */
+  --chrome-deep:#141D26;
+  --chrome-mid:#2A3845;
+  --chrome-light:#8FA5B5;
+  --chrome-ink:#E8ECF0;
+
+  /* Shared */
+  --border-dark:rgba(255,255,255,0.08);
+  --border-light:rgba(13,13,13,0.08);
+  --gray-100:#161616; --gray-400:#666;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--carbon);color:var(--bone);font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,8,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-dark);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{font-family:'Big Shoulders Display',sans-serif;font-size:15px;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--bone);text-decoration:none}
+.nav-brand span{color:var(--acid)}
+.nav-version{font-family:'IBM Plex Mono',monospace;font-size:10px;color:rgba(255,255,255,0.5);background:var(--gray-100);padding:4px 10px;border:1px solid var(--border-dark)}
+
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:80px 64px;border-bottom:1px solid var(--border-dark);position:relative;overflow:hidden;background:
+  radial-gradient(circle at 15% 20%,rgba(245,222,224,0.12) 0%,transparent 40%),
+  radial-gradient(circle at 85% 80%,rgba(203,242,61,0.08) 0%,transparent 40%),
+  radial-gradient(circle at 50% 50%,rgba(143,165,181,0.06) 0%,transparent 50%),
+  var(--carbon)}
+.hero::before{content:'ENVIRONMENTS';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:clamp(120px,18vw,260px);font-weight:900;letter-spacing:-0.04em;font-family:'Big Shoulders Display',sans-serif;color:rgba(255,255,255,0.025);pointer-events:none;white-space:nowrap;user-select:none}
+.hero-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--acid);margin-bottom:24px;position:relative;z-index:2}
+.hero-title{font-family:'Big Shoulders Display',sans-serif;font-size:clamp(48px,7vw,96px);font-weight:900;letter-spacing:0.01em;line-height:0.95;margin-bottom:28px;text-transform:uppercase;position:relative;z-index:2}
+.hero-title em{font-style:normal;color:var(--acid)}
+.hero-sub{font-size:14px;color:rgba(243,239,230,0.7);max-width:600px;line-height:1.8;margin-bottom:48px;position:relative;z-index:2}
+.hero-meta{display:flex;gap:40px;flex-wrap:wrap;position:relative;z-index:2}
+.meta-item{display:flex;flex-direction:column;gap:4px}
+.meta-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
+.meta-value{font-size:13px;font-weight:500}
+
+.page{max-width:1200px;margin:0 auto;padding:0 40px}
+section{padding:100px 0;border-bottom:1px solid var(--border-dark)}
+.section-num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:var(--acid);text-transform:uppercase;margin-bottom:12px;display:block}
+.section-title{font-family:'Big Shoulders Display',sans-serif;font-size:clamp(34px,5vw,56px);font-weight:900;letter-spacing:0.02em;text-transform:uppercase;margin-bottom:16px;line-height:0.95}
+.section-intro{font-size:14px;line-height:1.85;color:rgba(243,239,230,0.72);max-width:720px;margin-bottom:64px}
+
+/* ENV OVERVIEW */
+.env-overview{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border-dark);margin-bottom:48px}
+.env-thumb{aspect-ratio:3/4;padding:20px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;cursor:pointer;transition:transform 0.3s}
+.env-thumb:hover{transform:translateY(-4px)}
+.env-thumb-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;position:relative;z-index:2}
+.env-thumb-name{font-family:'Big Shoulders Display',sans-serif;font-size:26px;font-weight:900;letter-spacing:0.02em;text-transform:uppercase;line-height:1;position:relative;z-index:2}
+.env-thumb-use{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;position:relative;z-index:2}
+
+.env-carbon{background:var(--carbon);color:var(--bone)}
+.env-daylight{background:var(--bone);color:var(--carbon)}
+.env-bloom{background:linear-gradient(135deg,var(--bloom-field) 0%,var(--bloom-mid) 70%,var(--peach) 100%);color:var(--bloom-ink)}
+.env-chrome{background:linear-gradient(180deg,var(--chrome-deep) 0%,var(--chrome-mid) 100%);color:var(--chrome-ink)}
+.env-acid{background:var(--acid);color:var(--carbon)}
+
+/* ENV DETAIL BLOCKS */
+.env-block{margin-bottom:80px}
+.env-block-header{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:40px}
+.env-lead{font-family:'Big Shoulders Display',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:900;letter-spacing:0.02em;text-transform:uppercase;line-height:0.95;margin-bottom:24px}
+.env-lead em{color:var(--acid);font-style:normal}
+.env-body{font-size:13px;line-height:1.8;color:rgba(243,239,230,0.78)}
+.env-body p+p{margin-top:12px}
+.env-palette{display:flex;flex-direction:column;gap:1px;background:var(--border-dark)}
+.color-swatch{background:var(--carbon);padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.color-name{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(243,239,230,0.55);min-width:100px}
+.color-label{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;flex:1}
+.color-chip{width:56px;height:32px;border:1px solid var(--border-dark)}
+.color-hex{font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(243,239,230,0.8);min-width:80px;text-align:right}
+
+/* MOCKUP GRID */
+.mockup-set{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:32px}
+.mockup{display:flex;flex-direction:column;gap:12px}
+.mockup-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--acid);text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}
+.mockup-frame{aspect-ratio:9/16;position:relative;overflow:hidden;border:1px solid var(--border-dark);border-radius:2px}
+.mockup-frame.square{aspect-ratio:1}
+.mockup-desc{font-size:11px;color:rgba(243,239,230,0.6);line-height:1.6}
+
+/* DAYLIGHT MOCKUP */
+.m-daylight{position:absolute;inset:0;background:var(--bone);color:var(--carbon);padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.m-daylight .tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;color:var(--press)}
+.m-daylight .title{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:44px;line-height:0.9;letter-spacing:0.01em;text-transform:uppercase}
+.m-daylight .title em{color:var(--press);font-style:normal}
+.m-daylight .divider{width:100%;height:1px;background:rgba(13,13,13,0.1);margin:16px 0}
+.m-daylight .meta{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.1em;color:rgba(13,13,13,0.5)}
+
+/* BLOOM MOCKUP */
+.m-bloom{position:absolute;inset:0;background:
+  radial-gradient(circle at 20% 20%,rgba(251,223,197,0.8) 0%,transparent 50%),
+  radial-gradient(circle at 80% 80%,rgba(185,117,128,0.5) 0%,transparent 50%),
+  linear-gradient(135deg,var(--bloom-field) 0%,var(--bloom-mid) 100%);
+  color:var(--bloom-ink);padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.glass-card{background:rgba(255,255,255,0.25);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.4);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.glass-pill{background:rgba(255,255,255,0.35);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.5);border-radius:24px;padding:6px 14px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;display:inline-block;color:var(--bloom-ink)}
+.acid-pill{background:var(--acid);color:var(--bloom-ink);border-radius:24px;padding:6px 14px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;font-weight:500}
+.m-bloom .title{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:34px;line-height:0.95;letter-spacing:0.01em;text-transform:uppercase;color:#fff}
+.m-bloom .title em{color:var(--acid);font-style:normal}
+.m-bloom .sub{font-size:11px;color:rgba(42,20,24,0.7);line-height:1.5}
+
+/* CHROME MOCKUP */
+.m-chrome{position:absolute;inset:0;background:
+  radial-gradient(circle at 70% 30%,rgba(143,165,181,0.3) 0%,transparent 40%),
+  linear-gradient(180deg,var(--chrome-deep) 0%,var(--chrome-mid) 100%);
+  color:var(--chrome-ink);padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.m-chrome .top{display:flex;justify-content:space-between;align-items:center}
+.m-chrome .tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;color:rgba(232,236,240,0.5)}
+.m-chrome .title{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:38px;line-height:0.95;letter-spacing:0.01em;text-transform:uppercase}
+.m-chrome .sub{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--chrome-light);margin-top:8px}
+.chrome-obj{width:100px;height:80px;background:
+  radial-gradient(ellipse at 30% 30%,rgba(255,255,255,0.9) 0%,rgba(143,165,181,0.6) 30%,rgba(42,56,69,0.9) 70%);
+  border-radius:60% 40% 50% 50% / 50% 60% 40% 50%;filter:blur(1px);opacity:0.85}
+
+/* ACID MOCKUP */
+.m-acid{position:absolute;inset:0;background:var(--acid);color:var(--carbon);padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.m-acid .title{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:50px;line-height:0.85;letter-spacing:0.01em;text-transform:uppercase}
+.m-acid .tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;color:rgba(13,13,13,0.6)}
+.m-acid .divider{height:2px;background:var(--carbon);width:40px;margin:12px 0}
+
+/* WHEN GRID */
+.when-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border-dark);margin-bottom:32px}
+.when-card{background:var(--carbon);padding:28px}
+.when-card.col-daylight{border-left:3px solid var(--bone)}
+.when-card.col-bloom{border-left:3px solid var(--bloom-mid)}
+.when-card.col-chrome{border-left:3px solid var(--chrome-light)}
+.when-card.col-acid{border-left:3px solid var(--acid)}
+.when-card.col-carbon{border-left:3px solid #333}
+.when-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--acid);margin-bottom:8px}
+.when-title{font-family:'Big Shoulders Display',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:16px}
+.when-list{font-size:12px;line-height:1.8;color:rgba(243,239,230,0.78)}
+.when-list li{list-style:none;padding-left:16px;position:relative;margin-bottom:4px}
+.when-list li::before{content:'+';position:absolute;left:0;top:0;color:var(--acid);font-family:'IBM Plex Mono',monospace}
+.when-list li.no::before{content:'×';color:#ff6b6b}
+
+/* RULES */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-dark);margin-bottom:32px}
+.rule-card{background:var(--carbon);padding:32px}
+.rule-num{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--acid);letter-spacing:0.12em;margin-bottom:8px}
+.rule-title{font-family:'Big Shoulders Display',sans-serif;font-size:22px;font-weight:900;letter-spacing:0.02em;text-transform:uppercase;margin-bottom:12px}
+.rule-desc{font-size:12px;color:rgba(243,239,230,0.72);line-height:1.75}
+
+/* FEED ROTATION */
+.feed-rotation{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;margin-bottom:24px;aspect-ratio:9/3}
+.feed-tile{aspect-ratio:1;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:8px}
+.feed-tile-tag{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:0.1em;text-transform:uppercase}
+.feed-carbon{background:var(--carbon);color:var(--acid)}
+.feed-daylight{background:var(--bone);color:var(--carbon)}
+.feed-bloom{background:linear-gradient(135deg,var(--bloom-field),var(--bloom-mid));color:var(--bloom-ink)}
+.feed-chrome{background:linear-gradient(180deg,var(--chrome-deep),var(--chrome-mid));color:var(--chrome-light)}
+.feed-acid{background:var(--acid);color:var(--carbon)}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;margin-bottom:32px}
+thead tr{border-bottom:1px solid var(--border-dark)}
+th{padding:14px 16px;text-align:left;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:400}
+th:first-child{color:var(--acid)}
+tbody tr{border-bottom:1px solid var(--border-dark)}
+td{padding:14px 16px;font-size:12px;color:rgba(243,239,230,0.78);vertical-align:top;line-height:1.6}
+td:first-child{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--bone)}
+td code{font-family:'IBM Plex Mono',monospace;color:var(--acid);font-size:11px}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--acid) 0%,#A5D418 100%);color:var(--carbon);padding:56px 48px;margin:80px 0;display:flex;flex-direction:column;gap:16px}
+.cta-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(8,8,8,0.55)}
+.cta-title{font-family:'Big Shoulders Display',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:900;letter-spacing:0.02em;text-transform:uppercase;line-height:1}
+.cta-sub{font-size:13px;color:rgba(8,8,8,0.75);max-width:560px;line-height:1.7}
+
+footer{padding:60px 40px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.35);text-transform:uppercase}
+footer a{color:var(--acid);text-decoration:none}
+
+@media(max-width:900px){
+  .env-overview{grid-template-columns:repeat(2,1fr)}
+  .env-block-header{grid-template-columns:1fr}
+  .mockup-set{grid-template-columns:1fr}
+  .when-grid,.rules{grid-template-columns:1fr}
+  .feed-rotation{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">GENE<span>.ENV</span></a>
+  <span class="nav-version">COLOR ENVIRONMENTS v1.1 · BLOOM RECALIBRADO · 2026-04-19</span>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-label">— Color System · Expansion v1</span>
+  <h1 class="hero-title">A marca<br>respira em<br><em>outros climas</em>.</h1>
+  <p class="hero-sub">Carbon é o campo madrugada. Bom pra drop, pra performance, pra manifesto. Mas marca que vive em IG e TikTok não pode respirar só no preto. Este doc estende o sistema em cinco ambientes de cor — cada um com clima, uso, e quando NÃO usar. ACID continua sendo frequência em todos.</p>
+  <div class="hero-meta">
+    <div class="meta-item"><span class="meta-label">Base</span><span class="meta-value">Signal Origins + Gene Code v1</span></div>
+    <div class="meta-item"><span class="meta-label">Expansion</span><span class="meta-value">5 environments · 16 tokens novos</span></div>
+    <div class="meta-item"><span class="meta-label">Ref</span><span class="meta-value">human.academy glass + chrome</span></div>
+  </div>
+</div>
+
+<!-- 01 — MENTAL MODEL -->
+<div class="page">
+<section id="mental">
+  <span class="section-num">— 01 / Mental Model</span>
+  <h2 class="section-title">Cor é clima,<br>não decoração.</h2>
+  <p class="section-intro">Antes de pintar, um princípio: cada ambiente de cor carrega um momento emocional específico. A gente não troca de clima porque cansou do preto — a gente troca porque o conteúdo pede outra temperatura. É como editor de revista decidindo capa: uma matéria de lançamento pede adrenalina, uma de cultura pede respiro, uma de bastidor pede silêncio tecnológico. A marca não é monotônica. É coerente.</p>
+
+  <div class="rules">
+    <div class="rule-card">
+      <div class="rule-num">/RULE-01</div>
+      <div class="rule-title">ACID é invariante</div>
+      <p class="rule-desc">Em qualquer ambiente, ACID mantém função de frequência: marca o essencial, nunca o óbvio. Em fundo claro, ela pulsa contra o branco. Em fundo pink, vira voltagem. Em dark, é sinal de vida. Tirar ACID é tirar a marca.</p>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">/RULE-02</div>
+      <div class="rule-title">Big Shoulders é a voz</div>
+      <p class="rule-desc">A tipografia não muda. Big Shoulders Display Bold declara em preto, em bone, em pink, em chrome. IBM Plex Mono anota em todos. Consistência tipográfica = marca reconhecível independente da cor.</p>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">/RULE-03</div>
+      <div class="rule-title">Um ambiente por peça</div>
+      <p class="rule-desc">Nunca misturar dois climas no mesmo post. A peça inteira é Daylight, ou Bloom, ou Chrome. Transição de ambiente acontece entre peças do carrossel ou entre stories — nunca dentro do mesmo frame.</p>
+    </div>
+    <div class="rule-card">
+      <div class="rule-num">/RULE-04</div>
+      <div class="rule-title">O feed tem ritmo</div>
+      <p class="rule-desc">Rotacionar ambientes no grid cria respiro e curiosidade visual. Regra bruta: a cada 5 posts, pelo menos 3 ambientes diferentes. Feed todo dark = marca parada. Feed todo pink = marca descaracterizada. A variedade é a assinatura.</p>
+    </div>
+    <div class="rule-card" style="grid-column:1 / -1;background:linear-gradient(90deg,var(--carbon) 0%,rgba(232,181,189,0.08) 100%);border-left:3px solid var(--bloom-mid)">
+      <div class="rule-num" style="color:var(--bloom-mid)">/RULE-05 · RECALIBRADA</div>
+      <div class="rule-title">Bloom é texto, não fundo</div>
+      <p class="rule-desc">Rosa poeira não é base — é voz. Por padrão, Bloom entra como tipografia, accent ou detalhe sobre Carbon ou Daylight. Como campo de fundo só em UM caso justificado: glass card sobre fotografia (estilo Human Academy). Fora disso, rosa fica em palavra, em filete, em pill — nunca toma a peça inteira. A função é aquecer a marca sem feminizar o sistema.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — OVERVIEW -->
+<section id="overview">
+  <span class="section-num">— 02 / Overview</span>
+  <h2 class="section-title">Cinco climas.<br>Cinco momentos.</h2>
+  <p class="section-intro">Uma visão rápida antes de entrar em cada um. Leia como uma paleta de humor — Carbon não desaparece, só deixa de ser a única resposta.</p>
+
+  <div class="env-overview">
+    <div class="env-thumb env-carbon">
+      <span class="env-thumb-label" style="color:var(--acid)">/ENV-01</span>
+      <div>
+        <div class="env-thumb-name">Carbon</div>
+        <div class="env-thumb-use" style="margin-top:6px">drop · noite · performance</div>
+      </div>
+    </div>
+    <div class="env-thumb env-daylight">
+      <span class="env-thumb-label" style="color:var(--press)">/ENV-02</span>
+      <div>
+        <div class="env-thumb-name">Daylight</div>
+        <div class="env-thumb-use" style="margin-top:6px">editorial · comparativo</div>
+      </div>
+    </div>
+    <div class="env-thumb env-bloom">
+      <span class="env-thumb-label" style="color:var(--bloom-ink)">/ENV-03 · TEXT-FIRST</span>
+      <div>
+        <div class="env-thumb-name">Bloom</div>
+        <div class="env-thumb-use" style="margin-top:6px">texto / accent · glass só com foto</div>
+      </div>
+    </div>
+    <div class="env-thumb env-chrome">
+      <span class="env-thumb-label" style="color:var(--acid)">/ENV-04</span>
+      <div>
+        <div class="env-thumb-name">Chrome</div>
+        <div class="env-thumb-use" style="margin-top:6px">origem · bastidor · logística</div>
+      </div>
+    </div>
+    <div class="env-thumb env-acid">
+      <span class="env-thumb-label" style="color:var(--carbon)">/ENV-05</span>
+      <div>
+        <div class="env-thumb-name">Acid</div>
+        <div class="env-thumb-use" style="margin-top:6px">hero raro · voltagem máxima</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 — DAYLIGHT -->
+<section id="daylight">
+  <span class="section-num">— 03 / Environment 02</span>
+  <h2 class="section-title">Daylight</h2>
+
+  <div class="env-block-header">
+    <div>
+      <div class="env-lead">Bone no campo.<br><em>Carbon</em> na palavra.</div>
+      <div class="env-body">
+        <p>O inverso do Carbon. BONE vira campo, CARBON vira texto. PRESS (acid escuro) aparece mais porque ACID puro perde força em fundo claro. Gera uma vibe editorial de revista — Document Journal, Apartamento, essas refs de design sério.</p>
+        <p>Aqui a marca argumenta. Não grita. É onde cabem posts de comparativo, manifesto institucional, "como funciona a curadoria Gene", entrevistas, longa-duração.</p>
+      </div>
+    </div>
+    <div class="env-palette">
+      <div class="color-swatch"><span class="color-name">Field</span><span class="color-label">Bone</span><div class="color-chip" style="background:var(--bone)"></div><span class="color-hex">#F2EFE9</span></div>
+      <div class="color-swatch"><span class="color-name">Ink</span><span class="color-label">Carbon</span><div class="color-chip" style="background:var(--carbon)"></div><span class="color-hex">#0D0D0D</span></div>
+      <div class="color-swatch"><span class="color-name">Accent</span><span class="color-label">Press</span><div class="color-chip" style="background:var(--press)"></div><span class="color-hex">#8CA62D</span></div>
+      <div class="color-swatch"><span class="color-name">Sinal</span><span class="color-label">Acid (micro)</span><div class="color-chip" style="background:var(--acid)"></div><span class="color-hex">#CBF23D</span></div>
+      <div class="color-swatch"><span class="color-name">Muted</span><span class="color-label">Slate</span><div class="color-chip" style="background:var(--slate)"></div><span class="color-hex">#A6A4A1</span></div>
+    </div>
+  </div>
+
+  <div class="mockup-set">
+    <div class="mockup">
+      <div class="mockup-label"><span>FEED · EDITORIAL</span><span>DAYLIGHT</span></div>
+      <div class="mockup-frame square">
+        <div class="m-daylight">
+          <div>
+            <div class="tag">— EDITORIAL · SEM-03</div>
+            <div class="title" style="margin-top:16px">não existe<br>por <em>acaso</em>.</div>
+          </div>
+          <div>
+            <div class="divider"></div>
+            <div style="font-size:11px;color:rgba(13,13,13,0.65);line-height:1.6">Cada par que a Gene traz passou por escolha. Não é sorte. É curadoria.</div>
+            <div class="divider"></div>
+            <div class="meta"><span>/GENE · CURADORIA</span><span>ABR 2026</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-desc">Manifesto editorial. Carbon respira contra bone, press marca os pontos.</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>STORY · COMPARATIVO</span><span>DAYLIGHT</span></div>
+      <div class="mockup-frame">
+        <div class="m-daylight" style="padding:36px 24px">
+          <div>
+            <div class="tag">— NB 990v6 · USA</div>
+            <div class="title" style="font-size:30px;margin-top:20px">o varejo<br>cobra. a gene<br><em>traz</em>.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:rgba(13,13,13,0.05);font-family:'IBM Plex Mono',monospace;font-size:10px"><span>VAREJO BR</span><span>R$ 1.499</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:var(--carbon);color:var(--bone);font-family:'IBM Plex Mono',monospace;font-size:10px"><span>VIA GENE</span><span style="color:var(--acid)">R$ 1.099</span></div>
+            <div class="tag" style="margin-top:4px">— 27% MENOS · MESMO PAR</div>
+          </div>
+          <div style="background:var(--carbon);color:var(--bone);text-align:center;padding:12px;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:14px;letter-spacing:0.1em">QUAL É O SEU? →</div>
+        </div>
+      </div>
+      <div class="mockup-desc">O mesmo argumento do Carbon, mas em modo "jornal de domingo". Convence sem gritar.</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>FEED · QUOTE</span><span>DAYLIGHT</span></div>
+      <div class="mockup-frame square">
+        <div class="m-daylight" style="justify-content:center;padding:36px">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:8px"><span style="width:20px;height:2px;background:var(--press)"></span><span class="tag">INSIDER · @name</span></div>
+            <div class="title" style="font-size:28px">"o <em>tênis</em> já<br>existia. só<br>faltava alguém<br>trazer."</div>
+            <div class="divider" style="margin-top:8px"></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.12em;color:rgba(13,13,13,0.5)">/QUOTE · CLIENTE PILOTO · ABR 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-desc">Testimonial editorial. Tipografia grande, field neutro, a palavra é o protagonista.</div>
+    </div>
+  </div>
+
+  <div class="when-grid">
+    <div class="when-card col-daylight">
+      <div class="when-label">Quando usar</div>
+      <div class="when-title">Daylight vive em</div>
+      <ul class="when-list">
+        <li>Posts de argumentação, manifesto, "por que Gene"</li>
+        <li>Comparativos de preço longos, tabela de modelos</li>
+        <li>Testimonials de cliente, quotes editoriais</li>
+        <li>Conteúdo de curadoria, "por que esse modelo"</li>
+        <li>Newsletter, landing "sobre", seção institucional</li>
+      </ul>
+    </div>
+    <div class="when-card col-daylight">
+      <div class="when-label">Quando não usar</div>
+      <div class="when-title">Daylight não cabe em</div>
+      <ul class="when-list">
+        <li class="no">Anúncio de drop — parece anúncio de banco</li>
+        <li class="no">Story de FOMO — frustra a urgência</li>
+        <li class="no">Conteúdo performance/running — clima errado</li>
+        <li class="no">Hero de landing page — precisa peso</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — BLOOM -->
+<section id="bloom">
+  <span class="section-num">— 04 / Environment 03</span>
+  <h2 class="section-title">Bloom</h2>
+
+  <div class="env-block-header">
+    <div>
+      <div class="env-lead">Rosa na <em>palavra</em>.<br>Carbon no campo.</div>
+      <div class="env-body">
+        <p>Bloom é voz, não cenário. Default: a peça continua em Carbon ou Daylight, e o rosa entra em uma palavra grande, num filete, num pill, num accent tipográfico que aquece o frame sem tomá-lo. Poeira, não papel de parede.</p>
+        <p>Entra em: conteúdo de cultura, creator, comunidade, "a pessoa por trás" — momentos em que a marca precisa respirar afeto sem abandonar o preto.</p>
+        <p>Único uso como campo: glass card sobre fotografia forte (ref direta human.academy). Nunca como fundo chapado de post editorial — isso feminiza sem motivo e gasta a cor rápido.</p>
+      </div>
+    </div>
+    <div class="env-palette">
+      <div class="color-swatch"><span class="color-name">Field</span><span class="color-label">Bloom Light</span><div class="color-chip" style="background:var(--bloom-field)"></div><span class="color-hex">#F5DEE0</span></div>
+      <div class="color-swatch"><span class="color-name">Field-mid</span><span class="color-label">Bloom Mid</span><div class="color-chip" style="background:var(--bloom-mid)"></div><span class="color-hex">#E8B5BD</span></div>
+      <div class="color-swatch"><span class="color-name">Highlight</span><span class="color-label">Peach</span><div class="color-chip" style="background:var(--peach)"></div><span class="color-hex">#FBDFC5</span></div>
+      <div class="color-swatch"><span class="color-name">Ink</span><span class="color-label">Bloom Ink</span><div class="color-chip" style="background:var(--bloom-ink)"></div><span class="color-hex">#2A1418</span></div>
+      <div class="color-swatch"><span class="color-name">Sinal</span><span class="color-label">Acid</span><div class="color-chip" style="background:var(--acid)"></div><span class="color-hex">#CBF23D</span></div>
+    </div>
+  </div>
+
+  <div class="mockup-set">
+    <div class="mockup">
+      <div class="mockup-label"><span>STORY · COMMUNITY</span><span>BLOOM · GLASS</span></div>
+      <div class="mockup-frame">
+        <div class="m-bloom">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="glass-pill">/DROP-26</span>
+            <span class="acid-pill">● AO VIVO</span>
+          </div>
+          <div class="glass-card" style="margin-top:auto">
+            <div class="title">chegou.<br>a gene<br><em>abriu</em>.</div>
+            <div class="sub">Do primeiro pedido ao primeiro unboxing. Sem corte, sem enrolação.</div>
+            <div style="display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.3)">
+              <svg width="20" height="14" viewBox="0 0 20 14"><ellipse cx="10" cy="7" rx="9" ry="4" stroke="#fff" stroke-width="0.8" fill="none"/><path d="M3 7 Q6 4 10 7 Q14 4 17 7" stroke="#fff" stroke-width="0.8" fill="none"/></svg>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.14em;color:rgba(255,255,255,0.8)">GENE · SNEAKERS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-desc">Glass card sobre gradient floral. Acid como voltagem no "AO VIVO". Referência direta da human.academy.</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>FEED · CREATOR FEATURE</span><span>CARBON + BLOOM TEXT</span></div>
+      <div class="mockup-frame square">
+        <div style="position:absolute;inset:0;background:var(--carbon);color:var(--bone);padding:32px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;background:rgba(232,181,189,0.12);color:var(--bloom-mid);padding:5px 12px;border:1px solid rgba(232,181,189,0.3)">@creator.handle</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(255,255,255,0.4)">/FEATURE-04</span>
+          </div>
+          <div>
+            <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:48px;line-height:0.92;letter-spacing:0.01em;text-transform:uppercase">ela<br>encomendou.<br>ela <em style="color:var(--bloom-mid);font-style:normal">recebeu</em>.</div>
+            <div style="margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--acid)"><span style="width:14px;height:1px;background:var(--acid)"></span>VEJA O UNBOXING →</div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-desc">Creator feature em Carbon. Rosa entra só na palavra "recebeu" — aquece sem tomar. Acid mantém a função de seta.</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>STORY · COMUNIDADE</span><span>DAYLIGHT + BLOOM ACCENT</span></div>
+      <div class="mockup-frame">
+        <div style="position:absolute;inset:0;background:var(--bone);color:var(--carbon);padding:32px 28px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:10px;height:10px;background:var(--bloom-mid);border-radius:50%"></div>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--bloom-deep);text-transform:uppercase">— Community · DRP-26</span>
+          </div>
+          <div>
+            <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:54px;line-height:0.92;letter-spacing:0.01em;text-transform:uppercase">+128<br>pares<br><em style="color:var(--bloom-deep);font-style:normal">encomendados</em>.</div>
+            <div style="display:flex;gap:4px;margin-top:20px">
+              <div style="flex:1;height:3px;background:var(--bloom-mid)"></div>
+              <div style="flex:1;height:3px;background:var(--bloom-mid)"></div>
+              <div style="flex:1;height:3px;background:var(--acid)"></div>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:rgba(13,13,13,0.6);line-height:1.6;margin-top:14px">no primeiro mês. sem mídia paga. só curadoria.</div>
+          </div>
+          <div style="text-align:center;background:var(--carbon);color:var(--acid);padding:12px;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:13px;letter-spacing:0.1em">PEÇA O SEU →</div>
+        </div>
+      </div>
+      <div class="mockup-desc">Milestone em Daylight. Rosa vive no dado (palavra "encomendados") e no filete de progresso. Sem fundo rosa — só assinatura.</div>
+    </div>
+  </div>
+
+  <div class="when-grid">
+    <div class="when-card col-bloom">
+      <div class="when-label">Bloom como texto / accent</div>
+      <div class="when-title">Default: rosa na palavra</div>
+      <ul class="when-list">
+        <li>Palavra-chave da headline grita em rosa sobre Carbon ou Daylight</li>
+        <li>Pill de comunidade ("@creator", "/COMMUNITY") em outline rosa</li>
+        <li>Filete/divider rosa em cards editoriais</li>
+        <li>Dado celebrado ("+128", "primeiro mês") em rosa</li>
+        <li>Timestamp, selo, tag de cultura — rosa como cor-frequência quente</li>
+      </ul>
+    </div>
+    <div class="when-card col-bloom">
+      <div class="when-label">Bloom como campo (raro)</div>
+      <div class="when-title">Exceção: glass sobre foto</div>
+      <ul class="when-list">
+        <li>Story com fotografia forte (modelo vestindo) + glass card translúcido</li>
+        <li>Live / "AO VIVO" sobre imagem real do tênis</li>
+        <li>Peça-capa de editorial de cultura (1x por mês no máximo)</li>
+        <li class="no">NUNCA: post chapado rosa sem fotografia</li>
+        <li class="no">NUNCA: bloom de campo em contexto técnico ou de preço</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — CHROME -->
+<section id="chrome">
+  <span class="section-num">— 05 / Environment 04</span>
+  <h2 class="section-title">Chrome</h2>
+
+  <div class="env-block-header">
+    <div>
+      <div class="env-lead">Azul metálico.<br><em>Líquido</em> como produto.</div>
+      <div class="env-body">
+        <p>Não é black. É chrome-deep — azul escuro com gradiente para cinza metálico. Inspirado na segunda ref da human.academy: aquele objeto 3D de líquido/vidro/mercúrio que dá profundidade sem competir com a palavra.</p>
+        <p>É o ambiente do bastidor Gene: origem do par, rota de importação, "dentro da fábrica", "como chega", logística, técnico/tech. O clima é de editorial Kinfolk encontra Wired. Respeito pelo processo.</p>
+        <p>Usa a hélice como objeto 3D flutuante ou mercúrio renderizado — sugestão de algo de alta engenharia sem ser clichê gamer.</p>
+      </div>
+    </div>
+    <div class="env-palette">
+      <div class="color-swatch"><span class="color-name">Field</span><span class="color-label">Chrome Deep</span><div class="color-chip" style="background:var(--chrome-deep)"></div><span class="color-hex">#141D26</span></div>
+      <div class="color-swatch"><span class="color-name">Field-mid</span><span class="color-label">Chrome Mid</span><div class="color-chip" style="background:var(--chrome-mid)"></div><span class="color-hex">#2A3845</span></div>
+      <div class="color-swatch"><span class="color-name">Ink</span><span class="color-label">Chrome Ink</span><div class="color-chip" style="background:var(--chrome-ink)"></div><span class="color-hex">#E8ECF0</span></div>
+      <div class="color-swatch"><span class="color-name">Muted</span><span class="color-label">Chrome Light</span><div class="color-chip" style="background:var(--chrome-light)"></div><span class="color-hex">#8FA5B5</span></div>
+      <div class="color-swatch"><span class="color-name">Sinal</span><span class="color-label">Acid</span><div class="color-chip" style="background:var(--acid)"></div><span class="color-hex">#CBF23D</span></div>
+    </div>
+  </div>
+
+  <div class="mockup-set">
+    <div class="mockup">
+      <div class="mockup-label"><span>FEED · ORIGEM</span><span>CHROME</span></div>
+      <div class="mockup-frame square">
+        <div class="m-chrome">
+          <div class="top">
+            <span class="tag">/ORIGEM-07</span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--acid);letter-spacing:0.14em">● IN TRANSIT</span>
+          </div>
+          <div>
+            <div class="title">USA<br>→ BR</div>
+            <div class="sub">Boston · Rotterdam · Santos · Porto Alegre</div>
+            <div class="chrome-obj" style="margin-top:20px"></div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--chrome-light);letter-spacing:0.12em;padding-top:12px;border-top:1px solid rgba(143,165,181,0.2)">/SKU-0147 · AJ1 LOW SMOKE · 12 DIAS</div>
+        </div>
+      </div>
+      <div class="mockup-desc">Rota de importação. O chrome-blob flutua como produto em trânsito.</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>FEED · TECH SPEC</span><span>CHROME</span></div>
+      <div class="mockup-frame square">
+        <div class="m-chrome">
+          <div class="top">
+            <span class="tag" style="color:var(--acid)">/SPEC-0147</span>
+            <span class="tag">ABR 2026</span>
+          </div>
+          <div>
+            <div class="title" style="font-size:30px">dentro do<br>par.</div>
+            <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--chrome-ink)">
+              <div style="display:flex;justify-content:space-between;padding-bottom:4px;border-bottom:1px solid rgba(143,165,181,0.15)"><span style="color:var(--chrome-light)">MODELO</span><span>AJ1 LOW SMOKE</span></div>
+              <div style="display:flex;justify-content:space-between;padding-bottom:4px;border-bottom:1px solid rgba(143,165,181,0.15)"><span style="color:var(--chrome-light)">ORIGEM</span><span>USA (DTLA)</span></div>
+              <div style="display:flex;justify-content:space-between;padding-bottom:4px;border-bottom:1px solid rgba(143,165,181,0.15)"><span style="color:var(--chrome-light)">DROP</span><span>NIKE · 2025</span></div>
+              <div style="display:flex;justify-content:space-between"><span style="color:var(--chrome-light)">ESTOQUE</span><span style="color:var(--acid)">SOB ENCOMENDA</span></div>
+            </div>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:8px;color:var(--chrome-light);letter-spacing:0.12em">/GENE · VERIFIED AUTHENTIC</div>
+        </div>
+      </div>
+      <div class="mockup-desc">Ficha técnica do modelo. Quando o conteúdo é dado, chrome entrega autoridade.</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>STORY · BASTIDOR</span><span>CHROME</span></div>
+      <div class="mockup-frame">
+        <div class="m-chrome">
+          <div class="top">
+            <span class="tag">/BACKSTAGE-03</span>
+            <span class="tag" style="color:var(--acid)">+128 EM ROTA</span>
+          </div>
+          <div>
+            <div class="title">o que<br>a curadoria<br>vê <em>antes</em>.</div>
+            <div class="sub">Cada par passa por 3 checkpoints antes de sair.</div>
+            <div class="chrome-obj" style="margin:24px auto 0;width:140px;height:90px"></div>
+          </div>
+          <div style="background:rgba(232,236,240,0.1);padding:10px;text-align:center;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:13px;letter-spacing:0.1em;color:var(--acid)">VEJA O PROCESSO →</div>
+        </div>
+      </div>
+      <div class="mockup-desc">Bastidor curatorial. Chrome como signo de processo sério, não de glamour.</div>
+    </div>
+  </div>
+
+  <div class="when-grid">
+    <div class="when-card col-chrome">
+      <div class="when-label">Quando usar</div>
+      <div class="when-title">Chrome vive em</div>
+      <ul class="when-list">
+        <li>Conteúdo de origem, rota, "de onde veio"</li>
+        <li>Specs técnicas, ficha de modelo, "dentro do par"</li>
+        <li>Bastidor curatorial, "como Gene escolhe"</li>
+        <li>Status de pedido — "sua encomenda está em rota"</li>
+        <li>Landing page seção técnica, FAQ, documentação</li>
+      </ul>
+    </div>
+    <div class="when-card col-chrome">
+      <div class="when-label">Quando não usar</div>
+      <div class="when-title">Chrome não cabe em</div>
+      <ul class="when-list">
+        <li class="no">Drop / lançamento — falta energia</li>
+        <li class="no">Creator feature — gela a pessoa</li>
+        <li class="no">Cultura lifestyle — parece fintech</li>
+        <li class="no">FOMO / urgência — clima errado</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — ACID -->
+<section id="acid">
+  <span class="section-num">— 06 / Environment 05</span>
+  <h2 class="section-title">Acid</h2>
+
+  <div class="env-block-header">
+    <div>
+      <div class="env-lead">ACID toma<br>o campo.<br><em>Carbon</em> anota.</div>
+      <div class="env-body">
+        <p>O ambiente mais agressivo. ACID deixa de ser frequência e vira campo inteiro. CARBON no texto. Uso raro, calculado, pra momentos em que você precisa PARAR o scroll — drop que vai lançar em 24h, FOMO absoluto, hero de campanha pilar.</p>
+        <p>Regra dura: <strong style="color:var(--acid)">1 post ACID a cada 15 posts.</strong> Se ACID aparece muito como campo, perde o poder de ser sinal. A raridade é o valor.</p>
+      </div>
+    </div>
+    <div class="env-palette">
+      <div class="color-swatch"><span class="color-name">Field</span><span class="color-label">Acid</span><div class="color-chip" style="background:var(--acid)"></div><span class="color-hex">#CBF23D</span></div>
+      <div class="color-swatch"><span class="color-name">Ink</span><span class="color-label">Carbon</span><div class="color-chip" style="background:var(--carbon)"></div><span class="color-hex">#0D0D0D</span></div>
+      <div class="color-swatch"><span class="color-name">Accent-dark</span><span class="color-label">Press</span><div class="color-chip" style="background:var(--press)"></div><span class="color-hex">#8CA62D</span></div>
+      <div class="color-swatch"><span class="color-name">Grounding</span><span class="color-label">Bone (line)</span><div class="color-chip" style="background:var(--bone)"></div><span class="color-hex">#F2EFE9</span></div>
+    </div>
+  </div>
+
+  <div class="mockup-set">
+    <div class="mockup">
+      <div class="mockup-label"><span>FEED · DROP ALERT</span><span>ACID HERO</span></div>
+      <div class="mockup-frame square">
+        <div class="m-acid">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <span class="tag">/DROP-26 · 24H</span>
+            <span class="tag">● ABRIU</span>
+          </div>
+          <div>
+            <div class="divider"></div>
+            <div class="title">a gente<br>tem.<br>o brasil<br><span style="-webkit-text-stroke:1.5px var(--carbon);color:transparent">vai querer.</span></div>
+            <div class="divider"></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em">ENCOMENDE OU ESPERE 6 MESES →</div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-desc">Drop hero. 1 por drop, no máximo. Para o scroll.</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>STORY · COUNTDOWN</span><span>ACID HERO</span></div>
+      <div class="mockup-frame">
+        <div class="m-acid" style="padding:36px 24px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start">
+            <span class="tag">/DROP-26</span>
+            <span class="tag">● 48H</span>
+          </div>
+          <div style="text-align:center;display:flex;flex-direction:column;gap:24px">
+            <div class="tag" style="text-align:center">— FALTAM</div>
+            <div class="title" style="font-size:110px;line-height:0.85;letter-spacing:-0.02em">48H</div>
+            <div class="tag" style="text-align:center">ATÉ FECHAR</div>
+          </div>
+          <div style="text-align:center;background:var(--carbon);color:var(--acid);padding:12px;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:14px;letter-spacing:0.1em">ENCOMENDE AGORA</div>
+        </div>
+      </div>
+      <div class="mockup-desc">Countdown visceral. Urgência sem "aproveite agora".</div>
+    </div>
+
+    <div class="mockup">
+      <div class="mockup-label"><span>LANDING · HERO SECUNDÁRIO</span><span>ACID HERO</span></div>
+      <div class="mockup-frame square">
+        <div class="m-acid" style="justify-content:center">
+          <div>
+            <div class="tag">— MANIFESTO</div>
+            <div class="title" style="font-size:44px;margin-top:12px">o brasil<br>não precisa<br>decidir<br><em style="background:var(--carbon);color:var(--acid);padding:0 8px">por você</em>.</div>
+            <div class="divider" style="margin-top:20px"></div>
+            <div class="tag">/GENE · 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-desc">Manifesto pilar. Único uso onde ACID como campo não gasta — porque é assinatura da marca.</div>
+    </div>
+  </div>
+
+  <div class="when-grid">
+    <div class="when-card col-acid">
+      <div class="when-label">Quando usar</div>
+      <div class="when-title">Acid toma campo em</div>
+      <ul class="when-list">
+        <li>Drop hero — 1 por lançamento</li>
+        <li>Countdown final 24h / 48h</li>
+        <li>Manifesto pilar (1x por trimestre, max)</li>
+        <li>Hero secundário de landing page</li>
+        <li>Billboard / outdoor (caso existir)</li>
+      </ul>
+    </div>
+    <div class="when-card col-acid">
+      <div class="when-label">Quando não usar</div>
+      <div class="when-title">Acid como campo queima em</div>
+      <ul class="when-list">
+        <li class="no">Post comum, dia-a-dia — vira mediocre</li>
+        <li class="no">Mais de 1 peça na mesma semana</li>
+        <li class="no">Conteúdo denso (texto longo cansa o olho)</li>
+        <li class="no">Comparativo de preço — desfoca argumento</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 07 — FEED ROTATION -->
+<section id="rotation">
+  <span class="section-num">— 07 / Feed Rotation</span>
+  <h2 class="section-title">Ritmo<br>no grid.</h2>
+  <p class="section-intro">Um feed todo Carbon vira cemitério. Um feed todo rosa vira Instagram de brunch. A marca vive no intervalo — e o intervalo é gerado com pouco rosa de fundo e muito rosa de voz. Abaixo, uma rotação saudável para 9 posts: o rosa aparece em 3 dos 9, mas só UM deles é fundo (glass). Funciona como gabarito mental pra planejar a semana.</p>
+
+  <div class="feed-rotation">
+    <div class="feed-tile feed-carbon"><span class="feed-tile-tag">CARBON</span></div>
+    <div class="feed-tile feed-daylight"><span class="feed-tile-tag">DAYLIGHT</span></div>
+    <div class="feed-tile feed-carbon" style="position:relative"><span class="feed-tile-tag" style="color:var(--bloom-mid)">CARBON +<br>BLOOM TXT</span></div>
+    <div class="feed-tile feed-chrome"><span class="feed-tile-tag">CHROME</span></div>
+    <div class="feed-tile feed-carbon"><span class="feed-tile-tag">CARBON</span></div>
+    <div class="feed-tile feed-acid"><span class="feed-tile-tag">ACID</span></div>
+    <div class="feed-tile feed-daylight" style="position:relative"><span class="feed-tile-tag" style="color:var(--bloom-deep)">DAYLIGHT +<br>BLOOM TXT</span></div>
+    <div class="feed-tile feed-bloom"><span class="feed-tile-tag">BLOOM<br>(GLASS)</span></div>
+    <div class="feed-tile feed-carbon"><span class="feed-tile-tag">CARBON</span></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Frequência ideal (a cada 9 posts)</th><th>%</th><th>Função no feed</th></tr></thead>
+    <tbody>
+      <tr><td>Carbon</td><td><code>44%</code></td><td>Âncora da marca — drops, performance, manifesto, base default</td></tr>
+      <tr><td>Daylight</td><td><code>22%</code></td><td>Argumentação, comparativos, editorial, institucional</td></tr>
+      <tr><td>Bloom como texto</td><td><code>~20%</code></td><td>Rosa entra em palavra, pill, filete — sobre Carbon ou Daylight. Não conta como ambiente próprio no grid, mas deve estar presente em ~2 de 9 posts</td></tr>
+      <tr><td>Bloom como campo (glass)</td><td><code>≤11%</code></td><td>Único caso: story/post com fotografia forte + glass card. 1 a cada 9 no máximo</td></tr>
+      <tr><td>Chrome</td><td><code>11%</code></td><td>Origem, bastidor, técnico, "como funciona"</td></tr>
+      <tr><td>Acid (campo)</td><td><code>≤11%</code></td><td>Hero raro — drop, countdown, manifesto pilar</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 08 — MIXING -->
+<section id="mixing">
+  <span class="section-num">— 08 / Mixing &amp; Transitions</span>
+  <h2 class="section-title">Como os<br>climas falam.</h2>
+  <p class="section-intro">Regras de transição — a gente alterna climas entre peças, não dentro. Dentro de um carrossel, pode trocar entre slides. Entre post e story, pode mudar. Dentro do mesmo frame, nunca.</p>
+
+  <table>
+    <thead><tr><th>Transição</th><th>Funciona?</th><th>Quando</th></tr></thead>
+    <tbody>
+      <tr><td>Carbon → Carbon + Bloom text</td><td><code style="color:#80E270">OK</code></td><td>Variação sutil dentro do mesmo clima escuro — rosa na palavra aquece sem quebrar.</td></tr>
+      <tr><td>Daylight → Daylight + Bloom text</td><td><code style="color:#80E270">OK</code></td><td>Editorial com rosa acentuando dado ou cultura. Respiro sem virar brunch.</td></tr>
+      <tr><td>Carbon → Chrome</td><td><code style="color:#80E270">OK</code></td><td>Do drop pro "como chega" — explicação técnica depois da chamada.</td></tr>
+      <tr><td>Daylight → Acid</td><td><code style="color:#80E270">OK</code></td><td>Argumentação editorial levando ao hero de drop. Clássico rising action.</td></tr>
+      <tr><td>Carbon → Bloom glass</td><td><code style="color:#80E270">OK</code></td><td>Do manifesto pro creator/lifestyle com fotografia. Único caso de Bloom como campo.</td></tr>
+      <tr><td>Bloom glass → Chrome</td><td><code style="color:#ffb84d">EVITAR</code></td><td>Mudança de temperatura brusca. Passar por Carbon ou Daylight entre elas.</td></tr>
+      <tr><td>Bloom glass → Acid</td><td><code style="color:#ffb84d">EVITAR</code></td><td>Dois campos saturados em sequência cansam. Intercalar neutro.</td></tr>
+      <tr><td>Bloom glass 2x seguido</td><td><code style="color:#ff6b6b">NUNCA</code></td><td>Rosa como campo tem que ser raro. Dois seguidos e a marca vira editorial de beleza.</td></tr>
+      <tr><td>Acid → Acid</td><td><code style="color:#ff6b6b">NUNCA</code></td><td>Quebra a regra da raridade. Acid dois posts seguidos = acid desbota.</td></tr>
+      <tr><td>Dentro do frame</td><td><code style="color:#ff6b6b">NUNCA</code></td><td>Um post tem UM ambiente. Sempre.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 09 — TOKENS COMPLETOS -->
+<section id="tokens">
+  <span class="section-num">— 09 / Full Token Table</span>
+  <h2 class="section-title">Tokens<br>completos.</h2>
+  <p class="section-intro">Copiável para Figma, CSS, ou design system. Nomes, hex, função. Base + todos os novos ambientes em um lugar.</p>
+
+  <table>
+    <thead><tr><th>Token</th><th>Hex</th><th>Ambiente</th><th>Função</th></tr></thead>
+    <tbody>
+      <tr><td>carbon</td><td><code>#0D0D0D</code></td><td>Carbon / Daylight-ink / Acid-ink</td><td>Campo escuro, texto em claros</td></tr>
+      <tr><td>bone</td><td><code>#F2EFE9</code></td><td>Daylight / Carbon-ink</td><td>Campo claro, texto em escuros</td></tr>
+      <tr><td>acid</td><td><code>#CBF23D</code></td><td>Todos (frequência)</td><td>Sinal, hero raro</td></tr>
+      <tr><td>press</td><td><code>#8CA62D</code></td><td>Daylight / Acid</td><td>Acid dimmed p/ fundos claros</td></tr>
+      <tr><td>slate</td><td><code>#A6A4A1</code></td><td>Todos (muted)</td><td>Metadata, subtexto</td></tr>
+      <tr><td>bloom-field</td><td><code>#F5DEE0</code></td><td>Bloom</td><td>Gradiente claro do pink</td></tr>
+      <tr><td>bloom-mid</td><td><code>#E8B5BD</code></td><td>Bloom</td><td>Pink médio, corpo do gradiente</td></tr>
+      <tr><td>bloom-deep</td><td><code>#B97580</code></td><td>Bloom</td><td>Sombra/profundidade</td></tr>
+      <tr><td>peach</td><td><code>#FBDFC5</code></td><td>Bloom</td><td>Highlight quente, glow</td></tr>
+      <tr><td>bloom-ink</td><td><code>#2A1418</code></td><td>Bloom</td><td>Texto escuro sobre rosa</td></tr>
+      <tr><td>chrome-deep</td><td><code>#141D26</code></td><td>Chrome</td><td>Campo escuro azul</td></tr>
+      <tr><td>chrome-mid</td><td><code>#2A3845</code></td><td>Chrome</td><td>Gunmetal, gradiente</td></tr>
+      <tr><td>chrome-light</td><td><code>#8FA5B5</code></td><td>Chrome</td><td>Prata metálico, detalhe</td></tr>
+      <tr><td>chrome-ink</td><td><code>#E8ECF0</code></td><td>Chrome</td><td>Texto claro com tinta aço</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="cta-label">— Next</div>
+  <div class="cta-title">Da cor pro<br>calendário.</div>
+  <div class="cta-sub">Próximo passo sugerido: montar calendário editorial de lançamento (17–21 abril) já mapeando qual ambiente vai em cada peça. Isso faz a rotação virar plano, não improviso.</div>
+</div>
+
+</div>
+
+<footer>
+  Gene Sneakers · Color Environments v1.1 · Bloom recalibrado (text-first) · Companion to Gene Code v1 · <a href="#">2026-04-19</a>
+</footer>
+
+</body>
+</html>

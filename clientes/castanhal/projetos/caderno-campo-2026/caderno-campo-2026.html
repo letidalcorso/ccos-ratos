@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Caderno de Campo 2026 — Castanhal</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --vd:#2C5F1A; --lm:#7FB832; --bg:#F4F0E6;
+  --br:#8B6035; --wh:#FFF; --bk:#1A1A1A;
+  --gy:#777; --rd:#C0392B; --lv:#D6EAAA;
+}
+body { font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:#888; }
+.page {
+  width:210mm; height:297mm; background:var(--bg);
+  margin:6mm auto; position:relative; overflow:hidden;
+  page-break-after:always; break-after:page;
+  display:flex; flex-direction:column;
+}
+@media print {
+  body { background:white; }
+  .page { margin:0; }
+  @page { size:A4; margin:0; }
+}
+
+/* CAPA */
+.pg-capa { background:var(--vd); }
+.capa-img {
+  width:100%; height:175mm; flex-shrink:0;
+  background:linear-gradient(150deg,#6aaa3a 0%,#3e7a20 45%,#1d4410 100%);
+  position:relative; display:flex; align-items:center; justify-content:center;
+}
+.capa-img::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:50mm;
+  background:linear-gradient(to bottom,transparent,var(--vd));
+}
+.capa-img-hint { position:relative; z-index:1; color:rgba(255,255,255,.2); font-size:8pt; font-style:italic; text-align:center; }
+.capa-body { flex:1; padding:7mm 16mm 12mm; display:flex; flex-direction:column; justify-content:space-between; }
+.capa-label { font-size:7pt; font-weight:700; letter-spacing:3.5px; text-transform:uppercase; color:var(--lm); margin-bottom:2mm; }
+.capa-h1 { font-size:36pt; font-weight:900; color:#fff; line-height:1.0; }
+.capa-h1 span { color:var(--lm); }
+.capa-bar { width:30mm; height:3px; background:var(--lm); margin:5mm 0; }
+.capa-contato { font-size:8.5pt; color:rgba(255,255,255,.6); line-height:1.8; }
+.capa-contato strong { color:#fff; }
+
+/* HEADER */
+.pg-head { background:var(--vd); padding:5mm 14mm; display:flex; align-items:baseline; gap:3mm; flex-shrink:0; }
+.ph-mes { font-size:24pt; font-weight:900; color:#fff; letter-spacing:1.5px; }
+.ph-ano { font-size:10pt; font-weight:700; color:var(--lm); }
+
+/* BODY */
+.pg-body { flex:1; padding:5mm 14mm 4mm; display:flex; flex-direction:column; overflow:hidden; }
+
+/* CALENDÁRIO */
+.cal-section { margin-bottom:3.5mm; flex-shrink:0; }
+table.cal { width:100%; border-collapse:collapse; border:1px solid #ccc; }
+table.cal th { background:var(--lv); color:var(--vd); font-size:7pt; font-weight:800; text-align:center; padding:2mm 0; border:1px solid #c8dfa0; letter-spacing:.5px; }
+table.cal td { background:white; text-align:center; font-size:9pt; padding:1.5mm 0; border:.5px solid #e0e0e0; width:14.28%; height:8.5mm; vertical-align:middle; }
+table.cal td.vz { background:var(--bg); }
+table.cal td.dm { color:var(--rd); }
+table.cal td.fe { color:var(--rd); font-weight:800; }
+table.cal td.sa { color:#999; }
+.moon-s { display:block; font-size:5.5pt; line-height:1; margin-top:.5mm; color:#444; }
+
+/* MOON LEGEND */
+.moon-leg { display:flex; gap:4mm; align-items:center; background:white; border:1px solid #ddd; padding:2mm 4mm; border-radius:1.5mm; margin-bottom:3.5mm; flex-shrink:0; }
+.ml-item { display:flex; align-items:center; gap:1.5mm; font-size:7pt; color:var(--bk); white-space:nowrap; }
+.ml-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+.ml-nova { background:#1a1a1a; }
+.ml-cres { background:var(--lm); }
+.ml-chei { background:white; border:2px solid #1a1a1a; }
+.ml-ming { background:#bbb; border:1px solid #888; }
+
+/* COLUNAS CONTEÚDO */
+.content-cols { display:grid; grid-template-columns:52mm 1fr; gap:4mm; flex:1; overflow:hidden; }
+.foto-area { display:flex; flex-direction:column; }
+.foto-box { background:var(--lv); border:1.5px dashed var(--lm); border-radius:2mm; flex:1; display:flex; align-items:center; justify-content:center; text-align:center; color:var(--vd); font-size:7.5pt; font-style:italic; line-height:1.5; padding:4mm; }
+.tasks-area { display:flex; flex-direction:column; gap:3mm; overflow:hidden; }
+.sbox { background:white; border-radius:1.5mm; border:1px solid #ddd; border-left:3.5px solid var(--lm); overflow:hidden; display:flex; flex-direction:column; }
+.sbox.f1 { flex:1; overflow:hidden; }
+.sbox-title { background:var(--lv); color:var(--vd); font-size:6.5pt; font-weight:800; text-transform:uppercase; letter-spacing:1.5px; padding:1.5mm 3.5mm; flex-shrink:0; }
+.sbox-list { list-style:none; padding:1.5mm 3.5mm 2mm; overflow:hidden; }
+.sbox-list li { font-size:7.8pt; line-height:1.45; padding:1mm 0 1mm 4mm; border-bottom:.5px solid #f0f0f0; color:var(--bk); position:relative; }
+.sbox-list li:last-child { border-bottom:none; }
+.sbox-list li::before { content:'—'; position:absolute; left:0; color:var(--lm); font-size:7pt; top:1.2mm; }
+.sbox-list.dicas li::before { content:'•'; color:var(--br); }
+.sbox-list li em { font-size:7pt; color:var(--gy); font-style:italic; display:block; }
+
+/* FOOTER */
+.pg-foot { flex-shrink:0; margin-top:2.5mm; padding-top:2mm; border-top:.5px solid #ccc; display:flex; justify-content:space-between; align-items:center; font-size:6pt; color:var(--gy); }
+.pg-foot strong { color:var(--vd); }
+
+/* ANUAL */
+.anual-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3.5mm; flex:1; overflow:hidden; }
+.mini-cal { background:white; border-radius:1.5mm; border:1px solid #ccc; overflow:hidden; display:flex; flex-direction:column; }
+.mini-head { background:var(--vd); color:white; text-align:center; font-size:7.5pt; font-weight:800; text-transform:uppercase; letter-spacing:.5px; padding:1.5mm 0; flex-shrink:0; }
+.mini-grid { display:grid; grid-template-columns:repeat(7,1fr); flex:1; }
+.mini-grid .mh { background:var(--lv); color:var(--vd); font-size:5pt; font-weight:700; text-align:center; padding:1px 0; }
+.mini-grid .md { text-align:center; font-size:5.8pt; padding:2px 0; color:var(--bk); }
+.mini-grid .md.me { color:transparent; background:#fafafa; }
+.mini-grid .md.mfe { color:var(--rd); font-weight:800; }
+.mini-grid .md.mdo { color:var(--rd); }
+.mini-grid .md.msa { color:#999; }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="page pg-capa">
+  <div class="capa-img">
+    <span class="capa-img-hint">foto: trabalhador sorrindo<br>segurando feixes da planta</span>
+  </div>
+  <div class="capa-body">
+    <div>
+      <div class="capa-label">Guia de Campo</div>
+      <div class="capa-h1">CADERNO<br>DE CAMPO<br><span>2026</span></div>
+      <div class="capa-bar"></div>
+    </div>
+    <div class="capa-contato">
+      Fale com um representante da Castanhal no Pará:<br>
+      <strong>Robson (91) 98409.9971</strong>
+    </div>
+  </div>
+</div>
+
+<!-- CALENDÁRIO ANUAL -->
+<div class="page">
+  <div class="pg-head">
+    <div class="ph-mes">CALENDÁRIO ANUAL</div>
+    <div class="ph-ano">2026</div>
+  </div>
+  <div class="pg-body">
+    <div class="anual-grid" id="anual-grid"></div>
+    <div class="pg-foot">
+      <span><strong>Feriados nacionais:</strong> 1 jan · 17 fev · 3 abr · 21 abr · 1 mai · 4 jun · 7 set · 12 out · 2, 15, 20 nov · 25 dez</span>
+      <span><strong>Robson (91) 98409.9971</strong></span>
+    </div>
+  </div>
+</div>
+
+<!-- MESES -->
+<div id="months-container"></div>
+
+<script>
+const DS = ['D','S','T','Q','Q','S','S'];
+const MNS = ['JANEIRO','FEVEREIRO','MARÇO','ABRIL','MAIO','JUNHO','JULHO','AGOSTO','SETEMBRO','OUTUBRO','NOVEMBRO','DEZEMBRO'];
+const MNS_S = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+
+// start: 0=Dom,1=Seg,2=Ter,3=Qua,4=Qui,5=Sex,6=Sáb
+const MONTHS = [
+  { days:31, start:4, hol:[1],     moon:{ch:[3],mn:[10],nv:[18],cr:[26]},
+    photo:'mãos com sementes',
+    tasks:['Marcar a área de plantio (espaçamento: 2m entre linhas × 50cm entre plantas)','Plantar as sementes','Verificar a germinação','Monitorar o ataque de pragas, como formigas cortadeiras'],
+    note:'Quebra de dormência: sementes em água quente (60–70°C) por 30 segundos na noite anterior. Aguarde secar para plantar.',
+    dicas:['Evite plantar em solo muito úmido','Prepare canteiro de mudas para reposição','Sempre consulte um técnico se tiver dúvidas'] },
+  { days:28, start:0, hol:[17],    moon:{ch:[1],mn:[9],nv:[17],cr:[24]},
+    photo:'homem capinando',
+    tasks:['Capinar 60 cm ao redor das plantas','Desbaste, deixando apenas 2 por cova','Verificar as falhas e replantar, se necessário','Fazer a primeira adubação conforme orientação técnica','Monitorar pragas, principalmente formigas cortadeiras'],
+    dicas:['Use mudas do desbaste ou do canteiro para o replantio','Sempre consulte um técnico se tiver dúvidas'] },
+  { days:31, start:0, hol:[],      moon:{ch:[3],mn:[11],nv:[18],cr:[25]},
+    photo:'planta jovem no solo',
+    tasks:['Roçar as entrelinhas','Realizar a segunda capina, se necessário','Acompanhar o desenvolvimento das plantas','Adubação complementar nas mudas replantadas, se necessário','Monitorar o ataque de pragas'],
+    dicas:['Em áreas com muito capim, faça a capina para evitar competição','Sempre consulte um técnico se tiver dúvidas'] },
+  { days:30, start:3, hol:[3,21],  moon:{ch:[1],mn:[10],nv:[17],cr:[23]},
+    photo:'trator roçando entrelinhas',
+    tasks:['Roçar as entrelinhas, se necessário','Monitorar pragas, como formigas cortadeiras','Fazer a poda de formação das plantas'],
+    dicas:['Controle o capim para manter a área limpa','Sempre consulte um técnico se tiver dúvidas'] },
+  { days:31, start:5, hol:[1],     moon:{ch:[1,31],mn:[9],nv:[16],cr:[23]},
+    photo:'mulher vistoriando plantação',
+    tasks:['Fazer a poda de formação das plantas','Aplicar a adubação de floração (segunda adubação)','Roçar as entrelinhas, se necessário','Verificar o desenvolvimento das plantas','Monitorar pragas, principalmente formigas cortadeiras'],
+    dicas:[] },
+  { days:30, start:1, hol:[4],     moon:{ch:[29],mn:[8],nv:[14],cr:[21]},
+    photo:'flor da planta (rosa)',
+    tasks:['Acompanhar o desenvolvimento das plantas','Roçar as entrelinhas, se necessário','Monitorar pragas e controlar formigas cortadeiras','Acompanhar a floração das plantas'],
+    dicas:[] },
+  { days:31, start:3, hol:[],      moon:{ch:[29],mn:[7],nv:[14],cr:[21]},
+    photo:'plantas com frutos secos',
+    tasks:['Acompanhar a floração das plantas','Roçar as entrelinhas antes da colheita, se necessário','Estimar o início da colheita','Monitorar pragas e controlar formigas'],
+    dicas:[] },
+  { days:31, start:6, hol:[],      moon:{ch:[28],mn:[5],nv:[12],cr:[19]},
+    photo:'plantação densa com frutos vermelhos',
+    tasks:['Verificar o desenvolvimento das plantas e a formação dos carrapichos','Observar o ponto de entrada para a colheita','Monitorar pragas e controlar formigas','Limpar os aceiros para facilitar a colheita (passagem da lona)'],
+    note:'Ideal: 70% de maturação',
+    dicas:[] },
+  { days:30, start:2, hol:[7],     moon:{ch:[26],mn:[4],nv:[11],cr:[18]},
+    photo:'dois trabalhadores com lona na colheita',
+    tasks:['Observar a maturação dos carrapichos','Começar a colheita pelas partes mais secas','Limpar os aceiros para facilitar a colheita'],
+    dicas:[] },
+  { days:31, start:4, hol:[12],    moon:{ch:[26],mn:[3],nv:[10],cr:[18]},
+    photo:'dois trabalhadores colhendo com proteção laranja',
+    tasks:['Continuar observando a maturação dos carrapichos','Colher as partes mais secas primeiro','Limpar os aceiros para facilitar a colheita'],
+    dicas:[] },
+  { days:30, start:0, hol:[2,15,20],moon:{ch:[24],mn:[1],nv:[9],cr:[17]},
+    photo:'trator preparando solo',
+    tasks:['Preparar a área para o próximo plantio','Colocar calcário no solo','Monitorar e controlar formigas cortadeiras'],
+    dicas:[] },
+  { days:31, start:2, hol:[25],    moon:{ch:[23],mn:[1,30],nv:[8],cr:[17]},
+    photo:'trator arando o campo',
+    tasks:['Continuar o preparo da área','Colocar calcário no solo','Monitorar e controlar formigas cortadeiras'],
+    dicas:[] }
+];
+
+function moonMark(day, moon) {
+  const marks = [];
+  if (moon.ch && moon.ch.includes(day)) marks.push('○');
+  if (moon.mn && moon.mn.includes(day)) marks.push('◑');
+  if (moon.nv && moon.nv.includes(day)) marks.push('●');
+  if (moon.cr && moon.cr.includes(day)) marks.push('◐');
+  return marks.length ? `<span class="moon-s">${marks.join('')}</span>` : '';
+}
+
+function buildCal(m) {
+  let h = '<div class="cal-section"><table class="cal"><thead><tr>';
+  DS.forEach(d => h += `<th>${d}</th>`);
+  h += '</tr></thead><tbody><tr>';
+  for (let e = 0; e < m.start; e++) h += '<td class="vz"></td>';
+  let col = m.start;
+  for (let day = 1; day <= m.days; day++) {
+    const isH = m.hol.includes(day);
+    const cls = isH ? 'fe' : col === 0 ? 'dm' : col === 6 ? 'sa' : '';
+    h += `<td${cls?' class="'+cls+'"':''}>` + day + moonMark(day, m.moon) + '</td>';
+    col++;
+    if (col > 6) { col = 0; if (day < m.days) h += '</tr><tr>'; }
+  }
+  if (col > 0) for (let e = col; e <= 6; e++) h += '<td class="vz"></td>';
+  h += '</tr></tbody></table></div>';
+  return h;
+}
+
+function buildMiniCal(m, i) {
+  let h = `<div class="mini-cal"><div class="mini-head">${MNS_S[i]}</div><div class="mini-grid">`;
+  DS.forEach(d => h += `<div class="mh">${d}</div>`);
+  for (let e = 0; e < m.start; e++) h += '<div class="md me">·</div>';
+  let col = m.start;
+  for (let day = 1; day <= m.days; day++) {
+    const isH = m.hol.includes(day);
+    const cls = isH ? 'mfe' : col === 0 ? 'mdo' : col === 6 ? 'msa' : '';
+    h += `<div class="md${cls?' '+cls:''}">${day}</div>`;
+    col++; if (col > 6) col = 0;
+  }
+  if (col > 0) for (let e = col; e <= 6; e++) h += '<div class="md me">·</div>';
+  h += '</div></div>';
+  return h;
+}
+
+function buildMonthPage(m, i) {
+  const hasDicas = m.dicas && m.dicas.length > 0;
+  const hasNote = m.note;
+  let tasks = '<ul class="sbox-list">' + m.tasks.map(t => `<li>${t}</li>`).join('');
+  if (hasNote) tasks += `<li><em>${m.note}</em></li>`;
+  tasks += '</ul>';
+  const dicas = hasDicas ? '<ul class="sbox-list dicas">' + m.dicas.map(d => `<li>${d}</li>`).join('') + '</ul>' : '';
+
+  return `<div class="page">
+  <div class="pg-head"><div class="ph-mes">${MNS[i]}</div><div class="ph-ano">2026</div></div>
+  <div class="pg-body">
+    ${buildCal(m)}
+    <div class="moon-leg">
+      <div class="ml-item"><div class="ml-dot ml-nova"></div>● Nova</div>
+      <div class="ml-item"><div class="ml-dot ml-cres"></div>◐ Crescente</div>
+      <div class="ml-item"><div class="ml-dot ml-chei"></div>○ Cheia</div>
+      <div class="ml-item"><div class="ml-dot ml-ming"></div>◑ Minguante</div>
+    </div>
+    <div class="content-cols">
+      <div class="foto-area"><div class="foto-box">foto:<br>${m.photo}</div></div>
+      <div class="tasks-area">
+        <div class="sbox f1"><div class="sbox-title">Tarefas do Mês</div>${tasks}</div>
+        ${hasDicas ? `<div class="sbox"><div class="sbox-title">Dicas</div>${dicas}</div>` : ''}
+      </div>
+    </div>
+    <div class="pg-foot"><span><strong>Robson (91) 98409.9971</strong></span><span>Caderno de Campo 2026 — Castanhal</span></div>
+  </div>
+</div>`;
+}
+
+// Render
+const ag = document.getElementById('anual-grid');
+MONTHS.forEach((m, i) => ag.innerHTML += buildMiniCal(m, i));
+
+const mc = document.getElementById('months-container');
+MONTHS.forEach((m, i) => mc.innerHTML += buildMonthPage(m, i));
+</script>
+</body>
+</html>

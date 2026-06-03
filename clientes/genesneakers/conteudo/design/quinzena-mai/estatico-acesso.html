@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Acesso · 03/05</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --carbon: #0D0D0D;
+      --bone:   #F2EFE9;
+      --acid:   #CBF23D;
+      --press:  #8CA62D;
+      --slate:  #A6A4A1;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header  { color: var(--acid); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .subhead { color: #444; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; }
+    .env     { color: var(--press); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+    .wrap  { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .label { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+
+    .slide {
+      width: 270px;
+      height: 338px;
+      background: var(--carbon);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #2a2a2a;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+
+    .tag {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+
+    .headline {
+      position: absolute;
+      top: 66px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 44px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.84;
+      letter-spacing: -1px;
+    }
+    .headline .acid {
+      color: var(--acid);
+    }
+
+    .rule {
+      position: absolute;
+      bottom: 82px; left: 14px; right: 14px;
+      height: 1px; background: #1e1e1e;
+    }
+
+    .sub {
+      position: absolute;
+      bottom: 48px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 8px; color: var(--slate);
+      line-height: 1.6; letter-spacing: 1px;
+      font-style: italic;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 14px; left: 14px; right: 14px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #2a2a2a;
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 16px; color: #1a1a1a;
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Post Estático</div>
+<div class="subhead">03/05 · Takes fortes · 1080×1350px</div>
+<div class="env">/ENV-01 · CARBON</div>
+
+<div class="wrap">
+  <div class="label">estático / takes</div>
+  <div class="slide">
+    <div class="brand">Gene Sneakers</div>
+    <div class="tag">/acesso</div>
+    <div class="headline">
+      A GENE<br>DÁ <span class="acid">ACESSO</span><br>AO QUE<br>NÃO<br>CHEGA<br>AQUI.
+    </div>
+    <div class="rule"></div>
+    <div class="sub">Qual é o tênis dos seus sonhos?</div>
+    <div class="bottom">
+      <div class="cta">Manda mensagem.</div>
+      <div class="logo">Gene</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

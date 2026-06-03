@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <!--
+    Gene Sneakers · Post 02 "ORIGEM — Air Force 1" · Story 9:16
+    Adaptação do feed 4:5: ano sobe pro topo (acima da imagem),
+    nome vira hero central abaixo da imagem, origem desce em 2 linhas.
+    Handle Acid mantém canto inferior direito.
+  -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');
+      .display-bold    { font-family:'Big Shoulders Display','Arial Black',sans-serif; font-weight:700; text-transform:uppercase; }
+      .display-regular { font-family:'Big Shoulders Display','Arial Narrow',sans-serif; font-weight:400; }
+      .mono-r          { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:400; }
+      .mono            { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:500; text-transform:uppercase; }
+    </style>
+    <linearGradient id="fadeToCarbonStory" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A1A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0D0D0D" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ================ CAMPO CARBON TOTAL (base) ================ -->
+  <rect x="0" y="0" width="1080" height="1920" fill="#0D0D0D"/>
+
+  <!-- ================ TIER 1 · ANO NO TOPO ================ -->
+  <text x="72" y="130" class="mono-r" font-size="26" fill="#A6A4A1" letter-spacing="0.08em">1982</text>
+  <!-- Tick Acid discreto do outro lado (pra dar âncora visual, não invade hierarquia) -->
+  <rect x="1008" y="110" width="36" height="3" fill="#C4FF3C"/>
+
+  <!-- ================ ZONA IMAGEM (centro-topo) ================ -->
+  <!-- Base escura da imagem -->
+  <rect x="0" y="180" width="1080" height="1020" fill="#1A1A1A"/>
+
+  <!-- Transição pro Carbon -->
+  <rect x="0" y="1040" width="1080" height="160" fill="url(#fadeToCarbonStory)"/>
+
+  <!-- Moldura tracejada + label -->
+  <rect x="40" y="220" width="1000" height="940" fill="none" stroke="#3A3A3A" stroke-width="1.5" stroke-dasharray="10 10" opacity="0.6"/>
+  <text x="540" y="685" class="mono" font-size="30" fill="#A6A4A1" text-anchor="middle" letter-spacing="0.32em">IMAGE</text>
+  <text x="540" y="725" class="mono-r" font-size="18" fill="#A6A4A1" text-anchor="middle" opacity="0.65">editorial · luz dramática · superfície escura · 9:16</text>
+
+  <!-- ================ TIER 2 · NOME HERO CENTRAL ================ -->
+  <!-- Centralizado horizontalmente, ancorado logo abaixo da imagem -->
+  <text x="540" y="1400" class="display-bold" font-size="180" fill="#F2EFE9" text-anchor="middle" letter-spacing="-5">AIR FORCE 1</text>
+
+  <!-- ================ TIER 3 · LINHA DE ORIGEM (2 linhas, centralizada) ================ -->
+  <text x="540" y="1530" class="display-regular" font-size="56" fill="#F2EFE9" text-anchor="middle">Nike tirou de linha em 1984.</text>
+  <text x="540" y="1590" class="display-regular" font-size="56" fill="#F2EFE9" text-anchor="middle">Três lojistas de Baltimore salvaram.</text>
+
+  <!-- ================ ASSINATURA · canto inferior direito ================ -->
+  <text x="1008" y="1870" class="mono-r" font-size="26" fill="#C4FF3C" text-anchor="end" letter-spacing="0.05em">@gene.sneakers</text>
+</svg>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Reel Dunk Drop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --carbon:  #0D0D0D;
+      --bone:    #F2EFE9;
+      --acid:    #CBF23D;
+      --press:   #8CA62D;
+      --slate:   #A6A4A1;
+      --dim:     #2A2A2A;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header  { color: var(--acid); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .subhead { color: #444; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; }
+    .env     { color: var(--press); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+    .layout  { display: flex; gap: 48px; align-items: flex-start; flex-wrap: wrap; }
+
+    /* ── CAPA (1080×1920 → 216×384 preview) ── */
+    .capa-wrap { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+    .capa-label { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace; }
+    .capa {
+      width: 216px;
+      height: 384px;
+      background: var(--carbon);
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* elementos da capa */
+    .capa-tag {
+      position: absolute;
+      top: 16px; left: 16px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--dim);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .capa-counter {
+      position: absolute;
+      top: 16px; right: 16px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--dim);
+      letter-spacing: 2px;
+    }
+    .capa-drop {
+      position: absolute;
+      top: 72px; left: 16px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .capa-modelo {
+      position: absolute;
+      top: 96px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 72px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.82;
+      letter-spacing: -2px;
+    }
+    .capa-modelo .acid { color: var(--acid); }
+    .capa-divider {
+      position: absolute;
+      bottom: 72px; left: 16px; right: 16px;
+      height: 1px;
+      background: var(--dim);
+    }
+    .capa-bottom {
+      position: absolute;
+      bottom: 16px; left: 16px; right: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .capa-handle {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #333;
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .capa-brand {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 16px; color: var(--bone);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+
+    /* ── STORYBOARD ── */
+    .story-wrap { display: flex; flex-direction: column; gap: 16px; }
+    .story-title { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace; margin-bottom: 4px; }
+    .frames { display: flex; flex-direction: column; gap: 8px; }
+    .frame-row { display: flex; gap: 10px; align-items: center; }
+    .frame-num { font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: #333; letter-spacing: 2px; width: 20px; text-align: right; flex-shrink: 0; }
+    .frame {
+      width: 162px; height: 54px;
+      background: var(--carbon);
+      border: 1px solid #1a1a1a;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 12px;
+      flex-shrink: 0;
+    }
+    .frame-text {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 13px;
+      color: var(--bone);
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.0;
+    }
+    .frame-text .acid { color: var(--acid); }
+    .frame-foto {
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(45deg, #111, #111 3px, #161616 3px, #161616 6px);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .frame-foto span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #333; letter-spacing: 2px; text-transform: uppercase;
+    }
+    .frame-timing {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #333;
+      letter-spacing: 1px;
+    }
+
+    /* frame de CTA — fundo acid */
+    .frame.cta-frame { background: var(--carbon); border-color: #222; }
+    .frame.cta-frame .frame-text { color: var(--bone); }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Reel</div>
+<div class="subhead">Peça 2.3 · Nike Dunk Drop · 1080×1920px capa · storyboard de frames</div>
+<div class="env">/ENV-01 · CARBON — Takes fortes · drop alert</div>
+
+<div class="layout">
+
+  <!-- Capa do Reel -->
+  <div class="capa-wrap">
+    <div class="capa-label">capa / cover</div>
+    <div class="capa">
+      <div class="capa-tag">Gene Sneakers</div>
+      <div class="capa-counter">Reel</div>
+      <div class="capa-drop">/drop alert</div>
+      <div class="capa-modelo">
+        NOVO<br><span class="acid">DUNK.</span><br>SAIU<br>AGORA.
+      </div>
+      <div class="capa-divider"></div>
+      <div class="capa-bottom">
+        <div class="capa-handle">manda mensagem.</div>
+        <div class="capa-brand">Gene</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Storyboard de frames -->
+  <div class="story-wrap">
+    <div class="story-title">storyboard — frames de texto</div>
+    <div class="frames">
+
+      <div class="frame-row">
+        <div class="frame-num">01</div>
+        <div class="frame">
+          <div class="frame-foto"><span>[ foto do dunk ]</span></div>
+        </div>
+        <div class="frame-timing">0–3s</div>
+      </div>
+
+      <div class="frame-row">
+        <div class="frame-num">02</div>
+        <div class="frame">
+          <div class="frame-text">Novo Dunk.<br>Saiu agora.</div>
+        </div>
+        <div class="frame-timing">4–5s</div>
+      </div>
+
+      <div class="frame-row">
+        <div class="frame-num">03</div>
+        <div class="frame">
+          <div class="frame-text">Chega aqui<br>quando?</div>
+        </div>
+        <div class="frame-timing">6–8s</div>
+      </div>
+
+      <div class="frame-row">
+        <div class="frame-num">04</div>
+        <div class="frame">
+          <div class="frame-text">Na <span class="acid">Gene</span><br>tem.</div>
+        </div>
+        <div class="frame-timing">9–11s</div>
+      </div>
+
+      <div class="frame-row">
+        <div class="frame-num">05</div>
+        <div class="frame cta-frame">
+          <div class="frame-text">Encomenda<br>aberta.</div>
+        </div>
+        <div class="frame-timing">12–15s</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

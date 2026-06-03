@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "main": {
+      "type": "produtos-catalog",
+      "blocks": {
+        "iphone-17-pro": {
+          "type": "produto_novo",
+          "settings": {
+            "name": "iPhone 17 Pro",
+            "description": "o mais completo da linha. pra quem quer o melhor iPhone, sem concessão.",
+            "badge": "topo de linha",
+            "featured": true,
+            "whatsapp_message": "quero fazer um pedido do iPhone 17 Pro"
+          }
+        },
+        "iphone-17": {
+          "type": "produto_novo",
+          "settings": {
+            "name": "iPhone 17",
+            "description": "o iPhone do ano. equilibra tudo que importa no dia a dia.",
+            "whatsapp_message": "quero fazer um pedido do iPhone 17"
+          }
+        },
+        "iphone-16": {
+          "type": "produto_novo",
+          "settings": {
+            "name": "iPhone 16",
+            "description": "geração anterior, performance de sobra. o melhor custo-benefício da loja.",
+            "whatsapp_message": "quero fazer um pedido do iPhone 16"
+          }
+        }
+      },
+      "block_order": ["iphone-17-pro", "iphone-17", "iphone-16"],
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

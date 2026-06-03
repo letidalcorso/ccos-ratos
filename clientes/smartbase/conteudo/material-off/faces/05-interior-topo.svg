@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 924" width="1056" height="924">
+  <!-- INTERIOR TOPO — 264×231mm | Azul #3E82F7 | contato visível ao abrir -->
+  <!-- Layout: @smartbase.br (esq) | linha | (54) 9 9662.4494 (dir) — topo -->
+
+  <rect width="1056" height="924" fill="#3E82F7"/>
+
+  <!-- @smartbase.br — esquerda, topo -->
+  <text x="80" y="134"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="28" font-weight="400" letter-spacing="-0.3"
+    fill="white">@smartbase.br</text>
+
+  <!-- Divisor vertical central -->
+  <line x1="528" y1="96" x2="528" y2="168" stroke="white" stroke-width="1" opacity="0.30"/>
+
+  <!-- (54) 9 9662.4494 — direita, topo -->
+  <text x="976" y="134" text-anchor="end"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="28" font-weight="400" letter-spacing="-0.3"
+    fill="white">(54) 9 9662.4494</text>
+
+</svg>

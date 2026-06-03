@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Big decorative cut-off "10%" bottom-right -->
+  <text x="1280" y="1340" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="600" font-weight="800" text-anchor="end" opacity="0.12">10%</text>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">4/7</text>
+
+  <!-- Title -->
+  <text x="80" y="380" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="92" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">Ciudad del Este =</tspan>
+    <tspan x="80" dy="108" fill="#2DFF8B">10% do PIB</tspan>
+    <tspan x="80" dy="108">do Paraguai.</tspan>
+  </text>
+
+  <!-- Sub -->
+  <text x="80" y="820" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.9">
+    <tspan x="80" dy="0">zonas francas movimentaram US$ 3 bilhões em 2024.</tspan>
+    <tspan x="80" dy="46">cresceram 12% no ano.</tspan>
+  </text>
+
+  <!-- Cinza twist -->
+  <text x="80" y="980" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="500" opacity="0.55">
+    <tspan x="80" dy="0">não é mercado paralelo.</tspan>
+    <tspan x="80" dy="42">é o coração da economia oficial.</tspan>
+  </text>
+
+  <!-- Footnote -->
+  <text x="80" y="1190" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" font-weight="400" opacity="0.4">fonte: Ministério da Indústria e Comércio do Paraguay, 2024</text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Big decorative cut-off "%" bottom-right -->
+  <text x="1200" y="1380" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="900" font-weight="700" text-anchor="end" opacity="1">%</text>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">3/7</text>
+
+  <!-- Title -->
+  <text x="80" y="450" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="104" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">cresceu 6,6%</tspan>
+    <tspan x="80" dy="118" fill="#2DFF8B">em 2025.</tspan>
+  </text>
+
+  <!-- Sub -->
+  <text x="80" y="780" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.9">
+    <tspan x="80" dy="0">quase o triplo do Brasil (2,3%).</tspan>
+    <tspan x="80" dy="46">a economia que mais cresce na América do Sul.</tspan>
+  </text>
+
+  <!-- Cinza line -->
+  <text x="80" y="950" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400" opacity="0.5">
+    <tspan x="80" dy="0">inflação de 3,1%. déficit fiscal controlado.</tspan>
+  </text>
+
+  <!-- Footnote -->
+  <text x="80" y="1190" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" font-weight="400" opacity="0.4">fonte: Banco Central do Paraguay, FMI, Q3 2025</text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

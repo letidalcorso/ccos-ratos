@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Big decorative "sb" bottom-right cut off -->
+  <text x="1240" y="1380" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="780" font-weight="700" letter-spacing="-30" text-anchor="end" opacity="0.08">sb</text>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">8/8</text>
+
+  <!-- Title -->
+  <text x="80" y="440" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="100" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">manda o</tspan>
+    <tspan x="80" dy="115">modelo no</tspan>
+    <tspan x="80" dy="115" fill="#2DFF8B">whats.</tspan>
+  </text>
+
+  <!-- Sub -->
+  <text x="80" y="800" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.85">a gente responde rápido. sem enrolação.</text>
+
+  <!-- WhatsApp button -->
+  <rect x="80" y="900" width="500" height="100" rx="50" fill="#2DFF8B"/>
+  <text x="330" y="962" fill="#000000" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="600" text-anchor="middle">falar no WhatsApp →</text>
+
+  <!-- Reminder -->
+  <text x="80" y="1080" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" opacity="0.55">você paga só quando o iPhone tá na sua mão. sempre.</text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

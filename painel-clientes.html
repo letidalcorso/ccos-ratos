@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solz Lab — Painel de Clientes</title>
+  <style>
+    :root {
+      --black:  #080808;
+      --bone:   #F3EFE6;
+      --mid:    #1a1a1a;
+      --border: #2a2a2a;
+      --gray:   #3C3C3C;
+      --lime:   #C4FF3C;
+      --red:    #FF3C3C;
+      --blue:   #3C7BFF;
+      --done-bg:   #0f1a00;
+      --done-text: #6b8c1e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--black);
+      color: var(--bone);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      padding: 0 0 80px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 48px 40px 32px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .brand-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .brand-sub {
+      font-size: 11px;
+      color: var(--lime);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .header-date {
+      font-size: 11px;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── SUMMARY BAR ── */
+    .summary {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .summary-item {
+      flex: 1;
+      padding: 20px 32px;
+      border-right: 1px solid var(--border);
+    }
+    .summary-item:last-child { border-right: none; }
+    .summary-num {
+      font-size: 36px;
+      font-weight: 900;
+      color: var(--lime);
+      line-height: 1;
+    }
+    .summary-label {
+      font-size: 10px;
+      color: var(--gray);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 40px 0;
+    }
+
+    /* ── CLIENT CARD ── */
+    .client-card {
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .client-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--mid);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .client-header:hover { background: #222; }
+
+    .client-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .client-type {
+      font-size: 11px;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+    }
+
+    .status-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+    .status-urgente  { background: var(--red);  color: #fff; }
+    .status-ativo    { background: var(--lime); color: var(--black); }
+    .status-dev      { background: var(--blue); color: #fff; }
+    .status-demanda  { background: var(--border); color: var(--bone); }
+    .status-parceria { background: #2e005e; color: #c084fc; }
+
+    .client-fee {
+      margin-left: auto;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bone);
+      letter-spacing: 0.04em;
+    }
+    .client-fee span { color: var(--gray); font-weight: 400; font-size: 11px; }
+
+    /* ── CARD BODY ── */
+    .client-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+
+    .card-col {
+      padding: 20px 24px;
+      border-right: 1px solid var(--border);
+    }
+    .card-col:last-child { border-right: none; }
+
+    .col-title {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 14px;
+    }
+
+    /* tasks inside card */
+    .mini-task {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .mini-task:last-child { border-bottom: none; }
+    .mini-task:hover { opacity: 0.85; }
+
+    .mini-box {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid var(--gray);
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.12s;
+    }
+    .mini-task.done .mini-box {
+      background: var(--lime);
+      border-color: var(--lime);
+    }
+    .mini-check { display: none; color: var(--black); font-size: 9px; font-weight: 900; }
+    .mini-task.done .mini-check { display: block; }
+
+    .mini-text {
+      font-size: 12px;
+      color: var(--bone);
+      line-height: 1.45;
+      transition: color 0.12s;
+    }
+    .mini-task.done .mini-text {
+      color: var(--done-text);
+      text-decoration: line-through;
+    }
+
+    .urgency-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .dot-red    { background: var(--red); }
+    .dot-yellow { background: var(--lime); }
+    .dot-gray   { background: var(--gray); }
+
+    /* scope tags */
+    .scope-item {
+      font-size: 11px;
+      color: var(--gray);
+      padding: 4px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .scope-item:last-child { border-bottom: none; }
+    .scope-item::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gray);
+      flex-shrink: 0;
+    }
+    .scope-item.active { color: var(--bone); }
+    .scope-item.active::before { background: var(--lime); }
+
+    /* notes */
+    .note-text {
+      font-size: 11px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .note-text strong { color: var(--bone); font-weight: 600; }
+
+    @media (max-width: 700px) {
+      .client-body { grid-template-columns: 1fr; }
+      .card-col { border-right: none; border-bottom: 1px solid var(--border); }
+      header { padding: 24px 20px; }
+      .container { padding: 24px 20px 0; }
+      .summary-item { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="brand-name">Solz Lab</div>
+    <div class="brand-sub">Painel de Clientes</div>
+  </div>
+  <div class="header-date" id="current-date"></div>
+</header>
+
+<div class="summary">
+  <div class="summary-item">
+    <div class="summary-num">5</div>
+    <div class="summary-label">Clientes ativos</div>
+  </div>
+  <div class="summary-item">
+    <div class="summary-num" id="total-done">0</div>
+    <div class="summary-label">Tarefas concluídas</div>
+  </div>
+  <div class="summary-item">
+    <div class="summary-num" id="total-pending">0</div>
+    <div class="summary-label">Pendentes</div>
+  </div>
+  <div class="summary-item">
+    <div class="summary-num">R$1k+</div>
+    <div class="summary-label">Fee mensal mínimo</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ══════════ GENESNEAKERS ══════════ -->
+  <div class="client-card">
+    <div class="client-header">
+      <div>
+        <div class="client-name">GeneSneakers</div>
+        <div class="client-type">Importadora D2C · Tênis autênticos</div>
+      </div>
+      <span class="status-badge status-urgente">Urgente</span>
+      <div class="client-fee">Projeto 360 <span>/ fee a definir</span></div>
+    </div>
+    <div class="client-body">
+
+      <div class="card-col">
+        <div class="col-title">Escopo</div>
+        <div class="scope-item active">Instagram orgânico</div>
+        <div class="scope-item active">TikTok</div>
+        <div class="scope-item active">Identidade visual</div>
+        <div class="scope-item">Meta Ads + TikTok Ads</div>
+        <div class="scope-item">Site / one-pager</div>
+        <div class="scope-item">WhatsApp Business</div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Próximas entregas</div>
+        <div class="mini-task done" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">Instagram criado + bio + destaques</div>
+        </div>
+        <div class="mini-task done" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">Copy das 9 peças de conteúdo</div>
+        </div>
+        <div class="mini-task done" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">Design das 3 primeiras peças (SVG)</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-red"></div>
+          <div class="mini-text">Corrigir botão WhatsApp (leva pro pessoal)</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-red"></div>
+          <div class="mini-text">Landing page / one-pager</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">Lançar Instagram + começar a seguir</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">Mensagem automática WhatsApp Business</div>
+        </div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Contexto</div>
+        <p class="note-text">
+          <strong>Status:</strong> Instagram criado, não lançado. Aguardando resolução do WhatsApp e landing page para ir ao ar.<br><br>
+          <strong>Bloqueador principal:</strong> botão do WhatsApp no Instagram aponta para número pessoal.<br><br>
+          <strong>Prioridade:</strong> lançar o quanto antes e iniciar engajamento orgânico.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ SODI ══════════ -->
+  <div class="client-card">
+    <div class="client-header">
+      <div>
+        <div class="client-name">Sodi</div>
+        <div class="client-type">Hub de educação · Atendimento publicitário</div>
+      </div>
+      <span class="status-badge status-parceria">Parceria</span>
+      <div class="client-fee">Por comissão <span>/ Lele + Soi</span></div>
+    </div>
+    <div class="client-body">
+
+      <div class="card-col">
+        <div class="col-title">Escopo</div>
+        <div class="scope-item active">Estratégia de comunidade</div>
+        <div class="scope-item active">Conteúdo Instagram @sodi.hub</div>
+        <div class="scope-item">Lançamento S.O.S Atendi (curso)</div>
+        <div class="scope-item">Grupo no Instagram</div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Próximas entregas</div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">Definir cadência de conteúdo mensal</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">Ativar grupo no Instagram</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">Estruturar funil: seguidores → comunidade → compra</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">Planejamento de lançamento do S.O.S Atendi</div>
+        </div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Contexto</div>
+        <p class="note-text">
+          <strong>Produto:</strong> S.O.S Atendi — curso de atendimento publicitário. 7 módulos + bônus. Em desenvolvimento.<br><br>
+          <strong>Objetivo atual:</strong> construir comunidade antes do lançamento. Fluxo: seguidores → engajamento → compra.<br><br>
+          <strong>Grupo no Instagram:</strong> existe mas não está sendo fomentado.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ FTEMPER ══════════ -->
+  <div class="client-card">
+    <div class="client-header">
+      <div>
+        <div class="client-name">FTemper</div>
+        <div class="client-type">Distribuidora · Esquadrias de alumínio · RS</div>
+      </div>
+      <span class="status-badge status-ativo">Ativo</span>
+      <div class="client-fee">R$500 <span>/ mês</span></div>
+    </div>
+    <div class="client-body">
+
+      <div class="card-col">
+        <div class="col-title">Escopo</div>
+        <div class="scope-item active">6 posts/mês (4 estáticos + 2 carrosséis)</div>
+        <div class="scope-item active">Copy + design</div>
+        <div class="scope-item active">Banners site (sob demanda)</div>
+        <div class="scope-item">Stories e Reels — fora do escopo</div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Próximas entregas</div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">2 posts Autoridade Técnica (maio)</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">2 posts Produto Aplicado (maio)</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">1 post Institucional/Regional (maio)</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">1 post Novidades/Portfólio (maio)</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">PPT de aprovação mensal no Drive</div>
+        </div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Contexto</div>
+        <p class="note-text">
+          <strong>Instagram:</strong> @ftempercomponentes<br><br>
+          <strong>Crescimento:</strong> 1 ano de trabalho, 120 seguidores ganhos. Sem verba além do fee.<br><br>
+          <strong>Público foco:</strong> serralheiros gaúchos.<br><br>
+          <strong>Aprovação:</strong> PPT mensal no Google Drive.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ SMARTBASE ══════════ -->
+  <div class="client-card">
+    <div class="client-header">
+      <div>
+        <div class="client-name">Smartbase</div>
+        <div class="client-type">Loja Apple · iPhones originais · Paraguai</div>
+      </div>
+      <span class="status-badge status-dev">Em desenvolvimento</span>
+      <div class="client-fee">Fee a definir <span>/ mensal</span></div>
+    </div>
+    <div class="client-body">
+
+      <div class="card-col">
+        <div class="col-title">Escopo</div>
+        <div class="scope-item active">Instagram orgânico</div>
+        <div class="scope-item active">Impulsionamento (iniciando)</div>
+        <div class="scope-item">Site Shopify (em desenvolvimento)</div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Próximas entregas</div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-red"></div>
+          <div class="mini-text">Recuperar site Shopify (histórico de revisões do tema)</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">Posts mensais Instagram</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-yellow"></div>
+          <div class="mini-text">PPT de aprovação mensal no Drive</div>
+        </div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">Configurar primeira campanha de impulsionamento</div>
+        </div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Contexto</div>
+        <p class="note-text">
+          <strong>Shopify:</strong> smartbase-2903.myshopify.com — houve perda de dados no tema. Recuperar via histórico de revisões antes de retrabalhar.<br><br>
+          <strong>Aprovação:</strong> PPT mensal no Google Drive.<br><br>
+          <strong>Diferencial:</strong> Apple original com preço mais baixo — posicionamento de confiança e custo-benefício.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════ CASTANHAL ══════════ -->
+  <div class="client-card">
+    <div class="client-header">
+      <div>
+        <div class="client-name">Castanhal</div>
+        <div class="client-type">Cliente sob demanda · Projetos avulsos</div>
+      </div>
+      <span class="status-badge status-demanda">Sob demanda</span>
+      <div class="client-fee">Por projeto <span>/ pontual</span></div>
+    </div>
+    <div class="client-body">
+
+      <div class="card-col">
+        <div class="col-title">Escopo</div>
+        <div class="scope-item active">Stand</div>
+        <div class="scope-item active">Campanhas pontuais</div>
+        <div class="scope-item active">Peças avulsas</div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Próximas entregas</div>
+        <div class="mini-task" onclick="toggleMini(this)">
+          <div class="mini-box"><span class="mini-check">✓</span></div>
+          <div class="urgency-dot dot-gray"></div>
+          <div class="mini-text">Aguardando demanda do cliente</div>
+        </div>
+      </div>
+
+      <div class="card-col">
+        <div class="col-title">Contexto</div>
+        <p class="note-text">
+          Sem escopo fixo. Cada projeto é independente — criar subpasta em <code style="color:var(--lime);font-size:10px;">clientes/castanhal/projetos/</code> ao iniciar.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+  const KEY = 'solzlab-painel-v1';
+
+  function getState() {
+    try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; }
+  }
+  function saveState(s) { localStorage.setItem(KEY, JSON.stringify(s)); }
+  function taskId(el) {
+    const t = el.querySelector('.mini-text')?.textContent?.trim();
+    return t ? btoa(encodeURIComponent(t)).slice(0, 24) : null;
+  }
+
+  function toggleMini(el) {
+    const was = el.classList.contains('done');
+    el.classList.toggle('done', !was);
+    const s = getState(); const id = taskId(el);
+    if (id) { s[id] = !was; saveState(s); }
+    updateSummary();
+  }
+
+  function updateSummary() {
+    const all  = document.querySelectorAll('.mini-task');
+    const done = document.querySelectorAll('.mini-task.done');
+    document.getElementById('total-done').textContent    = done.length;
+    document.getElementById('total-pending').textContent = all.length - done.length;
+  }
+
+  function restore() {
+    const s = getState();
+    document.querySelectorAll('.mini-task').forEach(el => {
+      const id = taskId(el);
+      if (id && s[id] === true)  el.classList.add('done');
+      if (id && s[id] === false) el.classList.remove('done');
+    });
+    updateSummary();
+  }
+
+  // date
+  const d = new Date();
+  document.getElementById('current-date').textContent =
+    d.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+
+  restore();
+</script>
+</body>
+</html>

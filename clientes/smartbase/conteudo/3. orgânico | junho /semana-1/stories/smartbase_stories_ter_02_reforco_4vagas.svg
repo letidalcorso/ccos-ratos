@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <rect width="1080" height="1920" fill="#000000"/>
+
+  <!-- Big "4" decorative -->
+  <text x="540" y="1200" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="900" font-weight="800" text-anchor="middle" opacity="0.08">4</text>
+
+  <!-- Top tag -->
+  <line x1="80" y1="180" x2="130" y2="180" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="188" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="3">OPORTUNIDADE</text>
+
+  <!-- Title -->
+  <text x="80" y="660" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="108" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">tem mala</tspan>
+    <tspan x="80" dy="122">indo pro</tspan>
+    <tspan x="80" dy="122" fill="#2DFF8B">Paraguai</tspan>
+    <tspan x="80" dy="122">quarta.</tspan>
+  </text>
+
+  <!-- Highlight -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="44" font-weight="700">sobram <tspan fill="#2DFF8B">4 vagas</tspan>.</text>
+  <text x="80" y="1340" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="400" opacity="0.7">você só paga quando recebe na mão.</text>
+
+  <!-- CTA box for sticker -->
+  <rect x="80" y="1440" width="920" height="260" rx="20" fill="#1a1a1a" stroke="#2DFF8B" stroke-width="2" stroke-dasharray="8,8"/>
+  <text x="540" y="1515" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle" opacity="0.5">↓ coloque os stickers em cima:</text>
+  <text x="540" y="1570" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="700" text-anchor="middle">"LINK WhatsApp" + "COUNTDOWN até ter 23h"</text>
+  <text x="540" y="1635" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" font-weight="400" text-anchor="middle" opacity="0.5">+ link sticker pro post no feed</text>
+
+  <!-- Footer -->
+  <text x="80" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="44" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1830" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

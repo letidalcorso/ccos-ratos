@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — NB 9060 · Daylight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bone:    #F2EFE9;
+      --carbon:  #0D0D0D;
+      --acid:    #CBF23D;
+      --press:   #8CA62D;
+      --slate:   #A6A4A1;
+      --display: 'Big Shoulders Display', sans-serif;
+      --mono:    'IBM Plex Mono', monospace;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header {
+      color: var(--acid);
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .subheader {
+      color: #444;
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .env {
+      color: var(--press);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .grid {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .label {
+      color: #444;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    /* Preview: 270×338 = proporção 1080×1350 */
+    .slide {
+      width: 270px;
+      height: 338px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .bone { background: var(--bone); }
+    .carbon { background: var(--carbon); }
+
+    /* Placeholder de imagem */
+    .img-zone {
+      position: absolute;
+      background: repeating-linear-gradient(
+        45deg,
+        #1a1a1a,
+        #1a1a1a 4px,
+        #222 4px,
+        #222 8px
+      );
+      border: 1px dashed #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      text-align: center;
+      padding: 12px;
+    }
+    .img-zone .tag  { font-size: 9px;  color: #555; letter-spacing: 2px; text-transform: uppercase; }
+    .img-zone .main { font-size: 10px; color: #444; letter-spacing: 1px; }
+    .img-zone .sub  { font-size: 8px;  color: #3a3a3a; }
+
+    /* Gradiente sobre imagem */
+    .grad-bottom {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, transparent 0%, var(--bone) 55%);
+    }
+    .grad-left {
+      position: absolute;
+      top: 0; bottom: 0; left: 0;
+      background: linear-gradient(to right, var(--bone) 45%, transparent 100%);
+    }
+
+    /* Tipografia */
+    .mono  { font-family: 'IBM Plex Mono', monospace; }
+    .disp  { font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; text-transform: uppercase; }
+
+    .counter { position: absolute; top: 14px; right: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: var(--slate); letter-spacing: 2px; }
+    .brand   { position: absolute; top: 14px; left: 14px;  font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: var(--slate); letter-spacing: 3px; text-transform: uppercase; }
+
+    /* ── Slide 1 ── */
+    .s1-env  { position: absolute; bottom: 98px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: var(--press); letter-spacing: 3px; text-transform: uppercase; }
+    .s1-h1   { position: absolute; bottom: 44px; left: 14px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 52px; color: var(--carbon); text-transform: uppercase; line-height: 0.84; letter-spacing: -1px; }
+    .s1-h1 .acid { color: var(--acid); -webkit-text-stroke: 0.5px var(--press); }
+    .s1-sub  { position: absolute; bottom: 14px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: var(--slate); letter-spacing: 2px; text-transform: uppercase; }
+
+    /* ── Slide 2 ── */
+    .s2-tag  { position: absolute; top: 72px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: var(--press); letter-spacing: 3px; text-transform: uppercase; }
+    .s2-h    { position: absolute; top: 96px; left: 14px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 52px; color: var(--carbon); text-transform: uppercase; line-height: 0.84; }
+    .s2-body { position: absolute; bottom: 28px; left: 14px; right: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: var(--slate); line-height: 1.6; }
+
+    /* ── Slide 3 ── */
+    .s3-lbl  { position: absolute; top: 72px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: var(--slate); letter-spacing: 3px; text-transform: uppercase; }
+    .s3-h    { position: absolute; top: 100px; left: 14px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 40px; color: var(--carbon); text-transform: uppercase; line-height: 0.88; }
+    .s3-h .acid { color: var(--acid); -webkit-text-stroke: 0.5px var(--press); }
+    .s3-div  { position: absolute; bottom: 58px; left: 14px; right: 14px; height: 1px; background: var(--slate); opacity: .4; }
+    .s3-note { position: absolute; bottom: 16px; left: 14px; right: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: var(--slate); line-height: 1.6; }
+
+    /* ── Slide 4 ── */
+    .s4-pill { position: absolute; top: 68px; left: 14px; background: var(--acid); padding: 3px 8px; }
+    .s4-pill span { font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: var(--carbon); letter-spacing: 2px; text-transform: uppercase; }
+    .s4-h    { position: absolute; top: 96px; left: 14px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 48px; color: var(--carbon); text-transform: uppercase; line-height: 0.84; }
+    .s4-det  { position: absolute; bottom: 24px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: var(--slate); letter-spacing: 1px; }
+
+    /* ── Slide 5 ── */
+    .s5-tag  { position: absolute; top: 72px; left: 14px; font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: #2a2a2a; letter-spacing: 3px; text-transform: uppercase; }
+    .s5-h    { position: absolute; top: 94px; left: 14px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 60px; color: var(--bone); text-transform: uppercase; line-height: 0.82; }
+    .s5-h .acid { color: var(--acid); }
+    .s5-bot  { position: absolute; bottom: 14px; left: 14px; right: 14px; display: flex; justify-content: space-between; align-items: flex-end; }
+    .s5-handle { font-family: 'IBM Plex Mono', monospace; font-size: 7px; color: #333; letter-spacing: 2px; text-transform: uppercase; }
+    .s5-logo { font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 18px; color: var(--bone); letter-spacing: 3px; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Carrossel</div>
+<div class="subheader">New Balance 9060 · 5 slides · 1080×1350px por slide</div>
+<div class="env">/ENV-02 · DAYLIGHT — editorial institucional + comercial</div>
+
+<div class="grid">
+
+  <!-- Slide 1 — Capa -->
+  <div class="wrap">
+    <div class="label">01 / capa</div>
+    <div class="slide bone">
+      <!-- Zona de imagem: fundo superior -->
+      <div class="img-zone" style="top:0;left:0;right:0;height:62%;">
+        <div class="tag">[ foto ]</div>
+        <div class="main">9060 em contexto urbano</div>
+        <div class="sub">calçada · concreto · luz lateral</div>
+        <div class="sub">enquadramento: joelho ao chão, 3/4 frontal</div>
+      </div>
+      <!-- Gradiente bone cobrindo parte inferior da foto -->
+      <div class="grad-bottom" style="height:55%;"></div>
+
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">1/5</div>
+      <div class="s1-env">/9060 · ENV-DAYLIGHT</div>
+      <div class="s1-h1">NÃO É<br><span class="acid">TENDÊNCIA.</span></div>
+      <div class="s1-sub">É escolha. — Gene Sneakers</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="wrap">
+    <div class="label">02 / sem imagem</div>
+    <div class="slide bone">
+      <div class="counter">2/5</div>
+      <div class="s2-tag">/lançado 2022 · ainda aqui</div>
+      <div class="s2-h">NUNCA<br>SAIU DO<br>RADAR.</div>
+      <div class="s2-body">Colorways novas todo trimestre —<br>cada uma mais precisa que a anterior.</div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="wrap">
+    <div class="label">03 / sem imagem</div>
+    <div class="slide bone">
+      <div class="counter">3/5</div>
+      <div class="s3-lbl">/permanência</div>
+      <div class="s3-h">USA DAQUI<br>A TRÊS<br>ANOS.<br>AINDA<br><span class="acid">FAZ SENTIDO.</span></div>
+      <div class="s3-div"></div>
+      <div class="s3-note">E você vai querer agora, antes que<br>a sua colorway preferida esgote.</div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="wrap">
+    <div class="label">04 / foto produto</div>
+    <div class="slide bone">
+      <!-- Zona de imagem: metade direita -->
+      <div class="img-zone" style="top:0;right:0;bottom:0;width:55%;">
+        <div class="tag">[ foto ]</div>
+        <div class="main">9060 isolado</div>
+        <div class="sub">3/4 lateral</div>
+        <div class="sub">concreto ou fundo neutro</div>
+      </div>
+      <!-- Gradiente bone da esquerda -->
+      <div class="grad-left" style="width:60%;"></div>
+
+      <div class="counter">4/5</div>
+      <div class="s4-pill"><span>● disponível agora</span></div>
+      <div class="s4-h">A GENE<br>TEM<br>UNI-<br>DADES.</div>
+      <div class="s4-det">Sem encomenda. Sem espera.</div>
+    </div>
+  </div>
+
+  <!-- Slide 5 — CTA -->
+  <div class="wrap">
+    <div class="label">05 / cta · carbon</div>
+    <div class="slide carbon">
+      <div class="counter" style="color:#2a2a2a;">5/5</div>
+      <div class="s5-tag">/próximo passo</div>
+      <div class="s5-h">ESCOLHE<br>O<br><span class="acid">SEU.</span></div>
+      <div class="s5-bot">
+        <div class="s5-handle">Manda mensagem.</div>
+        <div class="s5-logo">Gene</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

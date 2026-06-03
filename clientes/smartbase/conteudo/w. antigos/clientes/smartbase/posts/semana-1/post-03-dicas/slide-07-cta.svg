@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600&amp;display=swap');</style>
+  </defs>
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- Ghost text -->
+  <text x="-20" y="1040" font-family="'Bricolage Grotesque', sans-serif" font-size="700" font-weight="800" fill="#F2F2F6" opacity="0.03">ok</text>
+
+  <rect x="80" y="72" width="130" height="40" rx="20" fill="#0F0F1C" stroke="#6DAFF9" stroke-width="1"/>
+  <text x="145" y="97" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#6DAFF9" text-anchor="middle" letter-spacing="2">DICAS</text>
+  <text x="1000" y="97" font-family="'Inter', sans-serif" font-size="20" fill="#4A4A60" text-anchor="end">7 / 7</text>
+
+  <!-- Headline -->
+  <text x="80" y="240" font-family="'Inter', sans-serif" font-size="26" fill="#4A4A60" letter-spacing="1">VOCÊ APRENDEU</text>
+  <line x1="80" y1="258" x2="1000" y2="258" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- Recap list -->
+  <rect x="80" y="278" width="920" height="72" rx="10" fill="#0F0F1C"/>
+  <rect x="80" y="278" width="4" height="72" fill="#3E82F7"/>
+  <text x="104" y="321" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="700" fill="#3E82F7">01</text>
+  <text x="160" y="321" font-family="'Inter', sans-serif" font-size="28" fill="#F2F2F6">teclado como trackpad</text>
+
+  <rect x="80" y="362" width="920" height="72" rx="10" fill="#121220"/>
+  <rect x="80" y="362" width="4" height="72" fill="#3E82F7"/>
+  <text x="104" y="405" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="700" fill="#3E82F7">02</text>
+  <text x="160" y="405" font-family="'Inter', sans-serif" font-size="28" fill="#F2F2F6">spotlight: busca universal</text>
+
+  <rect x="80" y="446" width="920" height="72" rx="10" fill="#0F0F1C"/>
+  <rect x="80" y="446" width="4" height="72" fill="#3E82F7"/>
+  <text x="104" y="489" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="700" fill="#3E82F7">03</text>
+  <text x="160" y="489" font-family="'Inter', sans-serif" font-size="28" fill="#F2F2F6">back tap: bata nas costas</text>
+
+  <rect x="80" y="530" width="920" height="72" rx="10" fill="#121220"/>
+  <rect x="80" y="530" width="4" height="72" fill="#3E82F7"/>
+  <text x="104" y="573" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="700" fill="#3E82F7">04</text>
+  <text x="160" y="573" font-family="'Inter', sans-serif" font-size="28" fill="#F2F2F6">modo foco personalizável</text>
+
+  <rect x="80" y="614" width="920" height="72" rx="10" fill="#0F0F1C"/>
+  <rect x="80" y="614" width="4" height="72" fill="#3E82F7"/>
+  <text x="104" y="657" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="700" fill="#3E82F7">05</text>
+  <text x="160" y="657" font-family="'Inter', sans-serif" font-size="28" fill="#F2F2F6">qr code pela câmera nativa</text>
+
+  <!-- CTA headline -->
+  <line x1="80" y1="726" x2="1000" y2="726" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="80" y="816" font-family="'Bricolage Grotesque', sans-serif" font-size="100" font-weight="800" fill="#F2F2F6">salva esse</text>
+  <text x="80" y="924" font-family="'Bricolage Grotesque', sans-serif" font-size="100" font-weight="800" fill="#3E82F7">carrossel.</text>
+  <text x="80" y="980" font-family="'Inter', sans-serif" font-size="28" font-weight="300" fill="#7A7A96">para consultar quando precisar.</text>
+
+  <!-- Engagement box -->
+  <rect x="80" y="1020" width="920" height="130" rx="20" fill="#0F0F1C" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="540" y="1074" font-family="'Inter', sans-serif" font-size="28" fill="#C0C0D0" text-anchor="middle">qual dessas 5 você não conhecia?</text>
+  <text x="540" y="1126" font-family="'Bricolage Grotesque', sans-serif" font-size="32" font-weight="700" fill="#3E82F7" text-anchor="middle">comenta aqui embaixo</text>
+
+  <!-- Brand bottom banner -->
+  <rect x="80" y="1190" width="920" height="52" rx="26" fill="#3E82F7"/>
+  <text x="540" y="1224" font-family="'Inter', sans-serif" font-size="22" font-weight="600" fill="#F2F2F6" text-anchor="middle">@smartbase.cxs · sua loja apple em caxias do sul</text>
+
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1A1A2E" stroke-width="1"/>
+  <rect x="80" y="1276" width="96" height="30" rx="15" fill="#0F0F1C"/>
+  <text x="128" y="1297" font-family="'Inter', sans-serif" font-size="13" fill="#3E82F7" text-anchor="middle" font-weight="600">sb</text>
+  <text x="194" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="28" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="22" fill="#4A4A60" text-anchor="end">@smartbase.cxs</text>
+</svg>

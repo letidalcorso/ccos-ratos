@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap');
+      .display { font-family:'Big Shoulders Display','Arial Black',sans-serif; font-weight:900; letter-spacing:-0.01em; text-transform:uppercase; }
+      .mono    { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; }
+      .mono-r  { font-family:'IBM Plex Mono','Menlo',monospace; font-weight:400; letter-spacing:0.12em; }
+    </style>
+  </defs>
+
+  <!-- DAYLIGHT field (Bone) -->
+  <rect width="1080" height="1920" fill="#F2EFE9"/>
+
+  <!-- Top kicker Press simples -->
+  <text x="80" y="260" class="mono" font-size="24" fill="#8CA62D">· lifestyle</text>
+
+  <!-- Editorial headline — "certo" em Bloom deep -->
+  <text x="80" y="720" class="display" font-size="155" fill="#0D0D0D">o tênis</text>
+  <text x="80" y="880" class="display" font-size="155" fill="#B97580">certo</text>
+  <text x="80" y="1040" class="display" font-size="155" fill="#0D0D0D">muda o dia.</text>
+
+  <!-- Bloom filete -->
+  <line x1="80" y1="1160" x2="200" y2="1160" stroke="#B97580" stroke-width="4"/>
+
+  <!-- Subcopy editorial -->
+  <text x="80" y="1260" class="mono-r" font-size="22" fill="#0D0D0D" opacity="0.75">não é sobre o par.</text>
+  <text x="80" y="1300" class="mono-r" font-size="22" fill="#0D0D0D" opacity="0.75">é sobre como você entra na sala.</text>
+
+  <!-- Footer Slate -->
+  <line x1="80" y1="1780" x2="260" y2="1780" stroke="#A6A4A1" stroke-width="1.5"/>
+  <text x="280" y="1788" class="mono-r" font-size="20" fill="#A6A4A1">@gene_sneakers</text>
+</svg>

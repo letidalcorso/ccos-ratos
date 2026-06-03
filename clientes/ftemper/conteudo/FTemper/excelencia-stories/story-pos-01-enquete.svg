@@ -1,0 +1,74 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0.2" y1="0" x2="0.8" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#071830"/>
+    <stop offset="55%"  stop-color="#050F20"/>
+    <stop offset="100%" stop-color="#020608"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="55%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(26,111,192,0.28)"/>
+    <stop offset="100%" stop-color="rgba(26,111,192,0.00)"/>
+  </radialGradient>
+  <linearGradient id="opt-a" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(91,184,240,0.28)"/>
+    <stop offset="100%" stop-color="rgba(91,184,240,0.10)"/>
+  </linearGradient>
+  <linearGradient id="opt-b" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="rgba(255,255,255,0.10)"/>
+    <stop offset="100%" stop-color="rgba(255,255,255,0.04)"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1920" fill="url(#bg)"/>
+<rect width="1080" height="1920" fill="url(#glow)"/>
+<pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+  <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.055)" stroke-width="1.5"/>
+</pattern>
+<rect width="1080" height="1920" fill="url(#dots)"/>
+<polygon points="0,0 300,0 0,300" fill="rgba(91,184,240,0.05)"/>
+<polygon points="1080,1920 780,1920 1080,1620" fill="rgba(91,184,240,0.04)"/>
+
+<!-- Logo -->
+<text x="540" y="130" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="380" y1="150" x2="700" y2="150" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+
+<!-- Story progress (4 stories, 1st active) -->
+<rect x="60"  y="56" width="213" height="8" rx="4" fill="#FFFFFF"/>
+<rect x="283" y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+<rect x="506" y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+<rect x="729" y="56" width="213" height="8" rx="4" fill="rgba(255,255,255,0.22)"/>
+
+<!-- Enquete label pill -->
+<rect x="340" y="196" width="400" height="58" rx="29" fill="rgba(91,184,240,0.14)"/>
+<rect x="340" y="196" width="400" height="58" rx="29" fill="none" stroke="rgba(91,184,240,0.35)" stroke-width="1.5"/>
+<text x="540" y="232" font-family="'Sora', sans-serif" font-weight="700" font-size="24" fill="#5BB8F0" text-anchor="middle" letter-spacing="3">ENQUETE</text>
+
+<!-- Main question -->
+<text x="540" y="460" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">VOCÊ SABIA</text>
+<text x="540" y="580" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">QUE EXISTE</text>
+<text x="540" y="700" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">ESQUADRIA QUE</text>
+<text x="540" y="820" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="116" fill="#5BB8F0" text-anchor="middle" letter-spacing="2">VENTILA FECHADA?</text>
+
+<line x1="160" y1="876" x2="920" y2="876" stroke="rgba(255,255,255,0.14)" stroke-width="1.5"/>
+
+<text x="540" y="944" font-family="'Sora', sans-serif" font-weight="300" font-size="42" fill="rgba(255,255,255,0.60)" text-anchor="middle">Sim — sem abrir nada. O ar passa</text>
+<text x="540" y="996" font-family="'Sora', sans-serif" font-weight="300" font-size="42" fill="rgba(255,255,255,0.60)" text-anchor="middle">pelo perfil mesmo assim.</text>
+
+<!-- Poll options -->
+<rect x="80" y="1080" width="900" height="120" rx="20" fill="url(#opt-a)"/>
+<rect x="80" y="1080" width="900" height="120" rx="20" fill="none" stroke="rgba(91,184,240,0.45)" stroke-width="2"/>
+<text x="540" y="1155" font-family="'Sora', sans-serif" font-weight="700" font-size="52" fill="#FFFFFF" text-anchor="middle">Sabia! 👍</text>
+
+<rect x="80" y="1220" width="900" height="120" rx="20" fill="url(#opt-b)"/>
+<rect x="80" y="1220" width="900" height="120" rx="20" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+<text x="540" y="1295" font-family="'Sora', sans-serif" font-weight="700" font-size="52" fill="rgba(255,255,255,0.80)" text-anchor="middle">Não sabia isso 😮</text>
+
+<!-- Sub text -->
+<text x="540" y="1420" font-family="'Sora', sans-serif" font-weight="300" font-size="36" fill="rgba(255,255,255,0.40)" text-anchor="middle">A Linha Excelência® da Alumiconte</text>
+<text x="540" y="1462" font-family="'Sora', sans-serif" font-weight="300" font-size="36" fill="rgba(255,255,255,0.40)" text-anchor="middle">chegou na FTemper.</text>
+
+<!-- Footer -->
+<text x="540" y="1874" font-family="'Sora', sans-serif" font-weight="700" font-size="32" fill="rgba(255,255,255,0.55)" text-anchor="middle" letter-spacing="5">FTEMPER</text>
+<text x="540" y="1908" font-family="'Sora', sans-serif" font-weight="300" font-size="24" fill="rgba(255,255,255,0.28)" text-anchor="middle">@ftempercomponentes</text>
+</svg>

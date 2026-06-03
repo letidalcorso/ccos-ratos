@@ -1,0 +1,26 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Smartbase",
+    "theme_version": "1.0.0",
+    "theme_author": "Solz Lab",
+    "theme_documentation_url": "https://wa.me/5554996624494",
+    "theme_support_url": "https://wa.me/5554996624494"
+  },
+  {
+    "name": "Configurações gerais",
+    "settings": [
+      {
+        "type": "header",
+        "content": "WhatsApp"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "Número WhatsApp",
+        "info": "Apenas números, com código do país. Ex: 5554999990000",
+        "default": "5554996624494"
+      }
+    ]
+  }
+]

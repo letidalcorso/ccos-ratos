@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <text x="80" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" letter-spacing="3">DECIFRA APPLE</text>
+  <text x="1000" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" text-anchor="end">1/6</text>
+
+  <text x="80" y="460" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="80" font-weight="500" letter-spacing="-2">
+    <tspan x="80" dy="0">produtos Apple</tspan>
+    <tspan x="80" dy="92">originais não</tspan>
+    <tspan x="80" dy="92">mudam quando</tspan>
+    <tspan x="80" dy="92">cruzam a fronteira.</tspan>
+  </text>
+
+  <line x1="80" y1="940" x2="280" y2="940" stroke="#3E82F7" stroke-width="3"/>
+
+  <text x="80" y="1080" fill="#3E82F7" font-family="'Bricolage Grotesque', sans-serif" font-size="120" font-weight="700" letter-spacing="-3">só o preço.</text>
+
+  <text x="80" y="1280" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="36" font-weight="700" letter-spacing="-1">smartbase</text>
+  <text x="1000" y="1280" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

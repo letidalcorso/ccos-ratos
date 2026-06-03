@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smartbase — avalie seu aparelho Apple e descubra quanto vale no trade-in.">
+  <title>Trade-in — Smartbase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── PÁGINA DO FORMULÁRIO ───────────────────────── */
+    .sb-form-page {
+      min-height: 100vh;
+      padding: 80px 0 120px;
+      position: relative;
+    }
+
+    .sb-form-page__bar {
+      position: absolute;
+      left: 0; top: 0;
+      width: 4px; height: 100%;
+      background: var(--blue-primary);
+    }
+
+    .sb-form-page__inner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── COLUNA DE CONTEXTO (esquerda) ────────────── */
+    .sb-form-context {
+      position: sticky;
+      top: 96px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sb-form-context__headline {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .sb-form-context__sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .sb-form-context__items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .sb-form-context__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px 20px;
+      background: var(--surface-1);
+      border: var(--border-subtle);
+      border-left: var(--border-accent);
+      border-radius: var(--radius-card);
+    }
+
+    .sb-form-context__item-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      min-width: 28px;
+      background: var(--blue-alpha-30);
+      border-radius: 6px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--blue-primary);
+    }
+
+    .sb-form-context__item-text {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .sb-form-context__item-text strong {
+      display: block;
+      color: var(--text-primary);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .sb-form-context__prazo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      background: var(--blue-alpha-10);
+      border: 1px solid var(--blue-alpha-30);
+      border-radius: var(--radius-card);
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .sb-form-context__prazo strong { color: var(--text-primary); }
+
+    /* ── FORMULÁRIO (direita) ─────────────────────── */
+    .sb-form-card {
+      background: var(--surface-1);
+      border: var(--border-subtle);
+      border-radius: var(--radius-card-lg);
+      padding: 40px;
+    }
+
+    .sb-form-card h2 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: var(--border-subtle);
+    }
+
+    .sb-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .sb-form-group label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .sb-form-group input,
+    .sb-form-group select,
+    .sb-form-group textarea {
+      background: var(--bg-base);
+      border: var(--border-subtle);
+      border-radius: var(--radius-card);
+      padding: 12px 16px;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 400;
+      width: 100%;
+      transition: border-color 0.15s ease;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .sb-form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237A7A96' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .sb-form-group select option {
+      background: var(--surface-1);
+      color: var(--text-primary);
+    }
+
+    .sb-form-group textarea { resize: vertical; min-height: 100px; }
+
+    .sb-form-group input:focus,
+    .sb-form-group select:focus,
+    .sb-form-group textarea:focus {
+      border-color: var(--blue-primary);
+    }
+
+    .sb-form-group input::placeholder,
+    .sb-form-group textarea::placeholder { color: var(--text-muted); }
+
+    .sb-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .sb-form-divider {
+      margin: 28px 0;
+      border: none;
+      border-top: var(--border-subtle);
+    }
+
+    .sb-form-section-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .sb-form-submit {
+      margin-top: 32px;
+    }
+
+    .sb-form-submit .sb-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 16px;
+      font-size: 15px;
+    }
+
+    .sb-form-submit-note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* erro de validação */
+    .sb-form-group input.sb-error,
+    .sb-form-group select.sb-error,
+    .sb-form-group textarea.sb-error {
+      border-color: #FF453A;
+    }
+
+    .sb-form-group .sb-error-msg {
+      font-size: 11px;
+      color: #FF453A;
+      display: none;
+    }
+
+    .sb-form-group.has-error .sb-error-msg { display: block; }
+    .sb-form-group.has-error input,
+    .sb-form-group.has-error select { border-color: #FF453A; }
+
+    /* ── RESPONSIVO ──────────────────────────────── */
+    @media (max-width: 900px) {
+      .sb-form-page__inner { grid-template-columns: 1fr; gap: 48px; }
+      .sb-form-context { position: static; }
+    }
+
+    @media (max-width: 640px) {
+      .sb-form-card { padding: 24px; }
+      .sb-form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sb-header">
+    <div class="sb-container">
+      <div class="sb-header__inner">
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+
+        <nav class="sb-nav" id="sb-nav">
+          <a href="produtos.html">produtos</a>
+          <a href="blog.html">blog</a>
+          <a href="index.html#sobre">sobre</a>
+          <a href="index.html#contato">contato</a>
+        </nav>
+
+        <!-- EDITE: WhatsApp da Smartbase -->
+        <a href="https://wa.me/5554996624494" target="_blank" rel="noopener" class="sb-btn sb-btn--primary sb-header__cta">
+          quero meu apple
+        </a>
+
+        <button class="sb-nav__toggle" id="sb-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       FORMULÁRIO DE TRADE-IN
+       O submit monta uma mensagem e abre o WhatsApp
+       EDITE: o número do WhatsApp na variável WA_NUMBER
+  ═══════════════════════════════════════════════════ -->
+  <main class="sb-form-page">
+    <div class="sb-form-page__bar"></div>
+    <div class="sb-container">
+      <div class="sb-form-page__inner">
+
+        <!-- Contexto (esquerda) -->
+        <div class="sb-form-context">
+          <span class="sb-badge sb-badge--blue">troca</span>
+
+          <!-- EDITE: título e subtítulo -->
+          <h1 class="sb-form-context__headline">
+            quer saber quanto<br>
+            <span class="sb-blue">vale o seu?</span>
+          </h1>
+
+          <p class="sb-form-context__sub">
+            preencha as informações do aparelho. a gente avalia e te retorna com um valor justo — sem pressão, sem achismo.
+          </p>
+
+          <!-- EDITE: etapas do processo -->
+          <div class="sb-form-context__items">
+            <div class="sb-form-context__item">
+              <div class="sb-form-context__item-num">1</div>
+              <div class="sb-form-context__item-text">
+                <strong>preencha o formulário</strong>
+                modelo, estado e o que acompanha. leva menos de 2 minutos.
+              </div>
+            </div>
+            <div class="sb-form-context__item">
+              <div class="sb-form-context__item-num">2</div>
+              <div class="sb-form-context__item-text">
+                <strong>receba a avaliação</strong>
+                a smartbase analisa e responde no seu WhatsApp com o valor.
+              </div>
+            </div>
+            <div class="sb-form-context__item">
+              <div class="sb-form-context__item-num">3</div>
+              <div class="sb-form-context__item-text">
+                <strong>aplique na troca</strong>
+                o valor do seu aparelho vira desconto na compra do próximo Apple.
+              </div>
+            </div>
+          </div>
+
+          <!-- EDITE: prazo de resposta -->
+          <div class="sb-form-context__prazo">
+            retorno em até <strong>1 hora</strong>
+          </div>
+        </div>
+
+        <!-- Formulário (direita) -->
+        <div class="sb-form-card">
+          <h2>dados do aparelho</h2>
+
+          <form id="sb-tradein-form" novalidate>
+
+            <!-- Dados de contato -->
+            <p class="sb-form-section-title">seus dados</p>
+
+            <div class="sb-form-row">
+              <div class="sb-form-group" id="group-nome">
+                <label for="nome">nome</label>
+                <input type="text" id="nome" name="nome" placeholder="seu nome" required>
+                <span class="sb-error-msg">campo obrigatório</span>
+              </div>
+              <div class="sb-form-group" id="group-whatsapp">
+                <label for="whatsapp">whatsapp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(54) 99999-0000" required>
+                <span class="sb-error-msg">campo obrigatório</span>
+              </div>
+            </div>
+
+            <hr class="sb-form-divider">
+
+            <!-- Dados do aparelho -->
+            <p class="sb-form-section-title">dados do aparelho</p>
+
+            <div class="sb-form-row">
+              <!-- EDITE: opções de aparelho -->
+              <div class="sb-form-group" id="group-aparelho">
+                <label for="aparelho">tipo de aparelho</label>
+                <select id="aparelho" name="aparelho" required>
+                  <option value="" disabled selected>selecione</option>
+                  <option value="iPhone">iPhone</option>
+                  <option value="Mac">Mac</option>
+                  <option value="iPad">iPad</option>
+                  <option value="Apple Watch">Apple Watch</option>
+                  <option value="AirPods">AirPods</option>
+                  <option value="Outro">outro</option>
+                </select>
+                <span class="sb-error-msg">campo obrigatório</span>
+              </div>
+              <div class="sb-form-group" id="group-modelo">
+                <label for="modelo">modelo</label>
+                <input type="text" id="modelo" name="modelo" placeholder="ex: iPhone 15 Pro" required>
+                <span class="sb-error-msg">campo obrigatório</span>
+              </div>
+            </div>
+
+            <div class="sb-form-row">
+              <!-- EDITE: opções de capacidade -->
+              <div class="sb-form-group">
+                <label for="capacidade">capacidade</label>
+                <select id="capacidade" name="capacidade">
+                  <option value="" disabled selected>selecione</option>
+                  <option value="64GB">64GB</option>
+                  <option value="128GB">128GB</option>
+                  <option value="256GB">256GB</option>
+                  <option value="512GB">512GB</option>
+                  <option value="1TB">1TB</option>
+                  <option value="Não sei">não sei</option>
+                  <option value="N/A">não se aplica</option>
+                </select>
+              </div>
+              <!-- EDITE: opções de estado -->
+              <div class="sb-form-group" id="group-estado">
+                <label for="estado">estado do aparelho</label>
+                <select id="estado" name="estado" required>
+                  <option value="" disabled selected>selecione</option>
+                  <option value="Perfeito">perfeito (sem marcas)</option>
+                  <option value="Excelente">excelente (marcas mínimas)</option>
+                  <option value="Bom">bom (uso normal)</option>
+                  <option value="Regular">regular (marcas visíveis)</option>
+                  <option value="Com defeito">com defeito</option>
+                </select>
+                <span class="sb-error-msg">campo obrigatório</span>
+              </div>
+            </div>
+
+            <div class="sb-form-row">
+              <!-- EDITE: opções de caixa -->
+              <div class="sb-form-group">
+                <label for="caixa">tem caixa original?</label>
+                <select id="caixa" name="caixa">
+                  <option value="" disabled selected>selecione</option>
+                  <option value="Sim">sim</option>
+                  <option value="Não">não</option>
+                </select>
+              </div>
+              <div class="sb-form-group">
+                <label for="cor">cor</label>
+                <input type="text" id="cor" name="cor" placeholder="ex: preto titanium">
+              </div>
+            </div>
+
+            <div class="sb-form-group">
+              <label for="obs">observações (opcional)</label>
+              <textarea id="obs" name="obs" placeholder="tela trincada, bateria baixa, algum defeito..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="sb-form-submit">
+              <button type="submit" class="sb-btn sb-btn--wa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.519 5.854L.057 23.617a.75.75 0 0 0 .921.921l5.764-1.462A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.836 0-3.565-.476-5.074-1.313l-.363-.21-3.773.957.974-3.768-.23-.374A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                </svg>
+                enviar pelo whatsapp
+              </button>
+              <p class="sb-form-submit-note">
+                ao clicar, você será redirecionado para o WhatsApp com as informações preenchidas.<br>
+                resposta em até 1 hora.
+              </p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="sb-footer">
+    <div class="sb-container">
+      <div class="sb-footer__inner">
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+        <div class="sb-footer__info">
+          <span>@smartbase.br</span>
+          <span>caxias do sul, rs</span>
+        </div>
+        <span class="sb-footer__copy">© 2025 smartbase</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    /* ── NÚMERO DO WHATSAPP ───────────────────────────────
+       EDITE: substitua pelo número real (formato internacional)
+       Exemplo: 5554999990000 para (54) 99999-0000
+    ──────────────────────────────────────────────────── */
+    var WA_NUMBER = '5554996624494';
+
+    /* ── MENU MOBILE ────────────────────────────────────── */
+    (function () {
+      var toggle = document.getElementById('sb-toggle');
+      var nav = document.getElementById('sb-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('sb-nav--open');
+        toggle.textContent = isOpen ? '✕' : '☰';
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+    })();
+
+    /* ── FORMULÁRIO → WHATSAPP ──────────────────────────── */
+    document.getElementById('sb-tradein-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var form = e.target;
+      var valid = true;
+
+      /* Campos obrigatórios */
+      var required = ['nome', 'whatsapp', 'aparelho', 'modelo', 'estado'];
+      required.forEach(function (id) {
+        var group = document.getElementById('group-' + id);
+        var field = document.getElementById(id);
+        if (!field || !field.value.trim()) {
+          if (group) group.classList.add('has-error');
+          valid = false;
+        } else {
+          if (group) group.classList.remove('has-error');
+        }
+      });
+
+      if (!valid) {
+        /* Scroll até o primeiro erro */
+        var firstError = form.querySelector('.has-error');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      /* Monta a mensagem */
+      var nome      = document.getElementById('nome').value.trim();
+      var whatsapp  = document.getElementById('whatsapp').value.trim();
+      var aparelho  = document.getElementById('aparelho').value;
+      var modelo    = document.getElementById('modelo').value.trim();
+      var capacidade = document.getElementById('capacidade').value || 'não informado';
+      var estado    = document.getElementById('estado').value;
+      var caixa     = document.getElementById('caixa').value || 'não informado';
+      var cor       = document.getElementById('cor').value.trim() || 'não informado';
+      var obs       = document.getElementById('obs').value.trim() || 'nenhuma';
+
+      var msg = [
+        'Olá, Smartbase! Quero saber quanto vale o meu aparelho.',
+        '',
+        '👤 *Dados de contato*',
+        'Nome: ' + nome,
+        'WhatsApp: ' + whatsapp,
+        '',
+        '📱 *Aparelho*',
+        'Tipo: ' + aparelho,
+        'Modelo: ' + modelo,
+        'Capacidade: ' + capacidade,
+        'Estado: ' + estado,
+        'Cor: ' + cor,
+        'Caixa original: ' + caixa,
+        '',
+        '📝 *Observações*',
+        obs
+      ].join('\n');
+
+      var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank');
+    });
+
+    /* Remove erro ao digitar */
+    document.querySelectorAll('input, select, textarea').forEach(function (el) {
+      el.addEventListener('input', function () {
+        var group = el.closest('.sb-form-group');
+        if (group) group.classList.remove('has-error');
+      });
+    });
+  </script>
+
+</body>
+</html>

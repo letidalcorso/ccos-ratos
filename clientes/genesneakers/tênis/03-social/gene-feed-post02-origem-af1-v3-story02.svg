@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <!--
+    Gene Sneakers · Post 02 · ORIGEM #01 — AIR FORCE 1
+    Story 2/3 · 9:16 (1080×1920) · Carbon puro · Texto-first
+  -->
+  <defs>
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+      .mono-r { font-family: 'IBM Plex Mono', monospace; font-weight: 400; }
+      .display-bold { font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; }
+      .display-regular { font-family: 'Big Shoulders Display', sans-serif; font-weight: 400; }
+    ]]></style>
+  </defs>
+
+  <!-- Campo Carbon puro -->
+  <rect width="1080" height="1920" fill="#0D0D0D"/>
+
+  <!-- BLOCO 1 · Título -->
+  <text x="80" y="340" class="display-bold" font-size="110" fill="#F2EFE9" letter-spacing="-4">The Three Amigos.</text>
+
+  <!-- BLOCO 2 · Nomes em Mono -->
+  <text x="80" y="600" class="mono-r" font-size="38" fill="#F2EFE9" letter-spacing="0.02em">Freddy Hicks.</text>
+  <text x="80" y="660" class="mono-r" font-size="38" fill="#F2EFE9" letter-spacing="0.02em">Darryl Jenkins.</text>
+  <text x="80" y="720" class="mono-r" font-size="38" fill="#F2EFE9" letter-spacing="0.02em">Tony Roberts.</text>
+
+  <!-- BLOCO 3 · Contexto -->
+  <!-- Parágrafo 1 -->
+  <text x="80" y="960" class="display-regular" font-size="56" fill="#F2EFE9" letter-spacing="-0.5">Três lojistas da Downtown</text>
+  <text x="80" y="1024" class="display-regular" font-size="56" fill="#F2EFE9" letter-spacing="-0.5">Locker Room, Baltimore.</text>
+
+  <!-- Parágrafo 2 -->
+  <text x="80" y="1200" class="display-regular" font-size="56" fill="#F2EFE9" letter-spacing="-0.5">Compraram todo o estoque</text>
+  <text x="80" y="1264" class="display-regular" font-size="56" fill="#F2EFE9" letter-spacing="-0.5">que sobrou em 1984 —</text>
+  <text x="80" y="1328" class="display-regular" font-size="56" fill="#F2EFE9" letter-spacing="-0.5">e pressionaram a Nike a</text>
+  <text x="80" y="1392" class="display-regular" font-size="56" fill="#F2EFE9" letter-spacing="-0.5">voltar a produzir.</text>
+
+  <!-- Slide marker -->
+  <text x="1000" y="1870" class="mono-r" font-size="16" fill="#3A3A3A" text-anchor="end" letter-spacing="0.3em">02 / 03</text>
+</svg>

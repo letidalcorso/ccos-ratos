@@ -1,0 +1,40 @@
+<header class="sb-header">
+  <div class="sb-container">
+    <div class="sb-header__inner">
+
+      <a class="sb-logo" href="/">
+        <span class="sb-logo__badge">sb</span>
+        <span class="sb-logo__wordmark">
+          <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+        </span>
+      </a>
+
+      <nav class="sb-nav" id="sb-nav">
+        <a href="/pages/produtos">produtos</a>
+        <a href="/blogs/news">blog</a>
+        <a href="/#sobre">sobre</a>
+        <a href="/#contato">contato</a>
+      </nav>
+
+      <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener" class="sb-btn sb-btn--primary sb-header__cta">
+        {{ section.settings.cta_text }}
+      </a>
+
+      <button class="sb-nav__toggle" id="sb-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Cabeçalho",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Texto do botão CTA",
+      "default": "quero meu apple"
+    }
+  ]
+}
+{% endschema %}

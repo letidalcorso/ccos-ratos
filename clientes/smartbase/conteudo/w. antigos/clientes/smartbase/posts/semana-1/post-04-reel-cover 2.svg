@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+    </style>
+  </defs>
+
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- Ghost number -->
+  <text x="-30" y="1000" font-family="'Bricolage Grotesque', sans-serif" font-size="700" font-weight="800"
+        fill="#F2F2F6" opacity="0.025">17</text>
+
+  <!-- Photo placeholder -->
+  <rect x="560" y="120" width="470" height="760" rx="4" fill="#0F0F1C" stroke="#1A1A2E" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="795" y="505" font-family="'Inter', sans-serif" font-size="18" fill="#2A2A40" text-anchor="middle">foto produto</text>
+
+  <!-- REEL badge -->
+  <rect x="80" y="72" width="140" height="40" rx="20" fill="#FF2D55"/>
+  <text x="150" y="97" font-family="'Inter', sans-serif" font-size="16" font-weight="600"
+        fill="#F2F2F6" text-anchor="middle" letter-spacing="1">▶ REEL</text>
+
+  <!-- Status tag -->
+  <rect x="80" y="128" width="210" height="36" rx="18" fill="#0F0F1C" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="185" y="151" font-family="'Inter', sans-serif" font-size="15" font-weight="500"
+        fill="#7A7A96" text-anchor="middle" letter-spacing="1">19.04.2026</text>
+
+  <!-- Headline -->
+  <text x="80" y="340" font-family="'Bricolage Grotesque', sans-serif" font-size="100" font-weight="800" fill="#F2F2F6">o que</text>
+  <text x="80" y="450" font-family="'Bricolage Grotesque', sans-serif" font-size="100" font-weight="800" fill="#F2F2F6">mudou</text>
+  <text x="80" y="560" font-family="'Bricolage Grotesque', sans-serif" font-size="72" font-weight="800" fill="#3E82F7">de verdade</text>
+  <text x="80" y="650" font-family="'Bricolage Grotesque', sans-serif" font-size="56" font-weight="700" fill="#F2F2F6">no iphone 17 pro max</text>
+
+  <line x1="80" y1="700" x2="520" y2="700" stroke="#1A1A2E" stroke-width="1"/>
+
+  <text x="80" y="748" font-family="'Inter', sans-serif" font-size="28" font-weight="300" fill="#C0C0D0">sem hype. só o que importa.</text>
+  <text x="80" y="790" font-family="'Inter', sans-serif" font-size="28" font-weight="300" fill="#C0C0D0">por quem vende apple todo dia.</text>
+
+  <!-- Bullets -->
+  <rect x="80" y="880" width="470" height="220" rx="16" fill="#0F0F1C"/>
+  <rect x="80" y="880" width="4" height="220" rx="2" fill="#3E82F7"/>
+  <text x="112" y="934" font-family="'Inter', sans-serif" font-size="28" fill="#F2F2F6">câmera 5x em todos os modelos</text>
+  <line x1="112" y1="960" x2="530" y2="960" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="112" y="1004" font-family="'Inter', sans-serif" font-size="28" fill="#F2F2F6">chip a19 pro: o mais rápido</text>
+  <line x1="112" y1="1030" x2="530" y2="1030" stroke="#1A1A2E" stroke-width="1"/>
+  <text x="112" y="1074" font-family="'Inter', sans-serif" font-size="28" fill="#C0C0D0">vale a troca? a resposta real</text>
+
+  <!-- CTA -->
+  <rect x="80" y="1170" width="440" height="64" rx="32" fill="#3E82F7"/>
+  <text x="300" y="1211" font-family="'Inter', sans-serif" font-size="26" font-weight="600"
+        fill="#F2F2F6" text-anchor="middle">trade-in? manda dm →</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1A1A2E" stroke-width="1"/>
+  <rect x="80" y="1278" width="100" height="30" rx="15" fill="#0F0F1C"/>
+  <text x="130" y="1299" font-family="'Inter', sans-serif" font-size="13" fill="#3E82F7" text-anchor="middle" font-weight="600">sb</text>
+  <text x="198" y="1299" font-family="'Bricolage Grotesque', sans-serif" font-size="28" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1000" y="1299" font-family="'Inter', sans-serif" font-size="22" fill="#4A4A60" text-anchor="end">@smartbase.cxs</text>
+</svg>

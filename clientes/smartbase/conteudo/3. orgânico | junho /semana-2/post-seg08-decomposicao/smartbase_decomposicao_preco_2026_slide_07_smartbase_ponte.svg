@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">7/8</text>
+
+  <!-- Title -->
+  <text x="80" y="380" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="92" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">a Smartbase</tspan>
+    <tspan x="80" dy="108">vai buscar</tspan>
+    <tspan x="80" dy="108" fill="#2DFF8B">por você.</tspan>
+  </text>
+
+  <!-- 4 ativos -->
+  <g transform="translate(80, 820)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" font-weight="700">✓</text>
+    <text x="50" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400">presença pessoal na Casa Nissei (Apple AAR)</text>
+  </g>
+  <g transform="translate(80, 880)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" font-weight="700">✓</text>
+    <text x="50" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400">IMEI verificado antes da compra</text>
+  </g>
+  <g transform="translate(80, 940)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" font-weight="700">✓</text>
+    <text x="50" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400">garantia internacional Apple ativa</text>
+  </g>
+  <g transform="translate(80, 1000)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="30" font-weight="700">✓</text>
+    <text x="50" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="600">você só paga quando recebe na mão</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

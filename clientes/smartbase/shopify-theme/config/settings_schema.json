@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Contato",
+    "settings": [
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "Número WhatsApp (com DDI, sem +)",
+        "info": "Ex: 5554996624494",
+        "default": "5554996624494"
+      }
+    ]
+  },
+  {
+    "name": "Redes sociais",
+    "settings": [
+      {
+        "type": "text",
+        "id": "instagram_handle",
+        "label": "Handle do Instagram",
+        "default": "@smartbase.br"
+      }
+    ]
+  },
+  {
+    "name": "Informações da loja",
+    "settings": [
+      {
+        "type": "text",
+        "id": "location",
+        "label": "Localização",
+        "default": "caxias do sul, rs"
+      },
+      {
+        "type": "text",
+        "id": "copyright_name",
+        "label": "Nome para copyright",
+        "default": "smartbase"
+      }
+    ]
+  }
+]

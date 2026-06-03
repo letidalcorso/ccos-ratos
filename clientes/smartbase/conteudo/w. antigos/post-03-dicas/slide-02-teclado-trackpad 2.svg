@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600&amp;display=swap');</style>
+  </defs>
+  <rect width="1080" height="1350" fill="#07070E"/>
+  <rect x="0" y="0" width="4" height="1350" fill="#3E82F7"/>
+
+  <!-- Ghost number -->
+  <text x="-30" y="960" font-family="'Bricolage Grotesque', sans-serif" font-size="700" font-weight="800" fill="#F2F2F6" opacity="0.03">1</text>
+
+  <rect x="80" y="72" width="130" height="40" rx="20" fill="#0F0F1C" stroke="#6DAFF9" stroke-width="1"/>
+  <text x="145" y="97" font-family="'Inter', sans-serif" font-size="15" font-weight="600" fill="#6DAFF9" text-anchor="middle" letter-spacing="2">DICAS</text>
+  <text x="1000" y="97" font-family="'Inter', sans-serif" font-size="20" fill="#4A4A60" text-anchor="end">2 / 7</text>
+
+  <!-- Number badge -->
+  <circle cx="130" cy="232" r="54" fill="#3E82F7"/>
+  <text x="130" y="250" font-family="'Bricolage Grotesque', sans-serif" font-size="52" font-weight="800" fill="#F2F2F6" text-anchor="middle">1</text>
+
+  <text x="80" y="370" font-family="'Bricolage Grotesque', sans-serif" font-size="88" font-weight="800" fill="#F2F2F6">teclado</text>
+  <text x="80" y="468" font-family="'Bricolage Grotesque', sans-serif" font-size="88" font-weight="800" fill="#3E82F7">vira trackpad.</text>
+  <line x1="80" y1="514" x2="1000" y2="514" stroke="#1A1A2E" stroke-width="1"/>
+
+  <!-- Visual keyboard -->
+  <rect x="160" y="560" width="760" height="360" rx="20" fill="#0F0F1C"/>
+  <rect x="196" y="596" width="688" height="56" rx="8" fill="#1A1A2E"/>
+  <rect x="196" y="668" width="688" height="56" rx="8" fill="#1A1A2E"/>
+  <rect x="196" y="740" width="688" height="56" rx="8" fill="#1A1A2E"/>
+  <rect x="196" y="812" width="688" height="72" rx="8" fill="rgba(62,130,247,0.15)"/>
+  <!-- Two finger dots -->
+  <circle cx="490" cy="736" r="26" fill="#3E82F7" opacity="0.9"/>
+  <circle cx="570" cy="736" r="26" fill="#3E82F7" opacity="0.9"/>
+  <line x1="390" y1="770" x2="670" y2="770" stroke="#3E82F7" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="540" y="848" font-family="'Inter', sans-serif" font-size="22" fill="#3E82F7" text-anchor="middle" font-weight="500">→ cursor se move</text>
+
+  <text x="80" y="990" font-family="'Inter', sans-serif" font-size="30" fill="#C0C0D0">toque com dois dedos na barra de</text>
+  <text x="80" y="1030" font-family="'Inter', sans-serif" font-size="30" fill="#C0C0D0">espaço e arraste para mover o cursor.</text>
+  <text x="80" y="1096" font-family="'Inter', sans-serif" font-size="30" fill="#7A7A96">funciona em qualquer app de texto</text>
+  <text x="80" y="1136" font-family="'Inter', sans-serif" font-size="30" font-weight="600" fill="#3E82F7">com precisão cirúrgica.</text>
+
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1A1A2E" stroke-width="1"/>
+  <rect x="80" y="1276" width="96" height="30" rx="15" fill="#0F0F1C"/>
+  <text x="128" y="1297" font-family="'Inter', sans-serif" font-size="13" fill="#3E82F7" text-anchor="middle" font-weight="600">sb</text>
+  <text x="194" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="28" fill="#F2F2F6"><tspan font-weight="300">smart</tspan><tspan font-weight="700">base</tspan></text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="22" fill="#4A4A60" text-anchor="end">@smartbase.cxs</text>
+</svg>

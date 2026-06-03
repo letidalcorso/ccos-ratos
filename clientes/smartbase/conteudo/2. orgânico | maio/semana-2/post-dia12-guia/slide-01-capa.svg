@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');</style>
+  </defs>
+
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- Ghost texture -->
+  <text x="-20" y="980" font-family="'Bricolage Grotesque', sans-serif" font-size="520" font-weight="800" fill="#3E82F7" opacity="0.04">17</text>
+
+  <!-- Pilar pill: PRODUTO -->
+  <rect x="80" y="98" width="118" height="28" rx="14" fill="#0E1E3A"/>
+  <text x="94" y="117" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#3E82F7" letter-spacing="1.5">PRODUTO</text>
+  <text x="1000" y="120" font-family="'Inter', sans-serif" font-size="22" font-weight="500" fill="#7A7A96" text-anchor="end">1/6</text>
+  <rect x="80" y="188" width="100" height="7" rx="3.5" fill="#3E82F7"/>
+
+  <!-- Headline capa -->
+  <text x="80" y="360" font-family="'Bricolage Grotesque', sans-serif" font-size="72" font-weight="800" fill="#F2F2F6">qual iPhone 17</text>
+  <text x="80" y="450" font-family="'Bricolage Grotesque', sans-serif" font-size="72" font-weight="800" fill="#3E82F7">é pra você?</text>
+
+  <!-- Sub -->
+  <text x="80" y="530" font-family="'Inter', sans-serif" font-size="30" font-weight="400" fill="#7A7A96">guia rápido pra decidir antes de falar</text>
+  <text x="80" y="568" font-family="'Inter', sans-serif" font-size="30" font-weight="400" fill="#7A7A96">com a gente.</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="300" fill="#C0C0D0">smart</text>
+  <circle cx="145" cy="1291" r="5" fill="#3E82F7"/>
+  <text x="155" y="1297" font-family="'Bricolage Grotesque', sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">base</text>
+  <text x="1000" y="1297" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

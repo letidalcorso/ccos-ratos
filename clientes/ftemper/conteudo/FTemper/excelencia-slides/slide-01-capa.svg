@@ -1,0 +1,58 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');</style>
+  <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#5BB8F0"/>
+    <stop offset="30%"  stop-color="#1A6FC0"/>
+    <stop offset="65%"  stop-color="#0D3F7A"/>
+    <stop offset="100%" stop-color="#071A35"/>
+  </linearGradient>
+  <pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+    <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+    <circle cx="48" cy="48" r="22" fill="rgba(255,255,255,0.03)"/>
+  </pattern>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="transparent"/>
+    <stop offset="55%"  stop-color="rgba(5,18,40,0.4)"/>
+    <stop offset="100%" stop-color="rgba(5,18,40,0.92)"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1350" fill="url(#bg)"/>
+<rect width="1080" height="1350" fill="url(#dots)"/>
+<rect width="1080" height="1350" fill="url(#fade)"/>
+
+<!-- Geometric diamonds -->
+<polygon points="90,-20 260,150 90,320 -80,150"  fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+<polygon points="990,50 1130,190 990,330 850,190" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"/>
+<polygon points="820,1060 940,1180 820,1300 700,1180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+
+<!-- Diagonal lines -->
+<line x1="-80" y1="520" x2="580" y2="-80" stroke="rgba(255,255,255,0.05)" stroke-width="3"/>
+<line x1="-80" y1="760" x2="820" y2="-80" stroke="rgba(255,255,255,0.035)" stroke-width="2"/>
+
+<!-- Logo -->
+<text x="540" y="92" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="400" y1="108" x2="680" y2="108" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+<!-- Ghost 5 -->
+<text x="30" y="780" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="700" fill="#FFFFFF" opacity="0.96">5</text>
+
+<!-- Label -->
+<rect x="58" y="780" width="220" height="46" rx="6" fill="rgba(255,255,255,0.12)"/>
+<rect x="58" y="780" width="220" height="46" rx="6" fill="none" stroke="rgba(255,255,255,0.20)" stroke-width="1"/>
+<text x="168" y="810" font-family="'Sora', sans-serif" font-weight="700" font-size="20" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">RAZÕES</text>
+
+<!-- Main title -->
+<text x="58" y="908"  font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="108" fill="#FFFFFF" letter-spacing="2">PRA SUA ESQUADRIA</text>
+<text x="58" y="1022" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="108" fill="#FFFFFF" letter-spacing="2">NUNCA MAIS</text>
+<text x="58" y="1136" font-family="'Morganite', 'Barlow Condensed', Impact, sans-serif" font-weight="800" font-size="108" fill="#5BB8F0" letter-spacing="2">SER A MESMA.</text>
+
+<line x1="58" y1="1172" x2="440" y2="1172" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+<text x="58" y="1224" font-family="'Sora', sans-serif" font-weight="300" font-size="42" fill="rgba(255,255,255,0.75)">— Linha Excelência® × Alumiconte</text>
+
+<!-- Arraste pill -->
+<rect x="752" y="1264" width="296" height="68" rx="34" fill="rgba(255,255,255,0.12)"/>
+<rect x="752" y="1264" width="296" height="68" rx="34" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+<text x="900" y="1307" font-family="'Sora', sans-serif" font-weight="700" font-size="30" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">Arraste  ›</text>
+</svg>

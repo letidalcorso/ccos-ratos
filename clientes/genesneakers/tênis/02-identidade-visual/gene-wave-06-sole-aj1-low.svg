@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 200" width="560" height="200" role="img" aria-label="WAVE-06 SOLE variation — Air Jordan 1 Low side profile with Acid wave">
+  <!-- Carbon background -->
+  <rect width="560" height="200" fill="#0D0D0D"/>
+
+  <!-- AJ1 Low sole + midsole silhouette (line art, Bone stroke) -->
+  <g fill="none" stroke="#F2EFE9" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Upper midsole curve (toe to heel) -->
+    <path d="M 70 95
+             Q 62 85, 72 80
+             L 480 78
+             Q 510 78, 518 92
+             Q 522 100, 515 110"/>
+    <!-- Heel drop / cup -->
+    <path d="M 515 110
+             L 505 125
+             Q 500 130, 488 130"/>
+    <!-- Outsole bottom -->
+    <path d="M 488 130
+             L 90 130
+             Q 72 130, 62 122
+             Q 52 110, 58 98
+             Q 60 95, 70 95 Z"/>
+    <!-- Midsole/outsole separator line -->
+    <path d="M 60 108 L 514 108"/>
+    <!-- Air unit notch at heel -->
+    <path d="M 470 108 L 478 124 L 500 124"/>
+    <!-- Toe stitching hint -->
+    <path d="M 78 92 L 90 96"/>
+  </g>
+
+  <!-- Acid wave running inside midsole (above separator, 4 crests) -->
+  <path d="M 88 95
+           Q 120 80, 152 95
+           T 216 95
+           T 280 95
+           T 344 95
+           T 408 95
+           T 472 95"
+        fill="none"
+        stroke="#CBF23D"
+        stroke-width="2.6"
+        stroke-linecap="round"/>
+</svg>

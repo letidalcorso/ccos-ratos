@@ -1,0 +1,97 @@
+<h2>O que vai no verso?</h2>
+<p class="subtitle">A frente provocou. O verso pode resolver, continuar ou simplesmente respirar.</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="tagline-limpo" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 14px;
+      padding: 0 32px;
+    ">
+      <div style="font-family:'Helvetica Neue',sans-serif; font-size:20px; font-weight:300; color:#7A7A96; letter-spacing:0.3px; text-align:center; line-height:1.5; font-style:italic;">sua apple store. particular.</div>
+      <div style="width:28px; height:1px; background:#1E1E2E;"></div>
+      <div style="display:flex; align-items:center; gap:2px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:15px; font-weight:300; color:#7A7A96; letter-spacing:-0.3px;">smart</span>
+        <div style="width:4px;height:4px;background:#3E82F7;border-radius:50%;margin-bottom:1px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:15px; font-weight:700; color:#F2F2F6; letter-spacing:-0.3px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Tagline + wordmark — o verso resolve</h3>
+      <p>A frente provoca com a imagem, o verso entrega a resposta. "sua apple store. particular." centralizado, clean, silencioso. Quem viu a lente e ficou curioso, vira a sacola e entende tudo.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="continua" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Continuação da lente — agora pelo lado esquerdo, mais sumida -->
+      <svg width="100%" height="100%" viewBox="0 0 300 190" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;">
+        <defs>
+          <radialGradient id="lensBack" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0a0a14"/>
+            <stop offset="100%" stop-color="#06060C"/>
+          </radialGradient>
+          <linearGradient id="fadeRight2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="60%" stop-color="#07070E" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#07070E" stop-opacity="1"/>
+          </linearGradient>
+        </defs>
+        <!-- Lente emergindo do lado esquerdo — mais afastada, quase sumindo -->
+        <circle cx="-30" cy="95" r="160" fill="#0C0C18" stroke="#141420" stroke-width="1" opacity="0.7"/>
+        <circle cx="-30" cy="95" r="128" fill="url(#lensBack)" stroke="#0F0F1C" stroke-width="0.8" opacity="0.6"/>
+        <circle cx="-30" cy="95" r="90" fill="#05050C" opacity="0.5"/>
+        <circle cx="-30" cy="95" r="55" fill="#030308" opacity="0.4"/>
+        <!-- Fade do lado direito -->
+        <rect x="0" y="0" width="300" height="190" fill="url(#fadeRight2)"/>
+      </svg>
+      <!-- Wordmark centralizado -->
+      <div style="position:relative; z-index:2; display:flex; align-items:center; gap:2px; margin-left: 60px;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:15px; font-weight:300; color:#7A7A96; letter-spacing:-0.3px;">smart</span>
+        <div style="width:4px;height:4px;background:#3E82F7;border-radius:50%;margin-bottom:1px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:15px; font-weight:700; color:#F2F2F6; letter-spacing:-0.3px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Continuação — a lente some pelo outro lado</h3>
+      <p>A mesma lente aparece no verso, mas agora emergindo do lado esquerdo e mais distante — como se a sacola fosse uma janela que você gira. A imagem continua, o mundo não para. O wordmark entra centralizado.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="vazio" onclick="toggleSelect(this)">
+    <div class="card-image" style="
+      background: #07070E;
+      height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    ">
+      <!-- Quase vazio — só o wordmark centralizado, muito pequeno -->
+      <div style="display:flex; align-items:center; gap:2px; opacity: 0.5;">
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:300; color:#7A7A96; letter-spacing:-0.3px;">smart</span>
+        <div style="width:4px;height:4px;background:#3E82F7;border-radius:50%;margin-bottom:1px;"></div>
+        <span style="font-family:'Helvetica Neue',sans-serif; font-size:13px; font-weight:700; color:#F2F2F6; letter-spacing:-0.3px;">base</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Silêncio — fundo preto, só o wordmark</h3>
+      <p>O verso respira. Fundo escuro puro, wordmark no centro, quase invisível. A experiência de virar a sacola é de calma depois do impacto da frente. Difícil de executar errado, e muito difícil de fazer parecer barato.</p>
+    </div>
+  </div>
+
+</div>

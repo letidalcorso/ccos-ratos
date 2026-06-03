@@ -1,0 +1,669 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gene Sneakers — Instagram: Go Live</title>
+  <style>
+    :root {
+      --black: #080808;
+      --lime: #C4FF3C;
+      --bone: #F3EFE6;
+      --gray: #3C3C3C;
+      --mid: #1a1a1a;
+      --border: #2a2a2a;
+      --done-bg: #0f1a00;
+      --done-text: #6b8c1e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--black);
+      color: var(--bone);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      padding: 0 0 80px 0;
+    }
+
+    header {
+      padding: 48px 40px 32px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--black);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand { display: flex; flex-direction: column; gap: 4px; }
+    .brand-name { font-size: 22px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone); }
+    .brand-tagline { font-size: 11px; color: var(--lime); letter-spacing: 0.2em; text-transform: uppercase; }
+
+    .status-pill {
+      background: var(--lime);
+      color: var(--black);
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+
+    .progress-bar-container {
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      background: var(--mid);
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gray);
+    }
+
+    .progress-count { color: var(--lime); font-weight: 700; }
+
+    .progress-bar {
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--lime);
+      border-radius: 2px;
+      transition: width 0.4s ease;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 40px 0;
+    }
+
+    .section { margin-bottom: 48px; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    .badge-done    { background: #1e2e00; color: #6b8c1e; }
+    .badge-critical { background: #FF3C3C; color: #fff; }
+    .badge-urgent  { background: var(--lime); color: var(--black); }
+    .badge-blue    { background: #3C7BFF; color: #fff; }
+    .badge-ongoing { background: var(--border); color: var(--bone); }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bone);
+    }
+
+    .section-sub {
+      font-size: 11px;
+      color: var(--gray);
+      margin-left: auto;
+      letter-spacing: 0.05em;
+    }
+
+    .tasks { display: flex; flex-direction: column; gap: 2px; }
+
+    .task {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+
+    .task:hover { border-color: var(--gray); background: #222; }
+
+    .task.done {
+      background: var(--done-bg);
+      border-color: #1e2e00;
+      opacity: 0.7;
+    }
+
+    .task.done:hover { opacity: 0.9; }
+
+    .checkbox {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--gray);
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .task.done .checkbox { background: var(--lime); border-color: var(--lime); }
+
+    .checkbox-check { display: none; color: var(--black); font-size: 11px; font-weight: 900; }
+    .task.done .checkbox-check { display: block; }
+
+    .task-content { flex: 1; min-width: 0; }
+
+    .task-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--bone);
+      line-height: 1.4;
+      transition: color 0.15s ease;
+    }
+
+    .task.done .task-label { color: var(--done-text); text-decoration: line-through; }
+
+    .task-note {
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 5px;
+      line-height: 1.55;
+    }
+
+    .task.done .task-note { color: #3a4a1e; }
+
+    .task-tag {
+      font-size: 10px;
+      padding: 2px 7px;
+      border-radius: 2px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      margin-top: 2px;
+      align-self: flex-start;
+    }
+
+    .tag-setup   { background: #001a2e; color: #0099cc; }
+    .tag-content { background: #2e1a00; color: #cc7a00; }
+    .tag-social  { background: #1a2e00; color: #7acc00; }
+    .tag-growth  { background: #1a002e; color: #9900cc; }
+    .tag-done    { background: var(--done-bg); color: var(--done-text); }
+
+    .divider-note {
+      padding: 14px 18px;
+      background: #111;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--lime);
+      border-radius: 3px;
+      font-size: 12px;
+      color: var(--gray);
+      font-style: italic;
+      margin-bottom: 2px;
+      line-height: 1.5;
+    }
+
+    .section-progress {
+      font-size: 11px;
+      color: var(--gray);
+      margin-top: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .section-progress span { color: var(--lime); font-weight: 600; }
+
+    @media (max-width: 600px) {
+      header { padding: 24px 20px; }
+      .container { padding: 24px 20px 0; }
+      .progress-bar-container { padding: 16px 20px; }
+      .task { padding: 14px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="brand-name">Gene Sneakers</div>
+    <div class="brand-tagline">Instagram — Go Live</div>
+  </div>
+  <div class="status-pill">📲 Rodar o quanto antes</div>
+</header>
+
+<div class="progress-bar-container">
+  <div class="progress-meta">
+    <span>Progresso geral</span>
+    <span class="progress-count" id="progress-text">0 de 0 tarefas concluídas</span>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- JÁ ESTÁ PRONTO -->
+  <div class="section" id="section-ready">
+    <div class="section-header">
+      <span class="section-badge badge-done">✅ Pronto</span>
+      <span class="section-title">O que já existe</span>
+    </div>
+    <div class="tasks">
+
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Identidade visual finalizada</div>
+          <div class="task-note">Logo, paleta (preto #080808 / lima #C4FF3C / bone #F3EFE6), tipografia, arquivos SVG e PNG prontos para uso.</div>
+        </div>
+        <span class="task-tag tag-done">Design</span>
+      </div>
+
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Pack de lançamento criado</div>
+          <div class="task-note">Avatar, destaques e stories de lançamento prontos. Localização: <code>02_branding/pack para lançamento/</code></div>
+        </div>
+        <span class="task-tag tag-done">Design</span>
+      </div>
+
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Copy das 9 peças de conteúdo escrita</div>
+          <div class="task-note">3 peças por pilar (Produto com vida / Takes fortes / Cultura sneaker). Slides e roteiros prontos em <code>conteudo/copy/</code>. Falta design visual de cada peça.</div>
+        </div>
+        <span class="task-tag tag-done">Copy</span>
+      </div>
+
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Estratégia e posicionamento documentados</div>
+          <div class="task-note">Tom de voz, pilares, concorrentes, o que nunca usar — tudo mapeado. Base sólida para não errar o tom na hora de produzir.</div>
+        </div>
+        <span class="task-tag tag-done">Estratégia</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="ready-progress"></div>
+  </div>
+
+  <!-- SETUP DA CONTA -->
+  <div class="section" id="section-setup">
+    <div class="section-header">
+      <span class="section-badge badge-critical">🔴 Fazer agora</span>
+      <span class="section-title">Setup da conta</span>
+      <span class="section-sub">Antes de qualquer publicação</span>
+    </div>
+    <div class="tasks">
+
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Criar conta Business no Instagram</div>
+          <div class="task-note">Handle sugerido: @genesneakers ou @gene.sneakers (verificar disponibilidade). Tipo: Conta Profissional → Empresa → categoria "Loja de sapatos". Business ativo desde o início — necessário para Insights e futuros anúncios.</div>
+        </div>
+        <span class="task-tag tag-setup">Setup</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Foto de perfil</div>
+          <div class="task-note">Logo Signal Black (ícone do tênis ou wordmark) sobre fundo preto #080808. Circular, sem bordas. Usar os arquivos da identidade visual — versão quadrada já existe no pack. Deve ficar legível em 40px.</div>
+        </div>
+        <span class="task-tag tag-setup">Setup</span>
+      </div>
+
+      <div class="task done" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Bio otimizada</div>
+          <div class="task-note">Sugestão: "Tênis que o Brasil não tem — ainda. / Importação direta · Sob encomenda · Drop" — Linha 1: promessa. Linha 2: como funciona. Sem emoji excessivo. Máximo 150 caracteres. Link na última linha.</div>
+        </div>
+        <span class="task-tag tag-setup">Setup</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Link na bio configurado</div>
+          <div class="task-note">Usar Linktree, Beacons ou Stan.store. Dois destinos: (1) Encomenda via WhatsApp e (2) Landing page/one-pager (quando estiver pronto). Design: fundo preto, texto lima — alinhado com identidade. Testar no mobile antes de publicar.</div>
+        </div>
+        <span class="task-tag tag-setup">Setup</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Conectar ao Meta Business Suite</div>
+          <div class="task-note">Criar uma Facebook Page no mesmo nome → vincular ao Instagram Business. Necessário para Meta Ads futuros. Não precisa publicar nada no Facebook agora — só a conexão técnica.</div>
+        </div>
+        <span class="task-tag tag-setup">Setup</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Criar destaques (covers prontos no pack)</div>
+          <div class="task-note">Sugestão de categorias: "Como funciona" / "Encomendas" / "Drops" / "Clientes". Covers já existem no pack de lançamento. Criar os Stories correspondentes para popular cada destaque na primeira semana.</div>
+        </div>
+        <span class="task-tag tag-setup">Setup</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="setup-progress"></div>
+  </div>
+
+  <!-- PUBLICAÇÃO — SEQUÊNCIA -->
+  <div class="section" id="section-publish">
+    <div class="section-header">
+      <span class="section-badge badge-urgent">🟡 Publicação</span>
+      <span class="section-title">Sequência dos primeiros posts</span>
+      <span class="section-sub">Ordem importa</span>
+    </div>
+
+    <div class="divider-note">
+      Produzir o design de cada peça antes de publicar. A copy já está pronta em <code>conteudo/copy/</code>. A ordem abaixo é a sugerida — apresentação de marca primeiro, produto depois, take forte para viralizar.
+    </div>
+
+    <div class="tasks" style="margin-top: 2px;">
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Post 1 — Apresentação de marca (Pilar 1, Peça 1.3)</div>
+          <div class="task-note">"O varejo nacional traz o que ele quer, quando ele quer. A Gene traz o que você quer." — Carrossel conceitual, sem foto de produto. Planta a bandeira. Primeiro post do perfil.</div>
+        </div>
+        <span class="task-tag tag-content">Carrossel</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Post 2 — Take forte: o markup (Pilar 2, Peça 2.1)</div>
+          <div class="task-note">"Sabe aquele Nike que custa R$800 aqui? Lá fora custa $90." — Reel texto. Provoca, gera compartilhamento. Publicar 1–2 dias depois do primeiro post para dar alcance orgânico.</div>
+        </div>
+        <span class="task-tag tag-content">Reel</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Post 3 — Produto com vida: New Balance 1906R (Pilar 1, Peça 1.1)</div>
+          <div class="task-note">"O BR ainda não tem esse." — Carrossel de produto no contexto. Converte quem já foi fisgado pelo take. Precisa de imagem do tênis (campanha oficial ou referência visual forte).</div>
+        </div>
+        <span class="task-tag tag-content">Carrossel</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Post 4 — Cultura sneaker: História do Nike Dunk (Pilar 3, Peça 3.1)</div>
+          <div class="task-note">"1985. Um tênis de basquete. Uma revolução." — Carrossel editorial. Posiciona a Gene como parte da tribo, não como vendedora. Atrai o sneakerhead que quer mais do que produto.</div>
+        </div>
+        <span class="task-tag tag-content">Carrossel</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Post 5 — Reel de produto: Adidas Samba (Pilar 1, Peça 1.2)</div>
+          <div class="task-note">Reel 15–20s, estética documental, câmera próxima ao tênis. Precisa de vídeo real do modelo. Se não tiver produto físico ainda, buscar referência de campanha oficial da Adidas para uso editorial.</div>
+        </div>
+        <span class="task-tag tag-content">Reel</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Post 6 — Take forte: o varejo decide (Pilar 2, Peça 2.2)</div>
+          <div class="task-note">"O varejo nacional decide o que você vai usar." — Carrossel de opinião. Segundo take forte. Alternado com produtos para equilibrar o feed.</div>
+        </div>
+        <span class="task-tag tag-content">Carrossel</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Posts 7, 8 e 9 — Completar os pilares restantes</div>
+          <div class="task-note">Peça 2.3 (reativo a drop), Peça 3.2 (como funciona um drop), Peça 3.3 (os modelos que a cultura escolheu). Publicar na sequência, 1 por dia. Manter ritmo de 1 post/dia na primeira semana.</div>
+        </div>
+        <span class="task-tag tag-content">Mix</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="publish-progress"></div>
+  </div>
+
+  <!-- SEGUIR PESSOAS -->
+  <div class="section" id="section-follow">
+    <div class="section-header">
+      <span class="section-badge badge-blue">🔵 Crescimento</span>
+      <span class="section-title">Estratégia de seguir pessoas</span>
+      <span class="section-sub">Orgânico ativo — fazer desde o dia 1</span>
+    </div>
+
+    <div class="divider-note">
+      O algoritmo do Instagram não distribui conta nova de graça. Crescimento orgânico real exige presença ativa: seguir as pessoas certas, comentar com intenção, estar presente nas hashtags do nicho. Não é automação — é 30 minutos por dia feitos com atenção.
+    </div>
+
+    <div class="tasks" style="margin-top: 2px;">
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Seguir seguidores dos concorrentes</div>
+          <div class="task-note">Acessar os perfis de Droper, Innovare Sneakers e LK Sneakers. Entrar na lista de seguidores e seguir quem parece engajado (comenta, curte, posta sobre tênis). Meta: 30–50 por dia. Limite do Instagram: ~100–150 follows/dia para contas novas. Não ultrapassar.</div>
+        </div>
+        <span class="task-tag tag-growth">Crescimento</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Engajar nas hashtags do nicho</div>
+          <div class="task-note">Hashtags principais: #sneakersbrasil #sneakerheadbrasil #nikebrasil #jordanbrasil #adidasbrasil #newbalancebrasil #streetwearbrasil #hypebeastbrasil #tênisnacionais. Abrir cada hashtag → curtir posts recentes → comentar os mais relevantes (comentário real, não emoji genérico). 10–15 interações por dia.</div>
+        </div>
+        <span class="task-tag tag-growth">Crescimento</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Seguir criadores de conteúdo de sneaker BR</div>
+          <div class="task-note">Buscar por: "tênis brasil", "sneaker review brasil", "unboxing nike brasil" no Instagram e YouTube. Priorizar criadores com 5k–100k seguidores e engajamento alto (não mega-influenciadores). Seguir, comentar nos posts deles — a audiência deles é exatamente o público da Gene.</div>
+        </div>
+        <span class="task-tag tag-growth">Crescimento</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Seguir perfis de cultura streetwear e moda urbana BR</div>
+          <div class="task-note">Perfis de streetwear, skate, cultura urbana brasileira. Público adjacente ao sneakerhead — veste tênis como parte do estilo, não necessariamente acompanha drops. Amplia o alcance sem sair do território da marca.</div>
+        </div>
+        <span class="task-tag tag-growth">Crescimento</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Comentar em posts de lançamentos Nike / Adidas / NB Brasil</div>
+          <div class="task-note">Quando a Nike Brasil, Adidas Brasil ou New Balance postar lançamento, comentar algo relevante sobre o modelo — não um anúncio, uma opinião de quem entende. "Esse aqui tem história" / "Esperem esse chegar no preço nacional..." A audiência desses perfis é exatamente o público da Gene.</div>
+        </div>
+        <span class="task-tag tag-growth">Crescimento</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Responder todos os comentários nos primeiros posts</div>
+          <div class="task-note">Todo comentário nos primeiros 30 dias merece resposta — isso sinaliza conta ativa para o algoritmo e gera relacionamento com quem chegar primeiro. Resposta no tom da marca: direto, confiante, sem linguagem de "obrigado pelo apoio".</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="follow-progress"></div>
+  </div>
+
+  <!-- ROTINA DIÁRIA -->
+  <div class="section" id="section-routine">
+    <div class="section-header">
+      <span class="section-badge badge-ongoing">⚙️ Rotina</span>
+      <span class="section-title">O que fazer todo dia</span>
+      <span class="section-sub">Primeiros 30 dias</span>
+    </div>
+
+    <div class="tasks">
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">1 post por dia (feed ou Reel)</div>
+          <div class="task-note">Rotação: Produto → Take forte → Cultura → repete. Nas 9 primeiras peças prontas, publicar na sequência definida. A partir do dia 10, criar novo conteúdo baseado no que mais engajou.</div>
+        </div>
+        <span class="task-tag tag-content">Conteúdo</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Stories diários (não precisam ser produzidos)</div>
+          <div class="task-note">Story não precisa ser design elaborado. Pode ser: repost de um drop global com comentário rápido, pergunta para a audiência ("qual modelo você quer?"), bastidor de uma encomenda chegando, enquete sobre modelo. O que mantém a conta viva no topo do feed dos seguidores.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">30 minutos de engajamento ativo</div>
+          <div class="task-note">Dividir: 10 min nas hashtags do nicho → 10 min nos seguidores dos concorrentes → 10 min respondendo comentários e DMs. Fazer todo dia, no mesmo horário. Não é opcional nos primeiros 30 dias — é o que constrói a audiência inicial.</div>
+        </div>
+        <span class="task-tag tag-growth">Crescimento</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Acompanhar drops globais e reagir</div>
+          <div class="task-note">Verificar Nike SNKRS, Adidas Confirmed e Sneaker News todo dia. Se sair algo relevante → publicar Story ou Reel reativo no mesmo dia. Velocidade aqui é vantagem competitiva: a Gene comenta antes de qualquer loja BR.</div>
+        </div>
+        <span class="task-tag tag-growth">Crescimento</span>
+      </div>
+
+      <div class="task" onclick="toggleTask(this)">
+        <div class="checkbox"><span class="checkbox-check">✓</span></div>
+        <div class="task-content">
+          <div class="task-label">Checar DMs e responder em até 2h</div>
+          <div class="task-note">Qualquer mensagem sobre encomenda: responder rápido e fechar no WhatsApp. Script básico de DM: "Olá! Qual modelo você tá procurando? A gente cota e te manda os detalhes." — sem enrolação, direto ao ponto.</div>
+        </div>
+        <span class="task-tag tag-social">Social</span>
+      </div>
+
+    </div>
+    <div class="section-progress" id="routine-progress"></div>
+  </div>
+
+</div>
+
+<script>
+  const STORAGE_KEY = 'gene-instagram-v1';
+
+  function getState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+    catch { return {}; }
+  }
+
+  function saveState(state) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function getTaskId(el) {
+    const label = el.querySelector('.task-label')?.textContent?.trim();
+    return label ? btoa(encodeURIComponent(label)).slice(0, 24) : null;
+  }
+
+  function toggleTask(el) {
+    const isDone = el.classList.contains('done');
+    el.classList.toggle('done', !isDone);
+    const state = getState();
+    const id = getTaskId(el);
+    if (id) { state[id] = !isDone; saveState(state); }
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const allTasks = document.querySelectorAll('.task');
+    const doneTasks = document.querySelectorAll('.task.done');
+    const total = allTasks.length;
+    const done = doneTasks.length;
+    const pct = total ? Math.round((done / total) * 100) : 0;
+
+    document.getElementById('progress-text').textContent = `${done} de ${total} tarefas concluídas`;
+    document.getElementById('progress-fill').style.width = pct + '%';
+
+    const sections = [
+      { id: 'ready',   progressId: 'ready-progress' },
+      { id: 'setup',   progressId: 'setup-progress' },
+      { id: 'publish', progressId: 'publish-progress' },
+      { id: 'follow',  progressId: 'follow-progress' },
+      { id: 'routine', progressId: 'routine-progress' },
+    ];
+
+    sections.forEach(({ id, progressId }) => {
+      const section = document.getElementById('section-' + id);
+      if (!section) return;
+      const sectionTasks = section.querySelectorAll('.task');
+      const sectionDone  = section.querySelectorAll('.task.done');
+      const el = document.getElementById(progressId);
+      if (el) el.innerHTML = `<span>${sectionDone.length}</span> de ${sectionTasks.length} concluídas`;
+    });
+  }
+
+  function restoreState() {
+    const state = getState();
+    document.querySelectorAll('.task').forEach(task => {
+      const id = getTaskId(task);
+      if (id && state[id] === true)  task.classList.add('done');
+      if (id && state[id] === false) task.classList.remove('done');
+    });
+    updateProgress();
+  }
+
+  restoreState();
+</script>
+
+</body>
+</html>

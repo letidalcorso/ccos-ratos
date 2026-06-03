@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gene Sneakers — Sistema de Logo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --carbon: #0D0D0D;
+  --bone: #F2EFE9;
+  --acid: #CBF23D;
+  --mute: #4a4a4a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bone);
+  color: var(--carbon);
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 80px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.display {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+header {
+  border-bottom: 2px solid var(--carbon);
+  padding-bottom: 24px;
+  margin-bottom: 80px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+h1 .acid { color: var(--acid); background: var(--carbon); padding: 0 8px; }
+
+.intro {
+  max-width: 640px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--mute);
+  margin-top: 24px;
+}
+
+section {
+  margin-bottom: 96px;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+h2 .num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  display: block;
+  color: var(--acid);
+  background: var(--carbon);
+  padding: 4px 10px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.desc {
+  max-width: 720px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--mute);
+  margin-bottom: 32px;
+}
+
+.specimen {
+  border: 1px solid var(--carbon);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.specimen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.specimen-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--carbon);
+  color: var(--bone);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.specimen-label .token {
+  color: var(--acid);
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+
+.rules {
+  background: var(--carbon);
+  color: var(--bone);
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.rules h3 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--acid);
+  margin-bottom: 20px;
+}
+
+.rule-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.rule-list div b {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--acid);
+  margin-bottom: 6px;
+}
+
+.clearspace-demo {
+  background: var(--bone);
+  border: 1px solid var(--carbon);
+  padding: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.clearspace-demo svg {
+  width: 360px;
+  height: auto;
+}
+
+.clearspace-demo .guide {
+  position: absolute;
+  border: 2px dashed var(--acid);
+  pointer-events: none;
+}
+
+.minsize {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+  background: var(--carbon);
+  padding: 40px;
+}
+
+.minsize-item { text-align: center; }
+.minsize-item img {
+  display: block;
+  margin-bottom: 12px;
+  background: var(--carbon);
+}
+.minsize-item .sz { color: var(--acid); font-size: 11px; letter-spacing: 0.2em; }
+.minsize-item .use { color: var(--bone); font-size: 11px; letter-spacing: 0.2em; margin-top: 4px; }
+
+.dont-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+.dont-item {
+  border: 1px solid var(--carbon);
+  padding: 24px;
+  position: relative;
+}
+.dont-item.no::before {
+  content: "NÃO";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--carbon);
+  color: var(--acid);
+  padding: 4px 10px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+}
+.dont-item.yes::before {
+  content: "SIM";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--acid);
+  color: var(--carbon);
+  padding: 4px 10px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
+}
+.dont-item p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 12px;
+  color: var(--mute);
+}
+
+footer {
+  border-top: 1px solid var(--carbon);
+  padding-top: 24px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mute);
+  display: flex;
+  justify-content: space-between;
+}
+
+.env-table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.env-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  border: 1px solid var(--carbon);
+  background: var(--bone);
+}
+
+.env-chip {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+}
+
+.env-chip .env-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.env-chip .env-name {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-top: 8px;
+}
+
+.env-chip .env-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.env-body {
+  padding: 24px 20px;
+  font-size: 13px;
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--carbon);
+}
+
+.env-body code {
+  background: var(--carbon);
+  color: var(--acid);
+  padding: 2px 8px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+}
+
+.env-tokens {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--mute);
+}
+
+.env-when {
+  color: var(--mute);
+}
+
+.env-warn {
+  background: var(--acid);
+  color: var(--carbon);
+  padding: 8px 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  margin-top: 6px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Gene Sneakers · Brand Identity System · v1.0</div>
+  <h1>Sistema de<br>Logo <span class="acid">/genoma</span></h1>
+  <p class="intro">
+    O símbolo Gene é uma pegada com DNA dentro. Pegada porque é tênis. DNA porque é feito sob encomenda, único para cada cliente — cada par tem seu próprio código genético. Os pontos Acid marcam os nucleotídeos da hélice, o único elemento colorido do sistema. Este manual documenta as 5 configurações oficiais e como aplicá-las em 3 ambientes cromáticos.
+  </p>
+</header>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">01 · LOCKUP PRIMÁRIO</span><br>Horizontal</h2>
+  <p class="desc">
+    Configuração padrão para todas as comunicações. Símbolo à esquerda, wordmark à direita com 80px de respiro entre eles. Usar sempre que houver espaço horizontal e o contexto permitir leitura do descritivo "Sneakers". Mínimo de uso: 160px de largura em tela, 30mm em impressão.
+  </p>
+
+  <div class="specimen">
+    <img src="gene-logo-primary-carbon.png" alt="Lockup primário Carbon">
+    <div class="specimen-label">
+      <span>01a · PRIMARY / CARBON</span>
+      <span class="token">BG #0D0D0D · STROKE #F2EFE9 · NODES #CBF23D</span>
+    </div>
+  </div>
+
+  <div class="specimen">
+    <img src="gene-logo-primary-daylight.png" alt="Lockup primário Daylight">
+    <div class="specimen-label">
+      <span>01b · PRIMARY / DAYLIGHT</span>
+      <span class="token">BG #F2EFE9 · STROKE #0D0D0D · SNEAKERS #CBF23D</span>
+    </div>
+  </div>
+
+  <div class="specimen">
+    <img src="gene-logo-primary-acid.png" alt="Lockup primário Acid">
+    <div class="specimen-label">
+      <span>01c · PRIMARY / ACID</span>
+      <span class="token">BG #CBF23D · STROKE #0D0D0D · NODES #0D0D0D</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">02 · LOCKUP EMPILHADO</span><br>Vertical</h2>
+  <p class="desc">
+    Uso para formatos verticais ou quadrados: pôsteres, packaging, aplicações onde o horizontal não cabe. Símbolo no topo, GENE grande, SNEAKERS em Acid abaixo, centralizados. O respiro entre símbolo e wordmark permanece em 80px.
+  </p>
+
+  <div class="specimen" style="max-width:500px">
+    <img src="gene-logo-stacked-carbon.png" alt="Lockup empilhado Carbon">
+    <div class="specimen-label">
+      <span>02 · STACKED / CARBON</span>
+      <span class="token">BG #0D0D0D · STROKE #F2EFE9</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">03 · SÍMBOLO ISOLADO</span><br>Brand Mark</h2>
+  <p class="desc">
+    Símbolo sem wordmark, usado como watermark, selo interno do produto (etiqueta, palmilha, sola) e elemento gráfico em peças onde a marca já foi estabelecida. Três ambientes.
+  </p>
+
+  <div class="grid-3">
+    <div>
+      <div class="specimen">
+        <img src="gene-symbol-bone-on-carbon.png" alt="Símbolo Bone sobre Carbon">
+        <div class="specimen-label"><span>03a · BONE / CARBON</span><span class="token">#F2EFE9</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="specimen">
+        <img src="gene-symbol-carbon-on-bone.png" alt="Símbolo Carbon sobre Bone">
+        <div class="specimen-label"><span>03b · CARBON / BONE</span><span class="token">#0D0D0D</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="specimen">
+        <img src="gene-symbol-acid-on-carbon.png" alt="Símbolo Acid sobre Carbon">
+        <div class="specimen-label"><span>03c · ACID / CARBON</span><span class="token">#CBF23D</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">04 · WORDMARK ISOLADO</span><br>Typographic Lockup</h2>
+  <p class="desc">
+    Uso quando o símbolo já está presente em outro elemento da composição (ex.: símbolo no canto, wordmark na base) ou quando o símbolo não cabe — assinaturas de email, rodapés de documento, créditos de vídeo. SNEAKERS sempre em Acid.
+  </p>
+
+  <div class="grid-2">
+    <div class="specimen">
+      <img src="gene-wordmark-carbon.png" alt="Wordmark Carbon">
+      <div class="specimen-label"><span>04a · WORDMARK / CARBON</span><span class="token">#F2EFE9 + #CBF23D</span></div>
+    </div>
+    <div class="specimen">
+      <img src="gene-wordmark-daylight.png" alt="Wordmark Daylight">
+      <div class="specimen-label"><span>04b · WORDMARK / DAYLIGHT</span><span class="token">#0D0D0D + #CBF23D</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">05 · MONOGRAMA G</span><br>Small-scale / Favicon</h2>
+  <p class="desc">
+    Para escalas pequenas onde o símbolo completo perde legibilidade: favicon, touch icon, avatar até 48px, app icon. O G é desenhado com a mesma espessura de traço do símbolo principal, mantendo a linhagem visual.
+  </p>
+
+  <div class="minsize">
+    <div class="minsize-item">
+      <img src="gene-monogram-g.png" alt="Monograma 48px" width="48" height="48">
+      <div class="sz">48 × 48</div>
+      <div class="use">FAVICON</div>
+    </div>
+    <div class="minsize-item">
+      <img src="gene-monogram-g.png" alt="Monograma 96px" width="96" height="96">
+      <div class="sz">96 × 96</div>
+      <div class="use">TOUCH ICON</div>
+    </div>
+    <div class="minsize-item">
+      <img src="gene-monogram-g.png" alt="Monograma 160px" width="160" height="160">
+      <div class="sz">160 × 160</div>
+      <div class="use">AVATAR SOCIAL</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">06 · REGRAS</span><br>Não negociáveis</h2>
+
+  <div class="rules">
+    <h3>Clearspace</h3>
+    <div class="rule-list">
+      <div>
+        <b>Mínimo</b>
+        Altura da letra "G" em todos os lados. Nenhum elemento (texto, imagem, borda) pode invadir essa área.
+      </div>
+      <div>
+        <b>Recomendado</b>
+        2× altura da letra "G" para peças editoriais. Marca respira melhor.
+      </div>
+    </div>
+  </div>
+
+  <div class="rules" style="margin-top:20px">
+    <h3>Tamanhos mínimos</h3>
+    <div class="rule-list">
+      <div>
+        <b>Lockup primário</b>
+        160px largura (tela) · 30mm largura (impressão)
+      </div>
+      <div>
+        <b>Lockup empilhado</b>
+        120px largura (tela) · 25mm largura (impressão)
+      </div>
+      <div>
+        <b>Símbolo isolado</b>
+        64px (tela) · 15mm (impressão)
+      </div>
+      <div>
+        <b>Monograma G</b>
+        16px favicon. Abaixo disso, não usar.
+      </div>
+    </div>
+  </div>
+
+  <div class="rules" style="margin-top:20px">
+    <h3>O que NÃO fazer</h3>
+    <div class="dont-grid">
+      <div class="dont-item no" style="background:var(--bone); color:var(--carbon)">
+        <div class="mono" style="font-size:11px">Distorcer proporções</div>
+        <p>Nunca esticar, comprimir ou inclinar símbolo ou wordmark. Escalar sempre proporcionalmente.</p>
+      </div>
+      <div class="dont-item no" style="background:var(--bone); color:var(--carbon)">
+        <div class="mono" style="font-size:11px">Trocar a cor dos nodes</div>
+        <p>Os 7 pontos do DNA são sempre Acid #CBF23D sobre fundos escuros, Carbon sobre fundos claros ou Acid. Nunca outra cor.</p>
+      </div>
+      <div class="dont-item no" style="background:var(--bone); color:var(--carbon)">
+        <div class="mono" style="font-size:11px">Trocar a tipografia</div>
+        <p>Wordmark vive só em Big Shoulders Display 900. Nunca usar outra fonte no lockup.</p>
+      </div>
+      <div class="dont-item no" style="background:var(--bone); color:var(--carbon)">
+        <div class="mono" style="font-size:11px">Usar sobre fotos sem proteção</div>
+        <p>Se precisar sobrepor foto, criar faixa sólida Carbon atrás do lockup. Nunca "flutuar" sobre imagem.</p>
+      </div>
+      <div class="dont-item yes" style="background:var(--carbon); color:var(--bone)">
+        <div class="mono" style="font-size:11px; color:var(--acid)">Respeitar o ambiente</div>
+        <p>Cada ambiente (Carbon/Daylight/Acid) tem uma versão dedicada. Não improvisar — usar o arquivo certo pro fundo.</p>
+      </div>
+      <div class="dont-item yes" style="background:var(--carbon); color:var(--bone)">
+        <div class="mono" style="font-size:11px; color:var(--acid)">SNEAKERS sempre em Acid</div>
+        <p>Exceto no ambiente Acid, onde SNEAKERS vira Carbon para contraste. É a única exceção.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">07 · APLICAÇÃO POR AMBIENTE</span><br>Logo × Color Environments</h2>
+  <p class="desc">
+    O sistema de logo pluga nos 5 ambientes cromáticos da marca (Carbon, Daylight, Bloom, Chrome, Acid). Nem todo ambiente tem um arquivo de logo dedicado — alguns reusam lockups existentes com ajuste pontual de cor. Esta seção é o mapa canônico de qual versão usar em cada clima e quais ajustes são permitidos.
+  </p>
+
+  <div class="env-table">
+
+    <div class="env-row">
+      <div class="env-chip" style="background:#0D0D0D; color:#F2EFE9">
+        <div class="env-num">ENV-01</div>
+        <div class="env-name">CARBON</div>
+        <div class="env-tag">BASE DEFAULT</div>
+      </div>
+      <div class="env-body">
+        <div class="env-use"><b>Usar:</b> <code>gene-logo-primary-carbon.svg</code> · <code>gene-logo-stacked-carbon.svg</code> · <code>gene-symbol-bone-on-carbon.svg</code></div>
+        <div class="env-tokens">Campo #0D0D0D · Stroke Bone · Nodes Acid · SNEAKERS Acid</div>
+        <div class="env-when">Drop, lançamento, performance, manifesto de noite, hero escuro. Esta é a família DEFAULT — quando em dúvida, Carbon.</div>
+      </div>
+    </div>
+
+    <div class="env-row">
+      <div class="env-chip" style="background:#F2EFE9; color:#0D0D0D; border:1px solid #0D0D0D">
+        <div class="env-num">ENV-02</div>
+        <div class="env-name">DAYLIGHT</div>
+        <div class="env-tag">EDITORIAL</div>
+      </div>
+      <div class="env-body">
+        <div class="env-use"><b>Usar:</b> <code>gene-logo-primary-daylight.svg</code> · <code>gene-symbol-carbon-on-bone.svg</code> · <code>gene-wordmark-daylight.svg</code></div>
+        <div class="env-tokens">Campo Bone · Stroke Carbon · Nodes Carbon · <b style="color:#8CA62D">SNEAKERS em press #8CA62D</b> (acid dimmed), não Acid puro</div>
+        <div class="env-when">Editorial, comparativo de preço, testimonial, institucional, "por que Gene". Acid puro em Daylight fica estridente — o press equilibra.</div>
+        <div class="env-warn"><b>AJUSTE PENDENTE:</b> o arquivo atual usa Acid puro no SNEAKERS. Trocar para #8CA62D na próxima revisão.</div>
+      </div>
+    </div>
+
+    <div class="env-row">
+      <div class="env-chip" style="background:#F5DEE0; color:#2A1418">
+        <div class="env-num">ENV-03</div>
+        <div class="env-name">BLOOM</div>
+        <div class="env-tag">TEXT-FIRST</div>
+      </div>
+      <div class="env-body">
+        <div class="env-use"><b>Usar:</b> lockup Carbon ou Daylight, <b>trocando SNEAKERS para bloom-mid #E8B5BD</b>. Sem arquivo dedicado — é variação tipográfica do Acid slot.</div>
+        <div class="env-tokens">Bloom é text-first: rosa entra como TEXTO (palavra-chave, pill, filete), nunca como campo do logo. O lockup continua rodando sobre Carbon/Daylight; o que muda é só o SNEAKERS.</div>
+        <div class="env-when">Cultura, creator feature, comunidade, afeto, milestone, "@handle". Peças onde a temperatura humana manda.</div>
+        <div class="env-when"><b>Exceção (campo):</b> glass card bloom sobre foto forte — lockup vive do lado de fora do glass, nunca dentro.</div>
+      </div>
+    </div>
+
+    <div class="env-row">
+      <div class="env-chip" style="background:linear-gradient(135deg, #141D26, #2A3845); color:#E8ECF0">
+        <div class="env-num">ENV-04</div>
+        <div class="env-name">CHROME</div>
+        <div class="env-tag">TÉCNICO</div>
+      </div>
+      <div class="env-body">
+        <div class="env-use"><b>Usar:</b> <code>gene-logo-primary-carbon.svg</code> ou <code>gene-symbol-bone-on-carbon.svg</code> sobre o gradiente chrome-deep → chrome-mid. Chrome é escuro, então a família Carbon pluga direto.</div>
+        <div class="env-tokens">Campo gradiente #141D26 → #2A3845 · Stroke Bone · Nodes Acid</div>
+        <div class="env-when">Origem, rota de importação, spec técnica, bastidor curatorial, status de pedido, "como chega". Ambiente de transparência.</div>
+      </div>
+    </div>
+
+    <div class="env-row">
+      <div class="env-chip" style="background:#CBF23D; color:#0D0D0D">
+        <div class="env-num">ENV-05</div>
+        <div class="env-name">ACID HERO</div>
+        <div class="env-tag">RARO · 1 A CADA 15</div>
+      </div>
+      <div class="env-body">
+        <div class="env-use"><b>Usar:</b> <code>gene-logo-primary-acid.svg</code></div>
+        <div class="env-tokens">Campo Acid · Stroke Carbon · Nodes Carbon · SNEAKERS Carbon (única exceção à regra SNEAKERS=Acid)</div>
+        <div class="env-when">Drop hero (1 por lançamento), countdown 24h/48h, manifesto pilar (1x por trimestre), hero de LP. Raridade = valor.</div>
+        <div class="env-warn"><b>Nunca:</b> post comum, 2 Acid seguidos, texto longo, comparativo. Esta versão do logo existe para ser exceção.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="rules" style="margin-top:40px">
+    <h3>Regra matriz — qual ambiente × qual peça</h3>
+    <div class="rule-list">
+      <div><b>Feed Instagram</b>Carbon 44% · Daylight 22% · Bloom text 20% · Chrome 11% · Acid 11% (1 a cada 15 posts)</div>
+      <div><b>Landing page hero</b>Carbon (default) ou Acid (lançamento)</div>
+      <div><b>Editorial / blog</b>Daylight com SNEAKERS em press</div>
+      <div><b>Creator / UGC</b>Bloom text sobre Carbon ou Daylight</div>
+      <div><b>Spec / packaging / FAQ</b>Chrome</div>
+      <div><b>Story drop</b>Carbon → Acid (rising action)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<section>
+  <h2><span class="num">08 · ARQUIVOS</span><br>Onde está o que</h2>
+  <p class="desc">
+    Todos os arquivos vivem no repositório central em /clientes/Gene Sneakers/. O arquivo-mestre é <code style="background:var(--carbon);color:var(--acid);padding:2px 6px">gene-symbol-master.svg</code> — toda variação deriva dele.
+  </p>
+
+  <div style="background:var(--carbon); color:var(--bone); padding:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; line-height:1.9">
+    <div style="color:var(--acid); margin-bottom:16px; letter-spacing:0.2em">MASTER</div>
+    gene-symbol-master.svg <span style="color:var(--mute)">→ arquivo-fonte, não usar direto em peças</span><br><br>
+
+    <div style="color:var(--acid); margin-bottom:16px; letter-spacing:0.2em">LOCKUPS</div>
+    gene-logo-primary-carbon.svg<br>
+    gene-logo-primary-daylight.svg<br>
+    gene-logo-primary-acid.svg<br>
+    gene-logo-stacked-carbon.svg<br><br>
+
+    <div style="color:var(--acid); margin-bottom:16px; letter-spacing:0.2em">SÍMBOLOS</div>
+    gene-symbol-bone-on-carbon.svg<br>
+    gene-symbol-carbon-on-bone.svg<br>
+    gene-symbol-acid-on-carbon.svg<br><br>
+
+    <div style="color:var(--acid); margin-bottom:16px; letter-spacing:0.2em">WORDMARKS &amp; MONOGRAMA</div>
+    gene-wordmark-carbon.svg<br>
+    gene-wordmark-daylight.svg<br>
+    gene-monogram-g.svg
+  </div>
+</section>
+
+<footer>
+  <span>Gene Sneakers · Brand Identity v1.0</span>
+  <span>Lançamento · 21 Abr 2026</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Gene Sneakers — Os modelos que a cultura escolheu · 02/05</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bone:   #F2EFE9;
+      --carbon: #0D0D0D;
+      --acid:   #CBF23D;
+      --press:  #8CA62D;
+      --slate:  #A6A4A1;
+    }
+    body {
+      background: #111;
+      padding: 40px 24px 80px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    .header  { color: var(--acid); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .subhead { color: #444; font-size: 10px; letter-spacing: 2px; margin-bottom: 6px; }
+    .env     { color: var(--press); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; }
+
+    .grid  { display: flex; gap: 24px; flex-wrap: wrap; }
+    .wrap  { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .label { color: #444; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+
+    .slide {
+      width: 270px;
+      height: 338px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--bone);
+    }
+    .slide.carbon { background: var(--carbon); }
+
+    .brand {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .counter {
+      position: absolute;
+      top: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 2px;
+    }
+
+    /* ── Slide 1 — Capa ── */
+    .s1-tag {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s1-h {
+      position: absolute;
+      top: 68px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 50px;
+      color: var(--carbon);
+      text-transform: uppercase;
+      line-height: 0.84;
+      letter-spacing: -1px;
+    }
+    .s1-rule {
+      position: absolute;
+      bottom: 56px; left: 14px; right: 14px;
+      height: 1px; background: var(--slate); opacity: .25;
+    }
+    .s1-sub {
+      position: absolute;
+      bottom: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+
+    /* ── Slides 2–5 — Modelos ── */
+    .model-year {
+      position: absolute;
+      top: 42px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--press);
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .model-name {
+      position: absolute;
+      top: 66px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 42px;
+      color: var(--carbon);
+      text-transform: uppercase;
+      line-height: 0.86;
+      letter-spacing: -0.5px;
+    }
+    .model-body {
+      position: absolute;
+      bottom: 24px; left: 14px; right: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      line-height: 1.7; letter-spacing: 0.5px;
+    }
+    .model-num {
+      position: absolute;
+      bottom: 24px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 48px;
+      color: var(--bone);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+
+    /* ── Slide 6 — CTA Carbon ── */
+    .s6-tag {
+      position: absolute;
+      top: 14px; left: 14px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: #2a2a2a;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .s6-h {
+      position: absolute;
+      top: 58px; left: 14px; right: 14px;
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 32px;
+      color: var(--bone);
+      text-transform: uppercase;
+      line-height: 0.88;
+      letter-spacing: -0.5px;
+    }
+    .s6-h .acid { color: var(--acid); }
+    .s6-bottom {
+      position: absolute;
+      bottom: 14px; left: 14px; right: 14px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .s6-cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 7px; color: var(--slate);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .s6-logo {
+      font-family: 'Big Shoulders Display', sans-serif;
+      font-weight: 900;
+      font-size: 16px; color: var(--bone);
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">Gene Sneakers — Carrossel</div>
+<div class="subhead">02/05 · Cultura sneaker · 6 slides · 1080×1350px</div>
+<div class="env">/ENV-02 · DAYLIGHT — cultura, curadoria editorial</div>
+
+<div class="grid">
+
+  <!-- Slide 1 — Capa -->
+  <div class="wrap">
+    <div class="label">01 / capa</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">1/6</div>
+      <div class="s1-tag">/curadoria</div>
+      <div class="s1-h">CLÁSSICOS<br>NÃO SE<br>EXPLICAM.</div>
+      <div class="s1-rule"></div>
+      <div class="s1-sub">@genesneakers</div>
+    </div>
+  </div>
+
+  <!-- Slide 2 — Air Force 1 -->
+  <div class="wrap">
+    <div class="label">02 / af1</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">2/6</div>
+      <div class="model-year">/air force 1 · 1982</div>
+      <div class="model-name">AIR<br>FORCE 1.</div>
+      <div class="model-num">82</div>
+      <div class="model-body">Primeiro tênis de basquete com Air.<br>Saiu das quadras e nunca mais voltou.<br>Virou streetwear antes de existir essa palavra.</div>
+    </div>
+  </div>
+
+  <!-- Slide 3 — NB 990 -->
+  <div class="wrap">
+    <div class="label">03 / nb990</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">3/6</div>
+      <div class="model-year">/new balance 990 · 1982</div>
+      <div class="model-name">NEW<br>BALANCE<br>990.</div>
+      <div class="model-num">82</div>
+      <div class="model-body">O primeiro tênis que custou $100.<br>Não era luxo — era o melhor material possível.<br>Até hoje é referência.</div>
+    </div>
+  </div>
+
+  <!-- Slide 4 — Samba -->
+  <div class="wrap">
+    <div class="label">04 / samba</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">4/6</div>
+      <div class="model-year">/adidas samba · 1950</div>
+      <div class="model-name">ADIDAS<br>SAMBA.</div>
+      <div class="model-num">50</div>
+      <div class="model-body">Nasceu pro futebol em campo gelado.<br>Virou o tênis de 2024 por conta própria.<br>Setenta anos de história e ainda relevante.</div>
+    </div>
+  </div>
+
+  <!-- Slide 5 — Dunk -->
+  <div class="wrap">
+    <div class="label">05 / dunk</div>
+    <div class="slide">
+      <div class="brand">Gene Sneakers</div>
+      <div class="counter">5/6</div>
+      <div class="model-year">/nike dunk · 1985</div>
+      <div class="model-name">NIKE<br>DUNK.</div>
+      <div class="model-num">85</div>
+      <div class="model-body">Do basquete universitário para a cultura global.<br>A rua adotou antes do mercado entender<br>o que estava acontecendo.</div>
+    </div>
+  </div>
+
+  <!-- Slide 6 — CTA Carbon -->
+  <div class="wrap">
+    <div class="label">06 / cta · carbon</div>
+    <div class="slide carbon">
+      <div class="s6-tag">Gene Sneakers</div>
+      <div class="s6-h">
+        AIR FORCE 1.<br>990. SAMBA.<br>DUNK.<br>ENCOMENDA<br>ABERTA.<br><span class="acid">QUAL É O<br>SEU?</span>
+      </div>
+      <div class="s6-bottom">
+        <div class="s6-cta">Manda mensagem.</div>
+        <div class="s6-logo">Gene</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<footer class="sb-footer">
+  <div class="sb-container">
+
+    <div class="sb-footer__top">
+
+      <div class="sb-footer__brand">
+        <a class="sb-logo" href="/">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+        <p class="sb-footer__tagline">sua apple store particular. novos sob encomenda e seminovos com garantia, entrega em todo o Brasil.</p>
+      </div>
+
+      <nav class="sb-footer__col" aria-label="Navegação do rodapé">
+        <span class="sb-footer__col-title">navegar</span>
+        <a href="/pages/produtos">produtos</a>
+        <a href="/blogs/news">blog</a>
+        <a href="/#sobre">sobre</a>
+        <a href="/#contato">contato</a>
+      </nav>
+
+      <div class="sb-footer__col">
+        <span class="sb-footer__col-title">falar com a gente</span>
+        <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://instagram.com/{{ settings.instagram_handle | remove: '@' | strip }}" target="_blank" rel="noopener">{{ settings.instagram_handle }}</a>
+        <span class="sb-footer__muted">{{ settings.location }}</span>
+      </div>
+
+    </div>
+
+    <div class="sb-footer__bottom">
+      <span class="sb-footer__copy">© {{ 'now' | date: '%Y' }} {{ settings.copyright_name }}</span>
+      <span class="sb-footer__copy">atendemos todo o Brasil · pedidos pelo WhatsApp</span>
+    </div>
+
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Rodapé"
+}
+{% endschema %}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 40" width="1056" height="40">
+  <!-- FUNDO EXTERIOR — 264×10mm | #181828 | @smartbase.br centralizado -->
+
+  <rect width="1056" height="40" fill="#181828"/>
+
+  <!-- @smartbase.br centralizado -->
+  <text x="528" y="26"
+    text-anchor="middle"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="16" font-weight="300" letter-spacing="2"
+    fill="#3E3E5C">@smartbase.br</text>
+</svg>

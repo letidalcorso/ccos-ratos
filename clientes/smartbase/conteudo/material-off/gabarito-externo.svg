@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2432 1340" width="2432" height="1340">
+  <!--
+    GABARITO EXTERNO — Sacola de Papel Teepee M
+    Printi · L264 × A231 × P10mm
+    Escala: 4px = 1mm
+
+    Layout (esquerda → direita):
+    [Lat E 10mm] [FRENTE 264mm] [Lat D 10mm] [VERSO 264mm]
+    [Fundo Exterior 264×10mm — sob a face Frente]
+
+    Acabamentos especiais:
+    - VERNIZ UV LOCALIZADO: lente da câmera (raio ≈384px a partir do centro 880,462 da frente)
+    - HOT STAMPING PRATA: frase "quem tem não volta atrás." no verso — máscara 100% C
+    - LAMINAÇÃO MATTE: toda a superfície externa
+    - ALÇA: fita plana preta, 2 furos horizontais
+
+    REMOVER notas de produção (barras coloridas) antes de enviar para a gráfica.
+  -->
+
+  <!-- Pasteboard -->
+  <rect width="2432" height="1340" fill="#1E1E1E"/>
+
+  <!-- ─── ÁREA IMPRESSA ─── -->
+  <!-- Marcas de registro (cruciformes nos cantos) -->
+  <g stroke="#555" stroke-width="1" fill="none">
+    <!-- Canto sup-esq -->
+    <line x1="66" y1="76" x2="74" y2="76"/><line x1="70" y1="72" x2="70" y2="80"/>
+    <!-- Canto sup-dir -->
+    <line x1="2298" y1="76" x2="2306" y2="76"/><line x1="2302" y1="72" x2="2302" y2="80"/>
+    <!-- Canto inf-esq -->
+    <line x1="66" y1="1148" x2="74" y2="1148"/><line x1="70" y1="1144" x2="70" y2="1152"/>
+    <!-- Canto inf-dir -->
+    <line x1="2298" y1="1148" x2="2306" y2="1148"/><line x1="2302" y1="1144" x2="2302" y2="1152"/>
+  </g>
+
+  <!-- ────────────────────────── -->
+  <!-- CABEÇALHO -->
+  <!-- ────────────────────────── -->
+  <text x="70" y="46"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="16" font-weight="700" fill="#888" letter-spacing="2">
+    SMARTBASE · SACOLA TEEPEE M · EXTERNO · L264×A231×P10mm
+  </text>
+  <text x="2362" y="46"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" font-weight="300" fill="#555" letter-spacing="1"
+    text-anchor="end">
+    4px = 1mm · Printi
+  </text>
+
+  <!-- Linha divisória cabeçalho -->
+  <line x1="70" y1="58" x2="2362" y2="58" stroke="#333" stroke-width="0.5"/>
+
+  <!-- ────────────────────────── -->
+  <!-- FACE 03: LATERAL ESQUERDA -->
+  <!-- x=70, y=80 | 40×924 -->
+  <!-- ────────────────────────── -->
+  <svg x="70" y="80" width="40" height="924" viewBox="0 0 40 924">
+    <!-- LATERAL (GUSSET) — 10×231mm | Azul #3E82F7 sólido -->
+    <rect width="40" height="924" fill="#3E82F7"/>
+  </svg>
+
+  <!-- ────────────────────────── -->
+  <!-- FACE 01: FRENTE -->
+  <!-- x=110, y=80 | 1056×924 -->
+  <!-- ────────────────────────── -->
+  <svg x="110" y="80" width="1056" height="924" viewBox="0 0 1056 924">
+    <defs>
+      <radialGradient id="g-lens" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#0e0e1e"/>
+        <stop offset="55%" stop-color="#090912"/>
+        <stop offset="100%" stop-color="#0c0c1a"/>
+      </radialGradient>
+      <radialGradient id="g-uvGloss" cx="36%" cy="30%" r="52%">
+        <stop offset="0%" stop-color="white" stop-opacity="0.10"/>
+        <stop offset="50%" stop-color="white" stop-opacity="0.03"/>
+        <stop offset="100%" stop-color="white" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="g-fadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#181828" stop-opacity="1"/>
+        <stop offset="30%" stop-color="#181828" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <rect width="1056" height="924" fill="#181828"/>
+    <circle cx="880" cy="462" r="620" fill="#141424" stroke="#1E1E30" stroke-width="2"/>
+    <circle cx="880" cy="462" r="504" fill="url(#g-lens)" stroke="#141424" stroke-width="1.5"/>
+    <circle cx="880" cy="462" r="384" fill="#0a0a16" stroke="#101020" stroke-width="1"/>
+    <circle cx="880" cy="462" r="256" fill="#060610" stroke="#3E82F7" stroke-width="0.6" opacity="0.20"/>
+    <circle cx="880" cy="462" r="136" fill="#030308"/>
+    <circle cx="880" cy="462" r="52" fill="#010103"/>
+    <circle cx="880" cy="462" r="16" fill="#000001"/>
+    <circle cx="880" cy="462" r="504" fill="url(#g-uvGloss)"/>
+    <circle cx="880" cy="462" r="384" fill="none" stroke="white" stroke-width="1" opacity="0.06"/>
+    <rect width="1056" height="924" fill="url(#g-fadeLeft)"/>
+    <!-- Apple logo — topo centro -->
+    <text x="528" y="152" text-anchor="middle"
+      font-family="-apple-system, 'SF Pro Display', system-ui, sans-serif"
+      font-size="48" fill="white" opacity="0.85">&#xF8FF;</text>
+    <!-- Wordmark — pill style, canto inferior esquerdo -->
+    <rect x="56" y="836" width="168" height="42" rx="21"
+      fill="none" stroke="#4A4A68" stroke-width="1.5"/>
+    <circle cx="78" cy="857" r="5" fill="#3E82F7"/>
+    <text x="92" y="864"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="26" font-weight="300" letter-spacing="-0.3"
+      fill="#7A7A96">smart</text>
+    <text x="157" y="864"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="26" font-weight="700" letter-spacing="-0.3"
+      fill="#F2F2F6">base</text>
+    <!-- @smartbase.br — canto inferior direito -->
+    <text x="992" y="864" text-anchor="end"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="26" font-weight="300" letter-spacing="-0.3"
+      fill="white">@smartbase.br</text>
+    <!-- Nota de produção (remover antes de enviar para gráfica) -->
+    <rect x="0" y="0" width="300" height="28" fill="#3E82F7" opacity="0.15"/>
+    <text x="8" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" fill="#3E82F7" opacity="0.8">VERNIZ UV: lente — raio 384px · centro (880, 462)</text>
+  </svg>
+
+  <!-- ────────────────────────── -->
+  <!-- FACE 03: LATERAL DIREITA -->
+  <!-- x=1166, y=80 | 40×924 -->
+  <!-- ────────────────────────── -->
+  <svg x="1166" y="80" width="40" height="924" viewBox="0 0 40 924">
+    <rect width="40" height="924" fill="#3E82F7"/>
+  </svg>
+
+  <!-- ────────────────────────── -->
+  <!-- FACE 02: VERSO -->
+  <!-- x=1206, y=80 | 1056×924 -->
+  <!-- ────────────────────────── -->
+  <svg x="1206" y="80" width="1056" height="924" viewBox="0 0 1056 924">
+    <rect width="1056" height="924" fill="#181828"/>
+    <!-- Apple logo — topo centro -->
+    <text x="528" y="152" text-anchor="middle"
+      font-family="-apple-system, 'SF Pro Display', system-ui, sans-serif"
+      font-size="48" fill="white" opacity="0.85">&#xF8FF;</text>
+    <!-- Frase — hot stamping prata -->
+    <text x="528" y="408"
+      text-anchor="middle"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="72" font-weight="300" letter-spacing="-1"
+      fill="#C2C6CC">quem tem</text>
+    <text x="528" y="508"
+      text-anchor="middle"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="72" font-weight="300" letter-spacing="-1"
+      fill="#C2C6CC">não volta atrás.</text>
+    <!-- Wordmark — pill style, centralizado -->
+    <rect x="445" y="598" width="166" height="42" rx="21"
+      fill="none" stroke="#4A4A68" stroke-width="1.5"/>
+    <circle cx="467" cy="619" r="5" fill="#3E82F7"/>
+    <text x="481" y="626"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="26" font-weight="300" letter-spacing="-0.3"
+      fill="#7A7A96">smart</text>
+    <text x="546" y="626"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="26" font-weight="700" letter-spacing="-0.3"
+      fill="#F2F2F6">base</text>
+    <!-- Nota de produção (remover antes de enviar para gráfica) -->
+    <rect x="0" y="0" width="380" height="28" fill="#C2C6CC" opacity="0.15"/>
+    <text x="8" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="11" fill="#C2C6CC" opacity="0.8">HOT STAMPING PRATA: frase — máscara 100% C</text>
+  </svg>
+
+  <!-- ────────────────────────── -->
+  <!-- FACE 04: FUNDO EXTERIOR -->
+  <!-- x=110, y=1004 | 1056×40 -->
+  <!-- ────────────────────────── -->
+  <svg x="110" y="1004" width="1056" height="40" viewBox="0 0 1056 40">
+    <rect width="1056" height="40" fill="#181828"/>
+    <text x="528" y="26"
+      text-anchor="middle"
+      font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      font-size="16" font-weight="300" letter-spacing="2"
+      fill="#3E3E5C">@smartbase.br</text>
+  </svg>
+
+  <!-- ────────────────────────── -->
+  <!-- VINCOS (fold lines) — ciano tracejado -->
+  <!-- ────────────────────────── -->
+  <!-- Vinco lat-E / frente -->
+  <line x1="110" y1="72" x2="110" y2="1052" stroke="#00FFFF" stroke-width="0.6" stroke-dasharray="6,3"/>
+  <!-- Vinco frente / lat-D -->
+  <line x1="1166" y1="72" x2="1166" y2="1052" stroke="#00FFFF" stroke-width="0.6" stroke-dasharray="6,3"/>
+  <!-- Vinco lat-D / verso -->
+  <line x1="1206" y1="72" x2="1206" y2="1004" stroke="#00FFFF" stroke-width="0.6" stroke-dasharray="6,3"/>
+  <!-- Vinco fundo (horizontal, base da sacola) -->
+  <line x1="102" y1="1004" x2="1174" y2="1004" stroke="#00FFFF" stroke-width="0.6" stroke-dasharray="6,3"/>
+
+  <!-- CORTE (cut line) — vermelho -->
+  <!-- Contorno geral externo -->
+  <rect x="70" y="80" width="2192" height="964"
+    fill="none" stroke="#FF3B30" stroke-width="0.8" stroke-dasharray="10,4"/>
+
+  <!-- ────────────────────────── -->
+  <!-- COTAS (dimension labels) -->
+  <!-- ────────────────────────── -->
+  <!-- Cota: Lateral E (10mm) -->
+  <text x="90" y="1068"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#888" text-anchor="middle">10mm</text>
+  <!-- Cota: Frente (264mm) -->
+  <text x="638" y="1068"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#888" text-anchor="middle">FRENTE · 264mm</text>
+  <!-- Cota: Lateral D (10mm) -->
+  <text x="1186" y="1068"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#888" text-anchor="middle">10mm</text>
+  <!-- Cota: Verso (264mm) -->
+  <text x="1734" y="1068"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#888" text-anchor="middle">VERSO · 264mm</text>
+  <!-- Cota: Altura (231mm) -->
+  <text x="36" y="542"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#888" text-anchor="middle"
+    transform="rotate(-90, 36, 542)">231mm</text>
+  <!-- Cota: Fundo (10mm) -->
+  <text x="638" y="1100"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#888" text-anchor="middle">FUNDO EXTERIOR · 264×10mm</text>
+
+  <!-- Linhas de cota -->
+  <line x1="70" y1="1056" x2="110" y2="1056" stroke="#555" stroke-width="0.5"/>
+  <line x1="110" y1="1056" x2="1166" y2="1056" stroke="#555" stroke-width="0.5"/>
+  <line x1="1166" y1="1056" x2="1206" y2="1056" stroke="#555" stroke-width="0.5"/>
+  <line x1="1206" y1="1056" x2="2262" y2="1056" stroke="#555" stroke-width="0.5"/>
+  <!-- Setas laterais nos fins das cotas -->
+  <line x1="70" y1="1050" x2="70" y2="1062" stroke="#555" stroke-width="0.5"/>
+  <line x1="110" y1="1050" x2="110" y2="1062" stroke="#555" stroke-width="0.5"/>
+  <line x1="1166" y1="1050" x2="1166" y2="1062" stroke="#555" stroke-width="0.5"/>
+  <line x1="1206" y1="1050" x2="1206" y2="1062" stroke="#555" stroke-width="0.5"/>
+  <line x1="2262" y1="1050" x2="2262" y2="1062" stroke="#555" stroke-width="0.5"/>
+
+  <!-- ────────────────────────── -->
+  <!-- LEGENDA ACABAMENTOS -->
+  <!-- ────────────────────────── -->
+  <text x="70" y="1140"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" font-weight="700" fill="#666">ACABAMENTOS:</text>
+  <!-- Verniz UV -->
+  <rect x="184" y="1127" width="12" height="12" fill="#3E82F7" opacity="0.5" rx="1"/>
+  <text x="202" y="1139"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#666">Verniz UV localizado — lente câmera</text>
+  <!-- Hot Stamping -->
+  <rect x="418" y="1127" width="12" height="12" fill="#C2C6CC" opacity="0.7" rx="1"/>
+  <text x="436" y="1139"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#666">Hot stamping PRATA — frase verso (máscara 100% C)</text>
+  <!-- Laminação -->
+  <text x="746" y="1139"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="13" fill="#666">Laminação matte toda a superfície externa</text>
+
+  <!-- Legenda linhas -->
+  <line x1="70" y1="1170" x2="90" y2="1170" stroke="#00FFFF" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="98" y="1174" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#555">Vinco</text>
+  <line x1="150" y1="1170" x2="170" y2="1170" stroke="#FF3B30" stroke-width="1" stroke-dasharray="10,4"/>
+  <text x="178" y="1174" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#555">Corte</text>
+
+  <!-- Nota inferior -->
+  <text x="2362" y="1310"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="11" fill="#444" text-anchor="end">
+    Remover barras de nota de produção antes de enviar para gráfica
+  </text>
+</svg>

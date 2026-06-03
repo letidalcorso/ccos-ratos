@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Gene Sneakers — Wordmark isolado sobre Carbon -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 500" width="1400" height="500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;display=swap');
+      .display { font-family: 'Big Shoulders Display', 'Arial Black', sans-serif; font-weight: 900; letter-spacing: -0.03em; text-transform: uppercase; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="500" fill="#0D0D0D"/>
+
+  <text x="700" y="310" class="display" font-size="340" fill="#F2EFE9" text-anchor="middle">GENE</text>
+  <text x="700" y="420" class="display" font-size="100" fill="#CBF23D" text-anchor="middle" letter-spacing="0.06em">SNEAKERS</text>
+</svg>

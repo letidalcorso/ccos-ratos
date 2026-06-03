@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap');</style>
+  </defs>
+
+  <rect width="1080" height="1080" fill="#07070E"/>
+
+  <!-- Pilar pill -->
+  <rect x="80" y="72" width="136" height="28" rx="14" fill="#0A201A"/>
+  <text x="148" y="91" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#10B981" text-anchor="middle" letter-spacing="1.5">AUTORIDADE</text>
+
+  <!-- Counter -->
+  <text x="1000" y="91" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#4A4A60" text-anchor="end">2 / 4</text>
+
+  <!-- Accent line -->
+  <rect x="80" y="128" width="64" height="5" rx="2.5" fill="#10B981"/>
+
+  <!-- Headline -->
+  <text x="80" y="272" font-family="'Inter', system-ui, sans-serif" font-size="72" font-weight="800" fill="#F2F2F6">o IMEI</text>
+  <text x="80" y="358" font-family="'Inter', system-ui, sans-serif" font-size="72" font-weight="800" fill="#10B981">não mente.</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="400" x2="920" y2="400" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Corpo educativo, tom neutro -->
+  <text x="80" y="464" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="400" fill="#7A7A96">todo iPhone tem um número de série único.</text>
+  <text x="80" y="504" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="400" fill="#7A7A96">a Apple registra cada um deles.</text>
+  <text x="80" y="572" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="600" fill="#C0C0D0">você digita o IMEI no site da Apple</text>
+  <text x="80" y="612" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="600" fill="#C0C0D0">e vê: modelo, cor, garantia — tudo.</text>
+  <text x="80" y="676" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">na Smartbase, você recebe o IMEI</text>
+  <text x="80" y="716" font-family="'Inter', system-ui, sans-serif" font-size="26" font-weight="700" fill="#F2F2F6">antes de qualquer pagamento.</text>
+
+  <!-- Swipe -->
+  <text x="80" y="790" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="600" fill="#3E82F7">próximo →</text>
+
+  <!-- Footer -->
+  <line x1="80" y1="900" x2="1000" y2="900" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="936" font-family="'Inter', system-ui, sans-serif" font-size="24" fill="#F2F2F6">
+    <tspan font-weight="300" fill="#C0C0D0">smart</tspan><tspan fill="#3E82F7" font-size="11" baseline-shift="4">●</tspan><tspan font-weight="700">base</tspan>
+  </text>
+  <text x="1000" y="936" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="500" fill="#7A7A96" text-anchor="end">@smartbase.br</text>
+</svg>

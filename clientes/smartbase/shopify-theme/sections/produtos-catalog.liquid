@@ -1,0 +1,407 @@
+<!-- Hero da página -->
+<div class="sb-produtos-hero">
+  <div class="sb-produtos-hero__bar"></div>
+  <div class="sb-container">
+    <span class="sb-badge">{{ section.settings.badge }}</span>
+    <h1>{{ section.settings.title }}<br><span class="sb-blue">{{ section.settings.title_blue }}</span></h1>
+    <p class="sb-produtos-hero__sub">{{ section.settings.subtext }}</p>
+  </div>
+</div>
+
+<!-- Filtros -->
+<div class="sb-filtros">
+  <div class="sb-container">
+    <div class="sb-filtros__inner">
+      <button class="sb-filtro-btn active" data-filtro="novos">novos</button>
+      <button class="sb-filtro-btn sb-filtro-btn--seminovos" data-filtro="seminovos">seminovos</button>
+    </div>
+  </div>
+</div>
+
+<!-- Grid de produtos -->
+<style>
+  .sb-card__img { height: {{ section.settings.card_img_height }}px; }
+  .sb-card__img img { width: 100%; height: 100%; object-fit: {{ section.settings.card_img_fit }}; }
+</style>
+{%- assign novos_count = 0 -%}
+{%- assign seminovos_count = 0 -%}
+{%- for block in section.blocks -%}
+  {%- if block.type == 'produto_novo' -%}{%- assign novos_count = novos_count | plus: 1 -%}{%- endif -%}
+  {%- if block.type == 'produto_seminovo' -%}{%- assign seminovos_count = seminovos_count | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+
+<section class="sb-section" style="padding-top: 0;">
+  <div class="sb-container">
+
+    <!-- Seção NOVOS -->
+    <div class="sb-produtos-section" data-categoria="novos">
+      <div class="sb-cat-header">
+        <span class="sb-badge sb-badge--blue">linha 2025</span>
+        <h2>iPhone 17</h2>
+      </div>
+      {%- if novos_count > 0 -%}
+      <div class="sb-produtos-grid">
+
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'produto_novo' -%}
+
+            <div class="sb-card{% if block.settings.featured %} sb-card--featured{% endif %}" data-categoria="novos" {{ block.shopify_attributes }}>
+              <div class="sb-card__img{% if block.settings.dark_bg %} sb-card__img--dark{% endif %}{% if block.settings.blend_bg %} sb-card__img--blend{% endif %}">
+                {%- if block.settings.product_image != blank -%}
+                  <img src="{{ block.settings.product_image | image_url: width: 1200 }}" alt="{{ block.settings.name }}" loading="lazy">
+                {%- else -%}
+                  <div class="sb-card__icon-wrap">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="14" y="3" width="20" height="42" rx="5" stroke="#3E82F7" stroke-width="2"/><rect x="19" y="7" width="10" height="2.5" rx="1.25" fill="#3E82F7" opacity="0.5"/><circle cx="24" cy="40" r="2" fill="#3E82F7" opacity="0.5"/></svg>
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.badge != blank -%}
+                  <span class="sb-card__badge">{{ block.settings.badge }}</span>
+                {%- endif -%}
+              </div>
+              <div class="sb-card__body">
+                <div class="sb-card__name">{{ block.settings.name }}</div>
+                <p class="sb-card__sub">{{ block.settings.description }}</p>
+                {%- if block.settings.specs != blank -%}
+                  <div class="sb-card__specs">
+                    {%- assign specs = block.settings.specs | split: ',' -%}
+                    {%- for spec in specs -%}
+                      <span class="sb-card__spec">{{ spec | strip }}</span>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.price != blank -%}
+                  <div class="sb-card__price">{{ block.settings.price }}</div>
+                {%- endif -%}
+              </div>
+              <div class="sb-card__footer">
+                <a href="https://wa.me/{{ settings.whatsapp_number }}?text={{ block.settings.whatsapp_message | url_encode }}" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                  fazer pedido
+                </a>
+              </div>
+            </div>
+
+          {%- endif -%}
+        {%- endfor -%}
+
+      </div>
+      {%- else -%}
+      <div class="sb-produtos-empty">
+        <p class="sb-produtos-empty__icon" aria-hidden="true">✦</p>
+        <p class="sb-produtos-empty__title">catálogo chegando.</p>
+        <p class="sb-produtos-empty__text">estamos montando esta seção. enquanto isso, chama no WhatsApp — a gente te conta na hora o que tem disponível.</p>
+        <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener" class="sb-btn sb-btn--wa">abrir WhatsApp</a>
+      </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Seção SEMINOVOS -->
+    <div class="sb-seminovos-section" data-categoria="seminovos">
+      <div class="sb-cat-header">
+        <span class="sb-badge" style="border-color:rgba(16,185,129,0.4);color:#10B981;background:rgba(16,185,129,0.07);">em estoque · 3 meses de garantia</span>
+        <h2>seminovos</h2>
+        <p style="font-size:14px;color:var(--text-secondary);font-weight:300;margin-top:6px;">{{ section.settings.seminovos_desc }}</p>
+      </div>
+      {%- if seminovos_count > 0 -%}
+      <div class="sb-produtos-grid">
+
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'produto_seminovo' -%}
+
+            <div class="sb-card sb-card--seminovo" data-categoria="seminovos" {{ block.shopify_attributes }}>
+              <div class="sb-card__img{% if block.settings.blend_bg %} sb-card__img--blend{% endif %}" style="position:relative;">
+                {%- if block.settings.product_image != blank -%}
+                  <img src="{{ block.settings.product_image | image_url: width: 900 }}" alt="{{ block.settings.name }}" loading="lazy">
+                {%- else -%}
+                  <img src="{{ 'seminovo-iphone14pro-frente.png' | asset_url }}" alt="{{ block.settings.name }}" loading="lazy">
+                {%- endif -%}
+                <span class="sb-card__estado">{{ block.settings.estado }}</span>
+              </div>
+              <div class="sb-card__body">
+                <div class="sb-card__name">{{ block.settings.name }}</div>
+                <p class="sb-card__sub">{{ block.settings.specs }}</p>
+                {%- if block.settings.bateria != blank -%}
+                  <div class="sb-card__bateria">bateria {{ block.settings.bateria }}</div>
+                {%- endif -%}
+                {%- if block.settings.price != blank -%}
+                  <div class="sb-card__price">{{ block.settings.price }}</div>
+                {%- endif -%}
+              </div>
+              <div class="sb-card__footer">
+                <a href="https://wa.me/{{ settings.whatsapp_number }}?text={{ block.settings.whatsapp_message | url_encode }}" target="_blank" rel="noopener" class="sb-btn sb-btn--primary">
+                  tenho interesse
+                </a>
+              </div>
+            </div>
+
+          {%- endif -%}
+        {%- endfor -%}
+
+      </div>
+      {%- else -%}
+      <div class="sb-produtos-empty">
+        <p class="sb-produtos-empty__icon" aria-hidden="true">✦</p>
+        <p class="sb-produtos-empty__title">seminovos chegando.</p>
+        <p class="sb-produtos-empty__text">os aparelhos avaliados entram aqui em breve. quer saber o que já temos? chama no WhatsApp.</p>
+        <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener" class="sb-btn sb-btn--wa">abrir WhatsApp</a>
+      </div>
+      {%- endif -%}
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA final -->
+<section style="background:var(--surface-1);border-top:var(--border-subtle);padding:80px 0;text-align:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--font-display);font-size:clamp(100px,18vw,260px);font-weight:800;color:var(--text-primary);opacity:0.025;pointer-events:none;white-space:nowrap;">smartbase</div>
+  <div class="sb-container" style="position:relative;z-index:1;">
+    <p style="font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">{{ section.settings.cta_label }}</p>
+    <h2 style="font-family:var(--font-display);font-size:clamp(28px,4.5vw,52px);font-weight:800;margin-bottom:12px;line-height:1.1;">
+      {{ section.settings.cta_headline }}<br><span class="sb-blue">{{ section.settings.cta_headline_blue }}</span>
+    </h2>
+    <p style="color:var(--text-secondary);font-weight:300;margin-bottom:32px;font-size:16px;">{{ section.settings.cta_subtext }}</p>
+    <a href="https://wa.me/{{ settings.whatsapp_number }}" target="_blank" rel="noopener" class="sb-btn sb-btn--wa">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.519 5.854L.057 23.617a.75.75 0 0 0 .921.921l5.764-1.462A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.836 0-3.565-.476-5.074-1.313l-.363-.21-3.773.957.974-3.768-.23-.374A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      abrir whatsapp
+    </a>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var filtros = document.querySelector('.sb-filtros');
+    if (filtros) {
+      var offsetTop = filtros.offsetTop;
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > offsetTop) {
+          filtros.classList.add('sb-filtros--fixed');
+        } else {
+          filtros.classList.remove('sb-filtros--fixed');
+        }
+      }, { passive: true });
+    }
+
+    var btns = document.querySelectorAll('.sb-filtro-btn');
+    var sections = document.querySelectorAll('.sb-produtos-section, .sb-seminovos-section');
+
+    function applyFilter(filtro) {
+      sections.forEach(function (sec) {
+        sec.style.display = sec.dataset.categoria === filtro ? '' : 'none';
+      });
+    }
+
+    applyFilter('novos');
+
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        applyFilter(btn.dataset.filtro);
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Catálogo de Produtos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge",
+      "label": "Badge do hero",
+      "default": "sob encomenda · garantia Apple · entrega nacional"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título do hero",
+      "default": "o Apple que você quer."
+    },
+    {
+      "type": "text",
+      "id": "title_blue",
+      "label": "Título em azul",
+      "default": "novo ou seminovo."
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtítulo do hero",
+      "default": "tudo importado, com garantia Apple ativa. pedido via WhatsApp, entrega em todo o Brasil em até 7 dias."
+    },
+    {
+      "type": "textarea",
+      "id": "seminovos_desc",
+      "label": "Descrição da seção seminovos",
+      "default": "cada aparelho avaliado antes de ser anunciado. você sabe exatamente o que compra."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA final — label pequeno",
+      "default": "não achou o que procura?"
+    },
+    {
+      "type": "text",
+      "id": "cta_headline",
+      "label": "CTA final — título",
+      "default": "fala com a gente."
+    },
+    {
+      "type": "text",
+      "id": "cta_headline_blue",
+      "label": "CTA final — título em azul",
+      "default": "a gente resolve."
+    },
+    {
+      "type": "text",
+      "id": "cta_subtext",
+      "label": "CTA final — subtítulo",
+      "default": "qualquer produto Apple — se existe, a gente consegue."
+    },
+    {
+      "type": "range",
+      "id": "card_img_height",
+      "label": "Altura da imagem dos cards",
+      "min": 160,
+      "max": 480,
+      "step": 20,
+      "default": 280,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "card_img_fit",
+      "label": "Ajuste da imagem",
+      "options": [
+        { "value": "contain", "label": "Mostrar inteira (sem corte)" },
+        { "value": "cover", "label": "Preencher (com corte)" }
+      ],
+      "default": "contain"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "produto_novo",
+      "name": "Produto Novo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Foto do produto"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nome do produto",
+          "default": "iPhone 17 Pro"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Descrição",
+          "default": "câmera profissional, chip A19 Pro, tela ProMotion 120Hz."
+        },
+        {
+          "type": "text",
+          "id": "specs",
+          "label": "Especificações (separe por vírgula)",
+          "default": "128GB, 256GB, 512GB, 1TB"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Preço (ex: R$ 7.999 — deixe vazio pra não mostrar)"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge (ex: mais vendido)"
+        },
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Card em destaque (borda azul)",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "dark_bg",
+          "label": "Imagem em fundo escuro (sem mix-blend)",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "blend_bg",
+          "label": "Remover fundo branco da foto",
+          "info": "Ative se a foto tiver fundo branco — some com o fundo e deixa só o produto",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_message",
+          "label": "Mensagem pré-preenchida no WhatsApp",
+          "default": "quero fazer um pedido de iPhone 17 Pro"
+        }
+      ]
+    },
+    {
+      "type": "produto_seminovo",
+      "name": "Produto Seminovo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Foto do aparelho"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nome do produto",
+          "default": "iPhone 14 Pro Max"
+        },
+        {
+          "type": "text",
+          "id": "specs",
+          "label": "Especificações (armazenamento, cor, estado, etc.)",
+          "default": "256GB · roxo profundo · sem caixa"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Preço (ex: R$ 3.499 — deixe vazio pra não mostrar)"
+        },
+        {
+          "type": "text",
+          "id": "bateria",
+          "label": "Bateria (ex: 89%)"
+        },
+        {
+          "type": "text",
+          "id": "estado",
+          "label": "Estado",
+          "default": "excelente"
+        },
+        {
+          "type": "checkbox",
+          "id": "blend_bg",
+          "label": "Remover fundo branco da foto",
+          "info": "Ative se a foto tiver fundo branco — some com o fundo e deixa só o produto",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "whatsapp_message",
+          "label": "Mensagem pré-preenchida no WhatsApp",
+          "default": "tenho interesse no iPhone 14 Pro Max 256GB roxo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Catálogo de Produtos"
+    }
+  ]
+}
+{% endschema %}

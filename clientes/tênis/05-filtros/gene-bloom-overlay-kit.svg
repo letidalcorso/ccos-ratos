@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!--
+    Gene Sneakers · BLOOM Overlay Kit (Figma)
+
+    MOOD: rosé, soft, emocional. Intimidade, detalhe, textura humana.
+
+    Ordem dos layers (de baixo pra cima) + blend mode a aplicar:
+    ──────────────────────────────────────────────────────
+    Layer 01 · rose-lift-softlight         → SOFT LIGHT · 60%
+    Layer 02 · peach-wash-overlay          → OVERLAY · 40%
+    Layer 03 · magenta-mids-multiply       → MULTIPLY · 20%
+    Layer 04 · cream-highlights-screen     → SCREEN · 15%
+    Layer 05 · soft-vignette-multiply      → MULTIPLY · 30%
+    (grain separada · gene-grain-texture.png · Overlay 15%)
+    ──────────────────────────────────────────────────────
+  -->
+
+  <defs>
+    <radialGradient id="bloomVignette" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="65%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2A1A20" stop-opacity="0.40"/>
+    </radialGradient>
+  </defs>
+
+  <!-- LAYER 01 · Rose lift (Soft Light 60%) -->
+  <g id="rose-lift-softlight" opacity="0.6">
+    <rect width="1080" height="1350" fill="#F5D8DC"/>
+  </g>
+
+  <!-- LAYER 02 · Peach wash (Overlay 40%) -->
+  <g id="peach-wash-overlay" opacity="0.4">
+    <rect width="1080" height="1350" fill="#F0B590"/>
+  </g>
+
+  <!-- LAYER 03 · Magenta midtones (Multiply 20%) -->
+  <g id="magenta-mids-multiply" opacity="0.2">
+    <rect width="1080" height="1350" fill="#D89AA8"/>
+  </g>
+
+  <!-- LAYER 04 · Cream highlights (Screen 15%) -->
+  <g id="cream-highlights-screen" opacity="0.15">
+    <rect width="1080" height="1350" fill="#FFF0E5"/>
+  </g>
+
+  <!-- LAYER 05 · Soft vignette (Multiply 30%) -->
+  <g id="soft-vignette-multiply" opacity="0.3">
+    <rect width="1080" height="1350" fill="url(#bloomVignette)"/>
+  </g>
+
+  <!-- GUIDE -->
+  <g id="GUIDE-REMOVER-DEPOIS" opacity="0.85">
+    <rect x="40" y="40" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="92" font-family="'IBM Plex Mono',monospace" font-weight="500" font-size="28" fill="#C4FF3C" letter-spacing="0.1em">GENE · BLOOM OVERLAY KIT</text>
+    <rect x="40" y="1230" width="1000" height="80" fill="#0D0D0D"/>
+    <text x="60" y="1260" font-family="'IBM Plex Mono',monospace" font-size="16" fill="#F2EFE9">1. soft 60%  ·  2. ovl 40%  ·  3. mult 20%  ·  4. scr 15%  ·  5. mult 30%</text>
+    <text x="60" y="1285" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">mood: rosé · soft · emocional · intimidade</text>
+    <text x="60" y="1305" font-family="'IBM Plex Mono',monospace" font-size="14" fill="#A6A4A1">grain separado (Overlay 15%) · delete guide antes de usar</text>
+  </g>
+</svg>

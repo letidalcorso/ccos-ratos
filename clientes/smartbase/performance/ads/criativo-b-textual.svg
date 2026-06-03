@@ -1,0 +1,63 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      text { font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    </style>
+    <!-- Subtle glow behind the 30% -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3E82F7" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#3E82F7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- Glow behind hero number -->
+  <ellipse cx="540" cy="490" rx="380" ry="240" fill="url(#glow)"/>
+
+  <!-- ─── HEADER ─── -->
+  <text y="80">
+    <tspan x="80" fill="#7A7A96" font-size="26" font-weight="300" letter-spacing="-0.3">smart</tspan><tspan fill="#3E82F7" font-size="13" dy="-5" dx="1">•</tspan><tspan fill="#F2F2F6" font-size="26" font-weight="700" dy="5" dx="1" letter-spacing="-0.5">base</tspan>
+  </text>
+  <text x="1000" y="80" font-size="22" fill="#7A7A96" font-weight="400" text-anchor="end">@smartbase.br</text>
+
+  <!-- ─── CONTENT ─── -->
+
+  <!-- Label: iPhone 17 Pro Max -->
+  <text x="540" y="300" font-size="22" fill="#3E82F7" font-weight="500" letter-spacing="4" text-anchor="middle">iPhone 17 Pro Max</text>
+
+  <!-- Small "até" -->
+  <text x="540" y="388" font-size="42" fill="#7A7A96" font-weight="300" letter-spacing="-1" text-anchor="middle">até</text>
+
+  <!-- Hero: 30% -->
+  <text x="540" y="590" font-size="180" fill="#3E82F7" font-weight="700" letter-spacing="-8" text-anchor="middle">30%</text>
+
+  <!-- mais barato. -->
+  <text x="540" y="678" font-size="68" fill="#F2F2F6" font-weight="700" letter-spacing="-2" text-anchor="middle">mais barato.</text>
+
+  <!-- que o mercado nacional. -->
+  <text x="540" y="740" font-size="28" fill="#7A7A96" font-weight="400" text-anchor="middle">que o mercado nacional.</text>
+
+  <!-- Thin separator -->
+  <line x1="400" y1="788" x2="680" y2="788" stroke="#1E1E2E" stroke-width="1"/>
+
+  <!-- Product specs -->
+  <text x="540" y="836" font-size="26" fill="#7A7A96" font-weight="400" text-anchor="middle">lacrado · original · garantia Apple</text>
+
+  <!-- ─── PILLS ─── -->
+  <!-- Pill 1: sob encomenda -->
+  <rect x="284" y="874" width="210" height="48" rx="24" fill="#0F0F1C" stroke="#1E1E2E" stroke-width="1.5"/>
+  <text x="389" y="904" font-size="19" fill="#F2F2F6" font-weight="400" text-anchor="middle">sob encomenda</text>
+
+  <!-- Pill 2: Caxias do Sul e região -->
+  <rect x="510" y="874" width="288" height="48" rx="24" fill="#0F0F1C" stroke="#1E1E2E" stroke-width="1.5"/>
+  <text x="654" y="904" font-size="19" fill="#7A7A96" font-weight="400" text-anchor="middle">Caxias do Sul e região</text>
+
+  <!-- ─── FOOTER ─── -->
+  <line x1="80" y1="988" x2="1000" y2="988" stroke="#1E1E2E" stroke-width="1"/>
+  <text y="1028">
+    <tspan x="80" fill="#7A7A96" font-size="22" font-weight="300" letter-spacing="-0.3">smart</tspan><tspan fill="#3E82F7" font-size="11" dy="-4" dx="1">•</tspan><tspan fill="#F2F2F6" font-size="22" font-weight="700" dy="4" dx="1" letter-spacing="-0.5">base</tspan>
+  </text>
+  <text x="1000" y="1028" font-size="20" fill="#7A7A96" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

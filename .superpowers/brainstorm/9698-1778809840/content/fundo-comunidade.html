@@ -1,0 +1,79 @@
+<h2>A mensagem do fundo — lente de comunidade</h2>
+<p class="subtitle">Não é validação de compra. É onboarding. A pessoa acaba de entrar em algum lugar. Clique pra ver.</p>
+
+<div style="display:flex;justify-content:center;margin:24px 0 32px;">
+  <div style="
+    width: 400px;
+    height: 200px;
+    background: #3E82F7;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    box-shadow: 0 8px 32px rgba(62,130,247,0.25), inset 0 0 0 1px rgba(255,255,255,0.08);
+    position:relative;overflow:hidden;
+  ">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(255,255,255,0.05) 0%,transparent 60%);"></div>
+    <div id="prev" style="
+      font-family:'Helvetica Neue',sans-serif;
+      font-size:18px;
+      font-weight:300;
+      color:white;
+      text-align:center;
+      line-height:1.7;
+      letter-spacing:-0.2px;
+      position:relative;z-index:2;
+      padding:0 44px;
+      transition: opacity 0.2s;
+    ">toca pra ver.</div>
+    <div style="font-family:'Helvetica Neue',sans-serif;font-size:10px;font-weight:300;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;position:relative;z-index:2;">smart•base</div>
+  </div>
+</div>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='agora você sabe<br>onde comprar.'">
+    <div class="card-body">
+      <h3>agora você sabe onde comprar.</h3>
+      <p>Simples e poderoso. Pressupõe que antes havia dúvida — e que agora foi resolvida de vez. Não é sobre este iPhone. É sobre todos os próximos. Cria fidelidade sem pedir.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='de quem entende.<br>pra quem entendeu.'">
+    <div class="card-body">
+      <h3>de quem entende. pra quem entendeu.</h3>
+      <p>Cria uma troca de igual pra igual. A Smartbase não vende pra qualquer um — vende pra quem pesquisou, comparou, entendeu o que está comprando. Reconhece a inteligência de quem chegou até aqui.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='a maioria nunca<br>vai saber disso.'">
+    <div class="card-body">
+      <h3>a maioria nunca vai saber disso.</h3>
+      <p>Insider puro. Cria exclusividade sem arrogância — é uma constatação, não um julgamento. Quem lê sente que encontrou algo que a maioria não encontrou. Instiga a contar pra alguém de confiança.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="d" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='quem comprou aqui<br>uma vez não<br>compra em outro lugar.'">
+    <div class="card-body">
+      <h3>quem comprou aqui uma vez não compra em outro lugar.</h3>
+      <p>Eco do "quem tem não volta atrás" do verso — fecha o sistema. A frase do verso fala do produto, essa fala do canal. Juntas formam um argumento completo sem se repetir.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="e" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='esse é o atalho<br>que poucos conhecem.'">
+    <div class="card-body">
+      <h3>esse é o atalho que poucos conhecem.</h3>
+      <p>"Atalho" é uma palavra poderosa — implica inteligência, pesquisa, descoberta. Não é sobre preço, não é sobre produto. É sobre ter encontrado um caminho que a maioria não conhece.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="f" onclick="toggleSelect(this);document.getElementById('prev').innerHTML='daqui a pouco<br>você indica pra alguém.'">
+    <div class="card-body">
+      <h3>daqui a pouco você indica pra alguém.</h3>
+      <p>Audacioso. Prevê o comportamento antes de acontecer — e ao prever, planta a semente. Quem lê ri, porque sabe que é verdade. É a melhor forma de pedir indicação sem pedir.</p>
+    </div>
+  </div>
+
+</div>

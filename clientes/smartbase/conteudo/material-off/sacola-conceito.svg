@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1056 924" width="1056" height="924">
+
+  <defs>
+    <!-- Sombra lateral pra sensação de dobra no papel -->
+    <linearGradient id="sideLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="10%"  stop-color="#07070E" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sideRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#07070E" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.5"/>
+    </linearGradient>
+    <!-- Sombra topo (dobra do papel) -->
+    <linearGradient id="topFold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1E1E2E" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#07070E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1056" height="924" fill="#07070E"/>
+
+  <!-- Dobra topo -->
+  <rect x="0" y="0" width="1056" height="56" fill="url(#topFold)"/>
+  <line x1="0" y1="56" x2="1056" y2="56" stroke="#1E1E2E" stroke-width="1.5"/>
+
+  <!-- Volume lateral -->
+  <rect x="0"    y="56" width="80"  height="868" fill="url(#sideLeft)"/>
+  <rect x="976"  y="56" width="80"  height="868" fill="url(#sideRight)"/>
+
+  <!-- Linha de fechamento inferior -->
+  <line x1="0" y1="880" x2="1056" y2="880" stroke="#1E1E2E" stroke-width="1.5"/>
+
+  <!-- Alças (cordão) — dois arcos no topo -->
+  <path d="M 320 56 Q 320 10 370 10 Q 420 10 420 56"
+        fill="none" stroke="#2A2A3C" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 636 56 Q 636 10 686 10 Q 736 10 736 56"
+        fill="none" stroke="#2A2A3C" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- ── ELEMENTO GRÁFICO — círculo decorativo (canto direito, inspirado na referência) ── -->
+  <!-- Círculo grande, quase fora do frame, cor azul muito sutil -->
+  <circle cx="920" cy="462" r="340" fill="none" stroke="#3E82F7" stroke-width="1" opacity="0.12"/>
+  <circle cx="920" cy="462" r="220" fill="none" stroke="#3E82F7" stroke-width="0.8" opacity="0.08"/>
+
+  <!-- Dot de acento — ponto azul puro, pequeno, próximo ao wordmark -->
+  <!-- (posicionado como o dot do wordmark, mas isolado como elemento visual) -->
+
+  <!-- ── WORDMARK ── posição: centralizado verticalmente, ligeiramente à esquerda do centro -->
+
+  <!-- "smart" — weight 300, gray-sub -->
+  <text x="438" y="476"
+        text-anchor="end"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="88" font-weight="300" letter-spacing="-1.5"
+        fill="#7A7A96">smart</text>
+
+  <!-- dot azul -->
+  <circle cx="456" cy="460" r="8" fill="#3E82F7"/>
+
+  <!-- "base" — weight 700, white -->
+  <text x="474" y="476"
+        text-anchor="start"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="88" font-weight="700" letter-spacing="-1.5"
+        fill="#F2F2F6">base</text>
+
+  <!-- Linha divisória sutil -->
+  <line x1="280" y1="510" x2="548" y2="510" stroke="#1E1E2E" stroke-width="1" opacity="0.9"/>
+
+  <!-- Tagline -->
+  <text x="414" y="556"
+        text-anchor="middle"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="24" font-weight="300" letter-spacing="0.5"
+        fill="#7A7A96">sua apple store. particular.</text>
+
+  <!-- ── RODAPÉ — handle Instagram ── -->
+  <text x="528" y="846"
+        text-anchor="middle"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="300" letter-spacing="1.5"
+        fill="#3E3E5C">@smartbase.br</text>
+
+</svg>

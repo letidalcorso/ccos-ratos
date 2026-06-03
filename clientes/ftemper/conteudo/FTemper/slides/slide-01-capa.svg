@@ -1,0 +1,53 @@
+<svg width="1080" height="1350" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#5BB8F0"/>
+    <stop offset="35%"  stop-color="#1A6FC0"/>
+    <stop offset="70%"  stop-color="#0D3F7A"/>
+    <stop offset="100%" stop-color="#071A35"/>
+  </linearGradient>
+  <pattern id="dots" x="0" y="0" width="96" height="96" patternUnits="userSpaceOnUse">
+    <circle cx="48" cy="48" r="42" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="2.5"/>
+    <circle cx="48" cy="48" r="26" fill="rgba(255,255,255,0.035)"/>
+    <circle cx="48" cy="48" r="10" fill="rgba(255,255,255,0.05)"/>
+  </pattern>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="transparent"/>
+    <stop offset="60%"  stop-color="rgba(5,18,40,0.5)"/>
+    <stop offset="100%" stop-color="rgba(5,18,40,0.92)"/>
+  </linearGradient>
+</defs>
+
+<rect width="1080" height="1350" fill="url(#bg)"/>
+<rect width="1080" height="1350" fill="url(#dots)"/>
+<rect width="1080" height="1350" fill="url(#fade)"/>
+
+<!-- Geometric diamonds -->
+<polygon points="110,0 260,150 110,300 -40,150" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+<polygon points="970,60 1110,200 970,340 830,200" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+<polygon points="800,1050 920,1170 800,1290 680,1170" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"/>
+
+<!-- Diagonal accent lines -->
+<line x1="-100" y1="500" x2="600" y2="-100" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
+<line x1="-100" y1="700" x2="800" y2="-100" stroke="rgba(255,255,255,0.04)" stroke-width="2"/>
+
+<!-- FTEMPER logo -->
+<text x="540" y="90" font-family="'Sora', sans-serif" font-weight="700" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="7">FTEMPER</text>
+<line x1="420" y1="104" x2="660" y2="104" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+<!-- Large 5 -->
+<text x="55" y="740" font-family="'Barlow Condensed', 'Arial Narrow', Impact, sans-serif" font-weight="800" font-size="660" fill="#FFFFFF" opacity="0.97">5</text>
+
+<!-- Title -->
+<text x="58" y="840" font-family="'Barlow Condensed', 'Arial Narrow', Impact, sans-serif" font-weight="800" font-size="106" fill="#FFFFFF" letter-spacing="3">ERROS NA INSTALAÇÃO</text>
+<text x="58" y="958" font-family="'Barlow Condensed', 'Arial Narrow', Impact, sans-serif" font-weight="800" font-size="106" fill="#FFFFFF" letter-spacing="3">DE FERRAGENS PARA</text>
+<text x="58" y="1076" font-family="'Barlow Condensed', 'Arial Narrow', Impact, sans-serif" font-weight="800" font-size="106" fill="#FFFFFF" letter-spacing="3">VIDRO TEMPERADO</text>
+
+<line x1="58" y1="1110" x2="420" y2="1110" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+<text x="58" y="1162" font-family="'Sora', sans-serif" font-weight="300" font-size="44" fill="rgba(255,255,255,0.78)">— e como evitar cada um deles</text>
+
+<!-- Arraste button -->
+<rect x="756" y="1260" width="286" height="68" rx="34" fill="rgba(255,255,255,0.15)"/>
+<rect x="756" y="1260" width="286" height="68" rx="34" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+<text x="899" y="1303" font-family="'Sora', sans-serif" font-weight="700" font-size="32" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">Arraste  ›</text>
+</svg>

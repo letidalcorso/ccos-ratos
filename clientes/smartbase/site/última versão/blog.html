@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smartbase Blog — conteúdo sobre Apple, dicas, novidades e tudo que você precisa saber.">
+  <title>Blog — Smartbase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── PÁGINA DO BLOG ─────────────────────────────── */
+    .sb-page-hero {
+      padding: 80px 0 64px;
+      position: relative;
+    }
+
+    .sb-page-hero__bar {
+      position: absolute;
+      left: 0; top: 0;
+      width: 4px; height: 100%;
+      background: var(--blue-primary);
+    }
+
+    .sb-page-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sb-page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .sb-page-hero__sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* ── CATEGORIAS ──────────────────────────────────── */
+    .sb-categorias {
+      padding: 24px 0;
+      border-bottom: var(--border-subtle);
+      margin-bottom: 64px;
+    }
+
+    .sb-categorias__inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .sb-cat-btn {
+      padding: 8px 18px;
+      border: var(--border-subtle);
+      border-radius: var(--radius-pill);
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .sb-cat-btn:hover,
+    .sb-cat-btn.active {
+      background: var(--blue-primary);
+      border-color: var(--blue-primary);
+      color: #fff;
+    }
+
+    /* ── GRID DE POSTS ───────────────────────────────── */
+    .sb-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .sb-post-card {
+      background: var(--surface-1);
+      border: var(--border-subtle);
+      border-radius: var(--radius-card-lg);
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sb-post-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--surface-3);
+    }
+
+    .sb-post-card__img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--surface-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: var(--border-subtle);
+    }
+
+    .sb-post-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sb-post-card__img-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+    }
+
+    .sb-post-card__img-placeholder span {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .sb-post-card__body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .sb-post-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sb-post-card__cat {
+      display: inline-flex;
+      padding: 3px 10px;
+      background: var(--blue-alpha-10);
+      border: 1px solid var(--blue-alpha-30);
+      border-radius: var(--radius-badge);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue-primary);
+    }
+
+    .sb-post-card__date {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .sb-post-card__title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .sb-post-card__excerpt {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .sb-post-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--blue-primary);
+      margin-top: 8px;
+      transition: gap 0.15s ease;
+    }
+
+    .sb-post-card:hover .sb-post-card__link { gap: 10px; }
+
+    /* ── RESPONSIVO ──────────────────────────────────── */
+    @media (max-width: 640px) {
+      .sb-blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sb-header">
+    <div class="sb-container">
+      <div class="sb-header__inner">
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+
+        <nav class="sb-nav" id="sb-nav">
+          <a href="produtos.html">produtos</a>
+          <a href="blog.html" class="active">blog</a>
+          <a href="index.html#sobre">sobre</a>
+          <a href="index.html#contato">contato</a>
+        </nav>
+
+        <a href="https://wa.me/5554996624494" target="_blank" rel="noopener" class="sb-btn sb-btn--primary sb-header__cta">
+          quero meu apple
+        </a>
+
+        <button class="sb-nav__toggle" id="sb-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO DO BLOG
+  ═══════════════════════════════════════════════════ -->
+  <div class="sb-page-hero">
+    <div class="sb-page-hero__bar"></div>
+    <div class="sb-container">
+      <div class="sb-page-hero__content">
+        <span class="sb-badge">blog</span>
+
+        <!-- EDITE: título e subtítulo -->
+        <h1>o que você precisa<br><span class="sb-blue">saber sobre Apple.</span></h1>
+        <p class="sb-page-hero__sub">dicas, novidades, comparativos e tudo que a gente aprende aqui dentro — contado de forma direta.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       CATEGORIAS — edite os nomes conforme necessário
+  ═══════════════════════════════════════════════════ -->
+  <div class="sb-categorias">
+    <div class="sb-container">
+      <div class="sb-categorias__inner">
+        <button class="sb-cat-btn active" data-cat="todos">todos</button>
+        <button class="sb-cat-btn" data-cat="dicas">dicas</button>
+        <button class="sb-cat-btn" data-cat="novidades">novidades</button>
+        <button class="sb-cat-btn" data-cat="comparativos">comparativos</button>
+        <button class="sb-cat-btn" data-cat="tradein">troca</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       GRID DE POSTS
+       Para adicionar um post: duplique um .sb-post-card
+       Para remover: apague o bloco inteiro
+       EDITE: categoria (data-cat), título, trecho e link
+  ═══════════════════════════════════════════════════ -->
+  <section style="padding: 0 0 80px;">
+    <div class="sb-container">
+
+      <div class="sb-blog-grid" id="sb-blog-grid">
+
+        <!-- ── EXEMPLO DE POST — duplique para adicionar ── -->
+        <!-- data-cat deve ser: dicas | novidades | comparativos | tradein -->
+
+        <article class="sb-post-card" data-cat="dicas">
+          <div class="sb-post-card__img">
+            <!-- SUBSTITUA por <img src="imagens/post-garantia.jpg" alt="..."> -->
+            <div class="sb-post-card__img-placeholder">
+              <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="38" height="38" rx="8" stroke="#4A4A60" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <path d="M13 27l5-6 4 5 3-3 5 7H13z" stroke="#4A4A60" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="26" cy="15" r="3" stroke="#4A4A60" stroke-width="1.5"/>
+              </svg>
+              <span>imagem do post</span>
+            </div>
+          </div>
+          <div class="sb-post-card__body">
+            <div class="sb-post-card__meta">
+              <span class="sb-post-card__cat">dicas</span>
+              <!-- EDITE: data de publicação -->
+              <span class="sb-post-card__date">22 abr 2025</span>
+            </div>
+            <!-- EDITE: título do post -->
+            <h2 class="sb-post-card__title">a garantia Apple começa na fabricação, não na ativação</h2>
+            <!-- EDITE: trecho/resumo -->
+            <p class="sb-post-card__excerpt">aparelho lacrado não garante mais 1 ano de cobertura. entenda como a Apple mudou as regras de garantia e o que isso significa pra você.</p>
+            <!-- EDITE: link para o post completo (quando existir a página) -->
+            <a href="#" class="sb-post-card__link">ler artigo →</a>
+          </div>
+        </article>
+
+        <!-- ── FIM DO EXEMPLO — adicione mais posts acima desta linha ── -->
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="sb-footer">
+    <div class="sb-container">
+      <div class="sb-footer__inner">
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+        <div class="sb-footer__info">
+          <span>@smartbase.br</span>
+          <span>caxias do sul, rs</span>
+        </div>
+        <span class="sb-footer__copy">© 2025 smartbase</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    /* ── MENU MOBILE ── */
+    (function () {
+      var toggle = document.getElementById('sb-toggle');
+      var nav = document.getElementById('sb-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('sb-nav--open');
+        toggle.textContent = isOpen ? '✕' : '☰';
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+    })();
+
+    /* ── FILTRO DE CATEGORIAS ── */
+    (function () {
+      var btns = document.querySelectorAll('.sb-cat-btn');
+      var cards = document.querySelectorAll('.sb-post-card');
+
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          btns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          var cat = btn.dataset.cat;
+          cards.forEach(function (card) {
+            card.style.display = (cat === 'todos' || card.dataset.cat === cat) ? '' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

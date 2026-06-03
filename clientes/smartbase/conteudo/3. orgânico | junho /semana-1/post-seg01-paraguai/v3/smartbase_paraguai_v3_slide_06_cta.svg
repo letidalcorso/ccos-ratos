@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <text x="1240" y="1380" fill="#3E82F7" font-family="'Bricolage Grotesque', sans-serif" font-size="780" font-weight="700" letter-spacing="-30" text-anchor="end" opacity="0.08">sb</text>
+
+  <text x="80" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" letter-spacing="3">DECIFRA APPLE</text>
+  <text x="1000" y="128" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="500" text-anchor="end">6/6</text>
+
+  <text x="80" y="460" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="120" font-weight="700" letter-spacing="-3">
+    <tspan x="80" dy="0">fala com</tspan>
+    <tspan x="80" dy="135" fill="#3E82F7">a gente.</tspan>
+  </text>
+
+  <text x="80" y="830" fill="#C0C0D0" font-family="'Inter', sans-serif" font-size="28" font-weight="400">resposta rápida, sem enrolação.</text>
+
+  <rect x="80" y="900" width="520" height="100" rx="50" fill="#3E82F7"/>
+  <text x="340" y="962" fill="#07070E" font-family="'Bricolage Grotesque', sans-serif" font-size="32" font-weight="700" text-anchor="middle">manda no WhatsApp →</text>
+
+  <text x="80" y="1100" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="400">você paga só quando o iPhone tá na sua mão. sempre.</text>
+
+  <text x="80" y="1280" fill="#F2F2F6" font-family="'Bricolage Grotesque', sans-serif" font-size="36" font-weight="700" letter-spacing="-1">smartbase</text>
+  <text x="1000" y="1280" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="22" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

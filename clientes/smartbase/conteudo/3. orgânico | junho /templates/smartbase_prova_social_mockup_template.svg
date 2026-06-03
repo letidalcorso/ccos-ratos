@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">CASA SMARTBASE</text>
+  <text x="80" y="280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="58" font-weight="700" letter-spacing="-2">
+    <tspan x="80" dy="0">semana passada,</tspan>
+    <tspan x="80" dy="68" fill="#2DFF8B">isso aqui.</tspan>
+  </text>
+  <rect x="80" y="450" width="920" height="700" rx="20" fill="#1a1a1a" stroke="#2DFF8B" stroke-width="2" stroke-dasharray="14,10"/>
+  <text x="540" y="740" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" text-anchor="middle" opacity="0.5">↓ cole aqui ↓</text>
+  <text x="540" y="800" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="700" text-anchor="middle">print do WhatsApp anonimizado</text>
+  <text x="540" y="850" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" opacity="0.5">+ foto da entrega sobreposta no canto</text>
+  <text x="540" y="920" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="middle" opacity="0.4">(esconder nome/foto do cliente · esconder dados sensíveis)</text>
+  <text x="80" y="1230" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="24" font-weight="500" opacity="0.7">você paga só quando o iPhone tá na sua mão.</text>
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>

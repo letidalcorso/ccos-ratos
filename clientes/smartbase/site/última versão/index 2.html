@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smartbase: iPhone, Mac e iPad originais em Caxias do Sul. Novos sob encomenda com garantia e seminovos avaliados. Seu aparelho antigo como entrada na troca.">
+  <title>iPhone Original em Caxias do Sul | Smartbase</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="iPhone Original em Caxias do Sul | Smartbase">
+  <meta property="og:description" content="iPhone, Mac e iPad originais em Caxias do Sul. Novos sob encomenda com garantia e seminovos avaliados. Fale no WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Schema.org — Negócio local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Smartbase",
+    "description": "Loja especializada em produtos Apple em Caxias do Sul. iPhone, Mac e iPad originais, novos sob encomenda e seminovos avaliados.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Caxias do Sul",
+      "addressRegion": "RS",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://instagram.com/smartbase.br"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── HERO ─────────────────────────────────────────── */
+    .sb-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 0 96px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sb-hero__bar {
+      position: absolute;
+      left: 0; top: 0;
+      width: 4px; height: 100%;
+      background: var(--blue-primary);
+    }
+
+    .sb-hero__ghost {
+      position: absolute;
+      right: -5vw; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: clamp(280px, 38vw, 680px);
+      font-weight: 800;
+      color: var(--text-primary);
+      opacity: 0.025;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+
+    .sb-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .sb-hero__content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sb-hero__headline {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 7vw, 96px);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -1px;
+    }
+
+    .sb-hero__sub {
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .sb-hero__actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .sb-hero__img-placeholder {
+      aspect-ratio: 4/5;
+      max-height: 580px;
+    }
+
+    /* ── NOVOS ────────────────────────────────────────── */
+    .sb-novos__garantia {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--blue-alpha-10);
+      border: 1px solid var(--blue-alpha-30);
+      border-radius: var(--radius-card);
+      margin-bottom: 40px;
+    }
+
+    .sb-novos__garantia-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .sb-novos__garantia-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .sb-novos__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    /* ── SEMINOVOS ────────────────────────────────────── */
+    .sb-seminovos {
+      background: var(--surface-1);
+      border-top: var(--border-subtle);
+      border-bottom: var(--border-subtle);
+    }
+
+    .sb-seminovos__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .sb-seminovos__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sb-seminovos__sub {
+      font-size: clamp(15px, 1.8vw, 18px);
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .sb-seminovos__garantia {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--surface-2);
+      border: var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .sb-seminovos__garantia span {
+      color: var(--blue-primary);
+      font-weight: 600;
+    }
+
+    .sb-seminovos__img {
+      aspect-ratio: 1;
+      max-height: 440px;
+    }
+
+    /* ── TRADE-IN ─────────────────────────────────────── */
+    .sb-tradein__bar {
+      position: absolute;
+      left: 0; top: 0;
+      width: 4px; height: 100%;
+      background: var(--blue-primary);
+    }
+
+    .sb-tradein__header { margin-bottom: 48px; }
+
+    .sb-tradein__header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-top: 16px;
+      margin-bottom: 12px;
+    }
+
+    .sb-tradein__sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+
+    .sb-tradein__steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .sb-step-card {
+      display: flex;
+      gap: 16px;
+      padding: 24px;
+      background: var(--bg-base);
+      border: var(--border-subtle);
+      border-left: var(--border-accent);
+      border-radius: var(--radius-card);
+    }
+
+    .sb-step-card__num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      min-width: 36px;
+      background: var(--blue-alpha-30);
+      border-radius: 8px;
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--blue-primary);
+    }
+
+    .sb-step-card__body { display: flex; flex-direction: column; gap: 6px; }
+
+    .sb-step-card__title {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .sb-step-card__desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .sb-tradein__highlight {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 32px;
+      background: var(--blue-alpha-10);
+      border: 1px solid var(--blue-alpha-30);
+      border-radius: var(--radius-card);
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .sb-tradein__highlight-text {
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+
+    .sb-tradein__highlight-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ── DIFERENCIAIS ─────────────────────────────────── */
+    .sb-diferenciais__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .sb-diferencial-card {
+      padding: 32px;
+      background: var(--surface-1);
+      border: var(--border-subtle);
+      border-radius: var(--radius-card-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sb-diferencial-card--featured { border-color: var(--blue-primary); }
+
+    .sb-diferencial-card__num {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--blue-primary);
+    }
+
+    .sb-diferencial-card__title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .sb-diferencial-card__desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── SOBRE ────────────────────────────────────────── */
+    .sb-sobre__inner {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .sb-sobre__ghost {
+      font-family: var(--font-display);
+      font-size: clamp(120px, 20vw, 240px);
+      font-weight: 800;
+      color: var(--text-primary);
+      opacity: 0.04;
+      pointer-events: none;
+      user-select: none;
+      line-height: 0.9;
+    }
+
+    .sb-sobre__content { display: flex; flex-direction: column; gap: 20px; }
+
+    .sb-sobre__text {
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .sb-sobre__location {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .sb-sobre__location a {
+      color: var(--blue-primary);
+      transition: opacity 0.15s ease;
+    }
+
+    .sb-sobre__location a:hover { opacity: 0.8; }
+
+    /* ── CTA FINAL ────────────────────────────────────── */
+    .sb-cta-final {
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .sb-cta-final__bar {
+      position: absolute;
+      left: 0; top: 0;
+      width: 4px; height: 100%;
+      background: var(--blue-primary);
+    }
+
+    .sb-cta-final__ghost {
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-display);
+      font-size: clamp(160px, 25vw, 420px);
+      font-weight: 800;
+      color: var(--text-primary);
+      opacity: 0.025;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .sb-cta-final__inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .sb-cta-final h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5.5vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      max-width: 700px;
+    }
+
+    .sb-cta-final p {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-secondary);
+    }
+
+    /* ── RESPONSIVO ───────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .sb-tradein__steps { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .sb-section { padding: 64px 0; }
+      .sb-hero { padding: 64px 0; min-height: auto; }
+
+      .sb-hero__inner { grid-template-columns: 1fr; gap: 40px; }
+      .sb-hero__img-placeholder { order: -1; aspect-ratio: 16/9; max-height: 260px; }
+
+      .sb-seminovos__inner { grid-template-columns: 1fr; gap: 40px; }
+      .sb-seminovos__img { order: -1; aspect-ratio: 16/9; max-height: 260px; }
+
+      .sb-sobre__inner { grid-template-columns: 1fr; gap: 32px; }
+      .sb-sobre__ghost { display: none; }
+
+      .sb-diferenciais__grid { grid-template-columns: 1fr; }
+
+      .sb-tradein__highlight {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sb-novos__grid { grid-template-columns: 1fr; }
+      .sb-hero__actions { flex-direction: column; align-items: stretch; }
+      .sb-hero__actions .sb-btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       HEADER — edite os links do nav e o botão abaixo
+  ═══════════════════════════════════════════════════ -->
+  <header class="sb-header">
+    <div class="sb-container">
+      <div class="sb-header__inner">
+
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+
+        <nav class="sb-nav" id="sb-nav">
+          <a href="#novos">produtos</a>
+          <a href="formulario-tradein.html">trade-in</a>
+          <a href="blog.html">blog</a>
+          <a href="#sobre">sobre</a>
+          <a href="#contato">contato</a>
+        </nav>
+
+        <!-- EDITE: troque NUMERO pelo WhatsApp da Smartbase (ex: 5554999990000) -->
+        <a href="https://wa.me/5554996624494" target="_blank" rel="noopener" class="sb-btn sb-btn--primary sb-header__cta">
+          quero meu apple
+        </a>
+
+        <button class="sb-nav__toggle" id="sb-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO — edite título, subtítulo e CTAs
+       Substitua o placeholder pela foto do produto
+  ═══════════════════════════════════════════════════ -->
+  <section class="sb-hero">
+    <div class="sb-hero__bar"></div>
+    <div class="sb-hero__ghost" aria-hidden="true">sb</div>
+
+    <div class="sb-container">
+      <div class="sb-hero__inner">
+
+        <div class="sb-hero__content">
+          <!-- EDITE: badge do hero -->
+          <span class="sb-badge sb-badge--blue">iphone · mac · ipad · seminovos</span>
+
+          <!-- EDITE: título principal -->
+          <h1 class="sb-hero__headline">
+            sua apple store.<br>
+            <span class="sb-blue">particular.</span>
+          </h1>
+
+          <!-- EDITE: subtítulo -->
+          <p class="sb-hero__sub">
+            novos sob encomenda, seminovos em estoque.<br>
+            e aparelho antigo como entrada pra quem quer trocar com tranquilidade.
+          </p>
+
+          <div class="sb-hero__actions">
+            <!-- EDITE: botões e links -->
+            <a href="#novos" class="sb-btn sb-btn--primary">ver produtos</a>
+            <a href="formulario-tradein.html" class="sb-btn sb-btn--ghost">quer saber quanto vale o seu?</a>
+          </div>
+        </div>
+
+        <div class="sb-hero__image">
+          <!-- SUBSTITUA: troque por <img src="imagens/hero.jpg" alt="iPhone 17 Pro"> -->
+          <div class="sb-img-placeholder sb-hero__img-placeholder">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="38" height="38" rx="8" stroke="#4A4A60" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M13 27l5-6 4 5 3-3 5 7H13z" stroke="#4A4A60" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="26" cy="15" r="3" stroke="#4A4A60" stroke-width="1.5"/>
+            </svg>
+            <span>foto principal</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       NOVOS — aparelhos sob encomenda
+       Edite os cards ou remova os que não se aplicam
+  ═══════════════════════════════════════════════════ -->
+  <section id="novos" class="sb-section">
+    <div class="sb-container">
+
+      <div class="sb-section-header">
+        <span class="sb-badge">novos · sob encomenda</span>
+        <h2>aparelho novo, <span class="sb-blue">garantia do primeiro dia.</span></h2>
+      </div>
+
+      <!-- EDITE: contexto sobre garantia — pode remover se quiser -->
+      <div class="sb-novos__garantia">
+        <p class="sb-novos__garantia-text">
+          <strong>por que sob encomenda?</strong> a garantia Apple começa da data de saída da fábrica, não da ativação. aparelho parado em estoque perde cobertura antes de chegar na sua mão. trabalhando por encomenda, você recebe com a garantia completa em dia.
+        </p>
+      </div>
+
+      <div class="sb-novos__grid">
+
+        <!-- EDITE: card iPhone -->
+        <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+iPhone" target="_blank" rel="noopener" class="sb-produto-card">
+          <div class="sb-produto-card__title">iPhone</div>
+          <p class="sb-produto-card__desc">iPhone 17 e 17 Pro. garantia Apple, importado, entregue direto pra você.</p>
+          <span class="sb-produto-card__link">fazer pedido →</span>
+        </a>
+
+        <!-- EDITE: card Mac -->
+        <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+Mac" target="_blank" rel="noopener" class="sb-produto-card">
+          <div class="sb-produto-card__title">Mac</div>
+          <p class="sb-produto-card__desc">MacBook Air e Pro. pra quem trabalha com Apple e não aceita menos.</p>
+          <span class="sb-produto-card__link">fazer pedido →</span>
+        </a>
+
+        <!-- EDITE: card iPad -->
+        <a href="https://wa.me/5554996624494?text=quero+fazer+um+pedido+de+iPad" target="_blank" rel="noopener" class="sb-produto-card">
+          <div class="sb-produto-card__title">iPad</div>
+          <p class="sb-produto-card__desc">iPad e iPad Pro. performance e mobilidade sem abrir mão do ecossistema Apple.</p>
+          <span class="sb-produto-card__link">fazer pedido →</span>
+        </a>
+
+        <!-- EDITE: card Acessórios -->
+        <a href="https://wa.me/5554996624494?text=quero+ver+os+acessórios+disponíveis" target="_blank" rel="noopener" class="sb-produto-card">
+          <div class="sb-produto-card__title">acessórios</div>
+          <p class="sb-produto-card__desc">AirPods, Apple Watch, cabos e mais. tudo original, sem enrolação.</p>
+          <span class="sb-produto-card__link">ver disponibilidade →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       SEMINOVOS — em estoque, pronto pra sair
+       O link leva para seminovos.html
+  ═══════════════════════════════════════════════════ -->
+  <section id="seminovos" class="sb-section sb-seminovos">
+    <div class="sb-container">
+      <div class="sb-seminovos__inner">
+
+        <div class="sb-seminovos__content">
+          <span class="sb-badge">seminovos · em estoque</span>
+
+          <!-- EDITE: título e subtítulo da seção de seminovos -->
+          <h2 style="font-family: var(--font-display); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.1;">
+            apple usado.<br>
+            <span class="sb-blue">com garantia da gente.</span>
+          </h2>
+
+          <p class="sb-seminovos__sub">
+            cada aparelho passa por avaliação técnica antes de ser anunciado. você sabe exatamente o que está comprando — modelo, estado, histórico. sem surpresa.
+          </p>
+
+          <div class="sb-seminovos__garantia">
+            ✓ <span>3 meses de garantia própria</span>
+          </div>
+
+          <!-- EDITE: botão de ver seminovos -->
+          <div style="margin-top: 8px;">
+            <a href="seminovos.html" class="sb-btn sb-btn--primary">ver seminovos disponíveis</a>
+          </div>
+        </div>
+
+        <div>
+          <!-- SUBSTITUA: foto de um aparelho seminovo -->
+          <div class="sb-img-placeholder sb-seminovos__img">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="38" height="38" rx="8" stroke="#4A4A60" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M13 27l5-6 4 5 3-3 5 7H13z" stroke="#4A4A60" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="26" cy="15" r="3" stroke="#4A4A60" stroke-width="1.5"/>
+            </svg>
+            <span>foto seminovo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       TRADE-IN — formulário na página separada
+       Edite os textos das etapas e o destaque
+  ═══════════════════════════════════════════════════ -->
+  <section id="tradein" class="sb-section" style="background: var(--bg-base);">
+    <div class="sb-tradein__bar"></div>
+    <div class="sb-container">
+
+      <div class="sb-tradein__header">
+        <!-- EDITE: badge e título da seção trade-in -->
+        <span class="sb-badge sb-badge--blue">aparelho antigo como entrada</span>
+        <h2>quer saber quanto <span class="sb-blue">vale o seu?</span></h2>
+        <p class="sb-tradein__sub">avaliação técnica real. sem achismo, sem pressão.</p>
+      </div>
+
+      <!-- EDITE: etapas do processo — pode adicionar ou remover -->
+      <div class="sb-tradein__steps">
+        <div class="sb-step-card">
+          <div class="sb-step-card__num">1</div>
+          <div class="sb-step-card__body">
+            <div class="sb-step-card__title">preencha o formulário</div>
+            <p class="sb-step-card__desc">modelo, estado, capacidade e o que acompanha. leva menos de 2 minutos.</p>
+          </div>
+        </div>
+
+        <div class="sb-step-card">
+          <div class="sb-step-card__num">2</div>
+          <div class="sb-step-card__body">
+            <div class="sb-step-card__title">receba a avaliação</div>
+            <p class="sb-step-card__desc">a gente retorna em até 1 hora com o valor. sem tabela genérica — avaliação de verdade.</p>
+          </div>
+        </div>
+
+        <div class="sb-step-card">
+          <div class="sb-step-card__num">3</div>
+          <div class="sb-step-card__body">
+            <div class="sb-step-card__title">aplique na troca</div>
+            <p class="sb-step-card__desc">o valor do seu aparelho vira desconto na compra do próximo Apple.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDITE: destaque e CTA do trade-in -->
+      <div class="sb-tradein__highlight">
+        <div class="sb-tradein__highlight-text">
+          retorno em até <strong>1 hora.</strong> sem precisar ir até a loja pra saber o valor.
+        </div>
+        <a href="formulario-tradein.html" class="sb-btn sb-btn--primary">avaliar meu aparelho</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       DIFERENCIAIS — edite títulos, textos e ícones
+       Para remover um card, apague o bloco inteiro
+  ═══════════════════════════════════════════════════ -->
+  <section id="diferenciais" class="sb-section sb-section--alt">
+    <div class="sb-container">
+
+      <div class="sb-section-header">
+        <span class="sb-badge">por que a smartbase</span>
+        <h2>não somos uma loja <span class="sb-blue">qualquer.</span></h2>
+      </div>
+
+      <div class="sb-diferenciais__grid">
+
+        <!-- EDITE: card 1 -->
+        <div class="sb-diferencial-card">
+          <div class="sb-diferencial-card__num">01</div>
+          <div class="sb-diferencial-card__title">original garantido</div>
+          <p class="sb-diferencial-card__desc">100% Apple. sem réplica, sem paralelo. cada produto verificado antes de chegar na sua mão.</p>
+        </div>
+
+        <!-- EDITE: card 2 -->
+        <div class="sb-diferencial-card">
+          <div class="sb-diferencial-card__num">02</div>
+          <div class="sb-diferencial-card__title">preço que faz sentido</div>
+          <p class="sb-diferencial-card__desc">aparelhos novos importados e seminovos avaliados. qualidade Apple sem o preço da loja oficial.</p>
+        </div>
+
+        <!-- EDITE: card 3 — borda azul = card em destaque -->
+        <div class="sb-diferencial-card sb-diferencial-card--featured">
+          <div class="sb-diferencial-card__num">03</div>
+          <div class="sb-diferencial-card__title">trade-in estruturado</div>
+          <p class="sb-diferencial-card__desc">avaliação técnica com critérios claros, valor calculado na hora e processo transparente do início ao fim. sem achismo.</p>
+        </div>
+
+        <!-- EDITE: card 4 -->
+        <div class="sb-diferencial-card">
+          <div class="sb-diferencial-card__num">04</div>
+          <div class="sb-diferencial-card__title">foco apple</div>
+          <p class="sb-diferencial-card__desc">escolhemos só Apple. conhecimento profundo de um único ecossistema muda o atendimento, o diagnóstico e o que você leva pra casa.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       SOBRE — texto institucional
+       Edite o parágrafo e a localização
+  ═══════════════════════════════════════════════════ -->
+  <section id="sobre" class="sb-section">
+    <div class="sb-container">
+      <div class="sb-sobre__inner">
+
+        <div class="sb-sobre__ghost" aria-hidden="true">sb</div>
+
+        <div class="sb-sobre__content">
+          <span class="sb-badge">sobre</span>
+
+          <!-- EDITE: texto sobre a Smartbase -->
+          <p class="sb-sobre__text">
+            o apple certo pra você raramente é o mais caro. a smartbase recomenda com base nas suas necessidades: produto, garantia e aparelho antigo como entrada na mesma conversa. novo ou seminovo, o que fizer mais sentido.
+          </p>
+
+          <!-- EDITE: localização e link de contato -->
+          <p class="sb-sobre__location">
+            caxias do sul, rs · <a href="https://wa.me/5554996624494" target="_blank" rel="noopener">fale com a gente</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       CTA FINAL — seção de encerramento
+       Edite o título e o link do WhatsApp
+  ═══════════════════════════════════════════════════ -->
+  <section id="contato" class="sb-section sb-section--alt sb-cta-final">
+    <div class="sb-cta-final__bar"></div>
+    <div class="sb-cta-final__ghost" aria-hidden="true">smartbase</div>
+
+    <div class="sb-container">
+      <div class="sb-cta-final__inner">
+
+        <!-- EDITE: título e subtítulo do CTA final -->
+        <h2>você já sabe o que quer. <span class="sb-blue">falta só nos chamar.</span></h2>
+        <p>modelo certo, preço justo, resposta em minutos.</p>
+
+        <!-- EDITE: link WhatsApp -->
+        <a href="https://wa.me/5554996624494" target="_blank" rel="noopener" class="sb-btn sb-btn--wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.12 1.519 5.854L.057 23.617a.75.75 0 0 0 .921.921l5.764-1.462A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.836 0-3.565-.476-5.074-1.313l-.363-.21-3.773.957.974-3.768-.23-.374A9.961 9.961 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+          </svg>
+          vou chamar
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER — edite handle, localização e copyright
+  ═══════════════════════════════════════════════════ -->
+  <footer class="sb-footer">
+    <div class="sb-container">
+      <div class="sb-footer__inner">
+
+        <a class="sb-logo" href="index.html">
+          <span class="sb-logo__badge">sb</span>
+          <span class="sb-logo__wordmark">
+            <span class="sb-logo__smart">smart</span><span class="sb-logo__base">base</span>
+          </span>
+        </a>
+
+        <div class="sb-footer__info">
+          <!-- EDITE: handle e localização -->
+          <span>@smartbase.br</span>
+          <span>caxias do sul, rs</span>
+        </div>
+
+        <span class="sb-footer__copy">© 2026 smartbase</span>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('sb-toggle');
+      var nav = document.getElementById('sb-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('sb-nav--open');
+        toggle.textContent = isOpen ? '✕' : '☰';
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('sb-nav--open');
+          toggle.textContent = '☰';
+          toggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

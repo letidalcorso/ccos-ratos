@@ -1,0 +1,6 @@
+[mcp_servers.canva]
+args = [
+    "-y",
+    "@canva/canva-mcp-server",
+]
+command = "npx"

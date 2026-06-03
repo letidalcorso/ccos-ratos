@@ -1,0 +1,188 @@
+<style>
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mug-card { border-radius: 16px; overflow: hidden; border: 2px solid transparent; cursor: pointer; transition: border-color 0.2s; }
+  .mug-card.selected { border-color: #3E82F7; }
+  .mug-card:hover { border-color: #3E82F7aa; }
+  .mug-canvas { padding: 32px 24px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .mug-label { padding: 14px 20px; border-top: 1px solid rgba(255,255,255,0.08); }
+  .mug-label h3 { margin: 0 0 4px; font-size: 14px; }
+  .mug-label p { margin: 0; font-size: 12px; color: #7A7A96; }
+
+  /* iphone outlines */
+  .lineup { display: flex; align-items: flex-end; gap: 10px; }
+  .iphone { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .iphone-body { border-radius: 12%; position: relative; }
+  .iphone-label { font-size: 7px; letter-spacing: 0.5px; opacity: 0.5; text-align: center; }
+
+  /* variante escura */
+  .dark-card { background: #07070E; }
+  .dark-card .mug-label { border-color: #1E1E2E; }
+  .dark-card .mug-label h3 { color: #F2F2F6; }
+  .dark-card .iphone-body { border: 1.5px solid #F2F2F6; background: transparent; }
+  .dark-card .home-btn { background: #F2F2F6; }
+  .dark-card .notch { background: #F2F2F6; }
+  .dark-card .island { background: #F2F2F6; }
+  .dark-card .tagline { color: #F2F2F6; }
+  .dark-card .wm-smart { color: #7A7A96; }
+  .dark-card .wm-dot { color: #3E82F7; }
+  .dark-card .wm-base { color: #F2F2F6; font-weight: 700; }
+  .dark-card .iphone-label { color: #7A7A96; }
+
+  /* variante clara */
+  .light-card { background: #F5F0E8; }
+  .light-card .mug-label { border-color: rgba(0,0,0,0.08); }
+  .light-card .mug-label h3 { color: #111; }
+  .light-card .iphone-body { border: 1.5px solid #222; background: transparent; }
+  .light-card .home-btn { background: #222; }
+  .light-card .notch { background: #222; }
+  .light-card .island { background: #222; }
+  .light-card .tagline { color: #111; }
+  .light-card .wm-smart { color: #888; }
+  .light-card .wm-dot { color: #3E82F7; }
+  .light-card .wm-base { color: #111; font-weight: 700; }
+  .light-card .iphone-label { color: #888; }
+
+  .tagline { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 10px; letter-spacing: 2px; text-transform: lowercase; text-align: center; }
+  .wordmark { font-family: -apple-system, 'Helvetica Neue', sans-serif; font-size: 11px; display: flex; align-items: center; gap: 1px; }
+  .letter-badge { display: inline-block; width: 26px; height: 26px; background: #3E82F7; border-radius: 50%; text-align: center; line-height: 26px; font-size: 12px; font-weight: 700; color: white; margin-bottom: 10px; }
+</style>
+
+<h2>Linha do tempo dos iPhones icônicos</h2>
+<p class="subtitle">Silhuetas em outline + "todos passaram por aqui" — qual fundo fica melhor nos stories?</p>
+
+<div class="split">
+
+  <!-- Versão Dark -->
+  <div class="mug-card dark-card" data-choice="dark" onclick="toggleSelect(this)">
+    <div class="letter-badge" style="margin:20px 0 0 20px;">A</div>
+    <div class="mug-canvas">
+      <!-- iPhone lineup SVG simplificado -->
+      <div class="lineup">
+
+        <!-- iPhone 2G (2007) -->
+        <div class="iphone">
+          <div class="iphone-body" style="width:22px;height:38px;border-radius:4px;">
+            <div class="home-btn" style="width:7px;height:7px;border-radius:50%;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'07</div>
+        </div>
+
+        <!-- iPhone 4 (2010) -->
+        <div class="iphone">
+          <div class="iphone-body" style="width:22px;height:40px;border-radius:3px;">
+            <div class="home-btn" style="width:6px;height:6px;border-radius:50%;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'10</div>
+        </div>
+
+        <!-- iPhone 6 (2014) -->
+        <div class="iphone">
+          <div class="iphone-body" style="width:24px;height:44px;border-radius:5px;">
+            <div class="home-btn" style="width:7px;height:7px;border-radius:50%;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'14</div>
+        </div>
+
+        <!-- iPhone X (2017) — notch -->
+        <div class="iphone">
+          <div class="iphone-body" style="width:24px;height:46px;border-radius:5px;">
+            <div class="notch" style="width:10px;height:4px;border-radius:0 0 3px 3px;position:absolute;top:0;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'17</div>
+        </div>
+
+        <!-- iPhone 14 Pro (2022) — island -->
+        <div class="iphone">
+          <div class="iphone-body" style="width:25px;height:50px;border-radius:6px;">
+            <div class="island" style="width:9px;height:4px;border-radius:3px;position:absolute;top:4px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'22</div>
+        </div>
+
+        <!-- iPhone 16 (2024) — island slim -->
+        <div class="iphone">
+          <div class="iphone-body" style="width:26px;height:52px;border-radius:6px;">
+            <div class="island" style="width:8px;height:3px;border-radius:3px;position:absolute;top:5px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'24</div>
+        </div>
+      </div>
+
+      <div class="tagline">todos passaram por aqui.</div>
+      <div class="wordmark">
+        <span class="wm-smart">smart</span>
+        <span class="wm-dot">•</span>
+        <span class="wm-base">base</span>
+      </div>
+    </div>
+    <div class="mug-label">
+      <h3>Fundo preto</h3>
+      <p>Tom premium, combina com a identidade digital da Smartbase. Foto bem nos stories noturnos.</p>
+    </div>
+  </div>
+
+  <!-- Versão Light -->
+  <div class="mug-card light-card" data-choice="light" onclick="toggleSelect(this)">
+    <div class="letter-badge" style="margin:20px 0 0 20px;">B</div>
+    <div class="mug-canvas">
+      <div class="lineup">
+
+        <div class="iphone">
+          <div class="iphone-body" style="width:22px;height:38px;border-radius:4px;">
+            <div class="home-btn" style="width:7px;height:7px;border-radius:50%;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'07</div>
+        </div>
+
+        <div class="iphone">
+          <div class="iphone-body" style="width:22px;height:40px;border-radius:3px;">
+            <div class="home-btn" style="width:6px;height:6px;border-radius:50%;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'10</div>
+        </div>
+
+        <div class="iphone">
+          <div class="iphone-body" style="width:24px;height:44px;border-radius:5px;">
+            <div class="home-btn" style="width:7px;height:7px;border-radius:50%;position:absolute;bottom:3px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'14</div>
+        </div>
+
+        <div class="iphone">
+          <div class="iphone-body" style="width:24px;height:46px;border-radius:5px;">
+            <div class="notch" style="width:10px;height:4px;border-radius:0 0 3px 3px;position:absolute;top:0;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'17</div>
+        </div>
+
+        <div class="iphone">
+          <div class="iphone-body" style="width:25px;height:50px;border-radius:6px;">
+            <div class="island" style="width:9px;height:4px;border-radius:3px;position:absolute;top:4px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'22</div>
+        </div>
+
+        <div class="iphone">
+          <div class="iphone-body" style="width:26px;height:52px;border-radius:6px;">
+            <div class="island" style="width:8px;height:3px;border-radius:3px;position:absolute;top:5px;left:50%;transform:translateX(-50%);"></div>
+          </div>
+          <div class="iphone-label">'24</div>
+        </div>
+      </div>
+
+      <div class="tagline">todos passaram por aqui.</div>
+      <div class="wordmark">
+        <span class="wm-smart">smart</span>
+        <span class="wm-dot">•</span>
+        <span class="wm-base">base</span>
+      </div>
+    </div>
+    <div class="mug-label">
+      <h3>Fundo off-white/creme</h3>
+      <p>Tom editorial, parece objeto de design. Foto bem com luz natural nos stories de manhã.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:20px;font-size:12px;">Os modelos exibidos: iPhone 2G ('07), 4 ('10), 6 ('14), X ('17), 14 Pro ('22), 16 ('24) — posso ajustar quais entram na linha.</p>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');
+  </style>
+
+  <rect width="1080" height="1350" fill="#07070E"/>
+
+  <!-- ghost texture -->
+  <text x="1060" y="980" fill="#3E82F7" font-family="'Bricolage Grotesque', sans-serif" font-size="520" font-weight="800" text-anchor="end" opacity="0.04" letter-spacing="-20">17</text>
+
+  <!-- headline -->
+  <text x="80" y="290" font-family="'Bricolage Grotesque', sans-serif" font-size="78" font-weight="500" fill="#F2F2F6" letter-spacing="-2">linha completa</text>
+  <text x="80" y="390" font-family="'Bricolage Grotesque', sans-serif" font-size="96" font-weight="800" fill="#3E82F7" letter-spacing="-3">iPhone 17.</text>
+
+  <!-- qualifiers -->
+  <text x="80" y="510" font-family="'Inter', sans-serif" font-size="38" font-weight="400" fill="#C0C0D0" letter-spacing="-0.5">sem fila. sem espera.</text>
+  <text x="80" y="562" font-family="'Inter', sans-serif" font-size="38" font-weight="400" fill="#C0C0D0" letter-spacing="-0.5">com preço diferenciado.</text>
+
+  <!-- separator -->
+  <line x1="80" y1="606" x2="260" y2="606" stroke="#3E82F7" stroke-width="2.5"/>
+
+  <!-- models -->
+  <text x="80" y="666" font-family="'Inter', sans-serif" font-size="22" font-weight="500" fill="#7A7A96" letter-spacing="2">17  ·  17 AIR  ·  17 PRO  ·  17 PRO MAX</text>
+
+  <!-- trust signal -->
+  <text x="80" y="860" font-family="'Bricolage Grotesque', sans-serif" font-size="38" font-weight="500" fill="#F2F2F6" letter-spacing="-1">paga quando recebe.</text>
+
+  <!-- CTA -->
+  <text x="80" y="1100" font-family="'Bricolage Grotesque', sans-serif" font-size="62" font-weight="800" fill="#3E82F7" letter-spacing="-2">garante o teu →</text>
+  <text x="80" y="1155" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#7A7A96" letter-spacing="-0.3">manda o modelo no whats</text>
+
+  <!-- footer -->
+  <line x1="80" y1="1258" x2="1000" y2="1258" stroke="#1E1E2E" stroke-width="1"/>
+  <text x="80" y="1295" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="300" fill="#C0C0D0" letter-spacing="-0.5">smart</text>
+  <circle cx="163" cy="1287" r="5" fill="#3E82F7"/>
+  <text x="173" y="1295" font-family="'Bricolage Grotesque', sans-serif" font-size="28" font-weight="700" fill="#F2F2F6" letter-spacing="-0.5">base</text>
+  <text x="1000" y="1295" fill="#7A7A96" font-family="'Inter', sans-serif" font-size="20" font-weight="400" text-anchor="end">@smartbase.br</text>
+</svg>

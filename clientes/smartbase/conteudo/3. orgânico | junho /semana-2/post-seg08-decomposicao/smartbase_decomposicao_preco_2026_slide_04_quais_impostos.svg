@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+
+  <!-- Header -->
+  <line x1="80" y1="120" x2="130" y2="120" stroke="#2DFF8B" stroke-width="4"/>
+  <text x="145" y="128" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" letter-spacing="3">AUTORIDADE</text>
+  <text x="1000" y="128" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="end" opacity="0.6">4/8</text>
+
+  <!-- Title -->
+  <text x="80" y="320" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="68" font-weight="700" letter-spacing="-2">
+    <tspan x="80" dy="0">4 impostos</tspan>
+    <tspan x="80" dy="78">sobre cada iPhone.</tspan>
+  </text>
+
+  <!-- Tax list -->
+  <g transform="translate(80, 580)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="700">II</text>
+    <text x="100" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="500">Imposto de Importação</text>
+    <text x="1000" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" text-anchor="end">20%</text>
+  </g>
+  <g transform="translate(80, 680)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="700">IPI</text>
+    <text x="100" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="500">Produto Industrializado</text>
+    <text x="1000" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" text-anchor="end">15%</text>
+  </g>
+  <g transform="translate(80, 780)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="32" font-weight="700">PIS/COFINS</text>
+    <text x="290" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="500">contribuição federal</text>
+    <text x="1000" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" text-anchor="end">11%</text>
+  </g>
+  <g transform="translate(80, 880)">
+    <text x="0" y="0" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="700">ICMS</text>
+    <text x="140" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="500">imposto estadual</text>
+    <text x="1000" y="0" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" text-anchor="end">18%</text>
+  </g>
+
+  <!-- Divider + total -->
+  <line x1="80" y1="950" x2="1000" y2="950" stroke="#2DFF8B" stroke-width="2"/>
+  <text x="80" y="1030" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="40" font-weight="700">total cumulativo:</text>
+  <text x="1000" y="1030" fill="#2DFF8B" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="56" font-weight="800" text-anchor="end">~68%</text>
+
+  <!-- Footnote -->
+  <text x="80" y="1190" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="17" font-weight="400" opacity="0.4">fonte: IBPT, Resolução Gecex 852/2026, Receita Federal</text>
+
+  <!-- Footer -->
+  <text x="80" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="36" font-weight="600" letter-spacing="-1">smart<tspan font-weight="300">base</tspan></text>
+  <text x="1000" y="1280" fill="#FFFFFF" font-family="'Inter','Helvetica Neue',Helvetica,Arial,sans-serif" font-size="22" font-weight="400" text-anchor="end" opacity="0.5">@smartbase.br</text>
+</svg>
