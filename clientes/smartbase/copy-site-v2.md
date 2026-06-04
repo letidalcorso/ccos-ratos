@@ -22,13 +22,13 @@ Conjunto completo de textos pra todas as 7 telas + globais (header, footer, SEO)
 ### Header (todas as páginas)
 
 ```
-[logo smartbase]   Catálogo   Sobre   Blog   FAQ        [quero meu apple →]
+[logo smartbase]   Catálogo   Sobre   Blog   FAQ        [quero meu apple →] | não sei se gosto de "catálogo" - produtos tb é muito comum... como poderíamos apresentar melhor?
 ```
 
 | Item | Texto | Status |
 |---|---|---|
 | Logo | smartbase (com o "•" azul entre smart e base) | ✅ |
-| Nav | Catálogo · Sobre · Blog · FAQ | ✅ |
+| Nav | Catálogo · Sobre · Blog · FAQ | ✅ | deixar marcado a página que a pessoa está
 | CTA | quero meu apple → | ✅ |
 
 ### Footer (todas as páginas)
@@ -37,8 +37,8 @@ Conjunto completo de textos pra todas as 7 telas + globais (header, footer, SEO)
 ```
 [logo smartbase]
 sua apple store particular.
-novos sob encomenda e seminovos com garantia.
-entrega em todo o Brasil.
+novos sob encomenda e seminovos verificados.
+entrega em todo o Brasil. | não falar isso por enquanto, estamos anunciando regional
 ```
 
 **Coluna 2 — Navegar**
@@ -71,10 +71,12 @@ Tagline branca:    sua apple store.
 Tagline azul:      particular.
 
 Subtítulo:         novos sob encomenda, seminovos em estoque.
-                   entrega em todo o Brasil.
+                   entrega em todo o Brasil. | retirar e desenvolver uma frase de impacto | como coloquei antes: "novos sob encomenda. seminovos em estoque. entrega em mãos."
 
-CTA primário:      ver catálogo →
-CTA secundário:    fazer pedido pelo WhatsApp
+caxias do sul e região - RS
+
+CTA primário:      ver catálogo → rever essa palavra 
+CTA secundário:    fazer pedido pelo WhatsApp | o CTA tem que ser mais atrativo, gosto de usar na primeira pessoa, tipo "quero/vou/"
 ```
 
 **Por quê:** já é o hero atual aprovado. O "particular" pega o leitor de surpresa (apple store é categoria, "particular" é o twist que cria a marca).
@@ -82,8 +84,8 @@ CTA secundário:    fazer pedido pelo WhatsApp
 ### Posicionamento 💭 SUGESTÃO
 
 ```
-o apple certo pra você raramente é o mais caro.
-aqui a recomendação vem do uso real, não da ficha técnica.
+o apple certo pra você raramente é o mais caro |  não quero usar essa frase, pensar em outra
+aqui a recomendação vem do uso real, não da ficha técnica. | gosto desta
 ```
 
 **Por quê:** 2 linhas. Primeira é a tese-mestre (memory-blessed). Segunda traduz "como" trabalhamos — uso real é a diferença vs vendedor de loja oficial que decora ficha.
@@ -99,7 +101,7 @@ aqui a recomendação vem do uso real, não da ficha técnica.
 | # | Título | Descrição |
 |---|---|---|
 | 01 | original garantido | todo aparelho é Apple original, verificado um a um antes de chegar até você. com garantia de verdade. |
-| 02 | preço que faz sentido | novos importados e seminovos avaliados. a mesma Apple, com preço melhor do que o da loja oficial. |
+| 02 | preço que faz sentido | novos importados e seminovos avaliados. a mesma Apple, com preço melhor do que o do mercado nacional. |
 | 03 | troca estruturada | avaliação técnica com regras claras, valor calculado na hora e processo transparente do início ao fim. sem achismo. |
 | 04 | foco apple | escolhemos trabalhar só com Apple. conhecer uma marca a fundo muda o atendimento, a recomendação e o aparelho certo pra você. |
 
@@ -135,14 +137,14 @@ Botão:         vou chamar
 ### Hero curto ✅ FIRME (atualizado v1)
 
 ```
-Eyebrow:     sob encomenda · garantia apple · entrega nacional
+Eyebrow:     sob encomenda · garantia apple · entrega em mãos
 Breadcrumb:  Home > Catálogo
 
-Título:      o apple que você quer.
+Título:      o apple que você quer. | repensar, será que não seria interessante "o apple certo para você"?
 Título azul: novo ou seminovo.
 
 Subtítulo:   tudo importado, com garantia Apple ativa. pedido pelo WhatsApp,
-             entrega em todo o Brasil em até 7 dias.
+             entrega em todo o Brasil em até 7 dias. | não tem isso, inclusive entendo que valha usar um subtítulo por sessão - novos e seminovos
 ```
 
 ### Filtros ✅ FIRME
@@ -165,10 +167,11 @@ Descrição:      o mais completo da linha. pra quem quer o melhor iPhone, sem c
 Cor disponível: cosmic orange · navy · silver
 Armazenamento:  256GB · 512GB · 1TB
 Status:         em estoque  /  sob encomenda 7 dias
+| deixar um campo para eu poder criar mais infos"
 
-Preço (opcional): R$ 9.299  /  ou: "preço sob consulta"
+Preço (opcional): R$ 9.299  /  ou: "preço sob consulta" | não vale usarmos x vezes de tanto ou 0000 à vista
 
-CTA: pedir no WhatsApp →
+CTA: pedir no WhatsApp → | rever, que tal usar "quero esse"
 
 WhatsApp message pré-preenchida (template):
 "oi, quero fazer um pedido do iPhone 17 Pro [cor] [armazenamento]. tudo certo?"
@@ -176,11 +179,13 @@ WhatsApp message pré-preenchida (template):
 
 ### CTA final ✅ FIRME
 
+| rever CTA, tem 3x a palavra "a gente"
+
 ```
 Eyebrow:     não achou o que procura?
 Título:      fala com a gente.
 Título azul: a gente resolve.
-Subtítulo:   qualquer produto Apple — se existe, a gente consegue.
+Subtítulo:   qualquer produto Apple. se existe, a gente consegue.
 Botão:       abrir whatsapp
 ```
 
@@ -196,9 +201,9 @@ Botão:       abrir whatsapp
 Eyebrow:     sobre
 
 Título:      anos vendendo Apple em Caxias.
-Título azul: agora pra todo o Brasil.
+Título azul: agora pra todo o Brasil. | não tem isso
 
-Subtítulo:   a smartbase é uma loja particular de Apple. tudo importado,
+Subtítulo:   a smartbase é uma loja particular de Apple. tudo importado, | não é tudo, somente os novos...
              lacrado, com garantia.
 ```
 
@@ -211,6 +216,8 @@ Pra escrever a história forte sem foto/nome do dono, preciso de:
 3. **Por que Apple?** (preferência pessoal, escolha estratégica, identificação com a marca)
 4. **Sempre foi só Apple?** (ou já vendeu outros aparelhos)
 5. **Algum marco notável?** (primeiro X pedidos, primeira loja física, momento de virada)
+
+| por enquanto não vamos desenvolver uma página para isso, deixar um espaço na home talvez?
 
 **Placeholder genérico até você me dar as respostas** (não usar como final, é só pro layout não ficar vazio):
 
@@ -245,7 +252,7 @@ novo ou seminovo, o que fizer mais sentido pra você.
 ```
 Título:  garantia que existe de verdade.
 
-[3 COLUNAS VISUAIS]
+[3 COLUNAS VISUAIS] | pq 3 colunas? são duas categorias: novos e seminovos, os novos tem garantia apple e os seminovos 3 meses de garantia da loja.
 
 ┌────────────────┬────────────────┬────────────────┐
 │ lacrado         │ apple 1 ano    │ 3 meses próprios│
@@ -270,13 +277,13 @@ loja física em caxias do sul, rs.
 [HORÁRIO DE FUNCIONAMENTO — dias da semana + horários]
 [TELEFONE FIXO — se houver, além do WhatsApp]
 
-atendemos toda a serra gaúcha pessoalmente e todo o Brasil pelo WhatsApp.
+atendemos toda a serra gaúcha pessoalmente e todo o Brasil pelo WhatsApp. | não é todo brasil. deixar placeholder para eu preencher depois
 ```
 
 ### CTA WhatsApp ✅ FIRME
 
 ```
-Título:      pra qualquer coisa, chama a gente.
+Título:      pra qualquer coisa, chama a gente. | "pra qualquer coisa" é mt genérico e amplo
 Subtítulo:   atendimento direto. sem chat-bot, sem formulário.
 Botão:       abrir whatsapp →
 ```
@@ -350,7 +357,7 @@ Imagem grande no topo. Cada post define a sua.
 ### Conteúdo
 Variável por post. Escrevo quando tivermos a pauta de cada um.
 
-**4 posts iniciais sugeridos** (já mapeados):
+**4 posts iniciais sugeridos** (já mapeados): | validado com o levantamento de seo?
 1. vale a pena comprar iPhone seminovo? *(maior leverage SEO)*
 2. como saber se o iPhone é original
 3. iPhone importado é seguro? tudo sobre garantia internacional Apple no Brasil

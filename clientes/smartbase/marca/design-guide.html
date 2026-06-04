@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartbase — Design Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #07070E;
+      --s1:        #0F0F1C;
+      --s2:        #121220;
+      --s3:        #1A1A2E;
+      --s3b:       #1E1E2E;
+      --blue:      #3E82F7;
+      --blue-l:    #6DAFF9;
+      --purple:    #8B5CF6;
+      --green:     #10B981;
+      --wa:        #25D366;
+      --t1:        #F2F2F6;
+      --t2:        #7A7A96;
+      --t3:        #4A4A60;
+      --t4:        #C0C0D0;
+      --ff-disp:   'Bricolage Grotesque', sans-serif;
+      --ff-body:   'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--t1);
+      font-family: var(--ff-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ── */
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 40px 120px; }
+
+    /* ── HEADER ── */
+    .dg-header {
+      padding: 80px 0 64px;
+      border-bottom: 1px solid var(--s3b);
+      margin-bottom: 80px;
+    }
+    .dg-header-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 3px;
+      color: var(--t3); text-transform: uppercase; margin-bottom: 24px;
+    }
+    .dg-header h1 {
+      font-family: var(--ff-disp); font-size: 64px; font-weight: 800; line-height: 1;
+      margin-bottom: 16px;
+    }
+    .dg-header h1 span { color: var(--blue); }
+    .dg-header p { font-size: 16px; color: var(--t2); max-width: 500px; }
+
+    /* ── SECTION ── */
+    .dg-section { margin-bottom: 96px; }
+    .dg-section-title {
+      font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 32px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--s3b);
+    }
+
+    /* ── LOGO ── */
+    .logo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .logo-card {
+      border-radius: 12px; padding: 48px 40px; display: flex; flex-direction: column;
+      align-items: flex-start; gap: 32px;
+    }
+    .logo-card--dark { background: var(--s1); border: 1px solid var(--s3b); }
+    .logo-card--light { background: #F2F2F6; }
+    .logo-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+    .logo-card--dark .logo-label { color: var(--t3); }
+    .logo-card--light .logo-label { color: #4A4A60; }
+
+    .wordmark-white { display: flex; align-items: center; gap: 2px; }
+    .wordmark-white .w-smart { font-family: var(--ff-disp); font-size: 36px; font-weight: 300; color: var(--t4); }
+    .wordmark-white .w-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); margin: 0 1px; }
+    .wordmark-white .w-base { font-family: var(--ff-disp); font-size: 36px; font-weight: 700; color: var(--t1); }
+
+    .wordmark-dark { display: flex; align-items: center; gap: 2px; }
+    .wordmark-dark .w-smart { font-family: var(--ff-disp); font-size: 36px; font-weight: 300; color: #1A1A2E; }
+    .wordmark-dark .w-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); margin: 0 1px; }
+    .wordmark-dark .w-base { font-family: var(--ff-disp); font-size: 36px; font-weight: 700; color: #07070E; }
+
+    .pill-logo {
+      display: inline-flex; align-items: center; justify-content: space-between;
+      background: transparent; border: 1.5px solid #1A1A2E; border-radius: 50px;
+      padding: 10px 20px 10px 28px; gap: 16px; min-width: 180px;
+    }
+    .pill-logo-dark {
+      background: #F2F2F6; border-color: #1A1A2E;
+    }
+    .pill-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--blue); }
+    .sb-badge-logo {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--s1); border-radius: 15px; padding: 6px 18px;
+      font-size: 15px; font-weight: 600; color: var(--blue);
+    }
+
+    /* ── PALETTE ── */
+    .palette-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+    .swatch {
+      border-radius: 10px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .swatch-color { height: 80px; }
+    .swatch-info { padding: 12px; background: var(--s1); }
+    .swatch-name { font-size: 13px; font-weight: 600; color: var(--t1); margin-bottom: 2px; }
+    .swatch-hex { font-size: 11px; font-weight: 500; color: var(--t3); font-family: monospace; margin-bottom: 6px; }
+    .swatch-use { font-size: 11px; color: var(--t2); line-height: 1.4; }
+
+    .palette-section-label {
+      font-size: 12px; font-weight: 600; color: var(--t3); letter-spacing: 1.5px;
+      text-transform: uppercase; margin: 28px 0 12px;
+    }
+
+    /* ── PILARES ── */
+    .pilares-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .pilar-card {
+      border-radius: 12px; padding: 28px; border: 1px solid var(--s3b);
+      position: relative; overflow: hidden;
+    }
+    .pilar-accent {
+      position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    }
+    .pilar-badge {
+      display: inline-block; padding: 4px 12px; border-radius: 20px;
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .pilar-headline {
+      font-family: var(--ff-disp); font-size: 28px; font-weight: 800; line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .pilar-desc { font-size: 13px; color: var(--t2); line-height: 1.5; }
+    .pilar-tokens {
+      margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--s3b);
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .pilar-token {
+      font-size: 10px; font-family: monospace; color: var(--t3);
+      background: var(--bg); padding: 3px 8px; border-radius: 4px;
+    }
+
+    /* ── TIPOGRAFIA ── */
+    .typo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .typo-card {
+      background: var(--s1); border: 1px solid var(--s3b); border-radius: 12px; padding: 32px;
+    }
+    .typo-sample-display {
+      font-family: var(--ff-disp); font-size: 52px; font-weight: 800;
+      color: var(--t1); line-height: 1.05; margin-bottom: 8px;
+    }
+    .typo-sample-display span { color: var(--blue); }
+    .typo-sample-body { font-family: var(--ff-body); font-size: 18px; color: var(--t2); margin-bottom: 8px; }
+    .typo-meta { font-size: 11px; color: var(--t3); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--s3b); }
+    .typo-meta strong { color: var(--t2); display: block; margin-bottom: 4px; font-size: 12px; }
+    .typo-weights { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+    .typo-weight-row { display: flex; align-items: baseline; gap: 12px; }
+    .typo-weight-label { font-size: 10px; color: var(--t3); font-family: monospace; min-width: 30px; }
+
+    /* ── ELEMENTOS ── */
+    .elements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .element-card {
+      background: var(--s1); border: 1px solid var(--s3b); border-radius: 12px;
+      padding: 28px; display: flex; flex-direction: column; gap: 20px;
+    }
+    .element-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--t3); }
+    .element-preview { display: flex; align-items: center; justify-content: center; min-height: 80px; }
+    .element-desc { font-size: 12px; color: var(--t2); line-height: 1.5; border-top: 1px solid var(--s3b); padding-top: 16px; }
+
+    /* accent bar demo */
+    .accent-bar-demo {
+      width: 4px; height: 80px; border-radius: 2px;
+    }
+
+    /* pill badge */
+    .pill-badge {
+      display: inline-block; padding: 5px 14px; border-radius: 14px;
+      font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+
+    /* divider */
+    .divider-demo { width: 100%; height: 1px; background: var(--s3b); }
+
+    /* ghost text demo */
+    .ghost-demo {
+      font-family: var(--ff-disp); font-size: 80px; font-weight: 800;
+      color: var(--t1); opacity: 0.04; line-height: 1;
+    }
+
+    /* ── POST PREVIEW ── */
+    .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .post-mockup {
+      aspect-ratio: 4/5; border-radius: 12px; overflow: hidden;
+      position: relative; background: var(--bg);
+      border: 1px solid var(--s3b);
+    }
+    .post-mockup-accent { position: absolute; left: 0; top: 0; bottom: 0; width: 4px; }
+    .post-mockup-inner { padding: 28px 28px 20px; height: 100%; display: flex; flex-direction: column; }
+    .post-mockup-badge {
+      display: inline-block; padding: 4px 10px; border-radius: 12px;
+      font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      margin-bottom: 12px; align-self: flex-start;
+    }
+    .post-mockup-headline {
+      font-family: var(--ff-disp); font-size: 22px; font-weight: 800; line-height: 1.15;
+      margin-bottom: 8px; flex: 1;
+    }
+    .post-mockup-sub { font-size: 12px; color: var(--t2); margin-bottom: 12px; }
+    .post-mockup-footer {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 12px; border-top: 1px solid var(--s3b);
+    }
+    .post-mockup-wm { display: flex; align-items: center; gap: 3px; }
+    .post-mockup-wm .w-smart { font-family: var(--ff-disp); font-size: 13px; font-weight: 300; color: var(--t4); }
+    .post-mockup-wm .w-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
+    .post-mockup-wm .w-base { font-family: var(--ff-disp); font-size: 13px; font-weight: 700; color: var(--t1); }
+    .post-mockup-handle { font-size: 10px; color: var(--t3); }
+
+    /* ── PROIBIDO ── */
+    .prohibit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .prohibit-card {
+      background: var(--s1); border: 1px solid var(--s3b); border-radius: 12px; padding: 24px;
+    }
+    .prohibit-card-title {
+      font-size: 12px; font-weight: 700; color: #EF4444; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 14px;
+    }
+    .prohibit-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .prohibit-list li {
+      font-size: 13px; color: var(--t2); padding-left: 16px; position: relative; line-height: 1.4;
+    }
+    .prohibit-list li::before {
+      content: '×'; position: absolute; left: 0; color: #EF4444; font-weight: 700;
+    }
+
+    /* ── TOKENS TABLE ── */
+    .token-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .token-table th {
+      text-align: left; padding: 10px 14px; font-size: 10px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase; color: var(--t3);
+      border-bottom: 1px solid var(--s3b);
+    }
+    .token-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--t2); }
+    .token-table td:first-child { color: var(--t1); font-weight: 500; }
+    .token-table td code {
+      background: var(--s1); border: 1px solid var(--s3b); border-radius: 4px;
+      padding: 2px 7px; font-family: monospace; font-size: 12px; color: var(--blue);
+    }
+    .token-dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; vertical-align: middle; margin-right: 6px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header class="dg-header">
+    <p class="dg-header-label">Solz Lab · Design System</p>
+    <h1>smart<span>•</span>base</h1>
+    <p>Referência visual completa para criação de posts, carrosséis e materiais. Ler antes de criar qualquer peça.</p>
+  </header>
+
+
+  <!-- LOGO -->
+  <section class="dg-section">
+    <p class="dg-section-title">01 — Logo</p>
+    <div class="logo-grid">
+
+      <div class="logo-card logo-card--dark">
+        <p class="logo-label">Versão escura (uso padrão)</p>
+        <div>
+          <div class="pill-logo" style="border-color: var(--s3b); margin-bottom: 20px;">
+            <div style="width:60px;"></div>
+            <div class="pill-dot"></div>
+          </div>
+          <div class="wordmark-white">
+            <span class="w-smart">smart</span>
+            <div class="w-dot"></div>
+            <span class="w-base">base</span>
+          </div>
+        </div>
+        <div class="sb-badge-logo">sb</div>
+      </div>
+
+      <div class="logo-card logo-card--light">
+        <p class="logo-label">Versão clara</p>
+        <div>
+          <div class="pill-logo pill-logo-dark" style="margin-bottom: 20px;">
+            <div style="width:60px;"></div>
+            <div class="pill-dot"></div>
+          </div>
+          <div class="wordmark-dark">
+            <span class="w-smart">smart</span>
+            <div class="w-dot"></div>
+            <span class="w-base">base</span>
+          </div>
+        </div>
+        <div style="background:#1A1A2E; border-radius:15px; padding:6px 18px; display:inline-block;">
+          <span style="font-size:15px; font-weight:600; color:var(--blue);">sb</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:16px; background:var(--s1); border:1px solid var(--s3b); border-radius:12px; padding:20px 24px;">
+      <table class="token-table">
+        <tr>
+          <th>Regra</th><th>Especificação</th>
+        </tr>
+        <tr><td>Wordmark</td><td><code>smart</code> peso 300, cinza claro · <code>•</code> azul · <code>base</code> peso 700, branco</td></tr>
+        <tr><td>Tamanho mínimo</td><td>80px de largura — abaixo disso a cápsula perde forma</td></tr>
+        <tr><td>Handle obrigatório</td><td><code>@smartbase.br</code> no footer de todo post</td></tr>
+        <tr><td>Badge compacto</td><td>pill <code>#0F0F1C</code> com "sb" em <code>#3E82F7</code> peso 600</td></tr>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- PALETA -->
+  <section class="dg-section">
+    <p class="dg-section-title">02 — Paleta de Cores</p>
+
+    <p class="palette-section-label">Fundo e superfície</p>
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#07070E;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">bg-base</p>
+          <p class="swatch-hex">#07070E</p>
+          <p class="swatch-use">Fundo de todos os posts e páginas — nunca substituir</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0F0F1C;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">surface-1</p>
+          <p class="swatch-hex">#0F0F1C</p>
+          <p class="swatch-use">Cards, blocos internos, badge "sb"</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#121220;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">surface-2</p>
+          <p class="swatch-hex">#121220</p>
+          <p class="swatch-use">Camada intermediária, hover de card</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1A1A2E;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">surface-3</p>
+          <p class="swatch-hex">#1A1A2E · #1E1E2E</p>
+          <p class="swatch-use">Bordas, dividers, traços</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="palette-section-label">Texto</p>
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F2F2F6;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">text-primary</p>
+          <p class="swatch-hex">#F2F2F6</p>
+          <p class="swatch-use">Headlines e títulos principais</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C0C0D0;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">text-light</p>
+          <p class="swatch-hex">#C0C0D0</p>
+          <p class="swatch-use">"smart" no wordmark, subtítulos em peso 300</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#7A7A96;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">text-secondary</p>
+          <p class="swatch-hex">#7A7A96</p>
+          <p class="swatch-use">Corpo de texto, subtítulos, legendas</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A4A60;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">text-muted</p>
+          <p class="swatch-hex">#4A4A60</p>
+          <p class="swatch-use">Handles, labels, rodapé menos importante</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="palette-section-label">Cores de ação</p>
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#3E82F7;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">blue-primary</p>
+          <p class="swatch-hex">#3E82F7</p>
+          <p class="swatch-use">Destaque de headlines, dot do wordmark, CTA, pilar DECIFRA APPLE</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#6DAFF9;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">blue-light</p>
+          <p class="swatch-hex">#6DAFF9</p>
+          <p class="swatch-use">Hover, variante clara do primário</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#8B5CF6;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">purple</p>
+          <p class="swatch-hex">#8B5CF6</p>
+          <p class="swatch-use">Pilar CASA SMARTBASE — identidade, confiança</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#10B981;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">green</p>
+          <p class="swatch-hex">#10B981</p>
+          <p class="swatch-use">Pilar VIDA APPLE EM CAXIAS — local, lifestyle</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;">
+      <div class="swatch" style="max-width:280px;">
+        <div class="swatch-color" style="background:#25D366;"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">wa-green</p>
+          <p class="swatch-hex">#25D366</p>
+          <p class="swatch-use">Exclusivo para CTAs de WhatsApp — nunca usar como cor editorial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TIPOGRAFIA -->
+  <section class="dg-section">
+    <p class="dg-section-title">03 — Tipografia</p>
+    <div class="typo-grid">
+
+      <div class="typo-card">
+        <div class="typo-sample-display">iPhone 17.<br><span>Original.</span></div>
+        <div class="typo-meta">
+          <strong>Bricolage Grotesque — Títulos</strong>
+          Uso: headlines, capas de carrossel, números de destaque
+        </div>
+        <div class="typo-weights">
+          <div class="typo-weight-row">
+            <span class="typo-weight-label">300</span>
+            <span style="font-family:var(--ff-disp); font-weight:300; font-size:22px; color:var(--t4);">sua apple store. particular.</span>
+          </div>
+          <div class="typo-weight-row">
+            <span class="typo-weight-label">700</span>
+            <span style="font-family:var(--ff-disp); font-weight:700; font-size:22px; color:var(--t1);">smartbase</span>
+          </div>
+          <div class="typo-weight-row">
+            <span class="typo-weight-label">800</span>
+            <span style="font-family:var(--ff-disp); font-weight:800; font-size:22px; color:var(--t1);">iphone. aqui.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="typo-card">
+        <div class="typo-sample-body" style="font-size:28px; color:var(--t1); margin-bottom:4px; font-weight:500;">Especialistas Apple</div>
+        <div class="typo-sample-body" style="font-size:22px;">em Caxias do Sul — importado direto, original, com garantia.</div>
+        <div class="typo-meta">
+          <strong>Inter — Corpo e suporte</strong>
+          Uso: subtítulos, corpo, legendas, labels, badges, footer
+        </div>
+        <div class="typo-weights">
+          <div class="typo-weight-row">
+            <span class="typo-weight-label">300</span>
+            <span style="font-family:var(--ff-body); font-weight:300; font-size:16px; color:var(--t2);">texto leve, subtítulos discretos</span>
+          </div>
+          <div class="typo-weight-row">
+            <span class="typo-weight-label">400</span>
+            <span style="font-family:var(--ff-body); font-weight:400; font-size:16px; color:var(--t2);">corpo de texto padrão</span>
+          </div>
+          <div class="typo-weight-row">
+            <span class="typo-weight-label">600</span>
+            <span style="font-family:var(--ff-body); font-weight:600; font-size:16px; color:var(--t1);">labels e destaques</span>
+          </div>
+          <div class="typo-weight-row">
+            <span class="typo-weight-label" style="font-size:9px; letter-spacing:1px;">700 CAPS</span>
+            <span style="font-family:var(--ff-body); font-weight:700; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--blue);">DECIFRA APPLE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PILARES -->
+  <section class="dg-section">
+    <p class="dg-section-title">04 — Pilares de Conteúdo</p>
+    <div class="pilares-grid">
+
+      <div class="pilar-card" style="background:#0A0F1E;">
+        <div class="pilar-accent" style="background:#3E82F7;"></div>
+        <div class="pilar-badge" style="background:#0E1E3A; color:#3E82F7;">DECIFRA APPLE</div>
+        <div class="pilar-headline" style="color:#F2F2F6;">você sabe o que paga de <span style="color:#3E82F7;">imposto?</span></div>
+        <p class="pilar-desc">Carrosséis investigativos com dados reais — tributação, Paraguai, garantia, modelos. KPI: salvamentos e compartilhamentos.</p>
+        <div class="pilar-tokens">
+          <span class="pilar-token">#3E82F7</span>
+          <span class="pilar-token">surface #0E1E3A</span>
+        </div>
+      </div>
+
+      <div class="pilar-card" style="background:#0C0A14;">
+        <div class="pilar-accent" style="background:#8B5CF6;"></div>
+        <div class="pilar-badge" style="background:#1C1028; color:#8B5CF6;">CASA SMARTBASE</div>
+        <div class="pilar-headline" style="color:#F2F2F6;">paga quando <span style="color:#8B5CF6;">recebe.</span></div>
+        <p class="pilar-desc">Diferencial "paga quando recebe", prova social, bastidor, entregas. KPI: comentários e DMs.</p>
+        <div class="pilar-tokens">
+          <span class="pilar-token">#8B5CF6</span>
+          <span class="pilar-token">surface #1C1028</span>
+        </div>
+      </div>
+
+      <div class="pilar-card" style="background:#071411;">
+        <div class="pilar-accent" style="background:#10B981;"></div>
+        <div class="pilar-badge" style="background:#0A201A; color:#10B981;">VIDA APPLE EM CAXIAS</div>
+        <div class="pilar-headline" style="color:#F2F2F6;">feito aqui, na <span style="color:#10B981;">serra.</span></div>
+        <p class="pilar-desc">Ancoragem local, fotos em iPhone na Serra Gaúcha, lifestyle. KPI: alcance local.</p>
+        <div class="pilar-tokens">
+          <span class="pilar-token">#10B981</span>
+          <span class="pilar-token">surface #0A201A</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ELEMENTOS -->
+  <section class="dg-section">
+    <p class="dg-section-title">05 — Elementos Visuais</p>
+    <div class="elements-grid">
+
+      <div class="element-card">
+        <p class="element-label">Accent Bar</p>
+        <div class="element-preview" style="gap:12px;">
+          <div class="accent-bar-demo" style="background:#3E82F7;"></div>
+          <div class="accent-bar-demo" style="background:#8B5CF6;"></div>
+          <div class="accent-bar-demo" style="background:#10B981;"></div>
+        </div>
+        <p class="element-desc">4px de largura, altura total do post. Colada na borda esquerda (x=0). Cor = cor do pilar. Obrigatória em todo post com pilar definido.</p>
+      </div>
+
+      <div class="element-card">
+        <p class="element-label">Badges de Pilar</p>
+        <div class="element-preview" style="flex-direction:column; gap:8px; align-items:flex-start;">
+          <span class="pill-badge" style="background:#0E1E3A; color:#3E82F7;">DECIFRA APPLE</span>
+          <span class="pill-badge" style="background:#1C1028; color:#8B5CF6;">CASA SMARTBASE</span>
+          <span class="pill-badge" style="background:#0A201A; color:#10B981;">VIDA APPLE</span>
+        </div>
+        <p class="element-desc">Inter 700, caps, letter-spacing 1.5px. Posição: 80px left, ~98px top. Sempre o primeiro elemento do post.</p>
+      </div>
+
+      <div class="element-card">
+        <p class="element-label">Divider</p>
+        <div class="element-preview" style="flex-direction:column; gap:16px; width:100%;">
+          <div class="divider-demo"></div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <div style="width:100px; height:7px; background:#3E82F7; border-radius:3.5px;"></div>
+            <span style="font-size:11px; color:var(--t3);">linha de destaque</span>
+          </div>
+        </div>
+        <p class="element-desc">Divider sutil: 1px, #1E1E2E. Linha de destaque: 100px × 7px, cor do pilar, abaixo do badge.</p>
+      </div>
+
+      <div class="element-card">
+        <p class="element-label">Footer Fixo</p>
+        <div class="element-preview" style="flex-direction:column; width:100%; gap:10px;">
+          <div class="divider-demo"></div>
+          <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+            <div style="display:flex; align-items:center; gap:4px;">
+              <div style="background:var(--s1); border-radius:15px; padding:4px 10px; font-size:11px; font-weight:600; color:var(--blue);">sb</div>
+              <span style="font-family:var(--ff-disp); font-size:15px; font-weight:300; color:var(--t4);">smart</span>
+              <div style="width:5px; height:5px; border-radius:50%; background:var(--blue);"></div>
+              <span style="font-family:var(--ff-disp); font-size:15px; font-weight:700; color:var(--t1);">base</span>
+            </div>
+            <span style="font-size:11px; color:var(--t3);">@smartbase.br</span>
+          </div>
+        </div>
+        <p class="element-desc">Obrigatório em todo post. Divider em y=1258 + badge "sb" + wordmark esquerda + handle direita.</p>
+      </div>
+
+      <div class="element-card">
+        <p class="element-label">Ghost Text</p>
+        <div class="element-preview">
+          <span class="ghost-demo">sb</span>
+        </div>
+        <p class="element-desc">Bricolage 800, font-size enorme (~520px no post), #F2F2F6 opacity 0.03–0.04. Profundidade sem poluir.</p>
+      </div>
+
+      <div class="element-card">
+        <p class="element-label">Bordas e Raios</p>
+        <div class="element-preview" style="gap:12px; flex-wrap:wrap; justify-content:center;">
+          <div style="width:50px; height:50px; border:1px solid var(--s3b); border-radius:50px; background:var(--s1);"></div>
+          <div style="width:50px; height:50px; border:1px solid var(--s3b); border-radius:20px; background:var(--s1);"></div>
+          <div style="width:50px; height:50px; border:1px solid var(--s3b); border-radius:12px; background:var(--s1);"></div>
+          <div style="width:50px; height:50px; border:1px solid var(--s3b); border-radius:4px; background:var(--s1);"></div>
+        </div>
+        <p class="element-desc">pill 50px · badge 20px · card 12px · foto 4px. Nunca bordas vivas (0px).</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- POST MOCKUPS -->
+  <section class="dg-section">
+    <p class="dg-section-title">06 — Mockups de Post por Pilar</p>
+    <div class="post-grid">
+
+      <!-- DECIFRA APPLE -->
+      <div class="post-mockup" style="background:#07070E;">
+        <div class="post-mockup-accent" style="background:#3E82F7;"></div>
+        <div class="post-mockup-inner">
+          <span class="post-mockup-badge" style="background:#0E1E3A; color:#3E82F7;">DECIFRA APPLE</span>
+          <div style="width:60px; height:5px; background:#3E82F7; border-radius:3px; margin-bottom:14px;"></div>
+          <div class="post-mockup-headline">
+            você paga <span style="color:#3E82F7;">60%</span> de imposto no iPhone nacional.
+          </div>
+          <p class="post-mockup-sub">a gente explica →</p>
+          <div class="post-mockup-footer">
+            <div class="post-mockup-wm">
+              <span class="w-smart">smart</span>
+              <div class="w-dot"></div>
+              <span class="w-base">base</span>
+            </div>
+            <span class="post-mockup-handle">@smartbase.br</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASA SMARTBASE -->
+      <div class="post-mockup" style="background:#07070E;">
+        <div class="post-mockup-accent" style="background:#8B5CF6;"></div>
+        <div class="post-mockup-inner">
+          <span class="post-mockup-badge" style="background:#1C1028; color:#8B5CF6;">CASA SMARTBASE</span>
+          <div style="width:60px; height:5px; background:#8B5CF6; border-radius:3px; margin-bottom:14px;"></div>
+          <div class="post-mockup-headline">
+            você paga quando o iPhone está na sua <span style="color:#8B5CF6;">mão.</span>
+          </div>
+          <p class="post-mockup-sub">IMEI verificado, transferência completa</p>
+          <div class="post-mockup-footer">
+            <div class="post-mockup-wm">
+              <span class="w-smart">smart</span>
+              <div class="w-dot"></div>
+              <span class="w-base">base</span>
+            </div>
+            <span class="post-mockup-handle">@smartbase.br</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDA APPLE -->
+      <div class="post-mockup" style="background:#07070E;">
+        <div class="post-mockup-accent" style="background:#10B981;"></div>
+        <div class="post-mockup-inner">
+          <span class="post-mockup-badge" style="background:#0A201A; color:#10B981;">VIDA APPLE EM CAXIAS</span>
+          <div style="width:60px; height:5px; background:#10B981; border-radius:3px; margin-bottom:14px;"></div>
+          <div class="post-mockup-headline">
+            fotografado em iPhone 17 na <span style="color:#10B981;">serra.</span>
+          </div>
+          <p class="post-mockup-sub">Caxias do Sul · RS</p>
+          <div class="post-mockup-footer">
+            <div class="post-mockup-wm">
+              <span class="w-smart">smart</span>
+              <div class="w-dot"></div>
+              <span class="w-base">base</span>
+            </div>
+            <span class="post-mockup-handle">@smartbase.br</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TOKENS SVG -->
+  <section class="dg-section">
+    <p class="dg-section-title">07 — Tokens para SVG</p>
+    <div style="background:var(--s1); border:1px solid var(--s3b); border-radius:12px; padding:28px;">
+      <table class="token-table">
+        <tr><th>Elemento</th><th>Atributo SVG</th><th>Valor</th></tr>
+        <tr>
+          <td><span class="token-dot" style="background:#07070E; border:1px solid #1A1A2E;"></span>Fundo</td>
+          <td><code>fill</code></td>
+          <td>#07070E</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#0F0F1C;"></span>Surface</td>
+          <td><code>fill</code></td>
+          <td>#0F0F1C</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#1E1E2E;"></span>Divider</td>
+          <td><code>stroke</code></td>
+          <td>#1E1E2E</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#3E82F7;"></span>Accent blue</td>
+          <td><code>fill</code></td>
+          <td>#3E82F7</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#8B5CF6;"></span>Accent purple</td>
+          <td><code>fill</code></td>
+          <td>#8B5CF6</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#10B981;"></span>Accent green</td>
+          <td><code>fill</code></td>
+          <td>#10B981</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#F2F2F6;"></span>Headline</td>
+          <td><code>fill + font</code></td>
+          <td>#F2F2F6 · Bricolage Grotesque · 96px · 800</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#7A7A96;"></span>Corpo</td>
+          <td><code>fill + font</code></td>
+          <td>#7A7A96 · Inter · 26px · 400</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#4A4A60;"></span>Handle</td>
+          <td><code>fill + font</code></td>
+          <td>#4A4A60 · Inter · 20px · 500</td>
+        </tr>
+        <tr>
+          <td>Wordmark smart</td>
+          <td><code>font-weight + fill</code></td>
+          <td>300 · #C0C0D0</td>
+        </tr>
+        <tr>
+          <td>Wordmark base</td>
+          <td><code>font-weight + fill</code></td>
+          <td>700 · #F2F2F6</td>
+        </tr>
+        <tr>
+          <td><span class="token-dot" style="background:#3E82F7;"></span>Dot wordmark</td>
+          <td><code>&lt;circle r="5"&gt;</code></td>
+          <td>fill="#3E82F7"</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- PROIBIDO -->
+  <section class="dg-section">
+    <p class="dg-section-title">08 — O que Nunca Fazer</p>
+    <div class="prohibit-grid">
+
+      <div class="prohibit-card">
+        <p class="prohibit-card-title">Cores</p>
+        <ul class="prohibit-list">
+          <li>Branco puro (#FFF) como fundo — a marca é dark-first</li>
+          <li>Paletas quentes (laranja, vermelho, amarelo)</li>
+          <li>Gradiente vibrante ou neon</li>
+          <li>#25D366 fora de contexto de WhatsApp</li>
+          <li>Misturar mais de uma cor de pilar no mesmo post</li>
+        </ul>
+      </div>
+
+      <div class="prohibit-card">
+        <p class="prohibit-card-title">Tipografia</p>
+        <ul class="prohibit-list">
+          <li>Fontes serifadas em qualquer contexto</li>
+          <li>Bricolage abaixo de 28px</li>
+          <li>Mais de 2 famílias tipográficas por peça</li>
+          <li>Headlines em CAPS LOCK</li>
+          <li>Letter-spacing em headlines (só em labels de pilar)</li>
+        </ul>
+      </div>
+
+      <div class="prohibit-card">
+        <p class="prohibit-card-title">Layout</p>
+        <ul class="prohibit-list">
+          <li>Preço no feed — só no WhatsApp</li>
+          <li>Post sem footer com wordmark e handle</li>
+          <li>Padding menor que 80px lateral</li>
+          <li>Post com pilar sem accent bar lateral</li>
+          <li>Estética de varejo: bannerzão com preço + produto + promoção</li>
+        </ul>
+      </div>
+
+      <div class="prohibit-card">
+        <p class="prohibit-card-title">Tom Visual</p>
+        <ul class="prohibit-list">
+          <li>Qualquer elemento que pareça "promoção"</li>
+          <li>Post irreconhecível como Smartbase sem o logo</li>
+          <li>Estilo de loja de varejo genérica (fundo branco, produto gigante)</li>
+          <li>Usar "markup" em qualquer copy — palavra proibida</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer style="padding-top:40px; border-top:1px solid var(--s3b); display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:6px;">
+      <span style="font-family:var(--ff-disp); font-size:18px; font-weight:300; color:var(--t4);">smart</span>
+      <div style="width:6px; height:6px; border-radius:50%; background:var(--blue);"></div>
+      <span style="font-family:var(--ff-disp); font-size:18px; font-weight:700; color:var(--t1);">base</span>
+    </div>
+    <span style="font-size:12px; color:var(--t3);">Design Guide · Solz Lab · 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
