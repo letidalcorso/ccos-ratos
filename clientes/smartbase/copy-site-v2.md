@@ -320,36 +320,45 @@ hoje a smartbase atende toda a serra gaúcha pessoalmente e o Brasil todo
 pelo WhatsApp.
 ```
 
-### Tese da marca ✅ FIRME (memory-blessed)
+### Tese da marca ✅ FIRME (v2 — atualizada 04/06/2026)
 
 ```
-o apple certo pra você raramente é o mais caro.
+tem apple. e tem o apple certo pra você.
 
 aqui a recomendação vem do uso real, não da ficha técnica.
-produto, garantia e seu aparelho antigo como entrada entram na mesma conversa.
 novo ou seminovo, o que fizer mais sentido pra você.
 ```
 
-### Garantia (bloco proeminente) 💭 SUGESTÃO
+**Por quê:** versão V2 da tese-mestre. Pivotou de PREÇO ("raramente é o mais caro") pra ADEQUAÇÃO ("o certo pra você"). Mantém callback com Home/Posicionamento. Tirou menção a trade-in/"aparelho antigo como entrada" (descontinuado pra v1 com escala nacional).
+
+### Garantia (bloco proeminente) ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
-Título:  garantia que existe de verdade.
+Título:  garantia.
 
-[3 COLUNAS VISUAIS] | pq 3 colunas? são duas categorias: novos e seminovos, os novos tem garantia apple e os seminovos 3 meses de garantia da loja.
+[2 COLUNAS — Novos vs Seminovos]
 
-┌────────────────┬────────────────┬────────────────┐
-│ lacrado         │ apple 1 ano    │ 3 meses próprios│
-│                 │                │                 │
-│ todo aparelho   │ garantia       │ pros seminovos, │
-│ novo chega      │ internacional  │ a smartbase     │
-│ lacrado,        │ Apple — válida │ adiciona 3      │
-│ importado       │ em qualquer    │ meses próprios. │
-│ direto, sem     │ Apple Service  │ você fala com   │
-│ desvio de       │ no mundo,      │ a gente, não    │
-│ caixa.          │ inclusive no   │ com a Apple.    │
-│                 │ Brasil.        │                 │
-└────────────────┴────────────────┴────────────────┘
+┌─────────────────────────────┬─────────────────────────────┐
+│ NOVOS                        │ SEMINOVOS                    │
+│                              │                              │
+│ Apple oficial · 12 meses     │ smartbase · 3 meses          │
+│                              │                              │
+│ todo aparelho novo chega     │ pros seminovos, a smartbase  │
+│ lacrado de fábrica.          │ adiciona 3 meses de          │
+│ garantia internacional       │ garantia própria sobre o     │
+│ Apple, válida em qualquer    │ aparelho.                    │
+│ Apple Service no mundo,      │                              │
+│ inclusive no Brasil.         │ acionamento direto com a     │
+│                              │ smartbase, no whatsapp.      │
+└─────────────────────────────┴─────────────────────────────┘
 ```
+
+**Por quê:**
+- 2 colunas (não 3) — uma por modalidade, espelha a estrutura das "2 portas" da Vitrine
+- Título "garantia." (sem "que existe de verdade") — afirma sem se defender. Marca confiante não enfatiza, só apresenta
+- Cortado "sem desvio de caixa" — jargão técnico que acende alarme em quem não conhece. Substituído por "lacrado de fábrica" (universalmente compreensível)
+- Cortado "importado direto" — info que tem dono no Sobre→História (princípio: 1 promessa = 1 dono)
+- Tom positivo: afirma o que É, não o que NÃO é
 
 ### Loja física ⚠️ PRECISA TEU INPUT
 
@@ -360,16 +369,21 @@ loja física em caxias do sul, rs.
 [HORÁRIO DE FUNCIONAMENTO — dias da semana + horários]
 [TELEFONE FIXO — se houver, além do WhatsApp]
 
-atendemos toda a serra gaúcha pessoalmente e todo o Brasil pelo WhatsApp. | não é todo brasil. deixar placeholder para eu preencher depois
+atendemos a serra gaúcha pessoalmente. [PLACEHOLDER — preencher alcance regional/nacional depois conforme expansão]
 ```
 
-### CTA WhatsApp ✅ FIRME
+### CTA WhatsApp ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
-Título:      pra qualquer coisa, chama a gente. | "pra qualquer coisa" é mt genérico e amplo
-Subtítulo:   atendimento direto. sem chat-bot, sem formulário.
+Título:      antes de fechar, chama.
+Subtítulo:   atendimento direto. sem chatbot, sem formulário.
 Botão:       abrir whatsapp →
 ```
+
+**Por quê:**
+- "antes de fechar, chama" substitui "pra qualquer coisa, chama a gente" (genérico demais)
+- Captura o momento de decisão: visitante leu Sobre, considera comprar — esse é o convite certo
+- Concreto + ativo + curto (3 palavras + verbo de ação)
 
 ---
 
