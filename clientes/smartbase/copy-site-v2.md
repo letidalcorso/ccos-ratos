@@ -19,30 +19,32 @@ Conjunto completo de textos pra todas as 7 telas + globais (header, footer, SEO)
 
 ## GLOBAL
 
-### Header (todas as páginas)
+### Header (todas as páginas) ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
-[logo smartbase]   Catálogo   Sobre   Blog   FAQ        [quero meu apple →] | não sei se gosto de "catálogo" - produtos tb é muito comum... como poderíamos apresentar melhor?
+[logo smartbase]   Vitrine   Sobre   Blog   FAQ        [quero meu apple →]
 ```
 
 | Item | Texto | Status |
 |---|---|---|
 | Logo | smartbase (com o "•" azul entre smart e base) | ✅ |
-| Nav | Catálogo · Sobre · Blog · FAQ | ✅ | deixar marcado a página que a pessoa está
+| Nav | Vitrine · Sobre · Blog · FAQ | ✅ (item ativo destacado com vidro mais claro) |
 | CTA | quero meu apple → | ✅ |
+
+**Por quê "Vitrine":** "Catálogo" é genérico/transacional (Magalu/Mercado Livre). "Vitrine" tem conotação de seleção curada, presencial, Apple-feel. Casa com o tom premium do site e com o conceito de "loja particular".
 
 ### Footer (todas as páginas)
 
-**Coluna 1 — marca**
+**Coluna 1 — marca** ✅ FIRME (v2 — sem alcance nacional)
 ```
 [logo smartbase]
 sua apple store particular.
-novos sob encomenda e seminovos verificados.
-entrega em todo o Brasil. | não falar isso por enquanto, estamos anunciando regional
+novos sob encomenda e seminovos conferidos.
+caxias do sul · serra gaúcha.
 ```
 
 **Coluna 2 — Navegar**
-- Catálogo
+- Vitrine
 - Sobre
 - Blog
 - FAQ
@@ -55,7 +57,7 @@ entrega em todo o Brasil. | não falar isso por enquanto, estamos anunciando reg
 
 **Linha legal (rodapé do rodapé):**
 ```
-© 2026 smartbase · atendemos todo o Brasil          Privacidade · Termos
+© 2026 smartbase · caxias do sul, rs          Privacidade · Termos
 ```
 
 ---
@@ -70,25 +72,49 @@ entrega em todo o Brasil. | não falar isso por enquanto, estamos anunciando reg
 Tagline branca:    sua apple store.
 Tagline azul:      particular.
 
-Subtítulo:         novos sob encomenda, seminovos em estoque.
-                   entrega em todo o Brasil. | retirar e desenvolver uma frase de impacto | como coloquei antes: "novos sob encomenda. seminovos em estoque. entrega em mãos."
+Subtítulo:         novos sob encomenda. seminovos em estoque.
+                   entrega em mãos.
 
-caxias do sul e região - RS
+caxias do sul · serra gaúcha
 
-CTA primário:      ver catálogo → rever essa palavra 
-CTA secundário:    fazer pedido pelo WhatsApp | o CTA tem que ser mais atrativo, gosto de usar na primeira pessoa, tipo "quero/vou/"
+CTA primário:      ver vitrine →
+CTA secundário:    chamar no whatsapp →
 ```
 
 **Por quê:** já é o hero atual aprovado. O "particular" pega o leitor de surpresa (apple store é categoria, "particular" é o twist que cria a marca).
 
-### Posicionamento 💭 SUGESTÃO
+### Posicionamento ⚠️ PRECISA TUA ESCOLHA — 3 versões canônicas validadas anteriormente
 
+Você reagiu ao "raramente é o mais caro" sozinho como frase morta, mas quando inserida no contexto completo ela funciona como **tese-mestre da marca** (memory-blessed). Aqui as 3 versões já aprovadas em outros momentos do projeto — escolha qual vai pra Home:
+
+**Versão A — "alguém tinha que dizer em voz alta" (mais provocativa)**
 ```
-o apple certo pra você raramente é o mais caro |  não quero usar essa frase, pensar em outra
-aqui a recomendação vem do uso real, não da ficha técnica. | gosto desta
+o apple certo pra você raramente é o mais caro.
+alguém tinha que dizer isso em voz alta — e recomendar com base
+em uso real, não em ficha técnica. na smartbase, produto, garantia
+e trade-in entram na mesma conversa, com quem usa a plataforma
+todos os dias.
 ```
 
-**Por quê:** 2 linhas. Primeira é a tese-mestre (memory-blessed). Segunda traduz "como" trabalhamos — uso real é a diferença vs vendedor de loja oficial que decora ficha.
+**Versão B — "aparelho antigo como entrada" (mais transacional)**
+```
+o apple certo pra você raramente é o mais caro.
+aqui a recomendação vem do uso real, não da ficha técnica —
+produto, garantia e seu aparelho antigo como entrada entram
+na mesma conversa. novo ou seminovo, o que fizer mais sentido pra você.
+```
+
+**Versão C — "necessidades" (mais direta, sem trade-in)**
+```
+o apple certo pra você raramente é o mais caro.
+a smartbase recomenda com base nas suas necessidades:
+produto, garantia e aparelho antigo como entrada na mesma conversa.
+novo ou seminovo, o que fizer mais sentido.
+```
+
+**Minha preferência: A** — "alguém tinha que dizer isso em voz alta" tem ATITUDE (que é o que tu sente falta nas outras). Vira um manifesto, não uma descrição de processo. Casa com o tom confiante do site.
+
+**Observação:** se a v1 do site não vai ter trade-in (você comentou que descontinuou pra escalar nacional), as menções a "trade-in" e "aparelho antigo como entrada" precisam sair de qualquer versão escolhida. Posso reescrever sem isso.
 
 ### Diferenciais ✅ FIRME (aprovado v1)
 
@@ -234,7 +260,7 @@ Botão:       chamar no whatsapp →
 
 ## 3. SOBRE
 
-### Hero institucional 💭 SUGESTÃO
+### Hero institucional ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
 [imagem ambiente Apple — workspace, mesa de café, ambiente premium, sem rosto]
@@ -242,11 +268,16 @@ Botão:       chamar no whatsapp →
 Eyebrow:     sobre
 
 Título:      anos vendendo Apple em Caxias.
-Título azul: agora pra todo o Brasil. | não tem isso
+Título azul: particular tua.
 
-Subtítulo:   a smartbase é uma loja particular de Apple. tudo importado, | não é tudo, somente os novos...
-             lacrado, com garantia.
+Subtítulo:   loja particular de Apple. novos importados,
+             seminovos conferidos. todos com garantia.
 ```
+
+**Por quê:**
+- "particular tua." ecoa "sua apple store. particular." da Home (callback de marca)
+- "novos importados, seminovos conferidos" corrige a imprecisão (não é "tudo importado" — só os novos)
+- Saiu "agora pra todo o Brasil" (não tem alcance nacional ainda)
 
 ### História ⚠️ PRECISA TEU INPUT
 
