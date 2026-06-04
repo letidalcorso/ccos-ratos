@@ -64,7 +64,7 @@ caxias do sul · serra gaúcha.
 
 ## 1. HOME
 
-### Hero ✅ FIRME
+### Hero ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
 [imagem de desejo — Apple lifestyle, ambiente premium]
@@ -72,8 +72,8 @@ caxias do sul · serra gaúcha.
 Tagline branca:    sua apple store.
 Tagline azul:      particular.
 
-Subtítulo:         novos sob encomenda. seminovos em estoque.
-                   entrega em mãos.
+Subtítulo:         novos e seminovos.
+                   pra quem usa apple todo dia.
 
 caxias do sul · serra gaúcha
 
@@ -81,80 +81,91 @@ CTA primário:      ver vitrine →
 CTA secundário:    chamar no whatsapp →
 ```
 
-**Por quê:** já é o hero atual aprovado. O "particular" pega o leitor de surpresa (apple store é categoria, "particular" é o twist que cria a marca).
+**Por quê:**
+- "sua apple store. particular." define marca em 4 palavras — "particular" é o twist (apple store é categoria, particular cria a marca)
+- "novos e seminovos." entrega O QUE faz imediatamente (visitante novo bate o olho e entende em 3 segundos)
+- "pra quem usa apple todo dia." indica PRA QUEM sem detalhe técnico — aspiracional, não defensivo
+- Tirou "novos sob encomenda. seminovos em estoque. entrega em mãos." (processo técnico que tem dono em outros lugares — Vitrine, Sobre, FAQ)
 
-### Posicionamento ⚠️ PRECISA TUA ESCOLHA — 3 versões canônicas validadas anteriormente
+### Posicionamento ✅ FIRME (v2 — aprovado 04/06/2026)
 
-Você reagiu ao "raramente é o mais caro" sozinho como frase morta, mas quando inserida no contexto completo ela funciona como **tese-mestre da marca** (memory-blessed). Aqui as 3 versões já aprovadas em outros momentos do projeto — escolha qual vai pra Home:
-
-**Versão A — "alguém tinha que dizer em voz alta" (mais provocativa)**
 ```
-o apple certo pra você raramente é o mais caro.
-alguém tinha que dizer isso em voz alta — e recomendar com base
-em uso real, não em ficha técnica. na smartbase, produto, garantia
-e trade-in entram na mesma conversa, com quem usa a plataforma
-todos os dias.
+tem apple. e tem o apple certo pra você.
+aqui a recomendação vem do uso real, não da ficha técnica.
 ```
 
-**Versão B — "aparelho antigo como entrada" (mais transacional)**
-```
-o apple certo pra você raramente é o mais caro.
-aqui a recomendação vem do uso real, não da ficha técnica —
-produto, garantia e seu aparelho antigo como entrada entram
-na mesma conversa. novo ou seminovo, o que fizer mais sentido pra você.
-```
+**Por quê:**
+- 1ª linha = afirmação sobre o universo Apple (não sobre a marca Smartbase). Cumpre o princípio do brand voice: abrir com verdade da categoria, marca entra depois
+- "tem apple. e tem o apple certo pra você." separa categoria de escolha individual — força a pergunta "qual é o meu?", que é exatamente o que a Smartbase responde
+- Pivotou de PREÇO ("raramente é o mais caro") pra ADEQUAÇÃO ("o certo pra você"). Sobe o tom de marca de "lugar barato" pra "lugar de escolha certa"
+- 2ª linha (memory-blessed, aprovada anteriormente) traduz o **como**: uso real, não ficha técnica
 
-**Versão C — "necessidades" (mais direta, sem trade-in)**
-```
-o apple certo pra você raramente é o mais caro.
-a smartbase recomenda com base nas suas necessidades:
-produto, garantia e aparelho antigo como entrada na mesma conversa.
-novo ou seminovo, o que fizer mais sentido.
-```
-
-**Minha preferência: A** — "alguém tinha que dizer isso em voz alta" tem ATITUDE (que é o que tu sente falta nas outras). Vira um manifesto, não uma descrição de processo. Casa com o tom confiante do site.
-
-**Observação:** se a v1 do site não vai ter trade-in (você comentou que descontinuou pra escalar nacional), as menções a "trade-in" e "aparelho antigo como entrada" precisam sair de qualquer versão escolhida. Posso reescrever sem isso.
-
-### Diferenciais ✅ FIRME (aprovado v1)
+### Diferenciais ✅ FIRME (v2 — aprovado 04/06/2026)
 
 **Eyebrow:** por que a smartbase
 **Título:** tem loja.
 **Título azul:** e tem quem entende.
 
-**4 cards:**
+**4 cards (cada um com 1 job único, sem repetir os outros lugares do site):**
 
 | # | Título | Descrição |
 |---|---|---|
-| 01 | original garantido | todo aparelho é Apple original, verificado um a um antes de chegar até você. com garantia de verdade. |
-| 02 | preço que faz sentido | novos importados e seminovos avaliados. a mesma Apple, com preço melhor do que o do mercado nacional. |
-| 03 | troca estruturada | avaliação técnica com regras claras, valor calculado na hora e processo transparente do início ao fim. sem achismo. |
-| 04 | foco apple | escolhemos trabalhar só com Apple. conhecer uma marca a fundo muda o atendimento, a recomendação e o aparelho certo pra você. |
+| 01 | loja física em caxias | tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho. |
+| 02 | atendimento humano | sem chatbot, sem formulário. tu chama no whatsapp e quem responde entende de apple. |
+| 03 | primeiro chega. depois paga. | o iphone chega na tua mão antes do dinheiro sair da tua conta. |
+| 04 | só apple | especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica. |
 
-### Produtos (faixa editorial) 💭 SUGESTÃO
+**Por quê dessa reorganização (v2):**
+- Cards anteriores (original garantido, preço, paga quando chega, foco apple) tinham **sobreposição** (01 e 04 diziam a mesma coisa) e **invadiam espaço** da Vitrine, Sobre→Garantia e Footer
+- Headline "tem loja. e tem quem entende." prometia 2 coisas que os cards velhos NÃO entregavam — agora cards 01 e 02 provam diretamente o que a headline promete
+- Card 03 mantém o ativo central "paga quando chega" sem o "única no Brasil" (ênfase forçada removida)
+- Card 04 amarra com o Posicionamento (eco de "uso real, não ficha técnica")
+
+**Promessas que saíram daqui e foram pros lugares delas:**
+- Apple original / conferido → Sobre→Garantia
+- Preço → cortado de diferencial (Magalu também tem preço; vira disputa fraca, não argumento de marca)
+- Importação direta → Sobre→História (quando tiver)
+
+### Produtos (faixa editorial) ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
-Eyebrow:  linha 2025
+Eyebrow:    o que tem por aqui
 
-Título:   o iphone que você procura.
-Título azul:  novo, em todas as cores.
+Título:     o teu apple
+Título azul: já tá te esperando.
 
-Sub:      do iphone 17 pro ao 17 air. seminovos com garantia.
+(sem subtítulo — deixa a faixa visual respirar)
 
-[faixa visual editorial de produtos — não grade — 4-6 imagens
- com leve scroll horizontal ou bento composto]
+[faixa visual editorial — 4-6 produtos arranjados em
+ lookbook/bento, NÃO em grade. iPhone Pro · iPhone Air ·
+ Mac · iPad · Watch · AirPods (foto-âncora por categoria)]
 
-CTA:      ver catálogo completo →
+CTA:        ver tudo na vitrine →
 ```
 
-### CTA final ✅ FIRME (aprovado v1)
+**Por quê:**
+- "o teu apple já tá te esperando" cria desejo emocional sem listar specs
+- A faixa visual entrega o O QUE (variedade) — texto não precisa repetir
+- "Tu" mantém intimidade conversacional (callback do tom geral do site)
+- Sai "linha 2025" (envelhece rápido) e "iphone novo em todas as cores" (promessa frágil)
+- Sai "seminovos com garantia" (duplicava info do Sobre, do Footer e da Vitrine)
+- CTA "ver tudo na vitrine →" tem o "tudo" como info de escopo, sem o "completo" enfático
+
+### CTA final ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
 Título:        você já sabe o que quer.
 Título azul:   falta só nos chamar.
-Subtítulo:     modelo certo, preço justo, resposta em minutos.
+
 Botão:         vou chamar
 ```
+
+**Por quê:**
+- Cortou o subtítulo "modelo certo, preço justo, resposta em minutos" — todas as 3 promessas já foram entregues nas seções anteriores (Posicionamento, Diferenciais, Faixa visual)
+- "Preço justo" contradizia a decisão de cortar preço dos diferenciais (vira disputa fraca)
+- "Resposta em minutos" era compromisso de SLA frágil (se demora 30 min, quebra)
+- "Nos chamar" mantém sujeito coletivo (empresa), não cai no íntimo "me chamar" — Home é fechamento institucional, não atendimento individual
+- Ritmo poético: "você já sabe" (3 sílabas) / "falta só nos chamar" (5 sílabas) — paralelismo rítmico
 
 ---
 
