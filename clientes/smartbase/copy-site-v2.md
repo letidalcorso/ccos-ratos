@@ -134,60 +134,101 @@ Botão:         vou chamar
 
 ## 2. CATÁLOGO
 
-### Hero curto ✅ FIRME (atualizado v1)
+### Hero ✅ FIRME (v2 — aprovado 04/06/2026)
 
 ```
-Eyebrow:     sob encomenda · garantia apple · entrega em mãos
-Breadcrumb:  Home > Catálogo
+[imagem-âncora — flat-lay editorial de produtos Apple ou cena de
+ seleção curada, dark, sem repetir cenário Apple Store da Home]
 
-Título:      o apple que você quer. | repensar, será que não seria interessante "o apple certo para você"?
-Título azul: novo ou seminovo.
+Eyebrow:     vitrine
+Breadcrumb:  Home > Vitrine
 
-Subtítulo:   tudo importado, com garantia Apple ativa. pedido pelo WhatsApp,
-             entrega em todo o Brasil em até 7 dias. | não tem isso, inclusive entendo que valha usar um subtítulo por sessão - novos e seminovos
+Headline:    o teu próximo está aqui.
+
+Subline:     a apple inteira. particular tua.
+             lacrada ou seminova. com garantia.
+             e tu só paga quando ela tá na tua mão.
+
+(sem CTA explícito no hero — as duas portas abaixo são a ação)
 ```
 
-### Filtros ✅ FIRME
+**Por quê:**
+- "o teu próximo está aqui" ativa o usuário (declaração + posse) em vez de só rotular a página
+- "particular tua" ecoa "sua apple store. particular." da Home → callback de marca explícito
+- Subline cobre 4 fatos sem inflar: scope (apple inteira) + modalidade (lacrada/seminova) + garantia + ativo central (paga-quando-recebe)
+
+### Duas portas — Novos vs Seminovos ✅ FIRME (estrutura A — aprovado 04/06/2026)
+
+Logo abaixo do hero, **2 cards grandes lado a lado** (stacked em mobile):
 
 ```
-[ novos ]  [ seminovos ]
+┌─────────────────────────┬─────────────────────────┐
+│ NOVOS                    │ SEMINOVOS                │
+│                          │                          │
+│ lacrados.                │ em estoque agora.        │
+│ sob encomenda.           │ conferidos um a um.      │
+│                          │                          │
+│ garantia apple oficial   │ garantia smartbase       │
+│ 12 meses                 │ 3 meses                  │
+│                          │                          │
+│ [ ver novos → ]          │ [ ver seminovos → ]      │
+└─────────────────────────┴─────────────────────────┘
 ```
 
-(Sticky no topo quando rola.)
+**Por quê:** decisão clara primeiro (cada modalidade tem promessa distinta), jornadas limpas, expectativa correta pra cada perfil. Em vez de misturar tudo e diluir a promessa, separa logo e mantém cada caminho coerente. Mais "Apple-feel" — Apple oficial não mistura "novo de fábrica" com "refurbished" na mesma vitrine.
 
-### Card de produto (template) ✅ FIRME
-
-**Estrutura por card:**
+### Filtros de categoria ✅ FIRME (após escolher modalidade)
 
 ```
-[FOTO GRANDE DO PRODUTO]   [opcional: badge "topo de linha" / "mais buscado"]
-
-Nome:           iPhone 17 Pro
-Descrição:      o mais completo da linha. pra quem quer o melhor iPhone, sem concessão.
-Cor disponível: cosmic orange · navy · silver
-Armazenamento:  256GB · 512GB · 1TB
-Status:         em estoque  /  sob encomenda 7 dias
-| deixar um campo para eu poder criar mais infos"
-
-Preço (opcional): R$ 9.299  /  ou: "preço sob consulta" | não vale usarmos x vezes de tanto ou 0000 à vista
-
-CTA: pedir no WhatsApp → | rever, que tal usar "quero esse"
-
-WhatsApp message pré-preenchida (template):
-"oi, quero fazer um pedido do iPhone 17 Pro [cor] [armazenamento]. tudo certo?"
+[ todos ]  [ iPhone ]  [ Mac ]  [ iPad ]  [ Watch ]  [ AirPods ]
 ```
 
-### CTA final ✅ FIRME
+(Sticky no topo quando rola. Chip ativo tem vidro mais claro. Sem contagem numérica.)
 
-| rever CTA, tem 3x a palavra "a gente"
+### Card de produto (template lista vertical estilo Apple Shop) ✅ FIRME (v2)
+
+**Estrutura:** cada produto = **faixa horizontal grande**, scroll vertical estilo Apple page. Foto de um lado, info do outro (alternando direita/esquerda a cada produto pra criar ritmo visual).
 
 ```
-Eyebrow:     não achou o que procura?
-Título:      fala com a gente.
-Título azul: a gente resolve.
-Subtítulo:   qualquer produto Apple. se existe, a gente consegue.
-Botão:       abrir whatsapp
+[FOTO GRANDE DO PRODUTO]   Nome:           iPhone 17 Pro
+                            Descrição:      o mais completo da linha.
+                                            pra quem quer o melhor iPhone,
+                                            sem concessão.
+
+                            Cor:            cosmic orange · navy · silver
+                            Armazenamento:  256GB · 512GB · 1TB
+                            Status:         em estoque  /  sob encomenda 7 dias
+
+                            [CAMPO LIVRE editável por produto —
+                             pra adicionar info extra quando precisar:
+                             especificação, observação, badge, etc.]
+
+                            Preço:          R$ 9.299 à vista
+                                            (ou: "preço sob consulta")
+                                            — sempre valor único, sem "x vezes"
+
+                            CTA:            quero esse  →
 ```
+
+**WhatsApp message pré-preenchida (template):**
+```
+"oi, quero o iPhone 17 Pro [cor] [armazenamento]. tudo certo?"
+```
+
+### CTA final ✅ FIRME (v2 — sem repetir "a gente")
+
+```
+Eyebrow:     não achou o teu?
+
+Headline:    fala. eu acho.
+
+Subline:     qualquer apple. se existe no mundo,
+             chega aqui na tua mão.
+
+Botão:       chamar no whatsapp →
+```
+
+**Por quê:** primeira pessoa direta ("eu acho") em vez de "a gente resolve / a gente consegue" repetidos. Mantém o tom confiante e cria intimidade — é o atendente falando, não a marca.
 
 ---
 
