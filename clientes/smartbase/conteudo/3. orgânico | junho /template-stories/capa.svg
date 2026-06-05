@@ -1,0 +1,31 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.20"/>
+      <stop offset="60%" stop-color="#8B5CF6" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- fundo -->
+  <rect width="1080" height="1920" fill="#07070E"/>
+  <rect width="1080" height="1920" fill="url(#glow)"/>
+
+  <!-- kicker -->
+  <text x="540" y="180" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="30" letter-spacing="10" fill="#8E8E93">s m a r t b a s e</text>
+
+  <!-- headline -->
+  <text x="540" y="470" text-anchor="middle" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-size="200" font-weight="800" fill="#F2F2F6">chegou.</text>
+
+  <!-- subhead -->
+  <text x="540" y="565" text-anchor="middle" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-size="60" font-weight="600" fill="#F2F2F6">iphone 17 pro max</text>
+  <text x="540" y="625" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="34" fill="#8E8E93">seminovo · 256gb · bateria 100%</text>
+
+  <!-- slot da foto -->
+  <rect x="120" y="710" width="840" height="930" rx="48" fill="#111119" stroke="#23232B" stroke-width="2"/>
+  <text x="540" y="1185" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="34" fill="#5A5A66">foto das duas aqui</text>
+
+  <!-- teaser + arrasta -->
+  <text x="540" y="1740" text-anchor="middle" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-size="40" font-weight="600" fill="#F2F2F6">duas unidades. uma de cada cor.</text>
+  <text x="540" y="1815" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="32" letter-spacing="4" fill="#8B5CF6">arrasta →</text>
+</svg>

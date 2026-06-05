@@ -1,0 +1,33 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <!-- fundo -->
+  <rect width="1080" height="1920" fill="#07070E"/>
+
+  <!-- slot da foto-herói -->
+  <rect x="80" y="90" width="920" height="1010" rx="48" fill="#111119" stroke="#23232B" stroke-width="2"/>
+  <text x="540" y="595" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="34" fill="#5A5A66">foto do iphone cosmic orange</text>
+
+  <!-- modelo -->
+  <text x="80" y="1215" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-size="76" font-weight="800" fill="#F2F2F6">iphone 17 pro max</text>
+
+  <!-- grid de specs -->
+  <!-- linha 1 -->
+  <text x="80" y="1330" font-family="'Inter', Arial, sans-serif" font-size="26" letter-spacing="3" fill="#8B5CF6">cor</text>
+  <text x="80" y="1388" font-family="'Inter', Arial, sans-serif" font-size="42" font-weight="600" fill="#F2F2F6">cosmic orange</text>
+
+  <text x="565" y="1330" font-family="'Inter', Arial, sans-serif" font-size="26" letter-spacing="3" fill="#8B5CF6">capacidade</text>
+  <text x="565" y="1388" font-family="'Inter', Arial, sans-serif" font-size="46" font-weight="600" fill="#F2F2F6">256gb</text>
+
+  <!-- linha 2 -->
+  <text x="80" y="1500" font-family="'Inter', Arial, sans-serif" font-size="26" letter-spacing="3" fill="#8B5CF6">bateria</text>
+  <text x="80" y="1558" font-family="'Inter', Arial, sans-serif" font-size="46" font-weight="600" fill="#F2F2F6">100%</text>
+
+  <text x="565" y="1500" font-family="'Inter', Arial, sans-serif" font-size="26" letter-spacing="3" fill="#8B5CF6">uso</text>
+  <text x="565" y="1558" font-family="'Inter', Arial, sans-serif" font-size="38" font-weight="600" fill="#F2F2F6">menos de 6 meses</text>
+
+  <!-- divisor -->
+  <line x1="80" y1="1655" x2="1000" y2="1655" stroke="#23232B" stroke-width="2"/>
+
+  <!-- rodapé -->
+  <text x="80" y="1735" font-family="'Inter', Arial, sans-serif" font-size="30" fill="#8E8E93">@smartbase.br</text>
+  <text x="1000" y="1735" text-anchor="end" font-family="'Inter', Arial, sans-serif" font-size="32" font-weight="600" fill="#8B5CF6">chama no whats →</text>
+</svg>
