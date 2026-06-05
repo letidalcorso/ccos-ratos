@@ -1,0 +1,11 @@
+{
+  "aspect_ratio": "1:1",
+  "enable_google_search": false,
+  "images": [],
+  "num_images": 1,
+  "output_format": "png",
+  "prompt": "\u003cThe prompt for image generation or ed...\u003e",
+  "resolution": "1K",
+  "retry_count": 2,
+  "safety_tolerance": "BLOCK_NONE"
+}
