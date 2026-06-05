@@ -185,4 +185,15 @@ Caminho: `~/Library/.../memory/`
 
 **Imagens:** `briefing-fotos-home-v2.md` já cobre a direção (exige **mín. 1600px**). As 3 ambient "prontas" (`_foto-posicionamento` 280×186, `_foto-diferenciais` 280×93, `_foto-cta-final` 200×133) são **thumbnails → NÃO dropar** (borram, matam o feel premium). Próximo passo: garimpar fotos em alta — Apple Newsroom pros 6 produtos, Unsplash dark pros 3 ambient.
 
-**Ainda pendente design:** Blog · Post · Contato (não construídos).
+**Telas construídas nessa sessão (estrutura hi-fi, page "site v2 | rebuid"):**
+- CONTATO (frame 762:29, x=8100) — hero "onde estamos." + mapa placeholder + endereço/horário (placeholders ⚠️) + CTA "chama no whatsapp." Loja física mora aqui.
+- BLOG index (frame 765:29, x=9700) — hero "dicas e novidades / do mundo Apple." + filtros (todos·iPhone·seminovo·garantia·comparativos) + 3 post cards com pautas reais.
+- POST template (frame 769:29, x=11300) — cover + breadcrumb + título + meta + corpo (conteúdo-exemplo) + CTA whatsapp + 3 relacionados.
+
+Todas seguem: heróis brancos · azul #3E82F7 · chrome (browser-bar + sidebar) clonado das telas existentes · slots de foto VAZIOS (pro tratamento de imagem em massa).
+
+**Bug aprendido:** `text.resize()` reseta `textAutoResize` pra NONE → setar autoResize="HEIGHT" DEPOIS do resize. Causou overlap no corpo do Post, já corrigido.
+
+**Pendente input real:** Contato (endereço/horário/telefone/lat-long ⚠️) · Blog/Post (conteúdo + covers reais) · TODAS (fotos hi-res — Apple Newsroom + Unsplash dark, mín 1600px).
+
+**v1 do site agora tem o set completo:** Home · Vitrine · FAQ · Contato · Blog · Post (Sobre virou Posicionamento na Home). Falta: tratamento de imagem em massa + dados reais + port pro Shopify.
