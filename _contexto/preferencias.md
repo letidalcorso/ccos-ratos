@@ -24,3 +24,6 @@ ter personalidade nos materiais
 ## Preferências adicionais
 - valoriza soluções que funcionem no mundo real, não só no slide
 - tom honesto, sempre
+
+## Fluxo no Figma
+- Toda vez que eu mexer em algo dentro do Figma, avisar a Letícia e deixar ela abrir o Figma pra olhar. Não baixar/renderizar preview por conta própria, é mais rápido ela ver direto na tela. Sempre mandar o link do node.
