@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-06-05T23:47:12.306719Z",
+  "error": null,
+  "id": "1ym0j6sc08486v063v26c1ywaa",
+  "output": {
+    "description": "",
+    "images": [
+      "https://cloud.inference.sh/app/files/t/720rfb1s/kib52kmx.png"
+    ]
+  },
+  "session_id": null,
+  "status": 10,
+  "status_text": "completed",
+  "updated_at": "2026-06-05T23:47:12.323496Z"
+}
