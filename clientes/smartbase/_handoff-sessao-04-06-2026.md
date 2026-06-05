@@ -197,3 +197,12 @@ Todas seguem: heróis brancos · azul #3E82F7 · chrome (browser-bar + sidebar) 
 **Pendente input real:** Contato (endereço/horário/telefone/lat-long ⚠️) · Blog/Post (conteúdo + covers reais) · TODAS (fotos hi-res — Apple Newsroom + Unsplash dark, mín 1600px).
 
 **v1 do site agora tem o set completo:** Home · Vitrine · FAQ · Contato · Blog · Post (Sobre virou Posicionamento na Home). Falta: tratamento de imagem em massa + dados reais + port pro Shopify.
+
+## IMAGENS — colocadas via API (04/06 noite)
+Fotos baixadas pela Leti em `smartbase/site | fotos/`. Colocadas nos slots via `upload_assets` (count=1 + nodeId) + POST curl dos bytes locais → retorna imageHash; depois fill IMAGE setado explícito no nó (o upload em lote criou os hashes mas NÃO aplicou o fill — só o set explícito via use_figma funciona).
+- ✅ Ambient + heróis (Posicionamento, Diferenciais, CTA, Contato hero=Apple Store noturna, Blog hero=flat-lay dark) — entraram, mood premium.
+- ✅ iPhone 17 Pro cosmic orange (Home lookbook + Vitrine) — fundo preto, perfeito.
+- ⚠️ 5 produtos (Air/Mac/iPad/Watch/AirPods) — as press shots da Apple são em FUNDO BRANCO → tiles brancas quebram o dark. PENDENTE: re-garimpar versões on-black (a Apple tem, tipo a do Pro _inline). Hoje estão em scaleMode FIT (produto visível, fundo branco).
+- Hashes salvos no histórico da sessão. Slots de hero Contato=762:30, Blog=765:30.
+- Sobra não usada: `1777` (quadro de recados warm — fora do tom dark).
+- Graduação dark unificada: ainda NÃO aplicada (fotos já estão coerentes/dark; opcional).
