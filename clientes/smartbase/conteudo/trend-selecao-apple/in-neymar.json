@@ -1,11 +1,11 @@
 {
   "aspect_ratio": "4:5",
   "enable_google_search": false,
-  "images": ["refs/neymar1.jpg"],
+  "images": ["out/neymar.png"],
   "num_images": 1,
   "output_format": "png",
   "resolution": "2K",
   "retry_count": 2,
   "safety_tolerance": "BLOCK_NONE",
-  "prompt": "Editorial Apple-store style product photoshoot. Use the EXACT same man from the reference image, preserving his face, hairstyle, skin tone and identity perfectly (do not change his face). He is the same person wearing the yellow Brazil national football team jersey. CAMERA ANGLE: full body standing, three-quarter turned to his left, dynamic confident stance, captured from a slightly low hero angle. He holds an ORANGE iPhone 17 Pro Max (cosmic orange color, the new aluminum unibody design with the wide horizontal camera plateau bar across the top back of the phone) in one hand, presenting it to the side toward the camera so the orange back with the camera bar is clearly visible, like a premium Apple product advertisement. Clean minimalist studio background with a smooth deep-blue to soft-blue gradient, soft cinematic product lighting, subtle reflections, glossy floor. High-end commercial photography, sharp focus, vertical composition with empty space at the top for text. Photorealistic, 8k."
+  "prompt": "Edit this image: keep EVERYTHING exactly the same (the man, his face, identity, pose seated on the stool, the yellow Brazil jersey, the deep-blue studio background, lighting and composition are all unchanged). ONLY change the phone he is holding: replace it with an ORANGE iPhone 17 Pro Max in cosmic orange color, featuring the new aluminum unibody design with the wide horizontal camera plateau bar across the top of the back. The orange back of the phone with the camera bar should face the camera, held at the same angle and same hand position as the original. Photorealistic, seamless, high-end product photography, do not alter the man or the scene."
 }
