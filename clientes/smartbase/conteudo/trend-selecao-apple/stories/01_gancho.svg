@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap');</style>
+    <radialGradient id="glowS1" cx="50%" cy="26%" r="60%">
+      <stop offset="0" stop-color="#3E82F7" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#3E82F7" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#3E82F7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1920" fill="#07070E"/>
+  <rect width="1080" height="1920" fill="url(#glowS1)"/>
+  <rect x="0" y="0" width="4" height="1920" fill="#3E82F7"/>
+
+  <!-- badge -->
+  <rect x="80" y="250" width="167" height="40" rx="14" fill="#0E1E3A"/>
+  <text x="98" y="277" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#3E82F7" letter-spacing="2">DECIFRA APPLE</text>
+
+  <!-- headline -->
+  <text x="80" y="540" font-family="Bricolage Grotesque, sans-serif" font-size="84" font-weight="800" fill="#F2F2F6">escalamos a</text>
+  <text x="80" y="636" font-family="Bricolage Grotesque, sans-serif" font-size="84" font-weight="800" fill="#F2F2F6">seleção brasileira</text>
+  <text x="80" y="732" font-family="Bricolage Grotesque, sans-serif" font-size="84" font-weight="800" fill="#F2F2F6">só com a <tspan fill="#3E82F7">apple</tspan>.</text>
+
+  <!-- sub -->
+  <text x="80" y="852" font-family="Inter, sans-serif" font-size="32" font-weight="400" fill="#C7C7D6">4 craques viraram 4 produtos da maçã.</text>
+  <text x="80" y="900" font-family="Inter, sans-serif" font-size="32" font-weight="600" fill="#F2F2F6">um deles é o iphone 17 pro max.</text>
+
+  <!-- mystery cards -->
+  <g>
+    <rect x="80"  y="1010" width="196" height="290" rx="22" fill="#0F0F1C" stroke="#2A2A40" stroke-width="1.5"/>
+    <text x="178" y="1185" font-family="Bricolage Grotesque, sans-serif" font-size="96" font-weight="800" fill="#3E82F7" text-anchor="middle">?</text>
+  </g>
+  <g>
+    <rect x="321" y="1010" width="196" height="290" rx="22" fill="#0F0F1C" stroke="#2A2A40" stroke-width="1.5"/>
+    <text x="419" y="1185" font-family="Bricolage Grotesque, sans-serif" font-size="96" font-weight="800" fill="#3E82F7" text-anchor="middle">?</text>
+  </g>
+  <g>
+    <rect x="562" y="1010" width="196" height="290" rx="22" fill="#0F0F1C" stroke="#2A2A40" stroke-width="1.5"/>
+    <text x="660" y="1185" font-family="Bricolage Grotesque, sans-serif" font-size="96" font-weight="800" fill="#3E82F7" text-anchor="middle">?</text>
+  </g>
+  <g>
+    <rect x="803" y="1010" width="196" height="290" rx="22" fill="#0F0F1C" stroke="#2A2A40" stroke-width="1.5"/>
+    <text x="901" y="1185" font-family="Bricolage Grotesque, sans-serif" font-size="96" font-weight="800" fill="#3E82F7" text-anchor="middle">?</text>
+  </g>
+
+  <!-- prompt -->
+  <text x="80" y="1450" font-family="Bricolage Grotesque, sans-serif" font-size="46" font-weight="700" fill="#F2F2F6">consegue dizer quem é quem?</text>
+
+  <!-- quiz hint pill -->
+  <rect x="80" y="1500" width="360" height="74" rx="37" fill="#0F0F1C" stroke="#3E82F7" stroke-width="1.5"/>
+  <text x="260" y="1546" font-family="Inter, sans-serif" font-size="28" font-weight="600" fill="#3E82F7" text-anchor="middle">chuta aqui no quiz 👇</text>
+  <text x="80" y="1632" font-family="Inter, sans-serif" font-size="24" font-weight="400" fill="#7A7A96">(a resposta sai amanhã no feed)</text>
+
+  <!-- footer -->
+  <g transform="translate(80,1770)">
+    <rect x="0" y="-22" width="46" height="32" rx="15" fill="#0F0F1C"/>
+    <text x="23" y="0" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#3E82F7" text-anchor="middle">sb</text>
+    <text x="60" y="0" font-family="Inter, sans-serif" font-size="22" font-weight="300" fill="#C0C0D0">smart</text>
+    <circle cx="121" cy="-6" r="4" fill="#3E82F7"/>
+    <text x="130" y="0" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#F2F2F6">base</text>
+  </g>
+  <text x="1000" y="1770" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#9A9AB2" text-anchor="end">@smartbase.br</text>
+</svg>
