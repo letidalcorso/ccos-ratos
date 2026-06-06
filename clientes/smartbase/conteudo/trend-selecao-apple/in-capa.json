@@ -1,11 +1,11 @@
 {
   "aspect_ratio": "4:5",
   "enable_google_search": false,
-  "images": ["refs/neymar1.jpg", "refs/alisson1.jpg", "refs/casemiro1.jpg", "refs/marquinhos_face.jpg"],
+  "images": ["out/v2/capa_dark_v2.png", "refs/neymar1.jpg", "refs/alisson1.jpg", "refs/casemiro1.jpg", "refs/marquinhos_face_hq.jpg"],
   "num_images": 1,
   "output_format": "png",
   "resolution": "2K",
   "retry_count": 2,
   "safety_tolerance": "BLOCK_NONE",
-  "prompt": "Group photo inside a modern Apple Store. FOUR Brazilian male footballers standing together side by side, all wearing the yellow Brazil national football team jersey, smiling and confident. From left to right use the EXACT faces from the reference images in this order: image 1 (curly-haired man, Neymar), image 2 (bearded man, Alisson), image 3 (short-haired man with light stubble, Casemiro), and image 4 (short curly dark hair young man, Marquinhos). Preserve each man's face and identity perfectly. They are inside a real Apple Store: bright minimalist interior, light wood display tables with iPhones and MacBooks, large glowing Apple logo on the white wall behind them, clean glass and bright daylight, polished floor. Wide editorial lifestyle photograph, all four men clearly visible and recognizable, natural store lighting. Photorealistic, 8k, horizontal group composition with headroom at the top for a headline."
+  "prompt": "Take the FIRST image (four Brazilian footballers in yellow Brazil jerseys standing in a dark moody Apple Store at night) and keep EVERYTHING the same: the dark environment, the glowing Apple logo, the lighting, the poses, the positions, the jerseys and the overall composition. ONLY improve the facial identity of each man so they look exactly like the real players in the reference photos. Replace each face with maximum fidelity to: image 2 = Neymar, leftmost (curly hair, light stubble, neck tattoo); image 3 = Alisson, second from left (tall, full dark beard, short hair); image 4 = Casemiro, third (short dark hair, light stubble, broad face); image 5 = Marquinhos, rightmost (short dark curly hair, light beard, Brazilian, adult). Reproduce each man's real facial structure, bone structure, nose, eyes, hair and skin tone precisely so they are unmistakably recognizable as these specific footballers. Keep all four facing forward with calm confident expressions, eyes open looking at camera. Do not change the dark Apple Store background or the composition in any way. Photorealistic, 8k, sharp focus on the faces, vertical 4:5."
 }

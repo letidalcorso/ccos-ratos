@@ -54,6 +54,10 @@ Pasta base: `clientes/smartbase/conteudo/trend-selecao-apple/`
 `out/v2/neymar.png` = **v6**: pose v1 (sentado no banco), rosto fiel, **fundo azul CLARO** padronizado com os outros, **iPhone 17 Pro Max TODO laranja** (corpo + barra de câmera na mesma cor laranja, só as lentes escuras — igual ao modelo real cosmic orange).
 Histórico de erros já corrigidos: v2 tinha pose de pé (rejeitada), versões anteriores tinham barra de câmera preta e fundo azul escuro (rejeitadas). Não regredir pra essas.
 
+### Versão correta da Capa (ATENÇÃO — atualizada 06/06)
+`out/v2/capa.png` = **dark v3**: mesma cena dos 4 numa Apple Store, mas regerada com **mood dark Smartbase** — interior preto/grafite, logo Apple iluminado como ponto focal, spotlight nos jogadores, headroom escuro no topo pra headline. Substitui a capa antiga clara (Apple Store diurna), que foi rejeitada por estar clara demais. Backup da clara: `out/v2/capa_light_backup.png`.
+Rostos refinados com nova ref do Marquinhos (`refs/marquinhos_face_hq.jpg`, recorte de foto 2024 da Wikipedia — a antiga `marquinhos_face.jpg` era borrada e gerava rosto genérico). Input: `in-capa.json` (base = capa_dark_v2 + 4 refs de rosto). Normalizada já regerada em `slides/img/capa.jpg`.
+
 ---
 
 ## 4. Figma
