@@ -90,9 +90,14 @@ A trava dos 67 chats provavelmente está em: tempo de resposta, ausência de fol
 
 ---
 
-## 5. Ads leve (Meta/Instagram) — quando ligar
+## 5. Ads leve (Meta/Instagram) — quando e qual
 
-Sequência correta: só ligar ads depois que a base orgânica e o processo de WhatsApp estiverem prontos pra converter. Ligar ads com a conversa travada é pagar pra encher um balde furado.
+O pré-requisito pra ligar ads NÃO é a base orgânica estar grande (isso é lento). É a conversa de WhatsApp estar pronta pra converter (isso é rápido, 1-2 semanas). Com a conversa travada, ads vira torneira aberta no ralo. Com a conversa pronta, ads acelera a venda em semanas.
+
+### Qual tipo de ad faz sentido (e qual não)
+- **Reconhecimento de marca (awareness):** o mais barato e o mais ineficiente pra quem precisa vender. Entrega impressão, não venda. Loja nova com verba pequena não deve gastar com awareness puro.
+- **Impulsionar post (boost):** otimiza engajamento, não venda. Serve no máximo pra amplificar um post de PROVA (unboxing, depoimento) pra público certo. Não é motor de venda.
+- **Click-to-WhatsApp (CTWA):** o único que ataca a venda direto. Coloca a oferta na frente de quem não conhece e joga no WhatsApp. É o formato a usar.
 
 ### Custos de referência (Brasil, 2026)
 - **CPM por objetivo:** Alcance R$6-15, Tráfego R$10-20, Conversão R$18-45. [benchmark — Trafius]. Objetivo de alcance é o jeito mais barato de comprar impressão pra marca nova.
@@ -110,26 +115,33 @@ Sequência correta: só ligar ads depois que a base orgânica e o processo de Wh
 
 ---
 
-## 6. Plano mês a mês
+## 6. Plano acelerado (semanas, não meses)
 
-### Mês 1 — Destravar a conversa (sem gastar com ads ainda)
-- Montar no WhatsApp: resposta rápida, catálogo organizado (5-10 itens/categoria, CTA por item), sequência de follow-up D+1/D+3/D+7/D+15.
-- Criar 2-3 ativos de prova: vídeo de unboxing + checagem de IMEI do próprio estoque, para mandar no primeiro contato.
-- Reativar parte dos 67 chats com a nova abordagem (prova + follow-up). Medir quantos respondem e quantos fecham.
-- Instagram: 3-5 peças/semana. Reels de descoberta + carrossel de prova/educação. Rosto aparecendo. Começar a documentar a viagem ao Paraguai como conteúdo de origem.
+A versão anterior colocava ads no mês 3. Corrigido: dá pra ter ads no ar em 2-3 semanas, porque o pré-requisito (conversa de WhatsApp pronta) é rápido. O que não pode é pular essa etapa.
 
-### Mês 2 — Construir autoridade e base orgânica
-- Série de conteúdo educativo: "como verificar se um iPhone é original", "o que é Activation Lock", "diferença entre novo e seminovo de procedência".
-- UGC: pedir vídeo/print de clientes reais que receberam o aparelho. Prova social vira post.
-- Canal de transmissão no Instagram para bastidor, drops e pré-venda.
-- Testar janelas de postagem por 2 semanas, comparar shares/saves por alcance e fixar as melhores.
-- Meta de mês: subir seguidores aproveitando a janela de crescimento da faixa 1-5K e ter um acervo de prova social.
+### Semana 1-2 — Destravar a conversa (custo zero de mídia)
+- Montar no WhatsApp: resposta rápida (meta de minutos, não horas), catálogo organizado (5-10 itens/categoria, CTA por item), sequência de follow-up D+1/D+3/D+7/D+15.
+- Gravar 2-3 provas de confiança: vídeo de unboxing + checagem de IMEI/Activation Lock do próprio estoque, pra mandar no primeiro contato.
+- **Ganho grátis e imediato:** reativar os 67 chats com a abordagem nova (prova + follow-up). Já levantaram a mão. Se converter alguns, valida a máquina e vende sem gastar 1 real.
+- Instagram começa em paralelo: 3-5 peças/semana, Reels de descoberta + carrossel de prova, rosto aparecendo. Documentar a viagem ao Paraguai como conteúdo de origem.
 
-### Mês 3 — Ligar o ads leve sobre uma base que converte
-- Campanha CTWA, objetivo Mensagens, placement Stories/Reels, público amplo, criativo 9:16 abaixo de 15s, com depoimento/unboxing.
-- Budget pequeno de teste, mirar CPiC na faixa R$5-15.
-- A conversa que chega do ads cai no processo de WhatsApp já afiado do Mês 1.
+### Semana 2-3 — Ligar CTWA pequeno sobre a conversa que já funciona
+- Campanha CTWA, objetivo Mensagens, placement Stories/Reels, público amplo, criativo 9:16 abaixo de 15s com prova (unboxing/depoimento).
+- Verba de teste R$300-600/mês. Com CPiC R$5-15, traz ~20 a 80 conversas novas.
+- A conversa que chega do ads cai no processo de WhatsApp já afiado da semana 1.
 - Acompanhar: CPiC, taxa de resposta, conversa→venda. Escalar só o criativo que provar conversão real.
+
+### Mês 2 em diante — Compor autoridade e base
+- Série educativa: "como verificar se um iPhone é original", "o que é Activation Lock", "novo vs seminovo de procedência".
+- UGC: vídeo/print de clientes reais. Prova social vira post.
+- Canal de transmissão no Instagram pra bastidor, drops e pré-venda.
+- Testar janelas de postagem por 2 semanas, comparar shares/saves por alcance, fixar as melhores.
+- Orgânico aproveita a janela de crescimento da faixa 1-5K enquanto o CTWA sustenta venda no curto prazo.
+
+### O que NÃO fazer pra acelerar
+- Não gastar verba com awareness puro ou boost de post genérico esperando venda.
+- Não ligar CTWA antes da conversa de WhatsApp estar pronta.
+- Não prometer ao cliente os números frágeis de conversão (ver seção 7).
 
 ---
 
