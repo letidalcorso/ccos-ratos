@@ -1,11 +1,11 @@
 {
   "aspect_ratio": "4:5",
   "enable_google_search": false,
-  "images": ["out/v2/neymar.png"],
+  "images": ["out/v2/neymar.png", "out/v2/alisson.png"],
   "num_images": 1,
   "output_format": "png",
   "resolution": "2K",
   "retry_count": 2,
   "safety_tolerance": "BLOCK_NONE",
-  "prompt": "Edit this image: keep EVERYTHING exactly the same (the man, his face, identity, pose, the yellow Brazil jersey, the deep-blue studio background, lighting and composition all unchanged). ONLY change the phone's color so it matches the real Apple iPhone 17 Pro Max in cosmic orange: the ENTIRE phone body AND the wide horizontal camera plateau bar across the top must all be the SAME cosmic orange color as the rest of the phone (currently the camera bar is wrongly dark/black). Make the camera bar orange to match the body, with only the individual camera lenses remaining dark glass. The whole back of the phone should read as one continuous orange aluminum unibody. Photorealistic, seamless, high-end product photography, do not alter the man or the scene."
+  "prompt": "Take the man, his pose, his face, the yellow Brazil jersey and the orange iPhone from the FIRST image and keep them EXACTLY the same. ONLY replace the studio background with the SAME background style and color tone as the SECOND image: a brighter, softer blue studio gradient (lighter sky-blue tone, not a dark saturated navy), with the same soft cinematic product lighting and the same glossy reflective floor. The lighting on the man should match this brighter blue studio environment. Keep the orange iPhone 17 Pro Max fully cosmic orange (body and camera bar same orange, only lenses dark). Photorealistic, seamless, high-end product photography."
 }
