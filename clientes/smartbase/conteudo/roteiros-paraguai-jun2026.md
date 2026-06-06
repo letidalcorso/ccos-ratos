@@ -31,7 +31,6 @@ Essa é a parte mais importante pra viagem. Grava tudo isso em bruto, sobra mate
 - Detalhes de ambiente: placas de neon, multidão desfocada, ritmo da cidade
 
 **B. Curadoria e produto**
-- A loja parceira por dentro, com destaque pra mini loja Apple (ambiente Apple real, prateleiras, organização). Esse é um dos planos mais fortes de confiança, capta com calma.
 - Caixas Apple lacradas empilhadas
 - Mãos conferindo as caixas na retirada, pegando, virando pra olhar
 - Close do lacre, da etiqueta, do selo Apple
