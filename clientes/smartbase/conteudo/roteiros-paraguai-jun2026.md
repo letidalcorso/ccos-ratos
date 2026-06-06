@@ -7,7 +7,7 @@
 **A ideia central:** a viagem é a prova de transparência. Mostrar que a gente vai até a fonte buscar o original é o que golpista nenhum faz. Origem real vira confiança.
 
 **Ajustes (06/06):**
-- Os aparelhos são pagos antes e retirados lá, não escolhidos no balcão. Então o enquadramento é "vamos buscar direto na fonte", nunca "escolhemos um por um na hora".
+- A retirada acontece numa loja parceira lá, e uma delas tem uma mini loja Apple dentro. Mostrar esse ambiente Apple real é prova de legitimidade forte (organizado, oficial, anti-golpe). Filmar a loja e a conferência com destaque. Manter honesto: mostrar o ambiente e a conferência sem afirmar "escolhemos cada unidade no balcão" se parte já vem paga.
 - Filmagem no iPhone (17 Pro Max, modo Ação pra estabilizar) até comprar o gimbal lá.
 - Viagem curta: sai madrugada de ter 09/06, volta fim de quarta 10/06. Janela de captura apertada, priorizar a lista abaixo.
 - Vai um amigo (também de marketing) conhecer o Paraguai. As cenas de "conhecendo o Paraguai" entram como textura dos vídeos conceituais, com parcimônia, pra não virar vlog de turismo e diluir a marca.
@@ -31,6 +31,7 @@ Essa é a parte mais importante pra viagem. Grava tudo isso em bruto, sobra mate
 - Detalhes de ambiente: placas de neon, multidão desfocada, ritmo da cidade
 
 **B. Curadoria e produto**
+- A loja parceira por dentro, com destaque pra mini loja Apple (ambiente Apple real, prateleiras, organização). Esse é um dos planos mais fortes de confiança, capta com calma.
 - Caixas Apple lacradas empilhadas
 - Mãos conferindo as caixas na retirada, pegando, virando pra olhar
 - Close do lacre, da etiqueta, do selo Apple

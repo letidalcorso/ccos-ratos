@@ -28,10 +28,10 @@ Segmenta: quem demonstrou interesse em 17 / top de linha primeiro. Pros que trav
 > Só pra já te deixar tranquilo: aqui você recebe o aparelho, confere tudo na sua mão, e só paga depois. E a gente tem loja física em Caxias, se preferir ver pessoalmente.
 
 **Quando perguntar preço (transparência total):**
-> Fica R$ 7.990 no Pix, ou em até 6x de R$ [parcela]. É seminovo, mas tá impecável e com garantia Apple até 2027. São só 2 unidades.
+> Fica R$ 7.990 no Pix. Se preferir parcelar, dá pra dividir e o valor muda conforme o número de parcelas, me diz em quantas vezes que eu já te passo certinho. É seminovo, mas tá impecável e com garantia Apple até 2027. Acompanha cabo original, película já instalada e uma capinha de brinde. São só 2 unidades.
 
 **Se a pessoa travar no preço/pagamento (o gargalo conhecido):**
-> Entendo. Posso fazer de duas formas: no Pix sai por [R$ Pix] à vista, ou divido em até 6x pra caber melhor. E se você tiver um aparelho pra dar na troca, a gente avalia e abate no valor. Qual fica melhor pra você?
+> Entendo. No Pix sai R$ 7.990 à vista. Se ficar melhor, eu parcelo e te passo o valor conforme as vezes. E a gente aceita teu aparelho atual na troca, avalia e abate no valor. Qual fica melhor pra você?
 
 **Fechamento com escassez real:**
 > São só 2 unidades desse 17 Pro Max. Quer que eu separe um no seu nome enquanto você decide?
@@ -80,7 +80,12 @@ Sem isso, o teste não prova nada e você perde o argumento mais forte pro dono.
 
 ---
 
-## A confirmar com você
-- R$ 7.990 é o preço no Pix ou o preço cheio? Qual o valor da parcela em 6x?
-- Aceita troca (trade-in) nesses seminovos? Quais modelos?
+## Confirmado
+- R$ 7.990 é o preço no Pix. Parcelado varia conforme o número de parcelas.
+- Aceita troca (trade-in) nos seminovos: sim.
+- Verba do teste: R$ 20-30/dia no CTWA por 7-10 dias (a validar com o dono).
+
+## Ainda a confirmar
+- Cola de valores do parcelado (você falou ~8% em 6x, ~13% em 12x): confirmar a tabela pra eu deixar os valores prontos no script.
 - O que vem na caixa do 17 Pro Max seminovo (carregador, cabo)?
+- Quais modelos aceita na troca?

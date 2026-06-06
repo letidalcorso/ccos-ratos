@@ -34,6 +34,8 @@ Quero criar solucoes com IA, design e tecnologia pra resolver problemas reais do
 
 ## Clientes ativos
 
+> **Trava anti-mistura:** cada cliente tem público, tom e regras próprios. NUNCA aplicar persona, público ou tom de um cliente em outro (ex: "sneakerheads" é só GeneSneakers; "serralheiro" é só FTemper). Antes de qualquer tarefa de um cliente, ler o `CLAUDE.md` da pasta dele em `clientes/[nome]/CLAUDE.md`, que é a fonte da verdade e prevalece sobre este resumo.
+
 ### GeneSneakers
 Marca D2C de tênis sob encomenda. Produtos dos mesmos fabricantes que produzem para Nike, Adidas, New Balance — sem o markup da cadeia de varejo brasileira. **Esse modelo de origem não é comunicado externamente.** Posicionamento externo: marca editorial com curadoria de modelos, acesso antecipado, sem markup nacional. Tagline: "Estilo nos pés."
 **Escopo:** Instagram orgânico, TikTok, Meta Ads + TikTok Ads (após validação orgânica), identidade visual (concluída), site/one-pager (pendente), WhatsApp como canal de atendimento e conversão.

@@ -7,6 +7,23 @@ Antes de qualquer tarefa, ler:
 
 O contexto do cliente complementa a identidade da Solz, não substitui.
 
+---
+
+## Estado atual (jun/2026) — ler primeiro
+
+Consolidação da sessão de 06/06. Onde houver conflito com seções antigas abaixo, isto vale.
+
+- **Maturidade real:** o DONO vende Apple há anos (loja física + círculo social) e tem confiança offline. A MARCA Smartbase (Instagram @smartbase.br + digital) é nova, cerca de 1 mês. Logo, lead frio de anúncio ainda NÃO herda essa confiança. O gap de confiança é real e é a prioridade.
+- **Trunfos de confiança (usar sempre):** (1) paga só quando recebe o aparelho em mãos; (2) loja física em Caxias; (3) garantia Apple verificável por IMEI. Esses três derrubam o medo de golpe.
+- **Geografia:** só Caxias e região por enquanto (o "paga quando recebe" é presencial). Anúncio deve ser geolocalizado em Caxias.
+- **Herói imediato:** 2x iPhone 17 Pro Max seminovo (da troca), 100% bateria, garantia Apple até jan e fev/2027. R$ 7.990 no Pix; parcelado varia conforme o número de parcelas (juros embutidos, não anunciar "sem juros"). Acompanha cabo original, película instalada e capinha; não vem com caixa. Aceita troca.
+- **Preço em anúncio:** mostrar Pix (ímã) e parcelado (sem susto) juntos. Nunca esconder o Pix.
+- **Plano acelerado:** consertar a conversa do WhatsApp primeiro (1-2 semanas) e então ligar CTWA (Click-to-WhatsApp) geolocalizado. Não é "só no mês 3". Awareness puro e boost genérico não convertem venda; CTWA sim.
+- **Quem conduz o teste de WhatsApp:** a Letícia (não o dono). Gargalo identificado nas conversas: respostas curtas e secas, que funcionam com conhecido mas afastam lead frio.
+- **GMB:** não existe ainda, criar (alto retorno local).
+- **Arquivos novos desta sessão:** `maquina-conversa-smartbase.md`, `conteudo/reels-pretrip-17promax-jun2026.md`, `conteudo/roteiros-paraguai-jun2026.md`, `conteudo/blogs-lancamento-site.md`, `pesquisa-crescimento-vendas-2026-06.md` (e o `.docx`).
+- **Viagem Paraguai:** sai madrugada de ter 09/06, volta fim de qua 10/06. Grava lá, publica só na volta.
+
 ## Status por área — ler ao iniciar
 
 Quando a tarefa for sobre uma área específica, ler o status correspondente antes de responder:
@@ -21,7 +38,7 @@ Atualizar o status ao final de qualquer sessão que mude algo relevante na área
 
 ## O que é
 
-Revendedor Apple com credibilidade pessoal consolidada há anos. O dono vende Apple há muito tempo e já tem confiança construída. O foco do projeto é vender iPhones novos (principal) e outros produtos Apple (Mac, iPad, AirPods, Watch) para todo o Brasil, via WhatsApp. Seminovos existem mas não são o foco.
+Revendedor Apple. O dono vende Apple há anos e tem confiança consolidada offline (loja física + círculo social), mas a marca Smartbase no digital é nova (~1 mês) e o lead frio ainda não herda essa confiança. Escopo do projeto: vender iPhones novos sob encomenda e seminovos conferidos, além de outros produtos Apple (Mac, iPad, AirPods, Watch), via WhatsApp. Os dois (novo e seminovo) são ativos; no momento (jun/2026) o herói imediato são os seminovos 17 Pro Max para gerar caixa.
 
 **Modelo de venda:** sem estoque parado. Comprou → a gente traz. iPhone importado do Paraguai, original, com garantia internacional Apple válida no Brasil por 1 ano.
 **Processo de compra:** 1) cliente faz a encomenda pelo WhatsApp (modelo + cor) → 2) aparelho chega lacrado com IMEI verificável → 3) entrega em mãos já configurado, com película e capinha inclusas.
@@ -29,11 +46,11 @@ Revendedor Apple com credibilidade pessoal consolidada há anos. O dono vende Ap
 
 **Loja Shopify:** smartbase-2903.myshopify.com
 **Instagram:** @smartbase.br
-**Localização:** Caxias do Sul, RS (atende todo o Brasil)
+**Localização:** Caxias do Sul, RS (atende Caxias e região; nacional é perspectiva futura, ainda não operacional)
 
 ## Objetivo do projeto
 
-Gerar vendas agora. O cliente já tem credibilidade — não precisa construir do zero. O trabalho é transformar essa credibilidade em desejo e fazer as pessoas entrarem em contato via WhatsApp.
+Gerar vendas agora. O dono tem credibilidade offline, mas ela não transfere automático pro lead frio de anúncio ou do digital, esse precisa de prova de confiança. O trabalho é transformar a credibilidade existente em desejo e, com o lead novo, construir confiança rápido (paga-quando-recebe, loja física, garantia por IMEI) pra fazer entrar em contato e fechar no WhatsApp.
 
 **Premissa central do cliente:** as pessoas compram com os olhos. O conteúdo precisa causar desejo.
 
@@ -45,8 +62,11 @@ Gerar vendas agora. O cliente já tem credibilidade — não precisa construir d
 
 ## Público
 
-**Atual:** Caxias do Sul e região — entrega presencial. Nacional é uma perspectiva futura, ainda não operacional (logística não resolvida).
-Pessoas que querem Apple original sem pagar preço de loja oficial. Já sabem o que querem, só precisam de alguém confiável para comprar.
+**Geografia:** Caxias do Sul e região (Serra Gaúcha), entrega presencial. Nacional é perspectiva futura, ainda não operacional (o modelo "paga quando recebe" é presencial).
+**Quem é:** profissional, PJ e pessoa física da Serra que usa Apple no dia a dia e quer original sem pagar preço de loja oficial. Já sabe o que quer, só precisa de alguém confiável.
+**Dois perfis:** quem já conhece o dono (confia, fecha fácil) e o lead frio de anúncio (não conhece, precisa de prova: paga-quando-recebe, loja física, garantia por IMEI).
+
+**NÃO confundir com outros clientes da Solz.** O público do Smartbase NÃO é "sneakerheads" (isso é da GeneSneakers) nem "serralheiro/vidraceiro" (isso é da FTemper). Toda tarefa de Smartbase usa o público descrito aqui. Nunca puxar persona de outro cliente.
 
 ## Tom de voz
 

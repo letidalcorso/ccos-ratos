@@ -19,13 +19,13 @@
   - "Loja física aqui em Caxias."
 
 **Oferta + escassez (13-18s):**
-- "R$ 7.990 no Pix, ou em até 6x." (confirmar parcela e se 7.990 é Pix ou cheio)
+- "R$ 7.990 no Pix." (parcelado conforme o número de parcelas, falar no WhatsApp)
 - "São só 2 unidades."
 
 **CTA:** "Chama no WhatsApp agora. Link na bio." (texto fixo + botão)
 
 **Trilha:** limpa, premium, sem exagero.
-**Legenda (com termo de busca nos 1ºs 120 caracteres):** "iPhone 17 Pro Max seminovo em Caxias do Sul, 100% de bateria e garantia Apple. Você recebe, confere e só paga depois. São 2 unidades. Chama no WhatsApp."
+**Legenda (com termo de busca nos 1ºs 120 caracteres):** "iPhone 17 Pro Max seminovo em Caxias do Sul, 100% de bateria e garantia Apple. Acompanha cabo original, película instalada e capinha. Você recebe, confere e só paga depois. São 2 unidades. Chama no WhatsApp."
 
 ## Variação Stories (3 telas, pra fechar no quente)
 1. Aparelho + "Chegou: 17 Pro Max seminovo, 100% bateria, garantia Apple até 2027"
@@ -34,5 +34,5 @@
 
 ## Notas
 - Mostrar a bateria a 100% na tela é prova concreta, não só dizer. Faz isso.
-- Deixar claro o que vem na caixa (carregador, cabo) já responde um medo comum.
+- Os seminovos não vêm com a caixa, mas acompanham cabo original, película já instalada e capinha de brinde. Dizer isso de forma positiva (o que vem) responde um medo comum e evita surpresa.
 - Tom afirma e ensina, sem "promoção", sem "imperdível".
