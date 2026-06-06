@@ -1,0 +1,16 @@
+{
+  "_nota": "MCP servers de Figma/Drive/Notion sao conectados pela CONTA claude.ai (nao por este arquivo). Geracao de imagem é via CLI 'infsh' (inference.sh), tambem nao é MCP. Este arquivo cobre so o Playwright pra render local. Ver HANDOFF.md secao 8 pro que precisa estar logado no chat novo.",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--browser", "chrome",
+        "--executable-path", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--headless",
+        "--allowed-origins", "*",
+        "--allowed-hosts", "*"
+      ]
+    }
+  }
+}
