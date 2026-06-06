@@ -69,6 +69,14 @@
             "command": "bash \"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/.claude/hooks/inject-skills.sh\""
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/.claude/hooks/inject-research-rule.sh\""
+          }
+        ]
       }
     ],
     "PostToolUse": [
