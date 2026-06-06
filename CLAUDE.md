@@ -19,6 +19,12 @@ Aqui ficam todos os clientes, entregas e conteúdos.
 - `codex-plugin-cc-main/` — plugin Codex (não editar manualmente)
 - `templates/ferramentas/catalogo.md` – APIs e ferramentas disponíveis pra usar skills
 
+## Organização e arquivo morto
+Manter as pastas e o repositório leves. Arquivo antigo ou inútil (iterações de design já superadas, prints/previews, duplicados, zips de tema antigos, exports já usados) deve ser arquivado no Google Drive (pasta de arquivo morto) e apagado do computador.
+- Só arquivar o que NÃO está referenciado por docs, site ou ativos em uso.
+- Sempre mostrar a lista antes de apagar, e confirmar a cópia no Drive antes de deletar.
+- Binário pesado (zip, vídeo, lote de PNG) não deve viver no repositório.
+
 ## Quem sou
 Sou Letícia, formada em Relações Públicas e sempre trabalhei em agências, tanto de pesquisa e plano de negócio quanto atendimento de uma agência de marketing digital.
 Quero ter o meu próprio negócio e por isso optei por começar a fazer freelancer. 
