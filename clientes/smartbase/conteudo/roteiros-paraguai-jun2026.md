@@ -6,6 +6,12 @@
 
 **A ideia central:** a viagem é a prova de transparência. Mostrar que a gente vai até a fonte buscar o original é o que golpista nenhum faz. Origem real vira confiança.
 
+**Ajustes (06/06):**
+- Os aparelhos são pagos antes e retirados lá, não escolhidos no balcão. Então o enquadramento é "vamos buscar direto na fonte", nunca "escolhemos um por um na hora".
+- Filmagem no iPhone (17 Pro Max, modo Ação pra estabilizar) até comprar o gimbal lá.
+- Viagem curta: sai madrugada de ter 09/06, volta fim de quarta 10/06. Janela de captura apertada, priorizar a lista abaixo.
+- Vai um amigo (também de marketing) conhecer o Paraguai. As cenas de "conhecendo o Paraguai" entram como textura dos vídeos conceituais, com parcimônia, pra não virar vlog de turismo e diluir a marca.
+
 ## Guardrails (o que NÃO mostrar nem dizer)
 - Nada de aduana, fronteira documental, nota fiscal, declaração, imposto ou qualquer mecânica da importação.
 - Não falar de "golpe", "paralelo", "réplica" nem se defender de acusação. Afirma o que é, não nega o que não é.
@@ -26,7 +32,7 @@ Essa é a parte mais importante pra viagem. Grava tudo isso em bruto, sobra mate
 
 **B. Curadoria e produto**
 - Caixas Apple lacradas empilhadas
-- Mãos selecionando, pegando uma caixa, virando pra conferir
+- Mãos conferindo as caixas na retirada, pegando, virando pra olhar
 - Close do lacre, da etiqueta, do selo Apple
 - Abrir uma caixa com cuidado (câmera fechada no produto)
 - Aparelho na mão sob boa luz, tela acendendo, detalhe da câmera
@@ -57,7 +63,7 @@ Cada um usa o material da lista acima. Ordem sugerida de publicação no rodapé
 **Objetivo:** posicionar a marca como quem vai até a fonte. Conceitual, elegante, abre a série.
 **Gancho (0-3s):** plano forte da estrada ou da cidade à noite + texto na tela: "Por que a gente atravessa o país pra buscar o seu iPhone?"
 **Sequência:** trajeto → chegada → caixas lacradas → mãos selecionando → produto na luz.
-**Texto/VO (curto, espaçado):** "Não dá pra confiar no que você não viu nascer." / "Então a gente vai até onde tudo começa." / "Escolhe um por um. Original, de verdade." 
+**Texto/VO (curto, espaçado):** "Não dá pra confiar no que você não viu de onde veio." / "Então a gente vai até onde tudo começa." / "Buscado direto na fonte. Original, de verdade." 
 **Trilha:** instrumental elegante, crescente, cinematográfica.
 **CTA:** suave, texto final: "smartbase. apple original, da fonte pra sua mão." (tagline placeholder, ajustar)
 **Material:** A + B.
@@ -66,7 +72,7 @@ Cada um usa o material da lista acima. Ordem sugerida de publicação no rodapé
 **Objetivo:** mostrar que tem critério, não é pegar qualquer um.
 **Gancho (0-3s):** close de mãos abrindo o lacre + texto: "O que a gente olha antes de trazer pra você."
 **Sequência:** close lacre → etiqueta → tela acendendo → câmera → modelos lado a lado.
-**Texto/VO:** "Lacre. Selo. Tela. Câmera." / "Um por um, conferido na mão." / "Só vem o que a gente compraria pra gente."
+**Texto/VO:** "Lacre. Selo. Tela. Câmera." / "Conferido na mão antes de trazer." / "Só vem o que a gente compraria pra gente."
 **Trilha:** minimal, batida suave.
 **CTA:** "quer ver o que chegou? chama no direct."
 **Material:** B.
