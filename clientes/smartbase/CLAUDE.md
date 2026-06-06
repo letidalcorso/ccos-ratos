@@ -13,6 +13,8 @@ O contexto do cliente complementa a identidade da Solz, não substitui.
 
 Consolidação da sessão de 06/06. Onde houver conflito com seções antigas abaixo, isto vale.
 
+- **Papel da Letícia:** não é prestadora de um cliente externo. É sócia/companheira do dono, entrou no negócio pra alavancar as vendas. Opera por dentro. Logo: mais autonomia, tom franco e direto, e "alinhar com o sócio" no lugar de "convencer o cliente". O escopo do Smartbase é o mais completo de todos.
+- **Verba:** não há teto imposto por cliente externo. Mesmo assim, manter o gasto de ads justificável por retorno (sem teto não é sem critério). Decisões de verba mais alta valem alinhar com o dono.
 - **Maturidade real:** o DONO vende Apple há anos (loja física + círculo social) e tem confiança offline. A MARCA Smartbase (Instagram @smartbase.br + digital) é nova, cerca de 1 mês. Logo, lead frio de anúncio ainda NÃO herda essa confiança. O gap de confiança é real e é a prioridade.
 - **Trunfos de confiança (usar sempre):** (1) paga só quando recebe o aparelho em mãos; (2) loja física em Caxias; (3) garantia Apple verificável por IMEI. Esses três derrubam o medo de golpe.
 - **Geografia:** só Caxias e região por enquanto (o "paga quando recebe" é presencial). Anúncio deve ser geolocalizado em Caxias.
