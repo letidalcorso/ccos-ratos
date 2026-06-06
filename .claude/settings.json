@@ -36,7 +36,13 @@
       "Skill(codex:rescue)",
       "Skill(codex:rescue:*)",
       "Read(//Users/leticiadalcorso/.claude/skills/meta-ads-ratos/**)",
-      "Bash(codex --version)"
+      "Bash(codex --version)",
+      "WebFetch(domain:www.socialinsider.io)",
+      "WebFetch(domain:business.whatsapp.com)",
+      "WebFetch(domain:whatsappbusiness.com)",
+      "WebFetch(domain:epicowl.io)",
+      "WebFetch(domain:www.netinfluencer.com)",
+      "WebFetch(domain:www.ecommercebrasil.com.br)"
     ],
     "additionalDirectories": [
       "/Users/leticiadalcorso/Downloads/theme_export__smartbase-2903-myshopify-com-smartbase-shopify-theme__23APR2026-0143pm/templates",
@@ -72,8 +78,8 @@
           {
             "type": "command",
             "command": "python3 -c \"\nimport json, sys\ndata = json.load(sys.stdin)\npath = data.get('tool_input', {}).get('file_path', '') or data.get('tool_response', {}).get('filePath', '')\nexts = ('.html', '.css', '.js', '.liquid', '.svg', '.ts', '.jsx', '.tsx')\nif any(path.endswith(e) for e in exts):\n    print(json.dumps({'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': f'Arquivo tecnico editado: {path}. Considere invocar Skill(codex:rescue) para revisao se a implementacao for complexa ou se houver duvidas sobre a corretude do codigo.'}}))\n\" 2>/dev/null || true",
-            "statusMessage": "Checando arquivo técnico...",
-            "timeout": 10
+            "timeout": 10,
+            "statusMessage": "Checando arquivo técnico..."
           }
         ]
       }
