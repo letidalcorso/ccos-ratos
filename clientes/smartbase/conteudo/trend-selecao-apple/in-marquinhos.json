@@ -1,11 +1,11 @@
 {
   "aspect_ratio": "4:5",
   "enable_google_search": false,
-  "images": ["refs/mq_Marquinhos__Marcos_A.jpg"],
+  "images": ["refs/marquinhos_face.jpg"],
   "num_images": 1,
   "output_format": "png",
   "resolution": "2K",
   "retry_count": 2,
   "safety_tolerance": "BLOCK_NONE",
-  "prompt": "Editorial Apple-store style product photoshoot. Use the EXACT same man from the reference image, preserving his face, short dark curly hair, skin tone and identity perfectly (do not change his face), a Brazilian male footballer in his late twenties. He is wearing the yellow Brazil national football team jersey. He is seated in a relaxed confident pose, holding a silver MacBook laptop on his lap or presenting it slightly toward the camera, lid open, like a premium Apple product advertisement. Clean minimalist studio background with a smooth deep-blue to soft-blue gradient, soft cinematic product lighting, subtle reflections, glossy floor. High-end commercial photography, sharp focus on the laptop and the man, vertical composition with empty space at the bottom for text. Photorealistic, 8k."
+  "prompt": "Editorial Apple-store style product photoshoot of the Brazilian footballer Marquinhos (PSG and Brazil national team defender). Use the EXACT same man's face from the reference image, preserving his facial features, eyes, nose and bone structure perfectly, but as a slightly more mature adult in his late twenties with very short dark curly hair and light stubble. He wears the yellow Brazil national football team jersey. CAMERA ANGLE: seated, captured from a low side angle, body angled to one side, holding an open silver MacBook laptop resting on his lap and tilted slightly toward the camera, like a premium Apple product advertisement. Clean minimalist studio background with a smooth deep-blue to soft-blue gradient, soft cinematic product lighting, subtle reflections, glossy floor. High-end commercial photography, sharp focus, vertical composition with empty space at the top for text. Photorealistic, 8k."
 }

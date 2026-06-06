@@ -1,0 +1,11 @@
+{
+  "aspect_ratio": "4:5",
+  "enable_google_search": false,
+  "images": ["refs/neymar1.jpg", "refs/alisson1.jpg", "refs/casemiro1.jpg", "refs/marquinhos_face.jpg"],
+  "num_images": 1,
+  "output_format": "png",
+  "resolution": "2K",
+  "retry_count": 2,
+  "safety_tolerance": "BLOCK_NONE",
+  "prompt": "Group photo inside a modern Apple Store. FOUR Brazilian male footballers standing together side by side, all wearing the yellow Brazil national football team jersey, smiling and confident. From left to right use the EXACT faces from the reference images in this order: image 1 (curly-haired man, Neymar), image 2 (bearded man, Alisson), image 3 (short-haired man with light stubble, Casemiro), and image 4 (short curly dark hair young man, Marquinhos). Preserve each man's face and identity perfectly. They are inside a real Apple Store: bright minimalist interior, light wood display tables with iPhones and MacBooks, large glowing Apple logo on the white wall behind them, clean glass and bright daylight, polished floor. Wide editorial lifestyle photograph, all four men clearly visible and recognizable, natural store lighting. Photorealistic, 8k, horizontal group composition with headroom at the top for a headline."
+}
