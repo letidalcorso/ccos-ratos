@@ -1,11 +1,11 @@
 {
   "aspect_ratio": "4:5",
   "enable_google_search": false,
-  "images": ["out/neymar.png"],
+  "images": ["out/v2/neymar.png"],
   "num_images": 1,
   "output_format": "png",
   "resolution": "2K",
   "retry_count": 2,
   "safety_tolerance": "BLOCK_NONE",
-  "prompt": "Edit this image: keep EVERYTHING exactly the same (the man, his face, identity, pose seated on the stool, the yellow Brazil jersey, the deep-blue studio background, lighting and composition are all unchanged). ONLY change the phone he is holding: replace it with an ORANGE iPhone 17 Pro Max in cosmic orange color, featuring the new aluminum unibody design with the wide horizontal camera plateau bar across the top of the back. The orange back of the phone with the camera bar should face the camera, held at the same angle and same hand position as the original. Photorealistic, seamless, high-end product photography, do not alter the man or the scene."
+  "prompt": "Edit this image: keep EVERYTHING exactly the same (the man, his face, identity, pose, the yellow Brazil jersey, the deep-blue studio background, lighting and composition all unchanged). ONLY change the phone's color so it matches the real Apple iPhone 17 Pro Max in cosmic orange: the ENTIRE phone body AND the wide horizontal camera plateau bar across the top must all be the SAME cosmic orange color as the rest of the phone (currently the camera bar is wrongly dark/black). Make the camera bar orange to match the body, with only the individual camera lenses remaining dark glass. The whole back of the phone should read as one continuous orange aluminum unibody. Photorealistic, seamless, high-end product photography, do not alter the man or the scene."
 }
