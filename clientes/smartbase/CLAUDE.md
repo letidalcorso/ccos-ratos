@@ -23,8 +23,13 @@ Consolidação da sessão de 06/06. Onde houver conflito com seções antigas ab
 - **Plano acelerado:** consertar a conversa do WhatsApp primeiro (1-2 semanas) e então ligar CTWA (Click-to-WhatsApp) geolocalizado. Não é "só no mês 3". Awareness puro e boost genérico não convertem venda; CTWA sim.
 - **Quem conduz o teste de WhatsApp:** a Letícia (não o dono). Gargalo identificado nas conversas: respostas curtas e secas, que funcionam com conhecido mas afastam lead frio.
 - **GMB:** não existe ainda, criar (alto retorno local).
-- **Arquivos novos desta sessão:** `maquina-conversa-smartbase.md`, `conteudo/reels-pretrip-17promax-jun2026.md`, `conteudo/roteiros-paraguai-jun2026.md`, `conteudo/blogs-lancamento-site.md`, `pesquisa-crescimento-vendas-2026-06.md` (e o `.docx`).
+- **Arquivos novos desta sessão:** `maquina-conversa-smartbase.md`, `conteudo/reels-pretrip-17promax-jun2026.md`, `conteudo/roteiros-paraguai-jun2026.md`, `conteudo/blogs-lancamento-site.md`, `pesquisa-crescimento-vendas-2026-06.md` (e o `.docx`), `conteudo/voz-smartbase.md`, `conteudo/tracker-conteudo-junho.md`, e o plano v3 em `conteudo/3. orgânico | junho /plano-editorial-junho-2026.md`.
 - **Viagem Paraguai:** sai madrugada de ter 09/06, volta fim de qua 10/06. Grava lá, publica só na volta.
+- **Voz (obrigatório):** ler `conteudo/voz-smartbase.md` antes de escrever QUALQUER copy. Tom travado em 06/06: LightCopy (premissa, não promessa), todo post de aparelho carrega dica/conhecimento e a venda vem de consequência. Matar cara de IA (travessão, "não é X é Y", adjetivo vazio, conceito esperto e vazio). A Letícia reescrevia quase tudo por ficar genérico; isso é o piso agora.
+- **Mix de conteúdo (pra não ficar batido):** premissa/dica (Decifra) + confiança/prova (Casa) + desejo puro (estilo reel da lua) + cultura/copa. Dica não é a dieta toda.
+- **Humanização (a partir de jun/2026):** os dois aparecem aos poucos. Letícia nas dicas/tecnologia, o dono na credibilidade de especialista. Estético (ref. Human Academy), leve, começa com voz/mãos/produto e sobe a régua. Não é vlog.
+- **Copa do Mundo (11/06 a 19/07):** fio condutor cultural recorrente, sempre por comportamento real (segundo telão, câmera, bateria), nunca metáfora forçada. O post "se a seleção fosse apple" (06/06) floppou por ser metáfora vazia.
+- **Métricas:** acompanhar em `conteudo/tracker-conteudo-junho.md`. Régua: salvamento (~3x curtida) e envio (sinal viral 2026) valem; curtida quase ignora. Revisão semanal toda sexta 16h (evento recorrente na agenda). Pivot: 20/06 olhar tendência, fim do mês olhar conversão.
 
 ## Status por área — ler ao iniciar
 
@@ -98,7 +103,7 @@ Feed constrói confiança e desejo. WhatsApp fecha a venda. Cada post tem um cam
 
 **ATENÇÃO — fotos:** A Smartbase não tem fotos próprias dos produtos. Usar imagens oficiais Apple. Lembrar a Letícia disso antes de qualquer tarefa visual que dependa de imagem real do produto.
 
-**Plano de conteúdo ativo:** `conteudo/Junho/plano-editorial-junho-2026.md` — mês completo com pacotes operacionais por semana
+**Plano de conteúdo ativo:** `conteudo/3. orgânico | junho /plano-editorial-junho-2026.md` (v3, reconstruído 06/06) — segunda quinzena com LightCopy, humanização e Copa. Voz em `conteudo/voz-smartbase.md`, métricas em `conteudo/tracker-conteudo-junho.md`.
 
 ## Identidade visual
 

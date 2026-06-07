@@ -58,9 +58,30 @@ Referência do tom certo, feita por ela: o reel da lua (8x de zoom, fotografa a 
 > linha 17 lacrada e dois 17 pro max seminovos (100% de bateria, garantia apple) chegaram essa semana. paga quando receber.
 > manda "copa" no whats que eu te mostro o que tem.
 
+## LightCopy: premissa, não promessa (pegada dos posts de aparelho)
+Princípio central (Leandro Ladeira): trocar promessa por premissa. Em vez de prometer e empurrar, ensina uma coisa real e deixa a venda ser consequência lógica. Conteúdo que vende sem parecer anúncio.
+- todo post de aparelho carrega uma dica ou conhecimento real. a oferta entra no fim, como consequência.
+- originalidade acima de fórmula. nada de estrutura engessada repetida.
+- a dica que ensina o cliente a desconfiar e conferir (ex: saúde da bateria) constrói confiança, porque mostra que a gente não tem medo do teste.
+- mas dica não é a dieta toda. se todo post vira "dica", fica batido. é uma ferramenta no mix abaixo.
+
+## O mix de conteúdo (pra não ficar batido)
+- **premissa/dica** (Decifra Apple): ensina e vende de consequência. carro-chefe.
+- **confiança/prova** (Casa Smartbase): paga quando recebe, bateria, imei, bastidor, as pessoas reais. o que mais converte agora (objetivo do mês é confiança).
+- **desejo puro** (estilo reel da lua): atmosfera, sem dica. respiro.
+- **cultura/copa**: comportamento real, alcance.
+
+## Humanização (a partir de jun/2026)
+Rosto de gente bate marca sem rosto. A credibilidade offline do dono (anos vendendo Apple) transfere pra marca nova e ataca o gargalo de confiança melhor que carrossel.
+- **os dois aparecem, aos poucos** (nenhum é íntimo de câmera): a Letícia puxa dicas/tecnologia, o dono traz credibilidade de especialista.
+- **estética importa** (referência: Human Academy). vídeo limpo, bem composto, minimal.
+- **começar leve:** voz, mãos, produto, b-roll estético, rosto pontual. subir a régua conforme o público responde.
+- não é vlog. presença curada e recorrente.
+
 ## Teste rápido antes de enviar
 - Abriu com take ou com descrição? (tem que ser take)
 - Tem pelo menos um fato concreto e específico? (tem que ter)
 - Tem travessão, "não é X é Y" ou adjetivo vazio? (não pode ter)
 - O CTA soa como convite de gente ou slogan de loja? (tem que ser convite)
+- Se é post de aparelho: tem uma dica/conhecimento real e a venda vem de consequência? (tem que ter)
 - Margem: tá empurrando pro produto certo? (pro max é o que dá mais margem)
