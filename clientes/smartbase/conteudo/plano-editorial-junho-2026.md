@@ -33,13 +33,13 @@
 
 ### Semana parcial — 07 a 14/06 (pré-viagem + volta + abertura da Copa)
 
-**DOM 07 — post | VIDA APPLE EM CAXIAS** (leve, estético)
-- foto local clicada em iphone, legenda mínima
-- hook: `domingo na serra, na lente do iphone.`
+**DOM 07 (hoje) — post comercial | CASA SMARTBASE** ⭐ gera caixa antes da viagem · *card pronto no Figma (884:35)*
+- tema: leva nova da linha 17 chegou + paga quando recebe
+- formato: estático
 
-**SEG 08 — post comercial | CASA SMARTBASE** ⭐ gera caixa antes da viagem · *copy pronta abaixo*
-- tema: leva nova da linha 17 chegou + paga quando recebe, com a Copa chegando
-- formato: estático ou carrossel curto (2-3 cards)
+**SEG 08 — post | VIDA APPLE EM CAXIAS** (leve, estético)
+- fotos da cidade (a Letícia fotografa segunda numa volta por Caxias)
+- hook: `caxias na lente do iphone.`
 
 **TER 09 + QUA 10 — VIAGEM (feed descansa)**
 - nada ao vivo. grava todo o material dos roteiros lá.

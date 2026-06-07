@@ -31,7 +31,8 @@ Preencher 48h após cada post (dá tempo de maturar).
 
 | data | post (tema) | pilar | formato | alcance | % não-seg | salvam. | envios | coment. | DMs | venda |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 08/06 | leva nova linha 17 | Casa | estático | | | | | | | |
+| 07/06 | leva nova linha 17 | Casa | estático | | | | | | | |
+| 08/06 | caxias na lente do iphone | Vida | post/carrossel | | | | | | | |
 | 11/06 | celular é o 2º telão da copa | Casa | estático | | | | | | | |
 | 12/06 | paraguai "a origem" | Decifra | reel | | | | | | | |
 | 13/06 | serra na lente do iphone | Vida | carrossel | | | | | | | |

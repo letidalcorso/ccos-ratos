@@ -5,7 +5,8 @@
 
 ---
 
-## SEG 08 — post comercial | CASA SMARTBASE (estático)
+## DOM 07 (hoje) — post comercial | CASA SMARTBASE (estático)
+> Movido do dia 08 pro 07: o card já está pronto e é o post que gera caixa antes da viagem de terça.
 
 **Texto no post (imagem):**
 > chegou leva nova da linha 17, lacrada.
@@ -15,7 +16,6 @@
 **Legenda:**
 > chegou leva nova da linha 17 lacrada, e os dois 17 pro max seminovos com 100% de bateria não vão ficar parados.
 > o combinado aqui é simples: você paga quando o aparelho tá na tua mão, com o imei conferido na tua frente. sem pix antes, sem torcer pra dar certo.
-> a copa começa quinta. boa hora pra resolver.
 > manda o modelo no whats que eu te passo o que tem e o valor.
 
 **Hashtags:** #iphonecaxias #applecaxias #caxiasdosul #serragaucha #iphone17promax
@@ -77,7 +77,7 @@ Roteiro completo em `roteiros-paraguai-jun2026.md` (Vídeo 1). Depende das filma
 
 ---
 
-## DOM 07 e SÁB 13 — Vida Apple em Caxias (precisa das tuas fotos)
+## SEG 08 e SÁB 13 — Vida Apple em Caxias (precisa das tuas fotos)
 
 Sem foto da Serra eu não monto. Me manda as fotos clicadas em iphone que eu faço a legenda e o tratamento. Alternativa, se não tiver foto: troco por mais um conteúdo de dica (sem foto).
 
