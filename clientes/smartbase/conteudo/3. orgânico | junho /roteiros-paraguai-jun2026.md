@@ -47,6 +47,7 @@ Essa é a parte mais importante pra viagem. Grava tudo isso em bruto, sobra mate
 **D. Presença mínima (pouco, mas existe)**
 - 1 a 2 tomadas suas ou do dono em foco parcial: de costas, de lado, só as mãos
 - Uma única fala curta olhando pra câmera, se quiser: "a gente vem até aqui pra escolher um por um" (10 segundos no máximo)
+- **ESTREIA DO DONO (reel do dia 16, ver plano):** gravar ele falando o roteiro do preço/tributo, com camisa do Brasil e/ou Paraguai, clima de Copa. Fundo: comércio/loja do Paraguai. Primeira aparição dele, caprichar na luz e no áudio.
 
 **E. Fechamento e volta**
 - Caixas organizadas pra levar, arrumando pra viagem de volta

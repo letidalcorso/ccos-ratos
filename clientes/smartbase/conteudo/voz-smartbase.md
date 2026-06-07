@@ -29,7 +29,8 @@ Referência do tom certo, feita por ela: o reel da lua (8x de zoom, fotografa a 
 - **"markup"** (proibido em qualquer copy da Smartbase)
 - promoção genérica, "100% original garantido" defensivo, tom de atacado
 - preço no feed (preço só no WhatsApp; feed posiciona, whats fecha)
-- qualquer menção a como a importação funciona (aduana, nota, declaração, imposto na prática). Nunca em copy.
+- qualquer menção a como a importação DELES funciona por dentro (aduana, nota, declaração). Nunca em copy nem em arquivo do repo.
+- **PODE e é forte:** explicar a carga tributária do BRASIL como fato público (o país é um dos mais caros do mundo pra iPhone, +60% do preço é imposto: IPI, ICMS, PIS, Cofins). Isso justifica por que a Apple de loja é cara. Posicionar a Smartbase como "importado, direto da fonte, sem o preço de loja oficial", sem NUNCA explicar a margem própria. Fonte: em.com.br (abr/2026), Poder360.
 - não se defender de acusação de golpe. afirma o que é, não nega o que não é.
 
 ## Trunfos de confiança (usar de verdade, sem encher linguiça)

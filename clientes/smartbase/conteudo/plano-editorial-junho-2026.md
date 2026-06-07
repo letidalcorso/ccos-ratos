@@ -61,9 +61,11 @@
 - tema: como conferir um iphone usado antes de comprar (saúde da bateria + imei)
 - formato: ótimo pra estrear a Letícia em vídeo curto explicando (pegada estética, leve)
 
-**TER 16 — post | CASA SMARTBASE (Copa)**
-- tema: a câmera que salva a arquibancada/o bar (zoom, vídeo), comportamento real de Copa
-- hook: `o melhor lugar do jogo é onde a tua câmera alcança.`
+**TER 16 — reel | DECIFRA APPLE + Copa · ESTREIA DO DONO** ⭐ *roteiro nas copys prontas*
+- tema: por que o iphone é tão mais barato fora do brasil (carga tributária), gravado no Paraguai com clima de Copa (camisas Brasil/Paraguai)
+- formato: reel ~25-30s, o dono como especialista, primeira aparição dele
+- guardrail: falar da carga tributária do BRASIL (fato público), nunca de como a importação deles funciona por dentro
+- (ideia de Copa que sobrou pra story/futuro: "a câmera que salva o jogo", zoom/vídeo na arquibancada)
 
 **QUA 17 — reel | série Paraguai Vídeo 3 "É real"** (o mais estratégico de confiança)
 - paga quando recebe + loja física juntos
@@ -147,6 +149,18 @@ Os 6 vídeos de `roteiros-paraguai-jun2026.md`, espaçados:
 > os dois 17 pro max seminovos que chegaram fazem exatamente isso, com 100% de bateria e garantia apple. manda no whats que eu te mostro.
 
 ---
+
+### TER 16 — reel estreia do dono (preço/tributo, gravar no Paraguai)
+Guardrail: carga tributária do BRASIL (fato público). Nunca explicar a importação deles por dentro. Fonte dos números: em.com.br (abr/2026), Poder360.
+
+> **gancho (texto na tela):** por que o mesmo iphone custa metade cruzando a fronteira?
+> **dono (camisa Brasil e/ou Paraguai):** o brasil é o segundo país mais caro do mundo pra comprar iphone. só perde pra turquia.
+> mais de 60% do que você paga aqui é imposto. ipi, icms, pis, cofins, tudo empilhado. o aparelho é o mesmo, o que muda é a conta.
+> por isso a gente vem buscar na fonte. mesma apple, mesma garantia, sem o preço de loja oficial.
+> **CTA:** manda no whats que eu te mostro quanto dá pra economizar.
+
+**Legenda:** o iphone no brasil é o 2º mais caro do mundo, e não é por acaso: mais de 60% do preço é imposto. a gente vai até a fonte pra te entregar o mesmo aparelho, mesma garantia apple, sem o preço de loja oficial. manda no whats.
+**Hashtags:** #copa2026 #iphonecaxias #applecaxias #garantiainternacional #caxiasdosul
 
 ## Pendências pra produzir
 - SVGs dos posts estáticos/carrosséis (seguir `marca/design-guide.md`, Letícia refina no Figma)
