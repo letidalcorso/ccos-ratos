@@ -51,6 +51,9 @@ letícia/scriptable/
 # Dados de cliente com tokens hardcoded
 clientes/smartbase/dados/
 
+# Mídia bruta de conteúdo (fotos/vídeos da Letícia) — fica só local, não vai pro GitHub
+clientes/smartbase/conteudo/fotos-caxias/
+
 # Sistema
 .DS_Store
 node_modules/
