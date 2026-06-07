@@ -162,6 +162,18 @@ Guardrail: carga tributária do BRASIL (fato público). Nunca explicar a importa
 **Legenda:** o iphone no brasil é o 2º mais caro do mundo, e não é por acaso: mais de 60% do preço é imposto. a gente vai até a fonte pra te entregar o mesmo aparelho, mesma garantia apple, sem o preço de loja oficial. manda no whats.
 **Hashtags:** #copa2026 #iphonecaxias #applecaxias #garantiainternacional #caxiasdosul
 
+## Pivot pós semana 1 — ecossistema Apple (DECIFRA que agrega)
+A pedido da Letícia (06/06): explorar como os aparelhos Apple se conectam. Conteúdo de altíssimo valor (agrega, salva, posiciona autoridade) e abre venda de outros produtos (Watch, Mac, iPad, AirPods), não só iPhone. Revisar e encaixar depois de fechar a semana 1.
+**Atenção:** a palavra "ecossistema" é vetada na copy. Mostrar na prática, nunca usar o jargão.
+Sementes de pauta:
+- o watch que desbloqueia o mac e o iphone sozinho (você nem digita a senha)
+- copia no mac, cola no iphone (o famoso cmd-c aqui cola lá)
+- atender ligação do iphone direto no mac
+- airdrop: passar arquivo entre dois aparelhos apple sem internet, sem app, sem zap
+- continuidade: começar um texto no iphone e terminar no mac
+- ângulo de venda: "um aparelho conversa com o outro", mostrado, não falado
+Formato ideal: reels de dica curtos com a Letícia mostrando na tela (estético) e carrosséis salváveis.
+
 ## Pendências pra produzir
 - SVGs dos posts estáticos/carrosséis (seguir `marca/design-guide.md`, Letícia refina no Figma)
 - gravar material da viagem (lista de captura em `roteiros-paraguai-jun2026.md`)
