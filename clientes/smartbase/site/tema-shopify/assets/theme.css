@@ -17,6 +17,17 @@
 /* ---- sidebar: o ícone é um <a>, então tira o sublinhado do link ---- */
 .sidebar .nav-ic{text-decoration:none}
 
+/* ============================================================
+   Imagens nativas (<img class="sb-img">) — substituem o <image-slot>.
+   Preenchem o container posicionado, como o protótipo fazia.
+   ============================================================ */
+.sb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* destaque (highlight): imagem flutua com respiro de 12px e modo contain */
+.sb-img.hms-hl-band-img{inset:12px;width:calc(100% - 24px);height:calc(100% - 24px)}
+/* filtro dark/cool (antes vinha de ::part(image)) — regra de um-azul */
+img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) contrast(1.06)}
+#home-hero-bg.sb-img[data-cool]{filter:saturate(.62) hue-rotate(-16deg) brightness(.92) contrast(1.03)}
+
 /* ---- placeholder temporário da home (sai na Etapa 2) ---- */
 .sb-placeholder{padding:160px 0;text-align:center}
 .sb-placeholder .headline{font-size:clamp(40px,7vw,72px);margin:16px 0}
