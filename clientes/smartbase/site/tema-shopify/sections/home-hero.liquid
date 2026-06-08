@@ -14,13 +14,13 @@
     <div class="hm-hero-text">
       {%- if s.lead != blank -%}<div class="hm-hero-lead">{{ s.lead }}</div>{%- endif -%}
       <h2 class="headline" style="font-size:clamp(37px,5.55vw,80px);line-height:.98;letter-spacing:-2px">
-        <span>{{ s.headline_1 }}</span>{% if s.headline_2 != blank %}<br><span class="b">{{ s.headline_2 }}</span>{% endif %}
+        <span>{{ s.headline_1 }}</span>{% if s.headline_2 != blank %}<br><span>{{ s.headline_2 }}</span>{% endif %}
       </h2>
       <div class="hm-hero-foot">
         <span class="eyebrow">{{ s.location }}</span>
         <div class="hm-hero-ctas">
           {%- if s.cta1_label != blank -%}<a class="btn btn-primary" href="{{ s.cta1_link | default: '/collections/all' }}">{{ s.cta1_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
-          {%- if s.cta2_label != blank -%}<a class="btn btn-glass" href="{% render 'wa-link' %}" target="_blank" rel="noopener">{{ s.cta2_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+          {%- if s.cta2_label != blank -%}<a class="btn btn-glass" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">{{ s.cta2_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
     { "type": "header", "content": "Texto" },
     { "type": "text", "id": "lead", "label": "Linha de apoio (lead)", "default": "novos e seminovos. pra quem usa apple todo dia." },
     { "type": "text", "id": "headline_1", "label": "Título — linha 1", "default": "sua apple store." },
-    { "type": "text", "id": "headline_2", "label": "Título — linha 2 (azul)", "default": "particular." },
+    { "type": "text", "id": "headline_2", "label": "Título — linha 2", "default": "particular." },
     { "type": "text", "id": "location", "label": "Localização", "default": "caxias do sul · serra gaúcha" },
     { "type": "header", "content": "Botões" },
     { "type": "text", "id": "cta1_label", "label": "Botão 1 — texto", "default": "quero ver a vitrine" },

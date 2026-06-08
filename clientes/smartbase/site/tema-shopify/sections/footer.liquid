@@ -12,14 +12,16 @@
 
     <div class="ft-col">
       <span class="ft-h">{{ section.settings.nav_title | default: 'navegar' }}</span>
-      {%- for link in section.settings.menu.links -%}
-        <a href="{{ link.url }}">{{ link.title }}</a>
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'nav' -%}
+          <a href="{{ block.settings.url }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+        {%- endif -%}
       {%- endfor -%}
     </div>
 
     <div class="ft-col">
       <span class="ft-h">{{ section.settings.contact_title | default: 'falar' }}</span>
-      <a class="ft-wa" href="{% render 'wa-link' %}" target="_blank" rel="noopener">
+      <a class="ft-wa" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">
         <svg class="ft-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.3 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4c-.2 0-.5 0-.7.4-.3.4-.9 1-.9 2.3s1 2.6 1.1 2.8c.1.2 1.9 3 4.7 4.1.7.3 1.2.4 1.6.3.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4l-1-.5c-.2-.1-.4-.1-.6.1l-.5.8c-.1.1-.2.1-.4 0-.2-.1-.9-.4-1.6-1-.6-.5-1-1.2-1.2-1.4-.1-.2 0-.3.1-.4l.3-.4.2-.3.1-.4-.6-1.5c-.2-.4-.4-.3-.5-.4z"/></svg>
         whatsapp
       </a>
@@ -28,7 +30,7 @@
         ligar · {{ settings.phone_display | default: '+55 54 99662-4494' }}
       </a>
       {%- if settings.instagram_url != blank -%}
-        <a class="ft-ig" href="{{ settings.instagram_url }}" target="_blank" rel="noopener">
+        <a class="ft-ig" href="{{ settings.instagram_url }}" target="_blank" rel="noopener noreferrer">
           <svg class="ft-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4zm0 1.8A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm4.9-3.3a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/></svg>
           {{ settings.instagram_handle | default: '@smartbase.br' }}
         </a>
@@ -72,10 +74,8 @@
       "default": "navegar"
     },
     {
-      "type": "link_list",
-      "id": "menu",
-      "label": "Menu do rodapé",
-      "default": "footer"
+      "type": "paragraph",
+      "content": "Os links da coluna 'navegar' são editados como blocos abaixo."
     },
     {
       "type": "header",
@@ -119,6 +119,25 @@
       "label": "Linha de copyright",
       "default": "© 2026 smartbase · caxias do sul, rs"
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "nav",
+      "name": "Link (navegar)",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Texto", "default": "link" },
+        { "type": "url", "id": "url", "label": "Destino" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "nav", "settings": { "label": "vitrine", "url": "/collections/all" } },
+      { "type": "nav", "settings": { "label": "sobre", "url": "/" } },
+      { "type": "nav", "settings": { "label": "blog", "url": "/blogs/news" } },
+      { "type": "nav", "settings": { "label": "faq", "url": "/pages/faq" } },
+      { "type": "nav", "settings": { "label": "contato", "url": "/pages/contato" } }
+    ]
+  }
 }
 {% endschema %}

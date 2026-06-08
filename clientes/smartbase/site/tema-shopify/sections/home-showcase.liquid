@@ -37,7 +37,7 @@
                 assign hl_href = block.settings.url | default: '/collections/all'
               endif
             -%}
-            <a class="hms-hl-band" href="{{ hl_href | strip }}"{% if hl_target != blank %} target="{{ hl_target }}" rel="noopener"{% endif %} {{ block.shopify_attributes }}>
+            <a class="hms-hl-band" href="{{ hl_href | strip }}"{% if hl_target != blank %} target="{{ hl_target }}" rel="noopener noreferrer"{% endif %} {{ block.shopify_attributes }}>
               <div class="hms-hl-band-media">{% render 'img-slot', image: block.settings.image, fallback: 'prod-iphone.png', class: 'hms-hl-band-img', fit: 'contain', label: 'foto do destaque' %}</div>
               <div class="hms-hl-band-copy">
                 <span class="hms-hl-band-kick">{{ block.settings.kicker }}</span>

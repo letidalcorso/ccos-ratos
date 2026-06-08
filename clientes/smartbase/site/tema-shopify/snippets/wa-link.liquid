@@ -1,16 +1,20 @@
 {%- comment -%}
   Monta o link do WhatsApp (wa.me). Número editável em Configurações do tema.
   Uso:
-    {% render 'wa-link' %}                          -> link cru
-    {% render 'wa-link', produto: product.title %}  -> já preenche a mensagem
+    {% render 'wa-link' %}                            -> link cru
+    {% render 'wa-link', produto: product.title %}    -> já preenche a mensagem
     {% render 'wa-link', texto: 'quero saber mais' %} -> mensagem livre
+  Saída sem espaços/quebras (echo dentro de {%- liquid -%}).
 {%- endcomment -%}
-{%- assign wa = settings.wa_number | default: '5554996624494' | remove: ' ' | remove: '+' | remove: '-' | remove: '(' | remove: ')' -%}
-{%- if produto != blank -%}
-  {%- assign msg = 'oi! tenho interesse no ' | append: produto | append: '. ainda tem?' -%}
-  https://wa.me/{{ wa }}?text={{ msg | url_encode }}
-{%- elsif texto != blank -%}
-  https://wa.me/{{ wa }}?text={{ texto | url_encode }}
-{%- else -%}
-  https://wa.me/{{ wa }}
-{%- endif -%}
+{%- liquid
+  assign wa = settings.wa_number | default: '5554996624494' | remove: ' ' | remove: '+' | remove: '-' | remove: '(' | remove: ')'
+  if produto != blank
+    assign msg = 'oi! tenho interesse no ' | append: produto | append: '. ainda tem?' | url_encode
+    echo 'https://wa.me/' | append: wa | append: '?text=' | append: msg
+  elsif texto != blank
+    assign msg2 = texto | url_encode
+    echo 'https://wa.me/' | append: wa | append: '?text=' | append: msg2
+  else
+    echo 'https://wa.me/' | append: wa
+  endif
+-%}
