@@ -1,0 +1,196 @@
+// Primitives: Logo, Button, Eyebrow, Headline, Icon, Chrome (browser-bar + sidebar)
+
+// Single conversion action everywhere: WhatsApp. Optional product name prefills the message.
+const WHATSAPP_BASE = "https://wa.me/5554996624494";
+// Build the wa.me URL. Used as a real <a href> so the link works natively
+// (right-click, open-in-tab, and — crucially — not blocked by popup blockers
+// the way a JS window.open() call is in a sandboxed preview).
+function waHref(produto) {
+  return produto
+    ? WHATSAPP_BASE + "?text=" + encodeURIComponent("oi! tenho interesse no " + produto + ". ainda tem?")
+    : WHATSAPP_BASE;
+}
+// Imperative fallback (kept for any non-anchor caller).
+function wa(produto) {
+  const url = waHref(produto);
+  try {
+    const a = document.createElement("a");
+    a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+    document.body.appendChild(a); a.click(); a.remove();
+  } catch (e) {
+    if (!window.open(url, "_blank", "noopener")) location.href = url;
+  }
+}
+
+// Smooth-scroll to a section without scrollIntoView (which can break the app).
+function scrollToSel(sel, offset = 96) {
+  const el = document.querySelector(sel);
+  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: "smooth" });
+}
+
+function Logo({ sm, onClick }) {
+  return (
+    <span className={"logo" + (sm ? " sm" : "")} onClick={onClick} style={onClick ? { cursor: "pointer" } : undefined}>
+      <span className="mark"><i></i></span>
+      <span className="word">smart<b>base</b></span>
+    </span>
+  );
+}
+
+function Button({ variant = "primary", sm, children, arrow = true, href, ...p }) {
+  const cls = `btn btn-${variant}${sm ? " btn-sm" : ""}`;
+  const inner = <>{children}{arrow && <span aria-hidden="true">→</span>}</>;
+  // When an href is given, render a real anchor — the most reliable way to open
+  // WhatsApp (no popup-blocker / sandbox issues that killed the old onClick).
+  if (href) {
+    return (
+      <a className={cls} href={href} target="_blank" rel="noopener noreferrer" {...p}>{inner}</a>
+    );
+  }
+  return <button className={cls} {...p}>{inner}</button>;
+}
+
+function Eyebrow({ signal, pill, children }) {
+  return <div className={"eyebrow" + (signal ? " signal" : "") + (pill ? " pill" : "")}>{children}</div>;
+}
+
+// Photo placeholder the user fills (drop a bank/own photo). Premium dark
+// gradient empty-state so it reads as intentional, not a broken image.
+const SLOT_BG = "radial-gradient(120% 90% at 50% 22%, rgba(62,130,247,.20), transparent 56%), radial-gradient(130% 110% at 50% 48%, #24242f 0%, #0a0a12 78%)";
+// light empty-state for use on near-white blocks (Apple-style spotlight)
+const SLOT_BG_LIGHT = "radial-gradient(120% 90% at 50% 30%, rgba(62,130,247,.10), transparent 60%), linear-gradient(180deg, #ffffff 0%, #ececef 100%)";
+// One reliable Unsplash CDN image (dark, cool) used as a stand-in for ambient
+// hero photography. data-cool applies a blue/dark filter so it obeys the
+// one-blue rule. Swap for real on-brand shots (Apple Newsroom, min 1600px).
+const STOCK = {
+  ambient: "https://images.unsplash.com/photo-1689871176637-3421f13f4e6c?fm=jpg&q=72&w=2200&auto=format&fit=crop",
+};
+function Slot({ id, label, fit = "cover", src, cool, stock, position, light }) {
+  if (stock) { src = STOCK.ambient; cool = true; }
+  const props = { id, shape: "rect", fit, placeholder: label,
+    style: { position: "absolute", inset: 0, width: "100%", height: "100%", background: light ? SLOT_BG_LIGHT : SLOT_BG } };
+  if (src) props.src = src;
+  if (position) props.position = position;
+  if (cool) props["data-cool"] = "";
+  return <image-slot {...props}></image-slot>;
+}
+
+// Fixed catalogue photo (NOT user-fillable). A plain <img> so it renders
+// everywhere — review screenshots, exports, share links — unlike <image-slot>
+// whose shadow DOM is invisible to html-to-image. Use for product cut-outs.
+function ProductImg({ src, alt, position = "50% 50%", className }) {
+  return (
+    <img
+      className={"product-img" + (className ? " " + className : "")}
+      src={src} alt={alt || ""} draggable="false" loading="lazy"
+      style={{ objectPosition: position }} />
+  );
+}
+
+// Reusable standard page hero — mirrors the immersive Home hero: full-bleed
+// photo + floating translucent glass panel + brand pill. One hero language
+// across every page.
+function PageHero({ kicker, lines, sub, bg, bgId, position = "50% 50%", lead, ctas, children }) {
+  return (
+    <section className="hm-hero page-hero rise">
+      <div className="hm-hero-panel rise">
+        <div className="ph-media">
+          <Slot id={bgId} cool position={position} label="imagem do hero — arraste a tua (opcional)" />
+          <div className="ph-media-scrim"></div>
+        </div>
+        <div className="ph-brandrow">
+          <span className="hm-pill-brand">smartbase</span>
+          <span className="eyebrow pill ph-kicker">{kicker}</span>
+        </div>
+        <div className="hm-hero-text ph-text" data-par="0.35">
+          {lead && <div className="hm-hero-lead">{lead}</div>}
+          <Headline size={72} lines={lines} />
+          {sub && <p className="hero-glass-sub">{sub}</p>}
+          {ctas && <div className="hm-hero-ctas ph-ctas">{ctas}</div>}
+          {children && <div className="ph-extra">{children}</div>}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Two-line headline: first line white, optional second line blue
+function Headline({ size = 56, lines }) {
+  // Fluid: scales with viewport, floored so big display text never blows out on mobile.
+  const fs = `clamp(${Math.round(size * 0.46)}px, ${(size / 14.4).toFixed(2)}vw, ${size}px)`;
+  return (
+    <h2 className="headline" style={{ fontSize: fs, lineHeight: 0.98, letterSpacing: size > 60 ? "-2px" : "-1.2px" }}>
+      {lines.map((l, i) => (
+        <React.Fragment key={i}>
+          {i > 0 && <br />}
+          <span className={l.accent ? "b" : ""}>{l.t}</span>
+        </React.Fragment>
+      ))}
+    </h2>
+  );
+}
+
+const ICONS = {
+  home: <path d="M3 11l9-8 9 8M5 9v11h6v-7h2v7h6V9" />,
+  bag: <path d="M6 7h12l-1 13H7L6 7zM9 7V5.5a3 3 0 0 1 6 0V7" />,
+  user: <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21c0-4 4-6 8-6s8 2 8 6" />,
+  doc: <path d="M7 3h7l4 4v14H7zM14 3v4h4M9 12h7M9 16h7" />,
+  help: <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7M12 17h.01" />,
+  chat: <path d="M4 5h16v11H9l-5 4z" />,
+};
+
+function Icon({ name }) {
+  return <svg viewBox="0 0 24 24">{ICONS[name]}</svg>;
+}
+
+function BrowserBar({ url = "smartbasebr.com" }) {
+  const [copied, setCopied] = React.useState(false);
+  const share = async () => {
+    const link = "https://" + url;
+    try {
+      if (navigator.share) { await navigator.share({ title: "smartbase", url: link }); return; }
+      await navigator.clipboard.writeText(link);
+    } catch (e) { /* user cancelled or blocked — fall through */ }
+    setCopied(true); setTimeout(() => setCopied(false), 1600);
+  };
+  return (
+    <div className="chrome-bar">
+      <span className="navbtns">
+        <button className="cbtn" title="voltar" onClick={() => history.back()}><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" /></svg></button>
+        <button className="cbtn" title="avançar" onClick={() => history.forward()}><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" /></svg></button>
+      </span>
+      <span className="chrome-url">
+        <svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v9H5z" /></svg>
+        {copied ? "link copiado ✓" : url}
+      </span>
+      <span className="navbtns">
+        <button className="cbtn" title="recarregar" onClick={() => location.reload()}><svg viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6M5 9a8 8 0 0 1 14-2M19 15a8 8 0 0 1-14 2" /></svg></button>
+        <button className="cbtn" title="compartilhar" onClick={share}><svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 21h14" /></svg></button>
+      </span>
+    </div>
+  );
+}
+
+const NAV = [
+  { id: "home", icon: "home", page: "home", label: "início" },
+  { id: "vitrine", icon: "bag", page: "vitrine", label: "vitrine" },
+  { id: "faq", icon: "help", page: "faq", label: "faq" },
+  { id: "contato", icon: "chat", page: "contato", label: "contato" },
+  { id: "blog", icon: "doc", page: "blog", label: "blog" },
+];
+
+function Sidebar({ page, go }) {
+  return (
+    <nav className="sidebar">
+      {NAV.map((n) => (
+        <span key={n.id} aria-label={n.label} className={"nav-ic" + (n.id === page ? " on" : "")}
+          onClick={() => go(n.page)}>
+          <Icon name={n.icon} />
+          <span className="nav-tip">{n.label}</span>
+        </span>
+      ))}
+    </nav>
+  );
+}
+
+Object.assign(window, { Logo, Button, Eyebrow, Slot, ProductImg, Headline, PageHero, Icon, BrowserBar, Sidebar, wa, waHref, scrollToSel });

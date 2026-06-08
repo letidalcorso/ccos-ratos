@@ -1,0 +1,282 @@
+// Footer + App shell (router across Home / Vitrine / FAQ)
+
+// Global pre-footer CTA band. Vitrine (página de produto) usa o fechamento
+// "se existe, a gente acha" (1 botão); as demais páginas mantêm o padrão anterior.
+function CtaBand({ go, page }) {
+  if (page === "vitrine") {
+    return (
+      <section className="cta-band rise">
+        <div className="cta-band-glow"></div>
+        <div className="cta-band-copy">
+          <div className="eyebrow signal cta-band-eyebrow">não achou o que procura?</div>
+          <h2 className="headline cta-band-h">se existe, <span className="b">a gente acha.</span></h2>
+          <p className="cta-band-sub">tem a apple inteira pra ti — manda o modelo que tu quer no whatsapp e a gente encontra, confere e te avisa.</p>
+        </div>
+        <div className="cta-band-actions">
+          <Button variant="primary" href={waHref()}>vou chamar no whatsapp</Button>
+        </div>
+      </section>
+    );
+  }
+  return (
+    <section className="cta-band rise">
+      <div className="cta-band-glow"></div>
+      <div className="cta-band-copy">
+        <div className="eyebrow signal cta-band-eyebrow">pronto pra escolher?</div>
+        <Headline size={52} lines={[{ t: "você já sabe o que quer." }, { t: "falta só chamar a gente.", accent: true }]} />
+        <p className="cta-band-sub">resposta em minutos, no whatsapp. e tu só paga quando o aparelho tá na tua mão.</p>
+      </div>
+      <div className="cta-band-actions">
+        <Button variant="primary" href={waHref()}>vou chamar no whatsapp</Button>
+      </div>
+    </section>
+  );
+}
+
+function Footer({ go }) {
+  return (
+    <footer className="ft">
+      <div className="page ft-grid">
+        <div className="ft-col ft-brandcol">
+          <Logo onClick={() => go("home")} />
+          <p className="ft-blurb">sua apple store particular. novos sob encomenda e seminovos conferidos um a um. caxias do sul · serra gaúcha.</p>
+        </div>
+        <div className="ft-col">
+          <span className="ft-h">navegar</span>
+          <a onClick={() => go("vitrine")}>vitrine</a>
+          <a onClick={() => { go("home"); setTimeout(() => scrollToSel(".hm-posi"), 120); }}>sobre</a>
+          <a onClick={() => go("blog")}>blog</a>
+          <a onClick={() => go("faq")}>faq</a>
+          <a onClick={() => go("contato")}>contato</a>
+        </div>
+        <div className="ft-col">
+          <span className="ft-h">falar</span>
+          <a className="ft-wa" href="https://wa.me/5554996624494" target="_blank" rel="noopener">
+            <svg className="ft-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.3 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3 4c-.2 0-.5 0-.7.4-.3.4-.9 1-.9 2.3s1 2.6 1.1 2.8c.1.2 1.9 3 4.7 4.1.7.3 1.2.4 1.6.3.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4l-1-.5c-.2-.1-.4-.1-.6.1l-.5.8c-.1.1-.2.1-.4 0-.2-.1-.9-.4-1.6-1-.6-.5-1-1.2-1.2-1.4-.1-.2 0-.3.1-.4l.3-.4.2-.3.1-.4-.6-1.5c-.2-.4-.4-.3-.5-.4z" /></svg>
+            whatsapp
+          </a>
+          <a className="ft-tel" href="tel:+5554996624494">
+            <svg className="ft-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.5 17.3l-2.5-1.1a1 1 0 0 0-1.1.2l-1.1 1.1a11 11 0 0 1-4.8-4.8l1.1-1.1a1 1 0 0 0 .2-1.1L10 8a1 1 0 0 0-1.1-.6l-2.3.5a1 1 0 0 0-.8 1.1 14 14 0 0 0 12.2 12.2 1 1 0 0 0 1.1-.8l.5-2.3a1 1 0 0 0-.6-1.1z" /></svg>
+            ligar · +55 54 99662-4494
+          </a>
+          <a className="ft-ig" href="https://instagram.com/smartbase.br" target="_blank" rel="noopener">
+            <svg className="ft-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4zm0 1.8A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm4.9-3.3a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z" /></svg>
+            @smartbase.br
+          </a>
+        </div>
+        <div className="ft-col">
+          <span className="ft-h">visitar</span>
+          <div className="ft-line">caxias do sul, rs{"\n"}<span className="warn">endereço a confirmar</span></div>
+          <div className="ft-line">seg–sex · 9h às 19h{"\n"}sáb · 9h às 13h{"\n"}<span className="mut">domingo · fechado</span></div>
+        </div>
+      </div>
+      <div className="page ft-legal">
+        <span>© 2026 smartbase · caxias do sul, rs</span>
+      </div>
+    </footer>
+  );
+}
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "glass": 100,
+  "radius": 100,
+  "accent": "#3E82F7",
+  "glow": true,
+  "sbScale": 100,
+  "sbX": 0,
+  "sbY": 0,
+  "sbOpacity": 85,
+  "sbShine": 100,
+  "liquidAnim": true,
+  "hlCount": 0,
+  "hl1Title": "",
+  "hl1Name": "",
+  "hl1Sub": "",
+  "hl1Info": "",
+  "hl1Dest": "vitrine",
+  "hl1Url": "",
+  "hl2Title": "",
+  "hl2Name": "",
+  "hl2Sub": "",
+  "hl2Info": "",
+  "hl2Dest": "whatsapp",
+  "hl2Url": "",
+  "motion": "equilibrado"
+}/*EDITMODE-END*/;
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [page, setPage] = React.useState(() => location.hash.replace("#", "") || "home");
+  const go = (p) => { setPage(p); location.hash = p; };
+
+  // every route change starts at the top — run after the new page paints,
+  // before the browser shows it (no smooth animation across a layout swap).
+  React.useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
+
+  // apply tweaks as CSS variables on :root
+  React.useEffect(() => {
+    const r = document.documentElement.style;
+    const g = t.glass / 100;
+    r.setProperty("--sb-lg-blur", `blur(${Math.round(18 + g * 30)}px) saturate(${120 + g * 60}%)`);
+    r.setProperty("--sb-lg-rim", `rgba(255,255,255,${(0.30 + g * 0.30).toFixed(2)})`);
+    const rs = t.radius / 100;
+    r.setProperty("--sb-r-card", Math.round(28 * rs) + "px");
+    r.setProperty("--sb-r-panel", Math.round(22 * rs) + "px");
+    r.setProperty("--sb-r-lg", Math.round(36 * rs) + "px");
+    r.setProperty("--sb-r-sm", Math.round(16 * rs) + "px");
+    r.setProperty("--sb-signal", t.accent);
+    document.body.classList.toggle("no-glow", !t.glow);
+    // sb watermark live controls
+    r.setProperty("--sb-mark-scale", (t.sbScale / 100).toFixed(3));
+    r.setProperty("--sb-mark-x", t.sbX + "px");
+    r.setProperty("--sb-mark-y", t.sbY + "px");
+    r.setProperty("--sb-mark-opacity", (t.sbOpacity / 100).toFixed(2));
+    r.setProperty("--sb-mark-shine", (t.sbShine / 100).toFixed(2));
+    // liquid-glass showcase: motion on/off
+    document.body.classList.toggle("hms-no-anim", !t.liquidAnim);
+    // movimento: intensidade dos reveals (CSS vars) + força do parallax
+    const MO = { sutil: [30, 0.78, 0, 0.05], equilibrado: [66, 0.98, 0, 0.08], forte: [108, 1.18, 5, 0.13] }[t.motion] || [66, 0.98, 0, 0.08];
+    r.setProperty("--rv-y", MO[0] + "px");
+    r.setProperty("--rv-dur", MO[1] + "s");
+    r.setProperty("--rv-blur", MO[2] + "px");
+    window.__parK = MO[3];
+  }, [t.glass, t.radius, t.accent, t.glow, t.sbScale, t.sbX, t.sbY, t.sbOpacity, t.sbShine, t.liquidAnim, t.motion]);
+
+  React.useEffect(() => {
+    const onHash = () => setPage(location.hash.replace("#", "") || "home");
+    addEventListener("hashchange", onHash);
+    return () => removeEventListener("hashchange", onHash);
+  }, []);
+
+  // reveal-on-scroll + nav-theme detection. Resilient: re-asserts after
+  // post-mount re-renders (useTweaks/localStorage) that would otherwise reset
+  // React-controlled className.
+  React.useEffect(() => {
+    let raf;
+    // Toggle a light-on-nav theme when the continuous light zone passes behind
+    // the fixed chrome bar / sidebar, so their glass + icons stay legible.
+    const navTheme = () => {
+      const zone = document.querySelector(".hm-light-zone");
+      const b = document.body;
+      if (!zone) { b.classList.remove("chrome-light", "sidebar-light"); return; }
+      const r = zone.getBoundingClientRect();
+      const over = (y) => r.top <= y && r.bottom >= y;
+      b.classList.toggle("chrome-light", over(44));                 // chrome bar centre
+      b.classList.toggle("sidebar-light", over(window.innerHeight / 2)); // sidebar centre
+    };
+    const prefersReduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reveal = () => {
+      document.querySelectorAll(".rise:not(.in)").forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.88 && r.bottom > 0) el.classList.add("in");
+      });
+      const pk = window.__parK || 0;
+      if (pk && !prefersReduce) {
+        document.querySelectorAll("[data-par]").forEach((el) => {
+          const s = parseFloat(el.getAttribute("data-par")) || 1;
+          const r = el.getBoundingClientRect();
+          const d = (r.top + r.height / 2) - window.innerHeight / 2;
+          el.style.transform = `translate3d(0, ${(-d * pk * s).toFixed(1)}px, 0)`;
+        });
+      }
+      navTheme();
+    };
+    reveal();
+    const onScroll = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(reveal); };
+    addEventListener("scroll", onScroll, { passive: true });
+    addEventListener("resize", onScroll, { passive: true });
+    const timers = [60, 250, 600].map((ms) => setTimeout(reveal, ms));
+    return () => {
+      removeEventListener("scroll", onScroll);
+      removeEventListener("resize", onScroll);
+      timers.forEach(clearTimeout);
+      cancelAnimationFrame(raf);
+    };
+  }, [page]);
+
+  const urls = { home: "smartbasebr.com", vitrine: "smartbasebr.com/vitrine", faq: "smartbasebr.com/faq",
+    contato: "smartbasebr.com/contato", blog: "smartbasebr.com/blog", post: "smartbasebr.com/blog/post" };
+
+  return (
+    <div className="site">
+      <BrowserBar url={urls[page] || "smartbasebr.com"} />
+      <Sidebar page={page} go={go} />
+      <div className="page-shell" key={page}>
+        {page === "home" && <HomePage go={go} tw={t} />}
+        {page === "vitrine" && <VitrinePage go={go} tw={t} />}
+        {page === "faq" && <FaqPage go={go} />}
+        {page === "contato" && <ContatoPage go={go} />}
+        {page === "blog" && <BlogPage go={go} />}
+        {page === "post" && <PostPage go={go} />}
+      </div>
+      <CtaBand go={go} page={page} />
+      <Footer go={go} />
+      <TweaksPanel>
+        <TweakSection label="Movimento" />
+        <TweakRadio label="Intensidade" value={t.motion} options={["sutil", "equilibrado", "forte"]}
+          onChange={(v) => setTweak("motion", v)} />
+        <TweakSection label="Liquid Glass" />
+        <TweakSlider label="Intensidade do vidro" value={t.glass} min={0} max={100} unit="%"
+          onChange={(v) => setTweak("glass", v)} />
+        <TweakSlider label="Raio dos cantos" value={t.radius} min={50} max={160} unit="%"
+          onChange={(v) => setTweak("radius", v)} />
+        <TweakToggle label="Brilho do fundo (iOS)" value={t.glow}
+          onChange={(v) => setTweak("glow", v)} />
+        <TweakSection label="Acento" />
+        <TweakColor label="Azul signal" value={t.accent}
+          options={["#3E82F7", "#0A84FF", "#00A8E8", "#5E5CE6"]}
+          onChange={(v) => setTweak("accent", v)} />
+        <TweakSection label="Marca “sb”" />
+        <TweakSlider label="Tamanho" value={t.sbScale} min={40} max={170} unit="%"
+          onChange={(v) => setTweak("sbScale", v)} />
+        <TweakSlider label="Posição horizontal" value={t.sbX} min={-400} max={400} unit="px"
+          onChange={(v) => setTweak("sbX", v)} />
+        <TweakSlider label="Posição vertical" value={t.sbY} min={-500} max={500} unit="px"
+          onChange={(v) => setTweak("sbY", v)} />
+        <TweakSlider label="Opacidade" value={t.sbOpacity} min={5} max={100} unit="%"
+          onChange={(v) => setTweak("sbOpacity", v)} />
+        <TweakSlider label="Brilho do vidro" value={t.sbShine} min={0} max={200} unit="%"
+          onChange={(v) => setTweak("sbShine", v)} />
+        <TweakSection label="Vitrine (liquid glass)" />
+        <TweakToggle label="Animação dos produtos" value={t.liquidAnim}
+          onChange={(v) => setTweak("liquidAnim", v)} />
+        <TweakRadio label="Blocos de destaque" value={String(t.hlCount)} options={["0", "1", "2"]}
+          onChange={(v) => setTweak("hlCount", Number(v))} />
+        {t.hlCount >= 1 && <>
+          <TweakText label="Destaque 1 · etiqueta" value={t.hl1Title} placeholder="lançamento"
+            onChange={(v) => setTweak("hl1Title", v)} />
+          <TweakText label="Destaque 1 · produto" value={t.hl1Name} placeholder="iPhone 17 Pro"
+            onChange={(v) => setTweak("hl1Name", v)} />
+          <TweakText label="Destaque 1 · texto" value={t.hl1Sub} placeholder="o novo iphone chegou…"
+            onChange={(v) => setTweak("hl1Sub", v)} />
+          <TweakText label="Destaque 1 · specs (separe com ;)" value={t.hl1Info} placeholder="256GB ; cosmic orange ; garantia 12 meses"
+            onChange={(v) => setTweak("hl1Info", v)} />
+          <TweakSelect label="Destaque 1 · vai pra" value={t.hl1Dest} options={["vitrine", "whatsapp", "link próprio"]}
+            onChange={(v) => setTweak("hl1Dest", v)} />
+          {t.hl1Dest === "link próprio" &&
+            <TweakText label="Destaque 1 · URL" value={t.hl1Url} placeholder="https://…"
+              onChange={(v) => setTweak("hl1Url", v)} />}
+        </>}
+        {t.hlCount >= 2 && <>
+          <TweakText label="Destaque 2 · etiqueta" value={t.hl2Title} placeholder="promo da semana"
+            onChange={(v) => setTweak("hl2Title", v)} />
+          <TweakText label="Destaque 2 · produto" value={t.hl2Name} placeholder="AirPods Pro 3"
+            onChange={(v) => setTweak("hl2Name", v)} />
+          <TweakText label="Destaque 2 · texto" value={t.hl2Sub} placeholder="condições especiais…"
+            onChange={(v) => setTweak("hl2Sub", v)} />
+          <TweakText label="Destaque 2 · specs (separe com ;)" value={t.hl2Info} placeholder="usb-c ; seminovo ; garantia 3 meses"
+            onChange={(v) => setTweak("hl2Info", v)} />
+          <TweakSelect label="Destaque 2 · vai pra" value={t.hl2Dest} options={["vitrine", "whatsapp", "link próprio"]}
+            onChange={(v) => setTweak("hl2Dest", v)} />
+          {t.hl2Dest === "link próprio" &&
+            <TweakText label="Destaque 2 · URL" value={t.hl2Url} placeholder="https://…"
+              onChange={(v) => setTweak("hl2Url", v)} />}
+        </>}
+      </TweaksPanel>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

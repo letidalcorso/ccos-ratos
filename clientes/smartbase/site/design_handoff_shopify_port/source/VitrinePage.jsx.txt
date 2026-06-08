@@ -1,0 +1,196 @@
+// VitrinePage — Hero · 2 portas (Novos/Seminovos) · chips · product cards · CTA "fala. eu acho."
+
+// Catálogo completo. `price` fica vazio de propósito — a cliente preenche depois
+// (enquanto não tem, o card mostra "sob consulta · no whatsapp →"). `cond` =
+// novo lacrado (sob encomenda) ou seminovo conferido (em estoque).
+const PRODUTOS = [
+  // ---------- iPhone ----------
+  { cat: "iphone", name: "iPhone 17 Pro Max", photo: "assets/products/norm/iphone-17-pro-max.png", desc: "o topo da linha. câmera, tela e bateria no máximo — sem concessão.",
+    specs: ["256GB · 512GB · 1TB · 2TB"], colors: [["cosmic orange", "#c2622f"], ["navy", "#26344c"], ["silver", "#d7d9db"]], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+  { cat: "iphone", name: "iPhone 17", photo: "assets/products/norm/iphone-17.png", desc: "o iphone pra todo dia. cinco cores e a câmera que importa.",
+    specs: ["256GB · 512GB"], colors: [["azul", "#cadcef"], ["branco", "#ededf0"], ["sálvia", "#c7d2bd"], ["lavanda", "#d7cfe6"], ["rosa", "#efd7dd"]], cond: "seminovo · conferido", status: "em estoque", stock: true, price: "" },
+  { cat: "iphone", name: "iPhone Air", photo: "assets/products/norm/iphone-air.png", desc: "o mais fino e leve. apple sem peso na mão.",
+    specs: ["256GB · 512GB"], colors: [["preto-espacial", "#2b2b2d"], ["branco-nuvem", "#e8e8ea"], ["dourado", "#e4dcc6"], ["azul-céu", "#bccadc"]], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+  // ---------- Mac ----------
+  { cat: "mac", name: "MacBook Air", photo: "assets/products/norm/macbook-air.png", desc: "leve, silencioso e o dia inteiro de bateria. o mac do dia a dia.",
+    specs: ['M4 · 13" e 15"', "16GB · 512GB"], colors: [["meia-noite", "#2e3641"], ["estelar", "#efe6d6"], ["prata", "#dcdee0"], ["azul-céu", "#b6c8de"]], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+  { cat: "mac", name: "MacBook Pro", photo: "assets/products/norm/macbook.png", desc: "potência pra trabalho pesado. tela que impressiona, bateria que aguenta.",
+    specs: ['M4 Pro · 14" e 16"', "18GB · 512GB+"], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+  { cat: "mac", name: "Mac mini", photo: "assets/products/norm/mac-mini.png", desc: "o mac que cabe na palma. potência de desktop num corpo mínimo.",
+    specs: ["M4 · M4 Pro", "16GB · 256GB+"], cond: "seminovo · conferido", status: "em estoque", stock: true, price: "" },
+  // ---------- iPad ----------
+  { cat: "ipad", name: "iPad Pro", photo: "assets/products/norm/ipad-pro.png", desc: "tela pra criar, ler e ver tudo. com a pegada de um computador.",
+    specs: ['11" · 13"', "M4 · 256GB+"], colors: [["preto-espacial", "#2b2b2d"], ["prata", "#dcdee0"]], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+  { cat: "ipad", name: "iPad Air", photo: "assets/products/norm/ipad-air.png", desc: "leve e poderoso. pro dia a dia que rende sem pesar.",
+    specs: ['11" · 13"', "M3 · 128GB+"], colors: [["azul", "#aebfe0"], ["roxo", "#c5b6e0"], ["estelar", "#e8e0d0"], ["cinza-espacial", "#3a3c40"]], cond: "seminovo · conferido", status: "em estoque", stock: true, price: "" },
+  { cat: "ipad", name: "iPad", photo: "assets/products/norm/ipad.png", desc: "o ipad essencial. colorido, simples, pra todo mundo.",
+    specs: ['10,9"', "A16 · 128GB+"], colors: [["azul", "#9cb4d6"], ["rosa", "#eccdd0"], ["amarelo", "#ecdf9e"], ["prata", "#dcdee0"]], cond: "seminovo · conferido", status: "em estoque", stock: true, price: "" },
+  // ---------- Apple Watch ----------
+  { cat: "watch", name: "Apple Watch Ultra", photo: "assets/products/norm/apple-watch-ultra.png", desc: "feito pra ir além. bateria de sobra, GPS preciso e resistência de verdade.",
+    specs: ["49mm · titânio", "GPS + Cellular"], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+  { cat: "watch", name: "Apple Watch Series 11", photo: "assets/products/norm/apple-watch-series.png", desc: "saúde, treino e notificações no pulso. o dia todo, sem pensar.",
+    specs: ["42 · 46mm", "GPS · Cellular"], cond: "seminovo · conferido", status: "em estoque", stock: true, price: "" },
+  { cat: "watch", name: "Apple Watch SE", photo: "assets/products/norm/apple-watch-se.png", desc: "o essencial do watch, com o preço que cabe. pra começar bem.",
+    specs: ["40 · 44mm", "GPS"], cond: "seminovo · conferido", status: "em estoque", stock: true, price: "" },
+  // ---------- AirPods ----------
+  { cat: "airpods", name: "AirPods Pro 3", photo: "assets/products/norm/airpods-pro.png", desc: "cancelamento de ruído que muda o teu dia. som que te envolve.",
+    specs: ["USB-C", "estojo MagSafe"], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+  { cat: "airpods", name: "AirPods 4", photo: "assets/products/norm/airpods-4.png", desc: "o som sem fio da apple, leve e prático. com ou sem cancelamento.",
+    specs: ["USB-C", "com / sem ANC"], cond: "seminovo · conferido", status: "em estoque", stock: true, price: "" },
+  { cat: "airpods", name: "AirPods Max", photo: "assets/products/norm/airpods-max.png", desc: "som over-ear premium. imersão total e acabamento de metal.",
+    specs: ["USB-C", "áudio espacial"], cond: "novo · lacrado", status: "sob encomenda", stock: true, price: "" },
+];
+
+const CATS = ["todos", "iPhone", "Mac", "iPad", "Watch", "AirPods", "Acessórios"];
+const CAT_ORDER = ["iphone", "mac", "ipad", "watch", "airpods", "acessorios"];
+const CAT_LABEL = { iphone: "iPhone", mac: "Mac", ipad: "iPad", watch: "Apple Watch", airpods: "AirPods", acessorios: "Acessórios" };
+// condição: dá acesso direto a “toda a vitrine de novos” (ou seminovos). signal-blue = condição; chips neutros = categoria.
+const CONDS = [["tudo", "tudo"], ["novos", "novos"], ["seminovos", "seminovos"]];
+
+// Porta (novos / seminovos) — par de entradas da vitrine.
+function Porta({ kicker, sub1, sub2, note, garantia, cta, onClick }) {
+  return (
+    <article className="porta rise">
+      <div className="porta-main">
+        <h3 className="porta-title">{kicker}</h3>
+        <div className="porta-sub">{sub1} {sub2}</div>
+        {note && <p className="porta-note">{note}</p>}
+      </div>
+      <div className="porta-gar">
+        <span className="eyebrow signal">garantia</span>
+        <div className="porta-gar-v">{garantia}</div>
+      </div>
+    </article>
+  );
+}
+
+function ProductCard({ p }) {
+  const novo = p.cond.startsWith("novo");
+  return (
+    <article className="product-card rise">
+      <div className="pc-photo">
+        <ProductImg src={p.photo} alt={p.name} />
+        {p.photoAmbient && <ProductImg src={p.photoAmbient} alt={p.name} className="pc-amb" />}
+      </div>
+      <div className="pc-body">
+        <div className="pc-top">
+          <Eyebrow signal>{p.cat}</Eyebrow>
+          <span className={"pc-cond" + (novo ? " novo" : "")}>{p.cond}</span>
+          <span className="pc-status"><i className={p.stock ? "ok" : ""}></i>{p.status}</span>
+        </div>
+        <h3 className="pc-name">{p.name}</h3>
+        <p className="pc-desc">{p.desc}</p>
+        <div className="pc-specs">{p.specs.map((s, k) => <div key={k}>{s}</div>)}</div>
+        {p.colors && (
+          <div className="pc-colors">
+            {p.colors.map(([name, hex]) => <span key={name} className="pc-dot" style={{ background: hex }} title={name}></span>)}
+            <span className="pc-colors-n">{p.colors.length} cores</span>
+          </div>
+        )}
+        <div className="pc-foot">
+          <div className="pc-buy">
+            <div className="pc-price">
+              {p.price
+                ? <>{novo && <div className="from">a partir de</div>}<div className="a">{p.price}</div></>
+                : <><div className="a">sob consulta</div><div className="b">no whatsapp →</div></>}
+            </div>
+            <Button variant="primary" sm href={waHref(p.name)}>quero esse</Button>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function VitrinePage({ go, tw }) {
+  const t = tw || {};
+  const [cat, setCat] = React.useState(() => {
+    let want = "";
+    try { want = window.__vitrineCat || ""; delete window.__vitrineCat; } catch (e) {}
+    const map = { iphone: "iPhone", mac: "Mac", ipad: "iPad", watch: "Watch", airpods: "AirPods" };
+    return map[want] || "todos";
+  });
+  // condição = a chave de acesso “toda a vitrine de novos / seminovos”.
+  const [cond, setCond] = React.useState("tudo");
+  const passCond = (p) => cond === "tudo" ? true : cond === "novos" ? p.cond.startsWith("novo") : p.cond.startsWith("seminovo");
+  const openCond = (c) => { setCond(c); setCat("todos"); scrollToSel(".vt-chips-wrap"); };
+
+  // Blocos de destaque (opcionais) — mesmo componente/visual da Home (HighlightsBand).
+  const hlCount = Number(t.hlCount || 0);
+
+  return (
+    <div>
+      <PageHero kicker="vitrine"
+        lines={[{ t: "o teu próximo" }, { t: "está aqui.", accent: true }]}
+        sub="a apple inteira, particular tua. lacrada ou seminova, sempre com garantia — tu só paga quando ela tá na tua mão."
+        bg="assets/ambient/hero-home-store.png" bgId="vitrine-hero-bg" position="50% 50%" />
+
+      <section className="page vt-portas rise">
+        <Porta kicker="novos" sub1="lacrados." sub2="sob encomenda." note="a gente encomenda lacrado direto pra ti — sem estoque parado, sem custo repassado. chega em até 7 dias, com nota e garantia Apple." garantia="apple oficial · 12 meses" cta="quero ver os novos" onClick={() => openCond("novos")} />
+        <Porta kicker="seminovos" sub1="em estoque agora." sub2="conferidos um a um." note="cada seminovo passa por checagem completa — bateria, tela, câmeras e originalidade. fotos reais do aparelho que tu vai receber, com garantia smartbase." garantia="smartbase · 3 meses" cta="quero ver os seminovos" onClick={() => openCond("seminovos")} />
+      </section>
+
+      {hlCount >= 1 && (
+        <section className="page vt-band rise">
+          <HighlightsBand go={go} tw={t} />
+        </section>
+      )}
+
+      <div className="vt-chips-wrap">
+        <div className="vt-bar">
+          <div className="vt-seg" role="tablist" aria-label="condição">
+            {CONDS.map(([id, label]) => (
+              <span key={id} className={"vt-seg-b" + (cond === id ? " on" : "")} onClick={() => setCond(id)}>{label}</span>
+            ))}
+          </div>
+          <span className="vt-bar-div" aria-hidden="true"></span>
+          <div className="vt-chips">
+            {CATS.map((c) => (
+              <span key={c} className={"vt-chip" + (cat === c ? " on" : "")} onClick={() => setCat(c)}>{c}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <section className="page vt-list rise">
+        {(() => {
+          if (cat === "todos") {
+            let idx = 0; const out = [];
+            CAT_ORDER.forEach((g) => {
+              const items = PRODUTOS.filter((p) => p.cat === g && passCond(p));
+              if (!items.length) return;
+              out.push(
+                <div key={"h-" + g} className="vt-cat-head">
+                  <span className="eyebrow signal">{CAT_LABEL[g]}</span>
+                  <span className="vt-cat-rule"></span>
+                  <span className="vt-cat-n">{items.length} modelos</span>
+                </div>
+              );
+              items.forEach((p) => out.push(<ProductCard key={p.name} p={p} />));
+            });
+            if (!out.length) return <VtEmpty cond={cond} />;
+            return out;
+          }
+          const items = PRODUTOS.filter((p) => p.cat === c2(cat) && passCond(p));
+          if (!items.length) return <VtEmpty cond={cond} />;
+          return items.map((p) => <ProductCard key={p.name} p={p} />);
+        })()}
+      </section>
+    </div>
+  );
+}
+
+// Estado vazio on-brand quando o filtro de condição + categoria não casa nada.
+function VtEmpty({ cond }) {
+  return (
+    <div className="vt-empty">
+      <div className="vt-empty-t">nada {cond === "novos" ? "de novo" : cond === "seminovos" ? "de seminovo" : "aqui"} nessa categoria ainda.</div>
+      <p className="vt-empty-s">mas se existe, a gente acha. me diz o que tu procura.</p>
+      <Button variant="primary" sm href={waHref()}>vou chamar no whatsapp</Button>
+    </div>
+  );
+}
+
+function c2(label) { return label === "iPhone" ? "iphone" : label === "Mac" ? "mac" : label === "Acessórios" ? "acessorios" : label.toLowerCase(); }
+
+Object.assign(window, { VitrinePage });

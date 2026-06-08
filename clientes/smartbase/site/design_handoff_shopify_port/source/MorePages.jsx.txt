@@ -1,0 +1,133 @@
+// ContatoPage · BlogPage · PostPage — from Figma frames 762:29 / 765:29 / 769:29
+
+function ContatoPage({ go }) {
+  return (
+    <div>
+      <PageHero kicker="contato"
+        lines={[{ t: "passa na loja." }, { t: "a gente te espera.", accent: true }]}
+        sub="tem loja de verdade em caxias do sul, de portas abertas pra ti. vem conhecer, tomar um café e ver os aparelhos de perto — ou fala com a gente no WhatsApp, de onde tu estiver."
+        bg="assets/ambient/hero-contato.jpg" bgId="contato-hero" position="50% 60%"
+        ctas={<Button variant="primary" onClick={() => scrollToSel(".ct-body")}>quero conhecer a loja</Button>} />
+
+      <section className="page ct-body rise">
+        <div className="ct-map">
+          <svg className="ct-map-grid" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g className="ct-map-streets">
+              <path d="M-40 120 L640 80" /><path d="M-40 250 L640 210" /><path d="M-40 380 L640 340" />
+              <path d="M120 -20 L60 460" /><path d="M300 -20 L260 460" /><path d="M470 -20 L440 460" />
+              <path d="M-40 300 L640 140" /><path d="M-40 60 L420 460" />
+            </g>
+          </svg>
+          <div className="ct-map-veil" />
+          <div className="ct-pin"><span className="ct-pin-ring" /><span className="ct-pin-dot" /></div>
+          <div className="ct-map-tag">⚲ caxias do sul · <span className="ct-warn">endereço exato a confirmar</span></div>
+        </div>
+        <div className="ct-info">
+          <div className="ct-card"><div className="ct-k">endereço</div>
+            <div className="ct-v ct-warn">[ rua, número · bairro ]{"\n"}[ caxias do sul, rs · cep ]</div></div>
+          <div className="ct-card"><div className="ct-k">horário</div>
+            <div className="ct-v">seg–sex · 9h às 19h{"\n"}sáb · 9h às 13h{"\n"}domingo · fechado</div>
+            <div className="ct-note">excepcionalmente atendemos fora desses horários — combina no whatsapp.</div></div>
+          <div className="ct-card"><div className="ct-k">atendimento</div>
+            <div className="ct-v">whatsapp · +55 54 99662-4494{"\n"}atendendo todo o Brasil</div></div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+const POSTS = [
+  { cat: "seminovo", tags: ["seminovo", "iphone"], title: "vale a pena comprar iPhone seminovo?", excerpt: "a real sobre seminovo: quando é o melhor negócio e o que olhar antes.", meta: "28 mai 2026 · 6 min", open: true, cover: { src: "assets/products/norm/iphone-17-pro.png", kind: "product" } },
+  { cat: "garantia", tags: ["garantia", "iphone"], title: "iPhone importado é seguro?", excerpt: "tudo sobre a garantia internacional Apple, válida no Brasil.", meta: "21 mai 2026 · 5 min", cover: { src: "assets/ambient/hero-blog.jpeg", kind: "ambient" } },
+  { cat: "comparativos", tags: ["comparativos", "iphone"], title: "iPhone 17 vs 16: qual escolher?", excerpt: "o upgrade vale em 2026? a real, sem hype.", meta: "14 mai 2026 · 7 min", cover: { src: "assets/products/norm/iphone-air.png", kind: "product" } },
+  { cat: "dicas", tags: ["dicas", "mac"], title: "primeiro mac? por onde começar", excerpt: "o guia pra quem tá saindo do windows sem susto.", meta: "7 mai 2026 · 6 min", cover: { src: "assets/products/norm/macbook-air.png", kind: "product" } },
+  { cat: "dicas", tags: ["dicas", "watch"], title: "apple watch vale a pena no dia a dia?", excerpt: "saúde, treino e notificação: o que muda de verdade.", meta: "30 abr 2026 · 5 min", cover: { src: "assets/products/norm/apple-watch-ultra.png", kind: "product" } },
+  { cat: "comparativos", tags: ["comparativos", "airpods"], title: "AirPods Pro 3 valem o upgrade?", excerpt: "cancelamento de ruído e bateria: o que melhorou.", meta: "23 abr 2026 · 4 min", cover: { src: "assets/products/norm/airpods-pro.png", kind: "product" } },
+  { cat: "dicas", tags: ["dicas", "ipad"], title: "ipad pra trabalhar: dá conta?", excerpt: "até onde o ipad substitui o notebook em 2026.", meta: "16 abr 2026 · 6 min", cover: { src: "assets/products/norm/ipad-pro.png", kind: "product" } },
+  { cat: "garantia", tags: ["garantia", "seminovo"], title: "como saber se um seminovo é confiável", excerpt: "imei, bateria e procedência: o checklist completo.", meta: "9 abr 2026 · 5 min", cover: { src: "assets/products/norm/iphone-17.png", kind: "product" } },
+];
+const BLOG_FILTERS = ["todos", "iPhone", "seminovo", "garantia", "comparativos", "dicas"];
+const matchPost = (p, f) => f === "todos" || p.cat === f || p.tags.includes(f.toLowerCase());
+
+function BlogPage({ go }) {
+  const [f, setF] = React.useState("todos");
+  return (
+    <div>
+      <PageHero kicker="blog"
+        lines={[{ t: "dicas e novidades" }, { t: "do mundo Apple.", accent: true }]}
+        sub="conteúdo por quem vive Apple há anos. comparativos, guias e o que importa pra você escolher certo."
+        bg="assets/ambient/hero-blog.jpeg" bgId="blog-hero" position="50% 42%">
+        <div className="bl-filters">
+          {BLOG_FILTERS.map((c) => <span key={c} className={"bl-chip" + (f === c ? " on" : "")} onClick={() => setF(c)}>{c}</span>)}
+        </div>
+      </PageHero>
+
+      <section className="page bl-wrap">
+        <div className="bl-grid stagger rise">
+          {POSTS.filter((p) => matchPost(p, f)).map((p, i) => (
+            <article key={i} className="post-card" onClick={() => p.open && go("post")}>
+              <div className={"post-cover" + (p.cover.kind === "product" ? " is-product" : "")}>
+                <Slot id={"post-cover-" + i} src={p.cover.src} fit={p.cover.kind === "product" ? "contain" : "cover"} cool={p.cover.kind === "ambient"} position="50% 45%" label="cover do post" />
+              </div>
+              <div className="post-body">
+                <div className="post-cat">{p.cat}</div>
+                <div className="post-title">{p.title}</div>
+                <div className="post-excerpt">{p.excerpt}</div>
+                <div className="post-meta">{p.meta}</div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
+
+const RELATED = [
+  { id: "rel-1", cat: "comparativos", title: "iPhone 17 vs 16: qual escolher?", img: "assets/products/norm/iphone-17-pro.png" },
+  { id: "rel-2", cat: "iPhone", title: "o que muda no iPhone Air?", img: "assets/products/norm/iphone-air.png" },
+  { id: "rel-3", cat: "seminovo", title: "como conferir a bateria de um seminovo", img: "assets/products/norm/iphone-17.png" },
+  { id: "rel-4", cat: "garantia", title: "garantia internacional Apple, na prática", img: "assets/products/norm/macbook-air.png" },
+  { id: "rel-5", cat: "comparativos", title: "AirPods Pro 3 valem o upgrade?", img: "assets/products/norm/airpods-pro.png" },
+];
+
+function PostPage({ go }) {
+  return (
+    <div>
+      <section className="po-hero photo-hero">
+        <div className="hero-bg"><Slot id="post-cover-main" src="assets/ambient/hero-blog.jpeg" cool position="50% 42%" label="cover do post" /></div>
+        <div className="hero-glass">
+          <div className="po-crumb"><a onClick={() => go("blog")}>blog</a> · seminovo</div>
+          <h1 className="po-title">vale a pena comprar iPhone seminovo?</h1>
+          <div className="po-meta">iPhone · 28 de maio de 2026 · 6 min de leitura</div>
+        </div>
+      </section>
+      <article className="po-wrap rise">
+        <div className="po-article">
+          <p>iPhone seminovo é uma das formas mais inteligentes de entrar no ecossistema Apple gastando menos — desde que você saiba o que olhar. a diferença entre um bom negócio e uma furada mora em três pontos.</p>
+          <h3>1. procedência acima de tudo</h3>
+          <p>saber de onde veio o aparelho é tudo. um seminovo conferido, com IMEI verificável e bateria avaliada, é um universo diferente de um "usado" anônimo de marketplace.</p>
+          <h3>2. garantia que existe de verdade</h3>
+          <p>na smartbase, todo seminovo passa por checagem um a um e sai com 3 meses de garantia própria. e a regra de sempre vale aqui também: você só paga quando o aparelho tá na sua mão.</p>
+
+          <div className="po-foot">
+            <span>smartbase · caxias do sul · serra gaúcha</span>
+            <span>ficou com dúvida? <a href={waHref()} target="_blank" rel="noopener noreferrer">chama no whatsapp</a></span>
+          </div>
+
+          <h2 className="po-related-h">você também pode gostar</h2>
+          <div className="po-related">
+            {RELATED.map((r) => (
+              <article key={r.id} className="post-card rise" onClick={() => go("blog")}>
+                <div className="post-cover is-product"><Slot id={r.id} src={r.img} fit="contain" label="cover" /></div>
+                <div className="post-body"><div className="post-cat">{r.cat}</div><div className="post-title">{r.title}</div></div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+}
+
+Object.assign(window, { ContatoPage, BlogPage, PostPage });

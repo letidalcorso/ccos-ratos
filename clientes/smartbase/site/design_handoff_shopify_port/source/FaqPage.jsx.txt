@@ -1,0 +1,83 @@
+// FaqPage — hero · garantia comparison panel · accordion by category · CTA
+
+const FAQ = [
+  { cat: "garantia", compare: true, items: [
+    { q: "como funciona a garantia Apple no Brasil?", a: "todo aparelho novo chega com garantia internacional Apple de 12 meses, válida em qualquer Apple Service no mundo, inclusive no Brasil." },
+    { q: "o que está incluído nos 3 meses de garantia própria da Smartbase?", a: "pros seminovos, a smartbase cobre defeitos de funcionamento do aparelho por 3 meses. acionamento direto com a gente, no whatsapp." },
+    { q: "e se o aparelho der problema depois da garantia?", a: "a gente continua te ajudando a encaminhar pro serviço autorizado Apple. tu nunca fica na mão." },
+  ]},
+  { cat: "originalidade e procedência", items: [
+    { q: "como sei que o iPhone é original?", a: "todo aparelho é verificado pelo número de série direto na Apple, com IMEI conferido. nada de paralelo." },
+  ]},
+  { cat: "entrega", items: [
+    { q: "em quanto tempo chega o iPhone novo?", a: "lacrados sob encomenda chegam em até 7 dias úteis. seminovos em estoque saem na hora." },
+    { q: "vocês entregam pra qualquer cidade do Brasil?", a: "sim. loja física em caxias do sul e envio pra todo o Brasil, combinado no whatsapp." },
+  ]},
+  { cat: "pagamento", items: [
+    { q: "quais formas de pagamento vocês aceitam?", a: "pix, cartão e parcelamento. a gente fecha a melhor condição contigo no whatsapp." },
+  ]},
+  { cat: "troca", items: [
+    { q: "vocês aceitam meu iPhone antigo como entrada?", a: "aceitamos. manda o modelo e o estado no whatsapp que a gente avalia e abate no teu próximo." },
+  ]},
+];
+
+function GarantiaCompare() {
+  return (
+    <div className="gar-panel">
+      <div className="gar-col">
+        <span className="eyebrow">novos</span>
+        <div className="gar-t">Apple oficial · 12 meses</div>
+        <p>todo aparelho novo chega lacrado de fábrica. garantia internacional Apple, válida em qualquer Apple Service no mundo, inclusive no Brasil.</p>
+      </div>
+      <div className="gar-col">
+        <span className="eyebrow">seminovos</span>
+        <div className="gar-t">smartbase · 3 meses</div>
+        <p>pros seminovos, a smartbase adiciona 3 meses de garantia própria sobre o aparelho. acionamento direto com a smartbase, no whatsapp.</p>
+      </div>
+    </div>
+  );
+}
+
+function FaqRow({ q, a, open, onToggle }) {
+  return (
+    <div className={"faq-row rise" + (open ? " open" : "")}>
+      <button className="faq-q" onClick={onToggle}>
+        <span>{q}</span><span className="faq-sign">{open ? "–" : "+"}</span>
+      </button>
+      <div className="faq-a" style={{ maxHeight: open ? 260 : 0 }}><p>{a}</p></div>
+    </div>
+  );
+}
+
+function FaqPage({ go }) {
+  const [open, setOpen] = React.useState("0-0");
+  return (
+    <div>
+      <PageHero kicker="perguntas frequentes"
+        lines={[{ t: "ainda em dúvida?" }, { t: "a gente responde.", accent: true }]}
+        sub="tudo o que mais perguntam sobre comprar Apple aqui."
+        bg="assets/ambient/hero-blog.jpeg" bgId="faq-hero-bg" position="50% 45%"
+        ctas={<Button variant="primary" href={waHref()}>tirar dúvidas no whatsapp</Button>} />
+
+      <section className="page faq-body">
+        {FAQ.map((group, gi) => (
+          <div key={gi} className="faq-group rise">
+            <h3 className="faq-cat">{group.cat}</h3>
+            {group.compare && <GarantiaCompare />}
+            {group.items.map((it, ii) => {
+              const key = gi + "-" + ii;
+              return <FaqRow key={key} {...it} open={open === key} onToggle={() => setOpen(open === key ? null : key)} />;
+            })}
+          </div>
+        ))}
+      </section>
+
+      <section className="page faq-end rise">
+        <span className="faq-end-t">tirou as dúvidas? então bora.</span>
+        <Button variant="primary" onClick={() => go("vitrine")}>vou escolher meu aparelho</Button>
+      </section>
+    </div>
+  );
+}
+
+Object.assign(window, { FaqPage });

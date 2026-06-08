@@ -1,0 +1,304 @@
+// HomePage — Hero · Posicionamento · Diferenciais · Lookbook · CTA final
+// Copy verbatim from the approved smartbase site v2 (Figma Home v5 / handoff).
+
+const DIFERENCIAIS = [
+  { n: "01", t: "primeiro chega. depois paga.", d: "o iphone chega na tua mão antes do dinheiro sair da tua conta.", hero: true },
+  { n: "02", t: "loja física em caxias", d: "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho." },
+  { n: "03", t: "atendimento humano", d: "sem chatbot, sem formulário. tu chama no whatsapp e quem responde entende de apple." },
+  { n: "04", t: "só apple", d: "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica." },
+];
+
+const LOOKBOOK = [
+  { tag: "iphone-pro", name: "iPhone 17 Pro", sub: "cosmic orange", photo: "assets/products/norm/iphone-17-pro.png", big: true },
+  { tag: "iphone-air", name: "iPhone Air", sub: "silver · blue · rose", photo: "assets/products/norm/iphone-air.png" },
+  { tag: "mac", name: "MacBook Air", sub: "M3 · 13\" e 15\"", photo: "assets/products/norm/macbook-air.png" },
+  { tag: "ipad", name: "iPad Pro", sub: "11\" · 13\"", photo: "assets/products/norm/ipad-pro.png" },
+  { tag: "watch", name: "Apple Watch", sub: "Series · Ultra", photo: "assets/products/norm/apple-watch-ultra.png" },
+  { tag: "airpods", name: "AirPods Pro 2", sub: "USB-C · MagSafe", photo: "assets/products/norm/airpods-pro.png" },
+];
+
+function HomeHero({ go }) {
+  return (
+    <section className="hm-hero">
+      <div className="hm-hero-bg">
+        <Slot id="home-hero-bg" src="assets/ambient/hero-home-store.png" cool position="50% 50%" label="foto ambiente — loja smartbase" />
+        <div className="hm-hero-bg-veil"></div>
+      </div>
+      <div className="hm-hero-panel rise">
+        <div className="hm-hero-card">
+          <Slot id="home-hero" src="assets/ambient/iphones-display.png" fit="cover" position="50% 38%" label="foto — iPhones em destaque na loja" />
+          <span className="hm-pill-brand">smartbase</span>
+          <span className="hm-badge"><i></i>destaque do mês · iPhone 17 Pro · 256GB · cosmic orange</span>
+        </div>
+        <div className="hm-hero-text">
+          <div className="hm-hero-lead">novos e seminovos. pra quem usa apple todo dia.</div>
+          <Headline size={80} lines={[{ t: "sua apple store." }, { t: "particular." }]} />
+          <div className="hm-hero-foot">
+            <span className="eyebrow">caxias do sul · serra gaúcha</span>
+            <div className="hm-hero-ctas">
+              <Button variant="primary" onClick={() => go("vitrine")}>quero ver a vitrine</Button>
+              <Button variant="glass" href={waHref()}>vou chamar no whatsapp</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Posicionamento({ go }) {
+  return (
+    <section className="hm-posi rise">
+      <div className="hm-posi-card">
+        <div className="hm-posi-text">
+          <span className="hm-quote">“</span>
+          <span className="eyebrow pill">sobre</span>
+          <Headline size={50} lines={[{ t: "tem apple." }, { t: "tem o apple certo pra você.", accent: true }]} />
+          <p className="hm-posi-sub">aqui a recomendação vem do uso real, não da ficha técnica. tu chega, conta o que precisa, e a gente acha o certo — sem empurrar o mais caro.</p>
+          <div className="hm-posi-meta">
+            <span className="eyebrow">caxias do sul, rs</span>
+            <Button variant="glass" sm style={{ marginLeft: 18 }} onClick={() => go("contato")}>quero falar</Button>
+          </div>
+        </div>
+        <div className="hm-posi-media">
+          <Slot id="home-posi" src="assets/ambient/iphones-display.png" position="50% 42%" label="foto — atendimento / loja / aparelhos" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Diferenciais() {
+  const hero = DIFERENCIAIS.find((d) => d.hero);
+  const rest = DIFERENCIAIS.filter((d) => !d.hero);
+  return (
+    <section className="hm-dif-band rise">
+      <div className="page hm-dif">
+      <Eyebrow signal>por que a smartbase</Eyebrow>
+      <Headline size={52} lines={[{ t: "tem loja." }, { t: "tem quem entende.", accent: true }]} />
+      <div className="hm-dif-grid">
+        <article className="dif-card dif-hero" data-comment-anchor="0d6d8a07a6-article-73-9">
+          <span className="dif-ghost">{hero.n}</span>
+          <span className="dif-idx">{hero.n}</span>
+          <h3 className="dif-t big">{hero.t}</h3>
+          <div className="dif-hero-media"><Slot id="dif-hero-img" fit="cover" position="50% 50%" label="foto — entrega / unboxing" /></div>
+          <p className="dif-d">{hero.d}</p>
+        </article>
+        <div className="hm-dif-list stagger rise">
+          {rest.map((d) => (
+            <article key={d.n} className="dif-card dif-row">
+              <span className="dif-ghost sm">{d.n}</span>
+              <span className="dif-idx">{d.n}</span>
+              <h3 className="dif-t">{d.t}</h3>
+              <p className="dif-d">{d.d}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+      </div>
+    </section>
+  );
+}
+
+// Big "sb" Liquid Glass emblem — fills the editorial band's right side with a
+// frosted app-icon-style medallion (Leti's "sb liquid grandão").
+// Oversized "sb" wordmark watermark — s in Inter, b in Bricolage, overlapped
+// and clipped by the band edge (from Leti's component HTML).
+function SbGlass() {
+  return (
+    <div className="hm-band-emblem" aria-hidden="true">
+      <span className="sbmark-s">s</span>
+      <span className="sbmark-b">b</span>
+    </div>
+  );
+}
+
+// Editorial COLOR band — a confident brand-blue block that breaks the dark
+// rhythm with colour (replaced the weak reused photo, per Leti's note).
+function EditorialBand({ go }) {
+  return (
+    <section className="hm-band hm-band-color rise">
+      <div className="hm-band-glow" aria-hidden="true"></div>
+      <div className="hm-band-inner page hm-band-2col">
+        <div className="hm-band-copy">
+          <Eyebrow>na serra gaúcha</Eyebrow>
+          <h2 className="hm-band-quote">não é só vender apple.<br /><span className="b">é indicar o certo pra você.</span></h2>
+          <p className="hm-band-sub">loja física em caxias do sul, atendendo o Brasil inteiro pelo whatsapp. quem te responde usa apple todo dia — e fala a real.</p>
+        </div>
+        <div className="hm-band-actions">
+          <Button variant="primary" onClick={() => go("contato")}>quero conhecer a loja</Button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const PASSOS = [
+  { n: "01", t: "tu chama no whatsapp", d: "manda o modelo que tu quer. quem responde entende de apple — sem robô, sem formulário." },
+  { n: "02", t: "a gente acha e confere", d: "novo lacrado sob encomenda ou seminovo conferido um a um. sempre com garantia de verdade." },
+  { n: "03", t: "primeiro chega. depois paga.", d: "o aparelho chega na tua mão antes do dinheiro sair da tua conta. esse é o combinado." },
+];
+
+// "como funciona" — a lifted, blue-washed colour block (alternating the void).
+function ComoFunciona() {
+  return (
+    <section className="hm-steps rise">
+      <div className="page">
+        <Eyebrow signal>como funciona</Eyebrow>
+        <Headline size={52} lines={[{ t: "simples assim." }, { t: "do oi ao na tua mão.", accent: true }]} />
+        <div className="hm-steps-grid stagger rise">
+          {PASSOS.map((p) => (
+            <article key={p.n} className="step">
+              <span className="step-ghost">{p.n}</span>
+              <span className="step-n">{p.n}</span>
+              <h3 className="step-t">{p.t}</h3>
+              <p className="step-d">{p.d}</p>
+            </article>
+          ))}
+        </div>
+        <div className="hm-steps-note">
+          <span className="hm-steps-note-label">obs</span>
+          <p className="hm-steps-note-t">escreva aqui sua observação — ex.: prazo de entrega, condições, etc.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Liquid-glass showcase — a clean photo backdrop with a frosted "app window"
+// of category cards (the product surges toward you on hover) and a seminovos
+// bar. Replaces the old alternating tile grid. Photo is a swappable image-slot.
+const HOME_CATS = [
+  { cat: "mac", label: "mac", img: "assets/products/macbook.png" },
+  { cat: "ipad", label: "ipad", img: "assets/products/ipad-pro.png" },
+  { cat: "iphone", label: "iphone", img: "assets/products/iphone-17-pro.png" },
+  { cat: "watch", label: "watch", img: "assets/products/apple-watch-ultra.png" },
+  { cat: "airpods", label: "airpods", img: "assets/products/airpods-pro.png" },
+  { cat: "acessorios", label: "acessórios", img: "assets/products/airpods-max.png" },
+];
+
+function Showcase({ go, tw }) {
+  const toVitrine = (cat) => { try { window.__vitrineCat = cat; } catch (e) {} go("vitrine"); };
+  return (
+    <section className="hms-sec rise">
+      <svg width="0" height="0" style={{ position: "absolute" }} aria-hidden="true">
+        <filter id="hmsLiquid" x="-20%" y="-20%" width="140%" height="140%" colorInterpolationFilters="sRGB">
+          <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="7" result="n">
+            <animate attributeName="baseFrequency" dur="17s" values="0.009 0.013;0.014 0.009;0.009 0.013" repeatCount="indefinite" />
+          </feTurbulence>
+          <feGaussianBlur in="n" stdDeviation="1.1" result="sn" />
+          <feDisplacementMap in="SourceGraphic" in2="sn" scale="34" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+      <div className="hms-stage">
+        <image-slot id="home-vitrine-bg" class="hms-photo" src="assets/ambient/hero-home-store.png" fit="cover" placeholder="foto da loja / ambiente"></image-slot>
+        <div className="hms-veil" aria-hidden="true"></div>
+
+        <div className="hms-stack">
+        <div className="hms-title">
+          <span className="hms-kicker">o que tem por aqui</span>
+          <h2>o teu apple <span className="b">já tá te esperando.</span></h2>
+        </div>
+
+        <HighlightsBand go={go} tw={tw} />
+
+        <div className="hms-win">
+          <div className="hms-win-clip" aria-hidden="true"></div>
+          <div className="hms-head">
+            <span className="h">vitrine</span>
+            <span className="s">novos · escolhe a categoria</span>
+          </div>
+          <div className="hms-grid">
+            {HOME_CATS.map((c) => (
+              <a key={c.cat} className="hms-card" onClick={() => toVitrine(c.cat)}>
+                <div className="hms-pimg"><img src={c.img} alt={c.label} /></div>
+                <div className="hms-pn">{c.label}</div>
+                <div className="hms-pgo">ver novos →</div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="hms-player">
+          <div className="hms-pl-meta">
+            <div className="t">semi novos</div>
+            <div className="s">conferidos um a um, com garantia — vê o que tá disponível</div>
+          </div>
+          <a className="hms-pl-cta" onClick={() => toVitrine("seminovos")}>ver semi novos <span className="ar" aria-hidden="true">→</span></a>
+        </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Optional highlight band (launches / promos) — toggled 0–2 from Tweaks. Lives
+// INSIDE the showcase stage (before the products), on the photo. Dark liquid
+// glass. Carries the product info itself (no product page) + first-person CTA.
+const HL_IMG = ["assets/products/iphone-17-pro.png", "assets/products/airpods-pro.png"];
+const HL_DEFS = [
+  { kick: "lançamento", name: "iPhone 17 Pro", sub: "o topo da linha, lacrado e sob encomenda — chega em até 7 dias.",
+    info: "256GB · 512GB · 1TB ; cosmic orange ; garantia apple · 12 meses" },
+  { kick: "promo da semana", name: "AirPods Pro 3", sub: "cancelamento de ruído com condição especial por tempo limitado.",
+    info: "usb-c · estojo magsafe ; seminovo conferido ; garantia smartbase · 3 meses" },
+];
+
+function HighlightsBand({ go, tw }) {
+  const w = tw || {};
+  const n = Math.max(0, Math.min(2, Number(w.hlCount) || 0));
+  if (!n) return null;
+  const blocks = [1, 2].slice(0, n).map((i) => {
+    const d = HL_DEFS[i - 1];
+    const dest = w["hl" + i + "Dest"] || "vitrine";
+    const cta = dest === "whatsapp" ? "quero esse" : dest === "link próprio" ? "quero saber mais" : "quero ver na vitrine";
+    const link = dest === "whatsapp"
+      ? { href: waHref(), target: "_blank", rel: "noopener noreferrer" }
+      : dest === "link próprio"
+        ? { href: (w["hl" + i + "Url"] || "").trim() || "#", target: "_blank", rel: "noopener noreferrer" }
+        : { onClick: () => go("vitrine") };
+    return {
+      id: "hl" + i,
+      kick: (w["hl" + i + "Title"] || "").trim() || d.kick,
+      name: (w["hl" + i + "Name"] || "").trim() || d.name,
+      sub: (w["hl" + i + "Sub"] || "").trim() || d.sub,
+      info: ((w["hl" + i + "Info"] || "").trim() || d.info).split(";").map((s) => s.trim()).filter(Boolean),
+      img: HL_IMG[i - 1], cta, link,
+    };
+  });
+  return (
+    <div className={"hms-hl-band-wrap" + (n === 2 ? " two" : "")}>
+      {blocks.map((b) => (
+        <a key={b.id} className="hms-hl-band" {...b.link}>
+          <div className="hms-hl-band-media">
+            <image-slot id={"home-" + b.id} class="hms-hl-band-img" src={b.img} fit="contain" placeholder="foto do destaque"></image-slot>
+          </div>
+          <div className="hms-hl-band-copy">
+            <span className="hms-hl-band-kick">{b.kick}</span>
+            <h3 className="hms-hl-band-t">{b.name}</h3>
+            <p className="hms-hl-band-d">{b.sub}</p>
+            <div className="hms-hl-band-meta">{b.info.map((s, k) => <span key={k}>{s}</span>)}</div>
+            <span className="hms-hl-band-cta">{b.cta} <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function HomePage({ go, tw }) {
+  return (
+    <div>
+      <HomeHero go={go} />
+      <Posicionamento go={go} />
+      <Diferenciais />
+      <div className="hm-light-zone">
+        <SbGlass />
+        <EditorialBand go={go} />
+        <ComoFunciona />
+      </div>
+      <Showcase go={go} tw={tw} />
+    </div>
+  );
+}
+
+Object.assign(window, { HomePage, HighlightsBand });
