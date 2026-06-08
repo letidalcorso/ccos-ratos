@@ -1,0 +1,22 @@
+{%- comment -%}
+  Renderiza uma imagem editável (componente <image-slot>, read-only no Shopify).
+  Lê o campo de imagem do painel; se vazio, cai no default (asset do tema).
+  Params:
+    image     -> objeto de imagem do painel (image_picker). Opcional.
+    fallback  -> nome do asset default. Ex.: 'amb-hero-store.png'. Opcional.
+    id        -> id do elemento (alguns filtros do CSS dependem dele).
+    class     -> classes CSS.
+    fit       -> cover | contain | fill. Default cover.
+    position  -> object-position. Ex.: '50% 38%'.
+    label     -> legenda do estado vazio.
+    cool      -> se truthy, aplica o filtro azul/escuro (regra de um-azul).
+{%- endcomment -%}
+{%- liquid
+  assign src = ''
+  if image != blank
+    assign src = image | image_url: width: 1800
+  elsif fallback != blank
+    assign src = fallback | asset_url
+  endif
+-%}
+<image-slot{% if id != blank %} id="{{ id }}"{% endif %} class="{{ class }}"{% if fit != blank %} fit="{{ fit }}"{% endif %}{% if position != blank %} position="{{ position }}"{% endif %} placeholder="{{ label | escape }}"{% if cool %} data-cool{% endif %}{% if src != blank %} src="{{ src }}"{% endif %}></image-slot>

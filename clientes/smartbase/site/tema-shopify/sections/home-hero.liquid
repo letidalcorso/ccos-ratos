@@ -1,0 +1,54 @@
+{%- comment -%} Home Hero — portado de HomePage.jsx (HomeHero). {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="hm-hero">
+  <div class="hm-hero-bg">
+    {% render 'img-slot', image: s.bg_image, fallback: 'amb-hero-store.png', id: 'home-hero-bg', cool: true, position: s.bg_position, label: 'foto ambiente — loja smartbase' %}
+    <div class="hm-hero-bg-veil"></div>
+  </div>
+  <div class="hm-hero-panel rise">
+    <div class="hm-hero-card">
+      {% render 'img-slot', image: s.card_image, fallback: 'amb-iphones.png', id: 'home-hero', fit: 'cover', position: s.card_position, label: 'foto — iPhones em destaque na loja' %}
+      <span class="hm-pill-brand">{{ s.brand_pill }}</span>
+      {%- if s.badge != blank -%}<span class="hm-badge"><i></i>{{ s.badge }}</span>{%- endif -%}
+    </div>
+    <div class="hm-hero-text">
+      {%- if s.lead != blank -%}<div class="hm-hero-lead">{{ s.lead }}</div>{%- endif -%}
+      <h2 class="headline" style="font-size:clamp(37px,5.55vw,80px);line-height:.98;letter-spacing:-2px">
+        <span>{{ s.headline_1 }}</span>{% if s.headline_2 != blank %}<br><span class="b">{{ s.headline_2 }}</span>{% endif %}
+      </h2>
+      <div class="hm-hero-foot">
+        <span class="eyebrow">{{ s.location }}</span>
+        <div class="hm-hero-ctas">
+          {%- if s.cta1_label != blank -%}<a class="btn btn-primary" href="{{ s.cta1_link | default: '/collections/all' }}">{{ s.cta1_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+          {%- if s.cta2_label != blank -%}<a class="btn btn-glass" href="{% render 'wa-link' %}" target="_blank" rel="noopener">{{ s.cta2_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home · Hero",
+  "settings": [
+    { "type": "header", "content": "Imagens" },
+    { "type": "image_picker", "id": "bg_image", "label": "Foto de fundo (ambiente da loja)" },
+    { "type": "text", "id": "bg_position", "label": "Enquadramento do fundo", "default": "50% 50%", "info": "Ex.: 50% 50% (centro), 50% 30% (mais pro topo)" },
+    { "type": "image_picker", "id": "card_image", "label": "Foto do card (iPhones em destaque)" },
+    { "type": "text", "id": "card_position", "label": "Enquadramento do card", "default": "50% 38%" },
+    { "type": "header", "content": "Selo do card" },
+    { "type": "text", "id": "brand_pill", "label": "Pílula da marca", "default": "smartbase" },
+    { "type": "text", "id": "badge", "label": "Selo de destaque", "default": "destaque do mês · iPhone 17 Pro · 256GB · cosmic orange" },
+    { "type": "header", "content": "Texto" },
+    { "type": "text", "id": "lead", "label": "Linha de apoio (lead)", "default": "novos e seminovos. pra quem usa apple todo dia." },
+    { "type": "text", "id": "headline_1", "label": "Título — linha 1", "default": "sua apple store." },
+    { "type": "text", "id": "headline_2", "label": "Título — linha 2 (azul)", "default": "particular." },
+    { "type": "text", "id": "location", "label": "Localização", "default": "caxias do sul · serra gaúcha" },
+    { "type": "header", "content": "Botões" },
+    { "type": "text", "id": "cta1_label", "label": "Botão 1 — texto", "default": "quero ver a vitrine" },
+    { "type": "url", "id": "cta1_link", "label": "Botão 1 — link", "default": "/collections/all" },
+    { "type": "text", "id": "cta2_label", "label": "Botão 2 — texto (vai pro WhatsApp)", "default": "vou chamar no whatsapp" }
+  ],
+  "presets": [{ "name": "Home · Hero" }]
+}
+{% endschema %}

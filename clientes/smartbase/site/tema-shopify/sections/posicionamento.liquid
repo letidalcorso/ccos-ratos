@@ -1,0 +1,39 @@
+{%- comment -%} Home Posicionamento — portado de HomePage.jsx (Posicionamento). {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="hm-posi rise">
+  <div class="hm-posi-card">
+    <div class="hm-posi-text">
+      <span class="hm-quote">“</span>
+      <span class="eyebrow pill">{{ s.eyebrow }}</span>
+      <h2 class="headline" style="font-size:clamp(23px,3.47vw,50px);line-height:.98;letter-spacing:-1.2px">
+        <span>{{ s.headline_1 }}</span>{% if s.headline_2 != blank %}<br><span class="b">{{ s.headline_2 }}</span>{% endif %}
+      </h2>
+      <p class="hm-posi-sub">{{ s.sub }}</p>
+      <div class="hm-posi-meta">
+        <span class="eyebrow">{{ s.location }}</span>
+        {%- if s.cta_label != blank -%}<a class="btn btn-glass btn-sm" style="margin-left:18px" href="{{ s.cta_link | default: '/pages/contato' }}">{{ s.cta_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+      </div>
+    </div>
+    <div class="hm-posi-media">
+      {% render 'img-slot', image: s.image, fallback: 'amb-iphones.png', id: 'home-posi', position: s.image_position, label: 'foto — atendimento / loja / aparelhos' %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home · Posicionamento",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta", "default": "sobre" },
+    { "type": "text", "id": "headline_1", "label": "Título — linha 1", "default": "tem apple." },
+    { "type": "text", "id": "headline_2", "label": "Título — linha 2 (azul)", "default": "tem o apple certo pra você." },
+    { "type": "textarea", "id": "sub", "label": "Texto", "default": "aqui a recomendação vem do uso real, não da ficha técnica. tu chega, conta o que precisa, e a gente acha o certo — sem empurrar o mais caro." },
+    { "type": "text", "id": "location", "label": "Localização", "default": "caxias do sul, rs" },
+    { "type": "text", "id": "cta_label", "label": "Botão — texto", "default": "quero falar" },
+    { "type": "url", "id": "cta_link", "label": "Botão — link", "default": "/pages/contato" },
+    { "type": "image_picker", "id": "image", "label": "Foto" },
+    { "type": "text", "id": "image_position", "label": "Enquadramento da foto", "default": "50% 42%" }
+  ],
+  "presets": [{ "name": "Home · Posicionamento" }]
+}
+{% endschema %}

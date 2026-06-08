@@ -1,0 +1,69 @@
+{%- comment -%} Home Diferenciais — portado de HomePage.jsx (Diferenciais). {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="hm-dif-band rise">
+  <div class="page hm-dif">
+    <div class="eyebrow signal">{{ s.eyebrow }}</div>
+    <h2 class="headline" style="font-size:clamp(24px,3.6vw,52px);line-height:.98;letter-spacing:-1.2px">
+      <span>{{ s.headline_1 }}</span>{% if s.headline_2 != blank %}<br><span class="b">{{ s.headline_2 }}</span>{% endif %}
+    </h2>
+    <div class="hm-dif-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.hero -%}
+          <article class="dif-card dif-hero" {{ block.shopify_attributes }}>
+            <span class="dif-ghost">{{ block.settings.n }}</span>
+            <span class="dif-idx">{{ block.settings.n }}</span>
+            <h3 class="dif-t big">{{ block.settings.title }}</h3>
+            <div class="dif-hero-media">{% render 'img-slot', image: block.settings.image, fallback: 'amb-iphones.png', id: 'dif-hero-img', fit: 'cover', position: '50% 50%', label: 'foto — entrega / unboxing' %}</div>
+            <p class="dif-d">{{ block.settings.text }}</p>
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+      <div class="hm-dif-list stagger rise">
+        {%- for block in section.blocks -%}
+          {%- unless block.settings.hero -%}
+            <article class="dif-card dif-row" {{ block.shopify_attributes }}>
+              <span class="dif-ghost sm">{{ block.settings.n }}</span>
+              <span class="dif-idx">{{ block.settings.n }}</span>
+              <h3 class="dif-t">{{ block.settings.title }}</h3>
+              <p class="dif-d">{{ block.settings.text }}</p>
+            </article>
+          {%- endunless -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home · Diferenciais",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta", "default": "por que a smartbase" },
+    { "type": "text", "id": "headline_1", "label": "Título — linha 1", "default": "tem loja." },
+    { "type": "text", "id": "headline_2", "label": "Título — linha 2 (azul)", "default": "tem quem entende." }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Diferencial",
+      "settings": [
+        { "type": "checkbox", "id": "hero", "label": "Card grande (com foto)", "default": false },
+        { "type": "text", "id": "n", "label": "Número", "default": "01" },
+        { "type": "text", "id": "title", "label": "Título", "default": "título do diferencial" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "descrição do diferencial." },
+        { "type": "image_picker", "id": "image", "label": "Foto (só no card grande)" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "default": {
+    "blocks": [
+      { "type": "card", "settings": { "hero": true, "n": "01", "title": "primeiro chega. depois paga.", "text": "o iphone chega na tua mão antes do dinheiro sair da tua conta." } },
+      { "type": "card", "settings": { "hero": false, "n": "02", "title": "loja física em caxias", "text": "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho." } },
+      { "type": "card", "settings": { "hero": false, "n": "03", "title": "atendimento humano", "text": "sem chatbot, sem formulário. tu chama no whatsapp e quem responde entende de apple." } },
+      { "type": "card", "settings": { "hero": false, "n": "04", "title": "só apple", "text": "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica." } }
+    ]
+  },
+  "presets": [{ "name": "Home · Diferenciais" }]
+}
+{% endschema %}
