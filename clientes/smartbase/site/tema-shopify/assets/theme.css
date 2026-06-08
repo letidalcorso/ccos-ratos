@@ -14,6 +14,12 @@
 /* ---- fundo "liquid glass" fixo atrás de tudo ---- */
 .sb-bg{position:fixed;inset:0;z-index:-1}
 
+/* O atributo [hidden] precisa sempre esconder — várias classes do design
+   (.vt-empty, .product-card, etc.) definem display: e sobrescreveriam o
+   padrão do navegador. Sem isso, o filtro da vitrine e o estado vazio
+   não escondem nada. */
+[hidden]{display:none !important}
+
 /* ---- sidebar: o ícone é um <a>, então tira o sublinhado do link ---- */
 .sidebar .nav-ic{text-decoration:none}
 
