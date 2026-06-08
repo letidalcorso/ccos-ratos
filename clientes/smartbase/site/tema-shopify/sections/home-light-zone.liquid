@@ -65,14 +65,14 @@
     { "type": "text", "id": "band_quote_2", "label": "Frase — linha 2 (azul)", "default": "é indicar o certo pra você." },
     { "type": "textarea", "id": "band_sub", "label": "Texto de apoio", "default": "loja física em caxias do sul, atendendo o Brasil inteiro pelo whatsapp. quem te responde usa apple todo dia — e fala a real." },
     { "type": "text", "id": "band_cta_label", "label": "Botão — texto", "default": "quero conhecer a loja" },
-    { "type": "url", "id": "band_cta_link", "label": "Botão — link", "default": "/pages/contato" },
+    { "type": "url", "id": "band_cta_link", "label": "Botão — link" },
     { "type": "header", "content": "Como funciona" },
     { "type": "text", "id": "steps_eyebrow", "label": "Etiqueta", "default": "como funciona" },
     { "type": "text", "id": "steps_headline_1", "label": "Título — linha 1", "default": "simples assim." },
     { "type": "text", "id": "steps_headline_2", "label": "Título — linha 2 (azul)", "default": "do oi ao na tua mão." },
     { "type": "header", "content": "Observação (opcional)" },
     { "type": "text", "id": "note_label", "label": "Rótulo", "default": "obs" },
-    { "type": "text", "id": "note_text", "label": "Texto da observação", "info": "Deixe vazio para esconder.", "default": "" }
+    { "type": "text", "id": "note_text", "label": "Texto da observação", "info": "Deixe vazio para esconder." }
   ],
   "blocks": [
     {
@@ -86,13 +86,15 @@
     }
   ],
   "max_blocks": 5,
-  "default": {
-    "blocks": [
-      { "type": "step", "settings": { "n": "01", "title": "tu chama no whatsapp", "text": "manda o modelo que tu quer. quem responde entende de apple — sem robô, sem formulário." } },
-      { "type": "step", "settings": { "n": "02", "title": "a gente acha e confere", "text": "novo lacrado sob encomenda ou seminovo conferido um a um. sempre com garantia de verdade." } },
-      { "type": "step", "settings": { "n": "03", "title": "primeiro chega. depois paga.", "text": "o aparelho chega na tua mão antes do dinheiro sair da tua conta. esse é o combinado." } }
-    ]
-  },
-  "presets": [{ "name": "Home · Zona clara" }]
+  "presets": [
+    {
+      "name": "Home · Zona clara",
+      "blocks": [
+        { "type": "step", "settings": { "n": "01", "title": "tu chama no whatsapp", "text": "manda o modelo que tu quer. quem responde entende de apple — sem robô, sem formulário." } },
+        { "type": "step", "settings": { "n": "02", "title": "a gente acha e confere", "text": "novo lacrado sob encomenda ou seminovo conferido um a um. sempre com garantia de verdade." } },
+        { "type": "step", "settings": { "n": "03", "title": "primeiro chega. depois paga.", "text": "o aparelho chega na tua mão antes do dinheiro sair da tua conta. esse é o combinado." } }
+      ]
+    }
+  ]
 }
 {% endschema %}
