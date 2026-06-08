@@ -40,6 +40,14 @@ img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) cont
   translate: 0 0 !important;
   animation: none !important;
 }
+/* .stagger esconde os filhos (opacity:0) até o JS de animação rodar.
+   Sem animação, os blocos sumiam (cards de diferenciais e passos do
+   "como funciona"). Forço os filhos visíveis. */
+.stagger > *{
+  opacity: 1 !important;
+  transform: none !important;
+  translate: 0 0 !important;
+}
 
 /* ---- placeholder temporário da home (sai na Etapa 2) ---- */
 .sb-placeholder{padding:160px 0;text-align:center}
