@@ -6,7 +6,19 @@
 ---
 
 ## SEG 08 — reel | leva nova (takes do produto)
-> O card estático foi descartado (tom vendedor demais). A leva nova vira REEL de desejo com os takes dos aparelhos. Roteiro de edição e legenda em construção (ver discussão de conteúdo). A copy estática abaixo fica só como histórico, NÃO usar.
+> O card estático foi descartado (tom vendedor demais). A leva nova virou REEL de desejo com os takes dos aparelhos, montado via beat-sync.
+> **Rascunho gerado:** `marca/banco de imagens/vídeos brutos/leva-nova-beatsync-rascunho.mp4` (11,7s, 9:16, cortes na batida). A Letícia lapida no CapCut e troca o áudio pelo da biblioteca do IG ao postar.
+
+**Legenda:**
+> tem aparelho que dispensa legenda. é só olhar.
+> chegou a linha 17 nova e os 17 pro max laranja.
+> e você só paga quando ele tá na tua mão. gostou? chama no whats.
+
+**Hashtags:** #iphone17promax #iphonecaxias #applecaxias #caxiasdosul #serragaucha
+
+---
+
+_(histórico, NÃO usar — copy do card estático descartado por tom vendedor:)_
 
 **Texto no post (imagem):**
 > chegou leva nova da linha 17, lacrada.
