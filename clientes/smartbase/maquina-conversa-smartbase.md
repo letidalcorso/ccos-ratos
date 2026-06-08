@@ -78,6 +78,8 @@ Colunas mínimas pra medir o teste de 2 semanas:
 
 Sem isso, o teste não prova nada e você perde o argumento mais forte pro dono. A API de tracking entra depois, a planilha é o que basta agora.
 
+> **Etiquetas do Business Suite:** as colunas **Etapa / Produto de interesse / Origem** correspondem 1:1 às 3 famílias de etiqueta do inbox — sistema completo (lista, como criar e filtrar) em `performance/etiquetas-whatsapp.md`. Etiqueta = visão rápida no inbox; planilha = registro pra medir.
+
 ---
 
 ## Confirmado
