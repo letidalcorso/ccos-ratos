@@ -1,0 +1,165 @@
+/* ============================================================
+   smartbase — Design System · Color & Type Foundations
+   "sua apple store. particular."
+   A dark, editorial Apple-reseller brand. One blue only.
+   ============================================================ */
+
+/* ---- Fonts (Google Fonts — exact match to the Figma file) ---- */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ---------- BASE COLOR TOKENS ---------- */
+  /* The brand runs on a near-black canvas. One accent blue. Greyscale type. */
+  --sb-void:      #07070E;  /* deepest background — "padrão dark"            */
+  --sb-surface:   #0F0F1C;  /* panels, cards, raised surfaces — "surface"    */
+  --sb-surface-2: #13131F;  /* slightly lifted surface                       */
+  --sb-ink:       #11110F;  /* near-black used in light-on-dark crops        */
+
+  --sb-signal:    #3E82F7;  /* THE blue. acento. headlines·eyebrows·links    */
+  --sb-signal-12: rgba(62,130,247,0.12); /* signal glow / tint wash          */
+  --sb-signal-24: rgba(62,130,247,0.24);
+
+  --sb-white:     #F2F2F6;  /* primary typography — "white"                  */
+  --sb-platinum:  #C0C0D0;  /* secondary text — "platinum"                   */
+  --sb-silver:    #7A7A96;  /* labels, eyebrows, captions — "silver"         */
+  --sb-mute:      #4A4A66;  /* faint dividers / ghost numerals / disabled    */
+
+  --sb-success:   #10B981;  /* "em estoque" status dot                       */
+
+  /* ---------- GLASS / CHROME (vidro claro) ---------- */
+  --sb-glass-bg:       rgba(255,255,255,0.12);  /* sidebar / chrome fill      */
+  --sb-glass-bg-hi:    rgba(255,255,255,0.22);  /* active chrome item         */
+  --sb-glass-border:   rgba(255,255,255,0.26);  /* chrome hairline            */
+  --sb-glass-border-2: rgba(255,255,255,0.18);  /* inner pill hairline        */
+  --sb-glass-blur:     blur(26px); /* @kind other */
+
+  /* ---------- LIQUID GLASS (iOS-novo material) ----------
+     The signature material. Layered translucency that refracts the dark/blue
+     canvas behind it, with a bright specular rim on the top edge and a soft
+     inner glow. Glass needs vivid content behind it to read — always float it
+     over a canvas (.sb-canvas) or photo, never over flat black. */
+  --sb-lg-tint:    rgba(255,255,255,0.05);  /* base translucent fill (see-through) */
+  --sb-lg-tint-hi: rgba(255,255,255,0.12);  /* hover / active fill            */
+  --sb-lg-blur:    blur(50px) saturate(180%); /* @kind other */ /* deep iOS blur + colour pop */
+  --sb-lg-rim:     rgba(255,255,255,0.65);  /* top specular edge highlight    */
+  --sb-lg-rim-lo:  rgba(255,255,255,0.12);  /* fading side/bottom edge        */
+  --sb-lg-tint-blue: rgba(62,130,247,0.12); /* faint signal wash in the glass */
+  /* layered shadow: contact + ambient + inner top rim + inner bottom shade  */
+  --sb-lg-shadow: 0 2px 8px rgba(0,0,0,0.30),
+                  0 24px 60px rgba(0,0,0,0.45),
+                  inset 0 1px 0 var(--sb-lg-rim),
+                  inset 0 -1px 1px rgba(0,0,0,0.40);
+
+  /* ---------- CARD / SURFACE HAIRLINES ---------- */
+  --sb-hair:    rgba(255,255,255,0.08);   /* card border on dark             */
+  --sb-hair-hi: rgba(255,255,255,0.14);   /* hover / emphasised card border  */
+  --sb-fill:    rgba(255,255,255,0.04);   /* faint fill for inset rows        */
+
+  /* ---------- ELEVATION ---------- */
+  --sb-shadow-chrome: 0 24px 70px rgba(0,0,0,0.30),
+                      inset 0 1px 0 rgba(255,255,255,0.35);
+  --sb-shadow-card:   0 24px 60px rgba(0,0,0,0.45);
+  --sb-shadow-soft:   0 8px 30px rgba(0,0,0,0.35);
+
+  /* ---------- RADII (iOS continuous / squircle — generous) ---------- */
+  --sb-r-pill:  999px;   /* buttons, chrome, chips, status                   */
+  --sb-r-card:  28px;    /* product / feature cards (concentric)             */
+  --sb-r-panel: 22px;    /* comparison panels, map slots                     */
+  --sb-r-sm:    16px;    /* inner inputs / small tiles                       */
+  --sb-r-lg:    36px;    /* large hero glass containers                      */
+
+  /* ---------- SPACING (8px base) ---------- */
+  --sb-s-1: 4px;  --sb-s-2: 8px;  --sb-s-3: 12px; --sb-s-4: 16px;
+  --sb-s-5: 24px; --sb-s-6: 32px; --sb-s-7: 48px; --sb-s-8: 64px;
+  --sb-s-9: 96px; --sb-s-10: 128px;
+  --sb-gutter: 120px;   /* page edge gutter at 1440 */
+  --sb-section: 160px;  /* vertical rhythm between major sections */
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --sb-font-display: 'Bricolage Grotesque', 'Helvetica Neue', sans-serif;
+  --sb-font-text:    'Inter', system-ui, sans-serif;
+
+  /* ---------- SEMANTIC TYPE ---------- */
+  /* Display headlines are lowercase, Bricolage Bold, tight tracking.       */
+  --sb-hero-size: 80px;   --sb-hero-ls: -2px;     --sb-hero-lh: 0.98;  /* @kind font */
+  --sb-h1-size: 56px;     --sb-h1-ls: -1.5px;    --sb-h1-lh: 1.0;     /* @kind font */
+  --sb-h2-size: 40px;     --sb-h2-ls: -1px;      --sb-h2-lh: 1.02;    /* @kind font */
+  --sb-h3-size: 26px;     --sb-h3-ls: -0.4px;    --sb-h3-lh: 1.1;     /* @kind font */
+
+  --sb-lead-size: 20px;   --sb-lead-lh: 1.4;   /* @kind font */ /* hero sub / lead, Inter */
+  --sb-body-size: 16px;   --sb-body-lh: 1.55;  /* @kind font */
+  --sb-small-size: 14px;  --sb-small-lh: 1.5;  /* @kind font */
+  --sb-eyebrow-size: 12px; --sb-eyebrow-ls: 3px; /* uppercase·spaced labels  */
+}
+
+/* ============================================================
+   SEMANTIC HELPERS — apply directly or copy into components
+   ============================================================ */
+
+.sb-display {
+  font-family: var(--sb-font-display);
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: var(--sb-hero-ls);
+  line-height: var(--sb-hero-lh);
+  color: var(--sb-white);
+}
+
+/* the signal-blue second line of a section headline */
+.sb-accent { color: var(--sb-signal); }
+
+.sb-hero  { font-size: var(--sb-hero-size); letter-spacing: var(--sb-hero-ls); line-height: var(--sb-hero-lh); }
+.sb-h1    { font-size: var(--sb-h1-size);   letter-spacing: var(--sb-h1-ls);   line-height: var(--sb-h1-lh); }
+.sb-h2    { font-size: var(--sb-h2-size);   letter-spacing: var(--sb-h2-ls);   line-height: var(--sb-h2-lh); }
+.sb-h3    { font-size: var(--sb-h3-size);   letter-spacing: var(--sb-h3-ls);   line-height: var(--sb-h3-lh); }
+
+.sb-lead  { font-family: var(--sb-font-text); font-size: var(--sb-lead-size); line-height: var(--sb-lead-lh); color: var(--sb-platinum); }
+.sb-body  { font-family: var(--sb-font-text); font-size: var(--sb-body-size); line-height: var(--sb-body-lh); color: var(--sb-platinum); }
+.sb-small { font-family: var(--sb-font-text); font-size: var(--sb-small-size); line-height: var(--sb-small-lh); color: var(--sb-silver); }
+
+/* eyebrow / kicker — small, letter-spaced, lowercase. silver or signal. */
+.sb-eyebrow {
+  font-family: var(--sb-font-text);
+  font-weight: 500;
+  font-size: var(--sb-eyebrow-size);
+  letter-spacing: var(--sb-eyebrow-ls);
+  text-transform: lowercase;
+  color: var(--sb-silver);
+}
+.sb-eyebrow--signal { color: var(--sb-signal); }
+
+/* ============================================================
+   LIQUID GLASS — the iOS-novo material. Reusable building blocks.
+   ============================================================ */
+
+/* The canvas: a dark, cool, premium iOS-26-style backdrop with deep-blue
+   bokeh blooms. Glass floats over THIS (or a photo) so it has something to
+   refract. Put it on a full-bleed layer behind content. */
+.sb-canvas {
+  background:
+    radial-gradient(60% 50% at 18% 12%, rgba(62,130,247,0.20), transparent 70%),
+    radial-gradient(55% 45% at 86% 22%, rgba(70,90,160,0.16), transparent 72%),
+    radial-gradient(70% 60% at 50% 110%, rgba(40,60,120,0.18), transparent 70%),
+    radial-gradient(40% 40% at 75% 80%, rgba(0,150,200,0.08), transparent 70%),
+    var(--sb-void);
+}
+
+/* The material. Apply to any floating element. Pair with .sb-glass--rim for
+   the specular top edge (uses a ::before, so the host element needs position). */
+.sb-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04)),
+              var(--sb-lg-tint-blue);
+  -webkit-backdrop-filter: var(--sb-lg-blur);
+  backdrop-filter: var(--sb-lg-blur);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: var(--sb-lg-shadow);
+}
+/* specular rim: brighter on top, fading down the sides */
+.sb-glass--rim { position: relative; }
+.sb-glass--rim::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  padding: 1px;
+  background: linear-gradient(180deg, var(--sb-lg-rim), var(--sb-lg-rim-lo) 38%, transparent 60%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}

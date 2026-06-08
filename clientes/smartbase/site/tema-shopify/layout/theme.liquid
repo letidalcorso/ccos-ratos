@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07070E">
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  <title>
+    {{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &middot; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  {{ 'colors_and_type.css' | asset_url | stylesheet_tag }}
+  {{ 'kit.css' | asset_url | stylesheet_tag }}
+  {{ 'pages.css' | asset_url | stylesheet_tag }}
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>
+
+  {{ content_for_header }}
+</head>
+
+<body class="sb-body template-{{ request.page_type | handle }}">
+  <a class="skip-link" href="#main">pular para o conteúdo</a>
+  <div class="sb-canvas sb-bg" aria-hidden="true"></div>
+
+  {% section 'header' %}
+
+  <main id="main" class="site" role="main">
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'footer' %}
+
+  <script src="{{ 'global.js' | asset_url }}" defer></script>
+</body>
+</html>

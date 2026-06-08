@@ -53,6 +53,7 @@ clientes/smartbase/dados/
 
 # Mídia bruta de conteúdo (fotos/vídeos da Letícia) — fica só local, não vai pro GitHub
 clientes/smartbase/conteudo/fotos-caxias/
+clientes/smartbase/marca/banco de imagens/
 
 # Sistema
 .DS_Store

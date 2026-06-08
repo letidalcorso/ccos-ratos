@@ -1,0 +1,16 @@
+{%- comment -%}
+  Monta o link do WhatsApp (wa.me). Número editável em Configurações do tema.
+  Uso:
+    {% render 'wa-link' %}                          -> link cru
+    {% render 'wa-link', produto: product.title %}  -> já preenche a mensagem
+    {% render 'wa-link', texto: 'quero saber mais' %} -> mensagem livre
+{%- endcomment -%}
+{%- assign wa = settings.wa_number | default: '5554996624494' | remove: ' ' | remove: '+' | remove: '-' | remove: '(' | remove: ')' -%}
+{%- if produto != blank -%}
+  {%- assign msg = 'oi! tenho interesse no ' | append: produto | append: '. ainda tem?' -%}
+  https://wa.me/{{ wa }}?text={{ msg | url_encode }}
+{%- elsif texto != blank -%}
+  https://wa.me/{{ wa }}?text={{ texto | url_encode }}
+{%- else -%}
+  https://wa.me/{{ wa }}
+{%- endif -%}
