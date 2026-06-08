@@ -42,10 +42,12 @@
 - fotos da cidade (a Letícia fotografa segunda numa volta por Caxias)
 - hook: `caxias na lente do iphone.`
 
-**TER 09 + QUA 10 — VIAGEM (feed descansa)**
-- nada ao vivo. grava todo o material dos roteiros lá.
+**TER 09 + QUA 10 — VIAGEM (feed não para, tudo agendado antes de sair)**
+- nada ao vivo nem da viagem. grava o material dos roteiros lá.
 - stories seguem normais, **sem mostrar a viagem ao vivo**.
-- opcional: 1 carrossel evergreen agendado (ex: a dica de saúde da bateria abaixo)
+- **TER 09:** reel da trend (Ariana, 17 pro max laranja) — pronto, mantém o desejo quente e reforça a leva nova
+- **QUA 10:** carrossel saúde da bateria (dica salvável)
+- agendar os dois no Meta antes de viajar na madrugada de terça
 
 **QUI 11 — post | CASA SMARTBASE (Copa abre)** ⭐ *copy pronta abaixo*
 - tema: o celular como segundo telão da Copa + estoque novo

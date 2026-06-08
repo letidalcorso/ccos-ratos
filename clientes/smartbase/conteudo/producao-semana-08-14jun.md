@@ -83,7 +83,7 @@ Sem foto da Serra eu não monto. Me manda as fotos clicadas em iphone que eu fa�
 
 ---
 
-## Reel da trend (Ariana "7 rings") — pronto, já editado
+## Reel da trend (Ariana "7 rings") — pronto, já editado · vai em TER 09 (agendar antes de viajar)
 Screen-record: vê o modelo, clica no perfil, manda DM, mostra o 17 pro max laranja. Vai no FEED com capa caprichada.
 **Atenção:** adicionar a música pela biblioteca do Instagram ao postar (não deixar embutida) pra não tomar penalidade de direitos.
 
