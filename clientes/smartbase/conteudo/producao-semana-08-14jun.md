@@ -9,12 +9,18 @@
 > O card estático foi descartado (tom vendedor demais). A leva nova virou REEL de desejo com os takes dos aparelhos, montado via beat-sync.
 > **Rascunho gerado:** `marca/banco de imagens/vídeos brutos/leva-nova-beatsync-rascunho.mp4` (11,7s, 9:16, cortes na batida). A Letícia lapida no CapCut e troca o áudio pelo da biblioteca do IG ao postar.
 
-**Legenda:**
-> tem aparelho que dispensa legenda. é só olhar.
-> chegou a linha 17 nova e os 17 pro max laranja.
-> e você só paga quando ele tá na tua mão. gostou? chama no whats.
+**Legenda (vende os dois seminovos, via escassez):**
+> dois. é só o que tem.
+> dois 17 pro max laranja, seminovos, com 100% de bateria e garantia apple.
+> quando acabar, acabou. e você só paga quando ele tá na tua mão.
+> chama no whats antes que sobre só um.
 
 **Hashtags:** #iphone17promax #iphonecaxias #applecaxias #caxiasdosul #serragaucha
+
+**Mapa de cortes (manual, pra montar no CapCut) — 7 trocas de ~1,7s, ordem laranja-forward:**
+- corte nos segundos: 1,7 / 3,4 / 5,0 / 6,7 / 8,4 / 10,1 (fim ~11,8)
+1. 0,0–1,7 IMG_0070 (abre) · 2. 1,7–3,4 IMG_0071 (close) · 3. 3,4–5,0 IMG_3396 (laranja) · 4. 5,0–6,7 IMG_4078 (laranja) · 5. 6,7–8,4 IMG_0077 (respiro) · 6. 8,4–10,1 IMG_3396/4078 (laranja) · 7. 10,1–11,8 copy_30C3 (laranja + selo)
+- áudio: usar o da biblioteca do IG ao postar.
 
 ---
 
