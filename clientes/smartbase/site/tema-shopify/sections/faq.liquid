@@ -1,0 +1,96 @@
+{%- comment -%} FAQ — portado de FaqPage.jsx. Acordeão em global.js. {%- endcomment -%}
+{%- assign s = section.settings -%}
+{%- capture wa -%}{% render 'wa-link' %}{%- endcapture -%}
+<div class="faq-page">
+  {% render 'page-hero',
+    kicker: s.hero_kicker, line1: s.hero_line1, line2: s.hero_line2, sub: s.hero_sub,
+    bg_image: s.hero_image, bg_fallback: 'amb-hero-blog.jpeg', bg_id: 'faq-hero-bg', bg_position: '50% 45%',
+    cta_label: s.hero_cta, cta_link: wa, cta_blank: true %}
+
+  <section class="page faq-body">
+    {%- assign group_open = false -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'categoria' -%}
+        {%- if group_open %}</div>{% endif -%}
+        <div class="faq-group rise">
+          <h3 class="faq-cat">{{ block.settings.title }}</h3>
+          {%- if block.settings.compare -%}
+            {% render 'garantia-compare', novos_title: s.gar_novos_title, novos_text: s.gar_novos_text, semi_title: s.gar_semi_title, semi_text: s.gar_semi_text %}
+          {%- endif -%}
+        {%- assign group_open = true -%}
+      {%- elsif block.type == 'pergunta' -%}
+        <div class="faq-row rise" {{ block.shopify_attributes }}>
+          <button class="faq-q" type="button" aria-expanded="false" data-faq-q>
+            <span>{{ block.settings.question }}</span><span class="faq-sign" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a"><p>{{ block.settings.answer }}</p></div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if group_open %}</div>{% endif -%}
+  </section>
+
+  <section class="page faq-end rise">
+    <span class="faq-end-t">{{ s.end_text }}</span>
+    <a class="btn btn-primary" href="{{ s.end_link | default: '/pages/vitrine' }}">{{ s.end_cta }} <span aria-hidden="true">→</span></a>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_kicker", "label": "Etiqueta", "default": "perguntas frequentes" },
+    { "type": "text", "id": "hero_line1", "label": "Título — linha 1", "default": "ainda em dúvida?" },
+    { "type": "text", "id": "hero_line2", "label": "Título — linha 2 (azul)", "default": "a gente responde." },
+    { "type": "textarea", "id": "hero_sub", "label": "Texto de apoio", "default": "tudo o que mais perguntam sobre comprar Apple aqui." },
+    { "type": "image_picker", "id": "hero_image", "label": "Foto de fundo do hero" },
+    { "type": "text", "id": "hero_cta", "label": "Botão do hero (WhatsApp)", "default": "tirar dúvidas no whatsapp" },
+    { "type": "header", "content": "Painel de garantia (na categoria marcada)" },
+    { "type": "text", "id": "gar_novos_title", "label": "Novos — título", "default": "Apple oficial · 12 meses" },
+    { "type": "textarea", "id": "gar_novos_text", "label": "Novos — texto", "default": "todo aparelho novo chega lacrado de fábrica. garantia internacional Apple, válida em qualquer Apple Service no mundo, inclusive no Brasil." },
+    { "type": "text", "id": "gar_semi_title", "label": "Seminovos — título", "default": "smartbase · 3 meses" },
+    { "type": "textarea", "id": "gar_semi_text", "label": "Seminovos — texto", "default": "pros seminovos, a smartbase adiciona 3 meses de garantia própria sobre o aparelho. acionamento direto com a smartbase, no whatsapp." },
+    { "type": "header", "content": "Fechamento" },
+    { "type": "text", "id": "end_text", "label": "Frase", "default": "tirou as dúvidas? então bora." },
+    { "type": "text", "id": "end_cta", "label": "Botão — texto", "default": "vou escolher meu aparelho" },
+    { "type": "url", "id": "end_link", "label": "Botão — link" }
+  ],
+  "blocks": [
+    {
+      "type": "categoria",
+      "name": "Categoria",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Nome da categoria", "default": "categoria" },
+        { "type": "checkbox", "id": "compare", "label": "Mostrar painel de garantia aqui", "default": false }
+      ]
+    },
+    {
+      "type": "pergunta",
+      "name": "Pergunta",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Pergunta", "default": "pergunta?" },
+        { "type": "textarea", "id": "answer", "label": "Resposta", "default": "resposta." }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "categoria", "settings": { "title": "garantia", "compare": true } },
+      { "type": "pergunta", "settings": { "question": "como funciona a garantia Apple no Brasil?", "answer": "todo aparelho novo chega com garantia internacional Apple de 12 meses, válida em qualquer Apple Service no mundo, inclusive no Brasil." } },
+      { "type": "pergunta", "settings": { "question": "o que está incluído nos 3 meses de garantia própria da Smartbase?", "answer": "pros seminovos, a smartbase cobre defeitos de funcionamento do aparelho por 3 meses. acionamento direto com a gente, no whatsapp." } },
+      { "type": "pergunta", "settings": { "question": "e se o aparelho der problema depois da garantia?", "answer": "a gente continua te ajudando a encaminhar pro serviço autorizado Apple. tu nunca fica na mão." } },
+      { "type": "categoria", "settings": { "title": "originalidade e procedência", "compare": false } },
+      { "type": "pergunta", "settings": { "question": "como sei que o iPhone é original?", "answer": "todo aparelho é verificado pelo número de série direto na Apple, com IMEI conferido. nada de paralelo." } },
+      { "type": "categoria", "settings": { "title": "entrega", "compare": false } },
+      { "type": "pergunta", "settings": { "question": "em quanto tempo chega o iPhone novo?", "answer": "lacrados sob encomenda chegam em até 7 dias úteis. seminovos em estoque saem na hora." } },
+      { "type": "pergunta", "settings": { "question": "vocês entregam pra qualquer cidade do Brasil?", "answer": "sim. loja física em caxias do sul e envio pra todo o Brasil, combinado no whatsapp." } },
+      { "type": "categoria", "settings": { "title": "pagamento", "compare": false } },
+      { "type": "pergunta", "settings": { "question": "quais formas de pagamento vocês aceitam?", "answer": "pix, cartão e parcelamento. a gente fecha a melhor condição contigo no whatsapp." } },
+      { "type": "categoria", "settings": { "title": "troca", "compare": false } },
+      { "type": "pergunta", "settings": { "question": "vocês aceitam meu iPhone antigo como entrada?", "answer": "aceitamos. manda o modelo e o estado no whatsapp que a gente avalia e abate no teu próximo." } }
+    ]
+  }
+}
+{% endschema %}

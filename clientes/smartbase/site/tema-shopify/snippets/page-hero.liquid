@@ -19,8 +19,9 @@
       </h2>
       {%- if sub != blank -%}<p class="hero-glass-sub">{{ sub }}</p>{%- endif -%}
       {%- if cta_label != blank -%}
-        <div class="hm-hero-ctas ph-ctas"><a class="btn btn-primary" href="{{ cta_link | default: '/' }}">{{ cta_label }} <span aria-hidden="true">→</span></a></div>
+        <div class="hm-hero-ctas ph-ctas"><a class="btn btn-primary" href="{{ cta_link | default: '/' }}"{% if cta_blank %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ cta_label }} <span aria-hidden="true">→</span></a></div>
       {%- endif -%}
+      {%- if cta_extra != blank -%}<div class="ph-extra">{{ cta_extra }}</div>{%- endif -%}
     </div>
   </div>
 </section>

@@ -1,0 +1,61 @@
+{%- comment -%} Contato — portado de MorePages.jsx (ContatoPage). {%- endcomment -%}
+{%- assign s = section.settings -%}
+<div class="contato-page">
+  {% render 'page-hero',
+    kicker: s.hero_kicker, line1: s.hero_line1, line2: s.hero_line2, sub: s.hero_sub,
+    bg_image: s.hero_image, bg_fallback: 'amb-hero-contato.jpg', bg_id: 'contato-hero', bg_position: '50% 60%',
+    cta_label: s.hero_cta, cta_link: '#ct-body' %}
+
+  <section class="page ct-body rise" id="ct-body">
+    <div class="ct-map">
+      <svg class="ct-map-grid" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g class="ct-map-streets">
+          <path d="M-40 120 L640 80"/><path d="M-40 250 L640 210"/><path d="M-40 380 L640 340"/>
+          <path d="M120 -20 L60 460"/><path d="M300 -20 L260 460"/><path d="M470 -20 L440 460"/>
+          <path d="M-40 300 L640 140"/><path d="M-40 60 L420 460"/>
+        </g>
+      </svg>
+      <div class="ct-map-veil"></div>
+      <div class="ct-pin"><span class="ct-pin-ring"></span><span class="ct-pin-dot"></span></div>
+      <div class="ct-map-tag">⚲ {{ s.map_tag }}</div>
+    </div>
+    <div class="ct-info">
+      <div class="ct-card">
+        <div class="ct-k">endereço</div>
+        <div class="ct-v ct-warn">{{ s.endereco | newline_to_br }}</div>
+      </div>
+      <div class="ct-card">
+        <div class="ct-k">horário</div>
+        <div class="ct-v">{{ s.horario | newline_to_br }}</div>
+        {%- if s.horario_note != blank -%}<div class="ct-note">{{ s.horario_note }}</div>{%- endif -%}
+      </div>
+      <div class="ct-card">
+        <div class="ct-k">atendimento</div>
+        <div class="ct-v">{{ s.atendimento | newline_to_br }}</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Contato",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_kicker", "label": "Etiqueta", "default": "contato" },
+    { "type": "text", "id": "hero_line1", "label": "Título — linha 1", "default": "passa na loja." },
+    { "type": "text", "id": "hero_line2", "label": "Título — linha 2 (azul)", "default": "a gente te espera." },
+    { "type": "textarea", "id": "hero_sub", "label": "Texto de apoio", "default": "tem loja de verdade em caxias do sul, de portas abertas pra ti. vem conhecer, tomar um café e ver os aparelhos de perto — ou fala com a gente no WhatsApp, de onde tu estiver." },
+    { "type": "image_picker", "id": "hero_image", "label": "Foto de fundo do hero" },
+    { "type": "text", "id": "hero_cta", "label": "Botão do hero", "default": "quero conhecer a loja" },
+    { "type": "header", "content": "Mapa" },
+    { "type": "text", "id": "map_tag", "label": "Etiqueta no mapa", "default": "caxias do sul · endereço exato a confirmar" },
+    { "type": "header", "content": "Cards" },
+    { "type": "textarea", "id": "endereco", "label": "Endereço", "default": "[ rua, número · bairro ]\n[ caxias do sul, rs · cep ]" },
+    { "type": "textarea", "id": "horario", "label": "Horário", "default": "seg–sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado" },
+    { "type": "text", "id": "horario_note", "label": "Observação do horário", "default": "excepcionalmente atendemos fora desses horários — combina no whatsapp." },
+    { "type": "textarea", "id": "atendimento", "label": "Atendimento", "default": "whatsapp · +55 54 99662-4494\natendendo todo o Brasil" }
+  ],
+  "presets": [{ "name": "Contato" }]
+}
+{% endschema %}

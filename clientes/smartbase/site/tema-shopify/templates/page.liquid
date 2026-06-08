@@ -7,6 +7,12 @@
 {%- case page.handle -%}
   {%- when 'vitrine' -%}
     {% section 'vitrine' %}
+  {%- when 'faq' -%}
+    {% section 'faq' %}
+  {%- when 'contato' -%}
+    {% section 'contato' %}
+  {%- when 'blog' -%}
+    {% section 'blog' %}
   {%- else -%}
     <section class="page" style="padding:120px 0 96px">
       <h1 class="headline" style="font-size:clamp(32px,5vw,56px);margin:0 0 24px">{{ page.title }}</h1>

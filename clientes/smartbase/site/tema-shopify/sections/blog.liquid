@@ -1,0 +1,92 @@
+{%- comment -%} Blog (listagem) — portado de MorePages.jsx (BlogPage). Filtro em global.js. {%- endcomment -%}
+{%- assign s = section.settings -%}
+{%- capture chips -%}
+<div class="bl-filters">
+  <span class="bl-chip on" data-filter="todos">todos</span>
+  <span class="bl-chip" data-filter="iPhone">iPhone</span>
+  <span class="bl-chip" data-filter="seminovo">seminovo</span>
+  <span class="bl-chip" data-filter="garantia">garantia</span>
+  <span class="bl-chip" data-filter="comparativos">comparativos</span>
+  <span class="bl-chip" data-filter="dicas">dicas</span>
+</div>
+{%- endcapture -%}
+<div class="blog-page">
+  {% render 'page-hero',
+    kicker: s.hero_kicker, line1: s.hero_line1, line2: s.hero_line2, sub: s.hero_sub,
+    bg_image: s.hero_image, bg_fallback: 'amb-hero-blog.jpeg', bg_id: 'blog-hero', bg_position: '50% 42%',
+    cta_extra: chips %}
+
+  <section class="page bl-wrap">
+    <div class="bl-grid stagger rise">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign bs = block.settings
+          assign is_product = false
+          if bs.kind == 'product'
+            assign is_product = true
+          endif
+          assign fit = 'cover'
+          assign cool_amb = true
+          if is_product
+            assign fit = 'contain'
+            assign cool_amb = false
+          endif
+        -%}
+        <a class="post-card rise" href="{{ bs.link | default: '#' }}" data-cat="{{ bs.cat }}" data-tags="{{ bs.tags }}" {{ block.shopify_attributes }}>
+          <div class="post-cover{% if is_product %} is-product{% endif %}">
+            {% render 'img-slot', image: bs.image, fallback: bs.fallback, fit: fit, cool: cool_amb, position: '50% 45%', label: 'capa do post' %}
+          </div>
+          <div class="post-body">
+            <div class="post-cat">{{ bs.cat }}</div>
+            <div class="post-title">{{ bs.title }}</div>
+            {%- if bs.excerpt != blank -%}<div class="post-excerpt">{{ bs.excerpt }}</div>{%- endif -%}
+            <div class="post-meta">{{ bs.meta }}</div>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Blog",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_kicker", "label": "Etiqueta", "default": "blog" },
+    { "type": "text", "id": "hero_line1", "label": "Título — linha 1", "default": "dicas e novidades" },
+    { "type": "text", "id": "hero_line2", "label": "Título — linha 2 (azul)", "default": "do mundo Apple." },
+    { "type": "textarea", "id": "hero_sub", "label": "Texto de apoio", "default": "conteúdo por quem vive Apple há anos. comparativos, guias e o que importa pra você escolher certo." },
+    { "type": "image_picker", "id": "hero_image", "label": "Foto de fundo do hero" }
+  ],
+  "blocks": [
+    {
+      "type": "post",
+      "name": "Post",
+      "settings": [
+        { "type": "text", "id": "cat", "label": "Categoria", "default": "dicas" },
+        { "type": "text", "id": "tags", "label": "Tags (separe com espaço)", "info": "Usadas no filtro. Ex.: dicas iphone" },
+        { "type": "text", "id": "title", "label": "Título", "default": "título do post" },
+        { "type": "textarea", "id": "excerpt", "label": "Resumo" },
+        { "type": "text", "id": "meta", "label": "Data · tempo de leitura", "default": "data · tempo" },
+        { "type": "select", "id": "kind", "label": "Tipo de capa", "options": [ { "value": "product", "label": "Produto (cutout)" }, { "value": "ambient", "label": "Ambiente (foto)" } ], "default": "product" },
+        { "type": "image_picker", "id": "image", "label": "Capa" },
+        { "type": "text", "id": "fallback", "label": "Capa padrão (asset)", "info": "Ex.: prod-iphone.png" },
+        { "type": "url", "id": "link", "label": "Link do post" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "post", "settings": { "cat": "seminovo", "tags": "seminovo iphone", "title": "vale a pena comprar iPhone seminovo?", "excerpt": "a real sobre seminovo: quando é o melhor negócio e o que olhar antes.", "meta": "28 mai 2026 · 6 min", "kind": "product", "fallback": "prod-iphone.png" } },
+      { "type": "post", "settings": { "cat": "garantia", "tags": "garantia iphone", "title": "iPhone importado é seguro?", "excerpt": "tudo sobre a garantia internacional Apple, válida no Brasil.", "meta": "21 mai 2026 · 5 min", "kind": "ambient", "fallback": "amb-hero-blog.jpeg" } },
+      { "type": "post", "settings": { "cat": "comparativos", "tags": "comparativos iphone", "title": "iPhone 17 vs 16: qual escolher?", "excerpt": "o upgrade vale em 2026? a real, sem hype.", "meta": "14 mai 2026 · 7 min", "kind": "product", "fallback": "prod-iphone-air.png" } },
+      { "type": "post", "settings": { "cat": "dicas", "tags": "dicas mac", "title": "primeiro mac? por onde começar", "excerpt": "o guia pra quem tá saindo do windows sem susto.", "meta": "7 mai 2026 · 6 min", "kind": "product", "fallback": "prod-macbook-air.png" } },
+      { "type": "post", "settings": { "cat": "dicas", "tags": "dicas watch", "title": "apple watch vale a pena no dia a dia?", "excerpt": "saúde, treino e notificação: o que muda de verdade.", "meta": "30 abr 2026 · 5 min", "kind": "product", "fallback": "prod-watch-ultra.png" } },
+      { "type": "post", "settings": { "cat": "comparativos", "tags": "comparativos airpods", "title": "AirPods Pro 3 valem o upgrade?", "excerpt": "cancelamento de ruído e bateria: o que melhorou.", "meta": "23 abr 2026 · 4 min", "kind": "product", "fallback": "prod-airpods-pro.png" } },
+      { "type": "post", "settings": { "cat": "dicas", "tags": "dicas ipad", "title": "ipad pra trabalhar: dá conta?", "excerpt": "até onde o ipad substitui o notebook em 2026.", "meta": "16 abr 2026 · 6 min", "kind": "product", "fallback": "prod-ipad-pro.png" } },
+      { "type": "post", "settings": { "cat": "garantia", "tags": "garantia seminovo", "title": "como saber se um seminovo é confiável", "excerpt": "imei, bateria e procedência: o checklist completo.", "meta": "9 abr 2026 · 5 min", "kind": "product", "fallback": "prod-iphone-17.png" } }
+    ]
+  }
+}
+{% endschema %}
