@@ -28,6 +28,19 @@
 img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) contrast(1.06)}
 #home-hero-bg.sb-img[data-cool]{filter:saturate(.62) hue-rotate(-16deg) brightness(.92) contrast(1.03)}
 
+/* ============================================================
+   Animações de entrada DESLIGADAS por ora (decisão: ficam pra depois).
+   O .rise do design começa em opacity:0 e só aparece com animação —
+   em Safari (sem animation-timeline) isso esconderia conteúdo.
+   Forço o estado base visível: tudo legível sem animação.
+   ============================================================ */
+.rise,
+.product-card, .porta, .post-card, .faq-row, .cta-band{
+  opacity: 1 !important;
+  translate: 0 0 !important;
+  animation: none !important;
+}
+
 /* ---- placeholder temporário da home (sai na Etapa 2) ---- */
 .sb-placeholder{padding:160px 0;text-align:center}
 .sb-placeholder .headline{font-size:clamp(40px,7vw,72px);margin:16px 0}
