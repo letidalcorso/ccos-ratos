@@ -84,10 +84,9 @@ Sem isso, o teste não prova nada e você perde o argumento mais forte pro dono.
 
 ## Confirmado
 - R$ 7.990 é o preço no Pix. Parcelado varia conforme o número de parcelas.
-- Aceita troca (trade-in) nos seminovos: sim.
+- Aceita troca (trade-in) nos seminovos: sim — **aceita iPhone a partir do 15**.
+- **O que vem na caixa do 17 Pro Max seminovo:** cabo original + película já instalada + capinha de brinde. **Não vem com a caixa.**
 - Verba do teste: R$ 20-30/dia no CTWA por 7-10 dias (a validar com o dono).
 
 ## Ainda a confirmar
-- Cola de valores do parcelado (você falou ~8% em 6x, ~13% em 12x): confirmar a tabela pra eu deixar os valores prontos no script.
-- O que vem na caixa do 17 Pro Max seminovo (carregador, cabo)?
-- Quais modelos aceita na troca?
+- Cola de valores do parcelado (você falou ~8% em 6x, ~13% em 12x): a Leti vai confirmar a tabela pra deixar os valores prontos no script (item 3 da abertura tem o placeholder esperando).
