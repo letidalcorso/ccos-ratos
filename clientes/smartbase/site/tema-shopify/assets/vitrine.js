@@ -5,26 +5,35 @@
   var root = document.querySelector('.vitrine-page');
   if (!root) return;
 
+  var CONDS = ['tudo', 'novos', 'seminovos'];
+  var CATS = ['todos', 'iphone', 'mac', 'ipad', 'watch', 'airpods', 'acessorios'];
   var state = { cond: 'tudo', cat: 'todos' };
 
-  // estado inicial via URL (?cond= / ?cat= ou #novos|#seminovos) — usado pelos links da home
+  function normCond(v) { v = (v || '').toLowerCase(); return CONDS.indexOf(v) >= 0 ? v : null; }
+  function normCat(v) { v = (v || '').toLowerCase(); return CATS.indexOf(v) >= 0 ? v : null; }
+
+  // estado inicial via URL (?cond= / ?cat= ou #novos|#seminovos), validado.
   try {
     var p = new URLSearchParams(location.search);
-    if (p.get('cond')) state.cond = p.get('cond');
-    if (p.get('cat')) state.cat = p.get('cat');
-    var h = (location.hash || '').replace('#', '');
+    var qc = normCond(p.get('cond')); if (qc) state.cond = qc;
+    var qa = normCat(p.get('cat')); if (qa) state.cat = qa;
+    var h = normCond((location.hash || '').replace('#', ''));
     if (h === 'novos' || h === 'seminovos') state.cond = h;
   } catch (e) {}
 
+  function emptyText() {
+    var w = state.cond === 'novos' ? 'de novo' : state.cond === 'seminovos' ? 'de seminovo' : 'aqui';
+    return 'nada ' + w + ' nessa categoria ainda.';
+  }
+
   function apply() {
-    var cards = root.querySelectorAll('.product-card');
-    cards.forEach(function (card) {
+    root.querySelectorAll('.product-card').forEach(function (card) {
       var okCat = state.cat === 'todos' || card.getAttribute('data-cat') === state.cat;
       var okCond = state.cond === 'tudo' || card.getAttribute('data-cond') === state.cond;
       card.hidden = !(okCat && okCond);
     });
 
-    // cabeçalhos de categoria: só aparecem no modo "todos" e quando há cards visíveis
+    // cabeçalhos de categoria: só no modo "todos" e quando há cards visíveis
     root.querySelectorAll('[data-cat-head]').forEach(function (head) {
       var c = head.getAttribute('data-cat-head');
       var visible = root.querySelectorAll('.product-card[data-cat="' + c + '"]:not([hidden])').length;
@@ -35,7 +44,11 @@
 
     var anyVisible = root.querySelectorAll('.product-card:not([hidden])').length > 0;
     var empty = root.querySelector('.vt-empty');
-    if (empty) empty.hidden = anyVisible;
+    if (empty) {
+      empty.hidden = anyVisible;
+      var t = empty.querySelector('.vt-empty-t');
+      if (t) t.textContent = emptyText();
+    }
 
     root.querySelectorAll('.vt-seg-b').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-cond') === state.cond);
