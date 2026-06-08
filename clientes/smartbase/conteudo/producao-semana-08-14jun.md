@@ -5,8 +5,8 @@
 
 ---
 
-## DOM 07 (hoje) — post comercial | CASA SMARTBASE (estático)
-> Movido do dia 08 pro 07: o card já está pronto e é o post que gera caixa antes da viagem de terça.
+## SEG 08 — reel | leva nova (takes do produto)
+> O card estático foi descartado (tom vendedor demais). A leva nova vira REEL de desejo com os takes dos aparelhos. Roteiro de edição e legenda em construção (ver discussão de conteúdo). A copy estática abaixo fica só como histórico, NÃO usar.
 
 **Texto no post (imagem):**
 > chegou leva nova da linha 17, lacrada.

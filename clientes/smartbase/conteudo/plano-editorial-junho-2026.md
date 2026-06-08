@@ -34,20 +34,21 @@
 
 ### Semana parcial — 07 a 14/06 (pré-viagem + volta + abertura da Copa)
 
-**DOM 07 (hoje) — post comercial | CASA SMARTBASE** ⭐ gera caixa antes da viagem · *card pronto no Figma (884:35)*
-- tema: leva nova da linha 17 chegou + paga quando recebe
-- formato: estático
+> **Semana batida com a Letícia em 07/06.** O card estático da leva nova foi descartado (tom vendedor demais). A leva nova vira REEL de desejo com os takes do produto.
 
-**SEG 08 — post | VIDA APPLE EM CAXIAS** (leve, estético)
+**DOM 07 (hoje) — sem post no feed.** Stories normais. (a leva nova virou reel e vai segunda)
+
+**SEG 08 — reel | leva nova (takes do produto)** ⭐ desejo, SEM tom vendedor · *produzir hoje, roteiro de edição pro CapCut*
+- reel editado com os takes dos aparelhos. produto com vida, pouco texto, nada de "compra".
+
+**TER 09 — post | VIDA APPLE EM CAXIAS** (agendar antes de viajar)
 - fotos da cidade (a Letícia fotografa segunda numa volta por Caxias)
 - hook: `caxias na lente do iphone.`
 
-**TER 09 + QUA 10 — VIAGEM (feed não para, tudo agendado antes de sair)**
-- nada ao vivo nem da viagem. grava o material dos roteiros lá.
-- stories seguem normais, **sem mostrar a viagem ao vivo**.
-- **TER 09:** reel da trend (Ariana, 17 pro max laranja) — pronto, mantém o desejo quente e reforça a leva nova
-- **QUA 10:** carrossel saúde da bateria (dica salvável)
-- agendar os dois no Meta antes de viajar na madrugada de terça
+**QUA 10 — reel da trend (Ariana)** (agendar antes de viajar)
+- 17 pro max laranja, vai no feed com capa. áudio pela biblioteca do Instagram.
+
+> Viagem: madrugada de terça 09 até fim de quarta 10. Nada ao vivo. Posts de 09 e 10 agendados no Meta antes de sair. Grava o material dos roteiros lá.
 
 **QUI 11 — post | CASA SMARTBASE (Copa abre)** ⭐ *copy pronta abaixo*
 - tema: o celular como segundo telão da Copa + estoque novo
