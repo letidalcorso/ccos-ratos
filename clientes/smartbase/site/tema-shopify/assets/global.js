@@ -54,4 +54,18 @@
     page.querySelectorAll('.bl-chip').forEach(function (c) { c.classList.toggle('on', c === chip); });
     page.querySelectorAll('.post-card').forEach(function (card) { card.hidden = !blogMatch(card, f); });
   });
+
+  /* abre a 1ª pergunta do FAQ ao carregar (fiel ao protótipo) */
+  var firstFaq = document.querySelector('.faq-page .faq-row');
+  if (firstFaq) {
+    firstFaq.classList.add('open');
+    var fa = firstFaq.querySelector('.faq-a');
+    var fq = firstFaq.querySelector('.faq-q');
+    if (fa) fa.style.maxHeight = fa.scrollHeight + 'px';
+    if (fq) {
+      fq.setAttribute('aria-expanded', 'true');
+      var sg = fq.querySelector('.faq-sign');
+      if (sg) sg.textContent = '–';
+    }
+  }
 })();

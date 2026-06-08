@@ -40,10 +40,10 @@
     <div class="ft-col">
       <span class="ft-h">{{ section.settings.visit_title | default: 'visitar' }}</span>
       {%- if section.settings.address != blank -%}
-        <div class="ft-line">{{ section.settings.address | newline_to_br }}</div>
+        <div class="ft-line">{{ section.settings.address }}</div>
       {%- endif -%}
       {%- if section.settings.hours != blank -%}
-        <div class="ft-line">{{ section.settings.hours | newline_to_br }}</div>
+        <div class="ft-line">{{ section.settings.hours }}</div>
       {%- endif -%}
     </div>
   </div>

@@ -55,6 +55,10 @@ img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) cont
   translate: 0 0 !important;
 }
 
+/* Acordeão do FAQ: respostas começam fechadas (o JS abre via max-height inline).
+   pages.css só tem overflow+transition no .faq-a, sem o estado fechado. */
+.faq-a{max-height:0}
+
 /* ---- placeholder temporário da home (sai na Etapa 2) ---- */
 .sb-placeholder{padding:160px 0;text-align:center}
 .sb-placeholder .headline{font-size:clamp(40px,7vw,72px);margin:16px 0}

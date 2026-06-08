@@ -32,7 +32,7 @@
             assign cool_amb = false
           endif
         -%}
-        <a class="post-card rise" href="{{ bs.link | default: '#' }}" data-cat="{{ bs.cat }}" data-tags="{{ bs.tags }}" {{ block.shopify_attributes }}>
+        <a class="post-card rise"{% if bs.link != blank %} href="{{ bs.link }}"{% endif %} data-cat="{{ bs.cat }}" data-tags="{{ bs.tags }}" {{ block.shopify_attributes }}>
           <div class="post-cover{% if is_product %} is-product{% endif %}">
             {% render 'img-slot', image: bs.image, fallback: bs.fallback, fit: fit, cool: cool_amb, position: '50% 45%', label: 'capa do post' %}
           </div>

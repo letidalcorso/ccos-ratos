@@ -17,21 +17,21 @@
       </svg>
       <div class="ct-map-veil"></div>
       <div class="ct-pin"><span class="ct-pin-ring"></span><span class="ct-pin-dot"></span></div>
-      <div class="ct-map-tag">⚲ {{ s.map_tag }}</div>
+      <div class="ct-map-tag">⚲ {{ s.map_local }} · <span class="ct-warn">{{ s.map_warn }}</span></div>
     </div>
     <div class="ct-info">
       <div class="ct-card">
         <div class="ct-k">endereço</div>
-        <div class="ct-v ct-warn">{{ s.endereco | newline_to_br }}</div>
+        <div class="ct-v ct-warn">{{ s.endereco }}</div>
       </div>
       <div class="ct-card">
         <div class="ct-k">horário</div>
-        <div class="ct-v">{{ s.horario | newline_to_br }}</div>
+        <div class="ct-v">{{ s.horario }}</div>
         {%- if s.horario_note != blank -%}<div class="ct-note">{{ s.horario_note }}</div>{%- endif -%}
       </div>
       <div class="ct-card">
         <div class="ct-k">atendimento</div>
-        <div class="ct-v">{{ s.atendimento | newline_to_br }}</div>
+        <div class="ct-v">{{ s.atendimento }}</div>
       </div>
     </div>
   </section>
@@ -49,7 +49,8 @@
     { "type": "image_picker", "id": "hero_image", "label": "Foto de fundo do hero" },
     { "type": "text", "id": "hero_cta", "label": "Botão do hero", "default": "quero conhecer a loja" },
     { "type": "header", "content": "Mapa" },
-    { "type": "text", "id": "map_tag", "label": "Etiqueta no mapa", "default": "caxias do sul · endereço exato a confirmar" },
+    { "type": "text", "id": "map_local", "label": "Local (no mapa)", "default": "caxias do sul" },
+    { "type": "text", "id": "map_warn", "label": "Aviso (no mapa, em cinza)", "default": "endereço exato a confirmar" },
     { "type": "header", "content": "Cards" },
     { "type": "textarea", "id": "endereco", "label": "Endereço", "default": "[ rua, número · bairro ]\n[ caxias do sul, rs · cep ]" },
     { "type": "textarea", "id": "horario", "label": "Horário", "default": "seg–sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado" },
