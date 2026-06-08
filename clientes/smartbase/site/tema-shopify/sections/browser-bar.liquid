@@ -1,0 +1,33 @@
+{%- comment -%}
+  BrowserBar — chrome de vidro fixo no topo, imita a barra de endereço do navegador.
+  Não é menu de produtos. Botões funcionam via histórico real (global.js).
+{%- endcomment -%}
+{%- assign dom = section.settings.domain | default: request.host -%}
+<div class="chrome-bar" aria-label="navegação do navegador">
+  <span class="navbtns">
+    <button class="cbtn" type="button" data-bb="back" title="voltar" aria-label="voltar"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button class="cbtn" type="button" data-bb="forward" title="avançar" aria-label="avançar"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+  </span>
+  <span class="chrome-url">
+    <svg viewBox="0 0 24 24"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v9H5z"/></svg>
+    <span class="chrome-url-text">{{ dom }}{{ request.path }}</span>
+  </span>
+  <span class="navbtns">
+    <button class="cbtn" type="button" data-bb="reload" title="recarregar" aria-label="recarregar"><svg viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6M5 9a8 8 0 0 1 14-2M19 15a8 8 0 0 1-14 2"/></svg></button>
+    <button class="cbtn" type="button" data-bb="share" title="compartilhar" aria-label="compartilhar"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 21h14"/></svg></button>
+  </span>
+</div>
+
+{% schema %}
+{
+  "name": "Barra do navegador",
+  "settings": [
+    {
+      "type": "text",
+      "id": "domain",
+      "label": "Domínio exibido na barra",
+      "info": "Deixe vazio para mostrar o endereço real. Ex.: smartbasebr.com"
+    }
+  ]
+}
+{% endschema %}

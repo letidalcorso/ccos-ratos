@@ -1,8 +1,8 @@
 /* ============================================================
-   smartbase — tema Shopify · estilos de tema (header real, base)
+   smartbase — tema Shopify · estilos de tema (base)
    Carrega depois de colors_and_type.css + kit.css + pages.css.
-   O header real substitui a "chrome bar + sidebar" do protótipo
-   (que era só dispositivo de apresentação e não vai pro tema).
+   A navegação real são <BrowserBar> + <Sidebar> (estilos em kit.css:
+   .chrome-bar e .sidebar). Aqui ficam só ajustes de base.
    ============================================================ */
 
 /* ---- acessibilidade: pular pro conteúdo ---- */
@@ -14,53 +14,10 @@
 /* ---- fundo "liquid glass" fixo atrás de tudo ---- */
 .sb-bg{position:fixed;inset:0;z-index:-1}
 
-/* ---- header real (glass, alinhado ao conteúdo) ---- */
-.sb-header{position:relative;z-index:80;padding:18px 0}
-.sb-header--sticky{position:sticky;top:0;
-  -webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);
-  background:linear-gradient(180deg,rgba(7,7,14,.72),rgba(7,7,14,.32));
-  border-bottom:1px solid var(--sb-hair)}
-.sb-header-inner{display:flex;align-items:center;gap:24px}
-.sb-logo{text-decoration:none}
-
-.sb-nav{display:flex;align-items:center;gap:28px;margin-left:auto}
-.sb-nav a{font-family:var(--sb-font-text);font-weight:500;font-size:15px;letter-spacing:-.2px;
-  color:var(--sb-platinum);text-decoration:none;transition:color .2s}
-.sb-nav a:hover,.sb-nav a[aria-current=page]{color:var(--sb-white)}
-
-.sb-header-actions{display:flex;align-items:center;gap:12px}
-.sb-header-cta{text-decoration:none}
-
-/* ---- botão hambúrguer (só mobile) ---- */
-.sb-burger{display:none;width:44px;height:44px;border-radius:999px;cursor:pointer;
-  flex-direction:column;align-items:center;justify-content:center;gap:5px;
-  background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.06)),var(--sb-lg-tint-blue);
-  border:1px solid rgba(255,255,255,.22);
-  -webkit-backdrop-filter:blur(24px) saturate(150%);backdrop-filter:blur(24px) saturate(150%)}
-.sb-burger span{display:block;width:18px;height:1.6px;border-radius:2px;background:var(--sb-white);
-  transition:transform .25s ease,opacity .2s ease}
-body.sb-drawer-open .sb-burger span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
-body.sb-drawer-open .sb-burger span:nth-child(2){opacity:0}
-body.sb-drawer-open .sb-burger span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
-
-/* ---- gaveta mobile ---- */
-.sb-drawer{display:none}
-.sb-drawer-nav{display:flex;flex-direction:column;gap:6px;padding:8px 0 4px}
-.sb-drawer-nav a{font-family:var(--sb-font-text);font-weight:500;font-size:18px;
-  color:var(--sb-platinum);text-decoration:none;padding:12px 4px;border-bottom:1px solid var(--sb-hair)}
-.sb-drawer-nav a:hover,.sb-drawer-nav a[aria-current=page]{color:var(--sb-white)}
-.sb-drawer-cta{margin-top:16px;justify-content:center;text-decoration:none}
+/* ---- sidebar: o ícone é um <a>, então tira o sublinhado do link ---- */
+.sidebar .nav-ic{text-decoration:none}
 
 /* ---- placeholder temporário da home (sai na Etapa 2) ---- */
 .sb-placeholder{padding:160px 0;text-align:center}
 .sb-placeholder .headline{font-size:clamp(40px,7vw,72px);margin:16px 0}
 .sb-placeholder .sb-lead{max-width:520px;margin:0 auto}
-
-/* ---- responsivo ---- */
-@media(max-width:820px){
-  .sb-nav{display:none}
-  .sb-header-actions .sb-header-cta{display:none}
-  .sb-burger{display:flex}
-  .sb-drawer[data-sb-drawer]:not([hidden]){display:block}
-  .sb-drawer{padding:0 0 8px}
-}
