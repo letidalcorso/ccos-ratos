@@ -20,6 +20,7 @@
 - **Vender antes da viagem = mais caixa.** Comercial forte em 08/06.
 - **Preço nunca no feed.** Sempre puxa pro WhatsApp.
 - **Cadência:** ~3 posts + 1 reel + stories diários por semana.
+- **Distribuição de reels (decidido 07/06):** trends e conceituais entram no FEED (alcance máximo), com capa caprichada pra manter o grid bonito. Não esconder na aba reels por enquanto, conta pequena precisa de alcance. Revisar quando tiver base.
 
 ## 3 pilares (refinados pra agregar e humanizar)
 

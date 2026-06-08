@@ -83,6 +83,20 @@ Sem foto da Serra eu não monto. Me manda as fotos clicadas em iphone que eu fa�
 
 ---
 
+## Reel da trend (Ariana "7 rings") — pronto, já editado
+Screen-record: vê o modelo, clica no perfil, manda DM, mostra o 17 pro max laranja. Vai no FEED com capa caprichada.
+**Atenção:** adicionar a música pela biblioteca do Instagram ao postar (não deixar embutida) pra não tomar penalidade de direitos.
+
+**Legenda:**
+> vi, gostei, quis, comprei. e foi tudo do celular.
+> é literalmente assim que funciona aqui: você vê o modelo, chama no whats, e paga quando ele tá na tua mão. esse foi um 17 pro max laranja.
+> qual seria o teu?
+> manda no whats que eu te mostro o que tem.
+
+**Hashtags:** #iphone17promax #iphonecaxias #applecaxias #caxiasdosul #serragaucha
+
+**Capa:** a fazer (estilo grid, fundo escuro + 17 pro max laranja + gancho curto).
+
 ## Como agendar no Meta Business Suite (passo a passo)
 
 1. Abre o Meta Business Suite (business.facebook.com) ou o app, com a conta do Instagram conectada.
