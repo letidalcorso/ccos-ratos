@@ -1,0 +1,15 @@
+{%- comment -%}
+  Template de página padrão. Roteia pelo "handle" (apelido) da página:
+  uma página chamada "vitrine" renderiza a seção da vitrine — sem precisar
+  escolher um modelo especial no painel (só "Página padrão").
+  FAQ e Contato entram aqui nas próximas etapas.
+{%- endcomment -%}
+{%- case page.handle -%}
+  {%- when 'vitrine' -%}
+    {% section 'vitrine' %}
+  {%- else -%}
+    <section class="page" style="padding:120px 0 96px">
+      <h1 class="headline" style="font-size:clamp(32px,5vw,56px);margin:0 0 24px">{{ page.title }}</h1>
+      <div class="sb-body">{{ page.content }}</div>
+    </section>
+{%- endcase -%}
