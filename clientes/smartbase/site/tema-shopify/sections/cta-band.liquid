@@ -1,16 +1,38 @@
-{%- comment -%} Faixa pré-rodapé — portado de App.jsx (CtaBand). Uma seção por página. {%- endcomment -%}
+{%- comment -%}
+  Faixa pré-rodapé — portado de App.jsx (CtaBand). Global (todas as páginas).
+  Na vitrine usa a copy própria; nas demais, a padrão.
+{%- endcomment -%}
 {%- assign s = section.settings -%}
+{%- liquid
+  assign is_vitrine = false
+  if page.handle == 'vitrine'
+    assign is_vitrine = true
+  endif
+  if is_vitrine
+    assign eyebrow = s.v_eyebrow
+    assign h1 = s.v_headline_1
+    assign h2 = s.v_headline_2
+    assign sub = s.v_sub
+    assign cta = s.v_cta_label
+  else
+    assign eyebrow = s.eyebrow
+    assign h1 = s.headline_1
+    assign h2 = s.headline_2
+    assign sub = s.sub
+    assign cta = s.cta_label
+  endif
+-%}
 <section class="cta-band rise">
   <div class="cta-band-glow"></div>
   <div class="cta-band-copy">
-    <div class="eyebrow signal cta-band-eyebrow">{{ s.eyebrow }}</div>
+    <div class="eyebrow signal cta-band-eyebrow">{{ eyebrow }}</div>
     <h2 class="headline cta-band-h" style="font-size:clamp(24px,3.6vw,52px);line-height:.98;letter-spacing:-1.2px">
-      <span>{{ s.headline_1 }}</span>{% if s.headline_2 != blank %} <span class="b">{{ s.headline_2 }}</span>{% endif %}
+      <span>{{ h1 }}</span>{% if h2 != blank %} <span class="b">{{ h2 }}</span>{% endif %}
     </h2>
-    <p class="cta-band-sub">{{ s.sub }}</p>
+    <p class="cta-band-sub">{{ sub }}</p>
   </div>
   <div class="cta-band-actions">
-    <a class="btn btn-primary" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">{{ s.cta_label }} <span aria-hidden="true">→</span></a>
+    <a class="btn btn-primary" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">{{ cta }} <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
@@ -18,11 +40,18 @@
 {
   "name": "Faixa pré-rodapé",
   "settings": [
+    { "type": "header", "content": "Padrão (home, faq, contato)" },
     { "type": "text", "id": "eyebrow", "label": "Etiqueta", "default": "pronto pra escolher?" },
     { "type": "text", "id": "headline_1", "label": "Título — parte 1", "default": "você já sabe o que quer." },
     { "type": "text", "id": "headline_2", "label": "Título — parte 2 (azul)", "default": "falta só chamar a gente." },
     { "type": "textarea", "id": "sub", "label": "Texto", "default": "resposta em minutos, no whatsapp. e tu só paga quando o aparelho tá na tua mão." },
-    { "type": "text", "id": "cta_label", "label": "Botão — texto (vai pro WhatsApp)", "default": "vou chamar no whatsapp" }
+    { "type": "text", "id": "cta_label", "label": "Botão — texto", "default": "vou chamar no whatsapp" },
+    { "type": "header", "content": "Vitrine (texto próprio)" },
+    { "type": "text", "id": "v_eyebrow", "label": "Etiqueta", "default": "não achou o que procura?" },
+    { "type": "text", "id": "v_headline_1", "label": "Título — parte 1", "default": "se existe," },
+    { "type": "text", "id": "v_headline_2", "label": "Título — parte 2 (azul)", "default": "a gente acha." },
+    { "type": "textarea", "id": "v_sub", "label": "Texto", "default": "tem a apple inteira pra ti — manda o modelo que tu quer no whatsapp e a gente encontra, confere e te avisa." },
+    { "type": "text", "id": "v_cta_label", "label": "Botão — texto", "default": "vou chamar no whatsapp" }
   ],
   "presets": [{ "name": "Faixa pré-rodapé" }]
 }
