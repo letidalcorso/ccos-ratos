@@ -135,23 +135,19 @@ Design system completo documentado. Sempre consultar antes de qualquer tarefa vi
 
 ## Status do site
 
-One-page em desenvolvimento. Estrutura:
-- **Hero:** "sua apple store. particular."
-- **Novos (sob encomenda):** iPhone, Mac, iPad, Acessórios
-- **Seminovos:** avaliados, 3 meses de garantia própria
-- **Trade-in:** formulário separado (`site/formulario-tradein.html`)
-- **Diferenciais:** 4 cards
-- **Sobre:** texto institucional
-- **CTA Final:** WhatsApp
+**Tema Shopify completo** em `site/tema-shopify/` (recriado do design do claude.ai/design em jun/2026). Substitui o one-page HTML antigo. Enviado pra loja `smartbase-2903.myshopify.com` como tema NÃO publicado: **smartbase #149876408413**.
+Páginas: Home (`/`), Vitrine, FAQ, Contato, Blog (todas via `templates/page.liquid` roteando por handle). Navegação = BrowserBar + Sidebar de ícones (sem top-nav). Produtos e posts são blocos editáveis no tema (não nativos). Conversão 100% WhatsApp, sem carrinho.
+**Estado e próximos passos detalhados:** ler `site/status.md` (fonte da verdade). Falta: trocar imagens placeholder, revisar com o dono e publicar.
 
-**Número de WhatsApp:** 5554996624494 (já aplicado nos HTMLs do site)
+**Número de WhatsApp:** 5554996624494 (em Configurações do tema → Contato & marca).
 
-## Fluxo de produção — site
+## Fluxo de produção — site (tema Shopify)
 
 Ao receber pedido de ajuste no site:
-1. **Ler** o arquivo HTML correspondente antes de qualquer edição
-2. **Aplicar a mudança diretamente no arquivo** — não só descrever no chat
-3. Confirmar o que foi alterado mostrando o trecho antes/depois
+1. **Ler `site/status.md`** e o arquivo correspondente em `site/tema-shopify/` antes de editar
+2. Estrutura oficial Shopify: `sections/`, `snippets/`, `templates/`, `assets/`, `layout/`, `config/`. CSS do design em `assets/` (colors_and_type/kit/pages.css — não reescrever).
+3. Pra ver ao vivo: `shopify theme dev` na pasta `tema-shopify/` (preview em `127.0.0.1:9292`). Pra enviar: `shopify theme push`.
+4. Regras de schema Shopify (aprendidas): nunca `default`+`presets` juntos; setting `url` não aceita `/pages/...` como default; `text` default não pode ser vazio; nome de bloco ≤ 25 chars.
 
 ## Fluxo de produção — posts
 
@@ -168,10 +164,8 @@ Ao receber pedido de post ou carrossel:
 
 ## Arquivos úteis
 
-- `site/index.html` — one-page principal ⭐
-- `site/css/style.css` — tokens visuais e estilos
-- `site/seminovos.html` — página de seminovos
-- `site/formulario-tradein.html` — formulário de trade-in
-- `site/blog.html` — blog (em desenvolvimento)
-- `site/revisao-textos.md` — notas de revisão de textos (aplicar e arquivar após uso)
+- `site/status.md` — estado do site Shopify (fonte da verdade) ⭐
+- `site/tema-shopify/` — tema Shopify completo (layout, sections, templates, snippets, assets, config)
+- `site/design_handoff_shopify_port/` — design original do claude.ai/design (referência; não é o site)
 - `conteudo/semana-1/` — posts da semana 1 (referência de estilo aprovado)
+- (arquivos do one-page antigo — `index.html`, `seminovos.html` etc. — substituídos pelo tema; podem ir pro arquivo morto)
