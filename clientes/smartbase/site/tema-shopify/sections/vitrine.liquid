@@ -1,0 +1,142 @@
+{%- comment -%} Vitrine — portado de VitrinePage.jsx. Filtro client-side (vitrine.js). {%- endcomment -%}
+{%- assign s = section.settings -%}
+<div class="vitrine-page">
+
+  {% render 'page-hero',
+    kicker: s.hero_kicker,
+    line1: s.hero_line1,
+    line2: s.hero_line2,
+    sub: s.hero_sub,
+    bg_image: s.hero_image,
+    bg_fallback: 'amb-hero-store.png',
+    bg_id: 'vitrine-hero-bg',
+    bg_position: '50% 50%' %}
+
+  <section class="page vt-portas rise">
+    <article class="porta rise">
+      <div class="porta-main">
+        <h3 class="porta-title">{{ s.porta_novos_title }}</h3>
+        <div class="porta-sub">{{ s.porta_novos_sub }}</div>
+        {%- if s.porta_novos_note != blank -%}<p class="porta-note">{{ s.porta_novos_note }}</p>{%- endif -%}
+      </div>
+      <div class="porta-gar">
+        <span class="eyebrow signal">garantia</span>
+        <div class="porta-gar-v">{{ s.porta_novos_garantia }}</div>
+      </div>
+    </article>
+    <article class="porta rise">
+      <div class="porta-main">
+        <h3 class="porta-title">{{ s.porta_semi_title }}</h3>
+        <div class="porta-sub">{{ s.porta_semi_sub }}</div>
+        {%- if s.porta_semi_note != blank -%}<p class="porta-note">{{ s.porta_semi_note }}</p>{%- endif -%}
+      </div>
+      <div class="porta-gar">
+        <span class="eyebrow signal">garantia</span>
+        <div class="porta-gar-v">{{ s.porta_semi_garantia }}</div>
+      </div>
+    </article>
+  </section>
+
+  <div class="vt-chips-wrap">
+    <div class="vt-bar">
+      <div class="vt-seg" role="tablist" aria-label="condição">
+        <span class="vt-seg-b on" data-cond="tudo">tudo</span>
+        <span class="vt-seg-b" data-cond="novos">novos</span>
+        <span class="vt-seg-b" data-cond="seminovos">seminovos</span>
+      </div>
+      <span class="vt-bar-div" aria-hidden="true"></span>
+      <div class="vt-chips">
+        <span class="vt-chip on" data-cat="todos">todos</span>
+        <span class="vt-chip" data-cat="iphone">iPhone</span>
+        <span class="vt-chip" data-cat="mac">Mac</span>
+        <span class="vt-chip" data-cat="ipad">iPad</span>
+        <span class="vt-chip" data-cat="watch">Watch</span>
+        <span class="vt-chip" data-cat="airpods">AirPods</span>
+        <span class="vt-chip" data-cat="acessorios">Acessórios</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="page vt-list rise">
+    {%- assign cat_keys = 'iphone,mac,ipad,watch,airpods,acessorios' | split: ',' -%}
+    {%- assign cat_names = 'iPhone,Mac,iPad,Apple Watch,AirPods,Acessórios' | split: ',' -%}
+    {%- for i in (0..5) -%}
+      {%- assign ckey = cat_keys[i] -%}
+      {%- assign count = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'produto' and block.settings.cat == ckey -%}{%- assign count = count | plus: 1 -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if count > 0 -%}
+        <div class="vt-cat-head" data-cat-head="{{ ckey }}">
+          <span class="eyebrow signal">{{ cat_names[i] }}</span>
+          <span class="vt-cat-rule"></span>
+          <span class="vt-cat-n">{{ count }} modelos</span>
+        </div>
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'produto' and block.settings.cat == ckey -%}
+            {% render 'product-card', block: block %}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    <div class="vt-empty" hidden>
+      <div class="vt-empty-t">nada aqui nessa categoria ainda.</div>
+      <p class="vt-empty-s">mas se existe, a gente acha. me diz o que tu procura.</p>
+      <a class="btn btn-primary btn-sm" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">vou chamar no whatsapp <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Vitrine",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_kicker", "label": "Etiqueta", "default": "vitrine" },
+    { "type": "text", "id": "hero_line1", "label": "Título — linha 1", "default": "o teu próximo" },
+    { "type": "text", "id": "hero_line2", "label": "Título — linha 2 (azul)", "default": "está aqui." },
+    { "type": "textarea", "id": "hero_sub", "label": "Texto de apoio", "default": "a apple inteira, particular tua. lacrada ou seminova, sempre com garantia — tu só paga quando ela tá na tua mão." },
+    { "type": "image_picker", "id": "hero_image", "label": "Foto de fundo do hero" },
+    { "type": "header", "content": "Porta: novos" },
+    { "type": "text", "id": "porta_novos_title", "label": "Título", "default": "novos" },
+    { "type": "text", "id": "porta_novos_sub", "label": "Subtítulo", "default": "lacrados. sob encomenda." },
+    { "type": "textarea", "id": "porta_novos_note", "label": "Texto", "default": "a gente encomenda lacrado direto pra ti — sem estoque parado, sem custo repassado. chega em até 7 dias, com nota e garantia Apple." },
+    { "type": "text", "id": "porta_novos_garantia", "label": "Garantia", "default": "apple oficial · 12 meses" },
+    { "type": "header", "content": "Porta: seminovos" },
+    { "type": "text", "id": "porta_semi_title", "label": "Título", "default": "seminovos" },
+    { "type": "text", "id": "porta_semi_sub", "label": "Subtítulo", "default": "em estoque agora. conferidos um a um." },
+    { "type": "textarea", "id": "porta_semi_note", "label": "Texto", "default": "cada seminovo passa por checagem completa — bateria, tela, câmeras e originalidade. fotos reais do aparelho que tu vai receber, com garantia smartbase." },
+    { "type": "text", "id": "porta_semi_garantia", "label": "Garantia", "default": "smartbase · 3 meses" }
+  ],
+  "blocks": [
+    {
+      "type": "produto",
+      "name": "Produto",
+      "settings": [
+        { "type": "select", "id": "cat", "label": "Categoria", "options": [
+          { "value": "iphone", "label": "iPhone" },
+          { "value": "mac", "label": "Mac" },
+          { "value": "ipad", "label": "iPad" },
+          { "value": "watch", "label": "Apple Watch" },
+          { "value": "airpods", "label": "AirPods" },
+          { "value": "acessorios", "label": "Acessórios" }
+        ], "default": "iphone" },
+        { "type": "text", "id": "name", "label": "Nome", "default": "Produto Apple" },
+        { "type": "image_picker", "id": "image", "label": "Foto" },
+        { "type": "text", "id": "fallback", "label": "Imagem padrão (asset)", "info": "Nome do arquivo em assets/. Ex.: prod-iphone.png" },
+        { "type": "textarea", "id": "desc", "label": "Descrição" },
+        { "type": "text", "id": "specs", "label": "Specs (separe com ;)" },
+        { "type": "text", "id": "colors", "label": "Cores (nome:#hex separados por ;)", "info": "Ex.: cosmic orange:#c2622f; navy:#26344c" },
+        { "type": "select", "id": "cond", "label": "Condição", "options": [
+          { "value": "novo", "label": "Novo · lacrado (sob encomenda)" },
+          { "value": "seminovo", "label": "Seminovo · conferido (em estoque)" }
+        ], "default": "novo" },
+        { "type": "checkbox", "id": "in_stock", "label": "Disponível (bolinha verde)", "default": true },
+        { "type": "text", "id": "price", "label": "Preço (vazio = sob consulta)" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Vitrine" }]
+}
+{% endschema %}

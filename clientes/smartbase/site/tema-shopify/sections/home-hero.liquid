@@ -19,7 +19,7 @@
       <div class="hm-hero-foot">
         <span class="eyebrow">{{ s.location }}</span>
         <div class="hm-hero-ctas">
-          {%- if s.cta1_label != blank -%}<a class="btn btn-primary" href="{{ s.cta1_link | default: '/collections/all' }}">{{ s.cta1_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+          {%- if s.cta1_label != blank -%}<a class="btn btn-primary" href="{{ s.cta1_link | default: '/pages/vitrine' }}">{{ s.cta1_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
           {%- if s.cta2_label != blank -%}<a class="btn btn-glass" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">{{ s.cta2_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
         </div>
       </div>
@@ -46,7 +46,7 @@
     { "type": "text", "id": "location", "label": "Localização", "default": "caxias do sul · serra gaúcha" },
     { "type": "header", "content": "Botões" },
     { "type": "text", "id": "cta1_label", "label": "Botão 1 — texto", "default": "quero ver a vitrine" },
-    { "type": "url", "id": "cta1_link", "label": "Botão 1 — link", "default": "/collections/all" },
+    { "type": "url", "id": "cta1_link", "label": "Botão 1 — link" },
     { "type": "text", "id": "cta2_label", "label": "Botão 2 — texto (vai pro WhatsApp)", "default": "vou chamar no whatsapp" }
   ],
   "presets": [{ "name": "Home · Hero" }]

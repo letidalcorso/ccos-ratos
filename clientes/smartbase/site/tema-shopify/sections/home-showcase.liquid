@@ -64,7 +64,7 @@
         </div>
         <div class="hms-grid">
           {%- for block in categories -%}
-            <a class="hms-card" href="{{ block.settings.link | default: '/collections/all' }}" {{ block.shopify_attributes }}>
+            <a class="hms-card" href="{{ block.settings.link | default: '/pages/vitrine' }}" {{ block.shopify_attributes }}>
               <div class="hms-pimg">
                 {%- if block.settings.image != blank -%}
                   <img src="{{ block.settings.image | image_url: width: 400 }}" alt="{{ block.settings.label | escape }}" loading="lazy">
@@ -84,7 +84,7 @@
           <div class="t">{{ s.semi_title }}</div>
           <div class="s">{{ s.semi_sub }}</div>
         </div>
-        <a class="hms-pl-cta" href="{{ s.semi_link | default: '/collections/all' }}">{{ s.semi_cta }} <span class="ar" aria-hidden="true">→</span></a>
+        <a class="hms-pl-cta" href="{{ s.semi_link | default: '/pages/vitrine?cond=seminovos' }}">{{ s.semi_cta }} <span class="ar" aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@
     { "type": "text", "id": "semi_title", "label": "Título", "default": "semi novos" },
     { "type": "text", "id": "semi_sub", "label": "Subtítulo", "default": "conferidos um a um, com garantia — vê o que tá disponível" },
     { "type": "text", "id": "semi_cta", "label": "Botão — texto", "default": "ver semi novos" },
-    { "type": "url", "id": "semi_link", "label": "Botão — link", "default": "/collections/all" }
+    { "type": "url", "id": "semi_link", "label": "Botão — link" }
   ],
   "blocks": [
     {

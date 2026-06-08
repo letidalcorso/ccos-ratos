@@ -1,0 +1,66 @@
+{%- comment -%}
+  Card de produto da vitrine. Portado de VitrinePage.jsx (ProductCard).
+  Recebe: block (bloco 'produto'). data-cat / data-cond pro filtro JS.
+{%- endcomment -%}
+{%- liquid
+  assign s = block.settings
+  assign novo = false
+  if s.cond == 'novo'
+    assign novo = true
+  endif
+  if novo
+    assign cond_text = 'novo · lacrado'
+    assign status = 'sob encomenda'
+    assign dcond = 'novos'
+  else
+    assign cond_text = 'seminovo · conferido'
+    assign status = 'em estoque'
+    assign dcond = 'seminovos'
+  endif
+-%}
+<article class="product-card rise" data-cat="{{ s.cat }}" data-cond="{{ dcond }}" {{ block.shopify_attributes }}>
+  <div class="pc-photo">
+    {%- if s.image != blank -%}
+      <img class="product-img" src="{{ s.image | image_url: width: 800 }}" alt="{{ s.name | escape }}" loading="lazy">
+    {%- elsif s.fallback != blank -%}
+      <img class="product-img" src="{{ s.fallback | asset_url }}" alt="{{ s.name | escape }}" loading="lazy">
+    {%- endif -%}
+  </div>
+  <div class="pc-body">
+    <div class="pc-top">
+      <div class="eyebrow signal">{{ s.cat }}</div>
+      <span class="pc-cond{% if novo %} novo{% endif %}">{{ cond_text }}</span>
+      <span class="pc-status"><i{% if s.in_stock %} class="ok"{% endif %}></i>{{ status }}</span>
+    </div>
+    <h3 class="pc-name">{{ s.name }}</h3>
+    {%- if s.desc != blank -%}<p class="pc-desc">{{ s.desc }}</p>{%- endif -%}
+    {%- if s.specs != blank -%}
+      <div class="pc-specs">
+        {%- assign specs = s.specs | split: ';' -%}
+        {%- for sp in specs -%}<div>{{ sp | strip }}</div>{%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- if s.colors != blank -%}
+      {%- assign colors = s.colors | split: ';' -%}
+      <div class="pc-colors">
+        {%- for c in colors -%}
+          {%- assign pair = c | split: ':' -%}
+          <span class="pc-dot" style="background:{{ pair[1] | strip }}" title="{{ pair[0] | strip }}"></span>
+        {%- endfor -%}
+        <span class="pc-colors-n">{{ colors.size }} cores</span>
+      </div>
+    {%- endif -%}
+    <div class="pc-foot">
+      <div class="pc-buy">
+        <div class="pc-price">
+          {%- if s.price != blank -%}
+            {%- if novo -%}<div class="from">a partir de</div>{%- endif -%}<div class="a">{{ s.price }}</div>
+          {%- else -%}
+            <div class="a">sob consulta</div><div class="b">no whatsapp →</div>
+          {%- endif -%}
+        </div>
+        <a class="btn btn-primary btn-sm" href="{% render 'wa-link', produto: s.name %}" target="_blank" rel="noopener noreferrer">quero esse <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</article>
