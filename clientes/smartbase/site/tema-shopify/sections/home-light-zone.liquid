@@ -1,0 +1,98 @@
+{%- comment -%}
+  Home · Zona clara — fundo branco contínuo com os 3 filhos do JSX:
+  emblema "sb" em vidro (SbGlass) + banda editorial + como funciona.
+  Portado de HomePage.jsx (hm-light-zone wrapper).
+{%- endcomment -%}
+{%- assign s = section.settings -%}
+<div class="hm-light-zone">
+
+  {%- comment -%} emblema "sb" em vidro {%- endcomment -%}
+  <div class="hm-band-emblem" aria-hidden="true">
+    <span class="sbmark-s">s</span>
+    <span class="sbmark-b">b</span>
+  </div>
+
+  {%- comment -%} banda editorial {%- endcomment -%}
+  <section class="hm-band hm-band-color rise">
+    <div class="hm-band-glow" aria-hidden="true"></div>
+    <div class="hm-band-inner page hm-band-2col">
+      <div class="hm-band-copy">
+        <div class="eyebrow">{{ s.band_eyebrow }}</div>
+        <h2 class="hm-band-quote">{{ s.band_quote_1 }}{% if s.band_quote_2 != blank %}<br><span class="b">{{ s.band_quote_2 }}</span>{% endif %}</h2>
+        <p class="hm-band-sub">{{ s.band_sub }}</p>
+      </div>
+      <div class="hm-band-actions">
+        {%- if s.band_cta_label != blank -%}<a class="btn btn-primary" href="{{ s.band_cta_link | default: '/pages/contato' }}">{{ s.band_cta_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} como funciona {%- endcomment -%}
+  <section class="hm-steps rise">
+    <div class="page">
+      <div class="eyebrow signal">{{ s.steps_eyebrow }}</div>
+      <h2 class="headline" style="font-size:clamp(24px,3.6vw,52px);line-height:.98;letter-spacing:-1.2px">
+        <span>{{ s.steps_headline_1 }}</span>{% if s.steps_headline_2 != blank %}<br><span class="b">{{ s.steps_headline_2 }}</span>{% endif %}
+      </h2>
+      <div class="hm-steps-grid stagger rise">
+        {%- for block in section.blocks -%}
+          <article class="step" {{ block.shopify_attributes }}>
+            <span class="step-ghost">{{ block.settings.n }}</span>
+            <span class="step-n">{{ block.settings.n }}</span>
+            <h3 class="step-t">{{ block.settings.title }}</h3>
+            <p class="step-d">{{ block.settings.text }}</p>
+          </article>
+        {%- endfor -%}
+      </div>
+      {%- if s.note_text != blank -%}
+        <div class="hm-steps-note">
+          <span class="hm-steps-note-label">{{ s.note_label | default: 'obs' }}</span>
+          <p class="hm-steps-note-t">{{ s.note_text }}</p>
+        </div>
+      {%- endif -%}
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Home · Zona clara",
+  "settings": [
+    { "type": "header", "content": "Banda editorial" },
+    { "type": "text", "id": "band_eyebrow", "label": "Etiqueta", "default": "na serra gaúcha" },
+    { "type": "text", "id": "band_quote_1", "label": "Frase — linha 1", "default": "não é só vender apple." },
+    { "type": "text", "id": "band_quote_2", "label": "Frase — linha 2 (azul)", "default": "é indicar o certo pra você." },
+    { "type": "textarea", "id": "band_sub", "label": "Texto de apoio", "default": "loja física em caxias do sul, atendendo o Brasil inteiro pelo whatsapp. quem te responde usa apple todo dia — e fala a real." },
+    { "type": "text", "id": "band_cta_label", "label": "Botão — texto", "default": "quero conhecer a loja" },
+    { "type": "url", "id": "band_cta_link", "label": "Botão — link", "default": "/pages/contato" },
+    { "type": "header", "content": "Como funciona" },
+    { "type": "text", "id": "steps_eyebrow", "label": "Etiqueta", "default": "como funciona" },
+    { "type": "text", "id": "steps_headline_1", "label": "Título — linha 1", "default": "simples assim." },
+    { "type": "text", "id": "steps_headline_2", "label": "Título — linha 2 (azul)", "default": "do oi ao na tua mão." },
+    { "type": "header", "content": "Observação (opcional)" },
+    { "type": "text", "id": "note_label", "label": "Rótulo", "default": "obs" },
+    { "type": "text", "id": "note_text", "label": "Texto da observação", "info": "Deixe vazio para esconder.", "default": "" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Passo",
+      "settings": [
+        { "type": "text", "id": "n", "label": "Número", "default": "01" },
+        { "type": "text", "id": "title", "label": "Título", "default": "título do passo" },
+        { "type": "textarea", "id": "text", "label": "Texto", "default": "descrição do passo." }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "default": {
+    "blocks": [
+      { "type": "step", "settings": { "n": "01", "title": "tu chama no whatsapp", "text": "manda o modelo que tu quer. quem responde entende de apple — sem robô, sem formulário." } },
+      { "type": "step", "settings": { "n": "02", "title": "a gente acha e confere", "text": "novo lacrado sob encomenda ou seminovo conferido um a um. sempre com garantia de verdade." } },
+      { "type": "step", "settings": { "n": "03", "title": "primeiro chega. depois paga.", "text": "o aparelho chega na tua mão antes do dinheiro sair da tua conta. esse é o combinado." } }
+    ]
+  },
+  "presets": [{ "name": "Home · Zona clara" }]
+}
+{% endschema %}

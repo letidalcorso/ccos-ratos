@@ -1,8 +1,39 @@
 {
   "sections": {
-    "main": {
-      "type": "placeholder-home"
-    }
+    "hero": { "type": "home-hero" },
+    "posicionamento": { "type": "posicionamento" },
+    "diferenciais": {
+      "type": "diferenciais",
+      "blocks": {
+        "d1": { "type": "card", "settings": { "hero": true, "n": "01", "title": "primeiro chega. depois paga.", "text": "o iphone chega na tua mão antes do dinheiro sair da tua conta." } },
+        "d2": { "type": "card", "settings": { "hero": false, "n": "02", "title": "loja física em caxias", "text": "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho." } },
+        "d3": { "type": "card", "settings": { "hero": false, "n": "03", "title": "atendimento humano", "text": "sem chatbot, sem formulário. tu chama no whatsapp e quem responde entende de apple." } },
+        "d4": { "type": "card", "settings": { "hero": false, "n": "04", "title": "só apple", "text": "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica." } }
+      },
+      "block_order": ["d1", "d2", "d3", "d4"]
+    },
+    "light-zone": {
+      "type": "home-light-zone",
+      "blocks": {
+        "p1": { "type": "step", "settings": { "n": "01", "title": "tu chama no whatsapp", "text": "manda o modelo que tu quer. quem responde entende de apple — sem robô, sem formulário." } },
+        "p2": { "type": "step", "settings": { "n": "02", "title": "a gente acha e confere", "text": "novo lacrado sob encomenda ou seminovo conferido um a um. sempre com garantia de verdade." } },
+        "p3": { "type": "step", "settings": { "n": "03", "title": "primeiro chega. depois paga.", "text": "o aparelho chega na tua mão antes do dinheiro sair da tua conta. esse é o combinado." } }
+      },
+      "block_order": ["p1", "p2", "p3"]
+    },
+    "showcase": {
+      "type": "home-showcase",
+      "blocks": {
+        "c1": { "type": "category", "settings": { "label": "mac", "fallback": "prod-mac.png", "link": "/collections/all" } },
+        "c2": { "type": "category", "settings": { "label": "ipad", "fallback": "prod-ipad.png", "link": "/collections/all" } },
+        "c3": { "type": "category", "settings": { "label": "iphone", "fallback": "prod-iphone.png", "link": "/collections/all" } },
+        "c4": { "type": "category", "settings": { "label": "watch", "fallback": "prod-watch.png", "link": "/collections/all" } },
+        "c5": { "type": "category", "settings": { "label": "airpods", "fallback": "prod-airpods.png", "link": "/collections/all" } },
+        "c6": { "type": "category", "settings": { "label": "acessórios", "fallback": "prod-acessorios.png", "link": "/collections/all" } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4", "c5", "c6"]
+    },
+    "cta": { "type": "cta-band" }
   },
-  "order": ["main"]
+  "order": ["hero", "posicionamento", "diferenciais", "light-zone", "showcase", "cta"]
 }

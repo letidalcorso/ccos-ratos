@@ -1,0 +1,29 @@
+{%- comment -%} Faixa pré-rodapé — portado de App.jsx (CtaBand). Uma seção por página. {%- endcomment -%}
+{%- assign s = section.settings -%}
+<section class="cta-band rise">
+  <div class="cta-band-glow"></div>
+  <div class="cta-band-copy">
+    <div class="eyebrow signal cta-band-eyebrow">{{ s.eyebrow }}</div>
+    <h2 class="headline cta-band-h" style="font-size:clamp(24px,3.6vw,52px);line-height:.98;letter-spacing:-1.2px">
+      <span>{{ s.headline_1 }}</span>{% if s.headline_2 != blank %} <span class="b">{{ s.headline_2 }}</span>{% endif %}
+    </h2>
+    <p class="cta-band-sub">{{ s.sub }}</p>
+  </div>
+  <div class="cta-band-actions">
+    <a class="btn btn-primary" href="{% render 'wa-link' %}" target="_blank" rel="noopener">{{ s.cta_label }} <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Faixa pré-rodapé",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta", "default": "pronto pra escolher?" },
+    { "type": "text", "id": "headline_1", "label": "Título — parte 1", "default": "você já sabe o que quer." },
+    { "type": "text", "id": "headline_2", "label": "Título — parte 2 (azul)", "default": "falta só chamar a gente." },
+    { "type": "textarea", "id": "sub", "label": "Texto", "default": "resposta em minutos, no whatsapp. e tu só paga quando o aparelho tá na tua mão." },
+    { "type": "text", "id": "cta_label", "label": "Botão — texto (vai pro WhatsApp)", "default": "vou chamar no whatsapp" }
+  ],
+  "presets": [{ "name": "Faixa pré-rodapé" }]
+}
+{% endschema %}
