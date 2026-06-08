@@ -1,0 +1,51 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "smartbase",
+    "theme_version": "1.0.0",
+    "theme_author": "Solz Lab",
+    "theme_documentation_url": "https://wa.me/5554996624494",
+    "theme_support_url": "https://wa.me/5554996624494"
+  },
+  {
+    "name": "Contato & marca",
+    "settings": [
+      {
+        "type": "header",
+        "content": "WhatsApp & telefone"
+      },
+      {
+        "type": "paragraph",
+        "content": "Esse número é usado em todos os botões de WhatsApp e no link 'ligar' do site."
+      },
+      {
+        "type": "text",
+        "id": "wa_number",
+        "label": "Número do WhatsApp",
+        "info": "Só dígitos, com código do país. Ex.: 5554996624494",
+        "default": "5554996624494"
+      },
+      {
+        "type": "text",
+        "id": "phone_display",
+        "label": "Telefone (como aparece no site)",
+        "default": "+55 54 99662-4494"
+      },
+      {
+        "type": "header",
+        "content": "Redes sociais"
+      },
+      {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram (link)"
+      },
+      {
+        "type": "text",
+        "id": "instagram_handle",
+        "label": "Instagram (@ exibido)",
+        "default": "@smartbase.br"
+      }
+    ]
+  }
+]
