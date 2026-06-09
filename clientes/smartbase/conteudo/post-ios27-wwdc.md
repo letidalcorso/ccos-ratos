@@ -13,14 +13,29 @@ Ensina algo real e útil (qual iPhone roda a IA nova), constrói autoridade, e a
 - A Siri nova sai primeiro em INGLÊS, nos EUA. Português brasileiro não tem data e deve demorar. A copy NÃO promete Siri em português, só fala do modelo que roda a tecnologia.
 - Instalar o iOS 27 (todo iPhone do 11+) é diferente de rodar a Siri AI / Apple Intelligence (só 15 Pro, 15 Pro Max e 16+). Não confundir os dois.
 
-## Slides
-1. (capa, LightCopy premissa) decifra apple · não, tu não precisa trocar de iphone pro iOS 27 · mas pra ter a inteligência nova, a história muda · arrasta →
-2. 11+ · roda em todo iphone do 11 pra cima · a atualização é de graça. dessa vez a apple não cortou nenhum modelo da lista.
-3. e deixa tudo mais rápido · 30% apps abrem mais rápido · 70% fotos carregam mais rápido · 80% airdrop mais rápido · ganho que vale até pros iphones mais antigos.
-4. a novidade · a siri ganhou um cérebro novo · agora ela conversa de ir e voltar, entende o que tem nos teus apps e acha o que tu precisa nas mensagens e fotos.
-5. mas tem um porém · 15 pro pra cima · a siri nova só roda no iphone 15 pro, 15 pro max e do 16 em diante. é o chip que segura, não destrava com atualização.
-6. no resumo · todo iphone do 11+ → fica mais rápido com o iOS 27, de graça · a inteligência nova → pede um 15 pro, 15 pro max ou do 16 pra cima.
-7. (cta) quer um que roda tudo? · os 17 pro max seminovos que chegaram rodam a apple intelligence completa, com bateria 100% e garantia apple · chama no whats →
+## Slides (arco de storytelling — 8 cards)
+Cada slide fecha puxando o próximo (open loop). Arco: gancho → contexto → presente → desejo → virada → régua → clareza → desfecho.
+
+1. **gancho** (LightCopy) · decifra apple · não, tu não precisa trocar de iphone pro iOS 27 · mas pra ter a inteligência nova, a história muda · arrasta →
+2. **contexto** · ontem a apple soltou o iOS 27 · e dessa vez ninguém ficou de fora: roda em todo iphone do 11 pra cima.
+3. **o presente** · primeiro, a boa notícia · teu aparelho fica mais rápido de graça: app abre 30% mais ligeiro, foto 70%, airdrop 80%.
+4. **a estrela** (desejo) · a estrela do anúncio é a siri · ela ganhou um cérebro novo: conversa de verdade, entende teus apps e acha o que tu precisa nas mensagens e fotos.
+5. **a virada** · e é aqui que vem a pegadinha · essa siri nova não roda em qualquer iphone.
+6. **a régua** · ela só funciona do iphone 15 pro pra cima · é o chip que decide, não a atualização.
+7. **clareza** · resumindo a história · todo iphone do 11+ fica mais rápido. a inteligência de verdade pede um 15 pro, 15 pro max ou 16+.
+8. **desfecho + cta** · e é exatamente esse aparelho que a gente traz · 17 pro max seminovo, bateria 100%, garantia apple, conferido na tua mão · chama no whats →
+
+## Imagens (direção: mix — produto real recortado + IA conceitual)
+Gerar via inference.sh (app `infsh/flux`). Estética: fundo quase-preto (#07070E), glow azul elétrico (#3E82F7), acento laranja pontual (amarra com o 17 pro max laranja). Editorial, cinematográfico, premium, sem logos de marca. Retrato 4:5.
+
+- **S1 gancho** — mão em sombra segurando um smartphone com a tela acesa em azul, luz de recorte dramática, fundo preto, muito espaço negativo, cinematográfico.
+- **S2 contexto** — partículas/linhas de luz azul formando uma interface abstrata surgindo no escuro, sensação de "sistema novo ligando".
+- **S3 presente** — rastros de luz azul em alta velocidade (long-exposure), movimento pra frente, energia, fundo escuro.
+- **S4 estrela (siri)** — orbe/aura iridescente flutuando no escuro, brilho azul-violeta, energia de IA, abstrato, premium.
+- **S5 virada (pegadinha)** — tensão: lupa sobre letra miúda no escuro com destaque azul, ou um facho revelando um detalhe escondido.
+- **S6 régua (chip)** — macro extremo de um chip/silício, trilhas de circuito acesas em azul, tecnológico, premium (sem logo). "é o chip que decide".
+- **S7 clareza** — minimal: dois caminhos/colunas de luz divergindo no escuro, calmo, resolvido.
+- **S8 cta** — o 17 pro max LARANJA REAL (recorte das fotos próprias) sobre fundo escuro + glow. Sem IA aqui, produto de verdade = confiança.
 
 ## Legenda
 > não, tu não precisa trocar de iphone pra ter o iOS 27. a atualização é de graça e deixa todo iphone do 11 pra cima mais rápido.
