@@ -14,7 +14,7 @@ Ensina algo real e útil (qual iPhone roda a IA nova), constrói autoridade, e a
 - Instalar o iOS 27 (todo iPhone do 11+) é diferente de rodar a Siri AI / Apple Intelligence (só 15 Pro, 15 Pro Max e 16+). Não confundir os dois.
 
 ## Slides
-1. (capa) decifra apple · a apple anunciou o iOS 27 · e tem um detalhe que vale entender antes de achar que precisa trocar de aparelho · arrasta →
+1. (capa, LightCopy premissa) decifra apple · não, tu não precisa trocar de iphone pro iOS 27 · mas pra ter a inteligência nova, a história muda · arrasta →
 2. 11+ · roda em todo iphone do 11 pra cima · a atualização é de graça. dessa vez a apple não cortou nenhum modelo da lista.
 3. e deixa tudo mais rápido · 30% apps abrem mais rápido · 70% fotos carregam mais rápido · 80% airdrop mais rápido · ganho que vale até pros iphones mais antigos.
 4. a novidade · a siri ganhou um cérebro novo · agora ela conversa de ir e voltar, entende o que tem nos teus apps e acha o que tu precisa nas mensagens e fotos.
@@ -23,8 +23,8 @@ Ensina algo real e útil (qual iPhone roda a IA nova), constrói autoridade, e a
 7. (cta) quer um que roda tudo? · os 17 pro max seminovos que chegaram rodam a apple intelligence completa, com bateria 100% e garantia apple · chama no whats →
 
 ## Legenda
-> a apple anunciou o iOS 27 e tem uma confusão que vale entender antes de achar que precisa trocar de aparelho.
-> a atualização é de graça e deixa todo iphone do 11 pra cima mais rápido. mas a siri nova, a que conversa e entende teus apps, só roda do 15 pro pra cima. é questão de chip.
+> não, tu não precisa trocar de iphone pra ter o iOS 27. a atualização é de graça e deixa todo iphone do 11 pra cima mais rápido.
+> mas pra ter a inteligência nova, a história muda: a siri que conversa e entende teus apps só roda do 15 pro pra cima. é questão de chip.
 > salva esse aqui pra não cair em conversa de vendedor. e se quiser um modelo que roda tudo, chama no whats.
 
 **Hashtags:** #ios27 #apple #iphonecaxias #applecaxias #caxiasdosul
