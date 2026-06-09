@@ -7,6 +7,7 @@
 - **Publicado (LIVE)** na loja `smartbase-2903.myshopify.com`: nome **smartbase**, ID **#149876408413**. É o tema ativo do site. Push de mudanças: `shopify theme push --theme 149876408413 --allow-live` (de dentro de `tema-shopify/`).
 
 ## Mudanças recentes
+- **2026-06-09 — Botão 2 (secundário) na faixa pré-rodapé:** cada página ganhou um 2º botão de vidro (`{p}_btn2_label` / `_btn2_url` / `_btn2_blank`) que **só aparece quando o texto está preenchido** (liga/desliga por página). Padrão: vitrine = "tirar dúvidas no FAQ" → página FAQ; demais vazias. Mantidas as nossas classes `.btn`/`.btn-glass` (não as `.sb-btn` do pacote). Heroes já eram por página (image_picker próprio) — sem mudança. Implementação porta os recursos do `design_handoff_shopify_port/cta-band.liquid` pra nossa faixa global (roteamento por handle), sem migrar pra templates JSON por página.
 - **2026-06-08 — Faixa pré-rodapé por página + correção do FAQ:**
   - `sections/cta-band.liquid` reescrita: copy/botão/**destino** (whatsapp · vitrine · link) próprios por página (home, vitrine, faq, contato, blog) + **liga-desliga por página**, tudo no painel (Personalizar → Faixa pré-rodapé), agrupado por página. IDs de campo mudaram (h_/v_/f_/c_/b_) — se houver customização antiga salva, volta aos novos defaults validados.
   - `sections/faq.liquid`: removido o "fechamento" embutido (`.faq-end`) que duplicava o CTA — agora só a faixa unificada (destino = vitrine). Hero do FAQ passou a usar `amb-iphones.png` (antes dividia a foto do blog).

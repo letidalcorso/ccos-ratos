@@ -32,6 +32,10 @@
   assign id_dest = p | append: '_dest'
   assign id_link = p | append: '_link'
 
+  assign id_b2label = p | append: '_btn2_label'
+  assign id_b2url = p | append: '_btn2_url'
+  assign id_b2blank = p | append: '_btn2_blank'
+
   assign show = s[id_show]
   assign eyebrow = s[id_eyebrow]
   assign h1 = s[id_h1]
@@ -40,8 +44,11 @@
   assign cta = s[id_cta]
   assign dest = s[id_dest]
   assign link = s[id_link]
+  assign btn2_label = s[id_b2label]
+  assign btn2_url = s[id_b2url]
+  assign btn2_blank = s[id_b2blank]
 
-  # destino do botão
+  # destino do botão principal
   assign href = '/'
   assign blank = false
   if dest == 'whatsapp'
@@ -51,6 +58,16 @@
     assign href = '/pages/vitrine'
   elsif dest == 'link'
     assign href = link
+  endif
+
+  # botão 2 (secundário) — aparece só quando tem rótulo. Vitrine cai no FAQ por padrão.
+  assign btn2_href = btn2_url
+  if btn2_href == blank
+    if p == 'v'
+      assign btn2_href = '/pages/faq'
+    else
+      assign btn2_href = '#'
+    endif
   endif
 -%}
 {%- if show -%}
@@ -65,6 +82,9 @@
   </div>
   <div class="cta-band-actions">
     <a class="btn btn-primary" href="{{ href | default: '/' }}"{% if blank %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ cta }} <span aria-hidden="true">→</span></a>
+    {%- if btn2_label != blank -%}
+      <a class="btn btn-glass" href="{{ btn2_href | default: '#' }}"{% if btn2_blank %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ btn2_label }} <span aria-hidden="true">→</span></a>
+    {%- endif -%}
   </div>
 </section>
 {%- endif -%}
@@ -84,6 +104,9 @@
     { "type": "text", "id": "h_cta", "label": "Botão — texto", "default": "vou chamar no whatsapp" },
     { "type": "select", "id": "h_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
     { "type": "url", "id": "h_link", "label": "Link próprio (se destino = Link próprio)" },
+    { "type": "text", "id": "h_btn2_label", "label": "Botão 2 — texto (deixe vazio pra esconder)" },
+    { "type": "url", "id": "h_btn2_url", "label": "Botão 2 — link" },
+    { "type": "checkbox", "id": "h_btn2_blank", "label": "Botão 2 — abrir em nova aba", "default": false },
 
     { "type": "header", "content": "Vitrine" },
     { "type": "checkbox", "id": "v_show", "label": "Mostrar faixa na vitrine", "default": true },
@@ -94,6 +117,9 @@
     { "type": "text", "id": "v_cta", "label": "Botão — texto", "default": "vou chamar no whatsapp" },
     { "type": "select", "id": "v_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
     { "type": "url", "id": "v_link", "label": "Link próprio (se destino = Link próprio)" },
+    { "type": "text", "id": "v_btn2_label", "label": "Botão 2 — texto (deixe vazio pra esconder)", "default": "tirar dúvidas no FAQ" },
+    { "type": "url", "id": "v_btn2_url", "label": "Botão 2 — link", "info": "Vazio = vai pra página FAQ." },
+    { "type": "checkbox", "id": "v_btn2_blank", "label": "Botão 2 — abrir em nova aba", "default": false },
 
     { "type": "header", "content": "FAQ" },
     { "type": "checkbox", "id": "f_show", "label": "Mostrar faixa no FAQ", "default": true },
@@ -104,6 +130,9 @@
     { "type": "text", "id": "f_cta", "label": "Botão — texto", "default": "vou escolher meu aparelho" },
     { "type": "select", "id": "f_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "vitrine" },
     { "type": "url", "id": "f_link", "label": "Link próprio (se destino = Link próprio)" },
+    { "type": "text", "id": "f_btn2_label", "label": "Botão 2 — texto (deixe vazio pra esconder)" },
+    { "type": "url", "id": "f_btn2_url", "label": "Botão 2 — link" },
+    { "type": "checkbox", "id": "f_btn2_blank", "label": "Botão 2 — abrir em nova aba", "default": false },
 
     { "type": "header", "content": "Contato" },
     { "type": "checkbox", "id": "c_show", "label": "Mostrar faixa no contato", "default": true },
@@ -114,6 +143,9 @@
     { "type": "text", "id": "c_cta", "label": "Botão — texto", "default": "chamar no whatsapp" },
     { "type": "select", "id": "c_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
     { "type": "url", "id": "c_link", "label": "Link próprio (se destino = Link próprio)" },
+    { "type": "text", "id": "c_btn2_label", "label": "Botão 2 — texto (deixe vazio pra esconder)" },
+    { "type": "url", "id": "c_btn2_url", "label": "Botão 2 — link" },
+    { "type": "checkbox", "id": "c_btn2_blank", "label": "Botão 2 — abrir em nova aba", "default": false },
 
     { "type": "header", "content": "Blog" },
     { "type": "checkbox", "id": "b_show", "label": "Mostrar faixa no blog", "default": true },
@@ -123,7 +155,10 @@
     { "type": "textarea", "id": "b_sub", "label": "Texto", "default": "da teoria pro teu próximo apple: manda o modelo no whatsapp que a gente resolve." },
     { "type": "text", "id": "b_cta", "label": "Botão — texto", "default": "falar no whatsapp" },
     { "type": "select", "id": "b_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
-    { "type": "url", "id": "b_link", "label": "Link próprio (se destino = Link próprio)" }
+    { "type": "url", "id": "b_link", "label": "Link próprio (se destino = Link próprio)" },
+    { "type": "text", "id": "b_btn2_label", "label": "Botão 2 — texto (deixe vazio pra esconder)" },
+    { "type": "url", "id": "b_btn2_url", "label": "Botão 2 — link" },
+    { "type": "checkbox", "id": "b_btn2_blank", "label": "Botão 2 — abrir em nova aba", "default": false }
   ],
   "presets": [{ "name": "Faixa pré-rodapé" }]
 }
