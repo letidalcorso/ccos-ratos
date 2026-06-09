@@ -1,57 +1,129 @@
 {%- comment -%}
-  Faixa pré-rodapé — portado de App.jsx (CtaBand). Global (todas as páginas).
-  Na vitrine usa a copy própria; nas demais, a padrão.
+  Faixa pré-rodapé — portado de App.jsx (CtaBand). Global (renderizada no layout).
+  Mostra a copy própria da página atual (home / vitrine / faq / contato / blog).
+  Cada página tem: liga-desliga, texto, botão e destino próprios (whatsapp / vitrine / link).
 {%- endcomment -%}
 {%- assign s = section.settings -%}
+{%- capture wa -%}{% render 'wa-link' %}{%- endcapture -%}
 {%- liquid
-  assign is_vitrine = false
-  if page.handle == 'vitrine'
-    assign is_vitrine = true
-  endif
-  if is_vitrine
-    assign eyebrow = s.v_eyebrow
-    assign h1 = s.v_headline_1
-    assign h2 = s.v_headline_2
-    assign sub = s.v_sub
-    assign cta = s.v_cta_label
+  # qual página estamos vendo
+  assign p = 'h'
+  if request.page_type == 'index'
+    assign p = 'h'
+  elsif page.handle == 'vitrine'
+    assign p = 'v'
+  elsif page.handle == 'faq'
+    assign p = 'f'
+  elsif page.handle == 'contato'
+    assign p = 'c'
+  elsif page.handle == 'blog'
+    assign p = 'b'
   else
-    assign eyebrow = s.eyebrow
-    assign h1 = s.headline_1
-    assign h2 = s.headline_2
-    assign sub = s.sub
-    assign cta = s.cta_label
+    assign p = 'h'
+  endif
+
+  # puxa os campos do grupo certo (acesso dinâmico pelo prefixo)
+  assign id_show = p | append: '_show'
+  assign id_eyebrow = p | append: '_eyebrow'
+  assign id_h1 = p | append: '_h1'
+  assign id_h2 = p | append: '_h2'
+  assign id_sub = p | append: '_sub'
+  assign id_cta = p | append: '_cta'
+  assign id_dest = p | append: '_dest'
+  assign id_link = p | append: '_link'
+
+  assign show = s[id_show]
+  assign eyebrow = s[id_eyebrow]
+  assign h1 = s[id_h1]
+  assign h2 = s[id_h2]
+  assign sub = s[id_sub]
+  assign cta = s[id_cta]
+  assign dest = s[id_dest]
+  assign link = s[id_link]
+
+  # destino do botão
+  assign href = '/'
+  assign blank = false
+  if dest == 'whatsapp'
+    assign href = wa
+    assign blank = true
+  elsif dest == 'vitrine'
+    assign href = '/pages/vitrine'
+  elsif dest == 'link'
+    assign href = link
   endif
 -%}
+{%- if show -%}
 <section class="cta-band rise">
-  <div class="cta-band-glow"></div>
+  {%- if s.show_glow -%}<div class="cta-band-glow"></div>{%- endif -%}
   <div class="cta-band-copy">
-    <div class="eyebrow signal cta-band-eyebrow">{{ eyebrow }}</div>
+    {%- if eyebrow != blank -%}<div class="eyebrow signal cta-band-eyebrow">{{ eyebrow }}</div>{%- endif -%}
     <h2 class="headline cta-band-h" style="font-size:clamp(24px,3.6vw,52px);line-height:.98;letter-spacing:-1.2px">
       <span>{{ h1 }}</span>{% if h2 != blank %} <span class="b">{{ h2 }}</span>{% endif %}
     </h2>
-    <p class="cta-band-sub">{{ sub }}</p>
+    {%- if sub != blank -%}<p class="cta-band-sub">{{ sub }}</p>{%- endif -%}
   </div>
   <div class="cta-band-actions">
-    <a class="btn btn-primary" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">{{ cta }} <span aria-hidden="true">→</span></a>
+    <a class="btn btn-primary" href="{{ href | default: '/' }}"{% if blank %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ cta }} <span aria-hidden="true">→</span></a>
   </div>
 </section>
+{%- endif -%}
 
 {% schema %}
 {
   "name": "Faixa pré-rodapé",
   "settings": [
-    { "type": "header", "content": "Padrão (home, faq, contato)" },
-    { "type": "text", "id": "eyebrow", "label": "Etiqueta", "default": "pronto pra escolher?" },
-    { "type": "text", "id": "headline_1", "label": "Título — parte 1", "default": "você já sabe o que quer." },
-    { "type": "text", "id": "headline_2", "label": "Título — parte 2 (azul)", "default": "falta só chamar a gente." },
-    { "type": "textarea", "id": "sub", "label": "Texto", "default": "resposta em minutos, no whatsapp. e tu só paga quando o aparelho tá na tua mão." },
-    { "type": "text", "id": "cta_label", "label": "Botão — texto", "default": "vou chamar no whatsapp" },
-    { "type": "header", "content": "Vitrine (texto próprio)" },
+    { "type": "checkbox", "id": "show_glow", "label": "Mostrar brilho de fundo", "default": true },
+
+    { "type": "header", "content": "Home" },
+    { "type": "checkbox", "id": "h_show", "label": "Mostrar faixa na home", "default": true },
+    { "type": "text", "id": "h_eyebrow", "label": "Etiqueta", "default": "pronto pra escolher?" },
+    { "type": "text", "id": "h_h1", "label": "Título — parte 1", "default": "você já sabe o que quer." },
+    { "type": "text", "id": "h_h2", "label": "Título — parte 2 (azul)", "default": "falta só chamar a gente." },
+    { "type": "textarea", "id": "h_sub", "label": "Texto", "default": "resposta em minutos, no whatsapp. e tu só paga quando o aparelho tá na tua mão." },
+    { "type": "text", "id": "h_cta", "label": "Botão — texto", "default": "vou chamar no whatsapp" },
+    { "type": "select", "id": "h_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
+    { "type": "url", "id": "h_link", "label": "Link próprio (se destino = Link próprio)" },
+
+    { "type": "header", "content": "Vitrine" },
+    { "type": "checkbox", "id": "v_show", "label": "Mostrar faixa na vitrine", "default": true },
     { "type": "text", "id": "v_eyebrow", "label": "Etiqueta", "default": "não achou o que procura?" },
-    { "type": "text", "id": "v_headline_1", "label": "Título — parte 1", "default": "se existe," },
-    { "type": "text", "id": "v_headline_2", "label": "Título — parte 2 (azul)", "default": "a gente acha." },
+    { "type": "text", "id": "v_h1", "label": "Título — parte 1", "default": "se existe," },
+    { "type": "text", "id": "v_h2", "label": "Título — parte 2 (azul)", "default": "a gente acha." },
     { "type": "textarea", "id": "v_sub", "label": "Texto", "default": "tem a apple inteira pra ti — manda o modelo que tu quer no whatsapp e a gente encontra, confere e te avisa." },
-    { "type": "text", "id": "v_cta_label", "label": "Botão — texto", "default": "vou chamar no whatsapp" }
+    { "type": "text", "id": "v_cta", "label": "Botão — texto", "default": "vou chamar no whatsapp" },
+    { "type": "select", "id": "v_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
+    { "type": "url", "id": "v_link", "label": "Link próprio (se destino = Link próprio)" },
+
+    { "type": "header", "content": "FAQ" },
+    { "type": "checkbox", "id": "f_show", "label": "Mostrar faixa no FAQ", "default": true },
+    { "type": "text", "id": "f_eyebrow", "label": "Etiqueta", "default": "tirou as dúvidas?" },
+    { "type": "text", "id": "f_h1", "label": "Título — parte 1", "default": "então bora" },
+    { "type": "text", "id": "f_h2", "label": "Título — parte 2 (azul)", "default": "escolher o teu." },
+    { "type": "textarea", "id": "f_sub", "label": "Texto", "default": "ainda com alguma pergunta? chama no whatsapp que a gente te ajuda a decidir." },
+    { "type": "text", "id": "f_cta", "label": "Botão — texto", "default": "vou escolher meu aparelho" },
+    { "type": "select", "id": "f_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "vitrine" },
+    { "type": "url", "id": "f_link", "label": "Link próprio (se destino = Link próprio)" },
+
+    { "type": "header", "content": "Contato" },
+    { "type": "checkbox", "id": "c_show", "label": "Mostrar faixa no contato", "default": true },
+    { "type": "text", "id": "c_eyebrow", "label": "Etiqueta", "default": "bora conversar?" },
+    { "type": "text", "id": "c_h1", "label": "Título — parte 1", "default": "a gente tá" },
+    { "type": "text", "id": "c_h2", "label": "Título — parte 2 (azul)", "default": "a uma mensagem de distância." },
+    { "type": "textarea", "id": "c_sub", "label": "Texto", "default": "resposta em minutos, no whatsapp — de onde tu estiver." },
+    { "type": "text", "id": "c_cta", "label": "Botão — texto", "default": "chamar no whatsapp" },
+    { "type": "select", "id": "c_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
+    { "type": "url", "id": "c_link", "label": "Link próprio (se destino = Link próprio)" },
+
+    { "type": "header", "content": "Blog" },
+    { "type": "checkbox", "id": "b_show", "label": "Mostrar faixa no blog", "default": true },
+    { "type": "text", "id": "b_eyebrow", "label": "Etiqueta", "default": "gostou da leitura?" },
+    { "type": "text", "id": "b_h1", "label": "Título — parte 1", "default": "bora levar isso" },
+    { "type": "text", "id": "b_h2", "label": "Título — parte 2 (azul)", "default": "pra prática." },
+    { "type": "textarea", "id": "b_sub", "label": "Texto", "default": "da teoria pro teu próximo apple: manda o modelo no whatsapp que a gente resolve." },
+    { "type": "text", "id": "b_cta", "label": "Botão — texto", "default": "falar no whatsapp" },
+    { "type": "select", "id": "b_dest", "label": "Botão — destino", "options": [ { "value": "whatsapp", "label": "WhatsApp" }, { "value": "vitrine", "label": "Vitrine" }, { "value": "link", "label": "Link próprio" } ], "default": "whatsapp" },
+    { "type": "url", "id": "b_link", "label": "Link próprio (se destino = Link próprio)" }
   ],
   "presets": [{ "name": "Faixa pré-rodapé" }]
 }
