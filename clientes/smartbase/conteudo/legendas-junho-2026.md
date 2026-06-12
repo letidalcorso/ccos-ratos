@@ -6,11 +6,11 @@
 ---
 
 ## SEG 08 — reel | leva nova (takes do produto) · CASA SMARTBASE
-**Vende os dois seminovos (escassez). Asset:** rascunho beat-sync + brutos em `marca/banco de imagens/vídeos brutos`.
-> dois. é só o que tem.
-> dois 17 pro max laranja, seminovos, com 100% de bateria e garantia apple.
-> quando acabar, acabou. e você só paga quando ele tá na tua mão.
-> chama no whats antes que sobre só um.
+**Vende o último 17 pro max laranja seminovo (escassez) + novos lacrados. Asset:** rascunho beat-sync + brutos em `marca/banco de imagens/vídeos brutos`.
+> um. é o último.
+> o 17 pro max laranja seminovo, com 100% de bateria e garantia apple.
+> quando for, foi. e você só paga quando ele tá na tua mão.
+> ainda tem os novos lacrados da linha 17. chama no whats antes que vá.
 
 **Hashtags:** #iphone17promax #iphonecaxias #applecaxias #caxiasdosul #serragaucha
 
@@ -37,12 +37,12 @@
 
 ---
 
-## QUI 11 — carrossel | Copa abre: ajeita teu iphone · DECIFRA APPLE (Figma 957-35)
-**3 dicas reais (bateria, câmera lenta no gol, espaço) + virada no seminovo. Conteúdo, não frase de efeito.**
-> a copa começou e o teu celular vira o centro de tudo: print do gol, story da comemoração, replay no grupo.
-> salva esses 3 ajustes pra ele não te deixar na mão no meio do jogo.
-> e se ele já não aguenta um jogo inteiro, talvez seja a hora. nossos seminovos vêm com a saúde da bateria conferida e informada, garantia apple, e tu paga só quando recebe na mão.
-> manda "copa" no whats que eu te mostro o que tem.
+## QUI 11 — carrossel | a copa inteira no teu iphone (Apple Sports) · DECIFRA APPLE (Figma 961-29)
+**Herói: Apple Sports + Live Activities (a Apple lançou pra Copa, chegou ao BR 19/05/26). Apoio: bateria + câmera. Virada no seminovo. Fontes: Apple Newsroom, MacRumors.**
+> a apple soltou recursos novos pro mundial e quase ninguém ativou.
+> o app apple sports te dá placar ao vivo, tabela, chaveamento e escalação de cada jogo, de graça. e com as live activities o placar fica na tela de bloqueio, sem você abrir nada.
+> salva pra usar no primeiro jogo. tem ainda as dicas de bateria e de gravar o gol em câmera lenta.
+> e se o teu já não dá conta da copa, tem o 17 pro max laranja seminovo e novos lacrados. paga quando receber na mão. chama no whats.
 
 **Hashtags:** #copa2026 #vemhexa #iphonecaxias #applecaxias #caxiasdosul
 

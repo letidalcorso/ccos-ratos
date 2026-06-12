@@ -32,6 +32,7 @@ Referência do tom certo, feita por ela: o reel da lua (8x de zoom, fotografa a 
 - qualquer menção a como a importação DELES funciona por dentro (aduana, nota, declaração). Nunca em copy nem em arquivo do repo.
 - **PODE e é forte:** explicar a carga tributária do BRASIL como fato público (o país é um dos mais caros do mundo pra iPhone, +60% do preço é imposto: IPI, ICMS, PIS, Cofins). Isso justifica por que a Apple de loja é cara. Posicionar a Smartbase como "importado, direto da fonte, sem o preço de loja oficial", sem NUNCA explicar a margem própria. Fonte: em.com.br (abr/2026), Poder360.
 - não se defender de acusação de golpe. afirma o que é, não nega o que não é.
+- **nunca prometer "100% de bateria" como padrão do seminovo.** o seminovo vem com a saúde da bateria CONFERIDA e INFORMADA (no imei, antes de pagar). só citar "100%" quando for verdade de um aparelho específico (ex: o laranja da leva atual). estoque atual: 1x 17 pro max laranja seminovo (100%) + novos lacrados da linha 17. "dois seminovos" é copy vencida.
 
 ## Trunfos de confiança (usar de verdade, sem encher linguiça)
 1. paga só quando recebe o aparelho na mão (o mais forte)
@@ -50,13 +51,13 @@ Referência do tom certo, feita por ela: o reel da lua (8x de zoom, fotografa a 
 > dizem que o pro max é exagero. aí a pessoa pega na mão e vê a câmera.
 > 8x de zoom óptico, fotografa a lua do quintal. vídeo na qualidade que profissional usa pra trabalhar. e é o modelo que mais segura valor na hora de trocar.
 > tem motivo pra ser o topo da linha. é o que as outras marcas tentam copiar todo ano.
-> dois seminovos 100% de bateria e garantia apple chegaram essa semana. manda no whats antes que saiam.
+> tem um 17 pro max laranja seminovo, bateria conferida e garantia apple. manda no whats antes que vá.
 
 **COPA (comportamento real, não metáfora)**
 > quinta começa a copa. teu celular vai trabalhar mais que zagueiro brasileiro.
 > print do gol, story da comemoração, vídeo do amigo surtando, replay no grupo. é o segundo telão de todo jogo.
 > se o teu trava, esquenta ou morre no segundo tempo, talvez seja a hora.
-> linha 17 lacrada e dois 17 pro max seminovos (100% de bateria, garantia apple) chegaram essa semana. paga quando receber.
+> linha 17 lacrada e o último 17 pro max laranja seminovo (bateria conferida, garantia apple). paga quando receber.
 > manda "copa" no whats que eu te mostro o que tem.
 
 ## LightCopy: premissa, não promessa (pegada dos posts de aparelho)
