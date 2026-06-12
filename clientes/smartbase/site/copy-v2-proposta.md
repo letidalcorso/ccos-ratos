@@ -10,7 +10,7 @@
 ## HOME
 
 **Hero** (mantém o conceito)
-- lead: `novos e seminovos. pra quem usa apple todo dia.` → `novos e seminovos, sem o preço de loja oficial. pra quem usa Apple todo dia.`
+- lead: `novos e seminovos. pra quem usa apple todo dia.` → `novos e seminovos, sem o preço de loja oficial. pra quem usa Apple todo dia.` tinha colocado essa: iPhone · iPad · Mac · Watch · acessórios | novos sob encomenda · seminovos em estoque
 - título: `sua Apple store. / particular.` (mantém)
 
 **Posicionamento**
@@ -20,12 +20,14 @@
 **Diferenciais** (card "primeiro chega. depois paga.")
 - texto: `o iPhone chega na tua mão antes do dinheiro sair da tua conta.` → `o iPhone chega na tua mão, ligado e com o imei conferido, antes do dinheiro sair da tua conta.`
 
+vamos unir o posicionamento com os diferenciais? 
+
 **Como funciona** (passo 2)
 - texto: → `novo lacrado sob encomenda ou seminovo conferido um a um. bateria, tela e imei, tudo checado.`
 
 **Vitrine embutida (showcase)**
 - título: `o teu Apple / já tá te esperando.` → `escolhe o teu. / a gente traz.`
-- barra seminovos: `conferidos um a um, com garantia. vê o que tá disponível` → `conferido um a um, com 100% de bateria. vê o que chegou.`
+- barra seminovos: `conferidos um a um, com garantia. vê o que tá disponível` → `conferido um a um, com 100% de bateria. vê o que chegou.` não são todos que tem 100% de bateria... vamos de "outro dono, mesma apple"? 
 
 ---
 
