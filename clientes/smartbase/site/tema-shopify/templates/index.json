@@ -1,11 +1,10 @@
 {
   "sections": {
     "hero": { "type": "home-hero" },
-    "posicionamento": { "type": "posicionamento" },
     "diferenciais": {
       "type": "diferenciais",
       "blocks": {
-        "d1": { "type": "card", "settings": { "hero": true, "n": "01", "title": "primeiro chega. depois paga.", "text": "o iPhone chega na tua mão antes do dinheiro sair da tua conta." } },
+        "d1": { "type": "card", "settings": { "hero": true, "n": "01", "title": "primeiro chega. depois paga.", "text": "o iPhone chega na tua mão, ligado e com o imei conferido, antes do dinheiro sair da tua conta." } },
         "d2": { "type": "card", "settings": { "hero": false, "n": "02", "title": "loja física em caxias", "text": "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho." } },
         "d3": { "type": "card", "settings": { "hero": false, "n": "03", "title": "atendimento humano", "text": "sem chatbot, sem formulário. tu chama no WhatsApp e quem responde entende de Apple." } },
         "d4": { "type": "card", "settings": { "hero": false, "n": "04", "title": "só Apple", "text": "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica." } }
@@ -16,7 +15,7 @@
       "type": "home-light-zone",
       "blocks": {
         "p1": { "type": "step", "settings": { "n": "01", "title": "tu chama no WhatsApp", "text": "manda o modelo que tu quer. quem responde entende de Apple. sem robô, sem formulário." } },
-        "p2": { "type": "step", "settings": { "n": "02", "title": "a gente acha e confere", "text": "novo lacrado sob encomenda ou seminovo conferido um a um. sempre com garantia de verdade." } },
+        "p2": { "type": "step", "settings": { "n": "02", "title": "a gente acha e confere", "text": "novo lacrado sob encomenda ou seminovo conferido um a um. bateria, tela e imei, tudo checado." } },
         "p3": { "type": "step", "settings": { "n": "03", "title": "primeiro chega. depois paga.", "text": "o aparelho chega na tua mão antes do dinheiro sair da tua conta. esse é o combinado." } }
       },
       "block_order": ["p1", "p2", "p3"]
@@ -34,5 +33,5 @@
       "block_order": ["c1", "c2", "c3", "c4", "c5", "c6"]
     }
   },
-  "order": ["hero", "posicionamento", "diferenciais", "light-zone", "showcase"]
+  "order": ["hero", "diferenciais", "light-zone", "showcase"]
 }
