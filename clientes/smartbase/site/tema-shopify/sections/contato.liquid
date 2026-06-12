@@ -7,10 +7,20 @@
     cta_label: s.hero_cta, cta_link: '#ct-body' %}
 
   <section class="page ct-body rise" id="ct-body">
-    {%- assign map_q = s.map_coords | default: '-29.16877,-51.17984' -%}
+    {%- liquid
+      assign coords = s.map_coords | default: '-29.16877,-51.17984'
+      assign cparts = coords | split: ','
+      assign lat = cparts[0] | strip | plus: 0.0
+      assign lng = cparts[1] | strip | plus: 0.0
+      assign minlat = lat | minus: 0.003
+      assign maxlat = lat | plus: 0.003
+      assign minlng = lng | minus: 0.005
+      assign maxlng = lng | plus: 0.005
+    -%}
     <div class="ct-map">
-      <iframe class="ct-map-embed" src="https://www.google.com/maps?q={{ map_q }}&z=16&hl=pt-BR&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="mapa — {{ s.map_local | escape }}" allowfullscreen></iframe>
-      <a class="ct-map-cta" href="https://waze.com/ul?ll={{ map_q }}&navigate=yes" target="_blank" rel="noopener noreferrer" aria-label="traçar rota no Waze">
+      <iframe class="ct-map-embed" loading="lazy" title="mapa — {{ s.map_local | escape }}"
+        src="https://www.openstreetmap.org/export/embed.html?bbox={{ minlng }}%2C{{ minlat }}%2C{{ maxlng }}%2C{{ maxlat }}&layer=mapnik&marker={{ lat }}%2C{{ lng }}"></iframe>
+      <a class="ct-map-cta" href="https://waze.com/ul?ll={{ lat }},{{ lng }}&navigate=yes" target="_blank" rel="noopener noreferrer" aria-label="traçar rota no Waze">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
         traçar rota no Waze <span aria-hidden="true">→</span>
       </a>
