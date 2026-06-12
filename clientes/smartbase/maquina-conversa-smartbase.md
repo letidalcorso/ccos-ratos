@@ -2,6 +2,8 @@
 
 MVP do teste de 2 semanas. Quem conduz: Leti. Objetivo: destravar a conversa (o gargalo são respostas curtas e secas com quem ainda não confia).
 
+> **Metodologia + tom:** o porquê por trás dos roteiros (frameworks de venda, gatilhos do Cialdini, empatia tática, como gerar desejo sem ser chato) está em `performance/playbook-venda-whatsapp.md`. O tom de voz da Leti no 1:1 está gravado na memória `feedback-voz-leticia-whatsapp`.
+
 ## Princípios (o que muda em relação a hoje)
 1. **Responder em minutos, não horas.** Velocidade de resposta é a maior alavanca (lead respondido em 5 min tem 21x mais chance de qualificar).
 2. **Trazer a confiança ANTES de ser perguntada.** Pagar depois de receber + loja física + garantia Apple por IMEI entram cedo, sem esperar o cliente desconfiar.
