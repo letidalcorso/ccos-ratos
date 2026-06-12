@@ -1,37 +1,210 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "hero": { "type": "home-hero" },
-    "diferenciais": {
-      "type": "diferenciais",
-      "blocks": {
-        "d1": { "type": "card", "settings": { "hero": true, "n": "01", "title": "primeiro chega. depois paga.", "text": "o iPhone chega na sua mão, ligado e com o imei conferido, antes do dinheiro sair da sua conta." } },
-        "d2": { "type": "card", "settings": { "hero": false, "n": "02", "title": "loja física em caxias", "text": "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho." } },
-        "d3": { "type": "card", "settings": { "hero": false, "n": "03", "title": "atendimento humano", "text": "sem chatbot, sem formulário. você chama no WhatsApp e quem responde entende de Apple." } },
-        "d4": { "type": "card", "settings": { "hero": false, "n": "04", "title": "só Apple", "text": "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica." } }
-      },
-      "block_order": ["d1", "d2", "d3", "d4"]
+    "hero": {
+      "type": "home-hero",
+      "settings": {
+        "bg_image": "shopify://shop_images/Gold-Gate-wallpaper-dark.jpg",
+        "bg_position": "50% 50%",
+        "card_position": "50% 38%",
+        "brand_pill": "smartbase",
+        "badge": "destaque do mês · iPhone 17 Pro Max",
+        "lead": "iPhone · iPad · Mac · Watch · AirPods | acessórios",
+        "headline_1": "sua Apple store.",
+        "headline_2": "particular.",
+        "location": "caxias do sul · rs",
+        "cta1_label": "quero ver a vitrine",
+        "cta1_link": "shopify://pages/vitrine",
+        "cta2_label": "quero fazer meu pedido"
+      }
     },
     "light-zone": {
       "type": "home-light-zone",
       "blocks": {
-        "p1": { "type": "step", "settings": { "n": "01", "title": "você chama no WhatsApp", "text": "manda o modelo que você quer. quem responde entende de Apple. sem robô, sem formulário." } },
-        "p2": { "type": "step", "settings": { "n": "02", "title": "a gente acha e confere", "text": "novo lacrado sob encomenda ou seminovo conferido um a um. bateria, tela e imei, tudo checado." } },
-        "p3": { "type": "step", "settings": { "n": "03", "title": "primeiro chega. depois paga.", "text": "o aparelho chega na sua mão antes do dinheiro sair da sua conta. esse é o combinado." } }
+        "p1": {
+          "type": "step",
+          "settings": {
+            "n": "01",
+            "title": "você nos chama no WhatsApp",
+            "text": "conversamos para entender sua necessidade e tirar todas suas dúvidas."
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "n": "02",
+            "title": "identificamos o modelo ideal para você",
+            "text": "novo ou seminovo. todos com garantia e escolhidos de forma criteriosa."
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "n": "03",
+            "title": "primeiro chega. depois paga.",
+            "text": "o aparelho chega na sua mão antes de qualquer investimento. esse é o combinado."
+          }
+        }
       },
-      "block_order": ["p1", "p2", "p3"]
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "band_eyebrow": "",
+        "band_quote_1": "tem muita revenda Apple.",
+        "band_quote_2": "nenhuma entrega a experiência smartbase.",
+        "band_sub": "processo transparente do início ao fim. garantia em todos aparelhos. suporte e setup completo.",
+        "band_cta_label": "quero essa tranquilidade",
+        "band_cta_link": "",
+        "steps_eyebrow": "como funciona",
+        "steps_headline_1": "simples assim.",
+        "steps_headline_2": "do 'oi' ao aparelho na mão.",
+        "note_label": "por que os novos são sob encomenda?",
+        "note_text": "a garantia Apple inicia a partir da data de saída da fábrica, não da ativação. aparelho parado em estoque perde cobertura antes de chegar na sua mão. trabalhando por encomenda, você recebe com a garantia completa em dia."
+      }
+    },
+    "diferenciais": {
+      "type": "diferenciais",
+      "blocks": {
+        "d1": {
+          "type": "card",
+          "settings": {
+            "hero": true,
+            "n": "01",
+            "title": "primeiro chega. depois paga.",
+            "text": "seu investimento sai da conta somente quando estiver sua mão. ligado. imei conferido. antes disso nada sai da sua conta.",
+            "image": "shopify://shop_images/home_-_sobre.png"
+          }
+        },
+        "d2": {
+          "type": "card",
+          "settings": {
+            "hero": false,
+            "n": "02",
+            "title": "loja física em caxias",
+            "text": "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho."
+          }
+        },
+        "d3": {
+          "type": "card",
+          "settings": {
+            "hero": false,
+            "n": "03",
+            "title": "atendimento humano",
+            "text": "sem chatbot, sem formulário. você chama no WhatsApp e quem responde entende de Apple."
+          }
+        },
+        "d4": {
+          "type": "card",
+          "settings": {
+            "hero": false,
+            "n": "04",
+            "title": "só Apple",
+            "text": "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica."
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3",
+        "d4"
+      ],
+      "settings": {
+        "eyebrow": "por que a smartbase",
+        "headline_1": "encontramos junto",
+        "headline_2": "o aparelho ideal para você."
+      }
     },
     "showcase": {
       "type": "home-showcase",
       "blocks": {
-        "c1": { "type": "category", "settings": { "label": "Mac", "fallback": "prod-mac.png", "link": "/pages/vitrine?cat=mac" } },
-        "c2": { "type": "category", "settings": { "label": "iPad", "fallback": "prod-ipad.png", "link": "/pages/vitrine?cat=ipad" } },
-        "c3": { "type": "category", "settings": { "label": "iPhone", "fallback": "prod-iphone.png", "link": "/pages/vitrine?cat=iphone" } },
-        "c4": { "type": "category", "settings": { "label": "Apple Watch", "fallback": "prod-watch.png", "link": "/pages/vitrine?cat=watch" } },
-        "c5": { "type": "category", "settings": { "label": "AirPods", "fallback": "prod-airpods.png", "link": "/pages/vitrine?cat=airpods" } },
-        "c6": { "type": "category", "settings": { "label": "acessórios", "fallback": "prod-acessorios.png", "link": "/pages/vitrine?cat=acessorios" } }
+        "c1": {
+          "type": "category",
+          "settings": {
+            "label": "Mac",
+            "fallback": "prod-mac.png",
+            "link": "/pages/vitrine?cat=mac"
+          }
+        },
+        "c2": {
+          "type": "category",
+          "settings": {
+            "label": "iPad",
+            "fallback": "prod-ipad.png",
+            "link": "/pages/vitrine?cat=ipad"
+          }
+        },
+        "c3": {
+          "type": "category",
+          "settings": {
+            "label": "iPhone",
+            "fallback": "prod-iphone.png",
+            "link": "/pages/vitrine?cat=iphone"
+          }
+        },
+        "c4": {
+          "type": "category",
+          "settings": {
+            "label": "Apple Watch",
+            "fallback": "prod-watch.png",
+            "link": "/pages/vitrine?cat=watch"
+          }
+        },
+        "c5": {
+          "type": "category",
+          "settings": {
+            "label": "AirPods",
+            "fallback": "prod-airpods.png",
+            "link": "/pages/vitrine?cat=airpods"
+          }
+        },
+        "c6": {
+          "type": "category",
+          "settings": {
+            "label": "acessórios",
+            "fallback": "prod-acessorios.png",
+            "link": "/pages/vitrine?cat=acessorios"
+          }
+        }
       },
-      "block_order": ["c1", "c2", "c3", "c4", "c5", "c6"]
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6"
+      ],
+      "settings": {
+        "bg_image": "shopify://shop_images/pexels-christian-konopatzki-1923628-11131272.jpg",
+        "kicker": "vem cá.",
+        "title_1": "escolhe o seu.",
+        "title_2": "a gente traz.",
+        "win_title": "vitrine",
+        "win_sub": "novos · escolhe a categoria",
+        "cat_cta": "ver novos",
+        "semi_title": "seminovos",
+        "semi_sub": "outro dono, mesma Apple. vê o que chegou.",
+        "semi_cta": "ver seminovos",
+        "semi_link": "shopify://collections/all"
+      }
     }
   },
-  "order": ["hero", "diferenciais", "light-zone", "showcase"]
+  "order": [
+    "hero",
+    "light-zone",
+    "showcase",
+    "diferenciais"
+  ]
 }
