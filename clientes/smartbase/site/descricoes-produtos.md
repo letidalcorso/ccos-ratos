@@ -49,7 +49,7 @@ o Apple Watch essencial, pelo preço que cabe. agora com tela always-on e alto-f
 o melhor cancelamento que a Apple já fez, tapa o busão inteiro. agora mede seus batimentos e acompanha mais de 50 treinos. até 8h de música com tudo ligado.
 
 **AirPods 4**
-o som da Apple sem enfiar nada no ouvido, com chip H2. tem versão com cancelamento de ruído, raro num fone aberto. conforto o dia todo e estojo USB-C.
+o formato clássico e leve da Apple, sem ponteira de silicone. agora com chip H2 e versão com cancelamento de ruído, raro num fone aberto. conforto o dia todo e estojo USB-C.
 
 **AirPods Max**
 fone over-ear que isola o mundo, em alumínio. áudio espacial que faz o som te envolver de verdade. até 20h de bateria e carrega no USB-C.
