@@ -10,22 +10,22 @@
     {%- liquid
       assign coords = s.map_coords | default: '-29.16877,-51.17984'
       assign cparts = coords | split: ','
-      assign lat = cparts[0] | strip | plus: 0.0
-      assign lng = cparts[1] | strip | plus: 0.0
-      assign minlat = lat | minus: 0.003
-      assign maxlat = lat | plus: 0.003
-      assign minlng = lng | minus: 0.005
-      assign maxlng = lng | plus: 0.005
+      assign lat = cparts[0] | strip
+      assign lng = cparts[1] | strip
     -%}
-    <div class="ct-map">
-      <iframe class="ct-map-embed" loading="lazy" title="mapa — {{ s.map_local | escape }}"
-        src="https://www.openstreetmap.org/export/embed.html?bbox={{ minlng }}%2C{{ minlat }}%2C{{ maxlng }}%2C{{ maxlat }}&layer=mapnik&marker={{ lat }}%2C{{ lng }}"></iframe>
-      <a class="ct-map-cta" href="https://waze.com/ul?ll={{ lat }},{{ lng }}&navigate=yes" target="_blank" rel="noopener noreferrer" aria-label="traçar rota no Waze">
+    <a class="ct-map" href="https://waze.com/ul?ll={{ lat }},{{ lng }}&navigate=yes" target="_blank" rel="noopener noreferrer" aria-label="abrir rota no Waze">
+      {%- if s.map_image != blank -%}
+        <img class="ct-map-img" src="{{ s.map_image | image_url: width: 1200 }}" alt="mapa — {{ s.map_local | escape }}" loading="lazy">
+      {%- else -%}
+        <img class="ct-map-img" src="{{ 'map-loja.png' | asset_url }}" alt="mapa — {{ s.map_local | escape }}" loading="lazy">
+      {%- endif -%}
+      <span class="ct-map-scrim" aria-hidden="true"></span>
+      <span class="ct-map-cta">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
         traçar rota no Waze <span aria-hidden="true">→</span>
-      </a>
-      <div class="ct-map-tag">⚲ {{ s.map_local }} · <span class="ct-warn">{{ s.map_warn }}</span></div>
-    </div>
+      </span>
+      <span class="ct-map-tag">⚲ {{ s.map_local }} · <span class="ct-warn">{{ s.map_warn }}</span></span>
+    </a>
     <div class="ct-info">
       <div class="ct-card">
         <div class="ct-k">endereço</div>
@@ -45,14 +45,14 @@
 </div>
 
 <style>
-  .ct-map{position:relative;overflow:hidden}
-  .ct-map-embed{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;
-    filter:invert(.92) hue-rotate(180deg) saturate(.7) contrast(.95)}
-  .ct-map-cta{position:absolute;z-index:4;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;
-    padding:11px 16px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none;color:#fff;
-    background:rgba(10,10,18,.74);border:1px solid rgba(255,255,255,.18);
-    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:background .2s}
-  .ct-map-cta:hover{background:rgba(10,10,18,.92)}
+  .ct-map{display:block;position:relative;min-height:420px;overflow:hidden;text-decoration:none;cursor:pointer}
+  .ct-map-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .ct-map-scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,7,14,.10),rgba(7,7,14,.5))}
+  .ct-map-cta{position:absolute;z-index:4;right:14px;top:14px;display:inline-flex;align-items:center;gap:8px;
+    padding:10px 15px;border-radius:999px;font-weight:600;font-size:14px;color:#fff;
+    background:rgba(10,10,18,.78);border:1px solid rgba(255,255,255,.2);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:background .2s,border-color .2s}
+  .ct-map:hover .ct-map-cta{background:var(--sb-signal,#3E82F7);border-color:transparent}
   .ct-map-tag{z-index:4}
 </style>
 
@@ -70,7 +70,8 @@
     { "type": "header", "content": "Mapa" },
     { "type": "text", "id": "map_local", "label": "Local (no mapa)", "default": "caxias do sul" },
     { "type": "text", "id": "map_warn", "label": "Aviso (no mapa, em cinza)", "default": "endereço completo no WhatsApp" },
-    { "type": "text", "id": "map_coords", "label": "Coordenadas (lat,long)", "info": "Pin do mapa real e rota do Waze. Pega no Google Maps: clica no ponto e copia os números. Ex.: -29.16877,-51.17984", "default": "-29.16877,-51.17984" },
+    { "type": "image_picker", "id": "map_image", "label": "Imagem do mapa (sua print)", "info": "Suba uma print do Google Maps/Waze da loja. Vazio = mapa padrão." },
+    { "type": "text", "id": "map_coords", "label": "Coordenadas (lat,long) — pro botão do Waze", "info": "Rota do Waze. Pega no Google Maps: clica no ponto e copia os números. Ex.: -29.16877,-51.17984", "default": "-29.16877,-51.17984" },
     { "type": "header", "content": "Cards" },
     { "type": "textarea", "id": "endereco", "label": "Endereço", "default": "loja em caxias do sul, rs\nendereço completo a gente passa no WhatsApp" },
     { "type": "textarea", "id": "horario", "label": "Horário", "default": "seg–sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado" },
