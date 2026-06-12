@@ -7,16 +7,13 @@
     cta_label: s.hero_cta, cta_link: '#ct-body' %}
 
   <section class="page ct-body rise" id="ct-body">
+    {%- assign map_q = s.map_coords | default: '-29.16877,-51.17984' -%}
     <div class="ct-map">
-      <svg class="ct-map-grid" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <g class="ct-map-streets">
-          <path d="M-40 120 L640 80"/><path d="M-40 250 L640 210"/><path d="M-40 380 L640 340"/>
-          <path d="M120 -20 L60 460"/><path d="M300 -20 L260 460"/><path d="M470 -20 L440 460"/>
-          <path d="M-40 300 L640 140"/><path d="M-40 60 L420 460"/>
-        </g>
-      </svg>
-      <div class="ct-map-veil"></div>
-      <div class="ct-pin"><span class="ct-pin-ring"></span><span class="ct-pin-dot"></span></div>
+      <iframe class="ct-map-embed" src="https://www.google.com/maps?q={{ map_q }}&z=16&hl=pt-BR&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="mapa — {{ s.map_local | escape }}" allowfullscreen></iframe>
+      <a class="ct-map-cta" href="https://waze.com/ul?ll={{ map_q }}&navigate=yes" target="_blank" rel="noopener noreferrer" aria-label="traçar rota no Waze">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 0 0-8-8zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+        traçar rota no Waze <span aria-hidden="true">→</span>
+      </a>
       <div class="ct-map-tag">⚲ {{ s.map_local }} · <span class="ct-warn">{{ s.map_warn }}</span></div>
     </div>
     <div class="ct-info">
@@ -37,6 +34,18 @@
   </section>
 </div>
 
+<style>
+  .ct-map{position:relative;overflow:hidden}
+  .ct-map-embed{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;
+    filter:invert(.92) hue-rotate(180deg) saturate(.7) contrast(.95)}
+  .ct-map-cta{position:absolute;z-index:4;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;
+    padding:11px 16px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none;color:#fff;
+    background:rgba(10,10,18,.74);border:1px solid rgba(255,255,255,.18);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:background .2s}
+  .ct-map-cta:hover{background:rgba(10,10,18,.92)}
+  .ct-map-tag{z-index:4}
+</style>
+
 {% schema %}
 {
   "name": "Contato",
@@ -51,6 +60,7 @@
     { "type": "header", "content": "Mapa" },
     { "type": "text", "id": "map_local", "label": "Local (no mapa)", "default": "caxias do sul" },
     { "type": "text", "id": "map_warn", "label": "Aviso (no mapa, em cinza)", "default": "endereço completo no WhatsApp" },
+    { "type": "text", "id": "map_coords", "label": "Coordenadas (lat,long)", "info": "Pin do mapa real e rota do Waze. Pega no Google Maps: clica no ponto e copia os números. Ex.: -29.16877,-51.17984", "default": "-29.16877,-51.17984" },
     { "type": "header", "content": "Cards" },
     { "type": "textarea", "id": "endereco", "label": "Endereço", "default": "loja em caxias do sul, rs\nendereço completo a gente passa no WhatsApp" },
     { "type": "textarea", "id": "horario", "label": "Horário", "default": "seg–sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado" },

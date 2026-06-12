@@ -23,7 +23,7 @@ Cada slide fecha puxando o próximo (open loop). Arco: gancho → contexto → p
 5. **a virada** · e é aqui que vem a pegadinha · essa siri nova não roda em qualquer iphone.
 6. **a régua** · ela só funciona do iphone 15 pro pra cima · é o chip que decide, não a atualização.
 7. **clareza** · resumindo a história · todo iphone do 11+ fica mais rápido. a inteligência de verdade pede um 15 pro, 15 pro max ou 16+.
-8. **desfecho + cta** · e é exatamente esse aparelho que a gente traz · 17 pro max seminovo, bateria 100%, garantia apple, conferido na tua mão · chama no whats →
+8. **desfecho + cta** · e é exatamente esse aparelho que a gente traz · 17 pro max seminovo, saúde da bateria conferida, garantia apple, conferido na tua mão · chama no whats →
 
 ## Imagens (direção: mix — produto real recortado + IA conceitual)
 Gerar via inference.sh (app `infsh/flux`). Estética: fundo quase-preto (#07070E), glow azul elétrico (#3E82F7), acento laranja pontual (amarra com o 17 pro max laranja). Editorial, cinematográfico, premium, sem logos de marca. Retrato 4:5.

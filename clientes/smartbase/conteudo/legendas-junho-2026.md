@@ -41,7 +41,7 @@
 **3 dicas reais (bateria, câmera lenta no gol, espaço) + virada no seminovo. Conteúdo, não frase de efeito.**
 > a copa começou e o teu celular vira o centro de tudo: print do gol, story da comemoração, replay no grupo.
 > salva esses 3 ajustes pra ele não te deixar na mão no meio do jogo.
-> e se ele já não aguenta um jogo inteiro, talvez seja a hora. nossos seminovos chegam com 100% de bateria, garantia apple, e tu paga só quando recebe na mão.
+> e se ele já não aguenta um jogo inteiro, talvez seja a hora. nossos seminovos vêm com a saúde da bateria conferida e informada, garantia apple, e tu paga só quando recebe na mão.
 > manda "copa" no whats que eu te mostro o que tem.
 
 **Hashtags:** #copa2026 #vemhexa #iphonecaxias #applecaxias #caxiasdosul
@@ -139,7 +139,7 @@
 ## QUI 25 — carrossel | o que vem (e o que não vem) no seminovo · DECIFRA APPLE
 > o que tem dentro de um seminovo da smartbase.
 > cabo original, película já instalada, capinha de brinde. não vem caixa, e a gente fala isso na tua cara, sem letra miúda.
-> bateria 100% e garantia apple conferidas antes de chegar na tua mão.
+> saúde da bateria conferida e garantia apple checada antes de chegar na tua mão.
 > dúvida? chama no whats.
 
 **Hashtags:** #seminovo #iphonecaxias #applecaxias #caxiasdosul #apple
