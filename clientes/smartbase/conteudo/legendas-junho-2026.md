@@ -37,10 +37,11 @@
 
 ---
 
-## QUI 11 — post | Copa abre · CASA SMARTBASE
-> hoje começa a copa. teu celular vai trabalhar mais que zagueiro brasileiro.
-> print do gol, story da comemoração, vídeo do amigo surtando, replay no grupo. é o segundo telão de todo jogo.
-> se o teu trava ou morre no segundo tempo, talvez seja a hora.
+## QUI 11 — carrossel | Copa abre: ajeita teu iphone · DECIFRA APPLE (Figma 957-35)
+**3 dicas reais (bateria, câmera lenta no gol, espaço) + virada no seminovo. Conteúdo, não frase de efeito.**
+> a copa começou e o teu celular vira o centro de tudo: print do gol, story da comemoração, replay no grupo.
+> salva esses 3 ajustes pra ele não te deixar na mão no meio do jogo.
+> e se ele já não aguenta um jogo inteiro, talvez seja a hora. nossos seminovos chegam com 100% de bateria, garantia apple, e tu paga só quando recebe na mão.
 > manda "copa" no whats que eu te mostro o que tem.
 
 **Hashtags:** #copa2026 #vemhexa #iphonecaxias #applecaxias #caxiasdosul

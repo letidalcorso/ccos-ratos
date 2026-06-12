@@ -29,7 +29,7 @@
             "settings": {
               "icon": "home",
               "label": "início",
-              "link": "/",
+              "link": "https://smartbasebr.com",
               "match": "index"
             }
           },
@@ -39,7 +39,7 @@
             "settings": {
               "icon": "bag",
               "label": "vitrine",
-              "link": "/pages/vitrine",
+              "link": "shopify://pages/vitrine",
               "match": "/pages/vitrine"
             }
           },
@@ -99,33 +99,33 @@
           "h_btn2_url": "",
           "h_btn2_blank": false,
           "v_show": true,
-          "v_eyebrow": "não achou o que procura?",
+          "v_eyebrow": "precisa de outro produto?",
           "v_h1": "se existe,",
-          "v_h2": "a gente acha.",
-          "v_sub": "tem a Apple inteira pra você. manda o modelo que você quer no WhatsApp e a gente encontra, confere e te avisa.",
-          "v_cta": "vou chamar no whatsapp",
+          "v_h2": "a gente te entrega.",
+          "v_sub": "tem a Apple inteira pra você. envie o que você precisa no WhatsApp, buscamos, cotamos e te informamos.",
+          "v_cta": "procuro outro produto",
           "v_dest": "whatsapp",
           "v_link": "",
-          "v_btn2_label": "tirar dúvidas no FAQ",
-          "v_btn2_url": "",
+          "v_btn2_label": "tenho algumas dúvidas",
+          "v_btn2_url": "shopify://pages/faq",
           "v_btn2_blank": false,
           "f_show": true,
-          "f_eyebrow": "tirou as dúvidas?",
+          "f_eyebrow": "tirou suas dúvidas?",
           "f_h1": "então bora",
           "f_h2": "escolher o seu.",
           "f_sub": "ainda com alguma pergunta? chama no whatsapp que a gente te ajuda a decidir.",
-          "f_cta": "vou escolher meu aparelho",
+          "f_cta": "tudo resolvido, vou escolher o meu",
           "f_dest": "vitrine",
-          "f_link": "",
-          "f_btn2_label": "",
+          "f_link": "shopify://pages/vitrine",
+          "f_btn2_label": "quero mais informações",
           "f_btn2_url": "",
-          "f_btn2_blank": false,
+          "f_btn2_blank": true,
           "c_show": true,
           "c_eyebrow": "bora conversar?",
-          "c_h1": "a gente tá",
-          "c_h2": "a uma mensagem de distância.",
-          "c_sub": "resposta em minutos. no WhatsApp. de onde você estiver.",
-          "c_cta": "chamar no whatsapp",
+          "c_h1": "estamos a uma",
+          "c_h2": "mensagem de distância.",
+          "c_sub": "resposta em minutos. negociação de onde você estiver.",
+          "c_cta": "quero falar com vocês",
           "c_dest": "whatsapp",
           "c_link": "",
           "c_btn2_label": "",
@@ -133,10 +133,10 @@
           "c_btn2_blank": false,
           "b_show": true,
           "b_eyebrow": "gostou da leitura?",
-          "b_h1": "bora levar isso",
-          "b_h2": "pra prática.",
-          "b_sub": "da teoria pro seu próximo apple: manda o modelo no whatsapp que a gente resolve.",
-          "b_cta": "falar no whatsapp",
+          "b_h1": "vem com a gente fazer parte do",
+          "b_h2": "ecossistema Apple.",
+          "b_sub": "",
+          "b_cta": "é isso que eu quero",
           "b_dest": "whatsapp",
           "b_link": "",
           "b_btn2_label": "",
@@ -151,7 +151,7 @@
             "type": "nav",
             "settings": {
               "label": "home",
-              "url": "shopify://collections/frontpage"
+              "url": "https://smartbasebr.com"
             }
           },
           "footer-0": {
@@ -203,14 +203,44 @@
           "nav_title": "navegue no site",
           "contact_title": "fale com a gente",
           "visit_title": "onde ficamos",
-          "address": "caxias do sul, rs\nendereço a confirmar",
-          "hours": "seg–sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado",
+          "address": "rua sinimbu · 2211 · centro\ncaxias do sul · rs",
+          "hours": "seg a sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado",
           "legal": "© 2026 smartbase · caxias do sul, rs"
         }
       },
       "vitrine": {
         "type": "vitrine",
         "blocks": {
+          "produto_JG4Tfg": {
+            "type": "produto",
+            "name": "cabo usbc",
+            "settings": {
+              "cat": "acessorios",
+              "name": "Cabo usb-usb",
+              "fallback": "",
+              "desc": "",
+              "specs": "",
+              "colors": "",
+              "cond": "novo",
+              "in_stock": true,
+              "price": ""
+            }
+          },
+          "produto_yQdbwM": {
+            "type": "produto",
+            "name": "fonte 20w",
+            "settings": {
+              "cat": "acessorios",
+              "name": "Fonte 20w",
+              "fallback": "",
+              "desc": "",
+              "specs": "",
+              "colors": "",
+              "cond": "novo",
+              "in_stock": true,
+              "price": ""
+            }
+          },
           "produto_gJaDgt": {
             "type": "produto",
             "name": "13 | midlenight",
@@ -263,7 +293,7 @@
               "cat": "iphone",
               "name": "iPhone 17 Pro Max",
               "fallback": "prod-iphone-17-pro-max.png",
-              "desc": "8x de zoom óptico, fotografa a lua do quintal. a melhor bateria que um iPhone já teve, e o que mais segura valor na hora de trocar.",
+              "desc": "tela de 6,9'' e corpo de alumínio, leve e resistente. três câmeras de 48MP com 8x de zoom e vídeo de cinema. chip A19 Pro e a maior bateria que um iPhone já teve.",
               "specs": "256GB · 512GB · 1TB · 2TB",
               "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
               "cond": "novo",
@@ -278,7 +308,7 @@
               "cat": "iphone",
               "name": "iPhone 17",
               "fallback": "prod-iphone-17.png",
-              "desc": "o 48MP que todo mundo quer, sem pagar pelo topo. pra quem vive no iPhone e quer o atual.",
+              "desc": "tela de 6,3'' brilhante e rápida. câmera de 48MP que dá conta de tudo, sem pagar pelo topo. chip A19 e bateria pro dia inteiro.",
               "specs": "256GB · 512GB",
               "colors": "azul:#cadcef; branco:#ededf0; sálvia:#c7d2bd; lavanda:#d7cfe6; rosa:#efd7dd",
               "cond": "novo",
@@ -293,7 +323,7 @@
               "cat": "iphone",
               "name": "iPhone Air",
               "fallback": "prod-iphone-air.png",
-              "desc": "5,6mm. o iPhone mais fino que a Apple já fez. some no bolso e pesa quase nada na mão.",
+              "desc": "só 5,6mm e corpo de titânio: o iPhone mais fino que a Apple já fez. câmera de 48MP com zoom de 2x. tão leve que você esquece que tá no bolso.",
               "specs": "256GB · 512GB",
               "colors": "preto-espacial:#2b2b2d; branco-nuvem:#e8e8ea; dourado:#e4dcc6; azul-céu:#bccadc",
               "cond": "novo",
@@ -308,7 +338,7 @@
               "cat": "mac",
               "name": "MacBook Air",
               "fallback": "prod-macbook-air.png",
-              "desc": "M4 e sem ventoinha nenhuma. aguenta o dia longe da tomada e vai pra qualquer lugar com você.",
+              "desc": "fininho, silencioso e sem ventoinha nenhuma. chip M4 que dá conta de trabalho, estudo e edição leve. até 18h de bateria pra passar o dia fora da tomada.",
               "specs": "M4 · 13\" e 15\"; 16GB · 512GB",
               "colors": "meia-noite:#2e3641; estelar:#efe6d6; prata:#dcdee0; azul-céu:#b6c8de",
               "cond": "novo",
@@ -323,7 +353,7 @@
               "cat": "mac",
               "name": "MacBook Pro",
               "fallback": "prod-macbook.png",
-              "desc": "edita 4K e renderiza sem esquentar. a tela que faz preto ser preto de verdade.",
+              "desc": "tela mini-LED de 120Hz, brilhante e com preto de verdade. chip M4 Pro que edita 4K e renderiza sem esquentar. até 22h de bateria, o dia inteiro de trabalho pesado.",
               "specs": "M4 Pro · 14\" e 16\"; 18GB · 512GB+",
               "colors": "",
               "cond": "novo",
@@ -338,7 +368,7 @@
               "cat": "mac",
               "name": "Mac mini",
               "fallback": "prod-mac-mini.png",
-              "desc": "cabe na palma e é desktop de verdade. liga na sua tela e tá pronto. o Mac mais em conta.",
+              "desc": "do tamanho da palma da mão, mas é um desktop completo. chip M4 que aguenta trabalho pesado e vários monitores. liga na sua tela e teclado e tá pronto.",
               "specs": "M4 · M4 Pro; 16GB · 256GB+",
               "colors": "",
               "cond": "novo",
@@ -353,7 +383,7 @@
               "cat": "ipad",
               "name": "iPad Pro",
               "fallback": "prod-ipad-pro.png",
-              "desc": "tela OLED, chip M4 e mais fino que o iPhone. desenha, edita e assiste numa coisa só.",
+              "desc": "a melhor tela que a Apple já pôs num iPad: OLED, brilhante e fluida. chip M4 e mais fino que o iPhone. desenha, edita e assiste numa coisa só.",
               "specs": "11\" · 13\"; M4 · 256GB+",
               "colors": "preto-espacial:#2b2b2d; prata:#dcdee0",
               "cond": "novo",
@@ -368,7 +398,7 @@
               "cat": "ipad",
               "name": "iPad Air",
               "fallback": "prod-ipad-air.png",
-              "desc": "M3 e a Pencil grudada no lado. o iPad pra quem faz, não só assiste.",
+              "desc": "tela de 11'' ou 13'', leve na mão. chip M3 que roda Apple Intelligence e edição sem travar. funciona com a Pencil Pro pra quem cria.",
               "specs": "11\" · 13\"; M3 · 128GB+",
               "colors": "azul:#aebfe0; roxo:#c5b6e0; estelar:#e8e0d0; cinza-espacial:#3a3c40",
               "cond": "novo",
@@ -383,7 +413,7 @@
               "cat": "ipad",
               "name": "iPad",
               "fallback": "prod-ipad.png",
-              "desc": "o jeito mais barato de entrar na Apple. série, jogo, nota e chamada numa tela só.",
+              "desc": "a porta de entrada no mundo de iPads. chip A16 que dá conta de série, jogo, aula e chamada. tela colorida pra todo mundo.",
               "specs": "10,9\"; A16 · 128GB+",
               "colors": "azul:#9cb4d6; rosa:#eccdd0; amarelo:#ecdf9e; prata:#dcdee0",
               "cond": "novo",
@@ -398,7 +428,7 @@
               "cat": "watch",
               "name": "Apple Watch Ultra",
               "fallback": "prod-watch-ultra.png",
-              "desc": "titânio, 49mm e bateria que encara o fim de semana. pra quem corre, mergulha e esquece de carregar.",
+              "desc": "titânio de 49mm, a tela mais brilhante de um Apple Watch. até 42h de bateria e conexão por satélite quando não tem sinal. feito pra quem corre, mergulha e encara trilha.",
               "specs": "49mm · titânio; GPS + Cellular",
               "colors": "",
               "cond": "novo",
@@ -413,7 +443,7 @@
               "cat": "watch",
               "name": "Apple Watch Series 11",
               "fallback": "prod-watch-series.png",
-              "desc": "lê seu sono, seu treino e seu coração no pulso. e te avisa antes de você sentir.",
+              "desc": "tela always-on que você lê sem levantar o pulso. acompanha sono, batimentos e oxigênio no sangue. até 24h de bateria, com recarga rápida.",
               "specs": "42 · 46mm; GPS · Cellular",
               "colors": "",
               "cond": "novo",
@@ -428,7 +458,7 @@
               "cat": "watch",
               "name": "Apple Watch SE",
               "fallback": "prod-watch-se.png",
-              "desc": "o essencial do Watch pelo preço que cabe. pra começar e não largar.",
+              "desc": "o Apple Watch essencial, pelo preço que cabe. agora com tela always-on e alto-falante. acompanha treino, batimentos e notificações no pulso.",
               "specs": "40 · 44mm; GPS",
               "colors": "",
               "cond": "novo",
@@ -443,7 +473,7 @@
               "cat": "airpods",
               "name": "AirPods Pro 3",
               "fallback": "prod-airpods-pro.png",
-              "desc": "o cancelamento tapa o busão inteiro, agora com batimento no ouvido. modo ambiente num toque, sem tirar.",
+              "desc": "o melhor cancelamento que a Apple já fez. agora mede seus batimentos e acompanha mais de 50 treinos. até 8h de música.",
               "specs": "USB-C; estojo MagSafe",
               "colors": "",
               "cond": "novo",
@@ -458,7 +488,7 @@
               "cat": "airpods",
               "name": "AirPods 4",
               "fallback": "prod-airpods-4.png",
-              "desc": "o som da Apple sem enfiar nada no ouvido. com ou sem cancelamento, você escolhe.",
+              "desc": "o formato clássico e leve da Apple, sem ponteira de silicone. agora com chip H2 e versão com cancelamento de ruído, raro num fone aberto. conforto o dia todo e estojo USB-C.",
               "specs": "USB-C; com / sem ANC",
               "colors": "",
               "cond": "novo",
@@ -473,7 +503,7 @@
               "cat": "airpods",
               "name": "AirPods Max",
               "fallback": "prod-airpods-max.png",
-              "desc": "som over-ear que isola o mundo. acabamento em alumínio e bateria que dura a viagem.",
+              "desc": "fone over-ear que isola o mundo, em alumínio. áudio espacial que faz o som te envolver de verdade. até 20h de bateria e carrega no USB-C.",
               "specs": "USB-C; áudio espacial",
               "colors": "",
               "cond": "novo",
@@ -483,6 +513,8 @@
           }
         },
         "block_order": [
+          "produto_JG4Tfg",
+          "produto_yQdbwM",
           "produto_gJaDgt",
           "produto_Ght8Aa",
           "produto_cJXiU9",
@@ -525,7 +557,7 @@
             "type": "post",
             "settings": {
               "cat": "seminovo",
-              "tags": "seminovo iphone",
+              "tags": "seminovo",
               "title": "vale a pena comprar iPhone seminovo?",
               "excerpt": "a real sobre seminovo: quando é o melhor negócio e o que olhar antes.",
               "meta": "28 mai 2026 · 6 min",
@@ -640,7 +672,8 @@
           "hero_kicker": "blog",
           "hero_line1": "dicas e novidades",
           "hero_line2": "do mundo Apple.",
-          "hero_sub": "comparativos · guias · dicas ·  novidades · como escolher certo"
+          "hero_sub": "comparativos · guias · dicas ·  novidades · como escolher certo",
+          "hero_image": "shopify://shop_images/woman-holds-ipad.jpg"
         }
       },
       "faq": {
@@ -698,7 +731,7 @@
           "faq-7": {
             "type": "pergunta",
             "settings": {
-              "question": "em quanto tempo chega o iPhone novo?",
+              "question": "se eu encomendar um novo, em quanto tempo chega?",
               "answer": "lacrados sob encomenda chegam em até 7 dias úteis. seminovos em estoque saem na hora."
             }
           },
@@ -706,7 +739,7 @@
             "type": "pergunta",
             "settings": {
               "question": "quais cidades vocês atendem?",
-              "answer": "temos loja física em Caxias do Sul-RS e entregamos em toda a serra gaúcha."
+              "answer": "temos loja física em caxias do sul · rs  e entregamos para toda a serra gaúcha."
             }
           },
           "faq-9": {
@@ -720,7 +753,7 @@
             "type": "pergunta",
             "settings": {
               "question": "quais formas de pagamento vocês aceitam?",
-              "answer": "a vista ou parcelado no cartão. o que ficar melhor para você"
+              "answer": "a vista ou parcelado em até 12x no cartão. o que ficar melhor para você."
             }
           },
           "faq-11": {
@@ -733,8 +766,8 @@
           "faq-12": {
             "type": "pergunta",
             "settings": {
-              "question": "vocês aceitam meu iPhone antigo como entrada?",
-              "answer": "aceitamos. manda o modelo e o estado no whatsapp que a gente avalia e abate no seu próximo."
+              "question": "vocês aceitam meu aparelho atual como entrada?",
+              "answer": "aceitamos. só enviar o modelo e especificações no WhatsApp que avaliamos."
             }
           }
         },
@@ -757,13 +790,13 @@
           "hero_kicker": "perguntas frequentes",
           "hero_line1": "ainda em dúvida?",
           "hero_line2": "a gente responde.",
-          "hero_sub": "tudo o que mais perguntam sobre comprar Apple aqui.",
-          "hero_image": "shopify://shop_images/4451231bc9226ed393239947a57ceca0.jpg",
+          "hero_sub": "reunimos todas as perguntas frequentes aqui.",
+          "hero_image": "shopify://shop_images/900942dd911f97a94192ceb376e5e040.jpg",
           "hero_cta": "",
           "gar_novos_title": "Apple oficial · 12 meses",
           "gar_novos_text": "todo aparelho novo chega lacrado de fábrica. garantia internacional Apple, válida em qualquer Apple Service no mundo, inclusive no Brasil.",
           "gar_semi_title": "smartbase · 3 meses",
-          "gar_semi_text": "pros seminovos, a smartbase adiciona 3 meses de garantia própria sobre o aparelho. acionamento direto com a smartbase, no whatsapp."
+          "gar_semi_text": "pros seminovos, oferecemos garantia própria de 3 meses. acionamento e suporte direto com a gente."
         }
       },
       "contato": {
@@ -773,11 +806,11 @@
           "hero_line1": "passa na loja.",
           "hero_line2": "a gente te espera.",
           "hero_sub": "tem loja de verdade em caxias do sul, de portas abertas pra você. vem conhecer, tomar um café e ver os aparelhos de pert",
-          "hero_image": "shopify://shop_images/4451231bc9226ed393239947a57ceca0.jpg",
+          "hero_image": "shopify://shop_images/flatlay.png",
           "hero_cta": "quero conhecer a loja",
           "map_local": "caxias do sul",
           "map_warn": "rua Sinimbu · 2211 · centro",
-          "endereco": "rua Sinimbu · 2211 · 8 andar · centro\ncaxias do sul, rs",
+          "endereco": "rua sinimbu · 2211 · 8 andar · centro\ncaxias do sul · rs",
           "horario": "seg a sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado",
           "horario_note": "excepcionalmente atendemos fora desses horários · combina com a gente.",
           "atendimento": "WhatsApp · +55 54 99662-4494"

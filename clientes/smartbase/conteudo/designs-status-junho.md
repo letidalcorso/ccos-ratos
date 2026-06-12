@@ -8,6 +8,10 @@ Plano canônico: `legendas-junho-2026.md` (v3, LightCopy). Onde o Notion conflit
 - **Seminovo: o que vem (e não vem)** (carrossel 5, tipográfico, QUI 25) — node 941-35. Completo, sem dependência de foto.
 - **Caxias na lente do 17 Pro Max** (carrossel 6, TER 09) — node 942-35. Placeholders nomeados com a foto exata por slide (fotos em `fotos-caxias/`). Falta dropar as fotos.
 - **Fechamento do mês + tease julho** (post estático, TER 30) — node 943-35. Completo.
+- **Copa abre: ajeita teu iphone** (carrossel 5, QUI 11) — node 957-35. Conteúdo (3 dicas) + virada no seminovo. Substituiu o card estático genérico reprovado. Completo, tipográfico. Upgrade futuro: arte de IA na capa quando tiver crédito.
+
+## Bloqueio de geração de imagem (IA)
+Todos os caminhos pedem crédito/billing: inference.sh (saldo zero), Gemini (free tier = 0 p/ modelos de imagem, precisa billing), OpenAI (chave vazia no .env). Pra gerar FLUX/Imagen, recarregar inference.sh OU ativar billing no Gemini. infsh CLI já está logado como a Letícia.
 
 ## Pendentes — dependem de foto/imagem
 - **SÁB 13 Serra na lente** (carrossel) — precisa curar fotos da serra.
