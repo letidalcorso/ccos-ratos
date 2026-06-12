@@ -102,7 +102,7 @@
           "v_eyebrow": "não achou o que procura?",
           "v_h1": "se existe,",
           "v_h2": "a gente acha.",
-          "v_sub": "tem a Apple inteira pra ti. manda o modelo que tu quer no WhatsApp e a gente encontra, confere e te avisa.",
+          "v_sub": "tem a Apple inteira pra você. manda o modelo que você quer no WhatsApp e a gente encontra, confere e te avisa.",
           "v_cta": "vou chamar no whatsapp",
           "v_dest": "whatsapp",
           "v_link": "",
@@ -112,7 +112,7 @@
           "f_show": true,
           "f_eyebrow": "tirou as dúvidas?",
           "f_h1": "então bora",
-          "f_h2": "escolher o teu.",
+          "f_h2": "escolher o seu.",
           "f_sub": "ainda com alguma pergunta? chama no whatsapp que a gente te ajuda a decidir.",
           "f_cta": "vou escolher meu aparelho",
           "f_dest": "vitrine",
@@ -135,7 +135,7 @@
           "b_eyebrow": "gostou da leitura?",
           "b_h1": "bora levar isso",
           "b_h2": "pra prática.",
-          "b_sub": "da teoria pro teu próximo apple: manda o modelo no whatsapp que a gente resolve.",
+          "b_sub": "da teoria pro seu próximo apple: manda o modelo no whatsapp que a gente resolve.",
           "b_cta": "falar no whatsapp",
           "b_dest": "whatsapp",
           "b_link": "",
@@ -308,7 +308,7 @@
               "cat": "mac",
               "name": "MacBook Air",
               "fallback": "prod-macbook-air.png",
-              "desc": "M4 e sem ventoinha nenhuma. aguenta o dia longe da tomada e vai pra qualquer lugar contigo.",
+              "desc": "M4 e sem ventoinha nenhuma. aguenta o dia longe da tomada e vai pra qualquer lugar com você.",
               "specs": "M4 · 13\" e 15\"; 16GB · 512GB",
               "colors": "meia-noite:#2e3641; estelar:#efe6d6; prata:#dcdee0; azul-céu:#b6c8de",
               "cond": "novo",
@@ -338,7 +338,7 @@
               "cat": "mac",
               "name": "Mac mini",
               "fallback": "prod-mac-mini.png",
-              "desc": "cabe na palma e é desktop de verdade. liga na tua tela e tá pronto. o Mac mais em conta.",
+              "desc": "cabe na palma e é desktop de verdade. liga na sua tela e tá pronto. o Mac mais em conta.",
               "specs": "M4 · M4 Pro; 16GB · 256GB+",
               "colors": "",
               "cond": "novo",
@@ -413,7 +413,7 @@
               "cat": "watch",
               "name": "Apple Watch Series 11",
               "fallback": "prod-watch-series.png",
-              "desc": "lê teu sono, teu treino e teu coração no pulso. e te avisa antes de tu sentir.",
+              "desc": "lê seu sono, seu treino e seu coração no pulso. e te avisa antes de você sentir.",
               "specs": "42 · 46mm; GPS · Cellular",
               "colors": "",
               "cond": "novo",
@@ -458,7 +458,7 @@
               "cat": "airpods",
               "name": "AirPods 4",
               "fallback": "prod-airpods-4.png",
-              "desc": "o som da Apple sem enfiar nada no ouvido. com ou sem cancelamento, tu escolhe.",
+              "desc": "o som da Apple sem enfiar nada no ouvido. com ou sem cancelamento, você escolhe.",
               "specs": "USB-C; com / sem ANC",
               "colors": "",
               "cond": "novo",
@@ -504,9 +504,9 @@
         ],
         "settings": {
           "hero_kicker": "vitrine",
-          "hero_line1": "o teu próximo",
+          "hero_line1": "o seu próximo",
           "hero_line2": "está aqui.",
-          "hero_sub": "Apple inteira. particular tua. lacrada ou seminova. sempre com garantia.\n\npaga quando estiver na mão.",
+          "hero_sub": "Apple inteira. particular sua. lacrada ou seminova. sempre com garantia.\n\npaga quando estiver na mão.",
           "hero_image": "shopify://shop_images/pexels-quirva-14541063.jpg",
           "porta_novos_title": "novos",
           "porta_novos_sub": "lacrados. sob encomenda.",
@@ -671,7 +671,7 @@
             "type": "pergunta",
             "settings": {
               "question": "e se o aparelho der problema depois da garantia?",
-              "answer": "a gente continua te ajudando a encaminhar pro serviço autorizado Apple. tu nunca fica na mão."
+              "answer": "a gente continua te ajudando a encaminhar pro serviço autorizado Apple. você nunca fica na mão."
             }
           },
           "faq-4": {
@@ -734,7 +734,7 @@
             "type": "pergunta",
             "settings": {
               "question": "vocês aceitam meu iPhone antigo como entrada?",
-              "answer": "aceitamos. manda o modelo e o estado no whatsapp que a gente avalia e abate no teu próximo."
+              "answer": "aceitamos. manda o modelo e o estado no whatsapp que a gente avalia e abate no seu próximo."
             }
           }
         },
@@ -772,7 +772,7 @@
           "hero_kicker": "contato",
           "hero_line1": "passa na loja.",
           "hero_line2": "a gente te espera.",
-          "hero_sub": "tem loja de verdade em caxias do sul, de portas abertas pra ti. vem conhecer, tomar um café e ver os aparelhos de pert",
+          "hero_sub": "tem loja de verdade em caxias do sul, de portas abertas pra você. vem conhecer, tomar um café e ver os aparelhos de pert",
           "hero_image": "shopify://shop_images/4451231bc9226ed393239947a57ceca0.jpg",
           "hero_cta": "quero conhecer a loja",
           "map_local": "caxias do sul",
