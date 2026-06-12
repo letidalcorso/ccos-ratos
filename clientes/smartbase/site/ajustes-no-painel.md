@@ -19,7 +19,7 @@
 - pergunta → `vocês entregam fora de Caxias?`
 - resposta → `sim. na serra gaúcha a gente combina a entrega no WhatsApp. como tu só paga quando recebe o aparelho na mão, a gente alinha certinho onde e quando.`
 
-**3. Faixa pré-rodapé → grupo Vitrine → Texto**
+**3. Faixa pré-rodapé → grupo Vitrine → Texto** OK
 - de: `tem a apple inteira pra ti — manda o modelo que tu quer no whatsapp e a gente encontra, confere e te avisa.`
 - para: `tem a Apple inteira pra ti. manda o modelo que tu quer no WhatsApp e a gente encontra, confere e te avisa.`
 
