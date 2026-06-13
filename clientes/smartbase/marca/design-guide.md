@@ -283,3 +283,11 @@ Constantes em todo card (é o fio condutor):
 - **Storytelling de jornada:** uma só missão em passos numerados (01, 02, 03...), produto como último passo. O leitor tem que conseguir aplicar os passos mesmo sem comprar.
 - **Engajamento:** ao menos 1 slide salvável/comentável (enquete, checklist, dado).
 - **Voz (de `conteudo/voz-smartbase.md`):** caixa baixa, take primeiro, fato concreto, CTA convite. **Proibido:** travessão, "não é X, é Y", emoji de enfeite, promoção genérica, preço no feed, prometer "100% de bateria" como padrão.
+
+### Mockups de dispositivo (padrão — lição 13/06)
+Quando um card mostra uma tela ou aparelho, usar **mockup de dispositivo REALISTA**, nunca retângulo desenhado à mão.
+- **Device frame realista:** iPhone/Watch com notch, dynamic island, botões, sombra e **wallpaper real do iOS**. Fonte: bibliotecas de device do Figma / Apple Design Resources.
+- **UI/screenshot real do recurso** dentro do device: ex. Apple Sports (FIFA World Cup 2026 com bandeiras e troféu), Dynamic Island com placar, tela de bloqueio com Live Activity, Apple Watch Ultra com placar, tela de "Editar Automação" do app Atalhos.
+- **Conteúdo real** (bandeiras, chrome do app, wallpaper) > texto chapado tipo "brasil 2". Dá cara de keynote da Apple, que é o nível premium do feed.
+- Referência: carrossel da Copa (`post_carrossel_13-06-*`), refeito pela Letícia nesse padrão.
+- Técnico: imagem entra no Figma via a ferramenta `upload_assets` (POST dos bytes pra URL retornada); `createImageAsync` não é suportado no use_figma.
