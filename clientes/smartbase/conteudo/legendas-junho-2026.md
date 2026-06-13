@@ -37,7 +37,7 @@
 
 ---
 
-## QUI 11 — carrossel | a copa inteira no teu iphone (Apple Sports) · DECIFRA APPLE (Figma 961-29)
+## QUI 11 — carrossel | tu vai acompanhar a copa errado (Apple Sports + Live Activities) · DECIFRA APPLE (Figma 988-29)
 **Herói: Apple Sports + Live Activities (a Apple lançou pra Copa, chegou ao BR 19/05/26). Apoio: bateria + câmera. Virada no seminovo. Fontes: Apple Newsroom, MacRumors.**
 > a apple soltou recursos novos pro mundial e quase ninguém ativou.
 > o app apple sports te dá placar ao vivo, tabela, chaveamento e escalação de cada jogo, de graça. e com as live activities o placar fica na tela de bloqueio, sem você abrir nada.
