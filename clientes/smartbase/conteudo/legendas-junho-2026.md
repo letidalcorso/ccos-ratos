@@ -37,14 +37,14 @@
 
 ---
 
-## QUI 11 — carrossel | tu vai acompanhar a copa errado (Apple Sports + Live Activities) · DECIFRA APPLE (Figma 988-29)
-**Herói: Apple Sports + Live Activities (a Apple lançou pra Copa, chegou ao BR 19/05/26). Apoio: bateria + câmera. Virada no seminovo. Fontes: Apple Newsroom, MacRumors.**
-> a apple soltou recursos novos pro mundial e quase ninguém ativou.
-> o app apple sports te dá placar ao vivo, tabela, chaveamento e escalação de cada jogo, de graça. e com as live activities o placar fica na tela de bloqueio, sem você abrir nada.
-> salva pra usar no primeiro jogo. tem ainda as dicas de bateria e de gravar o gol em câmera lenta.
-> e se o teu já não dá conta da copa, tem o 17 pro max laranja seminovo e novos lacrados. paga quando receber na mão. chama no whats.
+## QUI 11 — carrossel | 4 funções do iphone na copa · DECIFRA APPLE (Figma 1000-29)
+**Listicle (4 funções) + enquete de engajamento + fecho de confiança. Copy base da Letícia, ajustada à voz. Fontes Apple Sports: Apple Newsroom, MacRumors (BR 19/05/26).**
+> a copa não é só na tv. o iphone é o segundo telão de todo jogo, e dá pra deixar ele afiado antes do apito.
+> 4 ajustes que muita gente não usa: o app da apple só pros jogos, o placar na tela bloqueada, a bateria que aguenta os 90 e a câmera lenta pro gol.
+> salva pra configurar antes do próximo jogo, e me conta nos comentários quantas tu já usava.
+> e se o teu já não dá conta, manda "copa" no whats. tem 17 pro max laranja seminovo (bateria conferida, garantia apple) e a linha 17 lacrada. paga quando recebe na mão.
 
-**Hashtags:** #copa2026 #vemhexa #iphonecaxias #applecaxias #caxiasdosul
+**Hashtags:** #copa2026 #applesports #iphonecaxias #applecaxias #dicasdeiphone #caxiasdosul
 
 ---
 
