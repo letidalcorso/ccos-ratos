@@ -248,3 +248,38 @@ Wordmark:    smart → font-weight="300" fill="#C0C0D0" / base → font-weight="
 Dot:         <circle r="5" fill="#3E82F7"/>
 Badge sb:    <rect rx="15" fill="#0F0F1C"/> <text fill="#3E82F7" font-weight="600">sb</text>
 ```
+
+---
+
+## Kit de jogadas — evolução do carrossel (jun/2026)
+
+> Evolução aprovada pela Letícia. O dark sólido continua válido, mas os carrosséis de conteúdo ganharam **profundidade** e um **kit de layouts variados**. Referências montadas no Figma (`QKN6E4t9w2XPdATrXzivvN`, página "orgânico feed | junho/26"): Copa `1000-29`, iOS 27 `992-29`, seminovo `1004-29`.
+
+### Tratamento de profundidade (a "linguagem" da marca)
+Constantes em todo card (é o fio condutor):
+- **Fundo:** degradê vertical sutil de superfície (`#10..12` no topo → `#07070E` embaixo). Não é mais o preto chapado puro.
+- **Glow azul:** 1-2 elipses `#3E82F7` com layer blur ~200, opacity 0.12–0.30, atrás do conteúdo. Dá luz e profundidade.
+- **Marca d'água:** "b." gigante (Bricolage ExtraBold ~1150px) em `#F2F2F6` opacity 0.045, atrás do conteúdo. Assinatura visual recorrente.
+- **Tipo:** Bricolage ExtraBold nos headlines, Inter no corpo. Palavra-chave em azul.
+- **Footer:** `@smartbase.br` (Inter Medium 26, branco 85%) no rodapé esquerdo.
+- **Chips:** pill arredondada; tag com contorno azul 35%, CTA com fundo azul sólido.
+
+### As jogadas (escolher por post, variar ao longo do feed)
+1. **Número-herói** — número gigante como visual (ex: "4", "90'", "11+"). Dado/listicle.
+2. **Palavra explodida** — uma palavra dominando o slide (ex: "a caixa.", "errado.", "pegadinha."). Take/virada.
+3. **Mockup de tela** — desenhado no Figma: card de app (ícone + nome + placar) ou tela de bloqueio com Live Activity. Autêntico, não precisa de foto.
+4. **Capa glow + marca d'água** — atmosférica, hook grande, palavra em azul.
+5. **Comparação em cards** — dois cards contrastando (ex: "todo iphone 11+" x "a inteligência nova"). Esclarece + gera comentário.
+6. **Lista com dots** — itens com bolinha azul (ex: o que vem no seminovo).
+7. **Enquete** — pergunta + opções com checkbox visual ("responde nos comentários"). Engajamento (comentário/save).
+8. **Foto/produto** — slot reservado pra foto real recortada (ex: 17 pro max laranja no CTA) — preenche quando tiver imagem.
+
+### Regra de ouro: variedade x coesão
+- **Variedade vive ENTRE posts:** cada carrossel do feed usa uma jogada-herói diferente, pra o grid não ficar carimbado.
+- **Coesão vive DENTRO do carrossel:** os slides de um mesmo carrossel compartilham a moldura (degradê + glow + marca d'água + footer + estilo de tipo); só o elemento-herói do meio muda. Não misturar 6 estruturas diferentes num só carrossel.
+
+### Princípio de copy (LightCopy + storytelling)
+- **Premissa, não promessa** (Ladeira): ensina algo real, a venda vem de consequência.
+- **Storytelling de jornada:** uma só missão em passos numerados (01, 02, 03...), produto como último passo. O leitor tem que conseguir aplicar os passos mesmo sem comprar.
+- **Engajamento:** ao menos 1 slide salvável/comentável (enquete, checklist, dado).
+- **Voz (de `conteudo/voz-smartbase.md`):** caixa baixa, take primeiro, fato concreto, CTA convite. **Proibido:** travessão, "não é X, é Y", emoji de enfeite, promoção genérica, preço no feed, prometer "100% de bateria" como padrão.
