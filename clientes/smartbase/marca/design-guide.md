@@ -259,7 +259,7 @@ Badge sb:    <rect rx="15" fill="#0F0F1C"/> <text fill="#3E82F7" font-weight="60
 Constantes em todo card (é o fio condutor):
 - **Fundo:** degradê vertical sutil de superfície (`#10..12` no topo → `#07070E` embaixo). Não é mais o preto chapado puro.
 - **Glow azul:** 1-2 elipses `#3E82F7` com layer blur ~200, opacity 0.12–0.30, atrás do conteúdo. Dá luz e profundidade.
-- **Marca d'água:** "b." gigante (Bricolage ExtraBold ~1150px) em `#F2F2F6` opacity 0.045, atrás do conteúdo. Assinatura visual recorrente.
+- **Marca d'água:** sempre **"sb"** (as duas letras juntas, nunca só "b"), Bricolage ExtraBold, em `#F2F2F6`, atrás do conteúdo. **As duas letras têm que aparecer inteiras na arte** (não deixar sangrar/cortar na borda). Referência da capa da Copa: ~1000px, opacity ~0.20. Uma assinatura por card: nos slides com número grande (01, 02...), o próprio número é o ghost; o "sb" entra nos cards sem número.
 - **Tipo:** Bricolage ExtraBold nos headlines, Inter no corpo. Palavra-chave em azul.
 - **Footer:** `@smartbase.br` (Inter Medium 26, branco 85%) no rodapé esquerdo.
 - **Chips:** pill arredondada; tag com contorno azul 35%, CTA com fundo azul sólido.
