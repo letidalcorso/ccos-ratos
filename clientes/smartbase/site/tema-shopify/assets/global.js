@@ -3,6 +3,13 @@
 (function () {
   'use strict';
 
+  /* ---- Meta Pixel: clique em qualquer botão de WhatsApp conta como Lead ---- */
+  document.addEventListener('click', function (e) {
+    var wa = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp"], a[href*="whatsapp://"]');
+    if (!wa) return;
+    if (window.fbq) { try { fbq('track', 'Lead', { content_name: 'whatsapp_click' }); } catch (err) {} }
+  });
+
   /* ---- BrowserBar (botões voltar/avançar/recarregar/compartilhar) ---- */
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-bb]');

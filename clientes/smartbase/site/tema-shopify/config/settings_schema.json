@@ -45,6 +45,17 @@
         "id": "instagram_handle",
         "label": "Instagram (@ exibido)",
         "default": "@smartbase.br"
+      },
+      {
+        "type": "header",
+        "content": "Rastreamento (Meta Pixel)"
+      },
+      {
+        "type": "text",
+        "id": "meta_pixel_id",
+        "label": "ID do Meta Pixel",
+        "info": "Pixel do Facebook/Instagram. Deixe vazio para desligar. Pixel da Smartbase: 2054869865373051",
+        "default": "2054869865373051"
       }
     ]
   }
