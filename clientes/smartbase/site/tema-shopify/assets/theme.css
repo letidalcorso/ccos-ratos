@@ -63,3 +63,14 @@ img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) cont
 .sb-placeholder{padding:160px 0;text-align:center}
 .sb-placeholder .headline{font-size:clamp(40px,7vw,72px);margin:16px 0}
 .sb-placeholder .sb-lead{max-width:520px;margin:0 auto}
+
+/* ---- palco do produto da vitrine em modo escuro (combina com o site) ----
+   As fotos são recortes transparentes; o branco vinha do gradiente do palco
+   (.pc-photo em pages.css). Troco por um palco escuro com luz suave no topo
+   pra produto escuro continuar destacando. */
+.pc-photo{
+  background:
+    radial-gradient(120% 82% at 50% -6%, rgba(255,255,255,.12), rgba(255,255,255,0) 58%),
+    linear-gradient(180deg, #1b1e2d 0%, #0f1118 100%) !important;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
