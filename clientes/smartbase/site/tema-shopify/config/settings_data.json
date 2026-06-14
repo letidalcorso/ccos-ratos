@@ -259,22 +259,6 @@
               "price": ""
             }
           },
-          "produto_gJaDgt": {
-            "type": "produto",
-            "name": "13 | midlenight",
-            "disabled": true,
-            "settings": {
-              "cat": "iphone",
-              "name": "iPhone 13",
-              "fallback": "",
-              "desc": "",
-              "specs": "128GB",
-              "colors": "",
-              "cond": "seminovo",
-              "in_stock": true,
-              "price": "R$ 2.199,00"
-            }
-          },
           "vitrine-0": {
             "type": "produto",
             "name": "17 pro max - novo",
@@ -514,13 +498,27 @@
               "in_stock": true,
               "price": ""
             }
+          },
+          "produto_iphone13": {
+            "type": "produto",
+            "settings": {
+              "cat": "iphone",
+              "name": "iPhone 13",
+              "fallback": "",
+              "desc": "",
+              "specs": "128GB",
+              "colors": "",
+              "cond": "seminovo",
+              "in_stock": true,
+              "price": "R$ 2.199,00"
+            }
           }
         },
         "block_order": [
           "produto_MhLmHB",
           "produto_JG4Tfg",
           "produto_yQdbwM",
-          "produto_gJaDgt",
+          "produto_iphone13",
           "vitrine-0",
           "vitrine-1",
           "vitrine-2",
