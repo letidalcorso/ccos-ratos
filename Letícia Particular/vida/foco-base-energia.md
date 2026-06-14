@@ -11,7 +11,8 @@ Recuperação de exaustão leva semanas, não dias. Se em um mês tu sentir "men
 ## 1. Sono é prioridade zero
 
 Energia em 3 quase sempre começa no sono. Vem antes de tudo.
-- **Horário-âncora pra acordar**, igual no fim de semana. Define qual: ______
+- **Acordar 8h, todo dia — igual no fim de semana.** Horário fixo de acordar é o que regula o relógio do corpo.
+- 8h acordando = mirar a cama por volta de **00h30** pra fechar ~7h30 de sono.
 - **Corte de tela 30 min antes de deitar** — o feed é o que mais rouba sono e descanso de verdade.
 - Não precisa ser perfeito. Precisa ser repetido. Errou um dia, segue no outro.
 
@@ -21,11 +22,15 @@ Teu lazer marcou 6, mas vale o teste: rolar Instagram exausta não restaura — 
 - **1 bloco por semana** de descanso que conta de verdade (caminhada ao sol, hobby, banho longo, cozinhar sem pressa — o que for teu).
 - Agenda como compromisso, não "se sobrar tempo". Sobrar tempo nunca sobra.
 
-## 3. Movimento mínimo viável
+## 3. Voltar pra academia — de um jeito que sobrevive
 
-Exercício é dos poucos com prova direta de ajudar na recuperação de esgotamento — mas "academia 5x" com energia 3 fracassa em 4 dias. O mínimo que tu consegue manter:
-- **10-15 min de caminhada por dia.** Só isso. Pode ser no telefone, indo no mercado, qualquer hora.
-- O objetivo não é treino. É o corpo lembrar que se move e o ar entrar.
+Exercício é dos poucos com prova direta de ajudar na recuperação de esgotamento. Tu quer voltar pra academia — ótimo, bate caminhada de longe. O risco é um só, e é exatamente o que te trouxe até aqui: voltar a 5-6x com energia 3 é o jeito mais garantido de largar em uma semana. Pesquisa é direta — intensidade alta e treino longo cedo demais = maior desistência. ([NZIHF](https://nzihf.ac.nz/fitness-training/exercise-intensity-and-adherence-for-beginners/))
+
+O que sustenta:
+- **3x por semana pra começar.** Full-body, sessão curta (~40 min, não 90). 2-3x é o ideal pra quem tá voltando e já cria rotina. ([adesão a longo prazo, NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8194699/))
+- **Consistência > intensidade.** Quem treina 3x certinho evolui mais que quem vai com tudo e some.
+- **Dias fixos**, escolhidos agora (ex: seg / qua / sex). Dia marcado vira hábito; "quando der" não vira.
+- Depois de ~6 semanas firme, sobe pra 4x se o corpo pedir — aí já é automático.
 
 ---
 
@@ -36,8 +41,8 @@ Pra exaustão difusa + emocional em 2, a alavanca de maior retorno comprovado é
 ## Como acompanhar (2 min, toda sexta)
 
 Três perguntas, sem cobrança — é termômetro, não prova:
-- Dormi nos horários a maioria dos dias?
+- Acordei 8h a maioria dos dias?
 - Tive o meu bloco de descanso real?
-- Caminhei?
+- Treinei os 3 dias marcados?
 
 Em 30 dias a gente refaz a roda e vê se a energia subiu. Se um dos 3 movimentos não tá rolando, a gente troca por um menor ainda — não desiste, ajusta o tamanho.
