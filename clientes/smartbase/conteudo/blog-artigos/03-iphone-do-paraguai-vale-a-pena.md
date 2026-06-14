@@ -22,13 +22,13 @@
 
 Pesquisa "iPhone do Paraguai" no Google e a internet inteira te responde com medo: golpe, falsificação, "confia, pix antes". E faz sentido, golpe existe mesmo. Só que a pergunta certa é outra: **como tirar o risco da jogada**.
 
-Porque a economia é real. Um iPhone importado custa bem menos que na loja oficial brasileira, e pode ser tão original quanto. O que separa o bom negócio do prejuízo é a procedência e, principalmente, **a ordem das coisas: conferir antes de pagar.** O país de origem importa bem menos. Vamos destrinchar.
+Porque a economia é real. Um iPhone importado custa bem menos que na loja oficial brasileira, e é tão original quanto. O que separa o bom negócio do prejuízo é a procedência e, principalmente, **a ordem das coisas: conferir antes de pagar.** O país de origem importa bem menos. Vamos destrinchar.
 
 ## Quanto dá pra economizar (e por que é mais barato)
 
-A diferença não é pouca. Dependendo do modelo, um iPhone importado sai de R$2.000 a R$3.000 mais barato que na loja oficial, mesmo já contando custos da viagem.
+A diferença não é pouca. Dependendo do modelo, um iPhone importado sai de R$2.000 a R$3.000 mais barato que na loja oficial.
 
-O motivo é simples: imposto. O Brasil é o **segundo país mais caro do mundo pra comprar iPhone**, perdendo só pra Turquia, porque a carga tributária sobre eletrônico importado passa de 60% (imposto de importação) e ainda soma IPI, ICMS, PIS e Cofins (fonte: em.com.br, 2026). Boa parte do que você paga numa loja oficial é tributo, não aparelho. Por isso o mesmo iPhone, importado, custa menos. (A gente explica essa conta inteira em [por que o iPhone é tão caro no Brasil](/blog/por-que-iphone-e-caro-no-brasil).)
+O motivo é simples: imposto. O Brasil é o **[segundo país mais caro do mundo pra comprar iPhone](https://www.em.com.br/trends/2026/04/7396343-por-que-o-iphone-no-brasil-e-o-2-mais-caro-do-mundo-entenda-os-impostos.html)**, perdendo só pra Turquia, porque a carga tributária sobre eletrônico importado passa de 60% (imposto de importação) e ainda soma IPI, ICMS, PIS e Cofins. Boa parte do que você paga numa loja oficial é tributo, não aparelho. Por isso o mesmo iPhone, importado, custa menos. (A gente explica essa conta inteira em [por que o iPhone é tão caro no Brasil](/blog/por-que-iphone-e-caro-no-brasil).)
 
 ## Os riscos são reais (e por que tanta gente se queima)
 
@@ -38,17 +38,17 @@ Os sinais que devem te fazer desconfiar de qualquer vendedor:
 - pede **pix antes** de você ver o aparelho;
 - preço **bom demais**, muito abaixo do mercado;
 - vendedor **sem rosto, sem endereço, sem histórico** verificável;
-- pressa pra fechar e some quando você pede garantia ou nota.
+- pressa pra fechar e some quando você pede garantia ou procedência.
 
 Repara que o risco está sempre no mesmo lugar: comprar de quem some depois do pix.
 
 ## iPhone do Paraguai é original? É legal?
 
-Pode ser 100% original. O iPhone vendido lá é, na maioria, o mesmo modelo da linha global que a Apple vende no Brasil, com as mesmas peças. O que define se é original é a **procedência**, não o carimbo do país. Aparelho lacrado, com IMEI limpo e verificável no site da Apple, é original venha de onde vier. Aparelho de origem duvidosa é problema, mesmo comprado aqui na esquina.
+Pode ser 100% original. O iPhone vendido lá é, na maioria, o mesmo modelo da linha global que a Apple vende no Brasil, com as mesmas peças. O que define a originalidade é a **procedência**: aparelho lacrado, com IMEI limpo e verificável no site da Apple. Isso vale venha de onde vier; origem duvidosa é problema mesmo comprado aqui na esquina.
 
-E a garantia existe: a garantia Apple é mundial (1 ano a contar da ativação) e a Justiça brasileira já obrigou a Apple a cobrir aparelho comprado fora. Como isso funciona na prática está em [iPhone importado tem garantia no Brasil?](/blog/garantia-apple-iphone-importado-brasil).
+E a garantia existe: a garantia Apple é mundial (1 ano a contar da ativação) e a [Justiça brasileira já obrigou a Apple a cobrir aparelho comprado fora](https://www.jusbrasil.com.br/noticias/justica-brasileira-afirma-que-apple-e-obrigada-a-dar-garantia-a-iphones-comprados-no-exterior/117634256). Como isso funciona na prática está em [iPhone importado tem garantia no Brasil?](/blog/garantia-apple-iphone-importado-brasil).
 
-## Como comprar iPhone do Paraguai sem cair em golpe (checklist)
+## Como comprar importado sem cair em golpe (checklist)
 
 Comprando com cabeça, vira um ótimo negócio. Antes de fechar qualquer compra:
 
@@ -58,13 +58,11 @@ Comprando com cabeça, vira um ótimo negócio. Antes de fechar qualquer compra:
 4. **Procedência e quem vende.** Nome, endereço, histórico. Quem tem o que esconder, some.
 5. **A regra de ouro: não pague antes de conferir.** Tudo acima só serve se você puder verificar com o aparelho na mão. Pix antecipado é onde o golpe mora.
 
-## Ir ao Paraguai ou comprar de quem traz? Os dois caminhos
+## O que faz a diferença é de quem você compra
 
-Tem duas formas de ter um iPhone do Paraguai:
+Comprar bem importado depende de uma coisa só: de quem você compra. As grandes lojas cobram mais caro porque embutem a estrutura inteira no preço. Quem conhece o fornecedor certo chega no mesmo aparelho original por bem menos, sem repassar esse custo pra ti.
 
-**Ir você mesmo.** Funciona pra quem já vai à fronteira de qualquer jeito. Mas se a viagem for só pra isso, a economia some no custo de deslocamento, e você ainda assume todo o risco de comprar de uma loja que não conhece, em galeria, sem poder cobrar depois.
-
-**Comprar de quem traz, aqui no Brasil.** Você pega o mesmo aparelho importado, sem viagem, e com alguém de nome e endereço pra responder por ele. O ponto é escolher quem te deixa conferir antes de pagar. Aí o "barato" deixa de ser aposta.
+O segredo é esse: comprar de alguém que conhece a origem e te deixa conferir tudo antes de pagar. Aí o "barato" deixa de ser aposta e vira negócio.
 
 ## O jeito Smartbase: a prova antes do pix
 
@@ -75,7 +73,7 @@ Gente de Caxias, nome e endereço. Quer saber o preço de um modelo? [Dá uma ol
 ## Perguntas frequentes
 
 **iPhone do Paraguai é original?**
-Pode ser 100% original. O que importa é a procedência: aparelho lacrado, com IMEI verificável no site da Apple. Costuma ser o mesmo modelo da linha global vendida no Brasil.
+Pode ser, e o que garante isso é a procedência: aparelho lacrado, com IMEI verificável no site da Apple. Aqui na Smartbase a gente garante a originalidade de cada aparelho e te mostra essa verificação antes de você pagar.
 
 **iPhone do Paraguai tem garantia no Brasil?**
 Tem. A garantia Apple é mundial (1 ano da ativação) e a Justiça brasileira já obrigou a Apple a cobrir aparelho comprado fora. Detalhe em [iPhone importado tem garantia no Brasil?](/blog/garantia-apple-iphone-importado-brasil).
