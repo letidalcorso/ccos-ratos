@@ -29,7 +29,7 @@ Exercício é dos poucos com prova direta de ajudar na recuperação de esgotame
 O que sustenta:
 - **3x por semana pra começar.** Full-body, sessão curta (~40 min, não 90). 2-3x é o ideal pra quem tá voltando e já cria rotina. ([adesão a longo prazo, NCBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8194699/))
 - **Consistência > intensidade.** Quem treina 3x certinho evolui mais que quem vai com tudo e some.
-- **Dias fixos**, escolhidos agora (ex: seg / qua / sex). Dia marcado vira hábito; "quando der" não vira.
+- **3x/semana com regra, não dia rígido:** nunca passar 2 dias seguidos sem treinar. Dá flexibilidade sem cair no "quando der" (que é onde a rotina morre). No domingo, decide os 3 dias da semana — flexível, mas decidido.
 - Depois de ~6 semanas firme, sobe pra 4x se o corpo pedir — aí já é automático.
 
 ---
@@ -43,6 +43,6 @@ Pra exaustão difusa + emocional em 2, a alavanca de maior retorno comprovado é
 Três perguntas, sem cobrança — é termômetro, não prova:
 - Acordei 8h a maioria dos dias?
 - Tive o meu bloco de descanso real?
-- Treinei os 3 dias marcados?
+- Treinei 3x essa semana (sem passar 2 dias seguidos parada)?
 
 Em 30 dias a gente refaz a roda e vê se a energia subiu. Se um dos 3 movimentos não tá rolando, a gente troca por um menor ainda — não desiste, ajusta o tamanho.
