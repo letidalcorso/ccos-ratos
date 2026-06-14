@@ -47,10 +47,13 @@ Priorizei por **sinais de demanda da SERP** (quantidade e qualidade de artigos c
 
 ## Ordem de produção recomendada
 
+> **Status (14/06):** Lote 1 escrito (4 rascunhos). v2 do seminovo aprovada pela Letícia (padrão de voz travado: caixa de frase, sem Title Case, investimento > "menos dinheiro", CTA com hiperlink WhatsApp, 3 meses garantia da loja no seminovo). Arquivos em `conteudo/blog-artigos/`.
+
 **Lote 1 (escrever primeiro — demanda alta + diferenciador máximo + winnable):**
-1. PILLAR — guia de comprar com segurança (âncora do cluster)
-2. iPhone do Paraguai vale a pena (a SERP é só medo, a Smartbase responde com solução)
-3. Garantia Apple vale no Brasil (mata a objeção que a própria SERP reforça)
+1. ✅ PILLAR — guia de comprar com segurança (`00-pilar-...`) — rascunho
+2. ✅ iPhone do Paraguai vale a pena (`03-...`) — rascunho
+3. ✅ Garantia Apple vale no Brasil (`01-...`) — rascunho (na fila de revisão da Letícia)
+4. ✅ iPhone novo ou seminovo (`02-...`) — **aprovado v2**
 
 **Lote 2 (próximos da decisão de compra):**
 4. iPhone novo ou seminovo

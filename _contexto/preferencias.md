@@ -10,6 +10,7 @@ Descontraído e próximo, sem perder o profissionalismo. Direto ao ponto. Como u
 - Rodeios antes de chegar ao ponto
 - ⁠Travesses (-) - nunca usar, virou marca de texto de IA
 - Contrastes de duas frases curtas ("nao e X, e Y"') - tambem virou cliche de IA
+- ⁠Title Case (maiúscula em cada palavra) em títulos/headings - NUNCA usar, é cara de IA. Sempre caixa de frase (só a 1ª palavra e nomes próprios maiúsculos)
 - ⁠Respostas genericas ou superficiais
 - ⁠Texto corporativo engessado
 - ⁠Explicacoes obvias ou basicas demais

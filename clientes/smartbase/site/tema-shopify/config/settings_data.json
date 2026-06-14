@@ -220,7 +220,7 @@
             "settings": {
               "cat": "iphone",
               "name": "iPhone 17 Pro",
-              "fallback": "prod-iphone-17-pro.png",
+              "fallback": "prod-iphone-17-pro-max.png",
               "desc": "tela de 6,3'' e corpo de alumínio, leve e forte. três câmeras de 48MP com 8x de zoom e vídeo de cinema. chip A19 Pro e bateria que vira o dia.",
               "specs": "256GB · 512GB · 1TB · 2TB",
               "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
@@ -273,38 +273,6 @@
               "cond": "seminovo",
               "in_stock": true,
               "price": "R$ 2.199,00"
-            }
-          },
-          "produto_Ght8Aa": {
-            "type": "produto",
-            "name": "17 pro max | silver",
-            "disabled": true,
-            "settings": {
-              "cat": "iphone",
-              "name": "iPhone 17 Pro Max",
-              "fallback": "",
-              "desc": "bateria 100% · < 6 meses de uso ·  garantia Apple até fev/27",
-              "specs": "256GB",
-              "colors": "silver:#d7d9db",
-              "cond": "seminovo",
-              "in_stock": true,
-              "price": "R$ 7.890,00"
-            }
-          },
-          "produto_cJXiU9": {
-            "type": "produto",
-            "name": "17 pro max | orange",
-            "disabled": true,
-            "settings": {
-              "cat": "iphone",
-              "name": "iPhone 17 Pro Max",
-              "fallback": "",
-              "desc": "bateria 100% · < 6 meses de uso ·  garantia Apple até jan/27",
-              "specs": "256GB",
-              "colors": "cosmic orange:#c2622f",
-              "cond": "seminovo",
-              "in_stock": true,
-              "price": "7.990,00"
             }
           },
           "vitrine-0": {
@@ -531,6 +499,21 @@
               "in_stock": true,
               "price": ""
             }
+          },
+          "produto_neo": {
+            "type": "produto",
+            "name": "MacBook Neo",
+            "settings": {
+              "cat": "mac",
+              "name": "MacBook Neo",
+              "fallback": "prod-macbook-neo.png",
+              "desc": "o Mac mais acessível e mais colorido que a Apple já fez. chip A18 Pro que roda Apple Intelligence numa boa. tela de 13'', leve e com bateria pro dia todo.",
+              "specs": "13\"; A18 Pro · 8GB · 256GB+",
+              "colors": "prata:#dcdee0; rosa:#e8c5cb; cítrico:#e6e08a; índigo:#5566a0",
+              "cond": "novo",
+              "in_stock": true,
+              "price": ""
+            }
           }
         },
         "block_order": [
@@ -538,13 +521,12 @@
           "produto_JG4Tfg",
           "produto_yQdbwM",
           "produto_gJaDgt",
-          "produto_Ght8Aa",
-          "produto_cJXiU9",
           "vitrine-0",
           "vitrine-1",
           "vitrine-2",
           "vitrine-3",
           "vitrine-4",
+          "produto_neo",
           "vitrine-5",
           "vitrine-6",
           "vitrine-7",
