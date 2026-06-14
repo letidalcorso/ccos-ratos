@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "meta_pixel_id": "2054869865373051",
     "wa_number": "5554996624494",
     "phone_display": "+55 54 99662-4494",
     "instagram_url": "https://instagram.com/smartbase.br",
@@ -406,21 +407,6 @@
               "price": ""
             }
           },
-          "vitrine-8": {
-            "type": "produto",
-            "name": "iPad - novo",
-            "settings": {
-              "cat": "ipad",
-              "name": "iPad",
-              "fallback": "prod-ipad.png",
-              "desc": "a porta de entrada no mundo de iPads. chip A16 que dá conta de série, jogo, aula e chamada. tela colorida pra todo mundo.",
-              "specs": "10,9\"; A16 · 128GB+",
-              "colors": "azul:#9cb4d6; rosa:#eccdd0; amarelo:#ecdf9e; prata:#dcdee0",
-              "cond": "novo",
-              "in_stock": true,
-              "price": ""
-            }
-          },
           "vitrine-9": {
             "type": "produto",
             "name": "watch ultra - novo",
@@ -526,7 +512,6 @@
           "vitrine-5",
           "vitrine-6",
           "vitrine-7",
-          "vitrine-8",
           "vitrine-9",
           "vitrine-10",
           "vitrine-11",

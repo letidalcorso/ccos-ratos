@@ -25,6 +25,7 @@ Consolidação da sessão de 06/06. Onde houver conflito com seções antigas ab
 - **GMB:** não existe ainda, criar (alto retorno local).
 - **Arquivos novos desta sessão:** `maquina-conversa-smartbase.md`, `conteudo/reels-pretrip-17promax-jun2026.md`, `conteudo/roteiros-paraguai-jun2026.md`, `conteudo/blogs-lancamento-site.md`, `pesquisa-crescimento-vendas-2026-06.md` (e o `.docx`), `conteudo/voz-smartbase.md`, `conteudo/tracker-conteudo-junho.md`, e o plano v3 em `conteudo/plano-editorial-junho-2026.md`.
 - **Viagem Paraguai:** sai madrugada de ter 09/06, volta fim de qua 10/06. Grava lá, publica só na volta.
+- **Marca (obrigatório):** ler `marca/plataforma-de-marca.md` antes de QUALQUER tarefa de marca, conteúdo, ads ou site. É a fonte da verdade da marca — território ("a marca da prova, num mercado de promessa"), essência ("confiança se prova"), promessa, arquétipo (Sábio + Companheiro), 4 pilares de mensagem com prova e assinatura ("paga quando receber.").
 - **Voz (obrigatório):** ler `conteudo/voz-smartbase.md` antes de escrever QUALQUER copy. Tom travado em 06/06: LightCopy (premissa, não promessa), todo post de aparelho carrega dica/conhecimento e a venda vem de consequência. Matar cara de IA (travessão, "não é X é Y", adjetivo vazio, conceito esperto e vazio). A Letícia reescrevia quase tudo por ficar genérico; isso é o piso agora.
 - **Mix de conteúdo (pra não ficar batido):** premissa/dica (Decifra) + confiança/prova (Casa) + desejo puro (estilo reel da lua) + cultura/copa. Dica não é a dieta toda.
 - **Humanização (a partir de jun/2026):** os dois aparecem aos poucos. Letícia nas dicas/tecnologia, o dono na credibilidade de especialista. Estético (ref. Human Academy), leve, começa com voz/mãos/produto e sobe a régua. Não é vlog.
@@ -130,6 +131,7 @@ Design system completo documentado. Sempre consultar antes de qualquer tarefa vi
 **Footer fixo em todo post:** divider `#1E1E2E` em y=988 + wordmark esquerda + `@smartbase.rs` direita em y=1022.
 
 **Arquivos de referência:**
+- `marca/plataforma-de-marca.md` — plataforma de marca (território, essência, promessa, arquétipo, pilares de mensagem, assinatura) ⭐
 - `marca/design-guide.md` — sistema completo (tokens, componentes, patterns, layout por pilar)
 - `conteudo/semana-1/` — posts aprovados como referência de estilo
 

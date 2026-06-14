@@ -20,7 +20,7 @@
         <span class="eyebrow">{{ s.location }}</span>
         <div class="hm-hero-ctas">
           {%- if s.cta1_label != blank -%}<a class="btn btn-primary" href="{{ s.cta1_link | default: '/pages/vitrine' }}">{{ s.cta1_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
-          {%- if s.cta2_label != blank -%}<a class="btn btn-glass" href="{% render 'wa-link' %}" target="_blank" rel="noopener noreferrer">{{ s.cta2_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+          {%- if s.cta2_label != blank -%}<a class="btn btn-glass" href="{% render 'wa-link', texto: 'oi! vim pelo site, quero saber dos aparelhos' %}" target="_blank" rel="noopener noreferrer">{{ s.cta2_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
         </div>
       </div>
     </div>

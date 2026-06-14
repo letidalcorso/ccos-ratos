@@ -4,7 +4,6 @@
   Cada página tem: liga-desliga, texto, botão e destino próprios (whatsapp / vitrine / link).
 {%- endcomment -%}
 {%- assign s = section.settings -%}
-{%- capture wa -%}{% render 'wa-link' %}{%- endcapture -%}
 {%- liquid
   # qual página estamos vendo
   assign p = 'h'
@@ -22,6 +21,20 @@
     assign p = 'h'
   endif
 
+  # mensagem do WhatsApp por página (vai pré-preenchida + sinaliza a origem do lead)
+  assign wa_msg = 'oi! vim pelo site, quero saber dos aparelhos'
+  if p == 'v'
+    assign wa_msg = 'oi! tava vendo a vitrine no site e queria uma ajuda pra escolher'
+  elsif p == 'f'
+    assign wa_msg = 'oi! vi o site de vocês e fiquei com uma dúvida'
+  elsif p == 'c'
+    assign wa_msg = 'oi! vim pela página de contato do site, queria falar com vocês'
+  elsif p == 'b'
+    assign wa_msg = 'oi! vim pelo site de vocês, quero saber dos aparelhos'
+  endif
+-%}
+{%- capture wa -%}{% render 'wa-link', texto: wa_msg %}{%- endcapture -%}
+{%- liquid
   # puxa os campos do grupo certo (acesso dinâmico pelo prefixo)
   assign id_show = p | append: '_show'
   assign id_eyebrow = p | append: '_eyebrow'
