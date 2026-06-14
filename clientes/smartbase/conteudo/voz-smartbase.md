@@ -27,6 +27,9 @@ Referência do tom certo, feita por ela: o reel da lua (8x de zoom, fotografa a 
 
 ## Palavras e ângulos vetados (Smartbase)
 - **"markup"** (proibido em qualquer copy da Smartbase)
+- **nota fiscal / comprovante como argumento** — a Smartbase não emite nota; nunca usar "nota", "comprovante" ou "rastreabilidade" como prova de confiança
+- **"Paraguai" em copy evergreen (site/blog)** — enquadrar como "importado". Paraguai segue forte só no conteúdo ao vivo do IG (a viagem é ativo de transparência)
+- **"pode ser original" hesitante** — afirmar: a Smartbase garante a originalidade e mostra a verificação antes do pagamento
 - promoção genérica, "100% original garantido" defensivo, tom de atacado
 - preço no feed (preço só no WhatsApp; feed posiciona, whats fecha)
 - qualquer menção a como a importação DELES funciona por dentro (aduana, nota, declaração). Nunca em copy nem em arquivo do repo.

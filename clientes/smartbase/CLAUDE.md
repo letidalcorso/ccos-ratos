@@ -81,8 +81,8 @@ Gerar vendas agora. O dono tem credibilidade offline, mas ela não transfere aut
 
 Confiante, direto, com personalidade. Fala como quem entende muito de Apple e não precisa se justificar. Nunca parece loja genérica ou atacado.
 
-**Nunca usar:** linguagem de promoção genérica, "100% original garantido" defensivo, ênfase excessiva em trade-in, exclamações em excesso, preço no feed, "markup" (palavra a evitar em qualquer copy).
-**Sempre usar:** desejo pelo produto, senso de oportunidade, confiança de especialista, CTA direto pro WhatsApp.
+**Nunca usar:** linguagem de promoção genérica, "100% original garantido" defensivo, ênfase excessiva em trade-in, exclamações em excesso, preço no feed, "markup" (palavra a evitar em qualquer copy), nota fiscal/comprovante como argumento (a Smartbase não emite nota), "Paraguai" em copy de site/blog (usar "importado"; Paraguai só no conteúdo ao vivo do IG).
+**Sempre usar:** desejo pelo produto, senso de oportunidade, confiança de especialista, CTA direto pro WhatsApp, afirmar que a Smartbase garante a originalidade (mostra a verificação antes do pagamento).
 **Preço:** nunca no feed. Só no WhatsApp, onde a conversa já é quente. Feed posiciona, WhatsApp fecha.
 
 **Seminovos:** têm página de e-commerce no Shopify E link pro WhatsApp. Os dois coexistem.

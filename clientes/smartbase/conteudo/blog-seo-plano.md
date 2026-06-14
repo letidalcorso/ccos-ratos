@@ -58,11 +58,11 @@ Priorizei por **sinais de demanda da SERP** (quantidade e qualidade de artigos c
 >
 > **Links internos:** reativar nos `PUBLICAR-*` conforme as URLs ao vivo forem confirmadas (link interno entre artigos é o que faz o cluster ranquear).
 
-**Lote 1 (escrever primeiro — demanda alta + diferenciador máximo + winnable):**
-1. ✅ PILLAR — guia de comprar com segurança (`00-pilar-...`) — rascunho
-2. ✅ iPhone do Paraguai vale a pena (`03-...`) — rascunho
-3. ✅ Garantia Apple vale no Brasil (`01-...`) — rascunho (na fila de revisão da Letícia)
-4. ✅ iPhone novo ou seminovo (`02-...`) — **aprovado v2**
+**Lote 1:**
+1. ⏸️ PILLAR — comprar com segurança (`00-pilar-...`) — **EM ESPERA** (ficou parecido demais com o Paraguai; segurar até ter mais spokes e reescrever como índice enxuto)
+2. ✅ iPhone do Paraguai (`03-...`) — rev. com observações da Letícia aplicadas (menos Paraguai, sem nota, sem viagem, afirma originalidade, fontes hiperlinkadas)
+3. ✅ Garantia (`01-...`) — **NO AR** (corrigido o trecho de "nota/rastreabilidade")
+4. ✅ iPhone novo ou seminovo (`02-...`) — **NO AR**
 
 **Lote 2 (próximos da decisão de compra):**
 4. iPhone novo ou seminovo

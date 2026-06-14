@@ -82,7 +82,7 @@ Gente de Caxias, nome e endereço. Quer ver o que tem disponível? [Dá uma olha
 Não automaticamente. A garantia da Apple é mundial e vale 1 ano a contar da ativação. A Apple pode tentar restringir o atendimento ao país de compra, mas a Justiça brasileira, pelo CDC, tem obrigado a marca a cobrir aparelhos comprados no exterior.
 
 **Preciso de nota fiscal pra usar a garantia?**
-Pra consultar a cobertura no site da Apple, não precisa: basta o número de série. Pra acionar a garantia formalmente, ter um comprovante de compra ajuda. Por isso vale comprar de quem te dá rastreabilidade.
+Pra consultar a cobertura no site da Apple, não precisa: basta o número de série. A garantia segue o aparelho pelo IMEI, então o que importa é levar um aparelho original e verificável.
 
 **A garantia do iPhone do Paraguai vale aqui?**
 Vale, porque costuma ser o mesmo modelo da linha internacional vendido no Brasil, exatamente o ponto que sustenta as decisões judiciais. O que importa é a procedência: original, lacrado e com IMEI verificável.
