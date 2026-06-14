@@ -109,10 +109,11 @@ Em ordem de força:
 
 ## 11. Assinatura / tagline
 
-A voz da marca mata slogan de loja, então a assinatura tem que ser **concreta**, não publicitária. O próprio diferencial vira assinatura:
+A voz da marca mata slogan de loja, então a assinatura é **concreta**, não publicitária. O próprio diferencial é a assinatura:
 
-- **Recomendada:** `paga quando receber.` — é o diferencial dito como fato. Concreta, impossível de copiar de verdade, e já é a frase que mais converte no WhatsApp.
-- Alternativas: `apple original, a prova antes do pix.` · `o importado sem a aposta.` · `aparelho na mão primeiro.`
+**`paga quando receber.`**
+
+É o diferencial dito como fato. Concreta, impossível de copiar de verdade, e já é a frase que mais converte no WhatsApp. Usar como fecho recorrente de post, no footer do site e no atendimento.
 
 Evitar qualquer coisa do tipo "sua Apple dos sonhos", "qualidade premium", "garanta já" — quebra o arquétipo.
 
