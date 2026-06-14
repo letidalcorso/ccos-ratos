@@ -58,5 +58,27 @@
         "default": "2054869865373051"
       }
     ]
+  },
+  {
+    "name": "Botão flutuante de WhatsApp",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Botão fixo de WhatsApp que segue a rolagem (canto inferior direito). Usa o mesmo número de 'Contato & marca' e já manda a mensagem pré-pronta com a origem da página."
+      },
+      {
+        "type": "checkbox",
+        "id": "wa_float_show",
+        "label": "Mostrar botão flutuante",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "wa_float_label",
+        "label": "Rótulo (aparece no desktop)",
+        "info": "No celular aparece só o ícone. Deixe um espaço se quiser esconder o texto também no desktop.",
+        "default": "fale com a gente"
+      }
+    ]
   }
 ]
