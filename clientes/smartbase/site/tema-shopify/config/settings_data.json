@@ -72,8 +72,8 @@
             "settings": {
               "icon": "doc",
               "label": "blog",
-              "link": "/pages/blog",
-              "match": "/pages/blog"
+              "link": "/blogs/dicas",
+              "match": "/blogs/dicas"
             }
           }
         },
@@ -175,7 +175,7 @@
             "type": "nav",
             "settings": {
               "label": "blog",
-              "url": "/pages/blog"
+              "url": "/blogs/dicas"
             }
           },
           "footer-3": {

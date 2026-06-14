@@ -9,6 +9,8 @@
   assign p = 'h'
   if request.page_type == 'index'
     assign p = 'h'
+  elsif request.page_type == 'blog' or request.page_type == 'article'
+    assign p = 'b'
   elsif page.handle == 'vitrine'
     assign p = 'v'
   elsif page.handle == 'faq'
@@ -83,7 +85,7 @@
     endif
   endif
 -%}
-{%- if show -%}
+{%- if show and request.page_type != 'article' -%}
 <section class="cta-band rise">
   {%- if s.show_glow -%}<div class="cta-band-glow"></div>{%- endif -%}
   <div class="cta-band-copy">
