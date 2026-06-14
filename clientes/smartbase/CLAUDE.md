@@ -148,9 +148,10 @@ Páginas: Home (`/`), Vitrine, FAQ, Contato, Blog (todas via `templates/page.liq
 
 Ao receber pedido de ajuste no site:
 1. **Ler `site/status.md`** e o arquivo correspondente em `site/tema-shopify/` antes de editar
-2. Estrutura oficial Shopify: `sections/`, `snippets/`, `templates/`, `assets/`, `layout/`, `config/`. CSS do design em `assets/` (colors_and_type/kit/pages.css — não reescrever).
-3. Pra ver ao vivo: `shopify theme dev` na pasta `tema-shopify/` (preview em `127.0.0.1:9292`). Pra enviar: `shopify theme push`.
-4. Regras de schema Shopify (aprendidas): nunca `default`+`presets` juntos; setting `url` não aceita `/pages/...` como default; `text` default não pode ser vazio; nome de bloco ≤ 25 chars.
+2. **OBRIGATÓRIO — pull antes de push:** SEMPRE rodar `shopify theme pull` e conferir (`git diff`) as edições que a Letícia fez no painel ANTES de subir qualquer mudança. Editar por cima do estado real do ar, nunca por cima do trabalho dela. Se houver conflito, avisar antes de subir. Depois de capturar edições do painel, **commitar na hora** (o painel só vira backup quando a gente puxa e commita). A home e páginas internas renderizam do `templates/index.json` + `config/settings_data.json`, editados no painel. (Lição 13/06: a Letícia perdeu um ajuste nos diferenciais — edição de painel não puxada/commitada não existe em backup nenhum.)
+3. Estrutura oficial Shopify: `sections/`, `snippets/`, `templates/`, `assets/`, `layout/`, `config/`. CSS do design em `assets/` (colors_and_type/kit/pages.css — não reescrever).
+4. Pra ver ao vivo: `shopify theme dev` na pasta `tema-shopify/` (preview em `127.0.0.1:9292`). Pra enviar: `shopify theme push`.
+5. Regras de schema Shopify (aprendidas): nunca `default`+`presets` juntos; setting `url` não aceita `/pages/...` como default; `text` default não pode ser vazio; nome de bloco ≤ 25 chars.
 
 ## Fluxo de produção — posts
 
