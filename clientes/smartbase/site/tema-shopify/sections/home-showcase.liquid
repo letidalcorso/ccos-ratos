@@ -38,7 +38,7 @@
               endif
             -%}
             <a class="hms-hl-band" href="{{ hl_href | strip }}"{% if hl_target != blank %} target="{{ hl_target }}" rel="noopener noreferrer"{% endif %} {{ block.shopify_attributes }}>
-              <div class="hms-hl-band-media">{% render 'img-slot', image: block.settings.image, fallback: 'prod-iphone.png', class: 'hms-hl-band-img', fit: 'contain', label: 'foto do destaque' %}</div>
+              <div class="hms-hl-band-media">{% render 'img-slot', image: block.settings.image, fallback: 'prod-iphone.webp', class: 'hms-hl-band-img', fit: 'contain', label: 'foto do destaque' %}</div>
               <div class="hms-hl-band-copy">
                 <span class="hms-hl-band-kick">{{ block.settings.kicker }}</span>
                 <h3 class="hms-hl-band-t">{{ block.settings.name }}</h3>
@@ -116,7 +116,7 @@
       "settings": [
         { "type": "text", "id": "label", "label": "Nome", "default": "categoria" },
         { "type": "image_picker", "id": "image", "label": "Foto do produto" },
-        { "type": "text", "id": "fallback", "label": "Imagem padrão (asset)", "info": "Nome do arquivo em assets/. Ex.: prod-iphone.png" },
+        { "type": "text", "id": "fallback", "label": "Imagem padrão (asset)", "info": "Nome do arquivo em assets/. Ex.: prod-iphone.webp" },
         { "type": "url", "id": "link", "label": "Link", "default": "/collections/all" }
       ]
     },
@@ -140,12 +140,12 @@
     {
       "name": "Home · Vitrine embutida",
       "blocks": [
-        { "type": "category", "settings": { "label": "mac", "fallback": "prod-mac.png", "link": "/collections/all" } },
-        { "type": "category", "settings": { "label": "ipad", "fallback": "prod-ipad.png", "link": "/collections/all" } },
-        { "type": "category", "settings": { "label": "iphone", "fallback": "prod-iphone.png", "link": "/collections/all" } },
-        { "type": "category", "settings": { "label": "watch", "fallback": "prod-watch.png", "link": "/collections/all" } },
-        { "type": "category", "settings": { "label": "airpods", "fallback": "prod-airpods.png", "link": "/collections/all" } },
-        { "type": "category", "settings": { "label": "acessórios", "fallback": "prod-acessorios.png", "link": "/collections/all" } }
+        { "type": "category", "settings": { "label": "mac", "fallback": "prod-mac.webp", "link": "/collections/all" } },
+        { "type": "category", "settings": { "label": "ipad", "fallback": "prod-ipad.webp", "link": "/collections/all" } },
+        { "type": "category", "settings": { "label": "iphone", "fallback": "prod-iphone.webp", "link": "/collections/all" } },
+        { "type": "category", "settings": { "label": "watch", "fallback": "prod-watch.webp", "link": "/collections/all" } },
+        { "type": "category", "settings": { "label": "airpods", "fallback": "prod-airpods.webp", "link": "/collections/all" } },
+        { "type": "category", "settings": { "label": "acessórios", "fallback": "prod-acessorios.webp", "link": "/collections/all" } }
       ]
     }
   ]

@@ -220,7 +220,7 @@
             "settings": {
               "cat": "iphone",
               "name": "iPhone 17 Pro",
-              "fallback": "prod-iphone-17-pro-max.png",
+              "fallback": "prod-iphone-17-pro-max.webp",
               "desc": "tela de 6,3'' e corpo de alumínio, leve e forte. três câmeras de 48MP com 8x de zoom e vídeo de cinema. chip A19 Pro e bateria que vira o dia.",
               "specs": "256GB · 512GB · 1TB · 2TB",
               "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
@@ -235,7 +235,7 @@
             "settings": {
               "cat": "acessorios",
               "name": "Cabo USB-C (1m)",
-              "fallback": "prod-cabo-usbc.png",
+              "fallback": "prod-cabo-usbc.webp",
               "desc": "o trançado original de 1 metro, recarga de até 60W. o mesmo que vem na caixa, pra quando o seu já era.",
               "specs": "USB-C · USB-C; 1m; até 60W",
               "colors": "",
@@ -250,7 +250,7 @@
             "settings": {
               "cat": "acessorios",
               "name": "Fonte 20W",
-              "fallback": "prod-fonte-20w.png",
+              "fallback": "prod-fonte-20w.webp",
               "desc": "a fonte certa pra carga rápida do iPhone: 20W no USB-C. original Apple, do jeito que tem que ser.",
               "specs": "20W · USB-C",
               "colors": "",
@@ -265,7 +265,7 @@
             "settings": {
               "cat": "iphone",
               "name": "iPhone 17 Pro Max",
-              "fallback": "prod-iphone-17-pro-max.png",
+              "fallback": "prod-iphone-17-pro-max.webp",
               "desc": "tela de 6,9'' e corpo de alumínio, leve e resistente. três câmeras de 48MP com 8x de zoom e vídeo de cinema. chip A19 Pro e a maior bateria que um iPhone já teve.",
               "specs": "256GB · 512GB · 1TB · 2TB",
               "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
@@ -280,7 +280,7 @@
             "settings": {
               "cat": "iphone",
               "name": "iPhone 17",
-              "fallback": "prod-iphone-17.png",
+              "fallback": "prod-iphone-17.webp",
               "desc": "tela de 6,3'' brilhante e rápida. câmera de 48MP que dá conta de tudo, sem pagar pelo topo. chip A19 e bateria pro dia inteiro.",
               "specs": "256GB · 512GB",
               "colors": "azul:#cadcef; branco:#ededf0; sálvia:#c7d2bd; lavanda:#d7cfe6; rosa:#efd7dd",
@@ -295,7 +295,7 @@
             "settings": {
               "cat": "iphone",
               "name": "iPhone Air",
-              "fallback": "prod-iphone-air.png",
+              "fallback": "prod-iphone-air.webp",
               "desc": "só 5,6mm e corpo de titânio: o iPhone mais fino que a Apple já fez. câmera de 48MP com zoom de 2x. tão leve que você esquece que tá no bolso.",
               "specs": "256GB · 512GB",
               "colors": "preto-espacial:#2b2b2d; branco-nuvem:#e8e8ea; dourado:#e4dcc6; azul-céu:#bccadc",
@@ -310,7 +310,7 @@
             "settings": {
               "cat": "mac",
               "name": "MacBook Air",
-              "fallback": "prod-macbook-air.png",
+              "fallback": "prod-macbook-air.webp",
               "desc": "fininho, silencioso e sem ventoinha nenhuma. chip M4 que dá conta de trabalho, estudo e edição leve. até 18h de bateria pra passar o dia fora da tomada.",
               "specs": "M4 · 13\" e 15\"; 16GB · 512GB",
               "colors": "meia-noite:#2e3641; estelar:#efe6d6; prata:#dcdee0; azul-céu:#b6c8de",
@@ -325,7 +325,7 @@
             "settings": {
               "cat": "mac",
               "name": "MacBook Pro",
-              "fallback": "prod-macbook.png",
+              "fallback": "prod-macbook.webp",
               "desc": "tela mini-LED de 120Hz, brilhante e com preto de verdade. chip M4 Pro que edita 4K e renderiza sem esquentar. até 22h de bateria, o dia inteiro de trabalho pesado.",
               "specs": "M4 Pro · 14\" e 16\"; 18GB · 512GB+",
               "colors": "",
@@ -340,7 +340,7 @@
             "settings": {
               "cat": "mac",
               "name": "Mac mini",
-              "fallback": "prod-mac-mini.png",
+              "fallback": "prod-mac-mini.webp",
               "desc": "do tamanho da palma da mão, mas é um desktop completo. chip M4 que aguenta trabalho pesado e vários monitores. liga na sua tela e teclado e tá pronto.",
               "specs": "M4 · M4 Pro; 16GB · 256GB+",
               "colors": "",
@@ -355,7 +355,7 @@
             "settings": {
               "cat": "ipad",
               "name": "iPad Pro",
-              "fallback": "prod-ipad-pro.png",
+              "fallback": "prod-ipad-pro.webp",
               "desc": "a melhor tela que a Apple já pôs num iPad: OLED, brilhante e fluida. chip M4 e mais fino que o iPhone. desenha, edita e assiste numa coisa só.",
               "specs": "11\" · 13\"; M4 · 256GB+",
               "colors": "preto-espacial:#2b2b2d; prata:#dcdee0",
@@ -370,7 +370,7 @@
             "settings": {
               "cat": "ipad",
               "name": "iPad Air",
-              "fallback": "prod-ipad-air.png",
+              "fallback": "prod-ipad-air.webp",
               "desc": "tela de 11'' ou 13'', leve na mão. chip M3 que roda Apple Intelligence e edição sem travar. funciona com a Pencil Pro pra quem cria.",
               "specs": "11\" · 13\"; M3 · 128GB+",
               "colors": "azul:#aebfe0; roxo:#c5b6e0; estelar:#e8e0d0; cinza-espacial:#3a3c40",
@@ -385,7 +385,7 @@
             "settings": {
               "cat": "watch",
               "name": "Apple Watch Ultra",
-              "fallback": "prod-watch-ultra.png",
+              "fallback": "prod-watch-ultra.webp",
               "desc": "titânio de 49mm, a tela mais brilhante de um Apple Watch. até 42h de bateria e conexão por satélite quando não tem sinal. feito pra quem corre, mergulha e encara trilha.",
               "specs": "49mm · titânio; GPS + Cellular",
               "colors": "",
@@ -400,7 +400,7 @@
             "settings": {
               "cat": "watch",
               "name": "Apple Watch Series 11",
-              "fallback": "prod-watch-series.png",
+              "fallback": "prod-watch-series.webp",
               "desc": "tela always-on que você lê sem levantar o pulso. acompanha sono, batimentos e oxigênio no sangue. até 24h de bateria, com recarga rápida.",
               "specs": "42 · 46mm; GPS · Cellular",
               "colors": "",
@@ -415,7 +415,7 @@
             "settings": {
               "cat": "watch",
               "name": "Apple Watch SE",
-              "fallback": "prod-watch-se.png",
+              "fallback": "prod-watch-se.webp",
               "desc": "o Apple Watch essencial, pelo preço que cabe. agora com tela always-on e alto-falante. acompanha treino, batimentos e notificações no pulso.",
               "specs": "40 · 44mm; GPS",
               "colors": "",
@@ -430,7 +430,7 @@
             "settings": {
               "cat": "airpods",
               "name": "AirPods Pro 3",
-              "fallback": "prod-airpods-pro.png",
+              "fallback": "prod-airpods-pro.webp",
               "desc": "o melhor cancelamento que a Apple já fez. agora mede seus batimentos e acompanha mais de 50 treinos. até 8h de música.",
               "specs": "USB-C; estojo MagSafe",
               "colors": "",
@@ -445,7 +445,7 @@
             "settings": {
               "cat": "airpods",
               "name": "AirPods 4",
-              "fallback": "prod-airpods-4.png",
+              "fallback": "prod-airpods-4.webp",
               "desc": "o formato clássico e leve da Apple, sem ponteira de silicone. agora com chip H2 e versão com cancelamento de ruído, raro num fone aberto. conforto o dia todo e estojo USB-C.",
               "specs": "USB-C; com / sem ANC",
               "colors": "",
@@ -460,7 +460,7 @@
             "settings": {
               "cat": "airpods",
               "name": "AirPods Max",
-              "fallback": "prod-airpods-max.png",
+              "fallback": "prod-airpods-max.webp",
               "desc": "fone over-ear que isola o mundo, em alumínio. áudio espacial que faz o som te envolver de verdade. até 20h de bateria e carrega no USB-C.",
               "specs": "USB-C; áudio espacial",
               "colors": "",
@@ -475,7 +475,7 @@
             "settings": {
               "cat": "ipad",
               "name": "iPad 11",
-              "fallback": "prod-ipad-11.png",
+              "fallback": "prod-ipad-11.webp",
               "desc": "a porta de entrada do iPad. chip A16 que dá conta de série, jogo, aula e trabalho. tela de 11'' colorida e bateria pro dia todo.",
               "specs": "11\"; A16 · 128GB+",
               "colors": "azul:#a8c6e0; rosa:#eccdd0; amarelo:#ecdf9e; prata:#dcdee0",
@@ -490,7 +490,7 @@
             "settings": {
               "cat": "mac",
               "name": "MacBook Neo",
-              "fallback": "prod-macbook-neo.png",
+              "fallback": "prod-macbook-neo.webp",
               "desc": "o Mac mais acessível e mais colorido que a Apple já fez. chip A18 Pro que roda Apple Intelligence numa boa. tela de 13'', leve e com bateria pro dia todo.",
               "specs": "13\"; A18 Pro · 8GB · 256GB+",
               "colors": "prata:#dcdee0; rosa:#e8c5cb; cítrico:#e6e08a; índigo:#5566a0",
@@ -564,7 +564,7 @@
               "excerpt": "a real sobre seminovo: quando é o melhor negócio e o que olhar antes.",
               "meta": "28 mai 2026 · 6 min",
               "kind": "product",
-              "fallback": "prod-iphone.png",
+              "fallback": "prod-iphone.webp",
               "link": ""
             }
           },
@@ -590,7 +590,7 @@
               "excerpt": "o upgrade vale em 2026? a real, sem hype.",
               "meta": "14 mai 2026 · 7 min",
               "kind": "product",
-              "fallback": "prod-iphone-air.png",
+              "fallback": "prod-iphone-air.webp",
               "link": ""
             }
           },
@@ -603,7 +603,7 @@
               "excerpt": "o guia pra quem tá saindo do windows sem susto.",
               "meta": "7 mai 2026 · 6 min",
               "kind": "product",
-              "fallback": "prod-macbook-air.png",
+              "fallback": "prod-macbook-air.webp",
               "link": ""
             }
           },
@@ -616,7 +616,7 @@
               "excerpt": "saúde, treino e notificação: o que muda de verdade.",
               "meta": "30 abr 2026 · 5 min",
               "kind": "product",
-              "fallback": "prod-watch-ultra.png",
+              "fallback": "prod-watch-ultra.webp",
               "link": ""
             }
           },
@@ -629,7 +629,7 @@
               "excerpt": "cancelamento de ruído e bateria: o que melhorou.",
               "meta": "23 abr 2026 · 4 min",
               "kind": "product",
-              "fallback": "prod-airpods-pro.png",
+              "fallback": "prod-airpods-pro.webp",
               "link": ""
             }
           },
@@ -642,7 +642,7 @@
               "excerpt": "até onde o ipad substitui o notebook em 2026.",
               "meta": "16 abr 2026 · 6 min",
               "kind": "product",
-              "fallback": "prod-ipad-pro.png",
+              "fallback": "prod-ipad-pro.webp",
               "link": ""
             }
           },
@@ -655,7 +655,7 @@
               "excerpt": "imei, bateria e procedência: o checklist completo.",
               "meta": "9 abr 2026 · 5 min",
               "kind": "product",
-              "fallback": "prod-iphone-17.png",
+              "fallback": "prod-iphone-17.webp",
               "link": ""
             }
           }

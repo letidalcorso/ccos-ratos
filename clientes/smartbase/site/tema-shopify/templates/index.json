@@ -92,7 +92,7 @@
           "type": "category",
           "settings": {
             "label": "Mac",
-            "fallback": "prod-mac.png",
+            "fallback": "prod-mac.webp",
             "link": "/pages/vitrine?cat=mac"
           }
         },
@@ -100,7 +100,7 @@
           "type": "category",
           "settings": {
             "label": "iPad",
-            "fallback": "prod-ipad.png",
+            "fallback": "prod-ipad.webp",
             "link": "/pages/vitrine?cat=ipad"
           }
         },
@@ -108,7 +108,7 @@
           "type": "category",
           "settings": {
             "label": "iPhone",
-            "fallback": "prod-iphone.png",
+            "fallback": "prod-iphone.webp",
             "link": "/pages/vitrine?cat=iphone"
           }
         },
@@ -116,7 +116,7 @@
           "type": "category",
           "settings": {
             "label": "Apple Watch",
-            "fallback": "prod-watch.png",
+            "fallback": "prod-watch.webp",
             "link": "/pages/vitrine?cat=watch"
           }
         },
@@ -124,7 +124,7 @@
           "type": "category",
           "settings": {
             "label": "AirPods",
-            "fallback": "prod-airpods.png",
+            "fallback": "prod-airpods.webp",
             "link": "/pages/vitrine?cat=airpods"
           }
         },
@@ -132,7 +132,7 @@
           "type": "category",
           "settings": {
             "label": "acessórios",
-            "fallback": "prod-acessorios.png",
+            "fallback": "prod-acessorios.webp",
             "link": "/pages/vitrine?cat=acessorios"
           }
         }
