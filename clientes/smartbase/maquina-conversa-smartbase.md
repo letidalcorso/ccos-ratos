@@ -35,7 +35,7 @@ Segmenta: quem demonstrou interesse em 17 / top de linha primeiro. Pros que trav
 > Me diz qual modelo e cor que tu quer que eu já te passo o valor certinho, no Pix e no parcelado. No Pix sai mais em conta; parcelando, o valor muda conforme o número de vezes. Tudo lacrado, com garantia Apple de 1 ano, e ainda vai com película instalada e uma capinha. 🙂
 
 **Se a pessoa travar no preço/pagamento (o gargalo conhecido):**
-> Entendo... celular bom não é barato mesmo. Mas ó: no Pix eu te faço o melhor valor, e se ficar melhor pra ti eu parcelo e te mostro como fica em cada opção. A gente ainda aceita teu aparelho atual na troca (a partir do iPhone 15), avalia e abate. Como fica melhor pra ti?
+> Entendo... celular bom não é barato mesmo. Mas ó: no Pix eu te faço o melhor valor, e se ficar melhor pra ti eu parcelo e te mostro como fica em cada opção. A gente ainda aceita teu aparelho atual na troca (a partir do iPhone 11), avalia e abate. Como fica melhor pra ti?
 
 **Fechamento (compromisso, sem escassez falsa):**
 > Se quiser, eu já vejo a cor que tu quer e te deixo tudo certinho pra fechar. Topa que eu separo no teu nome?
@@ -71,7 +71,7 @@ Não desistir no silêncio. Mensagens curtas, sem cobrança.
 - **"É original mesmo? Tenho receio."** → "Total. É Apple original lacrado, e tu confere pelo IMEI no site da Apple antes de pagar. Tem garantia Apple e a gente tem loja física em Caxias. Tu só paga depois de receber e conferir."
 - **"Por que mais barato que a loja oficial?"** → "Porque a gente trabalha com importado, Apple original com garantia, sem o preço da loja oficial. No Brasil mais de 60% do preço de um iPhone é imposto... a gente tira esse peso do caminho." (NÃO falar de nota/importação não declarada)
 - **"E se vier com problema?"** → "Tu confere tudo antes de pagar. E tem garantia Apple. Qualquer coisa, tu sabe onde a gente tá: loja física em Caxias."
-- **"Tá caro."** → rotular a emoção ("parece que pesa desembolsar tudo de uma vez, né?") + Pix com melhor valor + parcelado + troca do aparelho atual (a partir do 15). Resolver por forma de pagamento, não por desconto.
+- **"Tá caro."** → rotular a emoção ("parece que pesa desembolsar tudo de uma vez, né?") + Pix com melhor valor + parcelado + troca do aparelho atual (a partir do 11). Resolver por forma de pagamento, não por desconto.
 
 ---
 
@@ -84,7 +84,7 @@ Atacam direto o "seco": resposta calorosa e completa, pronta, em 1 toque. Person
 - **`/original`** → "É Apple original lacrado. Tu confere pelo IMEI no site da Apple antes de pagar, tem garantia Apple e a gente tem loja física aqui em Caxias. Tu só paga depois de receber e conferir."
 - **`/garantia`** → "Garantia Apple de 1 ano, igual de loja. E dá pra verificar pelo IMEI direto no site da Apple, na tua frente, antes de fechar."
 - **`/preco`** → "Me diz qual modelo e cor que eu já te passo o valor certinho, no Pix e no parcelado. No Pix sai mais em conta; parcelando muda conforme o número de vezes."
-- **`/troca`** → "A gente aceita teu aparelho atual na troca (a partir do iPhone 15). Tu me manda o modelo e o estado que eu avalio e abato no valor."
+- **`/troca`** → "A gente aceita teu aparelho atual na troca (a partir do iPhone 11). Tu me manda o modelo e o estado que eu avalio e abato no valor."
 - **`/endereco`** → "A gente fica na Rua Sinimbu, 2022, Centro de Caxias. Atende de seg a sex, 9h às 19h. Pode vir ver pessoalmente quando quiser 🙂"
 - **`/fechar`** → "Se quiser, eu já vejo a cor que tu quer e deixo tudo certinho pra fechar. Topa que eu separo no teu nome?"
 
@@ -103,7 +103,7 @@ Sem isso, o teste não prova nada e você perde o argumento mais forte pro dono.
 
 ## Confirmado
 - Preço: nunca chumbar no script. Pix é o melhor valor; parcelado varia conforme o número de parcelas (juros embutidos, não dizer "sem juros").
-- Aceita troca (trade-in): sim — **aceita iPhone a partir do 15**.
+- Aceita troca (trade-in): sim — **aceita iPhone a partir do 11**.
 - Novo lacrado: garantia Apple internacional 1 ano, entrega em mãos já configurado, com película instalada e capinha. Vem na caixa lacrada.
 - Seminovo: segue sob encomenda/avaliação (avaliado, garantia, bateria conferida). Oferta secundária, nunca herói.
 - Loja física: Rua Sinimbu, 2022 — Centro, Caxias do Sul. Seg a sex, 9h–19h.
