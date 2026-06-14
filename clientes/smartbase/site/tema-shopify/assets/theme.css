@@ -92,7 +92,7 @@ img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) cont
   transition:transform .18s ease, box-shadow .18s ease;
 }
 .wa-float-ic{width:30px; height:30px; margin:0 14px; flex:none; display:block}
-.wa-float-label{display:none; font-weight:600; font-size:15px; letter-spacing:-.2px; white-space:nowrap; padding-right:20px}
+.wa-float-label{display:none}
 .wa-float:hover{transform:translateY(-2px); box-shadow:0 14px 32px rgba(37,211,102,.4)}
 .wa-float:focus-visible{outline:3px solid #fff; outline-offset:3px}
 .wa-float-ring{position:absolute; inset:0; border-radius:999px; pointer-events:none; box-shadow:0 0 0 0 rgba(37,211,102,.5); animation:waPulse 2.8s ease-out infinite}
@@ -103,8 +103,6 @@ img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) cont
 }
 @media (min-width:769px){
   .wa-float{right:24px; bottom:24px}
-  .wa-float-ic{margin-left:16px; margin-right:10px}
-  .wa-float-label{display:inline}
 }
 @media (prefers-reduced-motion:reduce){
   .wa-float-ring{animation:none}

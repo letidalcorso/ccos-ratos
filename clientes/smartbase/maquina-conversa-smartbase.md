@@ -4,17 +4,19 @@ MVP do teste de 2 semanas. Quem conduz: Leti. Objetivo: destravar a conversa (o 
 
 > **Metodologia + tom:** o porquê por trás dos roteiros (frameworks de venda, gatilhos do Cialdini, empatia tática, como gerar desejo sem ser chato) está em `performance/playbook-venda-whatsapp.md`. O tom de voz da Leti no 1:1 está gravado na memória `feedback-voz-leticia-whatsapp`.
 
+> **⚠️ Estoque atual (13/06):** o **17 Pro Max laranja seminovo FOI VENDIDO**. Herói agora = **iPhones novos lacrados da linha 17** (17, 17 Air, 17 Pro, 17 Pro Max). **Copy vencida (não usar):** "seminovo" como carro-chefe, "dois seminovos", "o último laranja", "100% de bateria" como padrão. Seminovo entra só sob encomenda/avaliação quando houver (a confirmar com a Leti). Preço: nunca chumbar número fixo no script — perguntar modelo + cor e passar Pix e parcelado na hora.
+
 ## Princípios (o que muda em relação a hoje)
 1. **Responder em minutos, não horas.** Velocidade de resposta é a maior alavanca (lead respondido em 5 min tem 21x mais chance de qualificar).
 2. **Trazer a confiança ANTES de ser perguntada.** Pagar depois de receber + loja física + garantia Apple por IMEI entram cedo, sem esperar o cliente desconfiar.
 3. **Tom caloroso e humano, não seco.** Frases inteiras, nome da pessoa, uma pergunta no fim pra manter a conversa viva.
-4. **Transparência total de preço.** Pix e parcelado abertos, sem susto no meio do caminho.
+4. **Transparência total de preço.** Pix e parcelado abertos, sem susto no meio do caminho. Nunca esconder o Pix; nunca anunciar "sem juros" (o parcelado tem juros embutido).
 5. **Nunca falar de origem/importação/nota.** Ancorar em garantia Apple (vale por IMEI no mundo todo) e em receber-antes-de-pagar.
 6. **Sempre ter um próximo passo.** Toda conversa termina com uma pergunta ou um CTA.
 
 ## Os 3 trunfos de confiança (usar sempre que houver hesitação)
 - "Você recebe o aparelho, confere tudo, e só paga depois."
-- "A gente tem loja física aqui em Caxias, pode vir ver pessoalmente."
+- "A gente tem loja física aqui em Caxias, pode vir ver pessoalmente." (Rua Sinimbu, 2022 — Centro)
 - "Garantia Apple, dá pra conferir pelo IMEI no site da Apple."
 
 ---
@@ -24,33 +26,33 @@ MVP do teste de 2 semanas. Quem conduz: Leti. Objetivo: destravar a conversa (o 
 Segmenta: quem demonstrou interesse em 17 / top de linha primeiro. Pros que travaram em modelo mais barato, usa o 17 como isca só se fizer sentido, senão oferece o que eles olhavam.
 
 **Abertura (quem olhou 17 / top de linha):**
-> Oi [nome], tudo bem? Aqui é a Leti, da Smartbase. Você tinha dado uma olhada com a gente faz um tempo. Chegou um iPhone 17 Pro Max seminovo impecável, 100% de bateria e ainda na garantia da Apple, e lembrei de você. Te conto?
+> Oi [nome], tudo bem? Aqui é a Leti, da Smartbase. Tu tinha dado uma olhada com a gente faz um tempo. Tô com a linha 17 nova, lacrada, inclusive o Pro Max... lembrei de ti. Te conto certinho?
 
 **Logo na sequência (planta a confiança sem esperar):**
-> Só pra já te deixar tranquilo: aqui você recebe o aparelho, confere tudo na sua mão, e só paga depois. E a gente tem loja física em Caxias, se preferir ver pessoalmente.
+> Só pra já te deixar tranquilo: aqui tu recebe o aparelho, confere tudo na tua mão, e só paga depois. E a gente tem loja física em Caxias, se preferir ver pessoalmente.
 
-**Quando perguntar preço (transparência total):**
-> Fica R$ 7.990 no Pix. Se preferir parcelar, dá pra dividir e o valor muda conforme o número de parcelas, me diz em quantas vezes que eu já te passo certinho. É seminovo, mas tá impecável e com garantia Apple até 2027. Acompanha cabo original, película já instalada e uma capinha de brinde. São só 2 unidades.
+**Quando perguntar preço (transparência total, sem número chumbado):**
+> Me diz qual modelo e cor que tu quer que eu já te passo o valor certinho, no Pix e no parcelado. No Pix sai mais em conta; parcelando, o valor muda conforme o número de vezes. Tudo lacrado, com garantia Apple de 1 ano, e ainda vai com película instalada e uma capinha. 🙂
 
 **Se a pessoa travar no preço/pagamento (o gargalo conhecido):**
-> Entendo. No Pix sai R$ 7.990 à vista. Se ficar melhor, eu parcelo e te passo o valor conforme as vezes. E a gente aceita teu aparelho atual na troca, avalia e abate no valor. Qual fica melhor pra você?
+> Entendo... celular bom não é barato mesmo. Mas ó: no Pix eu te faço o melhor valor, e se ficar melhor pra ti eu parcelo e te mostro como fica em cada opção. A gente ainda aceita teu aparelho atual na troca (a partir do iPhone 15), avalia e abate. Como fica melhor pra ti?
 
-**Fechamento com escassez real:**
-> São só 2 unidades desse 17 Pro Max. Quer que eu separe um no seu nome enquanto você decide?
+**Fechamento (compromisso, sem escassez falsa):**
+> Se quiser, eu já vejo a cor que tu quer e te deixo tudo certinho pra fechar. Topa que eu separo no teu nome?
 
-**Se hesitar / pedir prova:** mandar um vídeo curto do aparelho (tela com 100% de bateria, IMEI, estado) na hora. Prova vale mais que texto.
+**Se hesitar / pedir prova:** mandar um vídeo curto na hora (aparelho lacrado, ou IMEI/estado se for caso de seminovo). Prova vale mais que texto.
 
 ---
 
 ## 2. Primeiro contato (lead novo de anúncio CTWA)
 
 **Resposta imediata (automática ou na hora):**
-> Oi! Que bom que chamou. Sobre qual aparelho você quer saber? A gente trabalha com Apple original, você recebe e confere antes de pagar, e tem loja física aqui em Caxias.
+> Oi! Que bom que tu chamou. Sobre qual aparelho tu quer saber? A gente trabalha com Apple original lacrado, tu recebe e confere antes de pagar, e tem loja física aqui em Caxias.
 
 **Qualificação leve (1 pergunta, sem interrogatório):**
-> Vai ser pra uso no dia a dia, trabalho? E tem algum modelo em mente ou quer uma recomendação?
+> Vai ser pra uso no dia a dia, trabalho? E já tem um modelo em mente ou quer uma recomendação?
 
-**Apresentação do aparelho + os 3 trunfos + preço transparente** (mesmo padrão da reativação).
+**Apresentação do aparelho + os 3 trunfos + preço transparente** (mesmo padrão da reativação: benefício sentido primeiro, depois o "recebe-confere-paga", depois o valor quando ela pedir).
 
 **CTA:** marcar visita na loja OU separar o aparelho OU enviar vídeo de prova.
 
@@ -59,21 +61,36 @@ Segmenta: quem demonstrou interesse em 17 / top de linha primeiro. Pros que trav
 ## 3. Cadência de follow-up (quando não responde)
 Não desistir no silêncio. Mensagens curtas, sem cobrança.
 - **D+1:** "Oi [nome], conseguiu pensar? Qualquer dúvida sobre o aparelho ou sobre como funciona o pagar-depois, é só falar."
-- **D+3:** "Passando pra avisar que ainda tenho a unidade separada. Quer que eu segure mais um pouco?" (cria urgência gentil)
-- **D+7:** "Oi [nome]! Esse 17 Pro Max ainda tá disponível, mas tá saindo. Se ainda fizer sentido, me chama que a gente resolve rápido."
-- **D+15:** "Última chamada nesse aqui. Se preferir, posso te avisar quando chegar outro modelo que te interesse. Qual você procura?"
+- **D+3:** "Passando aqui... se ainda fizer sentido, eu te deixo tudo certinho pra fechar rapidinho. Quer que eu veja a cor que tu queria?"
+- **D+7:** "Oi [nome]! A linha 17 segue lacrada e saindo bem. Se ainda tiver na tua cabeça, me chama que a gente resolve rápido."
+- **D+15:** "Última chamada nesse aqui 🙂 Se preferir, eu te aviso quando chegar outro modelo que te interesse. Qual tu procura?"
 
 ---
 
 ## 4. Tratamento das objeções mais comuns
-- **"É original mesmo? Tenho receio."** → "Total. É Apple original, e você confere pelo IMEI no site da Apple antes de pagar. Tem garantia Apple e a gente tem loja física em Caxias. Você só paga depois de receber e conferir."
-- **"Por que mais barato que a loja oficial?"** → "Porque a gente trabalha com importado e com seminovo de procedência. Mesma Apple original, com garantia, sem o preço da loja oficial." (NÃO falar de nota/importação não declarada)
-- **"E se vier com problema?"** → "Você confere tudo antes de pagar. E tem garantia Apple. Qualquer coisa, você sabe onde a gente está, loja física em Caxias."
-- **"Tá caro."** → opção Pix com desconto + parcelado + troca do aparelho atual.
+- **"É original mesmo? Tenho receio."** → "Total. É Apple original lacrado, e tu confere pelo IMEI no site da Apple antes de pagar. Tem garantia Apple e a gente tem loja física em Caxias. Tu só paga depois de receber e conferir."
+- **"Por que mais barato que a loja oficial?"** → "Porque a gente trabalha com importado, Apple original com garantia, sem o preço da loja oficial. No Brasil mais de 60% do preço de um iPhone é imposto... a gente tira esse peso do caminho." (NÃO falar de nota/importação não declarada)
+- **"E se vier com problema?"** → "Tu confere tudo antes de pagar. E tem garantia Apple. Qualquer coisa, tu sabe onde a gente tá: loja física em Caxias."
+- **"Tá caro."** → rotular a emoção ("parece que pesa desembolsar tudo de uma vez, né?") + Pix com melhor valor + parcelado + troca do aparelho atual (a partir do 15). Resolver por forma de pagamento, não por desconto.
 
 ---
 
-## 5. Planilha de tracking (montar antes do teste, preencher desde a 1ª conversa)
+## 5. Respostas rápidas (colar no WhatsApp Business — atalhos `/`)
+Atacam direto o "seco": resposta calorosa e completa, pronta, em 1 toque. Personalizar o [nome] sempre. Criar em WhatsApp Business → Ferramentas comerciais → Respostas rápidas.
+
+- **`/oi`** → "Oi! Que bom que tu chamou 🙂 Sobre qual aparelho tu quer saber? A gente trabalha com Apple original lacrado, tu recebe e confere antes de pagar, e tem loja física aqui em Caxias."
+- **`/confianca`** → "Só pra já te deixar tranquilo: aqui tu recebe o aparelho, confere tudo na tua mão e só paga depois. Garantia Apple (dá pra conferir pelo IMEI no site da Apple) e loja física em Caxias, nome e endereço."
+- **`/comofunciona`** → "Funciona assim: tu me diz o modelo e a cor, eu encomendo, chega lacrado com IMEI pra conferir, e eu te entrego em mãos já configurado, com película e capinha. Tu só paga quando tá com ele na mão."
+- **`/original`** → "É Apple original lacrado. Tu confere pelo IMEI no site da Apple antes de pagar, tem garantia Apple e a gente tem loja física aqui em Caxias. Tu só paga depois de receber e conferir."
+- **`/garantia`** → "Garantia Apple de 1 ano, igual de loja. E dá pra verificar pelo IMEI direto no site da Apple, na tua frente, antes de fechar."
+- **`/preco`** → "Me diz qual modelo e cor que eu já te passo o valor certinho, no Pix e no parcelado. No Pix sai mais em conta; parcelando muda conforme o número de vezes."
+- **`/troca`** → "A gente aceita teu aparelho atual na troca (a partir do iPhone 15). Tu me manda o modelo e o estado que eu avalio e abato no valor."
+- **`/endereco`** → "A gente fica na Rua Sinimbu, 2022, Centro de Caxias. Atende de seg a sex, 9h às 19h. Pode vir ver pessoalmente quando quiser 🙂"
+- **`/fechar`** → "Se quiser, eu já vejo a cor que tu quer e deixo tudo certinho pra fechar. Topa que eu separo no teu nome?"
+
+---
+
+## 6. Planilha de tracking (montar antes do teste, preencher desde a 1ª conversa)
 Colunas mínimas pra medir o teste de 2 semanas:
 
 | Data | Nome | Origem (campanha/orgânico/indicação/reativação) | Produto de interesse | Etapa (novo / respondeu / proposta enviada / em follow-up / fechado / perdido) | Objeção principal | Próximo follow-up (data) | Desfecho | Valor da venda |
@@ -85,10 +102,12 @@ Sem isso, o teste não prova nada e você perde o argumento mais forte pro dono.
 ---
 
 ## Confirmado
-- R$ 7.990 é o preço no Pix. Parcelado varia conforme o número de parcelas.
-- Aceita troca (trade-in) nos seminovos: sim — **aceita iPhone a partir do 15**.
-- **O que vem na caixa do 17 Pro Max seminovo:** cabo original + película já instalada + capinha de brinde. **Não vem com a caixa.**
+- Preço: nunca chumbar no script. Pix é o melhor valor; parcelado varia conforme o número de parcelas (juros embutidos, não dizer "sem juros").
+- Aceita troca (trade-in): sim — **aceita iPhone a partir do 15**.
+- Novo lacrado: garantia Apple internacional 1 ano, entrega em mãos já configurado, com película instalada e capinha. Vem na caixa lacrada.
+- Loja física: Rua Sinimbu, 2022 — Centro, Caxias do Sul. Seg a sex, 9h–19h.
 - Verba do teste: R$ 20-30/dia no CTWA por 7-10 dias (a validar com o dono).
 
-## Ainda a confirmar
-- Cola de valores do parcelado (você falou ~8% em 6x, ~13% em 12x): a Leti vai confirmar a tabela pra deixar os valores prontos no script (item 3 da abertura tem o placeholder esperando).
+## Ainda a confirmar (com a Leti)
+- **Seminovo:** segue sob encomenda/avaliação ou está pausado por ora? (muda os scripts de reativação e a objeção de preço)
+- **Cola de valores do parcelado** (~8% em 6x, ~13% em 12x?): confirmar a tabela pra deixar pronta uma resposta rápida `/parcelado` com os valores por modelo.

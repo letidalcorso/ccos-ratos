@@ -75,9 +75,9 @@
       {
         "type": "text",
         "id": "wa_float_label",
-        "label": "Rótulo (aparece no desktop)",
-        "info": "No celular aparece só o ícone. Deixe um espaço se quiser esconder o texto também no desktop.",
-        "default": "fale com a gente"
+        "label": "Descrição do botão (acessibilidade)",
+        "info": "Texto lido por leitores de tela e mostrado ao passar o mouse. Não aparece na tela — o botão é só o ícone.",
+        "default": "fale com a gente no WhatsApp"
       }
     ]
   }
