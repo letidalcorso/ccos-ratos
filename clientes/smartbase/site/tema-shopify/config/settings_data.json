@@ -220,8 +220,8 @@
             "settings": {
               "cat": "iphone",
               "name": "iPhone 17 Pro",
-              "fallback": "",
-              "desc": "",
+              "fallback": "prod-iphone-17-pro.png",
+              "desc": "tela de 6,3'' e corpo de alumínio, leve e forte. três câmeras de 48MP com 8x de zoom e vídeo de cinema. chip A19 Pro e bateria que vira o dia.",
               "specs": "256GB · 512GB · 1TB · 2TB",
               "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
               "cond": "novo",
@@ -234,10 +234,10 @@
             "name": "cabo usbc",
             "settings": {
               "cat": "acessorios",
-              "name": "Cabo usb-usb",
-              "fallback": "",
-              "desc": "",
-              "specs": "",
+              "name": "Cabo USB-C (1m)",
+              "fallback": "prod-cabo-usbc.png",
+              "desc": "o trançado original de 1 metro, recarga de até 60W. o mesmo que vem na caixa, pra quando o seu já era.",
+              "specs": "USB-C · USB-C; 1m; até 60W",
               "colors": "",
               "cond": "novo",
               "in_stock": true,
@@ -249,10 +249,10 @@
             "name": "fonte 20w",
             "settings": {
               "cat": "acessorios",
-              "name": "Fonte 20w",
-              "fallback": "",
-              "desc": "",
-              "specs": "",
+              "name": "Fonte 20W",
+              "fallback": "prod-fonte-20w.png",
+              "desc": "a fonte certa pra carga rápida do iPhone: 20W no USB-C. original Apple, do jeito que tem que ser.",
+              "specs": "20W · USB-C",
               "colors": "",
               "cond": "novo",
               "in_stock": true,
@@ -516,6 +516,21 @@
               "in_stock": true,
               "price": ""
             }
+          },
+          "produto_ipad11": {
+            "type": "produto",
+            "name": "iPad 11",
+            "settings": {
+              "cat": "ipad",
+              "name": "iPad 11",
+              "fallback": "prod-ipad-11.png",
+              "desc": "a porta de entrada do iPad. chip A16 que dá conta de série, jogo, aula e trabalho. tela de 11'' colorida e bateria pro dia todo.",
+              "specs": "11\"; A16 · 128GB+",
+              "colors": "azul:#a8c6e0; rosa:#eccdd0; amarelo:#ecdf9e; prata:#dcdee0",
+              "cond": "novo",
+              "in_stock": true,
+              "price": ""
+            }
           }
         },
         "block_order": [
@@ -533,6 +548,7 @@
           "vitrine-5",
           "vitrine-6",
           "vitrine-7",
+          "produto_ipad11",
           "vitrine-9",
           "vitrine-10",
           "vitrine-11",
