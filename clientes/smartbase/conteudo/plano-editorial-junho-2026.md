@@ -168,7 +168,7 @@ Guardrail: carga tributária do BRASIL (fato público). Nunca explicar a importa
 
 ## Pivot pós semana 1 — ecossistema Apple (DECIFRA que agrega)
 A pedido da Letícia (06/06): explorar como os aparelhos Apple se conectam. Conteúdo de altíssimo valor (agrega, salva, posiciona autoridade) e abre venda de outros produtos (Watch, Mac, iPad, AirPods), não só iPhone. Revisar e encaixar depois de fechar a semana 1.
-**Atenção:** a palavra "ecossistema" é vetada na copy. Mostrar na prática, nunca usar o jargão.
+**Atenção:** "ecossistema" foi LIBERADA (13/06, decisão da Letícia) — pode usar na copy quando fizer sentido (ex: "faz parte do ecossistema apple"). O ideal ainda é mostrar na prática, mas a palavra não é mais proibida.
 Sementes de pauta:
 - o watch que desbloqueia o mac e o iphone sozinho (você nem digita a senha)
 - copia no mac, cola no iphone (o famoso cmd-c aqui cola lá)
