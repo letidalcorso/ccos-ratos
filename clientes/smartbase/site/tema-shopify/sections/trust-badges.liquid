@@ -1,0 +1,59 @@
+{%- comment -%}
+  Home · Selos de confiança — strip compacto logo abaixo do hero.
+  Resumo escaneável dos 3 trunfos (paga quando recebe · garantia por imei · loja física),
+  reforço no momento da decisão. Conteúdo e ícones editáveis no painel.
+{%- endcomment -%}
+<section class="tb-band rise">
+  <div class="page">
+    <div class="tb-row">
+      {%- for block in section.blocks -%}
+        <div class="tb-item" {{ block.shopify_attributes }}>
+          <span class="tb-ic" aria-hidden="true">
+            {%- case block.settings.icon -%}
+              {%- when 'shield' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              {%- when 'pin' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              {%- when 'check' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.2 2.2 4.6-4.6"/></svg>
+              {%- when 'store' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/></svg>
+              {%- else -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.3 9 5.1"/><path d="M21 8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            {%- endcase -%}
+          </span>
+          <div class="tb-tx">
+            <div class="tb-t">{{ block.settings.title }}</div>
+            {%- if block.settings.text != blank -%}<div class="tb-s">{{ block.settings.text }}</div>{%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home · Selos de confiança",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "selo",
+      "name": "Selo",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Ícone",
+          "default": "package",
+          "options": [
+            { "value": "package", "label": "Caixa (recebe)" },
+            { "value": "shield", "label": "Escudo (garantia)" },
+            { "value": "pin", "label": "Pin (local)" },
+            { "value": "check", "label": "Check" },
+            { "value": "store", "label": "Loja" }
+          ]
+        },
+        { "type": "text", "id": "title", "label": "Título", "default": "paga quando recebe" },
+        { "type": "text", "id": "text", "label": "Texto de apoio", "default": "você só paga com o aparelho na mão." }
+      ]
+    }
+  ],
+  "max_blocks": 4
+}
+{% endschema %}

@@ -26,6 +26,40 @@
         "cta2_label": "quero fazer meu pedido"
       }
     },
+    "trust": {
+      "type": "trust-badges",
+      "blocks": {
+        "b1": {
+          "type": "selo",
+          "settings": {
+            "icon": "package",
+            "title": "paga quando recebe",
+            "text": "você só paga com o aparelho na mão."
+          }
+        },
+        "b2": {
+          "type": "selo",
+          "settings": {
+            "icon": "shield",
+            "title": "garantia Apple por imei",
+            "text": "dá pra verificar antes de pagar."
+          }
+        },
+        "b3": {
+          "type": "selo",
+          "settings": {
+            "icon": "pin",
+            "title": "loja física em caxias",
+            "text": "tem balcão de verdade. vem conhecer."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
     "light-zone": {
       "type": "home-light-zone",
       "blocks": {
@@ -203,6 +237,7 @@
   },
   "order": [
     "hero",
+    "trust",
     "light-zone",
     "showcase",
     "diferenciais"

@@ -108,3 +108,18 @@ img.sb-img[data-cool]{filter:saturate(.5) hue-rotate(-22deg) brightness(.7) cont
   .wa-float-ring{animation:none}
   .wa-float{transition:none}
 }
+
+/* ---- Faixa de selos de confiança (logo abaixo do hero) ----
+   Strip compacto e escaneável com os 3 trunfos. Combina com os tokens do site. */
+.tb-band{padding:18px 0 4px}
+.tb-row{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.tb-item{display:flex; align-items:center; gap:12px; padding:14px 16px; background:#0F0F1C; border:1px solid #1E1E2E; border-radius:14px}
+.tb-ic{flex:none; width:38px; height:38px; display:grid; place-items:center; border-radius:10px; background:rgba(62,130,247,.12); color:#3E82F7}
+.tb-ic svg{width:20px; height:20px; display:block}
+.tb-t{font-weight:650; font-size:15px; color:#F2F2F6; letter-spacing:-.2px; line-height:1.15}
+.tb-s{font-size:12.5px; color:#7A7A96; line-height:1.25; margin-top:2px}
+@media (max-width:768px){
+  .tb-band{padding:14px 0 2px}
+  .tb-row{grid-template-columns:1fr; gap:10px}
+  .tb-item{padding:12px 14px}
+}
