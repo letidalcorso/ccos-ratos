@@ -1,0 +1,62 @@
+{%- comment -%}
+  Listagem do blog NATIVO — itera blog.articles (em vez de blocks manuais).
+  Mantém o visual de cards e os filtros por tag (chips) já existentes (global.js).
+  As tags do artigo alimentam o filtro.
+{%- endcomment -%}
+{%- assign s = section.settings -%}
+{%- capture chips -%}
+<div class="bl-filters">
+  <span class="bl-chip on" data-filter="todos">todos</span>
+  {%- assign chiplist = s.filtros | split: ',' -%}
+  {%- for c in chiplist -%}<span class="bl-chip" data-filter="{{ c | strip }}">{{ c | strip }}</span>{%- endfor -%}
+</div>
+{%- endcapture -%}
+<div class="blog-page">
+  {% render 'page-hero',
+    kicker: s.hero_kicker, line1: s.hero_line1, line2: s.hero_line2, sub: s.hero_sub,
+    bg_image: s.hero_image, bg_fallback: 'amb-hero-blog.jpeg', bg_id: 'blog-hero', bg_position: '50% 42%',
+    cta_extra: chips %}
+
+  <section class="page bl-wrap">
+    {%- if blog.articles_count == 0 -%}
+      <p class="bl-empty sb-lead" style="text-align:center;padding:40px 0;color:#7A7A96">em breve, os primeiros artigos.</p>
+    {%- else -%}
+    <div class="bl-grid stagger rise">
+      {%- for article in blog.articles -%}
+        {%- liquid
+          assign words = article.content | strip_html | split: ' ' | size
+          assign rt = words | divided_by: 200 | at_least: 1
+          assign cat = article.tags | first | default: 'artigo'
+        -%}
+        <a class="post-card rise" href="{{ article.url }}" data-cat="{{ cat }}" data-tags="{{ article.tags | join: ' ' }}">
+          <div class="post-cover">
+            {% render 'img-slot', image: article.image, fallback: 'amb-hero-blog.jpeg', fit: 'cover', cool: true, position: '50% 45%', label: 'capa do artigo' %}
+          </div>
+          <div class="post-body">
+            <div class="post-cat">{{ cat }}</div>
+            <div class="post-title">{{ article.title }}</div>
+            {%- if article.excerpt != blank -%}<div class="post-excerpt">{{ article.excerpt | strip_html | truncate: 120 }}</div>{%- endif -%}
+            <div class="post-meta">{{ article.published_at | date: '%d %b %Y' }} · {{ rt }} min</div>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Blog (nativo)",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "hero_kicker", "label": "Etiqueta", "default": "blog" },
+    { "type": "text", "id": "hero_line1", "label": "Título — linha 1", "default": "dicas e novidades" },
+    { "type": "text", "id": "hero_line2", "label": "Título — linha 2 (azul)", "default": "do mundo Apple." },
+    { "type": "textarea", "id": "hero_sub", "label": "Texto de apoio", "default": "conteúdo por quem vive Apple há anos. comparativos, guias e o que importa pra você escolher certo." },
+    { "type": "image_picker", "id": "hero_image", "label": "Foto de fundo do hero" },
+    { "type": "header", "content": "Filtros" },
+    { "type": "text", "id": "filtros", "label": "Categorias do filtro (separe por vírgula)", "info": "Devem bater com as tags dos artigos.", "default": "iPhone,seminovo,garantia,comparativos,dicas" }
+  ]
+}
+{% endschema %}

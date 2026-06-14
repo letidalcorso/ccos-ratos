@@ -1,0 +1,52 @@
+{%- comment -%}
+  Página de artigo do blog nativo. SEO: H1 (title), capa com alt, corpo HTML (article.content),
+  data + tempo de leitura, CTA WhatsApp no fim, JSON-LD BlogPosting (+ FAQPage opcional via metafield custom.faq_jsonld).
+  Canonical e Open Graph ficam no layout/theme.liquid.
+{%- endcomment -%}
+{%- assign s = section.settings -%}
+{%- assign words = article.content | strip_html | split: ' ' | size -%}
+{%- assign rt = words | divided_by: 200 | at_least: 1 -%}
+<article class="page article-page rise">
+  <a class="article-back" href="{{ blog.url }}"><span aria-hidden="true">←</span> {{ blog.title | default: 'blog' }}</a>
+  <div class="eyebrow signal">{{ article.tags | first | default: 'artigo' }}</div>
+  <h1 class="headline article-h1">{{ article.title }}</h1>
+  <div class="article-meta">{{ article.published_at | date: '%d %b %Y' }} · {{ rt }} min de leitura</div>
+  {%- if article.image -%}
+    <div class="article-cover">
+      <img src="{{ article.image | image_url: width: 1400 }}" alt="{{ article.image.alt | default: article.title | escape }}" width="{{ article.image.width }}" height="{{ article.image.height }}" loading="eager">
+    </div>
+  {%- endif -%}
+  <div class="article-body rte">{{ article.content }}</div>
+  <div class="article-cta">
+    <p class="article-cta-t">{{ s.cta_text }}</p>
+    <a class="btn btn-primary" href="{% render 'wa-link', texto: 'oi! vim por um artigo do site, quero uma ajuda' %}" target="_blank" rel="noopener noreferrer">{{ s.cta_label }} <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ article.title | json }},
+  "datePublished": {{ article.published_at | date: "%Y-%m-%dT%H:%M:%S%z" | json }},
+  "dateModified": {{ article.updated_at | date: "%Y-%m-%dT%H:%M:%S%z" | json }},
+  {% if article.image %}"image": {{ article.image | image_url: width: 1200 | prepend: "https:" | json }},{% endif %}
+  "author": { "@type": "Organization", "name": "Smartbase" },
+  "publisher": { "@type": "Organization", "name": "Smartbase" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ request.origin | append: article.url | json }} },
+  "description": {{ article.excerpt_or_content | strip_html | truncate: 160 | json }}
+}
+</script>
+{%- if article.metafields.custom.faq_jsonld != blank -%}
+<script type="application/ld+json">{{ article.metafields.custom.faq_jsonld }}</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Artigo",
+  "settings": [
+    { "type": "text", "id": "cta_text", "label": "Texto do CTA (fim do artigo)", "default": "gostou? a gente te ajuda a escolher o teu." },
+    { "type": "text", "id": "cta_label", "label": "Botão do CTA", "default": "falar no WhatsApp" }
+  ]
+}
+{% endschema %}
