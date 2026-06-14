@@ -1,0 +1,130 @@
+{
+  "sections": {
+    "main": {
+      "type": "faq",
+      "blocks": {
+        "faq-0": {
+          "type": "categoria",
+          "settings": {
+            "title": "garantia",
+            "compare": true
+          }
+        },
+        "faq-1": {
+          "type": "pergunta",
+          "settings": {
+            "question": "como funciona a garantia Apple no Brasil?",
+            "answer": "todo aparelho novo chega com garantia internacional Apple de 12 meses, válida em qualquer Apple Service no mundo, inclusive no Brasil."
+          }
+        },
+        "faq-2": {
+          "type": "pergunta",
+          "settings": {
+            "question": "o que está incluso nos 3 meses de garantia própria da Smartbase?",
+            "answer": "pros seminovos, a smartbase cobre defeitos de funcionamento do aparelho por 3 meses. acionamento direto com a gente, no WhatsApp."
+          }
+        },
+        "faq-3": {
+          "type": "pergunta",
+          "settings": {
+            "question": "e se o aparelho der problema depois da garantia?",
+            "answer": "a gente continua te ajudando a encaminhar pro serviço autorizado Apple. você nunca fica na mão."
+          }
+        },
+        "faq-4": {
+          "type": "categoria",
+          "settings": {
+            "title": "originalidade e procedência",
+            "compare": false
+          }
+        },
+        "faq-5": {
+          "type": "pergunta",
+          "settings": {
+            "question": "como sei que o iPhone é original?",
+            "answer": "todo aparelho é verificado pelo número de série direto na Apple, com IMEI conferido. nada de paralelo."
+          }
+        },
+        "faq-6": {
+          "type": "categoria",
+          "settings": {
+            "title": "entrega",
+            "compare": false
+          }
+        },
+        "faq-7": {
+          "type": "pergunta",
+          "settings": {
+            "question": "se eu encomendar um novo, em quanto tempo chega?",
+            "answer": "lacrados sob encomenda chegam em até 7 dias úteis. seminovos em estoque saem na hora."
+          }
+        },
+        "faq-8": {
+          "type": "pergunta",
+          "settings": {
+            "question": "quais cidades vocês atendem?",
+            "answer": "temos loja física em caxias do sul · rs  e entregamos para toda a serra gaúcha."
+          }
+        },
+        "faq-9": {
+          "type": "categoria",
+          "settings": {
+            "title": "pagamento",
+            "compare": false
+          }
+        },
+        "faq-10": {
+          "type": "pergunta",
+          "settings": {
+            "question": "quais formas de pagamento vocês aceitam?",
+            "answer": "a vista ou parcelado em até 12x no cartão. o que ficar melhor para você."
+          }
+        },
+        "faq-11": {
+          "type": "categoria",
+          "settings": {
+            "title": "troca",
+            "compare": false
+          }
+        },
+        "faq-12": {
+          "type": "pergunta",
+          "settings": {
+            "question": "vocês aceitam meu aparelho atual como entrada?",
+            "answer": "aceitamos. só enviar o modelo e especificações no WhatsApp que avaliamos."
+          }
+        }
+      },
+      "block_order": [
+        "faq-0",
+        "faq-1",
+        "faq-2",
+        "faq-3",
+        "faq-4",
+        "faq-5",
+        "faq-6",
+        "faq-7",
+        "faq-8",
+        "faq-9",
+        "faq-10",
+        "faq-11",
+        "faq-12"
+      ],
+      "settings": {
+        "hero_kicker": "perguntas frequentes",
+        "hero_line1": "ainda em dúvida?",
+        "hero_line2": "a gente responde.",
+        "hero_sub": "reunimos todas as perguntas frequentes aqui.",
+        "hero_image": "shopify://shop_images/900942dd911f97a94192ceb376e5e040.jpg",
+        "hero_cta": "",
+        "gar_novos_title": "Apple oficial · 12 meses",
+        "gar_novos_text": "todo aparelho novo chega lacrado de fábrica. garantia internacional Apple, válida em qualquer Apple Service no mundo, inclusive no Brasil.",
+        "gar_semi_title": "smartbase · 3 meses",
+        "gar_semi_text": "pros seminovos, oferecemos garantia própria de 3 meses. acionamento e suporte direto com a gente."
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog",
+      "blocks": {
+        "blog-0": {
+          "type": "post",
+          "settings": {
+            "cat": "seminovo",
+            "tags": "seminovo",
+            "title": "vale a pena comprar iPhone seminovo?",
+            "excerpt": "a real sobre seminovo: quando é o melhor negócio e o que olhar antes.",
+            "meta": "28 mai 2026 · 6 min",
+            "kind": "product",
+            "fallback": "prod-iphone.webp",
+            "link": ""
+          }
+        },
+        "blog-1": {
+          "type": "post",
+          "settings": {
+            "cat": "garantia",
+            "tags": "garantia iphone",
+            "title": "iPhone importado é seguro?",
+            "excerpt": "tudo sobre a garantia internacional Apple, válida no Brasil.",
+            "meta": "21 mai 2026 · 5 min",
+            "kind": "ambient",
+            "fallback": "amb-hero-blog.jpeg",
+            "link": ""
+          }
+        },
+        "blog-2": {
+          "type": "post",
+          "settings": {
+            "cat": "comparativos",
+            "tags": "comparativos iphone",
+            "title": "iPhone 17 vs 16: qual escolher?",
+            "excerpt": "o upgrade vale em 2026? a real, sem hype.",
+            "meta": "14 mai 2026 · 7 min",
+            "kind": "product",
+            "fallback": "prod-iphone-air.webp",
+            "link": ""
+          }
+        },
+        "blog-3": {
+          "type": "post",
+          "settings": {
+            "cat": "dicas",
+            "tags": "dicas mac",
+            "title": "primeiro mac? por onde começar",
+            "excerpt": "o guia pra quem tá saindo do windows sem susto.",
+            "meta": "7 mai 2026 · 6 min",
+            "kind": "product",
+            "fallback": "prod-macbook-air.webp",
+            "link": ""
+          }
+        },
+        "blog-4": {
+          "type": "post",
+          "settings": {
+            "cat": "dicas",
+            "tags": "dicas watch",
+            "title": "apple watch vale a pena no dia a dia?",
+            "excerpt": "saúde, treino e notificação: o que muda de verdade.",
+            "meta": "30 abr 2026 · 5 min",
+            "kind": "product",
+            "fallback": "prod-watch-ultra.webp",
+            "link": ""
+          }
+        },
+        "blog-5": {
+          "type": "post",
+          "settings": {
+            "cat": "comparativos",
+            "tags": "comparativos airpods",
+            "title": "AirPods Pro 3 valem o upgrade?",
+            "excerpt": "cancelamento de ruído e bateria: o que melhorou.",
+            "meta": "23 abr 2026 · 4 min",
+            "kind": "product",
+            "fallback": "prod-airpods-pro.webp",
+            "link": ""
+          }
+        },
+        "blog-6": {
+          "type": "post",
+          "settings": {
+            "cat": "dicas",
+            "tags": "dicas ipad",
+            "title": "ipad pra trabalhar: dá conta?",
+            "excerpt": "até onde o ipad substitui o notebook em 2026.",
+            "meta": "16 abr 2026 · 6 min",
+            "kind": "product",
+            "fallback": "prod-ipad-pro.webp",
+            "link": ""
+          }
+        },
+        "blog-7": {
+          "type": "post",
+          "settings": {
+            "cat": "garantia",
+            "tags": "garantia seminovo",
+            "title": "como saber se um seminovo é confiável",
+            "excerpt": "imei, bateria e procedência: o checklist completo.",
+            "meta": "9 abr 2026 · 5 min",
+            "kind": "product",
+            "fallback": "prod-iphone-17.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "blog-0",
+        "blog-1",
+        "blog-2",
+        "blog-3",
+        "blog-4",
+        "blog-5",
+        "blog-6",
+        "blog-7"
+      ],
+      "settings": {
+        "hero_kicker": "blog",
+        "hero_line1": "dicas e novidades",
+        "hero_line2": "do mundo Apple.",
+        "hero_sub": "comparativos · guias · dicas ·  novidades · como escolher certo",
+        "hero_image": "shopify://shop_images/woman-holds-ipad.jpg"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
