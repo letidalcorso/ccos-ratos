@@ -9,13 +9,13 @@
  */
 {
   "current": {
-    "meta_pixel_id": "2054869865373051",
-    "wa_float_show": true,
-    "wa_float_label": "fale com a gente",
     "wa_number": "5554996624494",
     "phone_display": "+55 54 99662-4494",
     "instagram_url": "https://instagram.com/smartbase.br",
     "instagram_handle": "@smartbase.br",
+    "meta_pixel_id": "2054869865373051",
+    "wa_float_show": true,
+    "wa_float_label": "fale com a gente",
     "sections": {
       "browser-bar": {
         "type": "browser-bar",
@@ -214,6 +214,21 @@
       "vitrine": {
         "type": "vitrine",
         "blocks": {
+          "produto_MhLmHB": {
+            "type": "produto",
+            "name": "17 pro - novo",
+            "settings": {
+              "cat": "iphone",
+              "name": "iPhone 17 Pro",
+              "fallback": "",
+              "desc": "",
+              "specs": "256GB · 512GB · 1TB · 2TB",
+              "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
+              "cond": "novo",
+              "in_stock": true,
+              "price": ""
+            }
+          },
           "produto_JG4Tfg": {
             "type": "produto",
             "name": "cabo usbc",
@@ -247,6 +262,7 @@
           "produto_gJaDgt": {
             "type": "produto",
             "name": "13 | midlenight",
+            "disabled": true,
             "settings": {
               "cat": "iphone",
               "name": "iPhone 13",
@@ -262,6 +278,7 @@
           "produto_Ght8Aa": {
             "type": "produto",
             "name": "17 pro max | silver",
+            "disabled": true,
             "settings": {
               "cat": "iphone",
               "name": "iPhone 17 Pro Max",
@@ -271,12 +288,13 @@
               "colors": "silver:#d7d9db",
               "cond": "seminovo",
               "in_stock": true,
-              "price": "R$ 7.990,00"
+              "price": "R$ 7.890,00"
             }
           },
           "produto_cJXiU9": {
             "type": "produto",
             "name": "17 pro max | orange",
+            "disabled": true,
             "settings": {
               "cat": "iphone",
               "name": "iPhone 17 Pro Max",
@@ -301,7 +319,7 @@
               "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
               "cond": "novo",
               "in_stock": true,
-              "price": "R$ 8.350,00"
+              "price": "R$7.890,00"
             }
           },
           "vitrine-1": {
@@ -501,6 +519,7 @@
           }
         },
         "block_order": [
+          "produto_MhLmHB",
           "produto_JG4Tfg",
           "produto_yQdbwM",
           "produto_gJaDgt",
