@@ -17,7 +17,7 @@
         "card_position": "50% 38%",
         "brand_pill": "smartbase",
         "badge": "destaque do mês · iPhone 17 Pro Max",
-        "lead": "iPhone · iPad · Mac · Watch · AirPods | acessórios",
+        "lead": "iPhone · iPad · Mac · Watch · AirPods · acessórios",
         "headline_1": "sua Apple store.",
         "headline_2": "particular.",
         "location": "caxias do sul · rs",
@@ -25,40 +25,6 @@
         "cta1_link": "shopify://pages/vitrine",
         "cta2_label": "quero fazer meu pedido"
       }
-    },
-    "trust": {
-      "type": "trust-badges",
-      "blocks": {
-        "b1": {
-          "type": "selo",
-          "settings": {
-            "icon": "package",
-            "title": "paga quando recebe",
-            "text": "você só paga com o aparelho na mão."
-          }
-        },
-        "b2": {
-          "type": "selo",
-          "settings": {
-            "icon": "shield",
-            "title": "garantia Apple por imei",
-            "text": "dá pra verificar antes de pagar."
-          }
-        },
-        "b3": {
-          "type": "selo",
-          "settings": {
-            "icon": "pin",
-            "title": "loja física em caxias",
-            "text": "tem balcão de verdade. vem conhecer."
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3"
-      ]
     },
     "light-zone": {
       "type": "home-light-zone",
@@ -107,62 +73,21 @@
         "note_text": "a garantia Apple inicia a partir da data de saída da fábrica, não da ativação. aparelho parado em estoque perde cobertura antes de chegar na sua mão. trabalhando por encomenda, você recebe com a garantia completa em dia."
       }
     },
-    "diferenciais": {
-      "type": "diferenciais",
-      "blocks": {
-        "d1": {
-          "type": "card",
-          "settings": {
-            "hero": true,
-            "n": "01",
-            "title": "primeiro chega. depois paga.",
-            "text": "seu investimento sai da conta somente quando estiver sua mão. ligado. imei conferido. antes disso nada sai da sua conta.",
-            "image": "shopify://shop_images/home_-_sobre.png"
-          }
-        },
-        "d2": {
-          "type": "card",
-          "settings": {
-            "hero": false,
-            "n": "02",
-            "title": "loja física em caxias",
-            "text": "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho."
-          }
-        },
-        "d3": {
-          "type": "card",
-          "settings": {
-            "hero": false,
-            "n": "03",
-            "title": "atendimento humano",
-            "text": "sem chatbot, sem formulário. você chama no WhatsApp e quem responde entende de Apple."
-          }
-        },
-        "d4": {
-          "type": "card",
-          "settings": {
-            "hero": false,
-            "n": "04",
-            "title": "só Apple",
-            "text": "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica."
-          }
-        }
-      },
-      "block_order": [
-        "d1",
-        "d2",
-        "d3",
-        "d4"
-      ],
-      "settings": {
-        "eyebrow": "por que a smartbase",
-        "headline_1": "encontramos junto",
-        "headline_2": "o aparelho ideal para você."
-      }
-    },
     "showcase": {
       "type": "home-showcase",
       "blocks": {
+        "highlight_UEdNbX": {
+          "type": "highlight",
+          "settings": {
+            "kicker": "unidades limitadas",
+            "name": "iPhone 17 Pro Max",
+            "sub": "o topo da linha, lacrado e sob encomenda. chega em até 7 dias.",
+            "specs": "256GB · 512GB · 1TB ; cosmic orange ; garantia apple · 12 meses",
+            "dest": "whatsapp",
+            "url": "",
+            "cta": "quero esse"
+          }
+        },
         "c1": {
           "type": "category",
           "settings": {
@@ -213,6 +138,7 @@
         }
       },
       "block_order": [
+        "highlight_UEdNbX",
         "c1",
         "c2",
         "c3",
@@ -229,17 +155,105 @@
         "win_sub": "novos · escolhe a categoria",
         "cat_cta": "ver novos",
         "semi_title": "seminovos",
-        "semi_sub": "outro dono, mesma Apple. vê o que chegou.",
+        "semi_sub": "outro dono, mesma Apple. vem ver o que chegou.",
         "semi_cta": "ver seminovos",
         "semi_link": "shopify://collections/all"
+      }
+    },
+    "trust": {
+      "type": "trust-badges",
+      "blocks": {
+        "b1": {
+          "type": "selo",
+          "settings": {
+            "icon": "package",
+            "title": "paga quando recebe",
+            "text": "você só paga com o aparelho na mão."
+          }
+        },
+        "b2": {
+          "type": "selo",
+          "settings": {
+            "icon": "shield",
+            "title": "garantia Apple por imei",
+            "text": "dá pra verificar antes de pagar."
+          }
+        },
+        "b3": {
+          "type": "selo",
+          "settings": {
+            "icon": "pin",
+            "title": "loja física em caxias",
+            "text": "tem balcão de verdade. vem conhecer."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {}
+    },
+    "diferenciais": {
+      "type": "diferenciais",
+      "blocks": {
+        "d1": {
+          "type": "card",
+          "settings": {
+            "hero": true,
+            "n": "01",
+            "title": "primeiro chega. depois paga.",
+            "text": "seu investimento sai da conta somente quando estiver sua mão. ligado. imei conferido. antes disso nada sai da sua conta.",
+            "image": "shopify://shop_images/home_-_sobre.png"
+          }
+        },
+        "d2": {
+          "type": "card",
+          "settings": {
+            "hero": false,
+            "n": "02",
+            "title": "loja física em caxias",
+            "text": "tem endereço, tem balcão. dá pra vir pegar pessoalmente ou tirar dúvida olho no olho."
+          }
+        },
+        "d3": {
+          "type": "card",
+          "settings": {
+            "hero": false,
+            "n": "03",
+            "title": "atendimento humano",
+            "text": "sem chatbot, sem formulário. você chama no WhatsApp e quem responde entende de Apple."
+          }
+        },
+        "d4": {
+          "type": "card",
+          "settings": {
+            "hero": false,
+            "n": "04",
+            "title": "só Apple",
+            "text": "especialização em uma marca muda o que a gente consegue te recomendar. uso real, não ficha técnica."
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3",
+        "d4"
+      ],
+      "settings": {
+        "eyebrow": "por que a smartbase",
+        "headline_1": "encontramos juntos",
+        "headline_2": "o ideal para você."
       }
     }
   },
   "order": [
     "hero",
-    "trust",
     "light-zone",
     "showcase",
+    "trust",
     "diferenciais"
   ]
 }
