@@ -48,6 +48,15 @@ Priorizei por **sinais de demanda da SERP** (quantidade e qualidade de artigos c
 ## Ordem de produção recomendada
 
 > **Status (14/06):** Lote 1 escrito (4 rascunhos). v2 do seminovo aprovada pela Letícia (padrão de voz travado: caixa de frase, sem Title Case, investimento > "menos dinheiro", CTA com hiperlink WhatsApp, 3 meses garantia da loja no seminovo). Arquivos em `conteudo/blog-artigos/`.
+>
+> **Publicação:** funciona via blog nativo do Shopify, colando o HTML do `PUBLICAR-*.md`. Versões prontas: `PUBLICAR-01-garantia.md`, `PUBLICAR-02-seminovo.md`.
+>
+> **URLs ao vivo:**
+> - Seminovo: https://www.smartbasebr.com/blogs/seminovo/iphone-seminovo-vale-a-pena ✅
+> - Garantia: no ar (URL a confirmar com a Letícia)
+> - ⚠️ Estrutura: artigos estão indo em blogs separados por categoria (`/blogs/seminovo/...`). Avaliar padronizar tudo num blog único pra coesão do cluster (decisão pendente).
+>
+> **Links internos:** reativar nos `PUBLICAR-*` conforme as URLs ao vivo forem confirmadas (link interno entre artigos é o que faz o cluster ranquear).
 
 **Lote 1 (escrever primeiro — demanda alta + diferenciador máximo + winnable):**
 1. ✅ PILLAR — guia de comprar com segurança (`00-pilar-...`) — rascunho
