@@ -20,12 +20,21 @@ A loja física em Caxias qualifica a Smartbase pra ter pino no Google Maps e apa
 
 ---
 
-## O que preciso de você (sem isso o cadastro trava)
-1. **Endereço completo da loja** — rua, número, complemento, bairro, CEP. (vai no perfil e é o que recebe o cartão de verificação)
-2. **A loja em reforma consegue receber correspondência** no endereço? Se não, a verificação tem que ser por telefone/SMS/vídeo. Me diz qual dá.
-3. **Horário de funcionamento** — dias e horários.
-4. **Razão social / nome** que quer usar e se entra o CNPJ.
-5. **O número 5554996624494 recebe ligação?** O telefone do perfil precisa ser chamável. Se for só WhatsApp, a gente resolve (dá pra usar como telefone e adicionar link de WhatsApp à parte).
+## NAP canônico (usar idêntico em GMB, site e Instagram)
+- **Nome:** Smartbase
+- **Endereço:** Rua Sinimbu, 2022 — Centro, Caxias do Sul – RS, CEP 95020-002
+- **Telefone:** (54) 99662-4494
+- **Horário:** Seg a Sex, 9h às 19h
+- **Site:** (link do Shopify quando publicar)
+
+> Esse mesmo endereço/telefone tem que aparecer igualzinho no rodapé do site e na bio/contato do Instagram. Divergência de NAP derruba ranking local.
+
+## Dados confirmados (jun/2026)
+1. **Endereço:** Rua Sinimbu, 2022 — Centro, Caxias do Sul/RS, CEP 95020-002 ✅
+2. **Recebe correspondência:** sim → dá pra verificar por **cartão postal** (chega em 5-7 dias). Se o Google oferecer vídeo na hora, é mais rápido — aceitar o que aparecer. ✅
+3. **Horário:** Seg a Sex, 9h às 19h ✅
+4. **Razão social / CNPJ:** a confirmar — **não trava o cadastro** (o CNPJ não aparece no perfil público e a verificação não exige). Confirmar depois pra deixar o cadastro completo.
+5. **Telefone:** o número é só WhatsApp. **Recomendação:** listar (54) 99662-4494 como telefone mesmo assim — é o chip que recebe o SMS/ligação de verificação, e cliente da Serra espera um celular ali. O botão de ligar quase ninguém usa; o fluxo principal a gente joga pro WhatsApp adicionando o link `https://wa.me/5554996624494` no campo de site/ação do perfil.
 
 ---
 
@@ -45,7 +54,7 @@ A categoria principal é o que mais pesa no ranking local — por isso a mais es
 
 ### Descrição (até 750 caracteres)
 ```
-Apple original em Caxias do Sul, há anos. iPhone novo sob encomenda e seminovo conferido, com garantia Apple verificável pelo IMEI. Aqui a confiança se prova: você só paga quando o aparelho está na sua mão, ligado e checado na sua frente. Loja física na cidade, atendimento direto pelo WhatsApp. Quem entende de Apple compra com a gente.
+Apple original em Caxias do Sul, há anos. iPhone novo sob encomenda e seminovo conferido, com garantia Apple verificável pelo IMEI. Aqui a confiança se prova: você só paga quando o aparelho está na sua mão, ligado e checado na sua frente. Loja física no centro de Caxias do Sul, atendimento direto pelo WhatsApp. Quem entende de Apple compra com a gente.
 ```
 
 ### Produtos / serviços a listar
@@ -94,10 +103,10 @@ qualquer coisa eu te mando o passo a passo. valeu mesmo!
 1. Acessar **google.com/business** no Safari → "Gerenciar agora" → entrar com a conta Google da empresa.
 2. Digitar **Smartbase** como nome.
 3. Escolher a categoria principal: **Loja de telefones celulares**.
-4. Marcar **"Sim, tenho um local físico"** → colar o endereço completo.
+4. Marcar **"Sim, tenho um local físico"** → colar **Rua Sinimbu, 2022 — Centro, Caxias do Sul/RS, 95020-002**.
 5. Marcar que **faz entregas/atende na região** de Caxias.
-6. Preencher **telefone** e **site** (o do Shopify, quando publicar).
-7. Escolher o **método de verificação** que o Google oferecer (cartão postal chega em 5-7 dias; telefone/SMS é na hora; às vezes pede vídeo).
+6. Telefone: **(54) 99662-4494**. Site: o do Shopify (quando publicar).
+7. Escolher o **método de verificação**: preferir **cartão postal** (a loja recebe correspondência) ou **vídeo**, se aparecer. O código chega em 5-7 dias no caso do cartão.
 8. Com o perfil verificado: colar **descrição**, adicionar **produtos/serviços**, **atributos**, **fotos**, **horário**.
 9. Pegar o **link de avaliação** e começar a campanha de reviews.
 

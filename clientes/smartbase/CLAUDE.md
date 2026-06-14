@@ -55,6 +55,7 @@ Revendedor Apple. O dono vende Apple há anos e tem confiança consolidada offli
 **Loja Shopify:** smartbase-2903.myshopify.com
 **Instagram:** @smartbase.br
 **Localização:** Caxias do Sul, RS (atende Caxias e região; nacional é perspectiva futura, ainda não operacional)
+**NAP canônico (usar idêntico em GMB, site e Instagram):** Smartbase · Rua Sinimbu, 2022 — Centro, Caxias do Sul/RS, CEP 95020-002 · (54) 99662-4494 (só WhatsApp) · Seg a Sex, 9h–19h. Detalhes em `gmb-go-live.md`.
 
 ## Objetivo do projeto
 
