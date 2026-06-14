@@ -127,22 +127,17 @@
 ---
 
 ## TER 24 — reel | Paraguai "o produto" · DECIFRA/CONVERSÃO
-**Asset:** montar na volta (roteiros-paraguai, Vídeo 4).
-> seminovo impecável, garantia apple, pelo preço que a loja oficial não faz.
-> são poucas unidades, e quando vão, vão.
+**Asset:** montar na volta (roteiros-paraguai, Vídeo 4). Produto = iPhone 17 lacrado (seminovo pausado 13/06).
+> iphone 17 pro max lacrado, original, garantia apple, pelo preço que a loja oficial não faz.
+> chega direto da fonte, e quando vai, vai.
 > chama no whats e garante o teu.
 
-**Hashtags:** #iphone17promax #iphonecaxias #applecaxias #caxiasdosul #seminovo
+**Hashtags:** #iphone17promax #iphonecaxias #applecaxias #caxiasdosul #lacrado
 
 ---
 
-## QUI 25 — carrossel | o que vem (e o que não vem) no seminovo · DECIFRA APPLE
-> o que tem dentro de um seminovo da smartbase.
-> cabo original, película já instalada, capinha de brinde. não vem caixa, e a gente fala isso na tua cara, sem letra miúda.
-> saúde da bateria conferida e garantia apple checada antes de chegar na tua mão.
-> dúvida? chama no whats.
-
-**Hashtags:** #seminovo #iphonecaxias #applecaxias #caxiasdosul #apple
+## QUI 25 — [REMOVIDO do calendário em 13/06 — seminovo pausado, sem estoque]
+Post "o que vem no seminovo" cancelado (não há seminovo). Vaga de 25/06 aberta pra um novo tema Decifra do iPhone 17 lacrado.
 
 ---
 

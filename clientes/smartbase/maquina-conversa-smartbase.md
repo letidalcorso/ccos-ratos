@@ -4,7 +4,7 @@ MVP do teste de 2 semanas. Quem conduz: Leti. Objetivo: destravar a conversa (o 
 
 > **Metodologia + tom:** o porquê por trás dos roteiros (frameworks de venda, gatilhos do Cialdini, empatia tática, como gerar desejo sem ser chato) está em `performance/playbook-venda-whatsapp.md`. O tom de voz da Leti no 1:1 está gravado na memória `feedback-voz-leticia-whatsapp`.
 
-> **⚠️ Estoque atual (13/06):** o **17 Pro Max laranja seminovo FOI VENDIDO**. Herói agora = **iPhones novos lacrados da linha 17** (17, 17 Air, 17 Pro, 17 Pro Max). **Copy vencida (não usar):** "seminovo" como carro-chefe, "dois seminovos", "o último laranja", "100% de bateria" como padrão. Seminovo entra só sob encomenda/avaliação quando houver (a confirmar com a Leti). Preço: nunca chumbar número fixo no script — perguntar modelo + cor e passar Pix e parcelado na hora.
+> **⚠️ Estoque atual (13/06):** o **17 Pro Max laranja seminovo FOI VENDIDO**. Herói agora = **iPhones novos lacrados da linha 17** (17, 17 Air, 17 Pro, 17 Pro Max). **Copy vencida (não usar):** "seminovo" como carro-chefe, "dois seminovos", "o último laranja", "100% de bateria" como padrão. Seminovo segue como oferta secundária — só sob encomenda/avaliação quando aparecer um bom (avaliado, garantia, bateria conferida), nunca como herói. Preço: nunca chumbar número fixo no script — perguntar modelo + cor e passar Pix e parcelado na hora.
 
 ## Princípios (o que muda em relação a hoje)
 1. **Responder em minutos, não horas.** Velocidade de resposta é a maior alavanca (lead respondido em 5 min tem 21x mais chance de qualificar).
@@ -105,9 +105,9 @@ Sem isso, o teste não prova nada e você perde o argumento mais forte pro dono.
 - Preço: nunca chumbar no script. Pix é o melhor valor; parcelado varia conforme o número de parcelas (juros embutidos, não dizer "sem juros").
 - Aceita troca (trade-in): sim — **aceita iPhone a partir do 15**.
 - Novo lacrado: garantia Apple internacional 1 ano, entrega em mãos já configurado, com película instalada e capinha. Vem na caixa lacrada.
+- Seminovo: segue sob encomenda/avaliação (avaliado, garantia, bateria conferida). Oferta secundária, nunca herói.
 - Loja física: Rua Sinimbu, 2022 — Centro, Caxias do Sul. Seg a sex, 9h–19h.
 - Verba do teste: R$ 20-30/dia no CTWA por 7-10 dias (a validar com o dono).
 
 ## Ainda a confirmar (com a Leti)
-- **Seminovo:** segue sob encomenda/avaliação ou está pausado por ora? (muda os scripts de reativação e a objeção de preço)
 - **Cola de valores do parcelado** (~8% em 6x, ~13% em 12x?): confirmar a tabela pra deixar pronta uma resposta rápida `/parcelado` com os valores por modelo.
