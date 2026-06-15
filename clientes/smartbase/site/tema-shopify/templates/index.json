@@ -81,8 +81,9 @@
           "settings": {
             "kicker": "unidades limitadas",
             "name": "iPhone 17 Pro Max",
-            "sub": "o topo da linha, lacrado e sob encomenda. chega em até 7 dias.",
-            "specs": "256GB · 512GB · 1TB ; cosmic orange ; garantia apple · 12 meses",
+            "sub": "o topo da linha. lacrado. à pronta entrega. \nvalor especial. enquanto durar o estoque.",
+            "specs": "256GB; cosmic orange· silver · deep blue ; garantia apple · 12 meses",
+            "image": "shopify://shop_images/IMG_0232.jpg",
             "dest": "whatsapp",
             "url": "",
             "cta": "quero esse"
@@ -124,7 +125,7 @@
           "type": "category",
           "settings": {
             "label": "AirPods",
-            "fallback": "prod-airpods.webp",
+            "fallback": "prod-airpods-pro.webp",
             "link": "/pages/vitrine?cat=airpods"
           }
         },
@@ -132,7 +133,7 @@
           "type": "category",
           "settings": {
             "label": "acessórios",
-            "fallback": "prod-acessorios.webp",
+            "fallback": "prod-fonte-20w.webp",
             "link": "/pages/vitrine?cat=acessorios"
           }
         }
