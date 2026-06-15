@@ -45,8 +45,42 @@
   {% if meta_desc != blank %}<meta property="og:description" content="{{ meta_desc | escape }}">{% endif %}
   {%- if request.page_type == 'article' and article.image -%}
     <meta property="og:image" content="https:{{ article.image | image_url: width: 1200 }}">
-    <meta name="twitter:card" content="summary_large_image">
+  {%- elsif settings.og_image != blank -%}
+    <meta property="og:image" content="https:{{ settings.og_image | image_url: width: 1200 }}">
+  {%- else -%}
+    <meta property="og:image" content="https:{{ 'og-default.png' | asset_url }}">
   {%- endif -%}
+  <meta name="twitter:card" content="summary_large_image">
+
+  {%- comment -%} Dados estruturados — negócio local (Caxias). Nos artigos o JSON-LD próprio cuida disso. {%- endcomment -%}
+  {%- unless request.page_type == 'article' -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "SmartBase",
+    "image": "https:{{ 'og-default.png' | asset_url }}",
+    "url": {{ shop.url | json }},
+    "telephone": "+{{ settings.wa_number }}",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Sinimbu, 2211, sala 805",
+      "addressLocality": "Caxias do Sul",
+      "addressRegion": "RS",
+      "postalCode": "95020-520",
+      "addressCountry": "BR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -29.16877, "longitude": -51.17984 },
+    "areaServed": "Caxias do Sul e Serra Gaúcha",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+    ]{% if settings.instagram_url != blank %},
+    "sameAs": [{{ settings.instagram_url | json }}]{% endif %}
+  }
+  </script>
+  {%- endunless -%}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
