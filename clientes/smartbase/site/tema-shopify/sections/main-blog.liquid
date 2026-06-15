@@ -14,7 +14,7 @@
 <div class="blog-page">
   {% render 'page-hero',
     kicker: s.hero_kicker, line1: s.hero_line1, line2: s.hero_line2, sub: s.hero_sub,
-    bg_image: s.hero_image, bg_fallback: 'amb-hero-blog.jpeg', bg_id: 'blog-hero', bg_position: '50% 42%',
+    bg_image: s.hero_image, bg_fallback: 'amb-hero-blog.webp', bg_id: 'blog-hero', bg_position: '50% 42%',
     cta_extra: chips %}
 
   <section class="page bl-wrap">
@@ -30,7 +30,7 @@
         -%}
         <a class="post-card rise" href="{{ article.url }}" data-cat="{{ cat }}" data-tags="{{ article.tags | join: ' ' }}">
           <div class="post-cover">
-            {% render 'img-slot', image: article.image, fallback: 'amb-hero-blog.jpeg', fit: 'cover', cool: true, position: '50% 45%', label: 'capa do artigo' %}
+            {% render 'img-slot', image: article.image, fallback: 'amb-hero-blog.webp', fit: 'cover', cool: true, position: '50% 45%', label: 'capa do artigo' %}
           </div>
           <div class="post-body">
             <div class="post-cat">{{ cat }}</div>

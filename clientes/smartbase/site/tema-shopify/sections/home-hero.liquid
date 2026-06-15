@@ -2,12 +2,12 @@
 {%- assign s = section.settings -%}
 <section class="hm-hero">
   <div class="hm-hero-bg">
-    {% render 'img-slot', image: s.bg_image, fallback: 'amb-hero-store.jpg', id: 'home-hero-bg', cool: true, position: s.bg_position, label: 'foto ambiente — loja smartbase' %}
+    {% render 'img-slot', image: s.bg_image, fallback: 'amb-hero-store.webp', id: 'home-hero-bg', cool: true, position: s.bg_position, label: 'foto ambiente — loja smartbase' %}
     <div class="hm-hero-bg-veil"></div>
   </div>
   <div class="hm-hero-panel rise">
     <div class="hm-hero-card">
-      {% render 'img-slot', image: s.card_image, fallback: 'amb-iphones.png', id: 'home-hero', fit: 'cover', position: s.card_position, label: 'foto — iPhones em destaque na loja' %}
+      {% render 'img-slot', image: s.card_image, fallback: 'amb-iphones.webp', id: 'home-hero', fit: 'cover', position: s.card_position, label: 'foto — iPhones em destaque na loja' %}
       <span class="hm-pill-brand">{{ s.brand_pill }}</span>
       {%- if s.badge != blank -%}<span class="hm-badge"><i></i>{{ s.badge }}</span>{%- endif -%}
     </div>

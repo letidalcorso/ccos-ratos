@@ -3,7 +3,7 @@
 <div class="contato-page">
   {% render 'page-hero',
     kicker: s.hero_kicker, line1: s.hero_line1, line2: s.hero_line2, sub: s.hero_sub,
-    bg_image: s.hero_image, bg_fallback: 'amb-hero-contato.jpg', bg_id: 'contato-hero', bg_position: '50% 60%',
+    bg_image: s.hero_image, bg_fallback: 'amb-hero-contato.webp', bg_id: 'contato-hero', bg_position: '50% 60%',
     cta_label: s.hero_cta, cta_link: '#ct-body' %}
 
   <section class="page ct-body rise" id="ct-body">
@@ -17,7 +17,7 @@
       {%- if s.map_image != blank -%}
         <img class="ct-map-img" src="{{ s.map_image | image_url: width: 1200 }}" alt="mapa — {{ s.map_local | escape }}" loading="lazy">
       {%- else -%}
-        <img class="ct-map-img" src="{{ 'map-loja.png' | asset_url }}" alt="mapa — {{ s.map_local | escape }}" loading="lazy">
+        <img class="ct-map-img" src="{{ 'map-loja.webp' | asset_url }}" alt="mapa — {{ s.map_local | escape }}" loading="lazy">
       {%- endif -%}
       <span class="ct-map-scrim" aria-hidden="true"></span>
       <span class="ct-map-cta">
