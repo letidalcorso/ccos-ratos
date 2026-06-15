@@ -74,8 +74,7 @@ também no app do celular — a sincronia entre os dois é inconsistente e vira 
 
 No topo do inbox tem o **filtro por etiqueta**. Combinações úteis:
 - `⏳ Follow-up` → quem está esperando seu retorno (faça a cadência D+1/D+3/D+7/D+15).
-- `📱 17 Pro Max` + `⏳ Follow-up` → quem quer o herói e ainda não fechou (prioridade máxima
-   enquanto só há 2 unidades).
+- `📱 17 Pro Max` + `⏳ Follow-up` → quem quer o herói e ainda não fechou (prioridade máxima).
 - `🟣 Anúncio` + `✅ Fechado` → prova do que o anúncio fechou de verdade (argumento pro dono).
 - `🆕 Novo` → fila do que precisa de primeira resposta (responder em minutos, não horas).
 
