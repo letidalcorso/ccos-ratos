@@ -30,6 +30,7 @@ Referência do tom certo, feita por ela: o reel da lua (8x de zoom, fotografa a 
 - **nota fiscal / comprovante como argumento** — a Smartbase não emite nota; nunca usar "nota", "comprovante" ou "rastreabilidade" como prova de confiança
 - **"Paraguai" em copy evergreen (site/blog)** — enquadrar como "importado". Paraguai segue forte só no conteúdo ao vivo do IG (a viagem é ativo de transparência)
 - **"pode ser original" hesitante** — afirmar: a Smartbase garante a originalidade e mostra a verificação antes do pagamento
+- **registro casual demais em copy de site/blog** — "gente de Caxias" e afins ficam pro Instagram/WhatsApp (lado Companheiro). No site/blog, registro mais profissional (lado Sábio): ex. "A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto."
 - promoção genérica, "100% original garantido" defensivo, tom de atacado
 - preço no feed (preço só no WhatsApp; feed posiciona, whats fecha)
 - qualquer menção a como a importação DELES funciona por dentro (aduana, nota, declaração). Nunca em copy nem em arquivo do repo.

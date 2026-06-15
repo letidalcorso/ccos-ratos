@@ -50,7 +50,7 @@ O detalhe que separa um bom negócio de uma furada é só um: comprar de quem te
 
 É isso que a Smartbase faz. A gente traz o iPhone original e te entrega em mãos, com o IMEI conferido na tua frente no site da Apple e o aparelho ligado e checado. Você só paga depois disso. A gente garante a originalidade; você não aposta no escuro. Sem o preço de loja oficial, sem pix antecipado.
 
-Gente de Caxias, com nome e endereço. Como o preço acompanha o dólar e muda com frequência, o valor de cada modelo fica no WhatsApp, sempre atualizado. [Confere os modelos disponíveis na vitrine](/pages/vitrine) e [chama no WhatsApp](https://wa.me/5554996624494) que a gente te passa o preço de hoje. **Paga quando receber.** 
+A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Como o preço acompanha o dólar e muda com frequência, o valor de cada modelo fica no WhatsApp, sempre atualizado. [Confere os modelos disponíveis na vitrine](/pages/vitrine) e [chama no WhatsApp](https://wa.me/5554996624494) que a gente te passa o preço de hoje. **Paga quando receber.** 
 
 ## Perguntas frequentes
 

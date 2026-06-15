@@ -81,7 +81,7 @@ A internet responde "iPhone do Paraguai" com medo. A pergunta certa é como tira
 
 <p>É exatamente por isso que aqui na Smartbase a ordem é invertida. A gente traz o iPhone original, e quando ele chega você confere o IMEI na sua frente no site da Apple, vê o aparelho ligado e checado, e só então paga. Sem pix antes, sem "confia". Novo lacrado com garantia Apple, seminovo conferido com 3 meses de garantia da loja.</p>
 
-<p>Gente de Caxias, nome e endereço. Quer saber o preço de um modelo? <a href="/pages/vitrine">Dá uma olhada na vitrine</a> ou <a href="https://wa.me/5554996624494">chama no WhatsApp</a> que a gente te passa. <strong>Paga quando receber.</strong></p>
+<p>A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Quer saber o preço de um modelo? <a href="/pages/vitrine">Dá uma olhada na vitrine</a> ou <a href="https://wa.me/5554996624494">chama no WhatsApp</a> que a gente te passa. <strong>Paga quando receber.</strong></p>
 
 <h2>Perguntas frequentes</h2>
 

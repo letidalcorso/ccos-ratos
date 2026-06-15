@@ -61,7 +61,7 @@ O iPhone no Brasil custa quase o dobro do exterior. A culpa é da conta de impos
 
 <p>É isso que a Smartbase faz. A gente traz o iPhone original e te entrega em mãos, com o IMEI conferido na tua frente no site da Apple e o aparelho ligado e checado. Você só paga depois disso. A gente garante a originalidade; você não aposta no escuro. Sem o preço de loja oficial, sem pix antecipado.</p>
 
-<p>Gente de Caxias, com nome e endereço. Como o preço acompanha o dólar e muda com frequência, o valor de cada modelo fica no WhatsApp, sempre atualizado. <a href="/pages/vitrine">Confere os modelos disponíveis na vitrine</a> e <a href="https://wa.me/5554996624494">chama no WhatsApp</a> que a gente te passa o preço de hoje. <strong>Paga quando receber.</strong></p>
+<p>A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Como o preço acompanha o dólar e muda com frequência, o valor de cada modelo fica no WhatsApp, sempre atualizado. <a href="/pages/vitrine">Confere os modelos disponíveis na vitrine</a> e <a href="https://wa.me/5554996624494">chama no WhatsApp</a> que a gente te passa o preço de hoje. <strong>Paga quando receber.</strong></p>
 
 <h2>Perguntas frequentes</h2>
 

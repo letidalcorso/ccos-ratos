@@ -68,7 +68,7 @@ O segredo é esse: comprar de alguém que conhece a origem e te deixa conferir t
 
 É exatamente por isso que aqui na Smartbase a ordem é invertida. A gente traz o iPhone original, e quando ele chega você confere o IMEI na sua frente no site da Apple, vê o aparelho ligado e checado, e só então paga. Sem pix antes, sem "confia". Novo lacrado com garantia Apple, seminovo conferido com 3 meses de garantia da loja.
 
-Gente de Caxias, nome e endereço. Quer saber o preço de um modelo? [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) que a gente te passa. **Paga quando receber.**
+A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Quer saber o preço de um modelo? [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) que a gente te passa. **Paga quando receber.**
 
 ## Perguntas frequentes
 

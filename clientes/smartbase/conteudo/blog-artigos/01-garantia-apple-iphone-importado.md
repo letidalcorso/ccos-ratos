@@ -74,7 +74,7 @@ Resumindo a real: a garantia existe, a lei te protege, mas você ainda depende d
 
 É por isso que aqui na Smartbase é ao contrário. Quando o aparelho chega, dá pra conferir o IMEI na tua frente, no site da Apple, ver a garantia ativa e o aparelho ligado e limpo. Só depois disso é que entra o pagamento. Sem pix antecipado, sem "confia". Aparelho na mão e conferido primeiro.
 
-Gente de Caxias, nome e endereço. Quer ver o que tem disponível? [Dá uma olhada na vitrine](/pages/vitrine) ou manda o modelo que tu quer no WhatsApp que a gente confere junto. **Paga quando receber.**
+A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Quer ver o que tem disponível? [Dá uma olhada na vitrine](/pages/vitrine) ou manda o modelo que tu quer no WhatsApp que a gente confere junto. **Paga quando receber.**
 
 ## Perguntas frequentes
 

@@ -97,7 +97,7 @@ Seminovo bem escolhido entrega o mesmo desempenho por uma fração do valor. O c
 
 <p>Por isso aqui na Smartbase é ao contrário. A gente te mostra a saúde real da bateria, confere o IMEI na tua frente no site da Apple e te entrega o aparelho ligado, checado e com 3 meses de garantia da loja. Só depois disso é que entra o pagamento. Sem pix antecipado, sem "confia". Aparelho conferido primeiro.</p>
 
-<p>Gente de Caxias, nome e endereço. Quer ver o que tem disponível, novo ou seminovo? <a href="/pages/vitrine">Dá uma olhada na vitrine</a> ou <a href="https://wa.me/5554996624494">chama no WhatsApp</a> com o modelo que tu quer que a gente acha junto. <strong>Paga quando receber.</strong></p>
+<p>A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Quer ver o que tem disponível, novo ou seminovo? <a href="/pages/vitrine">Dá uma olhada na vitrine</a> ou <a href="https://wa.me/5554996624494">chama no WhatsApp</a> com o modelo que tu quer que a gente acha junto. <strong>Paga quando receber.</strong></p>
 
 <h2>Perguntas frequentes</h2>
 

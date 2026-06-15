@@ -80,7 +80,7 @@ Repara que o checklist inteiro acontece **antes** do pagamento. É aí que está
 
 Por isso aqui na Smartbase é ao contrário. A gente te mostra a saúde real da bateria, confere o IMEI na tua frente no site da Apple e te entrega o aparelho ligado, checado e com 3 meses de garantia da loja. Só depois disso é que entra o pagamento. Sem pix antecipado, sem "confia". Aparelho conferido primeiro.
 
-Gente de Caxias, nome e endereço. Quer ver o que tem disponível, novo ou seminovo? [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) com o modelo que tu quer que a gente acha junto. **Paga quando receber.**
+A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Quer ver o que tem disponível, novo ou seminovo? [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) com o modelo que tu quer que a gente acha junto. **Paga quando receber.**
 
 ## Perguntas frequentes
 

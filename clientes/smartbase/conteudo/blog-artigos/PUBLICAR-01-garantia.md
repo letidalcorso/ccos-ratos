@@ -88,7 +88,7 @@ iPhone importado tem garantia no Brasil? A garantia Apple é mundial e a lei est
 
 <p>É por isso que aqui na Smartbase é ao contrário. Quando o aparelho chega, dá pra conferir o IMEI na tua frente, no site da Apple, ver a garantia ativa e o aparelho ligado e limpo. Só depois disso é que entra o pagamento. Sem pix antecipado, sem "confia". Aparelho na mão e conferido primeiro.</p>
 
-<p>Gente de Caxias, nome e endereço. Quer ver o que tem disponível? <a href="/pages/vitrine">Dá uma olhada na vitrine</a> ou <a href="https://wa.me/5554996624494">manda o modelo que tu quer no WhatsApp</a> que a gente confere junto. <strong>Paga quando receber.</strong></p>
+<p>A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Quer ver o que tem disponível? <a href="/pages/vitrine">Dá uma olhada na vitrine</a> ou <a href="https://wa.me/5554996624494">manda o modelo que tu quer no WhatsApp</a> que a gente confere junto. <strong>Paga quando receber.</strong></p>
 
 <h2>Perguntas frequentes</h2>
 
