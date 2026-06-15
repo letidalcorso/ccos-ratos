@@ -78,15 +78,15 @@ Não desistir no silêncio. Mensagens curtas, sem cobrança.
 ## 5. Respostas rápidas (colar no WhatsApp Business — atalhos `/`)
 Atacam direto o "seco": resposta calorosa e completa, pronta, em 1 toque. Personalizar o [nome] sempre. Criar em WhatsApp Business → Ferramentas comerciais → Respostas rápidas.
 
-- **`/oi`** → "Oi! Que bom que tu chamou 🙂 Sobre qual aparelho tu quer saber? A gente trabalha com Apple original lacrado, tu recebe e confere antes de pagar, e tem loja física aqui em Caxias."
-- **`/confianca`** → "Só pra já te deixar tranquilo: aqui tu recebe o aparelho, confere tudo na tua mão e só paga depois. Garantia Apple (dá pra conferir pelo IMEI no site da Apple) e loja física em Caxias, nome e endereço."
-- **`/comofunciona`** → "Funciona assim: tu me diz o modelo e a cor, eu encomendo, chega lacrado com IMEI pra conferir, e eu te entrego em mãos já configurado, com película e capinha. Tu só paga quando tá com ele na mão."
-- **`/original`** → "É Apple original lacrado. Tu confere pelo IMEI no site da Apple antes de pagar, tem garantia Apple e a gente tem loja física aqui em Caxias. Tu só paga depois de receber e conferir."
-- **`/garantia`** → "Garantia Apple de 1 ano, igual de loja. E dá pra verificar pelo IMEI direto no site da Apple, na tua frente, antes de fechar."
-- **`/preco`** → "Me diz qual modelo e cor que eu já te passo o valor certinho, no Pix e no parcelado. No Pix sai mais em conta; parcelando muda conforme o número de vezes."
-- **`/troca`** → "A gente aceita teu aparelho atual na troca (a partir do iPhone 11). Tu me manda o modelo e o estado que eu avalio e abato no valor."
-- **`/endereco`** → "A gente fica na Rua Sinimbu, 2022, Centro de Caxias. Atende de seg a sex, 9h às 19h. Pode vir ver pessoalmente quando quiser 🙂"
-- **`/fechar`** → "Se quiser, eu já vejo a cor que tu quer e deixo tudo certinho pra fechar. Topa que eu separo no teu nome?"
+- **`/oi`** → "Oii! Que bom que tu chamou 🙂 Me conta, tu tá atrás de qual aparelho? Aqui a gente trabalha com Apple original, novo e seminovo, e tu confere tudo antes de pagar. Sou de Caxias, tenho loja física aqui."
+- **`/confianca`** → "Ó, só pra tu ficar tranquilo... aqui tu confere o aparelho todo na tua mão antes de pagar, nada de pix no escuro 🙂 Tem garantia Apple (dá pra ver pelo IMEI no site da Apple, na tua frente) e a gente tem loja física aqui em Caxias, nome e endereço."
+- **`/comofunciona`** → "É bem tranquilo: tu me diz o modelo e a cor, a gente traz pra ti, e eu te entrego em mãos já configurado, com película e capinha. Tu confere o IMEI e só paga quando ele já tá contigo 🙂"
+- **`/original`** → "É Apple original, pode ficar tranquilo 🙂 Tu mesmo confere pelo IMEI no site da Apple antes de pagar, tem garantia Apple e a gente tem loja física aqui em Caxias. Só paga depois de receber e conferir."
+- **`/garantia`** → "Todo aparelho vai com garantia Apple de 1 ano, igual de loja, vale pro novo e pro seminovo também 🙂 E tu confere pelo IMEI direto no site da Apple, na tua frente, antes de fechar."
+- **`/preco`** → "Me diz qual modelo e cor que eu já te passo o valor certinho 🙂 O pagamento é no Pix ou dinheiro. Ah, e me conta: tu tem algum aparelho Apple que queira usar na troca? A gente avalia e abate no valor."
+- **`/troca`** → "A gente aceita teu Apple na troca, a partir do iPhone 11 🙂 Pra eu te avaliar certinho, me manda: o modelo e a capacidade (GB), a saúde da bateria (tá em Ajustes › Bateria), se tem alguma avaria (tela, vidro, marquinhas) e umas fotinhas do aparelho. Aí já te digo quanto abate."
+- **`/endereco`** → "A gente fica na Rua Sinimbu, 2022, Centro de Caxias 🙂 De seg a sex, das 9h às 19h. Pode vir ver pessoalmente quando quiser!" *(⚠️ Leti vai reconferir o endereço)*
+- **`/fechar`** → "Então bora? 🙂 Me confirma o modelo e a cor que tu quer e eu já deixo tudo encaminhado pra ti, rapidinho. Pode ser?" *(usar quando a pessoa já demonstrou interesse — é o empurrãozinho final pra fechar)*
 
 ---
 
