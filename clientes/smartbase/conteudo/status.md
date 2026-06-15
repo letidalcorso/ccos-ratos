@@ -26,3 +26,4 @@ Peça: carrossel **Grupo B** "seu Apple atual já tá pagando o próximo" — Fi
 ## Próxima ação
 - Definir se o carrossel 05-06 entra na pauta/Notion e em que data.
 - Alinhar com o dono o peso do trade-in (não-foco) vs. o ângulo de upgrade (recorrente).
+- **Julho:** sementes do ângulo de upgrade já inseridas em `pauta-julho-2026.md` (5 ideias, 1/semana). Encaixar no calendário fechado quando rodar `/planejamento` de julho + levar pro Notion.
