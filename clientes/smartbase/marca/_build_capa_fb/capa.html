@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face { font-family:'Bricolage Grotesque'; font-weight:400; src:url('./assets/Bricolage-400.ttf') format('truetype'); }
+  @font-face { font-family:'Bricolage Grotesque'; font-weight:700; src:url('./assets/Bricolage-700.ttf') format('truetype'); }
+  @font-face { font-family:'Bricolage Grotesque'; font-weight:800; src:url('./assets/Bricolage-800.ttf') format('truetype'); }
+
+  :root{
+    --bg:#07070E; --surface:#0F0F1C; --blue:#3E82F7; --blue-l:#6DAFF9;
+    --white:#F2F2F6; --c0:#C0C0D0; --sub:#7A7A96; --muted:#4A4A60; --wa:#25D366;
+    --disp:'Bricolage Grotesque','Helvetica Neue',sans-serif;
+    --text:'Inter',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1640px;height:624px;overflow:hidden;}
+  .cover{
+    position:relative;width:1640px;height:624px;
+    background:
+      radial-gradient(1200px 700px at 78% 50%, rgba(62,130,247,0.20), rgba(62,130,247,0) 60%),
+      linear-gradient(160deg, #11111E 0%, #0B0B16 45%, #07070E 100%);
+    overflow:hidden;font-family:var(--text);
+  }
+
+  /* soft blue glow pool behind the product */
+  .glow{
+    position:absolute;top:50%;right:120px;transform:translateY(-50%);
+    width:760px;height:760px;border-radius:50%;
+    background:radial-gradient(circle, rgba(62,130,247,0.34) 0%, rgba(62,130,247,0.10) 38%, rgba(62,130,247,0) 70%);
+    filter:blur(10px);
+  }
+
+  /* ghost watermark — both letters fully visible, very subtle, behind text */
+  .ghost{
+    position:absolute;left:70px;bottom:-150px;
+    font-family:var(--disp);font-weight:800;font-size:560px;line-height:1;
+    color:var(--white);opacity:0.035;letter-spacing:-20px;user-select:none;
+  }
+
+  /* product — orange camera module bleeding off the right edge */
+  .product{
+    position:absolute;top:50%;right:-46px;transform:translateY(-50%) rotate(-2deg);
+    height:760px;width:auto;
+    filter:drop-shadow(0 40px 70px rgba(0,0,0,0.55));
+  }
+
+  /* ---- content column (left, inside mobile+desktop safe zone) ---- */
+  .content{position:absolute;left:232px;top:0;height:624px;display:flex;flex-direction:column;justify-content:center;}
+
+  .brandrow{display:flex;align-items:baseline;gap:14px;margin-bottom:34px;}
+  .wordmark{font-family:var(--disp);font-size:40px;letter-spacing:-1px;display:flex;align-items:center;}
+  .wordmark .smart{font-weight:300;color:var(--c0);}
+  .wordmark .dot{width:11px;height:11px;border-radius:50%;background:var(--blue);margin:0 4px 6px;align-self:flex-end;}
+  .wordmark .base{font-weight:700;color:var(--white);}
+  .loc{font-size:18px;font-weight:500;color:var(--muted);letter-spacing:0.3px;}
+
+  .headline{font-family:var(--disp);font-weight:800;font-size:86px;line-height:0.98;letter-spacing:-2.5px;color:var(--white);}
+  .headline .blue{color:var(--blue);}
+
+  .sub{margin-top:26px;font-size:24px;font-weight:400;line-height:1.45;color:var(--sub);max-width:740px;}
+
+  .cta{margin-top:34px;display:inline-flex;align-items:center;gap:12px;align-self:flex-start;
+    background:var(--wa);color:#062012;font-weight:600;font-size:23px;
+    padding:15px 26px;border-radius:40px;box-shadow:0 14px 34px rgba(37,211,102,0.28);}
+  .cta svg{width:24px;height:24px;}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <div class="glow"></div>
+    <div class="ghost">sb</div>
+    <img class="product" src="./assets/cam-orange.png" alt="">
+
+    <div class="content">
+      <div class="brandrow">
+        <div class="wordmark"><span class="smart">smart</span><span class="dot"></span><span class="base">base</span></div>
+        <div class="loc">apple · caxias do sul</div>
+      </div>
+
+      <div class="headline">apple original.<br>paga quando<br><span class="blue">receber.</span></div>
+
+      <div class="sub">iPhone importado, conferido pelo IMEI na tua frente.<br>só paga quando o aparelho tá na tua mão.</div>
+
+      <div class="cta">
+        <svg viewBox="0 0 24 24" fill="#062012"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.42 1.31-1.95 1.35-.5.04-.97.22-3.27-.68-2.77-1.09-4.53-3.92-4.67-4.1-.14-.18-1.12-1.49-1.12-2.84 0-1.35.71-2.02.96-2.29.25-.27.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.48.24.57.81 1.96.88 2.1.07.14.12.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.35.27.14.43.12.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.22.61-.13.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z"/></svg>
+        falar no whatsapp
+      </div>
+    </div>
+  </div>
+</body>
+</html>
