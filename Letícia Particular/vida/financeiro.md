@@ -15,7 +15,7 @@ Divisão de casa: **meio a meio (50/50)** com o namorado atual. O ex está fora 
 | Recreio da juventude | 10/06 | 922,20 | 100% dela | 922,20 | — |
 | Internet | 15/06 | 99,00 | Casa ÷2 | 49,50 | 49,50 |
 | Luz | 15/06 | a confirmar | Casa? | — | — |
-| Parcela ap | 25/06 | 1.144,02 | 100% dela | 1.144,02 | — |
+| Parcela apê (parte dela) | 25/06 | 1.144,02 | Co-prop. c/ ex (em venda) | 457,61 | — |
 
 ## Santander — caso a caso (regra da Letícia)
 
@@ -37,11 +37,28 @@ Divisão de casa: **meio a meio (50/50)** com o namorado atual. O ex está fora 
 
 ## Totais (Letícia paga tudo, namorado reembolsa a parte dele) — sem luz
 
-- **Sai do bolso dela: R$ 16.370,17**
+- **Sai do bolso dela: R$ 15.683,76**
 - **Namorado devolve: R$ 6.218,07**
-- **Custo real dela (líquido): R$ 10.152,10**
+- **Custo real dela (líquido): R$ 9.465,69**
 
 > Mês inflado pela viagem (~R$ 4 mil, metade volta) e pelo saldo/juros carregados na Santander.
+
+## Renda e contexto (jun/2026)
+
+- **Renda fixa:** R$ 2.600 seguro-desemprego (faltam **5 parcelas** — recebeu 1) + R$ 1.500 pensão = **R$ 4.100/mês** + freelas (variável). Desempregada, fazendo freelas.
+- **Acerto de R$ 30 mil** já aplicado: MacBook (trabalho) + 3 iPhones 17 Pro p/ revenda (~R$ 19k) + R$ 5k aplicado (reserva).
+- **Apê (planta):** comprado com o ex por R$ 360k, hoje ~R$ 460k (+R$ 100k). Em venda — quando vender, entra grana pra ela. Parcela mensal dela ~R$ 457.
+
+## Diagnóstico (corrigido)
+
+Custo fixo grande ≈ **R$ 3.031/mês** (casa 1.651 + Recreio 922 + apê 458) vs renda fixa R$ 4.100 → **sobra ~R$ 1.069** antes de comida/cartão/assinaturas. Apertado, mas **não é crise** — tem ativos e entradas vindo (iPhones, venda do apê, 5 parcelas do seguro, 5k aplicado).
+
+**Riscos reais:**
+1. Santander no rotativo (445%/ano) — quitar hoje. PRIORIDADE.
+2. Relógio do seguro-desemprego: **5 meses** até acabar → construir renda de freela/SolzLab nesse prazo.
+3. Não deixar o cartão pessoal (~R$ 5k) rolar pro rotativo também.
+
+**Alavancas:** Recreio → sócia ausente (em andamento); vender os iPhones no prazo; não tirar dos R$ 5k aplicados.
 
 ## Pendências
 
