@@ -27,3 +27,11 @@ Peça: carrossel **Grupo B** "seu Apple atual já tá pagando o próximo" — Fi
 - Definir se o carrossel 05-06 entra na pauta/Notion e em que data.
 - Alinhar com o dono o peso do trade-in (não-foco) vs. o ângulo de upgrade (recorrente).
 - **Julho:** sementes do ângulo de upgrade em `pauta-julho-2026.md` (5 ideias, 1/semana). **Ficam só na pasta interna, não no Notion** (decisão 15/06). Encaixar no calendário quando rodar `/planejamento` de julho.
+
+## Aprendizados de junho (pra planejar julho) — 2026-06-15
+Retro completa: `retro-junho-2026.md`. Pontos-chave:
+- **2 vendas orgânicas** no mês (17 Pro Max laranja + 1 novo). A conversão veio de **story + follow-up ativo**, não do feed nem do boost — dobrar nisso.
+- **Maio (0 venda)** = campanha mal setada (público/objetivo errado), não atendimento. WhatsApp sendo resolvido via gerenciador.
+- **Imagem:** parar de pagar plataforma; lifestyle/prova = **foto real** (captar em 1 dia a partir do cronograma fechado); IA só conceitual e em ferramenta grátis (Gemini/Bing/Firefly).
+- **Medição:** tracker alimentado **1x/semana** (rotina `scheduled/tracker-smartbase-semanal`), manual, números do app — sem fonte paga (Supermetrics expirou 14/06).
+- **A verificar em julho:** o impulsionamento de posts está dando retorno mensurável ou o orgânico carrega sozinho?
