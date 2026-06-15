@@ -4,7 +4,7 @@
   Portado de HomePage.jsx (hm-light-zone wrapper).
 {%- endcomment -%}
 {%- assign s = section.settings -%}
-<div class="hm-light-zone">
+<div class="hm-light-zone" id="sobre">
 
   {%- comment -%} emblema "sb" em vidro {%- endcomment -%}
   <div class="hm-band-emblem" aria-hidden="true">
@@ -22,7 +22,19 @@
         <p class="hm-band-sub">{{ s.band_sub }}</p>
       </div>
       <div class="hm-band-actions">
-        {%- if s.band_cta_label != blank -%}<a class="btn btn-primary" href="{{ s.band_cta_link | default: '/pages/contato' }}">{{ s.band_cta_label }} <span aria-hidden="true">→</span></a>{%- endif -%}
+        {%- if s.band_cta_label != blank -%}
+          {%- liquid
+            assign band_href = s.band_cta_link
+            assign band_blank = false
+            if band_href == blank
+              capture band_href
+                render 'wa-link', texto: 'oi! vim pelo site, quero saber dos aparelhos'
+              endcapture
+              assign band_blank = true
+            endif
+          -%}
+          <a class="btn btn-primary" href="{{ band_href | strip }}"{% if band_blank %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ s.band_cta_label }} <span aria-hidden="true">→</span></a>
+        {%- endif -%}
       </div>
     </div>
   </section>

@@ -168,7 +168,7 @@
             "type": "nav",
             "settings": {
               "label": "sobre",
-              "url": "/"
+              "url": "/#sobre"
             }
           },
           "footer-2": {
