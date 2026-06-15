@@ -34,7 +34,7 @@ O eletrônico importado entra no Brasil pagando, em camadas:
 - **IPI, PIS e Cofins:** somam outra fatia federal.
 - **ICMS:** o estadual, que varia conforme o estado.
 
-Empilhando tudo, a carga tributária sobre um celular importado passa de 90% do valor do aparelho em vários cenários (fonte: MoneyTimes, 2026). Traduzindo no que importa pra ti: boa parte do que você paga numa loja oficial não é iPhone, é tributo. Você leva um aparelho e financia uma cadeia de impostos junto.
+Empilhando tudo, a alíquota tributária sobre um eletrônico importado pode passar de 90% do valor do aparelho, somando o imposto de importação (a partir de 60%), IPI, PIS, Cofins, ICMS e o IOF. Traduzindo no que importa pra ti: boa parte do que você paga numa loja oficial é tributo, não iPhone. Você leva um aparelho e financia uma cadeia de impostos junto.
 
 ## E o dólar ainda mexe no número
 
@@ -50,7 +50,7 @@ O detalhe que separa um bom negócio de uma furada é só um: comprar de quem te
 
 É isso que a Smartbase faz. A gente traz o iPhone original e te entrega em mãos, com o IMEI conferido na tua frente no site da Apple e o aparelho ligado e checado. Você só paga depois disso. A gente garante a originalidade; você não aposta no escuro. Sem o preço de loja oficial, sem pix antecipado.
 
-Gente de Caxias, nome e endereço. Quer o preço de um modelo? [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) que a gente te passa. **Paga quando receber.**
+Gente de Caxias, com nome e endereço. Como o preço acompanha o dólar e muda com frequência, o valor de cada modelo fica no WhatsApp, sempre atualizado. [Confere os modelos disponíveis na vitrine](/pages/vitrine) e [chama no WhatsApp](https://wa.me/5554996624494) que a gente te passa o preço de hoje. **Paga quando receber.** 
 
 ## Perguntas frequentes
 
