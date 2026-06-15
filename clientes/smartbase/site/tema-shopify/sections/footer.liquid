@@ -50,9 +50,14 @@
 
   <div class="page ft-legal">
     <span>{{ section.settings.legal | default: '© 2026 smartbase · caxias do sul, rs' }}</span>
-    {%- if section.settings.privacy_url != blank -%}
-      <a class="ft-legal-link" href="{{ section.settings.privacy_url }}">{{ section.settings.privacy_label | default: 'política de privacidade' }}</a>
-    {%- endif -%}
+    <span class="ft-legal-links">
+      {%- if section.settings.refund_url != blank -%}
+        <a class="ft-legal-link" href="{{ section.settings.refund_url }}">{{ section.settings.refund_label | default: 'trocas e garantia' }}</a>
+      {%- endif -%}
+      {%- if section.settings.privacy_url != blank -%}
+        <a class="ft-legal-link" href="{{ section.settings.privacy_url }}">{{ section.settings.privacy_label | default: 'política de privacidade' }}</a>
+      {%- endif -%}
+    </span>
   </div>
 </footer>
 
@@ -133,6 +138,18 @@
       "id": "privacy_url",
       "label": "Link de privacidade",
       "info": "Página de política do Shopify. Em branco esconde o link."
+    },
+    {
+      "type": "text",
+      "id": "refund_label",
+      "label": "Texto do link de trocas/garantia",
+      "default": "trocas e garantia"
+    },
+    {
+      "type": "url",
+      "id": "refund_url",
+      "label": "Link de trocas/garantia",
+      "info": "Política de devolução e reembolso do Shopify. Em branco esconde o link."
     }
   ],
   "blocks": [

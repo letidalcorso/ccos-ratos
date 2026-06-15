@@ -445,6 +445,7 @@ body.no-glow .site::before{background:var(--sb-void)}
 /* the brand column reads as a masthead — give it a touch more breathing room */
 .ft-brandcol{gap:18px}
 .ft-legal{font-size:12px;color:var(--sb-mute);margin-top:54px;padding-top:24px;border-top:1px solid var(--sb-hair);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.ft-legal-links{display:flex;gap:20px;flex-wrap:wrap}
 .ft-legal-link{font-size:12px;color:var(--sb-mute);text-decoration:none;transition:color .2s}
 .ft-legal-link:hover{color:var(--sb-white)}
 

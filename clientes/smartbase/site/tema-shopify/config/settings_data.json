@@ -210,7 +210,9 @@
           "hours": "seg a sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado",
           "legal": "© 2026 smartbase · caxias do sul, rs",
           "privacy_label": "política de privacidade",
-          "privacy_url": "/policies/privacy-policy"
+          "privacy_url": "/policies/privacy-policy",
+          "refund_label": "trocas e garantia",
+          "refund_url": "/policies/refund-policy"
         }
       }
     },

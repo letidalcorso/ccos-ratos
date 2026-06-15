@@ -211,9 +211,12 @@ Os pilares organizam o **conteúdo**, não a cor. Todos usam o mesmo sistema vis
 - **Tom visual:** humano, próximo, confiante
 - **Jogadas típicas:** palavra explodida, capa glow + vidro, foto/produto, enquete
 
-### VIDA APPLE EM CAXIAS  — *layout a redefinir*
-- **Objetivo:** ancoragem local, fotos em iPhone na Serra Gaúcha
-- **Status:** o layout antigo (foto-led com headline no rodapé) **não foi pro ar**. Design novo a propor — manter degradê/glow/vidro e azul como sistema, resolvendo como a foto local entra sem virar "banco de imagem". Marcar como pendência de design.
+### VIDA APPLE EM CAXIAS
+- **Objetivo:** ancoragem local, fotos em iPhone na Serra Gaúcha. KPI: alcance local.
+- **Layout oficial (direção "editorial", fechado 15/06):** foto local quase full-bleed no topo → degradê de escurecimento na base (fade pro `#07070E`) → **faixa de vidro** no rodapé com headline curta (Bricolage, palavra-chave em azul) + uma **linha de EXIF** ("iPhone 17 pro max · caxias · golden hour"). Footer `@smartbase.br` centralizado.
+- **Por que assim:** a faixa de vidro + a linha de EXIF afirmam "tirada aqui, nesse aparelho" — é o que diferencia de banco de imagem. A foto é a estrela (serve o alcance local); o sistema segura a marca.
+- **Regras:** foto sempre **real, tirada em iPhone na Serra** (nunca stock); a linha de EXIF é sempre verdadeira (aparelho/lugar/luz reais); headline curta, caixa baixa, "você/seu". Template no Figma: **"TEMPLATE · vida apple caxias"** (`QKN6E4t9w2XPdATrXzivvN`).
+- **Tom visual:** editorial, leve, cotidiano — Apple como parte da vida.
 
 ---
 
