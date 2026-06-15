@@ -105,7 +105,9 @@ Feed constrói confiança e desejo. WhatsApp fecha a venda. Cada post tem um cam
 
 **ATENÇÃO — fotos:** A Smartbase não tem fotos próprias dos produtos. Usar imagens oficiais Apple. Lembrar a Letícia disso antes de qualquer tarefa visual que dependa de imagem real do produto.
 
-**Plano de conteúdo ativo:** `conteudo/plano-editorial-junho-2026.md` (v3, reconstruído 06/06) — segunda quinzena com LightCopy, humanização e Copa. Voz em `conteudo/voz-smartbase.md`, métricas em `conteudo/tracker-conteudo-junho.md`.
+**Plano de conteúdo ativo:** `conteudo/plano-editorial-junho-2026.md` (v3, reconstruído 06/06) — segunda quinzena com LightCopy, humanização e Copa. Voz em `conteudo/voz-smartbase.md`, métricas em `conteudo/tracker-conteudo-junho.md`. Status do conteúdo em `conteudo/status.md`.
+
+**Ângulo de upgrade (recorrente, Casa Smartbase):** `conteudo/angulo-upgrade.md` — upgrade é o desejo, trade-in é só o mecanismo (nunca manchete). Não é foco do negócio, mas é gatilho de desejo/timing que vale trabalhar de forma contínua.
 
 ## Identidade visual
 
