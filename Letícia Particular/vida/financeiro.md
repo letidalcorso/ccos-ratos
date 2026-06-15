@@ -1,44 +1,54 @@
 # Financeiro — junho 2026
 
 Atualizado: 15/06/2026. Privado, só local (fora do Git).
-
-## Como está organizado (arranjo atual)
-
-A planilha original era de um arranjo antigo (com o ex). O ex está **fora** da conta agora — tudo que ela mandou é dela.
-
-**Contas DELA (particular — 100%):**
-- Cartão de crédito R$ 525,03 (a parte dela já é essa, é só dela)
-- Recreio da juventude R$ 922,20
-- Parcela ap R$ 1.144,02 (parcela mensal de investimento num apartamento)
-
-**Contas da CASA — divididas 50/50 com o namorado atual:**
-- Aluguel, condomínio, internet
-- (+ outros cartões que ela divide com o namorado pras contas da casa — a receber)
-- (luz — a confirmar se entra aqui)
+Divisão de casa: **meio a meio (50/50)** com o namorado atual. O ex está fora da conta.
 
 ## Contas do mês (ordem de vencimento)
 
-| Conta | Vence | Valor cheio | Arranjo | Parte da Letícia |
-|-------|-------|------------:|---------|----------------:|
-| Aluguel | 07/06 | 2.326,15 | Casa ÷2 (namorado) | 1.163,08 |
-| Condomínio | 10/06 | 877,65 | Casa ÷2 (namorado) | 438,83 |
-| Cartão de crédito | 10/06 | 525,03 | 100% dela | 525,03 |
-| Recreio da juventude | 10/06 | 922,20 | 100% dela | 922,20 |
-| Internet | 15/06 | 99,00 | Casa ÷2 (namorado) | 49,50 |
-| Luz | 15/06 | a confirmar | Casa? (a confirmar) | a confirmar |
-| Parcela ap | 25/06 | 1.144,02 | 100% dela (investimento) | 1.144,02 |
+| Conta | Vence | Valor cheio | Tipo | Parte dela | Namorado devolve |
+|-------|-------|------------:|------|-----------:|-----------------:|
+| Aluguel | 07/06 | 2.326,15 | Casa ÷2 | 1.163,08 | 1.163,07 |
+| Cartão de crédito (525) | 10/06 | 525,03 | 100% dela | 525,03 | — |
+| Itaú | 10/06 | 3.929,07 | Casa ÷2 (mercado) | 1.964,54 | 1.964,54 |
+| Santander | 10/06 | 6.547,05 | Misto (ver abaixo) | 4.150,98 | 2.396,07 |
+| Condomínio | 10/06 | 877,65 | Casa ÷2 | 438,83 | 438,82 |
+| Recreio da juventude | 10/06 | 922,20 | 100% dela | 922,20 | — |
+| Internet | 15/06 | 99,00 | Casa ÷2 | 49,50 | 49,50 |
+| Luz | 15/06 | a confirmar | Casa? | — | — |
+| Parcela ap | 25/06 | 1.144,02 | 100% dela | 1.144,02 | — |
 
-## Totais
+## Santander — caso a caso (regra da Letícia)
 
-- Particular (100% dela): R$ 2.591,25
-- Casa — metade dela: R$ 1.651,41
-- **Parte da Letícia até aqui: R$ 4.242,66**
-- O namorado entra com: R$ 1.651,40 (metade da casa) + metade dos outros cartões da casa
+**Dividido 50/50 (base compartilhada = R$ 4.792,14 → R$ 2.396,07 cada):**
+- Viagem Paraguai + Foz (feita juntos): R$ 3.950,28 (compras, hotéis, pedágios, IOF)
+- Mercado (Empório Minuano): R$ 644,02
+- Disney+: R$ 66,90
+- Apple (líquido): R$ 111,95
+- Seguro do cartão: R$ 18,99
 
-> Faltam ainda: outros cartões da casa + luz.
+**100% dela:**
+- Parcela Stefano (parcela + juros + IOF): R$ 1.048,00
+- Spotify: R$ 23,90
+- Anuidade R$ 48,13 (a confirmar)
+
+**A verificar (não dividido):** saldo anterior R$ 1.185,94 + juros/mora/multa/IOF (~R$ 95)
+**Ambíguos (confirmar se entram na viagem):** Diamante 1 R$ 196,61 · iFood (IFD*BR) R$ 167,39
+
+## Totais (assumindo que a Letícia paga tudo e o namorado reembolsa a parte dele)
+
+- **Sai do bolso dela (sem luz): R$ 16.370,17**
+- **Namorado devolve: R$ 6.012,01**
+- **Custo real dela (líquido, sem luz): R$ 10.358,17**
+
+> Mês inflado por: viagem ao Paraguai (~R$ 4 mil, metade volta) + saldo/juros carregados na Santander.
 
 ## Pendências
 
-- [ ] **Outros cartões** que ela divide com o namorado pras contas da casa (vai mandar)
-- [ ] **Luz** — valor + confirmar se racha no meio com o namorado
-- [ ] Quem paga cada conta de casa de fato (pra fechar o acerto com o namorado)
+- [ ] **Luz** — valor + se racha no meio
+- [ ] **Santander em rotativo/atraso** — verificar saldo anterior + juros/multa (decidir se quita à vista pra sair do rotativo)
+- [ ] Confirmar anuidade (R$ 48,13), Diamante (R$ 196,61) e iFood (R$ 167,39)
+- [ ] Confirmar quem paga cada conta de fato (se o namorado paga alguma direto, o reembolso muda)
+
+## Alerta (importante)
+
+A Santander está em **crédito rotativo / atraso**, com juros de **15,19% ao mês (~445% ao ano)**. É o dinheiro mais caro que existe. Se der pra quitar à vista (ou pelo menos a parte tua), é a prioridade número 1 — cada mês no rotativo come muito.
