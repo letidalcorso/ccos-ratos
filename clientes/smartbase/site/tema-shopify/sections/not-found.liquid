@@ -1,0 +1,41 @@
+{%- comment -%} Página 404 com a cara da smartbase. {%- endcomment -%}
+{%- assign s = section.settings -%}
+{%- capture wa -%}{% render 'wa-link', texto: 'oi! tava no site de vocês e caí numa página que não abriu. consegue me ajudar?' %}{%- endcapture -%}
+<section class="page nf-wrap rise">
+  <span class="eyebrow pill nf-pill">{{ s.kicker | default: 'erro 404' }}</span>
+  <h1 class="headline nf-title">{{ s.line1 | default: 'essa página a gente não achou.' }}</h1>
+  <p class="nf-sub">{{ s.sub | default: 'o link pode ter mudado ou a página saiu do ar. mas a gente continua aqui, bora te levar de volta.' }}</p>
+  <div class="nf-ctas">
+    <a class="btn btn-primary" href="{{ routes.root_url }}">{{ s.cta_home | default: 'voltar pro início' }} <span aria-hidden="true">→</span></a>
+    <a class="btn btn-glass" href="{{ wa }}" target="_blank" rel="noopener noreferrer">{{ s.cta_wa | default: 'falar no WhatsApp' }}</a>
+  </div>
+  <div class="nf-links">
+    <a href="{{ routes.root_url }}">início</a>
+    <a href="/pages/vitrine">vitrine</a>
+    <a href="/blogs/dicas">blog</a>
+    <a href="/pages/faq">faq</a>
+    <a href="/pages/contato">contato</a>
+  </div>
+</section>
+<style>
+  .nf-wrap{min-height:62vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:90px;padding-bottom:90px}
+  .nf-pill{margin-bottom:22px}
+  .nf-title{font-size:clamp(32px,5vw,64px);line-height:1;letter-spacing:-2px;max-width:14ch}
+  .nf-sub{color:var(--sb-mute);font-size:17px;line-height:1.55;max-width:46ch;margin:20px 0 34px}
+  .nf-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .nf-links{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:46px}
+  .nf-links a{font-size:14px;color:var(--sb-mute);text-decoration:none;transition:color .2s}
+  .nf-links a:hover{color:var(--sb-white)}
+</style>
+{% schema %}
+{
+  "name": "Página 404",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Etiqueta", "default": "erro 404" },
+    { "type": "text", "id": "line1", "label": "Título", "default": "essa página a gente não achou." },
+    { "type": "textarea", "id": "sub", "label": "Texto", "default": "o link pode ter mudado ou a página saiu do ar. mas a gente continua aqui, bora te levar de volta." },
+    { "type": "text", "id": "cta_home", "label": "Botão início", "default": "voltar pro início" },
+    { "type": "text", "id": "cta_wa", "label": "Botão WhatsApp", "default": "falar no WhatsApp" }
+  ]
+}
+{% endschema %}

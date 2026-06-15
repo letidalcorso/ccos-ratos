@@ -20,15 +20,19 @@
 
 # Como saber se um iPhone é original: o passo a passo completo
 
-Antes de pagar em qualquer iPhone, dá pra saber se ele é original em menos de dois minutos, sem ser técnico. E tem um detalhe que diz muito: quem vende coisa de procedência não tem o menor medo desse teste. Se o vendedor enrola quando você quer conferir, já é resposta.
+Antes de pagar em qualquer iPhone, dá pra saber se ele é original em menos de dois minutos, sem ser técnico. E tem um detalhe que diz muito: quem vende aparelho de procedência não tem o menor medo desse teste. Se o vendedor enrola quando você quer conferir, já é resposta.
 
 Aqui vai o passo a passo que separa um aparelho de verdade de uma furada.
 
 ## A checagem que vale por todas: o número de série no site da Apple
 
-É a mais simples e a mais decisiva. No iPhone, vá em **Ajustes > Geral > Sobre** e anote o **número de série**. Depois, na ferramenta oficial de "verificar cobertura" da Apple, digite esse número.
+É a mais simples e a mais decisiva. O passo a passo:
 
-O que isso te diz na hora:
+1. No iPhone, vá em **Ajustes > Geral > Sobre** e copie o **número de série**.
+2. Acesse o site oficial de verificação da Apple: [checkcoverage.apple.com](https://checkcoverage.apple.com).
+3. Digite o número de série e confirme.
+
+O que aparece na hora:
 - se a Apple **reconhece** o aparelho (original reconhece, falso não);
 - se a **garantia** está ativa e até quando;
 - a data aproximada de ativação.
@@ -56,7 +60,6 @@ Pra bater o olho e já desconfiar:
 - **A Siri responde?** Falsificado roda um sistema que imita o iOS, e a Siri de verdade não funciona.
 - **A App Store é a real?** Em clone, vira uma loja estranha ou cheia de app fora do padrão.
 - **Acabamento e tela.** Peso, encaixe dos botões, qualidade da tela e nitidez dos ícones entregam o aparelho de imitação.
-- **Preço bom demais.** Quando o valor é muito abaixo do mercado, costuma ter coisa errada.
 
 ## Por que a gente ensina você a desconfiar
 
@@ -68,7 +71,7 @@ Parece estranho uma loja te ensinar a checar tudo isso. É de propósito. Quem t
 
 Aqui a checagem é parte da entrega. Quando o aparelho chega, a gente confere o IMEI na tua frente no site da Apple, mostra o aparelho ligado, limpo e sem bloqueio, e só então entra o pagamento. A gente garante a originalidade de cada iPhone, e te coloca pra ver com os próprios olhos. Sem pix antes, sem "confia".
 
-Gente de Caxias, com nome e endereço. Quer ver o que tem disponível? [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) com o modelo que tu quer. **Paga quando receber.**
+A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Quer ver o que tem disponível? [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) com o modelo que tu quer. **Paga quando receber.**
 
 ## Perguntas frequentes
 
@@ -83,6 +86,10 @@ Em Ajustes > Geral > Sobre, digitando `*#06#` no teclado de ligação, e na band
 
 **Um iPhone importado pode ser original?**
 Pode, e o que garante isso é a procedência: aparelho lacrado, com IMEI verificável no site da Apple. Na Smartbase a gente garante a originalidade e mostra a verificação antes de você pagar.
+
+## No fim, a regra é simples
+
+Conferir se um iPhone é original leva dois minutos: número de série reconhecido na Apple, IMEI batendo e nenhum bloqueio de ativação. Com esses três, você fecha negócio tranquilo. E quando a loja faz questão de te mostrar tudo isso antes do pagamento, o medo sai da jogada de vez.
 
 ---
 
