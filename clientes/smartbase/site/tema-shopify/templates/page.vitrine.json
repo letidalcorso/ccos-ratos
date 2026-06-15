@@ -293,7 +293,7 @@
           "settings": {
             "cat": "iphone",
             "name": "iPhone 13",
-            "fallback": "",
+            "fallback": "prod-iphone-13.webp",
             "desc": "",
             "specs": "128GB",
             "colors": "",
