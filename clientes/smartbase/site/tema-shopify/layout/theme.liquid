@@ -12,6 +12,10 @@
     assign _sn = shop.name | downcase
     # meta description com fallback por página (garante descrição em toda página, mesmo sem SEO preenchido no painel)
     assign meta_desc = page_description
+    # home: descrição travada em Caxias/Serra (a do painel dizia "atende todo o brasil", o que conflita com o posicionamento presencial / paga-quando-recebe)
+    if request.page_type == 'index'
+      assign meta_desc = 'smartbase: iPhone, Mac e iPad originais em caxias do sul · rs. novos lacrados com garantia Apple e seminovos conferidos. você paga quando recebe na mão.'
+    endif
     if meta_desc == blank
       case request.page_type
         when 'page'
