@@ -137,6 +137,8 @@ brew install yt-dlp
 
 ## Gerar imagens com IA
 
+> **Política (15/06/2026):** priorizar ferramentas GRÁTIS — a Letícia parou de pagar plataforma de imagem (pagou bastante, pouco retorno). Ordem: Gemini/nano banana → Bing/Microsoft Designer (DALL·E 3, libera comercial) → Adobe Firefly (mais seguro p/ comercial). E lembrar: **lifestyle e prova social = foto real**, não imagem gerada; **produto Apple = renders oficiais** já no banco. IA só pro conceitual/abstrato.
+
 ### Gemini (Google AI)
 **O que faz:** Gera imagens a partir de texto
 **Precisa de conta:** Sim, Google AI Studio (gratis ate certo limite)
