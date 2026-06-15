@@ -6,12 +6,35 @@
   <meta name="theme-color" content="#07070E">
   <link rel="canonical" href="{{ canonical_url }}">
 
+  {%- liquid
+    # título: só acrescenta o nome da loja se ainda não estiver no título (case-insensitive — evita "smartbase · SmartBase")
+    assign _pt = page_title | downcase
+    assign _sn = shop.name | downcase
+    # meta description com fallback por página (garante descrição em toda página, mesmo sem SEO preenchido no painel)
+    assign meta_desc = page_description
+    if meta_desc == blank
+      case request.page_type
+        when 'page'
+          if page.handle == 'vitrine'
+            assign meta_desc = 'iPhone, iPad, Mac, Apple Watch e AirPods originais na smartbase: novos sob encomenda e seminovos conferidos, com garantia. você só paga quando recebe.'
+          elsif page.handle == 'faq'
+            assign meta_desc = 'garantia, originalidade, entrega e pagamento na smartbase. Apple original com garantia verificável por IMEI, em caxias do sul · rs. tire suas dúvidas.'
+          elsif page.handle == 'contato'
+            assign meta_desc = 'loja física da smartbase em caxias do sul · rs. passa pra conhecer ou fala no WhatsApp. Apple original, e você só paga quando o aparelho tá na sua mão.'
+          endif
+        when 'blog'
+          assign meta_desc = 'dicas e guias sobre Apple: iPhone importado, garantia no Brasil e seminovos — por quem vive Apple há anos. smartbase, caxias do sul.'
+        when 'article'
+          assign meta_desc = article.excerpt_or_content | strip_html | truncate: 160
+      endcase
+    endif
+  -%}
   <title>
-    {{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &middot; {{ shop.name }}{% endunless %}
+    {{ page_title }}{% if current_tags %} &ndash; {{ 'general.meta.tags' | t: tags: current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless _pt contains _sn %} &middot; {{ shop.name }}{% endunless %}
   </title>
 
-  {% if page_description %}
-    <meta name="description" content="{{ page_description | escape }}">
+  {% if meta_desc != blank %}
+    <meta name="description" content="{{ meta_desc | escape }}">
   {% endif %}
 
   {%- comment -%} Open Graph / Twitter (capa por artigo) {%- endcomment -%}
@@ -19,7 +42,7 @@
   <meta property="og:type" content="{% if request.page_type == 'article' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:title" content="{{ page_title | escape }}">
-  {% if page_description %}<meta property="og:description" content="{{ page_description | escape }}">{% endif %}
+  {% if meta_desc != blank %}<meta property="og:description" content="{{ meta_desc | escape }}">{% endif %}
   {%- if request.page_type == 'article' and article.image -%}
     <meta property="og:image" content="https:{{ article.image | image_url: width: 1200 }}">
     <meta name="twitter:card" content="summary_large_image">

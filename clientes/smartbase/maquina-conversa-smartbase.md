@@ -16,7 +16,7 @@ MVP do teste de 2 semanas. Quem conduz: Leti. Objetivo: destravar a conversa (o 
 
 ## Os 3 trunfos de confiança (usar sempre que houver hesitação)
 - "Você recebe o aparelho, confere tudo, e só paga depois."
-- "A gente tem loja física aqui em Caxias, pode vir ver pessoalmente." (Rua Sinimbu, 2022 — Centro)
+- "A gente tem loja física aqui em Caxias, pode vir ver pessoalmente." (Rua Sinimbu, 2211 — sala 805, Centro)
 - "Garantia Apple, dá pra conferir pelo IMEI no site da Apple."
 
 ---
@@ -85,7 +85,7 @@ Atacam direto o "seco": resposta calorosa e completa, pronta, em 1 toque. Person
 - **`/garantia`** → "Todo aparelho vai com garantia Apple de 1 ano, igual de loja, vale pro novo e pro seminovo também 🙂 E tu confere pelo IMEI direto no site da Apple, na tua frente, antes de fechar."
 - **`/preco`** → "Me diz qual modelo e cor que eu já te passo o valor certinho 🙂 O pagamento é no Pix ou dinheiro. Ah, e me conta: tu tem algum aparelho Apple que queira usar na troca? A gente avalia e abate no valor."
 - **`/troca`** → "A gente aceita teu Apple na troca, a partir do iPhone 11 🙂 Pra eu te avaliar certinho, me manda: o modelo e a capacidade (GB), a saúde da bateria (tá em Ajustes › Bateria), se tem alguma avaria (tela, vidro, marquinhas) e umas fotinhas do aparelho. Aí já te digo quanto abate."
-- **`/endereco`** → "A gente fica na Rua Sinimbu, 2022, Centro de Caxias 🙂 De seg a sex, das 9h às 19h. Pode vir ver pessoalmente quando quiser!" *(⚠️ Leti vai reconferir o endereço)*
+- **`/endereco`** → "A gente fica na Rua Sinimbu, 2211, sala 805, Centro de Caxias 🙂 De seg a sex, das 9h às 19h. Pode vir ver pessoalmente quando quiser!" *(endereço confirmado em 15/06: 2211, sala 805 · CEP 95020-520)*
 - **`/fechar`** → "Então bora? 🙂 Me confirma o modelo e a cor que tu quer e eu já deixo tudo encaminhado pra ti, rapidinho. Pode ser?" *(usar quando a pessoa já demonstrou interesse — é o empurrãozinho final pra fechar)*
 
 ---
@@ -106,7 +106,7 @@ Sem isso, o teste não prova nada e você perde o argumento mais forte pro dono.
 - Aceita troca (trade-in): sim — **aceita iPhone a partir do 11**.
 - Novo lacrado: garantia Apple internacional 1 ano, entrega em mãos já configurado, com película instalada e capinha. Vem na caixa lacrada.
 - Seminovo: segue sob encomenda/avaliação (avaliado, garantia, bateria conferida). Oferta secundária, nunca herói.
-- Loja física: Rua Sinimbu, 2022 — Centro, Caxias do Sul. Seg a sex, 9h–19h.
+- Loja física: Rua Sinimbu, 2211 — sala 805, Centro, Caxias do Sul. Seg a sex, 9h–19h.
 - Verba do teste: R$ 20-30/dia no CTWA por 7-10 dias (a validar com o dono).
 
 ## Ainda a confirmar (com a Leti)

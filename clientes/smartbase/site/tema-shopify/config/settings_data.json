@@ -32,7 +32,7 @@
             "settings": {
               "icon": "home",
               "label": "início",
-              "link": "https://smartbasebr.com",
+              "link": "/",
               "match": "index"
             }
           },
@@ -121,7 +121,7 @@
           "f_dest": "vitrine",
           "f_link": "shopify://pages/vitrine",
           "f_btn2_label": "quero mais informações",
-          "f_btn2_url": "",
+          "f_btn2_url": "https://wa.me/5554996624494?text=oi%21%20vi%20o%20site%20de%20voc%C3%AAs%20e%20fiquei%20com%20uma%20d%C3%BAvida",
           "f_btn2_blank": true,
           "c_show": true,
           "c_eyebrow": "bora conversar?",
@@ -154,7 +154,7 @@
             "type": "nav",
             "settings": {
               "label": "home",
-              "url": "https://smartbasebr.com"
+              "url": "/"
             }
           },
           "footer-0": {

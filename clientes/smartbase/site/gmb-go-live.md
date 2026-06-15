@@ -22,7 +22,7 @@ A loja física em Caxias qualifica a Smartbase pra ter pino no Google Maps e apa
 
 ## NAP canônico (usar idêntico em GMB, site e Instagram)
 - **Nome:** Smartbase
-- **Endereço:** Rua Sinimbu, 2022 — Centro, Caxias do Sul – RS, CEP 95020-002
+- **Endereço:** Rua Sinimbu, 2211 — sala 805, Centro, Caxias do Sul – RS, CEP 95020-520
 - **Telefone:** (54) 99662-4494
 - **Horário:** Seg a Sex, 9h às 19h
 - **Site:** (link do Shopify quando publicar)
@@ -30,7 +30,7 @@ A loja física em Caxias qualifica a Smartbase pra ter pino no Google Maps e apa
 > Esse mesmo endereço/telefone tem que aparecer igualzinho no rodapé do site e na bio/contato do Instagram. Divergência de NAP derruba ranking local.
 
 ## Dados confirmados (jun/2026)
-1. **Endereço:** Rua Sinimbu, 2022 — Centro, Caxias do Sul/RS, CEP 95020-002 ✅
+1. **Endereço:** Rua Sinimbu, 2211 — sala 805, Centro, Caxias do Sul/RS, CEP 95020-520 ✅
 2. **Recebe correspondência:** sim → dá pra verificar por **cartão postal** (chega em 5-7 dias). Se o Google oferecer vídeo na hora, é mais rápido — aceitar o que aparecer. ✅
 3. **Horário:** Seg a Sex, 9h às 19h ✅
 4. **Razão social / CNPJ:** a confirmar — **não trava o cadastro** (o CNPJ não aparece no perfil público e a verificação não exige). Confirmar depois pra deixar o cadastro completo.
@@ -103,7 +103,7 @@ qualquer coisa eu te mando o passo a passo. valeu mesmo!
 1. Acessar **google.com/business** no Safari → "Gerenciar agora" → entrar com a conta Google da empresa.
 2. Digitar **Smartbase** como nome.
 3. Escolher a categoria principal: **Loja de telefones celulares**.
-4. Marcar **"Sim, tenho um local físico"** → colar **Rua Sinimbu, 2022 — Centro, Caxias do Sul/RS, 95020-002**.
+4. Marcar **"Sim, tenho um local físico"** → colar **Rua Sinimbu, 2211 — sala 805, Centro, Caxias do Sul/RS, 95020-520**.
 5. Marcar que **faz entregas/atende na região** de Caxias.
 6. Telefone: **(54) 99662-4494**. Site: o do Shopify (quando publicar).
 7. Escolher o **método de verificação**: preferir **cartão postal** (a loja recebe correspondência) ou **vídeo**, se aparecer. O código chega em 5-7 dias no caso do cartão.

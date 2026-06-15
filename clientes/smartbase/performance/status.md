@@ -41,7 +41,7 @@ Revisão completa das campanhas: confirmado destino WhatsApp, analisado performa
 Sessão de marca + canais + funil (não tocou nas campanhas ativas). Entregas:
 - **Plataforma de marca** criada (`../marca/plataforma-de-marca.md` + visual). Território "a marca da prova, num mercado de promessa", essência "confiança se prova", arquétipo Sábio + Companheiro, 4 pilares de mensagem com prova, assinatura "paga quando receber." Vira a fonte da verdade pra criativos de ads também (ângulo = pilar + prova).
 - **Mapa de canais** (`../mapa-de-canais.md`) — papel de cada canal e o loop de crescimento local. Ordem: WhatsApp → GMB → site → CTWA.
-- **GMB pronto pra subir** (`../gmb-go-live.md`) + tarefa no Notion. NAP travado: Rua Sinimbu, 2022, Centro, CEP 95020-002 · (54) 99662-4494 · seg-sex 9h-19h.
+- **GMB pronto pra subir** (`../gmb-go-live.md`) + tarefa no Notion. NAP travado: Rua Sinimbu, 2211, sala 805, Centro, CEP 95020-520 · (54) 99662-4494 · seg-sex 9h-19h.
 - **Máquina de conversa do WhatsApp atualizada** ao estoque atual + 9 respostas rápidas pra colar no Business.
 
 **Mudança de estoque (13/06):** 17 Pro Max laranja seminovo VENDIDO. Herói = novos lacrados da linha 17. Seminovo = sob encomenda/avaliação (secundário). Trade-in a partir do iPhone 11.
