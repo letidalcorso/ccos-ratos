@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,12 +15,13 @@
         "hero_kicker": "contato",
         "hero_line1": "passa na loja.",
         "hero_line2": "a gente te espera.",
-        "hero_sub": "tem loja de verdade em caxias do sul, de portas abertas pra você. vem conhecer, tomar um café e ver os aparelhos de pert",
+        "hero_sub": "tem loja de verdade em caxias do sul, de portas abertas pra você. vem conhecer, tomar um café e ver os aparelhos de perto.",
         "hero_image": "shopify://shop_images/flatlay.png",
         "hero_cta": "quero conhecer a loja",
         "map_local": "caxias do sul",
         "map_warn": "rua Sinimbu · 2211 · centro",
-        "endereco": "rua sinimbu · 2211 · 8 andar · centro\ncaxias do sul · rs",
+        "map_coords": "-29.16877,-51.17984",
+        "endereco": "rua sinimbu · 2211 · sala 805 · centro\ncaxias do sul · rs",
         "horario": "seg a sex · 9h às 19h\nsáb · 9h às 13h\ndomingo · fechado",
         "horario_note": "excepcionalmente atendemos fora desses horários · combina com a gente.",
         "atendimento": "WhatsApp · +55 54 99662-4494"

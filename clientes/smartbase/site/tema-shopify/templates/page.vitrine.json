@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -48,6 +57,20 @@
             "price": ""
           }
         },
+        "produto_iphone13": {
+          "type": "produto",
+          "settings": {
+            "cat": "iphone",
+            "name": "iPhone 13",
+            "fallback": "prod-iphone-13.webp",
+            "desc": "",
+            "specs": "128GB",
+            "colors": "",
+            "cond": "seminovo",
+            "in_stock": true,
+            "price": "R$ 2.199,00"
+          }
+        },
         "vitrine-0": {
           "type": "produto",
           "name": "17 pro max - novo",
@@ -60,7 +83,7 @@
             "colors": "cosmic orange:#c2622f; navy:#26344c; silver:#d7d9db",
             "cond": "novo",
             "in_stock": true,
-            "price": "R$7.890,00"
+            "price": ""
           }
         },
         "vitrine-1": {
@@ -123,6 +146,21 @@
             "price": ""
           }
         },
+        "produto_neo": {
+          "type": "produto",
+          "name": "MacBook Neo",
+          "settings": {
+            "cat": "mac",
+            "name": "MacBook Neo",
+            "fallback": "prod-macbook-neo.webp",
+            "desc": "o Mac mais acessível e mais colorido que a Apple já fez. chip A18 Pro que roda Apple Intelligence numa boa. tela de 13'', leve e com bateria pro dia todo.",
+            "specs": "13\"; A18 Pro · 8GB · 256GB+",
+            "colors": "prata:#dcdee0; rosa:#e8c5cb; cítrico:#e6e08a; índigo:#5566a0",
+            "cond": "novo",
+            "in_stock": true,
+            "price": ""
+          }
+        },
         "vitrine-5": {
           "type": "produto",
           "name": "mac pro - novo",
@@ -163,6 +201,21 @@
             "desc": "tela de 11'' ou 13'', leve na mão. chip M3 que roda Apple Intelligence e edição sem travar. funciona com a Pencil Pro pra quem cria.",
             "specs": "11\" · 13\"; M3 · 128GB+",
             "colors": "azul:#aebfe0; roxo:#c5b6e0; estelar:#e8e0d0; cinza-espacial:#3a3c40",
+            "cond": "novo",
+            "in_stock": true,
+            "price": ""
+          }
+        },
+        "produto_ipad11": {
+          "type": "produto",
+          "name": "iPad 11",
+          "settings": {
+            "cat": "ipad",
+            "name": "iPad 11",
+            "fallback": "prod-ipad-11.webp",
+            "desc": "a porta de entrada do iPad. chip A16 que dá conta de série, jogo, aula e trabalho. tela de 11'' colorida e bateria pro dia todo.",
+            "specs": "11\"; A16 · 128GB+",
+            "colors": "azul:#a8c6e0; rosa:#eccdd0; amarelo:#ecdf9e; prata:#dcdee0",
             "cond": "novo",
             "in_stock": true,
             "price": ""
@@ -256,50 +309,6 @@
             "cond": "novo",
             "in_stock": true,
             "price": ""
-          }
-        },
-        "produto_ipad11": {
-          "type": "produto",
-          "name": "iPad 11",
-          "settings": {
-            "cat": "ipad",
-            "name": "iPad 11",
-            "fallback": "prod-ipad-11.webp",
-            "desc": "a porta de entrada do iPad. chip A16 que dá conta de série, jogo, aula e trabalho. tela de 11'' colorida e bateria pro dia todo.",
-            "specs": "11\"; A16 · 128GB+",
-            "colors": "azul:#a8c6e0; rosa:#eccdd0; amarelo:#ecdf9e; prata:#dcdee0",
-            "cond": "novo",
-            "in_stock": true,
-            "price": ""
-          }
-        },
-        "produto_neo": {
-          "type": "produto",
-          "name": "MacBook Neo",
-          "settings": {
-            "cat": "mac",
-            "name": "MacBook Neo",
-            "fallback": "prod-macbook-neo.webp",
-            "desc": "o Mac mais acessível e mais colorido que a Apple já fez. chip A18 Pro que roda Apple Intelligence numa boa. tela de 13'', leve e com bateria pro dia todo.",
-            "specs": "13\"; A18 Pro · 8GB · 256GB+",
-            "colors": "prata:#dcdee0; rosa:#e8c5cb; cítrico:#e6e08a; índigo:#5566a0",
-            "cond": "novo",
-            "in_stock": true,
-            "price": ""
-          }
-        },
-        "produto_iphone13": {
-          "type": "produto",
-          "settings": {
-            "cat": "iphone",
-            "name": "iPhone 13",
-            "fallback": "prod-iphone-13.webp",
-            "desc": "",
-            "specs": "128GB",
-            "colors": "",
-            "cond": "seminovo",
-            "in_stock": true,
-            "price": "R$ 2.199,00"
           }
         }
       },
