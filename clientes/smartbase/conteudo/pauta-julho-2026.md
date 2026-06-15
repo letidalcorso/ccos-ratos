@@ -46,6 +46,6 @@
 ---
 
 ## Próximo passo
-- Encaixar estas 5 no calendário fechado quando rodar o `/planejamento` de julho (com datas e cadência).
-- Levar pro Notion (Postagens DB) junto com o restante do plano de julho.
+- **Estas ideias vivem aqui (pasta interna), não no Notion** — decisão da Letícia (15/06). Não duplicar no Postagens DB.
+- Encaixar as 5 no calendário fechado quando rodar o `/planejamento` de julho (com datas e cadência).
 - Alinhar com o dono o peso do upgrade (recorrente, não-foco) antes de fechar o mês.
