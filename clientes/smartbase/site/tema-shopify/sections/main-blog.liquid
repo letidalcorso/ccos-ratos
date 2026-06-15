@@ -7,8 +7,13 @@
 {%- capture chips -%}
 <div class="bl-filters">
   <span class="bl-chip on" data-filter="todos">todos</span>
-  {%- assign chiplist = s.filtros | split: ',' -%}
-  {%- for c in chiplist -%}<span class="bl-chip" data-filter="{{ c | strip }}">{{ c | strip }}</span>{%- endfor -%}
+  {%- comment -%} chips dinâmicos: montados a partir das tags reais dos artigos (nunca fica vazio) {%- endcomment -%}
+  {%- if blog.all_tags.size > 0 -%}
+    {%- for t in blog.all_tags -%}<span class="bl-chip" data-filter="{{ t }}">{{ t }}</span>{%- endfor -%}
+  {%- else -%}
+    {%- assign chiplist = s.filtros | split: ',' -%}
+    {%- for c in chiplist -%}<span class="bl-chip" data-filter="{{ c | strip }}">{{ c | strip }}</span>{%- endfor -%}
+  {%- endif -%}
 </div>
 {%- endcapture -%}
 <div class="blog-page">
