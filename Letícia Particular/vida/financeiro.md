@@ -4,17 +4,17 @@ Atualizado: 15/06/2026. Privado, só local (fora do Git).
 
 ## Como está organizado (arranjo atual)
 
-A planilha original era de um arranjo **antigo, com o ex** — por isso a coluna "Lele" trazia divisões diferentes. Atualizado pro que vale hoje:
+A planilha original era de um arranjo antigo (com o ex). O ex está **fora** da conta agora — tudo que ela mandou é dela.
+
+**Contas DELA (particular — 100%):**
+- Cartão de crédito R$ 525,03 (a parte dela já é essa, é só dela)
+- Recreio da juventude R$ 922,20
+- Parcela ap R$ 1.144,02 (parcela mensal de investimento num apartamento)
 
 **Contas da CASA — divididas 50/50 com o namorado atual:**
 - Aluguel, condomínio, internet
 - (+ outros cartões que ela divide com o namorado pras contas da casa — a receber)
 - (luz — a confirmar se entra aqui)
-
-**Contas DELA (particular):**
-- Recreio da juventude — 100% dela (o namorado atual não tem)
-- Parcela ap — 100% dela (parcela mensal de investimento num apartamento)
-- Cartão de crédito — dela, mas **dividido com o ex**; a parte dela é R$ 210,01
 
 ## Contas do mês (ordem de vencimento)
 
@@ -22,20 +22,23 @@ A planilha original era de um arranjo **antigo, com o ex** — por isso a coluna
 |-------|-------|------------:|---------|----------------:|
 | Aluguel | 07/06 | 2.326,15 | Casa ÷2 (namorado) | 1.163,08 |
 | Condomínio | 10/06 | 877,65 | Casa ÷2 (namorado) | 438,83 |
-| Cartão de crédito | 10/06 | 525,03 | Dividido c/ ex | 210,01 |
+| Cartão de crédito | 10/06 | 525,03 | 100% dela | 525,03 |
 | Recreio da juventude | 10/06 | 922,20 | 100% dela | 922,20 |
 | Internet | 15/06 | 99,00 | Casa ÷2 (namorado) | 49,50 |
-| Luz | 15/06 | a confirmar | a confirmar | a confirmar |
+| Luz | 15/06 | a confirmar | Casa? (a confirmar) | a confirmar |
 | Parcela ap | 25/06 | 1.144,02 | 100% dela (investimento) | 1.144,02 |
 
-## Total parcial
+## Totais
 
-- **Parte da Letícia até aqui: R$ 3.927,64**
-- Ainda faltam: outros cartões da casa + luz
+- Particular (100% dela): R$ 2.591,25
+- Casa — metade dela: R$ 1.651,41
+- **Parte da Letícia até aqui: R$ 4.242,66**
+- O namorado entra com: R$ 1.651,40 (metade da casa) + metade dos outros cartões da casa
+
+> Faltam ainda: outros cartões da casa + luz.
 
 ## Pendências
 
 - [ ] **Outros cartões** que ela divide com o namorado pras contas da casa (vai mandar)
-- [ ] **Luz** — valor + se entra na divisão da casa
-- [ ] Confirmar a parte dela no **cartão dividido com o ex** (usei R$ 210,01 da planilha)
+- [ ] **Luz** — valor + confirmar se racha no meio com o namorado
 - [ ] Quem paga cada conta de casa de fato (pra fechar o acerto com o namorado)
