@@ -1,7 +1,22 @@
 # Smartbase — Guia de Design
 
 > Referência visual para criação de posts, carrosséis e materiais da Smartbase.
-> Ler antes de criar qualquer peça gráfica. Consultar junto ao `1. CLAUDE.md` do cliente.
+> Ler antes de criar qualquer peça gráfica. Consultar junto ao `CLAUDE.md` do cliente.
+
+---
+
+## Decisões de sistema (reconciliado em 15/06/2026)
+
+O guia foi auditado e alinhado ao que o feed realmente usa. Estas decisões valem sobre qualquer descrição antiga:
+
+- **Sem cor por pilar.** O azul `#3E82F7` é a língua única. Não existe roxo/verde por pilar.
+- **Profundidade = degradê + glow + painel de vidro.** O fundo padrão é degradê escuro com glow azul, não preto chapado.
+- **Sem marca d'água de letras "sb".** A profundidade/assinatura vem do **painel de vidro** (frosted glass) no Figma — dá menos problema e fica premium.
+- **Sem accent bar lateral.** Aposentada.
+- **Badge de pilar = só interno.** Serve pra organizar no Figma; **nunca aparece na arte publicada.**
+- **Footer = `@smartbase.br` centralizado** no rodapé. Sem wordmark, sem handle à direita.
+- **Handle correto: `@smartbase.br`** (nunca `.rs`).
+- **Vida Apple em Caxias:** o layout antigo não foi pro ar — **design novo a propor** (ver seção).
 
 ---
 
@@ -15,10 +30,10 @@
 - **Arquivos:**
   - `briefing/logo png branco.png` — versão para fundos escuros (uso padrão)
   - `briefing/logo png preto.png` — versão para fundos claros
-- **Avatar / badge compacto:** pill `#0F0F1C` com texto "sb" em `#3E82F7`, peso 600, border-radius 15px
+- **Avatar / badge compacto:** pill `#0F0F1C` com texto "sb" em `#3E82F7`, peso 600, border-radius 15px. (Uso: foto de perfil / ícone isolado — **não** é marca d'água de post.)
 - **Tamanho mínimo:** não usar abaixo de 80px de largura — a cápsula perde forma
 - **Área de proteção:** espaço equivalente à altura do pill ao redor em todos os lados
-- **Handle:** `@smartbase.br` — sempre no footer dos posts, alinhado à direita em `#4A4A60` ou `#7A7A96`
+- **Handle:** `@smartbase.br` — sempre no footer dos posts, **centralizado** (ver Footer)
 
 ---
 
@@ -28,10 +43,10 @@
 
 | Nome | Token | Hex | Uso específico |
 |------|-------|-----|----------------|
-| bg-base | `--bg-base` | `#07070E` | Fundo de todos os posts e páginas — nunca substituir |
-| surface-1 | `--surface-1` | `#0F0F1C` | Cards, blocos internos, badge "sb" |
-| surface-2 | `--surface-2` | `#121220` | Camada intermediária, hover de card |
-| surface-3 | `--surface-3` | `#1A1A2E` | Bordas, dividers, dashes (também aparece como `#1E1E2E` em SVGs) |
+| bg-base | `--bg-base` | `#07070E` | Base do degradê de fundo (parte de baixo) |
+| surface-1 | `--surface-1` | `#0F0F1C` | Cards, blocos internos, topo do degradê, badge "sb" do avatar |
+| surface-2 | `--surface-2` | `#121220` | Camada intermediária, topo do degradê de fundo |
+| surface-3 | `--surface-3` | `#1A1A2E` | Bordas, dividers (também aparece como `#1E1E2E` em SVGs) |
 
 ### Cores de texto
 
@@ -42,34 +57,28 @@
 | text-muted | `--text-muted` | `#4A4A60` | Handles, labels, rodapé menos importante |
 | text-light | — | `#C0C0D0` | Subtítulos de impacto menor em peso 300 |
 
-### Cor primária
+### Cor primária — o acento único do sistema
 
 | Nome | Token | Hex | Uso específico |
 |------|-------|-----|----------------|
-| blue-primary | `--blue-primary` | `#3E82F7` | Destaque de headlines, dot do wordmark, CTA, pilar PRODUTO/DECIFRA APPLE, accent bar |
+| blue-primary | `--blue-primary` | `#3E82F7` | Palavra-chave do headline, dot do wordmark, CTA, glow, dots de lista |
 | blue-light | `--blue-light` | `#6DAFF9` | Hover, variante mais clara do primário |
-| blue-alpha-10 | `--blue-alpha-10` | `rgba(62,130,247,0.10)` | Background sutil de badges e tags |
+| blue-alpha-10 | `--blue-alpha-10` | `rgba(62,130,247,0.10)` | Background sutil de chips e tags |
 | blue-alpha-30 | `--blue-alpha-30` | `rgba(62,130,247,0.30)` | Overlays e glows |
 
-### Cores por pilar
-
-| Pilar | Hex de destaque | Hex de superfície | Uso |
-|-------|----------------|-------------------|-----|
-| DECIFRA APPLE | `#3E82F7` (blue) | `#0E1E3A` | Accent bar, pill, última palavra do headline, citação |
-| CASA SMARTBASE | `#8B5CF6` (purple) | `#1C1028` | Idem — pilar identidade/confiança |
-| VIDA APPLE EM CAXIAS | `#10B981` (green) | `#0A201A` | Idem — pilar local/lifestyle |
+> **Sem cor por pilar.** O azul é a única cor de acento. Os 3 pilares (Decifra / Casa / Vida) são categorias **de conteúdo**, não têm cor própria na arte.
 
 ### Cor especial
 
 | Nome | Token | Hex | Uso |
 |------|-------|-----|-----|
-| wa-green | `--wa-green` | `#25D366` | Exclusivo para botão e CTA de WhatsApp — nunca usar como cor de destaque editorial |
+| wa-green | `--wa-green` | `#25D366` | Exclusivo para botão e CTA de WhatsApp — nunca como cor de destaque editorial |
 
 ### Cor proibida
 
 - Paletas quentes (laranja, vermelho, amarelo) — quebram o posicionamento tecnológico e sóbrio
 - Branco puro `#FFFFFF` como fundo — a marca opera exclusivamente no dark mode
-- Qualquer cor de saturação alta fora da paleta de pilares — isola a peça visualmente
+- Qualquer cor de saturação alta fora do azul do sistema — isola a peça visualmente
 - Gradientes vibrantes ou neón — vão contra o estilo técnico/premium
 
 ---
@@ -78,216 +87,194 @@
 
 ### Bricolage Grotesque — Títulos e Headlines
 - **Uso:** headlines de posts, números em destaque, capas de carrossel, títulos de seção no site
-- **Pesos utilizados:** 300 (smart no wordmark, subtítulos de impacto), 700, 800
+- **Pesos utilizados:** 300 (smart no wordmark, subtítulos de impacto), 700, 800 (ExtraBold)
 - **Caixa:** baixa (minúsculas) — nunca CAPS em headlines
 - **Caráter:** contemporânea, variável óptica, forte em grandes tamanhos sem perder leveza
-- **Tamanho padrão em post 1080×1350:** 96px para headline principal
+- **Tamanho padrão em post 1080×1350:** 88–96px para headline principal
 - **Origem:** Google Fonts — `Bricolage Grotesque:opsz,wght@12..96,300;12..96,700;12..96,800`
 
 ### Inter — Corpo e Suporte
-- **Uso:** subtítulos, corpo de texto, legendas, labels, badges, footer, handles
-- **Pesos utilizados:** 300 (texto leve), 400 (corpo padrão), 500 (semi-destaque), 600 (labels em caps)
-- **Caixa:** baixa para corpo; CAPS com letter-spacing 2px para labels/badges de pilar
+- **Uso:** subtítulos, corpo de texto, legendas, chips, footer, handle
+- **Pesos utilizados:** 300 (texto leve), 400 (corpo padrão), 500 (semi-destaque), 600 (labels)
+- **Caixa:** baixa para corpo e chips
 - **Caráter:** geométrica, neutra, alta legibilidade em tamanhos pequenos — âncora do sistema
-- **Tamanho padrão em post:** 26–28px para corpo, 20–22px para legendas e handles
+- **Tamanho padrão em post:** 26–34px para corpo, 22–26px para legendas e handle
 - **Origem:** Google Fonts — `Inter:wght@300;400;500;600`
 
 ### Regras de uso
 - Máximo 2 fontes por peça (Bricolage + Inter)
 - Nunca fontes serifadas — contradizem o posicionamento tecnológico
 - Nunca usar Bricolage em tamanhos pequenos (abaixo de 28px perde a força)
-- Letter-spacing apenas em labels de pilar (Inter, caps, 2px) — nunca em headlines
+- Nunca letter-spacing em headlines
 
 ---
 
 ## Estilo Visual
 
 ### Conceito geral
-Tecnológico e humano. Escuro, preciso, confiante — como um Apple Store particular que não precisa gritar. A cor azul ancora o sistema sem dominar: aparece no detalhe certo no momento certo. Cada peça deve ser reconhecível como Smartbase mesmo sem o logo.
+Tecnológico e humano. Escuro, preciso, confiante — como um Apple Store particular que não precisa gritar. O azul ancora o sistema sem dominar: aparece no detalhe certo no momento certo. Cada peça deve ser reconhecível como Smartbase mesmo sem o logo.
 
-### Padrões de fundo
+### Tratamento de profundidade (a "linguagem" da marca)
+É o fio condutor — constante em todo card:
 
-1. **Dark sólido** — `#07070E` puro com texto e elementos gráficos. Usado em posts editoriais, manifestos, autoridade. É o padrão.
-2. **Foto de produto com overlay** — foto Apple oficial (iPhone, Watch, etc.) com escurecimento sutil. Mantém o produto reconhecível sem deixar o fundo roubar o texto. Usado em posts de produto (DECIFRA APPLE).
-3. **Ghost text** — texto grande em opacity 0.03 (`#F2F2F6`) como elemento de fundo — ex: "sb", número do modelo. Adiciona profundidade sem poluir.
-
-### Accent bar vertical
-- Barra de 4px de largura, altura total do post (1350px), colada na borda esquerda (x=0)
-- Cor = cor do pilar do post
-- Obrigatória em posts com pilar definido — é a âncora visual de identidade
+1. **Fundo em degradê** — degradê vertical sutil de superfície (`#121220`/`#10..12` no topo → `#07070E` embaixo). **Nunca preto chapado puro.**
+2. **Glow azul** — 1–2 elipses `#3E82F7` com layer blur ~200, opacity 0.12–0.30, atrás do conteúdo. Dá luz e profundidade.
+3. **Painel de vidro (a assinatura de profundidade)** — substitui a antiga marca d'água "sb". Um painel/retângulo arredondado de **vidro fosco** atrás ou emoldurando o conteúdo:
+   - **Figma:** frame com **Background blur ~30–60** + fill `#FFFFFF` a **4–8%** de opacidade + borda 1px `#FFFFFF` a ~10–14%, `rx` ~32–48.
+   - Dá o ar premium "frosted glass" sem texto de letras (que dava problema de legibilidade/corte).
+   - Pode emoldurar um número-herói, um trecho do conteúdo, ou só compor profundidade atrás.
+   - **Uma assinatura de profundidade por card.**
+4. **Tipo:** Bricolage ExtraBold nos headlines, Inter no corpo. Palavra-chave em azul.
 
 ### Elementos gráficos de apoio
+- **Divider horizontal** — `stroke="#1E1E2E"` ou `#1A1A2E`, 1px, sem opacity. Separa blocos.
+- **Chips** — pill arredondada: **tag** com contorno azul ~35%; **CTA** com fundo azul sólido.
+- **Dots de lista** — bolinha `#3E82F7` (r≈6–7) antes de itens de lista.
+- **Número-herói** — número gigante (Bricolage ExtraBold, `#C0C0D0` opacity ~0.20) como elemento visual de fundo em cards de dado/listicle (ex: "4", "90'", "11+").
 
-- **Divider horizontal** — `stroke="#1E1E2E"` ou `stroke="#1A1A2E"`, 1px, sem opacity. Separa blocos do layout.
-- **Badge de pilar** — pill `rx=14`, fundo na cor de superfície do pilar, texto Inter 16px 700 caps, cor do pilar. Posição: 80px left, ~98px top.
-- **Linha de destaque** — `rect` de 100px × 7px, `rx=3.5`, cor do pilar. Aparece abaixo do badge antes do headline.
-- **Ghost "sb"** — `font-size="520"` Bricolage 800, `#F2F2F6` opacity 0.03. Posição: canto esquerdo, visível no centro/baixo.
+> **Aposentados (não usar):** accent bar lateral · marca d'água de letras "sb" · badge de pilar na arte.
 
 ---
 
 ## Layout dos Posts
 
-### Post estático (1080×1350 — feed retrato padrão)
+### Post estático / card de carrossel (1080×1350 — feed retrato padrão)
 
-**Canvas:** 1080 × 1350px  
-**Padding lateral:** 80px (esquerda e direita)  
+**Canvas:** 1080 × 1350px
+**Padding lateral:** 80px (esquerda e direita)
 **Área segura:** 80–1000px horizontal
 
-**Estrutura vertical:**
+**Estrutura vertical (referência, flexível por jogada):**
 ```
-y=0–1350   Accent bar vertical esquerda (4px, cor do pilar)
-y=72–140   Badge de pilar (pill)
-y=188–195  Linha de destaque horizontal (100px, cor do pilar)
-y=310–670  Headline principal (Bricolage 800, 96px) — 3–4 linhas
-            Última palavra/frase: cor do pilar
-y=720–730  Divider horizontal (1E1E2E, 1px)
-y=774–850  Corpo / subtexto (Inter 400, 26–28px, #7A7A96)
-y=900      Citação ou CTA secundário (Inter 500, 30px, #3E82F7)
-y=1258     Divider footer (1E1E2E, 1px)
-y=1276–    Footer: wordmark esquerda + handle direita
+fundo      degradê escuro + glow azul + (painel de vidro)
+y=~160     Headline principal (Bricolage 800, 88–96px) — palavra-chave em azul
+           OU headline no rodapé do bloco, conforme a jogada
+meio       elemento-herói da jogada (número, lista com dots, mockup, etc.)
+corpo      subtexto (Inter 400, 26–34px, #7A7A96 / #C0C0D0)
+y=~1270    Footer: @smartbase.br centralizado
 ```
 
-**Footer fixo (obrigatório em todo post):**
-- Divider em y=1258 (ou y=1040 nos posts com foto de fundo)
-- Esquerda: badge "sb" (pill #0F0F1C, texto azul) + wordmark `smart` (300, `#C0C0D0`) · dot azul · `base` (700, `#F2F2F6`)
-- Direita: `@smartbase.br` Inter 20–22px, `#4A4A60` ou `#7A7A96`, alinhado em x=1000
+### Footer (obrigatório em todo post)
+- **`@smartbase.br` centralizado** no rodapé (Inter Medium ~26, branco ~85%).
+- Sem wordmark, sem badge "sb", sem handle à direita. Só o @ no meio.
 
 ### Carrossel
-
-- **Canvas:** 1080 × 1350px (mesmo do post estático)
-- **Capa:** accent bar, badge pilar, headline forte (1–2 linhas), foto de produto ou dark sólido, seta/indicador de arraste em Inter 22px `#3E82F7`
-- **Slides internos:** fundo `#07070E`, sem accent bar lateral, hierarquia clara (título em Bricolage, dados em Inter), dividers como separadores de blocos
-- **Último slide:** CTA direto — "falar no whatsapp →" ou similar, wordmark centralizado ou no footer padrão
-- **Capa aprovada de referência:** `conteudo/1. orgânico | abril/12-05_carrossel_01.png`
+- **Canvas:** 1080 × 1350px
+- **Capa:** degradê + glow + (painel de vidro), headline forte (1–2 linhas) com palavra em azul, indicador de arraste em chip ("arrasta →", Inter, azul)
+- **Slides internos:** mesma moldura (degradê + glow + footer), hierarquia clara (título Bricolage, dados Inter), dividers separando blocos
+- **Último slide:** CTA direto — "falar no whatsapp →" / "manda no whatsapp →", footer padrão
 
 ### Stories (quando produzido)
 - Canvas: 1080 × 1920px
-- Manter mesma paleta e tipografia — nunca mudar o sistema só pela proporção
-- Accent bar na base inferior em vez da lateral esquerda (opcional)
-- Footer compacto: só o handle `@smartbase.br`
+- Mesma paleta, tipografia e tratamento de profundidade — nunca mudar o sistema só pela proporção
+- Footer compacto: só `@smartbase.br` centralizado na base
 
 ---
 
-## Layout por Pilar de Conteúdo
+## Kit de jogadas — variar ao longo do feed
+
+Escolher **uma jogada-herói por carrossel**, variando entre posts pra o grid não ficar carimbado.
+
+1. **Número-herói** — número gigante como visual (ex: "4", "90'", "11+"). Dado/listicle.
+2. **Palavra explodida** — uma palavra dominando o slide (ex: "a caixa.", "errado.", "pegadinha."). Take/virada.
+3. **Mockup de tela** — desenhado no Figma: card de app (ícone + nome + placar) ou tela de bloqueio com Live Activity. Autêntico, não precisa de foto.
+4. **Capa glow + painel de vidro** — atmosférica, hook grande, palavra em azul, profundidade pelo vidro.
+5. **Comparação em cards** — dois cards contrastando (ex: "todo iphone 11+" x "a inteligência nova"). Esclarece + gera comentário.
+6. **Lista com dots** — itens com bolinha azul (ex: o que vem no seminovo, o que a gente avalia na troca).
+7. **Enquete** — pergunta + opções com checkbox visual ("responde nos comentários"). Engajamento.
+8. **Foto/produto** — slot reservado pra foto real recortada — preenche quando tiver imagem.
+
+### Regra de ouro: variedade x coesão
+- **Variedade vive ENTRE posts:** cada carrossel usa uma jogada-herói diferente.
+- **Coesão vive DENTRO do carrossel:** os slides compartilham a moldura (degradê + glow + painel de vidro + footer + estilo de tipo); só o elemento-herói do meio muda. Não misturar 6 estruturas num só carrossel.
+
+### Mockups de dispositivo (padrão — lição 13/06)
+Quando um card mostra uma tela ou aparelho, usar **mockup de dispositivo REALISTA**, nunca retângulo desenhado à mão.
+- **Device frame realista:** iPhone/Watch com notch, dynamic island, botões, sombra e **wallpaper real do iOS**. Fonte: bibliotecas de device do Figma / Apple Design Resources.
+- **UI/screenshot real do recurso** dentro do device (ex.: Apple Sports com bandeiras, Dynamic Island com placar, tela de bloqueio com Live Activity).
+- **Conteúdo real** (bandeiras, chrome do app, wallpaper) > texto chapado. Dá cara de keynote da Apple.
+- Técnico: imagem entra no Figma via `upload_assets` (POST dos bytes pra URL retornada); `createImageAsync` não é suportado no `use_figma`.
+
+---
+
+## Pilares de conteúdo (categorias — sem cor própria)
+
+Os pilares organizam o **conteúdo**, não a cor. Todos usam o mesmo sistema visual (degradê + glow + vidro + azul). O badge de pilar é **só interno** (organização no Figma) — nunca vai na arte publicada.
 
 ### DECIFRA APPLE
-- **Objetivo:** carrosséis investigativos — dados reais (tributação, Paraguai, garantia, modelos)
-- **Cor de pilar:** blue `#3E82F7` / surface `#0E1E3A`
-- **Fundo:** dark sólido + ghost text opcional
-- **Tipografia em destaque:** Bricolage 800 com palavra-chave em azul
+- **Objetivo:** carrosséis investigativos — dados reais (tributação, garantia, modelos, recursos)
 - **Tom visual:** informativo, técnico, preciso — como um briefing Apple
+- **Jogadas típicas:** número-herói, lista com dots, comparação em cards, mockup de tela
 
 ### CASA SMARTBASE
-- **Objetivo:** diferencial "paga quando recebe", prova social, bastidor
-- **Cor de pilar:** purple `#8B5CF6` / surface `#1C1028`
-- **Fundo:** foto de vendedor ou ambiente (com overlay escuro) ou dark sólido
-- **Tipografia em destaque:** Bricolage 800 com palavra-chave em roxo
-- **Tom visual:** humano, próximo, confiante — como quem realmente conhece a pessoa
+- **Objetivo:** diferencial "paga quando recebe", prova social, bastidor, upgrade
+- **Tom visual:** humano, próximo, confiante
+- **Jogadas típicas:** palavra explodida, capa glow + vidro, foto/produto, enquete
 
-### VIDA APPLE EM CAXIAS
+### VIDA APPLE EM CAXIAS  — *layout a redefinir*
 - **Objetivo:** ancoragem local, fotos em iPhone na Serra Gaúcha
-- **Cor de pilar:** green `#10B981` / surface `#0A201A`
-- **Fundo:** preferencialmente foto com overlay — lifestyle, local, atmosfera
-- **Tipografia em destaque:** Bricolage 800 com palavra-chave em verde
-- **Tom visual:** editorial, leve, cotidiano — Apple como parte da vida
+- **Status:** o layout antigo (foto-led com headline no rodapé) **não foi pro ar**. Design novo a propor — manter degradê/glow/vidro e azul como sistema, resolvendo como a foto local entra sem virar "banco de imagem". Marcar como pendência de design.
 
 ---
 
 ## O que NUNCA fazer
 
 **Cores:**
-- Usar `#FFFFFF` (branco puro) como fundo — nunca; a marca é dark-first
-- Usar `#25D366` (wa-green) fora de contexto de WhatsApp
-- Adicionar cor quente (laranja, vermelho, amarelo) em qualquer elemento
-- Criar gradiente vibrante ou neón — vai contra o posicionamento técnico-premium
-- Misturar mais de uma cor de pilar no mesmo post — cada post tem uma só cor de acento
+- `#FFFFFF` (branco puro) como fundo — a marca é dark-first
+- `#25D366` (wa-green) fora de contexto de WhatsApp
+- Cor quente (laranja, vermelho, amarelo) em qualquer elemento
+- Gradiente vibrante ou neón
+- Inventar cor de acento fora do azul `#3E82F7`
 
 **Tipografia:**
 - Fontes serifadas em qualquer contexto
-- Bricolage em tamanho abaixo de 28px
+- Bricolage abaixo de 28px
 - Mais de 2 famílias tipográficas por peça
-- Texto em caps lock no headline — Bricolage já tem força, não precisa gritar
-- Letter-spacing em headlines — só em labels de pilar (Inter, caps)
+- Caps lock ou letter-spacing no headline
 
 **Layout:**
-- Preço no feed — nunca. Só no WhatsApp, onde a conversa já é quente
+- Preço no feed — nunca. Só no WhatsApp
 - Banneraço com preço + telefone + produto + texto junto — estética de varejo
 - Falta de margem — padding mínimo de 80px lateral, sempre
-- Post sem footer — wordmark e handle são obrigatórios em toda peça
-- Accent bar ausente em posts com pilar definido
+- Post sem footer — `@smartbase.br` centralizado é obrigatório
+- **Badge de pilar na arte publicada** — é só interno
+- **Marca d'água de letras "sb" na arte** — usar painel de vidro pra profundidade
+- **Accent bar lateral** — aposentada
 
 **Tom visual:**
-- Estética de loja de varejo genérica (fundo branco, produto grande, preço em vermelho)
+- Estética de varejo genérica (fundo branco, produto grande, preço em vermelho)
 - Qualquer elemento que pareça "promoção" — a Smartbase posiciona, não promove
-- Posts sem identidade reconhecível — qualquer peça deve ser lida como Smartbase sem ver o logo
+- Posts sem identidade — qualquer peça deve ser lida como Smartbase sem ver o logo
+
+---
+
+## Princípio de copy (LightCopy + storytelling)
+- **Premissa, não promessa** (Ladeira): ensina algo real, a venda vem de consequência.
+- **Storytelling de jornada:** uma missão em passos numerados (01, 02, 03...), produto como último passo. O leitor aplica os passos mesmo sem comprar.
+- **Engajamento:** ao menos 1 slide salvável/comentável (enquete, checklist, dado).
+- **Voz (de `conteudo/voz-smartbase.md`):** caixa baixa, take primeiro, fato concreto, CTA convite. **Pessoa:** "você/seu" no feed; "tu" fica só pro WhatsApp 1:1. **Proibido:** travessão, "não é X, é Y", emoji de enfeite, promoção genérica, preço no feed, prometer "100% de bateria" como padrão.
 
 ---
 
 ## Referências visuais aprovadas
 
-- `conteudo/1. orgânico | abril/12-05_carrossel_01.png` — capa de carrossel com foto e accent bar azul. Referência de hierarquia e footer.
-- `conteudo/1. orgânico | abril/12-05_carrossel_02.png` — slide interno de carrossel
-- `conteudo/2. orgânico | maio/post_29-05.png` — post estático aprovado de maio
-- `conteudo/orgânico | não aprovado/` — referências de estrutura, mas estilo não aprovado pelo cliente
+- Figma `QKN6E4t9w2XPdATrXzivvN`, página "orgânico feed | junho/26" — kit aplicado: Copa `1000-29`, iOS 27 `992-29`, seminovo `1004-29`, upgrade/trade-in `647-286`.
+- `conteudo/1. orgânico | abril/12-05_carrossel_01.png` — referência de hierarquia e footer.
 
 ---
 
 ## Tokens para uso em SVG
 
 ```
-Fundo:       fill="#07070E"
-Surface:     fill="#0F0F1C"
-Divider:     stroke="#1E1E2E"
-Accent blue: fill="#3E82F7"
-Accent purp: fill="#8B5CF6"
-Accent green:fill="#10B981"
-Headline:    fill="#F2F2F6"   font-family="'Bricolage Grotesque'" font-size="96" font-weight="800"
-Corpo:       fill="#7A7A96"   font-family="'Inter'" font-size="26" font-weight="400"
-Handle:      fill="#4A4A60"   font-family="'Inter'" font-size="20" font-weight="500"
-Wordmark:    smart → font-weight="300" fill="#C0C0D0" / base → font-weight="700" fill="#F2F2F6"
-Dot:         <circle r="5" fill="#3E82F7"/>
-Badge sb:    <rect rx="15" fill="#0F0F1C"/> <text fill="#3E82F7" font-weight="600">sb</text>
+Fundo (degradê):  topo #121220 → base #07070E (vertical)
+Surface:          fill="#0F0F1C"
+Divider:          stroke="#1E1E2E"
+Acento (único):   fill="#3E82F7"
+Glow:             elipse #3E82F7, blur ~200, opacity 0.12–0.30
+Painel de vidro:  fill="#FFFFFF" opacity 0.04–0.08 + stroke #FFFFFF opacity 0.10–0.14 + background blur (Figma)
+Headline:         fill="#F2F2F6"  font-family="'Bricolage Grotesque'" font-size="88-96" font-weight="800"
+Corpo:            fill="#7A7A96"  font-family="'Inter'" font-size="26-34" font-weight="400"
+Número-herói:     fill="#C0C0D0" opacity 0.20  font-family="'Bricolage Grotesque'" font-weight="800"
+Footer (handle):  fill="#F2F2F6" opacity 0.85  font-family="'Inter'" font-size="26" font-weight="500"  → @smartbase.br CENTRALIZADO
+Dot de lista:     <circle r="6" fill="#3E82F7"/>
 ```
-
----
-
-## Kit de jogadas — evolução do carrossel (jun/2026)
-
-> Evolução aprovada pela Letícia. O dark sólido continua válido, mas os carrosséis de conteúdo ganharam **profundidade** e um **kit de layouts variados**. Referências montadas no Figma (`QKN6E4t9w2XPdATrXzivvN`, página "orgânico feed | junho/26"): Copa `1000-29`, iOS 27 `992-29`, seminovo `1004-29`.
-
-### Tratamento de profundidade (a "linguagem" da marca)
-Constantes em todo card (é o fio condutor):
-- **Fundo:** degradê vertical sutil de superfície (`#10..12` no topo → `#07070E` embaixo). Não é mais o preto chapado puro.
-- **Glow azul:** 1-2 elipses `#3E82F7` com layer blur ~200, opacity 0.12–0.30, atrás do conteúdo. Dá luz e profundidade.
-- **Marca d'água:** sempre **"sb"** (as duas letras juntas, nunca só "b"), Bricolage ExtraBold, em `#F2F2F6`, atrás do conteúdo. **As duas letras têm que aparecer inteiras na arte** (não deixar sangrar/cortar na borda). Referência da capa da Copa: ~1000px, opacity ~0.20. Uma assinatura por card: nos slides com número grande (01, 02...), o próprio número é o ghost; o "sb" entra nos cards sem número.
-- **Tipo:** Bricolage ExtraBold nos headlines, Inter no corpo. Palavra-chave em azul.
-- **Footer:** `@smartbase.br` (Inter Medium 26, branco 85%) no rodapé esquerdo.
-- **Chips:** pill arredondada; tag com contorno azul 35%, CTA com fundo azul sólido.
-
-### As jogadas (escolher por post, variar ao longo do feed)
-1. **Número-herói** — número gigante como visual (ex: "4", "90'", "11+"). Dado/listicle.
-2. **Palavra explodida** — uma palavra dominando o slide (ex: "a caixa.", "errado.", "pegadinha."). Take/virada.
-3. **Mockup de tela** — desenhado no Figma: card de app (ícone + nome + placar) ou tela de bloqueio com Live Activity. Autêntico, não precisa de foto.
-4. **Capa glow + marca d'água** — atmosférica, hook grande, palavra em azul.
-5. **Comparação em cards** — dois cards contrastando (ex: "todo iphone 11+" x "a inteligência nova"). Esclarece + gera comentário.
-6. **Lista com dots** — itens com bolinha azul (ex: o que vem no seminovo).
-7. **Enquete** — pergunta + opções com checkbox visual ("responde nos comentários"). Engajamento (comentário/save).
-8. **Foto/produto** — slot reservado pra foto real recortada (ex: 17 pro max laranja no CTA) — preenche quando tiver imagem.
-
-### Regra de ouro: variedade x coesão
-- **Variedade vive ENTRE posts:** cada carrossel do feed usa uma jogada-herói diferente, pra o grid não ficar carimbado.
-- **Coesão vive DENTRO do carrossel:** os slides de um mesmo carrossel compartilham a moldura (degradê + glow + marca d'água + footer + estilo de tipo); só o elemento-herói do meio muda. Não misturar 6 estruturas diferentes num só carrossel.
-
-### Princípio de copy (LightCopy + storytelling)
-- **Premissa, não promessa** (Ladeira): ensina algo real, a venda vem de consequência.
-- **Storytelling de jornada:** uma só missão em passos numerados (01, 02, 03...), produto como último passo. O leitor tem que conseguir aplicar os passos mesmo sem comprar.
-- **Engajamento:** ao menos 1 slide salvável/comentável (enquete, checklist, dado).
-- **Voz (de `conteudo/voz-smartbase.md`):** caixa baixa, take primeiro, fato concreto, CTA convite. **Proibido:** travessão, "não é X, é Y", emoji de enfeite, promoção genérica, preço no feed, prometer "100% de bateria" como padrão.
-
-### Mockups de dispositivo (padrão — lição 13/06)
-Quando um card mostra uma tela ou aparelho, usar **mockup de dispositivo REALISTA**, nunca retângulo desenhado à mão.
-- **Device frame realista:** iPhone/Watch com notch, dynamic island, botões, sombra e **wallpaper real do iOS**. Fonte: bibliotecas de device do Figma / Apple Design Resources.
-- **UI/screenshot real do recurso** dentro do device: ex. Apple Sports (FIFA World Cup 2026 com bandeiras e troféu), Dynamic Island com placar, tela de bloqueio com Live Activity, Apple Watch Ultra com placar, tela de "Editar Automação" do app Atalhos.
-- **Conteúdo real** (bandeiras, chrome do app, wallpaper) > texto chapado tipo "brasil 2". Dá cara de keynote da Apple, que é o nível premium do feed.
-- Referência: carrossel da Copa (`post_carrossel_13-06-*`), refeito pela Letícia nesse padrão.
-- Técnico: imagem entra no Figma via a ferramenta `upload_assets` (POST dos bytes pra URL retornada); `createImageAsync` não é suportado no use_figma.

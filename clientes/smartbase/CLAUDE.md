@@ -113,25 +113,23 @@ Feed constrói confiança e desejo. WhatsApp fecha a venda. Cada post tem um cam
 
 Design system completo documentado. Sempre consultar antes de qualquer tarefa visual.
 
+> **Fonte da verdade:** `marca/design-guide.md` (reconciliado 15/06/2026). O resumo abaixo segue ele; em conflito, o guia vale.
+
 **Cores principais:**
-- `bg` `#07070E` — fundo de todos os posts
-- `surface` `#0F0F1C` — cards e blocos
-- `blue` `#3E82F7` — cor primária (dot do wordmark, CTA, pilar Produto)
-- `white` `#F2F2F6` — headlines
-- `gray-sub` `#7A7A96` — caption, contadores
+- `bg` `#07070E` / `surface` `#0F0F1C` — fundo (degradê escuro) e cards
+- `blue` `#3E82F7` — **acento único** do sistema (CTA, dot do wordmark, glow, palavra-chave)
+- `white` `#F2F2F6` — headlines · `gray-sub` `#7A7A96` — corpo/caption
+- **Sem cor por pilar.** O azul é a única cor de acento.
 
-**Pilares de conteúdo:**
-- PRODUTO → blue `#3E82F7` / surface `#0E1E3A`
-- IDENTIDADE → purple `#8B5CF6` / surface `#1C1028`
-- AUTORIDADE → green `#10B981` / surface `#0A201A`
+**Pilares de conteúdo (categorias, sem cor própria):** Decifra Apple · Casa Smartbase · Vida Apple em Caxias. Badge de pilar é **só interno** — nunca na arte publicada.
 
-**Tipografia:** SF Pro Display / Helvetica Neue (sistema). Sem fonte custom por ora.
+**Tipografia:** Bricolage Grotesque (headlines) + Inter (corpo). Caixa baixa, nunca CAPS no headline.
+
+**Profundidade:** degradê escuro + glow azul + **painel de vidro** (frosted glass no Figma). Sem marca d'água "sb", sem accent bar.
 
 **Canvas padrão:** 1080×1350 (feed retrato). Padding lateral 80px.
 
-**Wordmark:** `smart` (300, gray-mid) · `•` (blue, 10–12px) · `base` (700, white). Dot azul obrigatório.
-
-**Footer fixo em todo post:** divider `#1E1E2E` em y=988 + wordmark esquerda + `@smartbase.rs` direita em y=1022.
+**Footer fixo em todo post:** `@smartbase.br` **centralizado** no rodapé. Sem wordmark, sem handle à direita.
 
 **Arquivos de referência:**
 - `marca/plataforma-de-marca.md` — plataforma de marca (território, essência, promessa, arquétipo, pilares de mensagem, assinatura) ⭐
