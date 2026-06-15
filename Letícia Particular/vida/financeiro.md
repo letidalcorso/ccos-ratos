@@ -2,36 +2,40 @@
 
 Atualizado: 15/06/2026. Privado, só local (fora do Git).
 
-**Divisão de casa:** meio a meio (50/50) com o namorado.
-- **Compartilhado (÷2):** aluguel, condomínio, internet
-- **Particular (100% Letícia):** cartão de crédito, luz, parcela ap, recreio da juventude
+## Como está organizado (arranjo atual)
+
+A planilha original era de um arranjo **antigo, com o ex** — por isso a coluna "Lele" trazia divisões diferentes. Atualizado pro que vale hoje:
+
+**Contas da CASA — divididas 50/50 com o namorado atual:**
+- Aluguel, condomínio, internet
+- (+ outros cartões que ela divide com o namorado pras contas da casa — a receber)
+- (luz — a confirmar se entra aqui)
+
+**Contas DELA (particular):**
+- Recreio da juventude — 100% dela (o namorado atual não tem)
+- Parcela ap — 100% dela (parcela mensal de investimento num apartamento)
+- Cartão de crédito — dela, mas **dividido com o ex**; a parte dela é R$ 210,01
 
 ## Contas do mês (ordem de vencimento)
 
-| Conta | Vence | Valor total | Tipo | Parte da Letícia |
-|-------|-------|------------:|------|----------------:|
-| Aluguel | 07/06 | 2.326,15 | Casa ÷2 | 1.163,08 |
-| Condomínio | 10/06 | 877,65 | Casa ÷2 | 438,83 |
-| Cartão de crédito | 10/06 | 525,03 | Particular | 525,03 |
-| Recreio da juventude | 10/06 | 922,20 | Particular | 922,20 |
-| Internet | 15/06 | 99,00 | Casa ÷2 | 49,50 |
-| Luz | 15/06 | (falta valor) | Particular | a definir |
-| Parcela ap | 25/06 | 1.144,02 | Particular | 1.144,02 |
+| Conta | Vence | Valor cheio | Arranjo | Parte da Letícia |
+|-------|-------|------------:|---------|----------------:|
+| Aluguel | 07/06 | 2.326,15 | Casa ÷2 (namorado) | 1.163,08 |
+| Condomínio | 10/06 | 877,65 | Casa ÷2 (namorado) | 438,83 |
+| Cartão de crédito | 10/06 | 525,03 | Dividido c/ ex | 210,01 |
+| Recreio da juventude | 10/06 | 922,20 | 100% dela | 922,20 |
+| Internet | 15/06 | 99,00 | Casa ÷2 (namorado) | 49,50 |
+| Luz | 15/06 | a confirmar | a confirmar | a confirmar |
+| Parcela ap | 25/06 | 1.144,02 | 100% dela (investimento) | 1.144,02 |
 
-## Totais (sem a luz, que ainda falta)
+## Total parcial
 
-- Total geral das contas: **R$ 5.894,05**
-- **O que a Letícia paga: R$ 4.242,65**
-- O que cabe ao namorado (metade do compartilhado): **R$ 1.651,40**
+- **Parte da Letícia até aqui: R$ 3.927,64**
+- Ainda faltam: outros cartões da casa + luz
 
 ## Pendências
 
-- [ ] Valor da **luz** (veio R$ 0 na planilha — preencher quando a conta chegar)
-- [ ] Confirmar **quem paga cada conta compartilhada** (pra saber quem transfere pra quem no acerto)
-- [ ] Resolver o **conflito com a planilha antiga** (ver abaixo)
-
-## Conflito a resolver
-
-Na planilha que a Letícia mandou, a coluna **"Lele"** mostra ela pagando **aluguel e condomínio inteiros** (R$ 2.326,15 e R$ 877,65 — não metade) e dividindo cartão, parcela ap e recreio em porcentagens variadas. Isso **não bate** com a regra que ela me deu agora (aluguel/condomínio/internet ÷2, resto 100% dela).
-
-Hipótese: a planilha é o estado **atual** (arranjo antigo, talvez injusto) e a regra nova é o que ela **quer** passar a valer. Confirmar antes de fechar.
+- [ ] **Outros cartões** que ela divide com o namorado pras contas da casa (vai mandar)
+- [ ] **Luz** — valor + se entra na divisão da casa
+- [ ] Confirmar a parte dela no **cartão dividido com o ex** (usei R$ 210,01 da planilha)
+- [ ] Quem paga cada conta de casa de fato (pra fechar o acerto com o namorado)
