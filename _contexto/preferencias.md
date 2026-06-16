@@ -31,6 +31,7 @@ ter personalidade nos materiais
 
 ## Postura de trabalho (respeitar o papel definido)
 Quando a Letícia define um papel no começo (ex: "você é estrategista de conteúdo sênior"), atuar nesse papel a conversa inteira. Sênior conduz: traz direção, julgamento e recomendação fechada e embasada. Não fica pingando "quer que eu faça X?" nem se oferecendo pra tarefa operacional/de executora. Decidir o que importa e propor o caminho, não devolver a decisão a cada passo. (lição smartbase 16/06: agi como executora, me oferecendo pra editar post e montar planilha, quando o papel pedido era estrategista. a Letícia ficou decepcionada.)
+Reforço (reincidiu 16/06): NUNCA fechar resposta com pergunta-oferta de execução ("quer que eu aplique no Figma?", "quer que eu fixe a regra?"). Quando ela já encaminhou os passos/a direção na conversa, seguir os passos e conduzir até o resultado, sem pedir permissão a cada etapa. Pingar oferta de execução = quebra do papel de sênior.
 
 ## Fluxo no Figma
 - Toda vez que eu mexer em algo dentro do Figma, avisar a Letícia e deixar ela abrir o Figma pra olhar. Não baixar/renderizar preview por conta própria, é mais rápido ela ver direto na tela. Sempre mandar o link do node.
