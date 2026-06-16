@@ -28,7 +28,7 @@ Comprar AirPods sem saber a diferença entre os modelos é jogar dinheiro fora. 
 - **AirPods 4:** o formato aberto clássico, que só encosta no ouvido sem vedar. Leve, confortável pra quem não gosta de ponta de silicone. A versão base não tem cancelamento de ruído.
 - **AirPods 4 com cancelamento:** mesmo formato aberto, agora com cancelamento de ruído. Funciona, mas é mais fraco que o do Pro, porque sem vedação o som de fora sempre entra um pouco.
 - **AirPods Pro (2 e 3):** os in-ear, com ponta de silicone que veda o ouvido. Cancelamento de ruído de verdade, áudio espacial e recursos de audição. O Pro 3 é o topo atual; o Pro 2 segue excelente e costuma ser a melhor escolha de custo, principalmente como seminovo.
-- **AirPods Max:** os over-ear, fone de cabeça premium, pra quem quer o máximo de áudio e não se importa com o tamanho.
+- **AirPods Max:** os over-ear, o fone de cabeça topo de linha da Apple, pra quem quer o máximo de áudio e não se importa com o tamanho.
 
 ## Qual combina com você
 
@@ -54,7 +54,7 @@ No seminovo de AirPods tem um detalhe que importa mais que em outros aparelhos: 
 
 ## O jeito Smartbase: o certo pro teu uso, conferido antes de pagar
 
-A gente não empurra o mais caro. Te ajuda a achar o AirPods que combina com o teu uso e o teu bolso, novo lacrado ou seminovo conferido. No seminovo, a gente informa a saúde real da bateria e mostra o produto funcionando antes de você pagar. A gente garante a originalidade, sem pix antes, sem "confia".
+A gente te ajuda a achar o AirPods certo pro teu uso e o teu bolso, novo lacrado ou seminovo conferido. No seminovo, a gente informa a saúde real da bateria e mostra o produto funcionando antes de você pagar. A gente garante a originalidade, sem pix antes, sem "confia".
 
 A Smartbase tem loja física em Caxias do Sul, com endereço e atendimento direto. Como o preço dos importados muda conforme o dólar, o valor atualizado de cada modelo fica no WhatsApp. [Dá uma olhada na vitrine](/pages/vitrine) ou [chama no WhatsApp](https://wa.me/5554996624494) que a gente te indica o ideal pra ti. **Paga quando receber.**
 
@@ -72,9 +72,9 @@ Se você ainda não tem um Pro, o Pro 3 é o mais completo. Mas o Pro 2 segue ex
 **AirPods seminovo vale a pena?**
 Vale, desde que você saiba a saúde da bateria, que é o ponto crítico (ela não se troca). Comprando de quem confere e informa isso antes do pagamento, é um ótimo negócio.
 
-## No fim, a regra é simples
+## Como decidir rápido
 
-O melhor AirPods é o que combina com o teu uso: AirPods 4 pro dia a dia leve, Pro pra silêncio e treino, Max pra quem quer o máximo de áudio. Decidiu o uso, decidiu o modelo. E se a loja te ajuda a escolher certo e te deixa conferir antes de pagar, melhor ainda.
+O melhor AirPods é o que combina com o teu uso: AirPods 4 pro dia a dia leve, Pro pra silêncio e treino, Max pra quem quer o máximo de áudio. Sabendo o uso, o modelo se escolhe sozinho. E se a loja te ajuda a acertar e te deixa conferir antes de pagar, melhor ainda.
 
 ---
 

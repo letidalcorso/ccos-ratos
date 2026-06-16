@@ -64,11 +64,14 @@ Custo fixo grande ≈ **R$ 3.031/mês** (casa 1.651 + Recreio 922 + apê 458) vs
 
 - **Namorado — parte dele nas contas de casa: R$ 6.218,07.** Cobrança enviada em 16/06/2026, **aguardando o pagamento dele.** (Ainda não inclui a metade da luz — ver pendência abaixo.)
 
+## Quem administra a casa
+
+A Letícia é **responsável pelo financeiro da casa** (a princípio): ela recebe/paga as contas de casa e o namorado **reembolsa a metade dele**. Modelo 50/50 mantido — muda só quem opera o pagamento.
+
 ## Pendências
 
-- [ ] **Luz** — valor + se racha no meio. Como o namorado ainda não pagou, dá pra somar a metade dele já na cobrança atual (evita uma segunda transferência depois).
-- [x] **Santander** — QUITADA em 16/06/2026, saiu do rotativo. Falta só registrar o valor final pago (com saldo anterior + juros) pra fechar o arquivo.
-- [ ] Confirmar quem paga cada conta (se o namorado paga alguma direto, o reembolso muda)
+- [ ] **Luz** — sem valor ainda; única ponta aberta de junho. Quando vier, a metade dele entra na **próxima** cobrança (a de R$ 6.218,07 já foi enviada sem a luz).
+- [x] **Santander** — QUITADA em 16/06/2026, saiu do rotativo.
 
 ## Alerta (resolvido)
 
