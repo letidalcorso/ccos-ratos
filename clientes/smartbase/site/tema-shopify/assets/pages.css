@@ -851,6 +851,10 @@ body.no-glow .cta-band-glow{display:none}
 }
 @media(max-width:560px){
   .vt-bar-div{display:none}
+  /* a pílula de filtro não cabe numa linha no celular: quebra os chips dentro dela */
+  .vt-chips-wrap{padding-top:14px;padding-bottom:14px}
+  .vt-bar{max-width:100%;flex-wrap:wrap;justify-content:center}
+  .vt-bar .vt-seg,.vt-bar .vt-chips{flex-wrap:wrap;justify-content:center}
 }
 
 /* ============================================================
