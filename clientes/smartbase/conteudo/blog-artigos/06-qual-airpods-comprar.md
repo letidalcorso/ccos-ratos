@@ -30,6 +30,21 @@ Comprar AirPods sem saber a diferença entre os modelos é jogar dinheiro fora. 
 - **AirPods Pro (2 e 3):** os in-ear, com ponta de silicone que veda o ouvido. Cancelamento de ruído de verdade, áudio espacial e recursos de audição. O Pro 3 é o topo atual; o Pro 2 segue excelente e costuma ser a melhor escolha de custo, principalmente como seminovo.
 - **AirPods Max:** os over-ear, o fone de cabeça topo de linha da Apple, pra quem quer o máximo de áudio e não se importa com o tamanho.
 
+## Comparativo rápido
+
+| | AirPods 4 | AirPods 4 (ANC) | AirPods Pro 2 | AirPods Pro 3 |
+|---|---|---|---|---|
+| Formato | aberto | aberto | in-ear (ponta) | in-ear (ponta) |
+| Cancelamento de ruído | não | sim (leve) | sim (forte) | sim (o mais forte) |
+| Modo transparência | ✕ | ✓ | ✓ | ✓ |
+| Áudio espacial | ✓ | ✓ | ✓ | ✓ |
+| Recurso de audição | ✕ | ✕ | ✓ | ✓ |
+| Batimento cardíaco | ✕ | ✕ | ✕ | ✓ |
+| Resistência (água/pó) | IP54 | IP54 | IP54 | IP57 |
+| Bateria (fone) | até 5h | até 5h | até 6h | até 8h |
+| Estojo com carga sem fio | ✕ | ✓ | ✓ | ✓ |
+| Melhor pra | dia a dia leve | ANC sem ponta de silicone | silêncio e custo | o topo: treino e saúde |
+
 ## Qual combina com você
 
 - **"Quero o básico sem fio, pra música e ligação no dia a dia."** AirPods 4. Leve, prático, sem complicação.
