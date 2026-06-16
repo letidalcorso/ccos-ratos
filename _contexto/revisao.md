@@ -49,7 +49,7 @@ arte é o MAIOR ponto de retrabalho da Letícia. revisar com rigor extra e, se f
 - isso repete info que ela já tem nos arquivos? então referenciar, não repetir.
 - estou perguntando algo que já está no contexto ou na memória? então buscar primeiro, não pedir pra ela.
 - estou refazendo algo que já existe? conferir antes de criar do zero.
-- antes de propor qualquer ação ou sugerir criar algo, varrer TODOS os arquivos relevantes do cliente, não só alguns. não sugerir criar o que já existe nem perguntar o que já está documentado. (lição smartbase: sugeri "montar a máquina de conversa" sem ter lido `maquina-conversa-smartbase.md`, que já estava pronta com roteiros e respostas rápidas.)
+- antes de propor qualquer ação ou sugerir criar algo, varrer TODOS os arquivos relevantes do cliente, não só alguns. **operacional: antes de oferecer "montar/criar X", rodar uma busca (grep/glob por X) na pasta do cliente; se já existe, partir do que existe.** não sugerir criar o que já existe nem perguntar o que já está documentado. (lições smartbase, mesma falha 2x na mesma sessão: sugeri "montar a máquina de conversa" sem ler `maquina-conversa-smartbase.md` que já existia pronta; e perguntei "monto a planilha de tracking" sem ver que ela já está definida na máquina e que o funil/retargeting do Meta já tinha sido discutido no `relatorio-meta-ads-smartbase.md`.)
 
 ## 5. completude
 
