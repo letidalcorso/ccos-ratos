@@ -1,6 +1,6 @@
 # Financeiro — junho 2026
 
-Atualizado: 15/06/2026. Privado, só local (fora do Git).
+Atualizado: 16/06/2026. Privado, só local (fora do Git).
 Divisão de casa: **meio a meio (50/50)** com o namorado atual. O ex está fora da conta.
 
 ## Contas do mês (ordem de vencimento)
@@ -60,12 +60,16 @@ Custo fixo grande ≈ **R$ 3.031/mês** (casa 1.651 + Recreio 922 + apê 458) vs
 
 **Alavancas:** Recreio → sócia ausente (em andamento); vender os iPhones no prazo; não tirar dos R$ 5k aplicados.
 
+## A receber
+
+- **Namorado — parte dele nas contas de casa: R$ 6.218,07.** Cobrança enviada em 16/06/2026, **aguardando o pagamento dele.** (Ainda não inclui a metade da luz — ver pendência abaixo.)
+
 ## Pendências
 
-- [ ] **Luz** — valor + se racha no meio
-- [ ] **Santander em rotativo/atraso** — verificar saldo anterior + juros/multa (ela ia conferir)
+- [ ] **Luz** — valor + se racha no meio. Como o namorado ainda não pagou, dá pra somar a metade dele já na cobrança atual (evita uma segunda transferência depois).
+- [x] **Santander** — QUITADA em 16/06/2026, saiu do rotativo. Falta só registrar o valor final pago (com saldo anterior + juros) pra fechar o arquivo.
 - [ ] Confirmar quem paga cada conta (se o namorado paga alguma direto, o reembolso muda)
 
-## Alerta (importante)
+## Alerta (resolvido)
 
-A Santander está em **crédito rotativo / atraso**, juros de **15,19% ao mês (~445% ao ano)**. É o dinheiro mais caro que existe. Quitar à vista (ou pelo menos não deixar rolar pro mês seguinte) é a prioridade nº 1.
+A Santander estava em **crédito rotativo / atraso**, juros de **15,19% ao mês (~445% ao ano)** — o dinheiro mais caro que existe. **Quitada em 16/06.** Regra pra frente: nunca mais deixar o rotativo rolar pro mês seguinte, e vigiar o cartão pessoal (~R$ 5k) pra não cair no mesmo buraco.
