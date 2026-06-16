@@ -1,12 +1,10 @@
 #!/bin/bash
-# Injeta a trava de revisão em toda mensagem (UserPromptSubmit).
-# Garante que nada chega na Letícia sem passar pela checagem de _contexto/revisao.md.
+# Injeta as travas de qualidade em toda mensagem (UserPromptSubmit).
+# Trava 1: revisar antes de entregar. Trava 2: correção vira regra.
 cat <<'EOF'
-=== TRAVA DE REVISÃO (obrigatória antes de entregar) ===
-Antes de mostrar QUALQUER entrega pra Letícia (texto, copy, arte, carrossel, site, campanha, pacote de cliente), rodar a revisão de _contexto/revisao.md (skill /revisar). Ela revisa por último, depois que a entrega já passou pela trava.
-- Texto curto: rodar a checklist na hora, antes de fechar a resposta.
-- Arte e entrega grande: abrir um sub-Claude revisor com olhar crítico.
-- Conferir sempre: anti-IA (sem travessão, sem Title Case, sem contraste "não é X, é Y", sem emoji decorativo), travas do cliente (ler clientes/[nome]/CLAUDE.md, nunca misturar clientes), design-guide pra arte, repetição (não repetir info nem pedir o que já existe nos arquivos), completude (responder inteiro o que foi pedido).
-Só mostrar o que passou. Nunca entregar cru "pra ela ver se tá bom".
-==================================================
+=== TRAVAS DE QUALIDADE (obrigatórias) ===
+TRAVA 1 (revisar antes de entregar): antes de mostrar QUALQUER entrega pra Letícia (texto, copy, arte, carrossel, site, campanha, pacote de cliente), rodar a revisão de _contexto/revisao.md (skill /revisar). Texto curto = checklist na hora. Arte e entrega grande = sub-Claude revisor crítico. Conferir: anti-IA (sem travessão, sem Title Case, sem contraste "não é X, é Y", sem emoji decorativo), travas do cliente (ler clientes/[nome]/CLAUDE.md, nunca misturar), design-guide, repetição, completude. Só mostrar o que passou. Nunca entregar cru "pra ela ver se tá bom".
+
+TRAVA 2 (correção vira regra): quando a Letícia corrigir, rejeitar ou reescrever algo, capturar a correção como regra permanente (skill /aprender) e oferecer salvar no lugar certo (revisao.md, voz-leticia.md, clientes/[nome]/CLAUDE.md, preferencias.md ou memória). Cada correção dela deixa o revisor mais esperto. Nunca repetir um erro que ela já corrigiu uma vez.
+==========================================
 EOF

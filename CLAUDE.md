@@ -180,11 +180,16 @@ Se sim, identificar onde faz mais sentido salvar:
 - **Sobre o negócio** → `_contexto/empresa.md`
 - **Sobre preferências e estilo** → `_contexto/preferencias.md`
 - **Sobre prioridades e foco atual** → `_contexto/estrategia.md`
+- **Sobre o jeito de escrever / voz** → `_contexto/voz-leticia.md`
+- **Sobre o que revisar antes de entregar (qualidade)** → `_contexto/revisao.md`
+- **Sobre um cliente específico** → `clientes/[nome]/CLAUDE.md`
 - **Regra de comportamento nessa pasta** → `CLAUDE.md`
 
 Salvar com uma linha nova clara, sem reformatar o arquivo inteiro. Confirmar o que foi salvo mostrando a linha adicionada.
 
 Não perguntar se a correção for óbvia de contexto imediato. Só quando a informação tiver valor duradouro.
+
+Essa é a **trava 2** do ciclo de calibração. A skill `/aprender` faz essa captura e o hook lembra dela em toda mensagem. Correção de qualidade vai pro `revisao.md` de propósito: o que a Letícia corrige hoje, o `/revisar` (trava 1) passa a pegar sozinho amanhã. Quando a correção for óbvia e durável, propor a linha já pronta pra ela só confirmar, sem encher de pergunta.
 
 ---
 

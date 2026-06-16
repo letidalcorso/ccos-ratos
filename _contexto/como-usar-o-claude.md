@@ -39,3 +39,24 @@ Para retomar uma conversa antiga: botão "Session history" no topo do painel.
 
 ## Ciclo resumido
 Abre com `/iniciar` ou "vamos no Smartbase" → trabalha um tema por chat → fecha com `/atualizar` + `/syncar`.
+
+---
+
+## As travas de qualidade (montadas em junho/2026)
+Duas travas rodam sozinhas agora, pra parar de te entregar coisa crua:
+- **Trava 1, revisão antes de entregar:** nada chega em ti sem passar por uma checklist (anti-IA, travas do cliente, design-guide, repetição, completude). Texto curto eu confiro na hora; arte e entrega grande passa por um revisor separado. Tu vira a última a revisar, depois que já passou pela trava. Skill: `/revisar`. Padrão em `_contexto/revisao.md`.
+- **Trava 2, correção vira regra:** quando tu corrige algo, eu transformo aquilo em regra permanente e ofereço salvar no lugar certo. Da próxima, o revisor já pega sozinho. Skill: `/aprender`.
+
+## Como corrigir pra ensinar o sistema
+Tua correção é o que calibra tudo. Quanto mais tu corrige no começo, mais rápido afia.
+- Mira no padrão por trás, não só naquele caso. Em vez de "muda esse título", diz "esse tipo de título sempre em caixa de frase". Eu salvo como regra.
+- Quando eu errar, me diz o porquê numa frase. Aí eu conserto a trava, e não só aquele caso.
+- Se eu te entregar algo cru sem revisar, me cobra: "passou pela trava?". É sinal de que falhei e tenho que rodar o `/revisar`.
+
+## Como pedir pra gastar menos e render mais
+- Diz o canal e o cliente quando pedir ("legenda pro Smartbase", "whats pra um lead"). Economiza ida e volta.
+- Tarefa pequena: skill direta (`/escreve`, `/post-estatico`). Tarefa grande (entrega do mês, planejamento): vale o maestro e os subagentes, que gastam mais mas fazem em paralelo.
+- Não precisa repetir contexto que já tá nos arquivos. Se eu te pedir algo que já existe, me corrige, é a trava 2 trabalhando.
+
+## A voz
+Tua voz mora em `_contexto/voz-leticia.md`, tirada de conversas reais tuas. A skill `/escreve` usa ela. Se algo sair com cara de IA, me avisa que eu ajusto o arquivo.
