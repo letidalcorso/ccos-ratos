@@ -64,6 +64,15 @@ Custo fixo grande ≈ **R$ 3.031/mês** (casa 1.651 + Recreio 922 + apê 458) vs
 
 - **Namorado — parte dele nas contas de casa: R$ 6.218,07.** Cobrança enviada em 16/06/2026, **aguardando o pagamento dele.** (Ainda não inclui a metade da luz — ver pendência abaixo.)
 
+## Notion (ligado às bases — 16/06/2026)
+
+A página **PF — Caixa & Vencimentos** (Notion) agora está **ligada às bases reais** de transações, não é mais tabela estática.
+- Base: **"Visualização de Receitas e Despesas"** (dentro de *freelancer | controle → Planner Mensal*), duas fontes: **Despesas** e **Receitas**, separadas de PJ pelo campo **`Conta` = "PF (Letícia)"**.
+- Cada conta do mês foi lançada como **Despesa pelo valor cheio** (as 100% dela, só a parte dela); a cobrança do namorado entrou como **Receita não realizada**. Mês relacionado = **Junho**.
+- Na página tem duas **views ao vivo**: *Despesas PF — junho* e *A receber PF — junho* (filtro `Conta = PF` + data de junho).
+- **Ritual dia 5:** lançar as contas do mês na base (Conta = PF, Data, Total, Mês) + a cobrança como receita não realizada. As views se atualizam sozinhas.
+- Cuidado: o Painel Financeiro PJ (Solz Lab) deve seguir filtrado por `Conta = PJ` pra não misturar com o PF.
+
 ## Quem administra a casa
 
 A Letícia é **responsável pelo financeiro da casa** (a princípio): ela recebe/paga as contas de casa e o namorado **reembolsa a metade dele**. Modelo 50/50 mantido — muda só quem opera o pagamento.
