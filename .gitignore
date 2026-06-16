@@ -65,3 +65,7 @@ node_modules/
 # venv de ferramentas de imagem (pesado, nao versionar)
 **/_ferramentas/.venv-rembg/
 **/.venv-rembg/
+# sources brutos de imagem (pesados) — manter so os webp de producao
+clientes/smartbase/fotos oficias/**/*.jpg
+clientes/smartbase/fotos oficias/**/*.jpeg
+clientes/smartbase/fotos oficias/**/*.png
