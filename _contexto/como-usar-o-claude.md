@@ -60,3 +60,12 @@ Tua correção é o que calibra tudo. Quanto mais tu corrige no começo, mais r�
 
 ## A voz
 Tua voz mora em `_contexto/voz-leticia.md`, tirada de conversas reais tuas. A skill `/escreve` usa ela. Se algo sair com cara de IA, me avisa que eu ajusto o arquivo.
+
+## Guias: quando abrir nova, quando ficar (atualizado jun/2026)
+Tua memória de verdade mora nos arquivos. A guia é só a mesa de trabalho, e cada guia nova recarrega todo o contexto dos arquivos. O que protege o detalhe é eu salvar em arquivo conforme a gente fecha cada peça.
+- **Mesma guia** enquanto for a mesma tarefa ou lote. Ex: "SB | conteúdo IG julho" segura o mês inteiro de posts daquele cliente. Não fragmentar um lote em várias guias, isso perde o fio entre as peças.
+- **Guia nova** quando troca de trabalho (conteúdo → ads, ou um cliente → outro), ou quando a guia ficou pesada e tu já fechou um pedaço. Abre "... parte 2" e diz "continua de onde paramos".
+- Teste rápido: mesma tarefa que eu já fazia? mesma guia. Assunto ou cliente diferente, ou guia travada com pedaço fechado? guia nova.
+- **Compactação:** evitar como hábito, ela resume e perde detalhe. Prefere guia nova. Compacta só como último recurso, e salva o que importa em arquivo antes.
+- **/syncar:** opcional. O auto-sync já commita e empurra pro GitHub sozinho a cada resposta. Rodar na mão é só cinto e suspensório.
+- **Eu te aviso:** vou te avisar, curto, quando a gente começar a misturar assunto, quando a tarefa trocar (hora de guia nova) ou quando a sessão ficar pesada. A decisão de trocar é tua.

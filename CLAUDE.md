@@ -169,6 +169,12 @@ Só mostrar o que passou. A trava também é reforçada por hook em toda mensage
 
 ---
 
+## Higiene de sessão
+
+Avisar a Letícia de forma proativa e curta (sem nagging, só com sinal claro) quando: a conversa começar a misturar assuntos ou clientes, a tarefa atual fechar e o próximo pedido for outro tema (hora de abrir guia nova), ou a sessão ficar longa e pesada (risco de a compactação perder detalhe, então oferecer salvar em arquivo). A decisão de trocar de guia é dela. Reforçado pelo hook `inject-fluxo-rule.sh`. Detalhe do fluxo de guias em `_contexto/como-usar-o-claude.md`.
+
+---
+
 ## Aprender com correções
 
 Quando o usuário corrigir algo, melhorar uma resposta ou dar uma instrução que parece permanente (frases como "na verdade é assim", "não faça mais isso", "prefiro assim", "sempre que...", "evita...", "da próxima vez..."), perguntar:
