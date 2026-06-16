@@ -157,6 +157,18 @@ Não perguntar pra tarefas pontuais ou perguntas simples. Só quando o padrão d
 
 ---
 
+## Revisão antes de entregar (trava 1)
+
+Nada chega na Letícia sem passar pela revisão. Antes de mostrar qualquer entrega (texto, copy, arte, carrossel, site, campanha, pacote de cliente), rodar a checklist de `_contexto/revisao.md` (skill `/revisar`). Ela revisa por último, depois que a entrega já passou pela trava.
+
+- Texto curto: rodar a checklist na hora, antes de fechar a resposta.
+- Arte e entrega grande: abrir um sub-Claude revisor com olhar crítico.
+- Conferir: anti-IA, travas do cliente (ler `clientes/[nome]/CLAUDE.md`, nunca misturar), design-guide, repetição e completude.
+
+Só mostrar o que passou. A trava também é reforçada por hook em toda mensagem (`inject-review-rule.sh`).
+
+---
+
 ## Aprender com correções
 
 Quando o usuário corrigir algo, melhorar uma resposta ou dar uma instrução que parece permanente (frases como "na verdade é assim", "não faça mais isso", "prefiro assim", "sempre que...", "evita...", "da próxima vez..."), perguntar:
