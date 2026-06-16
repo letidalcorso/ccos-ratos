@@ -57,6 +57,7 @@ arte é o MAIOR ponto de retrabalho da Letícia. revisar com rigor extra e, se f
 - conferi o que dava pra conferir antes de afirmar que tá pronto?
 - considerei os fatores externos/sazonais antes de propor ação com data ou verba? (eleição, black friday, copa, câmbio, lançamento de produto mudam custo de ads, atenção e timing.) (lição smartbase: propus escalar ads em set/out sem ver que eleição presidencial + black friday inflam o CPM justo nesses meses.)
 - afirmação de "validado/confirmado/é tendência" que depende de fato externo (tecnologia, lançamento, novidade de mercado): pesquisar o estado MAIS ATUAL antes de cravar, checando se houve marco recente (WWDC, keynote, atualização de versão). nunca declarar validado com a primeira resposta rasa. (lição iOS 27: peguei o iOS 18.4/26 desatualizado e dei como validado, quando o fato que importava era o iOS 27, em beta agora e público em set/2026.)
+- a entrega responde no NÍVEL que ela pediu? pedido amplo/estratégico ("planejamento macro", "estratégia", "plano") não é a leitura mais operacional por padrão: "macro" é nível de frentes, objetivos e prioridades, acima da pauta de conteúdo. antes de executar ou disparar pesquisa, calibrar numa vez o que o pedido significa e o escopo, sem reduzir a uma skill operacional nem afunilar pra um cliente sozinha. (lição 16/06: ela pediu planejamento de estratégias macro, eu reduzi a pauta de conteúdo e afunilei pra Smartbase, gastando rodadas na premissa errada.)
 
 ## veredito
 
