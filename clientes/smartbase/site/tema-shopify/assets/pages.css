@@ -713,6 +713,9 @@ body.no-glow .cta-band-glow{display:none}
 @media(max-width:820px){
   .hm-band{min-height:auto;padding:78px 0}
   .hm-steps-grid{grid-template-columns:1fr;display:flex;flex-direction:column}
+  /* banda de 2 colunas empilha: copy em cima, ações embaixo (sem espremer o botão) */
+  .hm-band-2col{flex-direction:column;align-items:flex-start;gap:30px}
+  .hm-band-actions{margin-left:0}
 }
 
 /* ============================================================
