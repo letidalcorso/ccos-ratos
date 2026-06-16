@@ -54,6 +54,7 @@ arte é o MAIOR ponto de retrabalho da Letícia. revisar com rigor extra e, se f
 
 - isso responde de fato o que ela pediu, inteiro? (não entregar metade)
 - conferi o que dava pra conferir antes de afirmar que tá pronto?
+- afirmação de "validado/confirmado/é tendência" que depende de fato externo (tecnologia, lançamento, novidade de mercado): pesquisar o estado MAIS ATUAL antes de cravar, checando se houve marco recente (WWDC, keynote, atualização de versão). nunca declarar validado com a primeira resposta rasa. (lição iOS 27: peguei o iOS 18.4/26 desatualizado e dei como validado, quando o fato que importava era o iOS 27, em beta agora e público em set/2026.)
 
 ## veredito
 
