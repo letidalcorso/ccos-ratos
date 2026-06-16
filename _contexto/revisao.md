@@ -49,11 +49,13 @@ arte é o MAIOR ponto de retrabalho da Letícia. revisar com rigor extra e, se f
 - isso repete info que ela já tem nos arquivos? então referenciar, não repetir.
 - estou perguntando algo que já está no contexto ou na memória? então buscar primeiro, não pedir pra ela.
 - estou refazendo algo que já existe? conferir antes de criar do zero.
+- antes de propor qualquer ação ou sugerir criar algo, varrer TODOS os arquivos relevantes do cliente, não só alguns. não sugerir criar o que já existe nem perguntar o que já está documentado. (lição smartbase: sugeri "montar a máquina de conversa" sem ter lido `maquina-conversa-smartbase.md`, que já estava pronta com roteiros e respostas rápidas.)
 
 ## 5. completude
 
 - isso responde de fato o que ela pediu, inteiro? (não entregar metade)
 - conferi o que dava pra conferir antes de afirmar que tá pronto?
+- considerei os fatores externos/sazonais antes de propor ação com data ou verba? (eleição, black friday, copa, câmbio, lançamento de produto mudam custo de ads, atenção e timing.) (lição smartbase: propus escalar ads em set/out sem ver que eleição presidencial + black friday inflam o CPM justo nesses meses.)
 - afirmação de "validado/confirmado/é tendência" que depende de fato externo (tecnologia, lançamento, novidade de mercado): pesquisar o estado MAIS ATUAL antes de cravar, checando se houve marco recente (WWDC, keynote, atualização de versão). nunca declarar validado com a primeira resposta rasa. (lição iOS 27: peguei o iOS 18.4/26 desatualizado e dei como validado, quando o fato que importava era o iOS 27, em beta agora e público em set/2026.)
 
 ## veredito
