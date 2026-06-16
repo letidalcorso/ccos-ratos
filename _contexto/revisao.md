@@ -39,6 +39,7 @@ arte é o MAIOR ponto de retrabalho da Letícia. revisar com rigor extra e, se f
 - seguir `marca/design-guide.md` e o design guide do cliente: paleta, tipografia, espaçamento, grid
 - mockup de aparelho ou tela = device frame realista + screenshot/UI real, nunca retângulo desenhado
 - conferir hierarquia visual, alinhamento, respiro e margens, contraste e legibilidade
+- **elemento visual em HTML (tabela, card, bloco) pra site/post de cliente: RENDERIZAR (`npx playwright screenshot --browser webkit`) e olhar o PNG ANTES de entregar.** nunca afirmar "tá legível" sem ver. nunca montar visual em modo claro (fundo branco, texto escuro) pra site de tema escuro. (lição airpods 16/06: entreguei tabela modo claro = texto escuro em fundo escuro do site, ilegível; a Letícia perguntou 3x "passou pela revisão?". Smartbase é tema escuro: bg #07070E, surface #0F0F1C, texto #F2F2F6, azul #3E82F7.)
 - nada de placeholder, lorem, imagem genérica ou elemento fora da identidade do cliente
 - peça final em SVG (regra da casa)
 - ser honesto sobre o nível: se a arte é um rascunho estruturado pra Letícia finalizar no Figma, dizer isso, não entregar como se fosse final
