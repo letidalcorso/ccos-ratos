@@ -61,3 +61,7 @@ clientes/smartbase/marca/banco de imagens/
 # Sistema
 .DS_Store
 node_modules/
+
+# venv de ferramentas de imagem (pesado, nao versionar)
+**/_ferramentas/.venv-rembg/
+**/.venv-rembg/

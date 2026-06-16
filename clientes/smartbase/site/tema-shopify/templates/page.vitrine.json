@@ -310,12 +310,44 @@
             "in_stock": true,
             "price": ""
           }
+        },
+        "produto_apple_pencil": {
+          "type": "produto",
+          "name": "apple pencil",
+          "settings": {
+            "cat": "acessorios",
+            "name": "Apple Pencil",
+            "fallback": "prod-apple-pencil.webp",
+            "desc": "anota, desenha e marca PDF com precisão de caneta. modelos Pro e USB-C, sob encomenda. a gente confirma o certo pro teu iPad antes de pedir.",
+            "specs": "Pro ou USB-C; compatível conforme o iPad; novo lacrado",
+            "colors": "",
+            "cond": "novo",
+            "in_stock": true,
+            "price": ""
+          }
+        },
+        "produto_magic_mouse": {
+          "type": "produto",
+          "name": "magic mouse",
+          "settings": {
+            "cat": "acessorios",
+            "name": "Magic Mouse",
+            "fallback": "prod-magic-mouse.webp",
+            "desc": "o mouse multi-touch da Apple. superfície sensível a gestos, recarga por USB-C, branco. desliza e rola sem botão nenhum.",
+            "specs": "USB-C; superfície multi-touch; branco",
+            "colors": "",
+            "cond": "novo",
+            "in_stock": true,
+            "price": ""
+          }
         }
       },
       "block_order": [
         "produto_MhLmHB",
         "produto_JG4Tfg",
         "produto_yQdbwM",
+        "produto_apple_pencil",
+        "produto_magic_mouse",
         "produto_iphone13",
         "vitrine-0",
         "vitrine-1",
