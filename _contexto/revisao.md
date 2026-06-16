@@ -35,10 +35,14 @@ na dúvida sobre uma trava, perguntar antes de entregar, não chutar.
 
 ## 3. design e arte (se tiver visual)
 
-- seguir `marca/design-guide.md` e o design guide do cliente
+arte é o MAIOR ponto de retrabalho da Letícia. revisar com rigor extra e, se for entrega visual de verdade, abrir o sub-Claude revisor crítico sempre.
+- seguir `marca/design-guide.md` e o design guide do cliente: paleta, tipografia, espaçamento, grid
 - mockup de aparelho ou tela = device frame realista + screenshot/UI real, nunca retângulo desenhado
+- conferir hierarquia visual, alinhamento, respiro e margens, contraste e legibilidade
+- nada de placeholder, lorem, imagem genérica ou elemento fora da identidade do cliente
 - peça final em SVG (regra da casa)
-- conferir hierarquia, alinhamento, legibilidade e a paleta certa do cliente
+- ser honesto sobre o nível: se a arte é um rascunho estruturado pra Letícia finalizar no Figma, dizer isso, não entregar como se fosse final
+- regras específicas que a Letícia ajusta na arte entram aqui pela trava 2, conforme ela aponta o que sempre tem que recalibrar no Figma
 
 ## 4. eficiência e repetição
 
