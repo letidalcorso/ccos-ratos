@@ -1,6 +1,6 @@
 # PRONTO PRA SUBIR — Artigo 6 (fase 2): Qual AirPods comprar
 
-> Versão de publicação, com tabela comparativa estilo Apple (HTML inline, ✓/✕). Passou pela trava 1.
+> Versão de publicação, com tabela comparativa estilo Apple no TEMA ESCURO (renderizada e conferida no fundo do site). Passou pela trava 1 (texto + design).
 > Links internos do cluster removidos (reativar com URLs ao vivo). vitrine + WhatsApp ativos. Sem preço no texto.
 
 ---
@@ -26,7 +26,7 @@ AirPods 4, Pro 2 ou Pro 3? O guia por tipo de uso, com tabela comparativa, pra v
 
 ## 2. Conteúdo pra colar (modo HTML do editor de post do Shopify)
 
-> No editor do post, clicar em `<>` (Mostrar HTML) e colar o bloco abaixo inteiro. A tabela já vai estilizada.
+> No editor do post, clicar em `<>` (Mostrar HTML) e colar o bloco abaixo inteiro. A tabela já vem no tema escuro do site.
 
 ```html
 <p>Comprar AirPods sem saber a diferença entre os modelos é jogar dinheiro fora. Cada um serve um tipo de uso, e o mais caro nem sempre é o que você precisa. Esse guia mostra qual combina com você antes de gastar.</p>
@@ -42,87 +42,87 @@ AirPods 4, Pro 2 ou Pro 3? O guia por tipo de uso, com tabela comparativa, pra v
 
 <h2>Comparativo rápido</h2>
 
-<div style="overflow-x:auto;margin:24px 0;-webkit-overflow-scrolling:touch;">
-<table style="border-collapse:collapse;width:100%;min-width:660px;font-size:15px;line-height:1.45;color:#1d1d1f;">
+<div style="overflow-x:auto;margin:24px 0;-webkit-overflow-scrolling:touch;background:#0F0F1C;border:1px solid #1E1E2E;border-radius:14px;">
+<table style="border-collapse:collapse;width:100%;min-width:660px;font-size:15px;line-height:1.45;color:#F2F2F6;">
   <thead>
-    <tr style="background:#f5f5f7;">
-      <th style="padding:14px 16px;text-align:left;border-bottom:2px solid #d2d2d7;font-weight:600;"></th>
-      <th style="padding:14px 16px;text-align:center;border-bottom:2px solid #d2d2d7;font-weight:600;">AirPods 4</th>
-      <th style="padding:14px 16px;text-align:center;border-bottom:2px solid #d2d2d7;font-weight:600;">AirPods 4 (ANC)</th>
-      <th style="padding:14px 16px;text-align:center;border-bottom:2px solid #d2d2d7;font-weight:600;">AirPods Pro 2</th>
-      <th style="padding:14px 16px;text-align:center;border-bottom:2px solid #d2d2d7;font-weight:600;">AirPods Pro 3</th>
+    <tr>
+      <th style="padding:16px;text-align:left;border-bottom:1px solid #2A2A3A;font-weight:600;color:#F2F2F6;"></th>
+      <th style="padding:16px;text-align:center;border-bottom:1px solid #2A2A3A;font-weight:600;color:#F2F2F6;">AirPods 4</th>
+      <th style="padding:16px;text-align:center;border-bottom:1px solid #2A2A3A;font-weight:600;color:#F2F2F6;">AirPods 4 (ANC)</th>
+      <th style="padding:16px;text-align:center;border-bottom:1px solid #2A2A3A;font-weight:600;color:#F2F2F6;">AirPods Pro 2</th>
+      <th style="padding:16px;text-align:center;border-bottom:1px solid #2A2A3A;font-weight:600;color:#3E82F7;">AirPods Pro 3</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Formato</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">aberto</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">aberto</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">in-ear (ponta)</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">in-ear (ponta)</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Formato</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">aberto</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">aberto</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">in-ear (ponta)</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">in-ear (ponta)</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Cancelamento de ruído</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">não</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">sim (leve)</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">sim (forte)</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">sim (o mais forte)</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Cancelamento de ruído</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">não</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">sim (leve)</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">sim (forte)</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">sim (o mais forte)</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Modo transparência</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">✕</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Modo transparência</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">✕</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Áudio espacial</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Áudio espacial</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Recurso de audição</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">✕</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">✕</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Recurso de audição</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">✕</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">✕</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Batimento cardíaco</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">✕</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">✕</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">✕</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Batimento cardíaco</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">✕</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">✕</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">✕</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Resistência (água/pó)</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">IP54</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">IP54</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">IP54</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">IP57</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Resistência (água/pó)</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">IP54</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">IP54</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">IP54</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">IP57</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Bateria (fone)</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">até 5h</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">até 5h</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">até 6h</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;">até 8h</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Bateria (fone)</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">até 5h</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">até 5h</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">até 6h</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#C9C9D4;">até 8h</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #e8e8ed;font-weight:600;">Estojo com carga sem fio</th>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#86868b;">✕</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
-      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #e8e8ed;color:#0071e3;">✓</td>
+      <th style="padding:13px 16px;text-align:left;border-bottom:1px solid #1E1E2E;font-weight:600;color:#F2F2F6;">Estojo com carga sem fio</th>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#7A7A96;">✕</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
+      <td style="padding:13px 16px;text-align:center;border-bottom:1px solid #1E1E2E;color:#3E82F7;">✓</td>
     </tr>
     <tr>
-      <th style="padding:13px 16px;text-align:left;font-weight:600;">Melhor pra</th>
-      <td style="padding:13px 16px;text-align:center;">dia a dia leve</td>
-      <td style="padding:13px 16px;text-align:center;">ANC sem ponta</td>
-      <td style="padding:13px 16px;text-align:center;">silêncio e custo</td>
-      <td style="padding:13px 16px;text-align:center;">o topo: treino e saúde</td>
+      <th style="padding:13px 16px;text-align:left;font-weight:600;color:#F2F2F6;">Melhor pra</th>
+      <td style="padding:13px 16px;text-align:center;color:#C9C9D4;">dia a dia leve</td>
+      <td style="padding:13px 16px;text-align:center;color:#C9C9D4;">ANC sem ponta</td>
+      <td style="padding:13px 16px;text-align:center;color:#C9C9D4;">silêncio e custo</td>
+      <td style="padding:13px 16px;text-align:center;color:#F2F2F6;">o topo: treino e saúde</td>
     </tr>
   </tbody>
 </table>
@@ -184,4 +184,4 @@ AirPods 4, Pro 2 ou Pro 3? O guia por tipo de uso, com tabela comparativa, pra v
 ## 3. Depois de subir — links internos a reativar
 - "comprar iPhone seminovo" (seção Novo ou seminovo) → linkar pro artigo de seminovo (JÁ NO AR, me passa a URL).
 - Imagem de capa: foto dos AirPods (estojo aberto) ou lifestyle. Alt sugerido: "comparativo de modelos de AirPods: AirPods 4, Pro 2 e Pro 3".
-- A tabela é responsiva (rola no mobile). Se quiser, dá pra deixar a coluna do Pro 3 destacada (cor de fundo) pra puxar o olho pro topo de linha.
+- Tabela conferida renderizada no tema escuro (preview: `_preview-tabela-airpods.png`). Coluna do Pro 3 já destacada em azul.
