@@ -113,19 +113,19 @@ Feed constrói confiança e desejo. WhatsApp fecha a venda. Cada post tem um cam
 
 Design system completo documentado. Sempre consultar antes de qualquer tarefa visual.
 
-> **Fonte da verdade:** `marca/design-guide.md` (reconciliado 15/06/2026). O resumo abaixo segue ele; em conflito, o guia vale.
+> **Fonte da verdade:** `marca/design-guide.html` (visual, abrir no navegador) + `marca/design-guide.md` (espelho em texto) — **design system unificado v2.0 (17/06/2026)**, um sistema só pra post e site. O resumo abaixo segue eles; em conflito, o guia vale.
 
-**Cores principais:**
-- `bg` `#07070E` / `surface` `#0F0F1C` — fundo (degradê escuro) e cards
-- `blue` `#3E82F7` — **acento único** do sistema (CTA, dot do wordmark, glow, palavra-chave)
-- `white` `#F2F2F6` — headlines · `gray-sub` `#7A7A96` — corpo/caption
-- **Sem cor por pilar.** O azul é a única cor de acento.
+**Cores principais (tokens `--sb-*`):**
+- `--sb-void` `#07070E` / `--sb-surface` `#0F0F1C` / `--sb-surface-2` `#13131F` — fundos e cards
+- `--sb-signal` `#3E82F7` — **acento único** (CTA, dot do wordmark, glow, palavra-chave)
+- `--sb-white` `#F2F2F6` headlines · `--sb-silver` `#7A7A96` corpo · `--sb-mute` `#4A4A66` apoio
+- **Sem cor por pilar.** Roxo removido. Verde `#10B981` (status) e wa-green `#25D366` (WhatsApp) são só funcionais, nunca editoriais.
 
 **Pilares de conteúdo (categorias, sem cor própria):** Decifra Apple · Casa Smartbase · Vida Apple em Caxias. Badge de pilar é **só interno** — nunca na arte publicada.
 
 **Tipografia:** Bricolage Grotesque (headlines) + Inter (corpo). Caixa baixa, nunca CAPS no headline.
 
-**Profundidade:** degradê escuro + glow azul + **painel de vidro** (frosted glass no Figma). Sem marca d'água "sb", sem accent bar.
+**Profundidade:** degradê escuro + glow azul + **vidro** (efeito nativo "Vidro" do Figma, aceita qualquer cor da marca) + **marca d'água "sb" ativa** (ghost text Bricolage 800, opacity ~0.04, no fundo). Sem accent bar (aposentada). O vidro e o ghost "sb" convivem.
 
 **Canvas padrão:** 1080×1350 (feed retrato). Padding lateral 80px.
 
@@ -133,7 +133,9 @@ Design system completo documentado. Sempre consultar antes de qualquer tarefa vi
 
 **Arquivos de referência:**
 - `marca/plataforma-de-marca.md` — plataforma de marca (território, essência, promessa, arquétipo, pilares de mensagem, assinatura) ⭐
-- `marca/design-guide.md` — sistema completo (tokens, componentes, patterns, layout por pilar)
+- `marca/design-guide.html` ⭐ — design system unificado (visual, abrir no navegador): cor, tipo, vidro, raios, componentes, aplicação post + site
+- `marca/design-guide.md` — espelho em texto do HTML (o que o Claude lê em tarefa visual)
+- `site/tema-shopify/assets/colors_and_type.css` + `kit.css` — implementação técnica do site (derivada do design system)
 - `conteudo/semana-1/` — posts aprovados como referência de estilo
 
 ## Status do site

@@ -122,6 +122,7 @@ Evitar qualquer coisa do tipo "sua Apple dos sonhos", "qualidade premium", "gara
 ## 12. Como usar esta plataforma
 
 - **Conteúdo:** todo post serve pelo menos um pilar de mensagem (seção 8). Antes de escrever, passar pela voz (`conteudo/voz-smartbase.md`).
+- **Visual:** o design system (`marca/design-guide.html` + `.md`) traduz esta plataforma em imagem — território "marca da prova" → dark premium; essência "confiança se prova" → vidro (transparência real); voz take-primeiro → headline em caixa baixa com a palavra-chave no azul.
 - **Ads:** o ângulo de criativo sai de um pilar + uma prova (seção 9). O gap diagnosticado nos ads de mai/26 (desejo existe, confiança não) é exatamente o pilar "a prova antes do pix".
 - **Site:** os sinais de confiança (seção 9) têm que estar visíveis acima da dobra — é o que a Back Market faz e o que faltava.
 - **Atendimento WhatsApp:** o fechamento mora aqui. A promessa (seção 6) é o que se cumpre na conversa.

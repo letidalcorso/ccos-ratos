@@ -1,283 +1,172 @@
-# Smartbase — Guia de Design
+# Smartbase — Design System
 
-> Referência visual para criação de posts, carrosséis e materiais da Smartbase.
-> Ler antes de criar qualquer peça gráfica. Consultar junto ao `CLAUDE.md` do cliente.
+> Fonte da verdade visual da marca. **Um sistema só** — serve post (Figma/SVG 1080×1350) e site (Shopify/web).
+> Espelho em texto de `design-guide.html` (a versão visual, que a Letícia abre e aprova). Em conflito, o HTML vale.
+> Ler junto com `marca/plataforma-de-marca.md` (estratégia) e `conteudo/voz-smartbase.md` (como escrever).
+> Versão 2.0 — unificado em 17/06/2026 (fundiu o guia de post + o design system do site do Claude Design).
 
 ---
 
-## Decisões de sistema (reconciliado em 15/06/2026)
+## Fundamentos (o visual serve a marca)
 
-O guia foi auditado e alinhado ao que o feed realmente usa. Estas decisões valem sobre qualquer descrição antiga:
+O visual é a **prova** dita em imagem. Território: *a marca da prova, num mercado de promessa*. O sistema afirma, não enfeita.
+- Território "marca da prova" → **dark premium**, sóbrio (apple store particular que não grita).
+- Essência "confiança se prova" → **vidro** (transparência real, mostra o que tem atrás).
+- Voz take-primeiro, caixa baixa → **headline lowercase** Bricolage, palavra-chave no azul.
 
-- **Sem cor por pilar.** O azul `#3E82F7` é a língua única. Não existe roxo/verde por pilar.
-- **Profundidade = degradê + glow + painel de vidro.** O fundo padrão é degradê escuro com glow azul, não preto chapado.
-- **Sem marca d'água de letras "sb".** A profundidade/assinatura vem do **painel de vidro** (frosted glass) no Figma — dá menos problema e fica premium.
-- **Sem accent bar lateral.** Aposentada.
-- **Badge de pilar = só interno.** Serve pra organizar no Figma; **nunca aparece na arte publicada.**
-- **Footer = `@smartbase.br` centralizado** no rodapé. Sem wordmark, sem handle à direita.
+---
+
+## Decisões de sistema (valem sobre qualquer descrição antiga)
+
+- **Um azul só.** `#3E82F7` (`--sb-signal`) é a única cor de marca. **Sem cor por pilar** (roxo e verde-de-pilar removidos).
+- **Nomenclatura oficial de token: `--sb-*`** (a do site, já em produção no tema).
+- **Profundidade = degradê + glow + vidro + marca d'água "sb".** As quatro camadas convivem.
+- **Marca d'água "sb" (ghost text) está ATIVA** — Bricolage 800, opacity 0.03–0.04, gigante (~520px), no fundo. Assinatura tipográfica de fundo. (Convive com o vidro: ghost = textura de fundo; vidro = material de painel.)
+- **Vidro = efeito nativo "Vidro" do Figma** (Effects → Glass), aplicável a qualquer cor da marca. No site, equivalente em CSS (`backdrop-filter`).
+- **Accent bar lateral: aposentada.** **Badge de pilar: só interno** (Figma), nunca na arte publicada.
+- **Footer do post = `@smartbase.br` centralizado.** Sem wordmark, sem handle à direita.
 - **Handle correto: `@smartbase.br`** (nunca `.rs`).
-- **Vida Apple em Caxias:** o layout antigo não foi pro ar — **design novo a propor** (ver seção).
 
 ---
 
-## Logo
+## Cor
 
-- **Nome da marca:** smartbase (caixa baixa, sempre)
-- **Símbolo:** cápsula/pill horizontal com dot azul `#3E82F7` posicionado à direita
-- **Wordmark:** `smart` (peso 300, cinza claro) · `•` (dot azul, 10–12px) · `base` (peso 700, branco)
-- **Uso em fundo escuro (padrão):** versão branca — pill sem borda, wordmark branco/cinza claro
-- **Uso em fundo claro:** versão preta — pill com borda escura, wordmark dark
-- **Arquivos:**
-  - `briefing/logo png branco.png` — versão para fundos escuros (uso padrão)
-  - `briefing/logo png preto.png` — versão para fundos claros
-- **Avatar / badge compacto:** pill `#0F0F1C` com texto "sb" em `#3E82F7`, peso 600, border-radius 15px. (Uso: foto de perfil / ícone isolado — **não** é marca d'água de post.)
-- **Tamanho mínimo:** não usar abaixo de 80px de largura — a cápsula perde forma
-- **Área de proteção:** espaço equivalente à altura do pill ao redor em todos os lados
-- **Handle:** `@smartbase.br` — sempre no footer dos posts, **centralizado** (ver Footer)
-
----
-
-## Paleta de Cores
-
-### Cores de fundo e superfície
-
-| Nome | Token | Hex | Uso específico |
-|------|-------|-----|----------------|
-| bg-base | `--bg-base` | `#07070E` | Base do degradê de fundo (parte de baixo) |
-| surface-1 | `--surface-1` | `#0F0F1C` | Cards, blocos internos, topo do degradê, badge "sb" do avatar |
-| surface-2 | `--surface-2` | `#121220` | Camada intermediária, topo do degradê de fundo |
-| surface-3 | `--surface-3` | `#1A1A2E` | Bordas, dividers (também aparece como `#1E1E2E` em SVGs) |
-
-### Cores de texto
-
-| Nome | Token | Hex | Uso específico |
-|------|-------|-----|----------------|
-| text-primary | `--text-primary` | `#F2F2F6` | Headlines e títulos principais |
-| text-secondary | `--text-secondary` | `#7A7A96` | Corpo de texto, subtítulos, legendas |
-| text-muted | `--text-muted` | `#4A4A60` | Handles, labels, rodapé menos importante |
-| text-light | — | `#C0C0D0` | Subtítulos de impacto menor em peso 300 |
-
-### Cor primária — o acento único do sistema
-
-| Nome | Token | Hex | Uso específico |
-|------|-------|-----|----------------|
-| blue-primary | `--blue-primary` | `#3E82F7` | Palavra-chave do headline, dot do wordmark, CTA, glow, dots de lista |
-| blue-light | `--blue-light` | `#6DAFF9` | Hover, variante mais clara do primário |
-| blue-alpha-10 | `--blue-alpha-10` | `rgba(62,130,247,0.10)` | Background sutil de chips e tags |
-| blue-alpha-30 | `--blue-alpha-30` | `rgba(62,130,247,0.30)` | Overlays e glows |
-
-> **Sem cor por pilar.** O azul é a única cor de acento. Os 3 pilares (Decifra / Casa / Vida) são categorias **de conteúdo**, não têm cor própria na arte.
-
-### Cor especial
-
-| Nome | Token | Hex | Uso |
+### Fundo e superfície
+| nome | token | hex | uso |
 |------|-------|-----|-----|
-| wa-green | `--wa-green` | `#25D366` | Exclusivo para botão e CTA de WhatsApp — nunca como cor de destaque editorial |
+| void | `--sb-void` | `#07070E` | fundo base de todo post e página |
+| surface | `--sb-surface` | `#0F0F1C` | cards, blocos, badge "sb" |
+| surface-2 | `--sb-surface-2` | `#13131F` | camada elevada, topo do degradê |
+| ink | `--sb-ink` | `#11110F` | near-black em recortes claro-no-escuro |
+
+### Texto (greyscale)
+| nome | token | hex | uso |
+|------|-------|-----|-----|
+| white | `--sb-white` | `#F2F2F6` | headlines, títulos |
+| platinum | `--sb-platinum` | `#C0C0D0` | texto secundário, "smart" do wordmark |
+| silver | `--sb-silver` | `#7A7A96` | corpo, legendas, eyebrows |
+| mute | `--sb-mute` | `#4A4A66` | handles, dividers fracos, ghost |
+
+### Azul (acento único)
+| nome | token | hex | uso |
+|------|-------|-----|-----|
+| signal | `--sb-signal` | `#3E82F7` | palavra-chave, dot, CTA, glow, links |
+| blue-light | `--sb-blue-light` | `#6DAFF9` | hover, variante clara |
+| signal-12 | `--sb-signal-12` | `rgba(62,130,247,0.12)` | tint de chips e tags |
+| signal-24 | `--sb-signal-24` | `rgba(62,130,247,0.24)` | overlays e glows |
+
+### Cores de sistema (funcionais, NÃO-marca)
+| nome | token | hex | uso |
+|------|-------|-----|-----|
+| success | `--sb-success` | `#10B981` | status "em estoque" no site. **Nunca** como cor editorial de post. |
+| wa-green | `--sb-wa` | `#25D366` | exclusivo de botão/CTA de WhatsApp. **Nunca** como destaque editorial. |
+
+> Reconciliação 17/06: `surface-2` (era `#121220`), `text-muted`→`mute` (era `#4A4A60`) e alphas (eram 10%/30%) foram alinhados ao valor do site, que está no ar. Peças antigas não precisam de refação.
 
 ### Cor proibida
-
-- Paletas quentes (laranja, vermelho, amarelo) — quebram o posicionamento tecnológico e sóbrio
-- Branco puro `#FFFFFF` como fundo — a marca opera exclusivamente no dark mode
-- Qualquer cor de saturação alta fora do azul do sistema — isola a peça visualmente
-- Gradientes vibrantes ou neón — vão contra o estilo técnico/premium
+- Roxo `#8B5CF6`, verde-de-pilar, qualquer acento fora do azul.
+- Branco puro `#FFFFFF` como fundo (a marca é dark-first).
+- Paleta quente (laranja, vermelho, amarelo), gradiente neón.
 
 ---
 
 ## Tipografia
 
-### Bricolage Grotesque — Títulos e Headlines
-- **Uso:** headlines de posts, números em destaque, capas de carrossel, títulos de seção no site
-- **Pesos utilizados:** 300 (smart no wordmark, subtítulos de impacto), 700, 800 (ExtraBold)
-- **Caixa:** baixa (minúsculas) — nunca CAPS em headlines
-- **Caráter:** contemporânea, variável óptica, forte em grandes tamanhos sem perder leveza
-- **Tamanho padrão em post 1080×1350:** 88–96px para headline principal
-- **Origem:** Google Fonts — `Bricolage Grotesque:opsz,wght@12..96,300;12..96,700;12..96,800`
+- **Bricolage Grotesque** — títulos, headlines, números-herói, capas. Pesos 300/400/500/600/700/800. Caixa baixa, nunca CAPS.
+- **Inter** — corpo, subtítulos, legendas, chips, eyebrows, footer, handle. Pesos 300/400/500/600/700.
 
-### Inter — Corpo e Suporte
-- **Uso:** subtítulos, corpo de texto, legendas, chips, footer, handle
-- **Pesos utilizados:** 300 (texto leve), 400 (corpo padrão), 500 (semi-destaque), 600 (labels)
-- **Caixa:** baixa para corpo e chips
-- **Caráter:** geométrica, neutra, alta legibilidade em tamanhos pequenos — âncora do sistema
-- **Tamanho padrão em post:** 26–34px para corpo, 22–26px para legendas e handle
-- **Origem:** Google Fonts — `Inter:wght@300;400;500;600`
+### Escala — site (web)
+hero 80 / -2 / .98 · h1 56 / -1.5 / 1.0 · h2 40 / -1 / 1.02 · h3 26 / -.4 / 1.1 · lead 20 · body 16 · small 14 · eyebrow 12 (ls 3, lowercase).
 
-### Regras de uso
-- Máximo 2 fontes por peça (Bricolage + Inter)
-- Nunca fontes serifadas — contradizem o posicionamento tecnológico
-- Nunca usar Bricolage em tamanhos pequenos (abaixo de 28px perde a força)
-- Nunca letter-spacing em headlines
+### Escala — post (1080×1350)
+headline 88–96 / peso 800 · corpo 26–34 / 400 · legenda e handle 22–26.
+
+### Regras
+Máx. 2 famílias. Nunca serifada. Nunca Bricolage abaixo de 28px. Nunca CAPS ou letter-spacing no headline (só em eyebrow/label).
 
 ---
 
-## Estilo Visual
+## Vidro (a assinatura de profundidade)
 
-### Conceito geral
-Tecnológico e humano. Escuro, preciso, confiante — como um Apple Store particular que não precisa gritar. O azul ancora o sistema sem dominar: aparece no detalhe certo no momento certo. Cada peça deve ser reconhecível como Smartbase mesmo sem o logo.
+Material "Vidro" nativo do Figma (Effects → Glass). Calibração da marca:
 
-### Tratamento de profundidade (a "linguagem" da marca)
-É o fio condutor — constante em todo card:
+| luz | refração | profundidade | dispersão | gelo | splay | preenchimento | opacidade |
+|-----|----------|--------------|-----------|------|-------|---------------|-----------|
+| -56° / 80% | 80 | 46 | 40 | 2 | 52 | 20% | 50–80% (por peça) |
 
-1. **Fundo em degradê** — degradê vertical sutil de superfície (`#121220`/`#10..12` no topo → `#07070E` embaixo). **Nunca preto chapado puro.**
-2. **Glow azul** — 1–2 elipses `#3E82F7` com layer blur ~200, opacity 0.12–0.30, atrás do conteúdo. Dá luz e profundidade.
-3. **Painel de vidro (a assinatura de profundidade)** — substitui a antiga marca d'água "sb". Um painel/retângulo arredondado de **vidro fosco** atrás ou emoldurando o conteúdo:
-   - **Figma:** frame com **Background blur ~30–60** + fill `#FFFFFF` a **4–8%** de opacidade + borda 1px `#FFFFFF` a ~10–14%, `rx` ~32–48.
-   - Dá o ar premium "frosted glass" sem texto de letras (que dava problema de legibilidade/corte).
-   - Pode emoldurar um número-herói, um trecho do conteúdo, ou só compor profundidade atrás.
-   - **Uma assinatura de profundidade por card.**
-4. **Tipo:** Bricolage ExtraBold nos headlines, Inter no corpo. Palavra-chave em azul.
-
-### Elementos gráficos de apoio
-- **Divider horizontal** — `stroke="#1E1E2E"` ou `#1A1A2E`, 1px, sem opacity. Separa blocos.
-- **Chips** — pill arredondada: **tag** com contorno azul ~35%; **CTA** com fundo azul sólido.
-- **Dots de lista** — bolinha `#3E82F7` (r≈6–7) antes de itens de lista.
-- **Número-herói** — número gigante (Bricolage ExtraBold, `#C0C0D0` opacity ~0.20) como elemento visual de fundo em cards de dado/listicle (ex: "4", "90'", "11+").
-
-> **Aposentados (não usar):** accent bar lateral · marca d'água de letras "sb" · badge de pilar na arte.
+- **Fill aceita qualquer cor da marca** — neutro como padrão, azul `#3E82F7` pra acento, surface pra blocos.
+- **Precisa de algo vívido atrás pra refratar** (canvas com glow ou foto). Nunca sobre preto chapado.
+- Uma assinatura de vidro por peça.
+- Nota: indústria recomenda profundidade 10–30 pra legibilidade; 46 dá vidro encorpado. Se pesar sobre texto, baixar.
+- **Equivalente web (já no site):** `backdrop-filter: blur(50px) saturate(180%)` + rim especular + tint azul. CSS é aproximação — refração/dispersão reais só no Figma.
 
 ---
 
-## Layout dos Posts
+## Profundidade & canvas (4 camadas)
 
-### Post estático / card de carrossel (1080×1350 — feed retrato padrão)
-
-**Canvas:** 1080 × 1350px
-**Padding lateral:** 80px (esquerda e direita)
-**Área segura:** 80–1000px horizontal
-
-**Estrutura vertical (referência, flexível por jogada):**
-```
-fundo      degradê escuro + glow azul + (painel de vidro)
-y=~160     Headline principal (Bricolage 800, 88–96px) — palavra-chave em azul
-           OU headline no rodapé do bloco, conforme a jogada
-meio       elemento-herói da jogada (número, lista com dots, mockup, etc.)
-corpo      subtexto (Inter 400, 26–34px, #7A7A96 / #C0C0D0)
-y=~1270    Footer: @smartbase.br centralizado
-```
-
-### Footer (obrigatório em todo post)
-- **`@smartbase.br` centralizado** no rodapé (Inter Medium ~26, branco ~85%).
-- Sem wordmark, sem badge "sb", sem handle à direita. Só o @ no meio.
-
-### Carrossel
-- **Canvas:** 1080 × 1350px
-- **Capa:** degradê + glow + (painel de vidro), headline forte (1–2 linhas) com palavra em azul, indicador de arraste em chip ("arrasta →", Inter, azul)
-- **Slides internos:** mesma moldura (degradê + glow + footer), hierarquia clara (título Bricolage, dados Inter), dividers separando blocos
-- **Último slide:** CTA direto — "falar no whatsapp →" / "manda no whatsapp →", footer padrão
-
-### Stories (quando produzido)
-- Canvas: 1080 × 1920px
-- Mesma paleta, tipografia e tratamento de profundidade — nunca mudar o sistema só pela proporção
-- Footer compacto: só `@smartbase.br` centralizado na base
+1. **Degradê** vertical: surface-2 `#13131F` no topo → void `#07070E` na base. Nunca preto chapado.
+2. **Glow azul** — 1–2 elipses `#3E82F7`, blur ~200, opacity 0.12–0.24, atrás do conteúdo.
+3. **Vidro** — material da seção acima, emoldura o herói da peça.
+4. **Marca d'água "sb"** — ghost text Bricolage 800, opacity 0.03–0.04, gigante. Ativa.
 
 ---
 
-## Kit de jogadas — variar ao longo do feed
+## Raios, espaço, elevação
 
-Escolher **uma jogada-herói por carrossel**, variando entre posts pra o grid não ficar carimbado.
-
-1. **Número-herói** — número gigante como visual (ex: "4", "90'", "11+"). Dado/listicle.
-2. **Palavra explodida** — uma palavra dominando o slide (ex: "a caixa.", "errado.", "pegadinha."). Take/virada.
-3. **Mockup de tela** — desenhado no Figma: card de app (ícone + nome + placar) ou tela de bloqueio com Live Activity. Autêntico, não precisa de foto.
-4. **Capa glow + painel de vidro** — atmosférica, hook grande, palavra em azul, profundidade pelo vidro.
-5. **Comparação em cards** — dois cards contrastando (ex: "todo iphone 11+" x "a inteligência nova"). Esclarece + gera comentário.
-6. **Lista com dots** — itens com bolinha azul (ex: o que vem no seminovo, o que a gente avalia na troca).
-7. **Enquete** — pergunta + opções com checkbox visual ("responde nos comentários"). Engajamento.
-8. **Foto/produto** — slot reservado pra foto real recortada — preenche quando tiver imagem.
-
-### Regra de ouro: variedade x coesão
-- **Variedade vive ENTRE posts:** cada carrossel usa uma jogada-herói diferente.
-- **Coesão vive DENTRO do carrossel:** os slides compartilham a moldura (degradê + glow + painel de vidro + footer + estilo de tipo); só o elemento-herói do meio muda. Não misturar 6 estruturas num só carrossel.
-
-### Mockups de dispositivo (padrão — lição 13/06)
-Quando um card mostra uma tela ou aparelho, usar **mockup de dispositivo REALISTA**, nunca retângulo desenhado à mão.
-- **Device frame realista:** iPhone/Watch com notch, dynamic island, botões, sombra e **wallpaper real do iOS**. Fonte: bibliotecas de device do Figma / Apple Design Resources.
-- **UI/screenshot real do recurso** dentro do device (ex.: Apple Sports com bandeiras, Dynamic Island com placar, tela de bloqueio com Live Activity).
-- **Conteúdo real** (bandeiras, chrome do app, wallpaper) > texto chapado. Dá cara de keynote da Apple.
-- Técnico: imagem entra no Figma via `upload_assets` (POST dos bytes pra URL retornada); `createImageAsync` não é suportado no `use_figma`.
+- **Raios** (`--sb-r-*`): pill 999 · lg 36 · card 28 · panel 22 · sm 16. Cantos contínuos (squircle iOS). Nunca borda viva (0px).
+- **Espaçamento**: base 8px — 4, 8, 12, 16, 24, 32, 48, 64, 96, 128.
+- **Elevação**: soft `0 8px 30px` · card `0 24px 60px` · glass (rim especular + ambient).
 
 ---
 
-## Pilares de conteúdo (categorias — sem cor própria)
+## Componentes (site)
 
-Os pilares organizam o **conteúdo**, não a cor. Todos usam o mesmo sistema visual (degradê + glow + vidro + azul). O badge de pilar é **só interno** (organização no Figma) — nunca vai na arte publicada.
+- **Browserbar + sidebar (nav):** vidro, pill 999, blur leve, borda azul `rgba(62,130,247,.55)`, glow. Sidebar de ícones na mesma receita.
+- **Botões:** primary (branco sólido, texto `#07070E`) · glass (vidro) · whatsapp (verde funcional) · ghost (texto azul). Todos pill.
+- **Chip:** pill com tint azul + borda de sinal. **Eyebrow:** Inter 500, ls 3px, lowercase, silver ou azul.
+- **Slot de foto:** estado vazio com glow azul; recebe foto real recortada.
 
-### DECIFRA APPLE
-- **Objetivo:** carrosséis investigativos — dados reais (tributação, garantia, modelos, recursos)
-- **Tom visual:** informativo, técnico, preciso — como um briefing Apple
-- **Jogadas típicas:** número-herói, lista com dots, comparação em cards, mockup de tela
+---
 
-### CASA SMARTBASE
-- **Objetivo:** diferencial "paga quando recebe", prova social, bastidor, upgrade
-- **Tom visual:** humano, próximo, confiante
-- **Jogadas típicas:** palavra explodida, capa glow + vidro, foto/produto, enquete
+## Aplicação — post (1080×1350)
 
-### VIDA APPLE EM CAXIAS
-- **Objetivo:** ancoragem local, fotos em iPhone na Serra Gaúcha. KPI: alcance local.
-- **Layout oficial (direção "editorial", fechado 15/06):** foto local quase full-bleed no topo → degradê de escurecimento na base (fade pro `#07070E`) → **faixa de vidro** no rodapé com headline curta (Bricolage, palavra-chave em azul) + uma **linha de EXIF** ("iPhone 17 pro max · caxias · golden hour"). Footer `@smartbase.br` centralizado.
-- **Por que assim:** a faixa de vidro + a linha de EXIF afirmam "tirada aqui, nesse aparelho" — é o que diferencia de banco de imagem. A foto é a estrela (serve o alcance local); o sistema segura a marca.
-- **Regras:** foto sempre **real, tirada em iPhone na Serra** (nunca stock); a linha de EXIF é sempre verdadeira (aparelho/lugar/luz reais); headline curta, caixa baixa, "você/seu". Template no Figma: **"TEMPLATE · vida apple caxias"** (`QKN6E4t9w2XPdATrXzivvN`).
-- **Tom visual:** editorial, leve, cotidiano — Apple como parte da vida.
+- Canvas 1080×1350, padding lateral 80px, área segura 80–1000px.
+- Footer **`@smartbase.br` centralizado** (Inter medium ~26, branco ~85%). Obrigatório.
+- **Kit de jogadas** (uma jogada-herói por carrossel): número-herói · palavra explodida · mockup de tela (device realista, lição 13/06) · capa glow + vidro · comparação em cards · lista com dots · enquete · foto/produto.
+- Coesão dentro do carrossel (mesma moldura), variedade entre posts.
+- Tokens SVG: degradê `#13131F`→`#07070E` · surface `#0F0F1C` · divider `stroke #1E1E2E` · acento `#3E82F7` · glow elipse `#3E82F7` blur ~200 opacity .12–.24 · ghost "sb" `#F2F2F6` opacity .03–.04 · headline `#F2F2F6` Bricolage 88–96 / 800 · corpo `#7A7A96` Inter 26–34 / 400 · footer `@smartbase.br` centralizado.
+
+### Layout Vida Apple em Caxias (editorial, fechado 15/06)
+Foto local quase full-bleed no topo → degradê de escurecimento (fade pro `#07070E`) → faixa de vidro no rodapé com headline curta (palavra-chave azul) + linha de EXIF ("iphone 17 pro max · caxias · golden hour"). Footer centralizado. Foto sempre real, tirada em iPhone na Serra. Template Figma: `QKN6E4t9w2XPdATrXzivvN` ("TEMPLATE · vida apple caxias").
+
+---
+
+## Aplicação — site
+
+`www.smartbasebr.com` — mesma língua visual em web. Nav flutuante em vidro, conversão 100% WhatsApp.
+Implementação técnica: `site/tema-shopify/assets/colors_and_type.css` + `kit.css` (derivados deste sistema). **Pull antes de push.**
+
+---
+
+## Pilares de conteúdo (categorias, sem cor)
+
+Todos usam o mesmo sistema visual. Badge de pilar é só interno (Figma).
+- **Decifra Apple** — carrosséis investigativos, dado real. KPI: salvamentos + envios.
+- **Casa Smartbase** — "paga quando recebe", prova social, bastidor, upgrade. KPI: comentários + DMs.
+- **Vida Apple em Caxias** — foto real em iPhone na Serra. KPI: alcance local.
+
+---
+
+## Copy (resumo — fonte é voz-smartbase.md)
+
+Premissa, não promessa (LightCopy). Caixa baixa, take primeiro, fato concreto, CTA convite. "você/seu" no feed; "tu" só no WhatsApp 1:1.
+**Proibido:** travessão, "não é X, é Y", emoji de enfeite, promoção genérica, preço no feed, "markup", "100% de bateria" como padrão.
 
 ---
 
 ## O que NUNCA fazer
 
-**Cores:**
-- `#FFFFFF` (branco puro) como fundo — a marca é dark-first
-- `#25D366` (wa-green) fora de contexto de WhatsApp
-- Cor quente (laranja, vermelho, amarelo) em qualquer elemento
-- Gradiente vibrante ou neón
-- Inventar cor de acento fora do azul `#3E82F7`
-
-**Tipografia:**
-- Fontes serifadas em qualquer contexto
-- Bricolage abaixo de 28px
-- Mais de 2 famílias tipográficas por peça
-- Caps lock ou letter-spacing no headline
-
-**Layout:**
-- Preço no feed — nunca. Só no WhatsApp
-- Banneraço com preço + telefone + produto + texto junto — estética de varejo
-- Falta de margem — padding mínimo de 80px lateral, sempre
-- Post sem footer — `@smartbase.br` centralizado é obrigatório
-- **Badge de pilar na arte publicada** — é só interno
-- **Marca d'água de letras "sb" na arte** — usar painel de vidro pra profundidade
-- **Accent bar lateral** — aposentada
-
-**Tom visual:**
-- Estética de varejo genérica (fundo branco, produto grande, preço em vermelho)
-- Qualquer elemento que pareça "promoção" — a Smartbase posiciona, não promove
-- Posts sem identidade — qualquer peça deve ser lida como Smartbase sem ver o logo
-
----
-
-## Princípio de copy (LightCopy + storytelling)
-- **Premissa, não promessa** (Ladeira): ensina algo real, a venda vem de consequência.
-- **Storytelling de jornada:** uma missão em passos numerados (01, 02, 03...), produto como último passo. O leitor aplica os passos mesmo sem comprar.
-- **Engajamento:** ao menos 1 slide salvável/comentável (enquete, checklist, dado).
-- **Voz (de `conteudo/voz-smartbase.md`):** caixa baixa, take primeiro, fato concreto, CTA convite. **Pessoa:** "você/seu" no feed; "tu" fica só pro WhatsApp 1:1. **Proibido:** travessão, "não é X, é Y", emoji de enfeite, promoção genérica, preço no feed, prometer "100% de bateria" como padrão.
-
----
-
-## Referências visuais aprovadas
-
-- Figma `QKN6E4t9w2XPdATrXzivvN`, página "orgânico feed | junho/26" — kit aplicado: Copa `1000-29`, iOS 27 `992-29`, seminovo `1004-29`, upgrade/trade-in `647-286`.
-- `conteudo/1. orgânico | abril/12-05_carrossel_01.png` — referência de hierarquia e footer.
-
----
-
-## Tokens para uso em SVG
-
-```
-Fundo (degradê):  topo #121220 → base #07070E (vertical)
-Surface:          fill="#0F0F1C"
-Divider:          stroke="#1E1E2E"
-Acento (único):   fill="#3E82F7"
-Glow:             elipse #3E82F7, blur ~200, opacity 0.12–0.30
-Painel de vidro:  fill="#FFFFFF" opacity 0.04–0.08 + stroke #FFFFFF opacity 0.10–0.14 + background blur (Figma)
-Headline:         fill="#F2F2F6"  font-family="'Bricolage Grotesque'" font-size="88-96" font-weight="800"
-Corpo:            fill="#7A7A96"  font-family="'Inter'" font-size="26-34" font-weight="400"
-Número-herói:     fill="#C0C0D0" opacity 0.20  font-family="'Bricolage Grotesque'" font-weight="800"
-Footer (handle):  fill="#F2F2F6" opacity 0.85  font-family="'Inter'" font-size="26" font-weight="500"  → @smartbase.br CENTRALIZADO
-Dot de lista:     <circle r="6" fill="#3E82F7"/>
-```
+**Cor:** roxo/verde/qualquer acento fora do azul · cor por pilar · branco puro de fundo · paleta quente/neón · wa-green fora de WhatsApp.
+**Tipografia:** serifada · Bricolage < 28px · CAPS ou letter-spacing no headline · +2 famílias.
+**Layout:** preço no feed · post sem footer centralizado · padding < 80px · accent bar lateral · badge de pilar na arte · vidro sobre preto chapado sem canvas.
+**Tom visual:** estética de varejo · cara de "promoção" · peça irreconhecível sem o logo · "markup" em copy.
