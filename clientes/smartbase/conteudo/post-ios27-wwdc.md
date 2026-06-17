@@ -5,8 +5,8 @@
 > Voz: `voz-smartbase.md`. Caixa baixa, sem preço, CTA whats, sem travessão.
 > Entra hoje/amanhã (notícia ganha de evergreen). Sugestão: empurrar o SÁB 13 (serra na lente) pra frente.
 
-## Por que esse ângulo (revisto 16/06 — ecossistema × persona Porta 1)
-Decisão da Letícia (16/06): o post não é sobre iPhone, é sobre o iOS 27 / nova geração de Apple Intelligence **no ecossistema todo** (iPhone, iPad, Mac, Watch). Isso é mais forte porque a Smartbase vende o ecossistema, não só iPhone, e abre cross-sell de Mac/iPad/Watch. Mantém a lente da ponta de lança (**profissional/empreendedor × IA**, cruzamento de ouro P1 × Decifra) pra não diluir em "Apple pra todos" (guardrail da matriz). Ângulo: **o que a nova inteligência da Apple muda na rotina de quem produz quando os aparelhos passam a trabalhar juntos, e o que precisa pra ter.** Timing de set/2026 = gatilho de upgrade racional, alinhado ao plano de 3-6 meses.
+## Por que esse ângulo (revisto 16/06 — iPhone em ênfase, ecossistema como extensão × persona P1)
+Decisão da Letícia (16/06, refinada): **ênfase no iPhone, mas falando dos outros produtos.** O iPhone é o protagonista (é o produto-âncora da Smartbase e o aparelho que o lead frio compra primeiro); iPad/Mac/Watch entram como extensão ("e não para no iphone"), abrindo cross-sell sem diluir. Mantém a lente da ponta de lança (**profissional/empreendedor × IA**, cruzamento de ouro P1 × Decifra) pra não virar "Apple pra todos" (guardrail da matriz). Ângulo: **o que a nova inteligência da Apple muda no iPhone de quem produz, e como ela se estende pros outros aparelhos.** Timing de set/2026 = gatilho de upgrade racional, alinhado ao plano de 3-6 meses.
 Fonte da Letícia: Apple Newsroom, "Apple unveils next generation of Apple Intelligence, Siri AI, and more" (08/06/2026).
 
 ## Cuidados de honestidade (não furar)
@@ -14,15 +14,16 @@ Fonte da Letícia: Apple Newsroom, "Apple unveils next generation of Apple Intel
 - A Siri nova sai primeiro em INGLÊS, nos EUA. Português brasileiro não tem data e deve demorar. A copy NÃO promete Siri em português, só fala do modelo que roda a tecnologia.
 - Instalar o iOS 27 (todo iPhone do 11+) é diferente de rodar a Siri AI / Apple Intelligence (só 15 Pro, 15 Pro Max e 16+). Não confundir os dois.
 
-## Slides (arco de storytelling — 6 cards, versão ecossistema)
-Base: rascunho da Letícia (16/06) + correção de fatos pela fonte Apple Newsroom + voz travada. Arco: capa (ecossistema × trabalho) → Siri como cérebro do conjunto → IA dentro dos apps → conjunto mais rápido → régua honesta (chip) → cta. Pronomes em "você/seu" (feed = você, decisão 15/06). Cada slide com take + fato concreto, sem virar recap de keynote.
+## Slides (arco de storytelling — 7 cards, iPhone em ênfase + ecossistema)
+Base: rascunho da Letícia (16/06) + correção de fatos pela fonte Apple Newsroom + voz travada. iPhone lidera (slides 1-4), ecossistema entra como extensão no slide 5. Pronomes em "você/seu" (feed = você, decisão 15/06). Cada slide com take + fato concreto, sem virar recap de keynote.
 
-1. **capa** · seu trabalho não acontece num aparelho só. iphone, ipad, mac, watch. a nova inteligência da apple chega em todos eles. o que muda pra quem produz.
-2. **a siri é o cérebro do ecossistema** · a siri virou assistente de verdade, e é a mesma no iphone, no ipad, no mac e no watch. busca no seu e-mail, nas mensagens e nas fotos, responde sobre o que tá na tela e vai à web quando precisa. começou a conversa no iphone? ela continua no mac de onde parou.
+1. **capa** · seu iphone sempre foi sua ferramenta de trabalho. com o ios 27, ele começa a trabalhar por você. o que muda pra quem produz.
+2. **a siri no seu iphone** · a siri virou assistente de verdade. busca no seu e-mail, nas mensagens e nas fotos, responde sobre o que tá na tela e vai à web quando precisa. menos tempo procurando, mais tempo decidindo.
 3. **o que muda no seu dia** · a inteligência entra dentro dos apps que você já usa. safari: o notify me avisa quando um site muda, tipo preço ou estoque. mensagens: um toque vira a conversa em lembrete ou tarefa. fotos: dá pra reenquadrar a composição depois de já ter batido.
-4. **o conjunto mais rápido** · e tudo roda mais leve. apps abrem até 30% mais rápido, fotos carregam até 70%, airdrop até 80% mais veloz. no ipad, abrir e mover arquivo de um hd externo, até 5x mais rápido.
-5. **a régua honesta** · a parte inteligente pede aparelho recente, é o chip que decide. iphone 15 pro pra cima, ipad e mac com m1 pra cima, watch series 9 pra cima. chega de graça em setembro. a siri nova começa em inglês e abre pros outros idiomas depois.
-6. **cta** · quer montar um ecossistema apple pronto pra isso? a gente te ajuda a escolher o que faz sentido pro seu trabalho. você confere a garantia antes de pagar, e só paga quando tá na sua mão. manda no whats.
+4. **e mais rápido** · e o aparelho acompanha o seu ritmo. apps abrem até 30% mais rápido, fotos carregam até 70%, airdrop até 80% mais veloz.
+5. **e não para no seu iphone** · a mesma siri tá no ipad, no mac e no watch. a conversa que você começa no iphone continua no mac de onde parou. no ipad, ainda abre e move arquivo de hd externo até 5x mais rápido. um aparelho puxa o outro.
+6. **a régua honesta** · a parte inteligente pede aparelho recente, é o chip que decide. no iphone, do 15 pro pra cima. ipad e mac com m1, watch series 9. chega de graça em setembro, e a siri nova começa em inglês.
+7. **cta** · começa pelo iphone certo pro seu trabalho, e a gente te ajuda a montar o resto quando fizer sentido. você confere a garantia antes de pagar, e só paga quando tá na sua mão. manda no whats.
 
 ## Imagens (direção: mix — produto real recortado + IA conceitual)
 Gerar via inference.sh (app `infsh/flux`). Estética: fundo quase-preto (#07070E), glow azul elétrico (#3E82F7), acento laranja pontual (amarra com o 17 pro max laranja). Editorial, cinematográfico, premium, sem logos de marca. Retrato 4:5.
@@ -36,10 +37,10 @@ Gerar via inference.sh (app `infsh/flux`). Estética: fundo quase-preto (#07070E
 - **S7 clareza** — minimal: dois caminhos/colunas de luz divergindo no escuro, calmo, resolvido.
 - **S7 cta** — render oficial Apple da linha 17 (nova/lacrada) sobre fundo escuro + glow. Produto de verdade = confiança. NÃO usar "seminovo" nem "17 pro max laranja" (estoque vencido desde 13/06); herói é o novo lacrado.
 
-## Legenda (versão ecossistema)
-> o iOS 27 vai muito além do iphone. é a apple inteira ficando mais inteligente: iphone, ipad, mac e watch, com a siri no centro e a conversa passando de um aparelho pro outro.
-> pra quem trabalha no ecossistema, isso é menos tempo procurando e mais tempo decidindo. a parte inteligente pede aparelho recente, é questão de chip.
-> salva esse pra quando chegar. e se quiser montar o seu, chama no whats.
+## Legenda (versão iPhone em ênfase + ecossistema)
+> o iOS 27 é a maior virada do seu iphone em anos: a siri passa a entender seus apps e achar o que você precisa, e ainda monitora preço e estoque sozinha no safari.
+> e não para no iphone. a mesma inteligência tá no ipad, no mac e no watch, com a conversa passando de um pro outro.
+> salva esse pra quando chegar. e se quiser começar pelo iphone certo, chama no whats.
 
 **Hashtags:** #ios27 #apple #iphonecaxias #applecaxias #caxiasdosul
 
