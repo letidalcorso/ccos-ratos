@@ -18,11 +18,11 @@ Fonte da Letícia: Apple Newsroom, "Apple unveils next generation of Apple Intel
 Base: rascunho da Letícia (16/06) + correção de fatos pela fonte Apple Newsroom + voz travada. iPhone lidera (slides 1-4), ecossistema entra como extensão no slide 5. Pronomes em "você/seu" (feed = você, decisão 15/06). Cada slide com take + fato concreto, sem virar recap de keynote.
 
 1. **capa** · seu iphone sempre foi sua ferramenta de trabalho. com o ios 27, ele começa a trabalhar por você. o que muda pra quem produz.
-2. **a siri no seu iphone** · a siri virou assistente de verdade. busca no seu e-mail, nas mensagens e nas fotos, responde sobre o que tá na tela e vai à web quando precisa. menos tempo procurando, mais tempo decidindo.
+2. **a siri no seu iphone** · a siri virou assistente de verdade. busca no seu e-mail, nas mensagens e nas fotos, responde sobre o que tá na tela e vai à web quando precisa. você acha o que precisa sem lembrar onde salvou.
 3. **o que muda no seu dia** · a inteligência entra dentro dos apps que você já usa. safari: o notify me avisa quando um site muda, tipo preço ou estoque. mensagens: um toque vira a conversa em lembrete ou tarefa. fotos: dá pra reenquadrar a composição depois de já ter batido.
-4. **e mais rápido** · e o aparelho acompanha o seu ritmo. apps abrem até 30% mais rápido, fotos carregam até 70%, airdrop até 80% mais veloz.
-5. **e não para no seu iphone** · a mesma siri tá no ipad, no mac e no watch. a conversa que você começa no iphone continua no mac de onde parou. no ipad, ainda abre e move arquivo de hd externo até 5x mais rápido. um aparelho puxa o outro.
-6. **a régua honesta** · a parte inteligente pede aparelho recente, é o chip que decide. no iphone, do 15 pro pra cima. ipad e mac com m1, watch series 9. chega de graça em setembro, e a siri nova começa em inglês.
+4. **e mais rápido** · e o aparelho acompanha o seu ritmo. apps abrem até 30% mais rápido, fotos aparecem até 70% mais rápido, airdrop até 80% mais veloz.
+5. **e não para no seu iphone** · a mesma siri tá no ipad, no mac e no watch. a conversa que você começa no iphone continua no mac de onde parou. no ipad, puxa arquivo de hd externo até 5x mais rápido.
+6. **a régua honesta** · a parte inteligente pede aparelho recente, é o chip que decide. no iphone, do 15 pro pra cima. ipad e mac com m1, watch series 9. chega de graça ainda esse ano, provavelmente em setembro. a siri nova começa em inglês.
 7. **cta** · começa pelo iphone certo pro seu trabalho, e a gente te ajuda a montar o resto quando fizer sentido. você confere a garantia antes de pagar, e só paga quando tá na sua mão. manda no whats.
 
 ## Imagens (direção: mix — produto real recortado + IA conceitual)
@@ -37,10 +37,10 @@ Gerar via inference.sh (app `infsh/flux`). Estética: fundo quase-preto (#07070E
 - **S7 clareza** — minimal: dois caminhos/colunas de luz divergindo no escuro, calmo, resolvido.
 - **S7 cta** — render oficial Apple da linha 17 (nova/lacrada) sobre fundo escuro + glow. Produto de verdade = confiança. NÃO usar "seminovo" nem "17 pro max laranja" (estoque vencido desde 13/06); herói é o novo lacrado.
 
-## Legenda (versão iPhone em ênfase + ecossistema)
-> o iOS 27 é a maior virada do seu iphone em anos: a siri passa a entender seus apps e achar o que você precisa, e ainda monitora preço e estoque sozinha no safari.
-> e não para no iphone. a mesma inteligência tá no ipad, no mac e no watch, com a conversa passando de um pro outro.
-> salva esse pra quando chegar. e se quiser começar pelo iphone certo, chama no whats.
+## Legenda (versão iPhone em ênfase + ecossistema) — revisada trava 1
+> o iOS 27 chega de graça ainda esse ano e deixa o seu iphone bem mais inteligente. mas o pulo do gato, a parte de ia, só roda do 15 pro pra cima. é o chip que decide.
+> se você já pensa em trocar, esse é o motivo pra mirar no aparelho certo agora, e não dois anos atrás.
+> salva esse pra não errar na hora da troca. quando quiser, chama no whats que a gente te ajuda a escolher.
 
 **Hashtags:** #ios27 #apple #iphonecaxias #applecaxias #caxiasdosul
 
