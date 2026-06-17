@@ -344,6 +344,14 @@ const res = await fetch(`https://api.z-api.io/instances/${INSTANCE_ID}/token/${T
 ```
 **Quando usar:** Atendimento automatico, boas-vindas para leads do Instagram, confirmacao de encomendas (GeneSneakers), follow-up pos-venda
 
+### Higgsfield AI (geracao de imagem e video)
+**O que faz:** Gera imagem, video, foto de produto e ads com modelos top de linha (Nano Banana Pro, Seedream, FLUX.2, GPT Image 2; video: Veo 3.1, Kling, Seedance, Wan). Roda direto do terminal pela CLI.
+**Precisa de conta:** Sim — conta Higgsfield (login com leticia.doncattodc@gmail.com)
+**Plano/credito:** Plano free, mas com pacote de credito **pago** comprado em 17/06/2026 (40 creditos, expira ~15/09/2026). Credito pago = saida SEM marca d'agua (pronto pra cliente); credito gratis diario = COM marca d'agua. Sempre gastar o pago primeiro.
+**Configurar:** CLI instalada global (`npm i -g @higgsfield/cli`). Autenticar: `higgsfield auth login` (device login no navegador). Saldo: `higgsfield account status`
+**Como usar numa skill:** chamar as skills em `.agents/skills/` — `/higgsfield-generate` (imagem/video/audio/3D), `/higgsfield-product-photoshoot` (foto de produto de marca), `/higgsfield-marketplace-cards` (cards de listagem), `/higgsfield-soul-id` (treinar rosto/modelo consistente — exige plano pago, nao roda no free). Ou direto: `higgsfield generate create <model> --prompt "..." --image <upload_id>`
+**Quando usar:** Foto de produto e cena lifestyle (Smartbase, GeneSneakers), criativo de ad, video curto pra reel. Excecao a regra "imagem IA so gratis": liberado por ser pago e sair sem marca d'agua
+
 ---
 
 ## Como adicionar ferramentas novas
