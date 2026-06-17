@@ -51,7 +51,7 @@ O visual é a **prova** dita em imagem. Território: *a marca da prova, num merc
 | nome | token | hex | uso |
 |------|-------|-----|-----|
 | signal | `--sb-signal` | `#3E82F7` | palavra-chave, dot, CTA, glow, links |
-| blue-light | `--sb-blue-light` | `#6DAFF9` | hover, variante clara |
+| blue-light | `--sb-blue-light` | `#6DAFF9` | hover, variante clara (Figma; ainda não tokenizada no css do tema) |
 | signal-12 | `--sb-signal-12` | `rgba(62,130,247,0.12)` | tint de chips e tags |
 | signal-24 | `--sb-signal-24` | `rgba(62,130,247,0.24)` | overlays e glows |
 
@@ -59,7 +59,7 @@ O visual é a **prova** dita em imagem. Território: *a marca da prova, num merc
 | nome | token | hex | uso |
 |------|-------|-----|-----|
 | success | `--sb-success` | `#10B981` | status "em estoque" no site. **Nunca** como cor editorial de post. |
-| wa-green | `--sb-wa` | `#25D366` | exclusivo de botão/CTA de WhatsApp. **Nunca** como destaque editorial. |
+| wa-green | `--sb-wa` | `#25D366` | exclusivo de botão/CTA de WhatsApp. **Nunca** como destaque editorial. (Hardcoded no `theme.css` do site; `--sb-wa` é a referência do guia.) |
 
 > Reconciliação 17/06: `surface-2` (era `#121220`), `text-muted`→`mute` (era `#4A4A60`) e alphas (eram 10%/30%) foram alinhados ao valor do site, que está no ar. Peças antigas não precisam de refação.
 

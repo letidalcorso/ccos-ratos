@@ -295,7 +295,7 @@
         <div class="badge-sb">sb</div>
       </div>
       <div class="card" style="background:#F2F2F6;display:flex;flex-direction:column;gap:28px;align-items:flex-start;">
-        <span class="pill-rule" style="background:#fff;color:#4A4A60;border-color:#ddd">fundo claro</span>
+        <span class="pill-rule" style="background:#fff;color:#4A4A66;border-color:#ddd">fundo claro</span>
         <div class="pill-mark" style="border-color:#1A1A2E"></div>
         <div class="logo-wm dark"><span class="smart">smart</span><span class="dot"></span><span class="base">base</span></div>
         <div style="background:#1A1A2E;border-radius:15px;padding:6px 18px;"><span style="font-size:15px;font-weight:600;color:var(--sb-signal)">sb</span></div>
@@ -307,7 +307,7 @@
         <tr><td>wordmark</td><td><code>smart</code> peso 300 platinum · <code>•</code> dot azul · <code>base</code> peso 700 branco</td></tr>
         <tr><td>tamanho mínimo</td><td>80px de largura — abaixo disso a cápsula perde forma</td></tr>
         <tr><td>handle</td><td><code>@smartbase.br</code> (nunca <code>.rs</code>) — centralizado no footer de todo post</td></tr>
-        <tr><td>badge "sb"</td><td>pill <code>#0F0F1C</code> com "sb" em <code>#3E82F7</code> peso 600 — avatar/ícone, não marca d'água</td></tr>
+        <tr><td>badge "sb"</td><td>pill <code>#0F0F1C</code> com "sb" em <code>#3E82F7</code> peso 600 — avatar/ícone do perfil. é diferente da marca d'água "sb" de fundo (seção 05): o badge é o selo pequeno, a marca d'água é o ghost gigante atrás. os dois convivem.</td></tr>
       </table>
     </div>
   </section>
@@ -608,7 +608,7 @@
   <!-- 11 TOKENS -->
   <section class="dg-section">
     <p class="dg-section-title">11 · tokens</p>
-    <p class="dg-section-lead">a tabela técnica — serve figma e o css do tema. mesmos hex em todo lugar.</p>
+    <p class="dg-section-lead">a tabela técnica — serve figma e o css do tema. os hex-base batem com o <b>colors_and_type.css</b> do site; <b>blue-light</b> e <b>signal-55</b> são variações do figma, ainda não portadas pro css do tema.</p>
     <div class="card">
       <table class="tok-table">
         <tr><th>nome</th><th>token</th><th>valor</th><th>uso</th></tr>
@@ -617,14 +617,14 @@
         <tr><td><span class="tok-dot" style="background:#13131F"></span>surface-2</td><td><code>--sb-surface-2</code></td><td>#13131F</td><td>camada elevada, topo do degradê</td></tr>
         <tr><td><span class="tok-dot" style="background:#11110F"></span>ink</td><td><code>--sb-ink</code></td><td>#11110F</td><td>near-black em crops</td></tr>
         <tr><td><span class="tok-dot" style="background:#3E82F7"></span>signal</td><td><code>--sb-signal</code></td><td>#3E82F7</td><td>acento único — headline, dot, cta, glow</td></tr>
-        <tr><td><span class="tok-dot" style="background:#6DAFF9"></span>blue-light</td><td><code>--sb-blue-light</code></td><td>#6DAFF9</td><td>hover, variante clara</td></tr>
+        <tr><td><span class="tok-dot" style="background:#6DAFF9"></span>blue-light</td><td><code>--sb-blue-light</code></td><td>#6DAFF9</td><td>hover, variante clara (figma; ainda não no css do tema)</td></tr>
         <tr><td><span class="tok-dot" style="background:rgba(62,130,247,.2)"></span>signal-12 / -24</td><td><code>--sb-signal-12/24</code></td><td>62,130,247 · 12% / 24%</td><td>tint de chip · glow/overlay</td></tr>
         <tr><td><span class="tok-dot" style="background:#F2F2F6"></span>white</td><td><code>--sb-white</code></td><td>#F2F2F6</td><td>headlines, títulos</td></tr>
         <tr><td><span class="tok-dot" style="background:#C0C0D0"></span>platinum</td><td><code>--sb-platinum</code></td><td>#C0C0D0</td><td>texto secundário</td></tr>
         <tr><td><span class="tok-dot" style="background:#7A7A96"></span>silver</td><td><code>--sb-silver</code></td><td>#7A7A96</td><td>corpo, legendas, eyebrows</td></tr>
         <tr><td><span class="tok-dot" style="background:#4A4A66"></span>mute</td><td><code>--sb-mute</code></td><td>#4A4A66</td><td>handles, dividers fracos, ghost</td></tr>
         <tr><td><span class="tok-dot" style="background:#10B981"></span>success</td><td><code>--sb-success</code></td><td>#10B981</td><td>status "em estoque" (site) — não editorial</td></tr>
-        <tr><td><span class="tok-dot" style="background:#25D366"></span>wa-green</td><td><code>--sb-wa</code></td><td>#25D366</td><td>cta whatsapp — não editorial</td></tr>
+        <tr><td><span class="tok-dot" style="background:#25D366"></span>wa-green</td><td><code>--sb-wa</code></td><td>#25D366</td><td>cta whatsapp, não editorial (hardcoded no theme.css do site)</td></tr>
         <tr><td><span class="tok-dot" style="background:rgba(255,255,255,.12)"></span>vidro (fill/blur)</td><td><code>--sb-lg-*</code></td><td>branco 5–12% · blur 50 sat 180%</td><td>material vidro (web)</td></tr>
         <tr><td>raios</td><td><code>--sb-r-*</code></td><td>pill 999 · lg 36 · card 28 · panel 22 · sm 16</td><td>cantos contínuos</td></tr>
         <tr><td>fontes</td><td><code>--ff-disp / --ff-body</code></td><td>bricolage grotesque · inter</td><td>títulos · corpo</td></tr>
