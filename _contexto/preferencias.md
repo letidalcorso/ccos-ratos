@@ -35,3 +35,9 @@ Reforço (reincidiu 16/06): NUNCA fechar resposta com pergunta-oferta de execuç
 
 ## Fluxo no Figma
 - Toda vez que eu mexer em algo dentro do Figma, avisar a Letícia e deixar ela abrir o Figma pra olhar. Não baixar/renderizar preview por conta própria, é mais rápido ela ver direto na tela. Sempre mandar o link do node.
+
+## Organização e arquivamento de arquivos
+- NÃO arquivar nem tirar do repo material do mês corrente que ainda está em produção. Material do mês só vira arquivável quando o mês fecha. (lição 17/06: comecei a mover bruto de junho enquanto ela ainda trabalhava nele.)
+- Arquivo morto (lixo, duplicata, iteração superada) e backup de finalizados (entregas boas e prontas) são coisas diferentes e NUNCA ficam na mesma pasta.
+- Estrutura de backup de finalizados no HD externo: `cliente > design > [mês] > arquivos finais` (agrupar em feed/stories dentro do mês). Os editáveis/abertos ficam no Figma; o backup é só dos finalizados.
+- Operação de arquivo destrutiva (mover/apagar): copiar pro destino, verificar integridade (contagem + byte-a-byte/md5), e só então apagar a origem. Mostrar a lista antes.
