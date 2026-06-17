@@ -104,11 +104,24 @@
             "command": "python3 -c \"\nimport json, sys\ndata = json.load(sys.stdin)\npath = data.get('tool_input', {}).get('file_path', '') or data.get('tool_response', {}).get('filePath', '')\nexts = ('.html', '.css', '.js', '.liquid', '.svg', '.ts', '.jsx', '.tsx')\nif any(path.endswith(e) for e in exts):\n    print(json.dumps({'hookSpecificOutput': {'hookEventName': 'PostToolUse', 'additionalContext': f'Arquivo tecnico editado: {path}. Considere invocar Skill(codex:rescue) para revisao se a implementacao for complexa ou se houver duvidas sobre a corretude do codigo.'}}))\n\" 2>/dev/null || true",
             "timeout": 10,
             "statusMessage": "Checando arquivo técnico..."
+          },
+          {
+            "type": "command",
+            "command": "bash \"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/.claude/hooks/mark-pending-review.sh\"",
+            "timeout": 10
           }
         ]
       }
     ],
     "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/.claude/hooks/review-gate.sh\""
+          }
+        ]
+      },
       {
         "hooks": [
           {

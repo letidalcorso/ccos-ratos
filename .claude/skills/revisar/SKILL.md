@@ -20,6 +20,7 @@ Nada chega na Letícia sem passar por aqui. Ela é a última revisora, não a pr
    - passou → entregar.
    - achou problema → consertar e revisar de novo. só entregar o que passou.
 7. Mostrar pra Letícia já revisado e dizer em uma linha o que foi conferido.
+8. **Limpar o marcador da trava:** ao concluir a revisão, rodar `rm -f "/Users/leticiadalcorso/Documents/lets get tech, bitch/ratos de ia/.claude/.pending-review"`. O bloqueio do Stop hook (`review-gate.sh`) só libera o fecho da resposta quando esse marcador some.
 
 ## importante
 

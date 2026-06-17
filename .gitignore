@@ -58,6 +58,9 @@ clientes/smartbase/dados/
 clientes/smartbase/conteudo/fotos-caxias/
 clientes/smartbase/marca/banco de imagens/
 
+# Marcador transitorio da trava de revisao (trava 1), nao versionar
+.claude/.pending-review
+
 # Sistema
 .DS_Store
 node_modules/
