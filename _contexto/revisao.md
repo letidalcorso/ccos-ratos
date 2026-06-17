@@ -7,6 +7,8 @@ padrão único do que conta como "pronto pra Letícia ver". nada chega nela sem 
 - texto curto, resposta, legenda: check rápido, rodado na hora antes de fechar a resposta.
 - arte, carrossel, site, campanha, pacote de cliente, entrega do mês: revisor separado (sub-Claude com olhar crítico), igual os 3 críticos que pegaram os 8 vícios na voz dela. olhar de fora pega o que quem fez não enxerga.
 - na dúvida do tamanho, revisar mais, não menos.
+- revisar a COPY QUE VAI AO AR (legenda, post, blog, site, descrição, arte publicada). docs internos de planejamento, status, voz e exemplos CITAM os vícios pra evitá-los, então varredura crua (grep) dá falso-positivo neles; o que conta é o que o público vê.
+- revisão de entrega de verdade é olhar independente, não autoconferência: quem escreveu não enxerga o próprio erro.
 
 ## 1. anti-IA (todo texto)
 
@@ -26,7 +28,7 @@ fonte: `_contexto/voz-leticia.md`. varrer e reescrever se achar:
 SEMPRE ler `clientes/[nome]/CLAUDE.md` antes. nunca misturar clientes (público, persona, tom e palavra-trava de um jamais vazam pro outro).
 
 travas conhecidas pra conferir:
-- Smartbase: proibido "markup", proibido usar "nota fiscal/comprovante" como argumento, proibido "Paraguai" em copy de site (usar "importado"; Paraguai só no Instagram ao vivo). afirmar originalidade, nunca se defender de "golpe/paralelo".
+- Smartbase: proibido "markup", proibido usar "nota fiscal/comprovante" como argumento, proibido "Paraguai" em copy de site (usar "importado"; Paraguai só no Instagram ao vivo), inclusive em artigo de blog de SEO mesmo quando o termo de busca é "iphone do paraguai" (decisão 17/06: usar "importado", abrir mão do termo). afirmar originalidade, nunca se defender de "golpe/paralelo". dizer que a garantia NÃO depende de nota é ok; usar nota como prova de confiança, não.
 - GeneSneakers: nunca posicionar contra o varejo. "markup nacional", "sneakerheads", "drop", "curadoria" são só dela. nunca "réplica", "paralelo", "premium", "100% original garantido".
 - FTemper: fala com o serralheiro, tom técnico sem corporativês.
 - Sodi: próximo, sem academicismo, Lele e Soi as duas protagonistas.
@@ -59,6 +61,7 @@ arte é o MAIOR ponto de retrabalho da Letícia. revisar com rigor extra e, se f
 - considerei os fatores externos/sazonais antes de propor ação com data ou verba? (eleição, black friday, copa, câmbio, lançamento de produto mudam custo de ads, atenção e timing.) (lição smartbase: propus escalar ads em set/out sem ver que eleição presidencial + black friday inflam o CPM justo nesses meses.)
 - afirmação de "validado/confirmado/é tendência" que depende de fato externo (tecnologia, lançamento, novidade de mercado): pesquisar o estado MAIS ATUAL antes de cravar, checando se houve marco recente (WWDC, keynote, atualização de versão). nunca declarar validado com a primeira resposta rasa. (lição iOS 27: peguei o iOS 18.4/26 desatualizado e dei como validado, quando o fato que importava era o iOS 27, em beta agora e público em set/2026.)
 - a entrega responde no NÍVEL que ela pediu? pedido amplo/estratégico ("planejamento macro", "estratégia", "plano") não é a leitura mais operacional por padrão: "macro" é nível de frentes, objetivos e prioridades, acima da pauta de conteúdo. antes de executar ou disparar pesquisa, calibrar numa vez o que o pedido significa e o escopo, sem reduzir a uma skill operacional nem afunilar pra um cliente sozinha. (lição 16/06: ela pediu planejamento de estratégias macro, eu reduzi a pauta de conteúdo e afunilei pra Smartbase, gastando rodadas na premissa errada.)
+- número ou percentual (% de imposto, spec, preço, estatística) tem que bater com a fonte citada. nunca cravar um número que a fonte não dá. (lição Smartbase: artigo afirmou "mais de 60% é imposto" citando em.com.br, que não dá esse número, e a própria pesquisa registrava ~40%. número no ar pega como propaganda enganosa.)
 
 ## veredito
 

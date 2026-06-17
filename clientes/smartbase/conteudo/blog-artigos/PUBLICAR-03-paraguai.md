@@ -1,4 +1,4 @@
-# PRONTO PRA SUBIR — Artigo 3: iPhone do Paraguai vale a pena
+# PRONTO PRA SUBIR — Artigo 3: iPhone importado vale a pena
 
 > Versão limpa de publicação (rev. com as observações da Letícia). 
 > Links internos do cluster removidos (ainda não no ar / sem URL confirmada). Links de FONTE externos mantidos (em.com.br, Jusbrasil). Reativar internos depois — ver seção 3.
@@ -8,19 +8,19 @@
 ## 1. Campos pra preencher no Shopify (copiar cada um)
 
 **Título do post (H1, não repetir no corpo):**
-iPhone do Paraguai vale a pena em 2026? Riscos, garantia e como comprar sem cair em golpe
+iPhone importado vale a pena em 2026? Riscos, garantia e como comprar sem cair em golpe
 
 **URL / handle:**
-iphone-do-paraguai-vale-a-pena
+iphone-importado-vale-a-pena
 
 **SEO · Título da página (meta title):**
-iPhone do Paraguai vale a pena? Riscos e como comprar seguro
+iPhone importado vale a pena? Riscos e como comprar seguro
 
 **SEO · Meta descrição:**
-iPhone do Paraguai vale a pena em 2026? Pode valer, se for original e você não pagar antes de conferir. Veja os riscos reais e como comprar sem cair em golpe.
+iPhone importado vale a pena em 2026? Pode valer, se for original e você não pagar antes de conferir. Veja os riscos reais e como comprar sem cair em golpe.
 
 **Resumo/excerpt (opcional):**
-A internet responde "iPhone do Paraguai" com medo. A pergunta certa é como tirar o risco: original, procedência e conferir antes de pagar. O guia completo.
+A internet responde "iPhone importado" com medo. A pergunta certa é como tirar o risco: original, procedência e conferir antes de pagar. O guia completo.
 
 ---
 
@@ -29,7 +29,7 @@ A internet responde "iPhone do Paraguai" com medo. A pergunta certa é como tira
 > No editor do post, clicar em `<>` (Mostrar HTML) e colar o bloco abaixo inteiro.
 
 ```html
-<p>Pesquisa "iPhone do Paraguai" no Google e a internet inteira te responde com medo: golpe, falsificação, "confia, pix antes". E faz sentido, golpe existe mesmo. Só que a pergunta certa é outra: <strong>como tirar o risco da jogada</strong>.</p>
+<p>Pesquisa "iPhone importado" no Google e a internet inteira te responde com medo: golpe, falsificação, "confia, pix antes". E faz sentido, golpe existe mesmo. Só que a pergunta certa é outra: <strong>como tirar o risco da jogada</strong>.</p>
 
 <p>Porque a economia é real. Um iPhone importado custa bem menos que na loja oficial brasileira, e é tão original quanto. O que separa o bom negócio do prejuízo é a procedência e, principalmente, <strong>a ordem das coisas: conferir antes de pagar.</strong> O país de origem importa bem menos. Vamos destrinchar.</p>
 
@@ -37,7 +37,7 @@ A internet responde "iPhone do Paraguai" com medo. A pergunta certa é como tira
 
 <p>A diferença não é pouca. Dependendo do modelo, um iPhone importado sai de R$2.000 a R$3.000 mais barato que na loja oficial.</p>
 
-<p>O motivo é simples: imposto. O Brasil é o <strong><a href="https://www.em.com.br/trends/2026/04/7396343-por-que-o-iphone-no-brasil-e-o-2-mais-caro-do-mundo-entenda-os-impostos.html" target="_blank" rel="noopener">segundo país mais caro do mundo pra comprar iPhone</a></strong>, perdendo só pra Turquia, porque a carga tributária sobre eletrônico importado passa de 60% (imposto de importação) e ainda soma IPI, ICMS, PIS e Cofins. Boa parte do que você paga numa loja oficial é tributo, não aparelho. Por isso o mesmo iPhone, importado, custa menos.</p>
+<p>O motivo é simples: imposto. O Brasil é o <strong><a href="https://www.em.com.br/trends/2026/04/7396343-por-que-o-iphone-no-brasil-e-o-2-mais-caro-do-mundo-entenda-os-impostos.html" target="_blank" rel="noopener">segundo país mais caro do mundo pra comprar iPhone</a></strong>, perdendo só pra Turquia, porque o preço carrega imposto de importação, IPI, ICMS, PIS e Cofins empilhados. Boa parte do que você paga numa loja oficial vai pra tributo. Por isso o mesmo iPhone, importado, custa menos.</p>
 
 <h2>Os riscos são reais (e por que tanta gente se queima)</h2>
 
@@ -53,7 +53,7 @@ A internet responde "iPhone do Paraguai" com medo. A pergunta certa é como tira
 
 <p>Repara que o risco está sempre no mesmo lugar: comprar de quem some depois do pix.</p>
 
-<h2>iPhone do Paraguai é original? É legal?</h2>
+<h2>iPhone importado é original? É legal?</h2>
 
 <p>Pode ser 100% original. O iPhone vendido lá é, na maioria, o mesmo modelo da linha global que a Apple vende no Brasil, com as mesmas peças. O que define a originalidade é a <strong>procedência</strong>: aparelho lacrado, com IMEI limpo e verificável no site da Apple. Isso vale venha de onde vier; origem duvidosa é problema mesmo comprado aqui na esquina.</p>
 
@@ -85,17 +85,17 @@ A internet responde "iPhone do Paraguai" com medo. A pergunta certa é como tira
 
 <h2>Perguntas frequentes</h2>
 
-<h3>iPhone do Paraguai é original?</h3>
+<h3>iPhone importado é original?</h3>
 <p>Pode ser, e o que garante isso é a procedência: aparelho lacrado, com IMEI verificável no site da Apple. Aqui na Smartbase a gente garante a originalidade de cada aparelho e te mostra essa verificação antes de você pagar.</p>
 
-<h3>iPhone do Paraguai tem garantia no Brasil?</h3>
+<h3>iPhone importado tem garantia no Brasil?</h3>
 <p>Tem. A garantia Apple é mundial (1 ano da ativação) e a Justiça brasileira já obrigou a Apple a cobrir aparelho comprado fora.</p>
 
 <h3>É seguro comprar iPhone importado pela internet?</h3>
 <p>É, se você não pagar antes de conferir. O golpe vive no pix antecipado. Comprando de quem te deixa verificar IMEI, lacre e originalidade antes do pagamento, o risco cai pra perto de zero.</p>
 
 <h3>Quanto dá pra economizar comprando importado?</h3>
-<p>Em geral de R$2.000 a R$3.000 frente à loja oficial, dependendo do modelo, porque mais de 60% do preço no Brasil é imposto.</p>
+<p>Em geral de R$2.000 a R$3.000 frente à loja oficial, dependendo do modelo, porque boa parte do preço no Brasil é imposto.</p>
 ```
 
 ---

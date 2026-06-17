@@ -114,4 +114,5 @@ clientes/[nome-cliente]/03_conteudo/[mes-ano]/
 - Nunca desenvolver textos sem pauta aprovada
 - Sem emojis no texto, a menos que o CLAUDE.md do cliente indique o contrário
 - Sem travessões (—) por padrão
+- **Antes de entregar a legenda ou pauta pra Letícia, rodar `/revisar` (trava 1):** anti-IA, travas do cliente (ler o CLAUDE.md dele), repetição e completude. Só mostrar o que passou.
 - Se o cliente tiver carrossel na pauta, perguntar se usa `/carrossel` pra gerar o visual junto

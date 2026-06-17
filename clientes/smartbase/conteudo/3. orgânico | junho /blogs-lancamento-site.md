@@ -105,7 +105,7 @@ Geração nova traz novidades, mas o salto real de desempenho de uma geração p
 
 ### como decidir
 
-A pergunta certa não é qual é o mais novo, é qual é o apple certo pra você. Se você usa o aparelho todo dia, depende dele e quer o melhor desempenho sem pagar preço de lançamento, o 17 Pro Max agora é uma decisão muito sólida. Se fazer questão de ter o modelo mais recente acima de tudo, aí faz sentido esperar o 18.
+Antes de correr atrás do modelo mais novo, pense em qual Apple combina com o seu uso. Se você usa o aparelho todo dia, depende dele e quer o melhor desempenho sem pagar preço de lançamento, o 17 Pro Max agora é uma decisão muito sólida. Se fazer questão de ter o modelo mais recente acima de tudo, aí faz sentido esperar o 18.
 
 ### dica de quem vive apple
 
