@@ -13,6 +13,7 @@ Referência do tom certo, feita por ela: o reel da lua (8x de zoom, fotografa a 
 2. **Fato concreto no lugar de adjetivo.** "8x de zoom, fotografa a lua" vale mais que "qualidade premium". Número, modelo, detalhe real que prova que manja.
 3. **Ritmo de fala.** Frase curta, como áudio pro amigo, não texto de site. Lowercase.
 4. **CTA é convite, não slogan.** "manda o modelo no whats que eu te falo" e não "garanta já o seu".
+5. **Persona protagonista.** O leitor (o profissional) é o sujeito da copy, e o produto é a ferramenta que serve a ele. Abrir no dia/na dor dele ("você perde tempo procurando arquivo"), não no que o aparelho faz ("o iphone agora busca"). Se o iphone/a siri é o sujeito de quase toda frase, a persona virou objeto e a copy ficou liderada pelo produto. (lição iOS 27, 16/06: a Letícia pegou que a persona não estava como protagonista.)
 
 ## O que dá cara de IA (matar)
 - estrutura sempre simétrica (hook, explicação, CTA, tudo redondo)
