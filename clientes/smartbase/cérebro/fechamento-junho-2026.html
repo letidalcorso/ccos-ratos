@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fechamento de Junho 2026 · Smartbase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --void: #07070E;
+    --surface: #0F0F1C;
+    --surface-2: #13131F;
+    --divider: #1E1E2E;
+    --white: #F2F2F6;
+    --platinum: #C0C0D0;
+    --silver: #7A7A96;
+    --mute: #4A4A66;
+    --signal: #3E82F7;
+    --blue-light: #6DAFF9;
+    --signal-12: rgba(62,130,247,0.12);
+    --signal-24: rgba(62,130,247,0.24);
+    --success: #10B981;
+    --red: #EF4444;
+    --wa: #25D366;
+    --head: 'Bricolage Grotesque', 'Segoe UI', -apple-system, sans-serif;
+    --body: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+  }
+
+  body {
+    background: var(--void);
+    color: var(--white);
+    font-family: var(--body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 40px 20px 80px;
+  }
+
+  .slide {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(160deg, var(--surface-2) 0%, var(--void) 78%);
+    border: 1px solid var(--divider);
+    border-radius: 28px;
+    padding: 64px 72px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+  }
+
+  /* glow azul de fundo */
+  .slide::before {
+    content: "";
+    position: absolute;
+    width: 640px; height: 640px;
+    right: -180px; top: -220px;
+    background: radial-gradient(circle, var(--signal-24) 0%, transparent 62%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  /* marca d'água ghost "sb" */
+  .slide::after {
+    content: "sb";
+    position: absolute;
+    right: -40px; bottom: -180px;
+    font-family: var(--head);
+    font-weight: 800;
+    font-size: 460px;
+    line-height: 1;
+    color: var(--white);
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .slide > * { position: relative; z-index: 1; }
+
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    color: var(--signal);
+    margin-bottom: 22px;
+  }
+
+  h1 {
+    font-family: var(--head);
+    font-weight: 700;
+    font-size: 76px;
+    line-height: 0.98;
+    letter-spacing: -2px;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-family: var(--head);
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 1.02;
+    letter-spacing: -1.2px;
+    color: var(--white);
+    margin-bottom: 28px;
+  }
+  h2 .k, h1 .k, .lead .k { color: var(--signal); }
+
+  .lead {
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--platinum);
+    max-width: 760px;
+  }
+  .sub {
+    font-size: 16px;
+    color: var(--silver);
+    max-width: 720px;
+  }
+
+  .footer {
+    position: absolute;
+    left: 0; right: 0; bottom: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    z-index: 1;
+  }
+  .footer .handle { font-size: 14px; font-weight: 500; color: rgba(242,242,246,0.72); }
+  .footer .pg { position: absolute; right: 40px; font-size: 13px; color: var(--mute); }
+
+  /* ---- stat tiles ---- */
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 8px; }
+  .tile {
+    background: var(--signal-12);
+    border: 1px solid rgba(62,130,247,0.28);
+    border-radius: 22px;
+    padding: 28px 26px;
+    backdrop-filter: blur(30px);
+  }
+  .tile .num { font-family: var(--head); font-weight: 700; font-size: 52px; line-height: 1; letter-spacing: -1.5px; color: var(--white); }
+  .tile .num.blue { color: var(--signal); }
+  .tile .lbl { font-size: 14px; color: var(--silver); margin-top: 12px; }
+  .tile .delta { font-size: 13px; color: var(--success); margin-top: 6px; font-weight: 500; }
+
+  /* ---- funil ---- */
+  .funnel { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; max-width: 860px; }
+  .fbar { display: flex; align-items: center; gap: 20px; }
+  .fbar .bar {
+    height: 62px; border-radius: 16px;
+    background: linear-gradient(90deg, var(--signal) 0%, rgba(62,130,247,0.35) 100%);
+    display: flex; align-items: center; padding-left: 26px;
+    font-family: var(--head); font-weight: 600; font-size: 26px; color: #07070E;
+  }
+  .fbar .bar.ghost { background: var(--surface); border: 1px solid var(--divider); color: var(--platinum); }
+  .fbar .cap { font-size: 15px; color: var(--silver); flex: 1; }
+
+  /* ---- comparativo origem ---- */
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 10px; }
+  .ocard { background: var(--surface); border: 1px solid var(--divider); border-radius: 22px; padding: 30px 30px 26px; }
+  .ocard.win { border-color: rgba(62,130,247,0.5); background: var(--signal-12); }
+  .ocard .oe { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--silver); }
+  .ocard .op { font-family: var(--head); font-weight: 700; font-size: 66px; line-height: 1; letter-spacing: -2px; margin: 12px 0 6px; }
+  .ocard.win .op { color: var(--signal); }
+  .ocard .od { font-size: 16px; color: var(--platinum); }
+
+  /* ---- listas / tabelas ---- */
+  .rows { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; max-width: 900px; }
+  .row {
+    display: grid; grid-template-columns: 200px 1fr; gap: 20px;
+    background: var(--surface); border: 1px solid var(--divider);
+    border-left: 3px solid var(--red);
+    border-radius: 16px; padding: 16px 22px;
+  }
+  .row .who { font-family: var(--head); font-weight: 600; font-size: 18px; color: var(--white); }
+  .row .what { font-size: 15px; color: var(--silver); }
+
+  .moves { display: flex; flex-direction: column; gap: 18px; margin-top: 8px; max-width: 900px; }
+  .move { display: flex; gap: 22px; align-items: flex-start; }
+  .move .n { font-family: var(--head); font-weight: 700; font-size: 40px; color: var(--signal); line-height: 1; min-width: 46px; }
+  .move .mt { font-family: var(--head); font-weight: 600; font-size: 23px; color: var(--white); margin-bottom: 4px; letter-spacing: -0.5px; }
+  .move .md { font-size: 16px; color: var(--silver); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .chip {
+    background: var(--signal-12); border: 1px solid rgba(62,130,247,0.3);
+    border-radius: 999px; padding: 10px 20px; font-size: 15px; color: var(--platinum);
+  }
+  .chip b { color: var(--white); font-weight: 600; }
+
+  .note {
+    margin-top: 26px; padding: 18px 24px;
+    background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.28);
+    border-radius: 16px; font-size: 15px; color: var(--platinum); max-width: 860px;
+  }
+  .note b { color: var(--white); }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 6px; }
+  .big { font-family: var(--head); font-weight: 700; font-size: 88px; line-height: 0.95; letter-spacing: -3px; color: var(--signal); }
+  .big.white { color: var(--white); }
+  .bigcap { font-size: 18px; color: var(--platinum); margin-top: 10px; max-width: 380px; }
+
+  @media (max-width: 900px) {
+    .slide { padding: 40px 34px; aspect-ratio: auto; min-height: 88vh; }
+    h1 { font-size: 48px; } h2 { font-size: 32px; }
+    .tiles { grid-template-columns: repeat(2,1fr); } .cols, .two { grid-template-columns: 1fr; }
+    .slide::after { font-size: 260px; }
+  }
+
+  @media print {
+    body { gap: 0; padding: 0; background: var(--void); }
+    .slide { max-width: none; width: 100%; height: 100vh; aspect-ratio: auto; border-radius: 0; border: none; page-break-after: always; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 · CAPA -->
+<section class="slide">
+  <div class="eyebrow">smartbase · performance</div>
+  <h1>fechamento de<br><span class="k">junho</span> 2026</h1>
+  <p class="lead">funil de vendas e leads do mês. o que entrou, o que fechou e por onde vazou.</p>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">01 / 09</span></div>
+</section>
+
+<!-- 2 · PLACAR -->
+<section class="slide">
+  <div class="eyebrow">o placar</div>
+  <h2>junho furou o zero: <span class="k">3 vendas</span></h2>
+  <div class="tiles">
+    <div class="tile"><div class="num blue">3</div><div class="lbl">vendas fechadas</div><div class="delta">maio: 0</div></div>
+    <div class="tile"><div class="num">R$17,6&nbsp;mil</div><div class="lbl">gmv em aparelhos</div></div>
+    <div class="tile"><div class="num">7,5%</div><div class="lbl">conversão sobre lead real</div><div class="delta">maio: 0%</div></div>
+    <div class="tile"><div class="num">R$5.863</div><div class="lbl">ticket médio</div></div>
+  </div>
+  <p class="sub" style="margin-top:26px">primeira conversão de anúncio da conta (o junior). caixa em dinheiro no mês ~R$10.990; o resto entrou como troca pra revender.</p>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">02 / 09</span></div>
+</section>
+
+<!-- 3 · FUNIL -->
+<section class="slide">
+  <div class="eyebrow">o funil</div>
+  <h2>40 leads reais, <span class="k">3</span> no fim da linha</h2>
+  <div class="funnel">
+    <div class="fbar"><div class="bar" style="width:100%">40 leads reais</div></div>
+    <div class="fbar"><div class="bar" style="width:70%">~30 em cotação</div><span class="cap">receberam proposta</span></div>
+    <div class="fbar"><div class="bar" style="width:34%">7 quentes</div><span class="cap">visita ou reserva marcada</span></div>
+    <div class="fbar"><div class="bar" style="width:18%">3 vendas</div><span class="cap">fechadas no mês</span></div>
+  </div>
+  <p class="sub" style="margin-top:24px">fora da conta: dezenas de cliques de anúncio que entraram e nunca interagiram. <b style="color:var(--platinum)">34 dos 40</b> querem 17 pro max, herói certo pra atrair.</p>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">03 / 09</span></div>
+</section>
+
+<!-- 4 · ORIGEM -->
+<section class="slide">
+  <div class="eyebrow">de onde vem venda</div>
+  <h2>o <span class="k">orgânico</span> carrega o resultado</h2>
+  <div class="cols">
+    <div class="ocard win">
+      <div class="oe">orgânico (instagram)</div>
+      <div class="op">22,2%</div>
+      <div class="od">9 leads · <b style="color:#fff">2 vendas</b></div>
+    </div>
+    <div class="ocard">
+      <div class="oe">anúncio</div>
+      <div class="op">3,4%</div>
+      <div class="od">29 leads · 1 venda</div>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:26px">o anúncio traz volume, mas é lead frio que pede preço e some. o orgânico converte 6x mais. o desejo existe; a confiança pra comprar da smartbase é o gap.</p>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">04 / 09</span></div>
+</section>
+
+<!-- 5 · POR QUE PERDEMOS -->
+<section class="slide">
+  <div class="eyebrow">por que perdemos</div>
+  <h2><span class="k">10 de 13</span> perdas: pediu preço e sumiu</h2>
+  <p class="lead" style="font-size:19px">o lead frio recebe a cotação do 17 pro max antes da prova (paga quando recebe, loja em caxias, imei) e evapora. mas 3 perdas foram operacionais e evitáveis:</p>
+  <div class="rows">
+    <div class="row"><span class="who">Juliano</span><span class="what">17 pro 1tb, orgânico quente. vendedor disse "estou consultando o valor" e não voltou</span></div>
+    <div class="row"><span class="who">Andressa</span><span class="what">17 pro max + troca. silver esgotou antes de fechar (ruptura de estoque)</span></div>
+    <div class="row"><span class="who">8436-3831</span><span class="what">foi até a loja e o vendedor estava com compromisso; visita remarcada</span></div>
+  </div>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">05 / 09</span></div>
+</section>
+
+<!-- 6 · O QUE FECHA -->
+<section class="slide">
+  <div class="eyebrow">o que fecha</div>
+  <h2>quem fecha, fecha <span class="k">presencial</span></h2>
+  <div class="two">
+    <div>
+      <div class="big white">2<span style="font-size:44px;color:var(--silver)">/3</span></div>
+      <div class="bigcap">das vendas passaram pela loja. a loja física de caxias é a máquina de fechamento, o whatsapp sozinho ainda não dá conta.</div>
+    </div>
+    <div>
+      <div class="big">34<span style="font-size:44px;color:var(--silver)">/40</span></div>
+      <div class="bigcap">leads querem o 17 pro max. a demanda tá concentrada no herói; o nó é converter o frio.</div>
+    </div>
+  </div>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">06 / 09</span></div>
+</section>
+
+<!-- 7 · PIPELINE -->
+<section class="slide">
+  <div class="eyebrow">pipeline em aberto</div>
+  <h2><span class="k">24</span> em aberto, <span class="k">7</span> quentes</h2>
+  <div class="chips">
+    <div class="chip"><b>8182-6615</b> · 17 pro max + troca · confirmou loja 11h</div>
+    <div class="chip"><b>9600-1606</b> · 14 pro max reservado · visita marcada</div>
+    <div class="chip"><b>9711-3156</b> · 17 pro max · vem de cambará pra loja</div>
+    <div class="chip"><b>9634-9584</b> · 17 pro max azul · foi à loja</div>
+    <div class="chip"><b>Andressa</b> · em risco por estoque</div>
+    <div class="chip"><b>8436-3831</b> · visita remarcada</div>
+    <div class="chip"><b>Vera</b> · compra/venda + câmbio</div>
+  </div>
+  <div class="note"><b>ressalva:</b> muito lead entrou entre 20 e 28/jun e ainda estava aberto no fechamento. parte provavelmente fechou em julho e não aparece aqui, então junho pode estar subestimado.</div>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">07 / 09</span></div>
+</section>
+
+<!-- 8 · JULHO -->
+<section class="slide">
+  <div class="eyebrow">julho · 3 movimentos</div>
+  <h2>do mais <span class="k">barato</span> pro mais caro</h2>
+  <div class="moves">
+    <div class="move"><div class="n">1</div><div><div class="mt">consertar o follow-up</div><div class="md">perdemos venda de gente quente por vendedor sumir. a máquina de conversa já existe, falta rodar de verdade.</div></div></div>
+    <div class="move"><div class="n">2</div><div><div class="mt">prova antes do preço</div><div class="md">no anúncio e na 1ª resposta: paga quando recebe + loja em caxias + imei, antes de mandar o valor. corta o "pediu preço e sumiu".</div></div></div>
+    <div class="move"><div class="n">3</div><div><div class="mt">só depois escalar verba</div><div class="md">enquanto 10 de 13 somem no preço, botar mais dinheiro só aumenta o vazamento. tampa o furo, depois abre a torneira.</div></div></div>
+  </div>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">08 / 09</span></div>
+</section>
+
+<!-- 9 · PENDÊNCIAS -->
+<section class="slide">
+  <div class="eyebrow">pra fechar mais fundo</div>
+  <h2>2 <span class="k">pendências</span></h2>
+  <div class="rows">
+    <div class="row" style="border-left-color:var(--signal)"><span class="who">investido jun</span><span class="what">o valor real de ads do mês fecha cpl, cac e roi de verdade. status marca ~R$750 (R$25/dia), falta confirmar.</span></div>
+    <div class="row" style="border-left-color:var(--signal)"><span class="who">reconciliar julho</span><span class="what">olhar quais "em aberto" fecharam em julho pra não subestimar junho.</span></div>
+  </div>
+  <p class="sub" style="margin-top:30px">fechamento smartbase · junho 2026 · solz lab</p>
+  <div class="footer"><span class="handle">@smartbase.br</span><span class="pg">09 / 09</span></div>
+</section>
+
+</body>
+</html>
