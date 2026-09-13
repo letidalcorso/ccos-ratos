@@ -3,6 +3,7 @@
 Escopo: só os caminhos da lista. Sem migração, sem cópia, sem grep amplo.
 `como-usar-melhor.docx` ignorado (existe `.md`).
 Data: 2026-09-13.
+**Alinhamento 13/09/2026:** clientes ativos hoje = **Smartbase** e **Castanhal** apenas. Gene / Sodi / FTemper fora da lista ativa.
 
 Notas de path no disco:
 - `./AGENTS.md` (raiz) **não existe** — só `_contexto/AGENTS.md`
