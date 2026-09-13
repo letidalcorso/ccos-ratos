@@ -120,14 +120,14 @@ Notas de path no disco:
 | `_contexto/revisao.md` | **MANTER** + **INCLUIR NO AGENTS NOVO** | Ponte trava 1; checklist fica no arquivo. |
 | `_contexto/voz-leticia.md` | **MANTER** + **INCLUIR NO AGENTS NOVO** | Ponte voz / `/escreve`; não colar. |
 | `./AGENTS.md` | **INCLUIR NO AGENTS NOVO** (criar) | Slot vazio na raiz — destino do AGENTS curto. |
-| `./CLAUDE.md` | **ARQUIVAR** após destilar *(ou enxugar a MANTER mínimo)* | Fonte rica; AGENTS herda regras duráveis, sem Smartbase e sem manuais. |
-| `clientes/castanhal/CLAUDE.md` | **MANTER** | Contexto de cliente; AGENTS só diz “ler CLAUDE do cliente”. |
-| `clientes/ftemper/CLAUDE.md` | **MANTER** | Idem. |
-| `clientes/genesneakers/CLAUDE.md` | **MANTER** | Idem. |
+| `./CLAUDE.md` | **ARQUIVAR** após destilar *(ou enxugar a MANTER mínimo)* | Fonte rica; AGENTS herda regras duráveis, sem resumo longo de cliente e sem manuais. |
+| `clientes/castanhal/CLAUDE.md` | **MANTER** + **INCLUIR NO AGENTS NOVO** (ponte) | Cliente ativo; AGENTS só aponta a pasta. |
+| `clientes/ftemper/CLAUDE.md` | **MANTER** (pasta) · **não** no AGENTS | Não está ativo hoje; fora da lista do AGENTS. |
+| `clientes/genesneakers/CLAUDE.md` | **MANTER** (pasta) · **não** no AGENTS | Não está ativo hoje; fora da lista do AGENTS. |
 | `Letícia Particular/CLAUDE.md` | **MANTER** | Pessoal; fora do AGENTS de agência. |
-| `clientes/smartbase/CLAUDE.md` | **MANTER** (pasta cliente) · **não** no AGENTS | SEM Smartbase no AGENTS novo. |
-| `clientes/sodi/CLAUDE.md` | **MANTER** | Contexto de cliente. |
-| `clientes/smartbase/conteudo/voz-smartbase.md` | **MANTER** (cliente) · **não** no AGENTS | Voz do cliente; fora do OS. |
+| `clientes/smartbase/CLAUDE.md` | **MANTER** + **INCLUIR NO AGENTS NOVO** (ponte) | Cliente ativo; AGENTS só aponta — sem colar o resumo. |
+| `clientes/sodi/CLAUDE.md` | **MANTER** (pasta) · **não** no AGENTS | Não está ativo hoje; fora da lista do AGENTS. |
+| `clientes/smartbase/conteudo/voz-smartbase.md` | **MANTER** (cliente) · **não** no AGENTS | Voz do cliente; detalhe fora do OS. |
 
 Legenda: **MANTER** = fonte viva onde está · **ARQUIVAR** = sai do caminho quente · **DESCARTAR** = redundante · **INCLUIR NO AGENTS NOVO** = regra/ponte no AGENTS curto (sem colar o arquivo).
 
@@ -135,7 +135,10 @@ Legenda: **MANTER** = fonte viva onde está · **ARQUIVAR** = sai do caminho que
 
 ## 3. AGENTS futuro (proposta — não criar ainda)
 
-Curto. Sem manuais Claude/Cursor. Sem Smartbase. Sem duplicar preferencias / revisao / voz / CLAUDE de cliente.
+Curto. Sem manuais Claude/Cursor. Sem duplicar preferencias / revisao / voz / CLAUDE de cliente.
+**Clientes ativos (alinhado 13/09/2026): só Castanhal e Smartbase.**
+Gene / Sodi / FTemper não entram na lista ativa (pastas podem ficar no repo até arquivar).
+Smartbase no AGENTS = só ponte pra pasta; detalhe fica em `clientes/smartbase/CLAUDE.md` (não colar resumo longo no OS).
 
 ```markdown
 # AGENTS.md — Solz Lab
@@ -159,9 +162,7 @@ No início de trabalho relevante: `_contexto/empresa.md`, `_contexto/preferencia
 4. Visual: design-guide do cliente ou `marca/design-guide.md` · entrega em SVG
 
 ## Clientes ativos (só ponte — sem persona/tom aqui)
-- GeneSneakers → `clientes/genesneakers/`
-- Sodi → `clientes/sodi/`
-- FTemper → `clientes/ftemper/`
+- Smartbase → `clientes/smartbase/`
 - Castanhal → `clientes/castanhal/` (sob demanda)
 
 Anti-mistura: público, tom e travas de um cliente nunca vazam pro outro.
@@ -183,7 +184,7 @@ Repo leve. Só o que não está referenciado. Listar → confirmar cópia no Dri
 Binário pesado fora do git.
 ```
 
-De fora de propósito: `como-usar-*`, tips Claude/Codex/Cursor, resumos longos de cliente, qualquer bloco Smartbase, Playwright colado, duplicata `_contexto/CLAUDE.md`.
+De fora de propósito: `como-usar-*`, tips Claude/Codex/Cursor, resumos longos de cliente, Playwright colado, duplicata `_contexto/CLAUDE.md`.
 
 ---
 
@@ -191,8 +192,9 @@ De fora de propósito: `como-usar-*`, tips Claude/Codex/Cursor, resumos longos d
 
 1. Criar `AGENTS.md` na raiz a partir do esqueleto acima; aposentar `_contexto/AGENTS.md` e `_contexto/CLAUDE.md`.
 2. Manuais humanos (`como-usar-*`) → arquivo / docs pra Letícia, não pro agente.
-3. Root `CLAUDE.md` é o principal a enxugar: tira Smartbase e resumos de cliente; deixa ponte.
-4. Smartbase continua nos arquivos do cliente; some só do AGENTS/OS compartilhado.
+3. Root `CLAUDE.md` / `_contexto/empresa.md` / `_contexto/estrategia.md` ainda listam Gene, Sodi, FTemper como ativos — desatualizar na migração.
+4. Smartbase e Castanhal = únicos ativos; AGENTS só ponte, detalhe no CLAUDE de cada um.
 5. Path mental: Particular não está sob `clientes/`.
+6. Gene / Sodi / FTemper: decidir se vão pra `clientes destivados/` ou ficam quietos no repo até arquivar.
 
-— Fim da Etapa 1. Nenhuma cópia/migração feita.
+— Fim da Etapa 1 (com alinhamento de clientes ativos). Nenhuma cópia/migração feita.
